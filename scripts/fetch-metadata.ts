@@ -229,7 +229,7 @@ const activeCount = [...lastRelease.keys()].filter((name) => mainPackages.has(na
 const removedCount = lastRelease.size - activeCount;
 
 const md: string[] = [];
-md.push("# Backstage packages", "");
+md.push("# Packages overview", "");
 md.push(
   `**${lastRelease.size} packages** overall — **${activeCount} active** on the \`main\` branch, **${removedCount} removed**.`,
   "",

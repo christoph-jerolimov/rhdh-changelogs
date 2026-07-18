@@ -1,4 +1,4 @@
-# Backstage packages
+# Packages overview
 
 **323 packages** overall — **211 active** on the `main` branch, **112 removed**.
 

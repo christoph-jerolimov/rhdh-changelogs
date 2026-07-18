@@ -1,4 +1,6 @@
-# Last 10 Backstage releases
+# Package versions — last 10 releases
+
+Versions of **211 packages** across **10 releases** — columns ordered newest to oldest.
 
 | Package | 1.53.0 | 1.52.1 | 1.52.0 | 1.51.2 | 1.51.1 | 1.51.0 | 1.50.4 | 1.50.3 | 1.50.2 | 1.50.1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
