@@ -35,11 +35,19 @@ interface Variant {
 
 // The next column is prepended to every variant and does not consume a "last 10" slot.
 const variants: Variant[] = [
-  { name: "all-releases", title: "All Backstage releases", releases: stableDescending },
-  { name: "minor-releases", title: "Backstage minor releases (latest patch per minor)", releases: minorDescending },
-  { name: "last-10-releases", title: "Last 10 Backstage releases", releases: stableDescending.slice(0, 10) },
+  { name: "package-versions-all-releases", title: "All Backstage releases", releases: stableDescending },
   {
-    name: "last-10-minor-releases",
+    name: "package-versions-minor-releases",
+    title: "Backstage minor releases (latest patch per minor)",
+    releases: minorDescending,
+  },
+  {
+    name: "package-versions-last-10-releases",
+    title: "Last 10 Backstage releases",
+    releases: stableDescending.slice(0, 10),
+  },
+  {
+    name: "package-versions-last-10-minor-releases",
     title: "Last 10 Backstage minor releases (latest patch per minor)",
     releases: minorDescending.slice(0, 10),
   },

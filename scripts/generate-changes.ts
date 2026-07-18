@@ -38,9 +38,9 @@ interface Variant {
 // Each row compares a release with the direct previous release of its variant;
 // the next release (if any) is compared against the latest stable release.
 const variants: Variant[] = [
-  { name: "release-changes", title: "Changes per Backstage release", releases: stableDescending },
+  { name: "number-of-changed-packages-all-releases", title: "Changes per Backstage release", releases: stableDescending },
   {
-    name: "minor-release-changes",
+    name: "number-of-changed-packages-minor-releases",
     title: "Changes per Backstage minor release (latest patch per minor)",
     releases: minorDescending,
   },
