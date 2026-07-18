@@ -1,0 +1,52 @@
+name: Update Backstage versions
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily; odd minute to avoid the top-of-the-hour stampede (UTC, best-effort timing).
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: write
+
+# A manual run must never race a scheduled run's push.
+concurrency:
+  group: update-versions
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run typecheck
+
+      - name: Clone backstage/versions
+        run: git clone --depth 1 https://github.com/backstage/versions.git "$RUNNER_TEMP/backstage-upstream"
+
+      - name: Generate release data
+        run: npm run generate
+        env:
+          UPSTREAM_DIR: ${{ runner.temp }}/backstage-upstream
+
+      - name: Commit and push changes
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore: update Backstage version data"
+            git push origin HEAD:main
+          fi
