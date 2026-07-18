@@ -6,6 +6,6 @@
 
 ### Version bumps
 
-| Package | 1.0.2 | 1.0.3 |
-| --- | --- | --- |
-| `@backstage/create-app` | 0.4.24 | 0.4.25 |
+| Package | 1.0.2 | 1.0.3 | Type |
+| --- | --- | --- | --- |
+| `@backstage/create-app` | 0.4.24 | 0.4.25 | Patch |

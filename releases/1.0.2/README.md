@@ -6,7 +6,7 @@
 
 ### Version bumps
 
-| Package | 1.0.1 | 1.0.2 |
-| --- | --- | --- |
-| `@backstage/plugin-scaffolder` | 1.0.0 | 1.0.1 |
-| `@backstage/plugin-techdocs` | 1.0.0 | 1.0.1 |
+| Package | 1.0.1 | 1.0.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/plugin-scaffolder` | 1.0.0 | 1.0.1 | Patch |
+| `@backstage/plugin-techdocs` | 1.0.0 | 1.0.1 | Patch |

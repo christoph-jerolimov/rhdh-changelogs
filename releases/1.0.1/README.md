@@ -6,6 +6,6 @@
 
 ### Version bumps
 
-| Package | 1.0.0 | 1.0.1 |
-| --- | --- | --- |
-| `@backstage/plugin-auth-backend` | 0.12.2 | 0.12.3 |
+| Package | 1.0.0 | 1.0.1 | Type |
+| --- | --- | --- | --- |
+| `@backstage/plugin-auth-backend` | 0.12.2 | 0.12.3 | Patch |

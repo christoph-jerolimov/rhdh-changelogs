@@ -2,7 +2,7 @@
 
 ## Compared to 1.38.1 (previous minor release)
 
-1 major bumps, 2 added, 0 removed, 168 upgraded, 14 unchanged.
+1 major bumps, 2 added, 0 removed, 169 upgraded, 14 unchanged.
 
 ### ⚠️ Major version bumps
 
@@ -19,173 +19,174 @@
 
 ### Version bumps
 
-| Package | 1.38.1 | 1.39.0 |
-| --- | --- | --- |
-| `@backstage/app-defaults` | 1.6.1 | 1.6.2 |
-| `@backstage/backend-app-api` | 1.2.2 | 1.2.3 |
-| `@backstage/backend-defaults` | 0.9.0 | 0.10.0 |
-| `@backstage/backend-dynamic-feature-service` | 0.6.2 | 0.7.0 |
-| `@backstage/backend-openapi-utils` | 0.5.2 | 0.5.3 |
-| `@backstage/backend-plugin-api` | 1.3.0 | 1.3.1 |
-| `@backstage/backend-test-utils` | 1.4.0 | 1.5.0 |
-| `@backstage/canon` | 0.3.1 | 0.4.0 |
-| `@backstage/catalog-client` | 1.9.1 | 1.10.0 |
-| `@backstage/catalog-model` | 1.7.3 | 1.7.4 |
-| `@backstage/cli` | 0.32.0 | 0.32.1 |
-| `@backstage/config-loader` | 1.10.0 | 1.10.1 |
-| `@backstage/core-app-api` | 1.16.1 | 1.17.0 |
-| `@backstage/core-compat-api` | 0.4.1 | 0.4.2 |
-| `@backstage/core-components` | 0.17.1 | 0.17.2 |
-| `@backstage/core-plugin-api` | 1.10.6 | 1.10.7 |
-| `@backstage/create-app` | 0.6.1 | 0.6.2 |
-| `@backstage/dev-utils` | 1.1.9 | 1.1.10 |
-| `@backstage/frontend-app-api` | 0.11.1 | 0.11.2 |
-| `@backstage/frontend-defaults` | 0.2.1 | 0.2.2 |
-| `@backstage/frontend-dynamic-feature-loader` | 0.1.0 | 0.1.1 |
-| `@backstage/frontend-plugin-api` | 0.10.1 | 0.10.2 |
-| `@backstage/frontend-test-utils` | 0.3.1 | 0.3.2 |
-| `@backstage/integration` | 1.16.3 | 1.17.0 |
-| `@backstage/integration-aws-node` | 0.1.15 | 0.1.16 |
-| `@backstage/integration-react` | 1.2.6 | 1.2.7 |
-| `@backstage/plugin-api-docs` | 0.12.6 | 0.12.7 |
-| `@backstage/plugin-app` | 0.1.8 | 0.1.9 |
-| `@backstage/plugin-app-backend` | 0.5.1 | 0.5.2 |
-| `@backstage/plugin-app-node` | 0.1.32 | 0.1.33 |
-| `@backstage/plugin-app-visualizer` | 0.1.18 | 0.1.19 |
-| `@backstage/plugin-auth-backend` | 0.24.5 | 0.25.0 |
-| `@backstage/plugin-auth-backend-module-atlassian-provider` | 0.4.2 | 0.4.3 |
-| `@backstage/plugin-auth-backend-module-auth0-provider` | 0.2.2 | 0.2.3 |
-| `@backstage/plugin-auth-backend-module-aws-alb-provider` | 0.4.2 | 0.4.3 |
-| `@backstage/plugin-auth-backend-module-azure-easyauth-provider` | 0.2.7 | 0.2.8 |
-| `@backstage/plugin-auth-backend-module-bitbucket-provider` | 0.3.2 | 0.3.3 |
-| `@backstage/plugin-auth-backend-module-bitbucket-server-provider` | 0.2.2 | 0.2.3 |
-| `@backstage/plugin-auth-backend-module-cloudflare-access-provider` | 0.4.2 | 0.4.3 |
-| `@backstage/plugin-auth-backend-module-gcp-iap-provider` | 0.4.2 | 0.4.3 |
-| `@backstage/plugin-auth-backend-module-github-provider` | 0.3.2 | 0.3.3 |
-| `@backstage/plugin-auth-backend-module-gitlab-provider` | 0.3.2 | 0.3.3 |
-| `@backstage/plugin-auth-backend-module-google-provider` | 0.3.2 | 0.3.3 |
-| `@backstage/plugin-auth-backend-module-guest-provider` | 0.2.7 | 0.2.8 |
-| `@backstage/plugin-auth-backend-module-microsoft-provider` | 0.3.2 | 0.3.3 |
-| `@backstage/plugin-auth-backend-module-oauth2-provider` | 0.4.2 | 0.4.3 |
-| `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` | 0.2.7 | 0.2.8 |
-| `@backstage/plugin-auth-backend-module-oidc-provider` | 0.4.2 | 0.4.3 |
-| `@backstage/plugin-auth-backend-module-okta-provider` | 0.2.2 | 0.2.3 |
-| `@backstage/plugin-auth-backend-module-onelogin-provider` | 0.3.2 | 0.3.3 |
-| `@backstage/plugin-auth-backend-module-pinniped-provider` | 0.3.2 | 0.3.3 |
-| `@backstage/plugin-auth-backend-module-vmware-cloud-provider` | 0.5.2 | 0.5.3 |
-| `@backstage/plugin-auth-node` | 0.6.2 | 0.6.3 |
-| `@backstage/plugin-auth-react` | 0.1.14 | 0.1.15 |
-| `@backstage/plugin-bitbucket-cloud-common` | 0.2.29 | 0.3.0 |
-| `@backstage/plugin-catalog` | 1.29.0 | 1.30.0 |
-| `@backstage/plugin-catalog-backend-module-aws` | 0.4.10 | 0.4.11 |
-| `@backstage/plugin-catalog-backend-module-azure` | 0.3.4 | 0.3.5 |
-| `@backstage/plugin-catalog-backend-module-backstage-openapi` | 0.5.1 | 0.5.2 |
-| `@backstage/plugin-catalog-backend-module-bitbucket-cloud` | 0.4.7 | 0.4.8 |
-| `@backstage/plugin-catalog-backend-module-bitbucket-server` | 0.4.0 | 0.4.1 |
-| `@backstage/plugin-catalog-backend-module-gcp` | 0.3.7 | 0.3.8 |
-| `@backstage/plugin-catalog-backend-module-gerrit` | 0.3.1 | 0.3.2 |
-| `@backstage/plugin-catalog-backend-module-github` | 0.8.0 | 0.9.0 |
-| `@backstage/plugin-catalog-backend-module-github-org` | 0.3.9 | 0.3.10 |
-| `@backstage/plugin-catalog-backend-module-gitlab` | 0.6.5 | 0.6.6 |
-| `@backstage/plugin-catalog-backend-module-gitlab-org` | 0.2.8 | 0.2.9 |
-| `@backstage/plugin-catalog-backend-module-incremental-ingestion` | 0.6.5 | 0.7.0 |
-| `@backstage/plugin-catalog-backend-module-ldap` | 0.11.4 | 0.11.5 |
-| `@backstage/plugin-catalog-backend-module-logs` | 0.1.9 | 0.1.10 |
-| `@backstage/plugin-catalog-backend-module-msgraph` | 0.6.9 | 0.7.0 |
-| `@backstage/plugin-catalog-backend-module-openapi` | 0.2.9 | 0.2.10 |
-| `@backstage/plugin-catalog-backend-module-puppetdb` | 0.2.9 | 0.2.10 |
-| `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` | 0.2.7 | 0.2.8 |
-| `@backstage/plugin-catalog-backend-module-unprocessed` | 0.5.7 | 0.6.0 |
-| `@backstage/plugin-catalog-common` | 1.1.3 | 1.1.4 |
-| `@backstage/plugin-catalog-graph` | 0.4.18 | 0.4.19 |
-| `@backstage/plugin-catalog-import` | 0.12.13 | 0.13.0 |
-| `@backstage/plugin-catalog-node` | 1.16.3 | 1.17.0 |
-| `@backstage/plugin-catalog-react` | 1.17.0 | 1.18.0 |
-| `@backstage/plugin-catalog-unprocessed-entities` | 0.2.16 | 0.2.17 |
-| `@backstage/plugin-catalog-unprocessed-entities-common` | 0.0.7 | 0.0.8 |
-| `@backstage/plugin-config-schema` | 0.1.67 | 0.1.68 |
-| `@backstage/plugin-devtools` | 0.1.26 | 0.1.27 |
-| `@backstage/plugin-devtools-backend` | 0.5.4 | 0.5.5 |
-| `@backstage/plugin-devtools-common` | 0.1.15 | 0.1.16 |
-| `@backstage/plugin-events-backend` | 0.5.1 | 0.5.2 |
-| `@backstage/plugin-events-backend-module-aws-sqs` | 0.4.10 | 0.4.11 |
-| `@backstage/plugin-events-backend-module-azure` | 0.2.19 | 0.2.20 |
-| `@backstage/plugin-events-backend-module-bitbucket-cloud` | 0.2.19 | 0.2.20 |
-| `@backstage/plugin-events-backend-module-bitbucket-server` | 0.1.0 | 0.1.1 |
-| `@backstage/plugin-events-backend-module-gerrit` | 0.2.19 | 0.2.20 |
-| `@backstage/plugin-events-backend-module-github` | 0.3.0 | 0.4.0 |
-| `@backstage/plugin-events-backend-module-gitlab` | 0.3.0 | 0.3.1 |
-| `@backstage/plugin-events-backend-test-utils` | 0.1.43 | 0.1.44 |
-| `@backstage/plugin-events-node` | 0.4.10 | 0.4.11 |
-| `@backstage/plugin-gateway-backend` | 1.0.0 | 1.0.1 |
-| `@backstage/plugin-home` | 0.8.7 | 0.8.8 |
-| `@backstage/plugin-home-react` | 0.1.25 | 0.1.26 |
-| `@backstage/plugin-kubernetes` | 0.12.6 | 0.12.7 |
-| `@backstage/plugin-kubernetes-backend` | 0.19.5 | 0.19.6 |
-| `@backstage/plugin-kubernetes-cluster` | 0.0.24 | 0.0.25 |
-| `@backstage/plugin-kubernetes-common` | 0.9.4 | 0.9.5 |
-| `@backstage/plugin-kubernetes-node` | 0.2.5 | 0.3.0 |
-| `@backstage/plugin-kubernetes-react` | 0.5.6 | 0.5.7 |
-| `@backstage/plugin-notifications` | 0.5.4 | 0.5.5 |
-| `@backstage/plugin-notifications-backend` | 0.5.5 | 0.5.6 |
-| `@backstage/plugin-notifications-backend-module-email` | 0.3.8 | 0.3.9 |
-| `@backstage/plugin-notifications-backend-module-slack` | 0.1.0 | 0.1.1 |
-| `@backstage/plugin-notifications-node` | 0.2.14 | 0.2.15 |
-| `@backstage/plugin-org` | 0.6.38 | 0.6.39 |
-| `@backstage/plugin-org-react` | 0.1.37 | 0.1.38 |
-| `@backstage/plugin-permission-backend` | 0.6.0 | 0.7.0 |
-| `@backstage/plugin-permission-backend-module-allow-all-policy` | 0.2.7 | 0.2.8 |
-| `@backstage/plugin-permission-common` | 0.8.4 | 0.9.0 |
-| `@backstage/plugin-permission-node` | 0.9.1 | 0.10.0 |
-| `@backstage/plugin-permission-react` | 0.4.33 | 0.4.34 |
-| `@backstage/plugin-proxy-backend` | 0.6.1 | 0.6.2 |
-| `@backstage/plugin-proxy-node` | 0.1.3 | 0.1.4 |
-| `@backstage/plugin-scaffolder` | 1.30.1 | 1.31.0 |
-| `@backstage/plugin-scaffolder-backend` | 1.32.1 | 1.33.0 |
-| `@backstage/plugin-scaffolder-backend-module-azure` | 0.2.8 | 0.2.9 |
-| `@backstage/plugin-scaffolder-backend-module-bitbucket` | 0.3.9 | 0.3.10 |
-| `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` | 0.2.8 | 0.2.9 |
-| `@backstage/plugin-scaffolder-backend-module-bitbucket-server` | 0.2.8 | 0.2.9 |
-| `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` | 0.3.8 | 0.3.9 |
-| `@backstage/plugin-scaffolder-backend-module-cookiecutter` | 0.3.9 | 0.3.10 |
-| `@backstage/plugin-scaffolder-backend-module-gcp` | 0.2.8 | 0.2.9 |
-| `@backstage/plugin-scaffolder-backend-module-gerrit` | 0.2.8 | 0.2.9 |
-| `@backstage/plugin-scaffolder-backend-module-gitea` | 0.2.8 | 0.2.9 |
-| `@backstage/plugin-scaffolder-backend-module-github` | 0.7.0 | 0.7.1 |
-| `@backstage/plugin-scaffolder-backend-module-gitlab` | 0.9.0 | 0.9.1 |
-| `@backstage/plugin-scaffolder-backend-module-notifications` | 0.1.9 | 0.1.10 |
-| `@backstage/plugin-scaffolder-backend-module-rails` | 0.5.8 | 0.5.9 |
-| `@backstage/plugin-scaffolder-backend-module-sentry` | 0.2.8 | 0.2.9 |
-| `@backstage/plugin-scaffolder-backend-module-yeoman` | 0.4.9 | 0.4.10 |
-| `@backstage/plugin-scaffolder-common` | 1.5.10 | 1.5.11 |
-| `@backstage/plugin-scaffolder-node` | 0.8.1 | 0.8.2 |
-| `@backstage/plugin-scaffolder-node-test-utils` | 0.2.1 | 0.2.2 |
-| `@backstage/plugin-scaffolder-react` | 1.15.1 | 1.16.0 |
-| `@backstage/plugin-search` | 1.4.25 | 1.4.26 |
-| `@backstage/plugin-search-backend` | 2.0.1 | 2.0.2 |
-| `@backstage/plugin-search-backend-module-catalog` | 0.3.3 | 0.3.4 |
-| `@backstage/plugin-search-backend-module-elasticsearch` | 1.7.1 | 1.7.2 |
-| `@backstage/plugin-search-backend-module-explore` | 0.3.1 | 0.3.2 |
-| `@backstage/plugin-search-backend-module-pg` | 0.5.43 | 0.5.44 |
-| `@backstage/plugin-search-backend-module-stack-overflow-collator` | 0.3.8 | 0.3.9 |
-| `@backstage/plugin-search-backend-module-techdocs` | 0.4.1 | 0.4.2 |
-| `@backstage/plugin-search-backend-node` | 1.3.10 | 1.3.11 |
-| `@backstage/plugin-search-common` | 1.2.17 | 1.2.18 |
-| `@backstage/plugin-search-react` | 1.8.8 | 1.9.0 |
-| `@backstage/plugin-signals` | 0.0.18 | 0.0.19 |
-| `@backstage/plugin-signals-backend` | 0.3.3 | 0.3.4 |
-| `@backstage/plugin-signals-node` | 0.1.19 | 0.1.20 |
-| `@backstage/plugin-signals-react` | 0.0.12 | 0.0.13 |
-| `@backstage/plugin-techdocs` | 1.12.5 | 1.12.6 |
-| `@backstage/plugin-techdocs-addons-test-utils` | 1.0.47 | 1.0.48 |
-| `@backstage/plugin-techdocs-backend` | 2.0.1 | 2.0.2 |
-| `@backstage/plugin-techdocs-module-addons-contrib` | 1.1.23 | 1.1.24 |
-| `@backstage/plugin-techdocs-node` | 1.13.2 | 1.13.3 |
-| `@backstage/plugin-techdocs-react` | 1.2.16 | 1.2.17 |
-| `@backstage/plugin-user-settings` | 0.8.21 | 0.8.22 |
-| `@backstage/plugin-user-settings-backend` | 0.3.1 | 0.3.2 |
-| `@backstage/release-manifests` | 0.0.12 | 0.0.13 |
-| `@backstage/repo-tools` | 0.13.2 | 0.13.3 |
-| `@backstage/test-utils` | 1.7.7 | 1.7.8 |
-| `@backstage/theme` | 0.6.5 | 0.6.6 |
-| `@techdocs/cli` | 1.9.2 | 1.9.3 |
+| Package | 1.38.1 | 1.39.0 | Type |
+| --- | --- | --- | --- |
+| `@backstage/app-defaults` | 1.6.1 | 1.6.2 | Patch |
+| `@backstage/backend-app-api` | 1.2.2 | 1.2.3 | Patch |
+| `@backstage/backend-defaults` | 0.9.0 | 0.10.0 | Minor ⚠️ |
+| `@backstage/backend-dynamic-feature-service` | 0.6.2 | 0.7.0 | Minor ⚠️ |
+| `@backstage/backend-openapi-utils` | 0.5.2 | 0.5.3 | Patch |
+| `@backstage/backend-plugin-api` | 1.3.0 | 1.3.1 | Patch |
+| `@backstage/backend-test-utils` | 1.4.0 | 1.5.0 | Minor |
+| `@backstage/canon` | 0.3.1 | 0.4.0 | Minor ⚠️ |
+| `@backstage/catalog-client` | 1.9.1 | 1.10.0 | Minor |
+| `@backstage/catalog-model` | 1.7.3 | 1.7.4 | Patch |
+| `@backstage/cli` | 0.32.0 | 0.32.1 | Patch |
+| `@backstage/config-loader` | 1.10.0 | 1.10.1 | Patch |
+| `@backstage/core-app-api` | 1.16.1 | 1.17.0 | Minor |
+| `@backstage/core-compat-api` | 0.4.1 | 0.4.2 | Patch |
+| `@backstage/core-components` | 0.17.1 | 0.17.2 | Patch |
+| `@backstage/core-plugin-api` | 1.10.6 | 1.10.7 | Patch |
+| `@backstage/create-app` | 0.6.1 | 0.6.2 | Patch |
+| `@backstage/dev-utils` | 1.1.9 | 1.1.10 | Patch |
+| `@backstage/frontend-app-api` | 0.11.1 | 0.11.2 | Patch |
+| `@backstage/frontend-defaults` | 0.2.1 | 0.2.2 | Patch |
+| `@backstage/frontend-dynamic-feature-loader` | 0.1.0 | 0.1.1 | Patch |
+| `@backstage/frontend-plugin-api` | 0.10.1 | 0.10.2 | Patch |
+| `@backstage/frontend-test-utils` | 0.3.1 | 0.3.2 | Patch |
+| `@backstage/integration` | 1.16.3 | 1.17.0 | Minor |
+| `@backstage/integration-aws-node` | 0.1.15 | 0.1.16 | Patch |
+| `@backstage/integration-react` | 1.2.6 | 1.2.7 | Patch |
+| `@backstage/plugin-api-docs` | 0.12.6 | 0.12.7 | Patch |
+| `@backstage/plugin-app` | 0.1.8 | 0.1.9 | Patch |
+| `@backstage/plugin-app-backend` | 0.5.1 | 0.5.2 | Patch |
+| `@backstage/plugin-app-node` | 0.1.32 | 0.1.33 | Patch |
+| `@backstage/plugin-app-visualizer` | 0.1.18 | 0.1.19 | Patch |
+| `@backstage/plugin-auth-backend` | 0.24.5 | 0.25.0 | Minor ⚠️ |
+| `@backstage/plugin-auth-backend-module-atlassian-provider` | 0.4.2 | 0.4.3 | Patch |
+| `@backstage/plugin-auth-backend-module-auth0-provider` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-auth-backend-module-aws-alb-provider` | 0.4.2 | 0.4.3 | Patch |
+| `@backstage/plugin-auth-backend-module-azure-easyauth-provider` | 0.2.7 | 0.2.8 | Patch |
+| `@backstage/plugin-auth-backend-module-bitbucket-provider` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-auth-backend-module-bitbucket-server-provider` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-auth-backend-module-cloudflare-access-provider` | 0.4.2 | 0.4.3 | Patch |
+| `@backstage/plugin-auth-backend-module-gcp-iap-provider` | 0.4.2 | 0.4.3 | Patch |
+| `@backstage/plugin-auth-backend-module-github-provider` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-auth-backend-module-gitlab-provider` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-auth-backend-module-google-provider` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-auth-backend-module-guest-provider` | 0.2.7 | 0.2.8 | Patch |
+| `@backstage/plugin-auth-backend-module-microsoft-provider` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-auth-backend-module-oauth2-provider` | 0.4.2 | 0.4.3 | Patch |
+| `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` | 0.2.7 | 0.2.8 | Patch |
+| `@backstage/plugin-auth-backend-module-oidc-provider` | 0.4.2 | 0.4.3 | Patch |
+| `@backstage/plugin-auth-backend-module-okta-provider` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-auth-backend-module-onelogin-provider` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-auth-backend-module-pinniped-provider` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-auth-backend-module-vmware-cloud-provider` | 0.5.2 | 0.5.3 | Patch |
+| `@backstage/plugin-auth-node` | 0.6.2 | 0.6.3 | Patch |
+| `@backstage/plugin-auth-react` | 0.1.14 | 0.1.15 | Patch |
+| `@backstage/plugin-bitbucket-cloud-common` | 0.2.29 | 0.3.0 | Minor ⚠️ |
+| `@backstage/plugin-catalog` | 1.29.0 | 1.30.0 | Minor |
+| `@backstage/plugin-catalog-backend` | **1.32.1** | **2.0.0** | Major ⚠️ |
+| `@backstage/plugin-catalog-backend-module-aws` | 0.4.10 | 0.4.11 | Patch |
+| `@backstage/plugin-catalog-backend-module-azure` | 0.3.4 | 0.3.5 | Patch |
+| `@backstage/plugin-catalog-backend-module-backstage-openapi` | 0.5.1 | 0.5.2 | Patch |
+| `@backstage/plugin-catalog-backend-module-bitbucket-cloud` | 0.4.7 | 0.4.8 | Patch |
+| `@backstage/plugin-catalog-backend-module-bitbucket-server` | 0.4.0 | 0.4.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-gcp` | 0.3.7 | 0.3.8 | Patch |
+| `@backstage/plugin-catalog-backend-module-gerrit` | 0.3.1 | 0.3.2 | Patch |
+| `@backstage/plugin-catalog-backend-module-github` | 0.8.0 | 0.9.0 | Minor ⚠️ |
+| `@backstage/plugin-catalog-backend-module-github-org` | 0.3.9 | 0.3.10 | Patch |
+| `@backstage/plugin-catalog-backend-module-gitlab` | 0.6.5 | 0.6.6 | Patch |
+| `@backstage/plugin-catalog-backend-module-gitlab-org` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-catalog-backend-module-incremental-ingestion` | 0.6.5 | 0.7.0 | Minor ⚠️ |
+| `@backstage/plugin-catalog-backend-module-ldap` | 0.11.4 | 0.11.5 | Patch |
+| `@backstage/plugin-catalog-backend-module-logs` | 0.1.9 | 0.1.10 | Patch |
+| `@backstage/plugin-catalog-backend-module-msgraph` | 0.6.9 | 0.7.0 | Minor ⚠️ |
+| `@backstage/plugin-catalog-backend-module-openapi` | 0.2.9 | 0.2.10 | Patch |
+| `@backstage/plugin-catalog-backend-module-puppetdb` | 0.2.9 | 0.2.10 | Patch |
+| `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` | 0.2.7 | 0.2.8 | Patch |
+| `@backstage/plugin-catalog-backend-module-unprocessed` | 0.5.7 | 0.6.0 | Minor ⚠️ |
+| `@backstage/plugin-catalog-common` | 1.1.3 | 1.1.4 | Patch |
+| `@backstage/plugin-catalog-graph` | 0.4.18 | 0.4.19 | Patch |
+| `@backstage/plugin-catalog-import` | 0.12.13 | 0.13.0 | Minor ⚠️ |
+| `@backstage/plugin-catalog-node` | 1.16.3 | 1.17.0 | Minor |
+| `@backstage/plugin-catalog-react` | 1.17.0 | 1.18.0 | Minor |
+| `@backstage/plugin-catalog-unprocessed-entities` | 0.2.16 | 0.2.17 | Patch |
+| `@backstage/plugin-catalog-unprocessed-entities-common` | 0.0.7 | 0.0.8 | Patch ⚠️ |
+| `@backstage/plugin-config-schema` | 0.1.67 | 0.1.68 | Patch |
+| `@backstage/plugin-devtools` | 0.1.26 | 0.1.27 | Patch |
+| `@backstage/plugin-devtools-backend` | 0.5.4 | 0.5.5 | Patch |
+| `@backstage/plugin-devtools-common` | 0.1.15 | 0.1.16 | Patch |
+| `@backstage/plugin-events-backend` | 0.5.1 | 0.5.2 | Patch |
+| `@backstage/plugin-events-backend-module-aws-sqs` | 0.4.10 | 0.4.11 | Patch |
+| `@backstage/plugin-events-backend-module-azure` | 0.2.19 | 0.2.20 | Patch |
+| `@backstage/plugin-events-backend-module-bitbucket-cloud` | 0.2.19 | 0.2.20 | Patch |
+| `@backstage/plugin-events-backend-module-bitbucket-server` | 0.1.0 | 0.1.1 | Patch |
+| `@backstage/plugin-events-backend-module-gerrit` | 0.2.19 | 0.2.20 | Patch |
+| `@backstage/plugin-events-backend-module-github` | 0.3.0 | 0.4.0 | Minor ⚠️ |
+| `@backstage/plugin-events-backend-module-gitlab` | 0.3.0 | 0.3.1 | Patch |
+| `@backstage/plugin-events-backend-test-utils` | 0.1.43 | 0.1.44 | Patch |
+| `@backstage/plugin-events-node` | 0.4.10 | 0.4.11 | Patch |
+| `@backstage/plugin-gateway-backend` | 1.0.0 | 1.0.1 | Patch |
+| `@backstage/plugin-home` | 0.8.7 | 0.8.8 | Patch |
+| `@backstage/plugin-home-react` | 0.1.25 | 0.1.26 | Patch |
+| `@backstage/plugin-kubernetes` | 0.12.6 | 0.12.7 | Patch |
+| `@backstage/plugin-kubernetes-backend` | 0.19.5 | 0.19.6 | Patch |
+| `@backstage/plugin-kubernetes-cluster` | 0.0.24 | 0.0.25 | Patch ⚠️ |
+| `@backstage/plugin-kubernetes-common` | 0.9.4 | 0.9.5 | Patch |
+| `@backstage/plugin-kubernetes-node` | 0.2.5 | 0.3.0 | Minor ⚠️ |
+| `@backstage/plugin-kubernetes-react` | 0.5.6 | 0.5.7 | Patch |
+| `@backstage/plugin-notifications` | 0.5.4 | 0.5.5 | Patch |
+| `@backstage/plugin-notifications-backend` | 0.5.5 | 0.5.6 | Patch |
+| `@backstage/plugin-notifications-backend-module-email` | 0.3.8 | 0.3.9 | Patch |
+| `@backstage/plugin-notifications-backend-module-slack` | 0.1.0 | 0.1.1 | Patch |
+| `@backstage/plugin-notifications-node` | 0.2.14 | 0.2.15 | Patch |
+| `@backstage/plugin-org` | 0.6.38 | 0.6.39 | Patch |
+| `@backstage/plugin-org-react` | 0.1.37 | 0.1.38 | Patch |
+| `@backstage/plugin-permission-backend` | 0.6.0 | 0.7.0 | Minor ⚠️ |
+| `@backstage/plugin-permission-backend-module-allow-all-policy` | 0.2.7 | 0.2.8 | Patch |
+| `@backstage/plugin-permission-common` | 0.8.4 | 0.9.0 | Minor ⚠️ |
+| `@backstage/plugin-permission-node` | 0.9.1 | 0.10.0 | Minor ⚠️ |
+| `@backstage/plugin-permission-react` | 0.4.33 | 0.4.34 | Patch |
+| `@backstage/plugin-proxy-backend` | 0.6.1 | 0.6.2 | Patch |
+| `@backstage/plugin-proxy-node` | 0.1.3 | 0.1.4 | Patch |
+| `@backstage/plugin-scaffolder` | 1.30.1 | 1.31.0 | Minor |
+| `@backstage/plugin-scaffolder-backend` | 1.32.1 | 1.33.0 | Minor |
+| `@backstage/plugin-scaffolder-backend-module-azure` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket` | 0.3.9 | 0.3.10 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket-server` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` | 0.3.8 | 0.3.9 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-cookiecutter` | 0.3.9 | 0.3.10 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gcp` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gerrit` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gitea` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-github` | 0.7.0 | 0.7.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gitlab` | 0.9.0 | 0.9.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-notifications` | 0.1.9 | 0.1.10 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-rails` | 0.5.8 | 0.5.9 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-sentry` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-yeoman` | 0.4.9 | 0.4.10 | Patch |
+| `@backstage/plugin-scaffolder-common` | 1.5.10 | 1.5.11 | Patch |
+| `@backstage/plugin-scaffolder-node` | 0.8.1 | 0.8.2 | Patch |
+| `@backstage/plugin-scaffolder-node-test-utils` | 0.2.1 | 0.2.2 | Patch |
+| `@backstage/plugin-scaffolder-react` | 1.15.1 | 1.16.0 | Minor |
+| `@backstage/plugin-search` | 1.4.25 | 1.4.26 | Patch |
+| `@backstage/plugin-search-backend` | 2.0.1 | 2.0.2 | Patch |
+| `@backstage/plugin-search-backend-module-catalog` | 0.3.3 | 0.3.4 | Patch |
+| `@backstage/plugin-search-backend-module-elasticsearch` | 1.7.1 | 1.7.2 | Patch |
+| `@backstage/plugin-search-backend-module-explore` | 0.3.1 | 0.3.2 | Patch |
+| `@backstage/plugin-search-backend-module-pg` | 0.5.43 | 0.5.44 | Patch |
+| `@backstage/plugin-search-backend-module-stack-overflow-collator` | 0.3.8 | 0.3.9 | Patch |
+| `@backstage/plugin-search-backend-module-techdocs` | 0.4.1 | 0.4.2 | Patch |
+| `@backstage/plugin-search-backend-node` | 1.3.10 | 1.3.11 | Patch |
+| `@backstage/plugin-search-common` | 1.2.17 | 1.2.18 | Patch |
+| `@backstage/plugin-search-react` | 1.8.8 | 1.9.0 | Minor |
+| `@backstage/plugin-signals` | 0.0.18 | 0.0.19 | Patch ⚠️ |
+| `@backstage/plugin-signals-backend` | 0.3.3 | 0.3.4 | Patch |
+| `@backstage/plugin-signals-node` | 0.1.19 | 0.1.20 | Patch |
+| `@backstage/plugin-signals-react` | 0.0.12 | 0.0.13 | Patch ⚠️ |
+| `@backstage/plugin-techdocs` | 1.12.5 | 1.12.6 | Patch |
+| `@backstage/plugin-techdocs-addons-test-utils` | 1.0.47 | 1.0.48 | Patch |
+| `@backstage/plugin-techdocs-backend` | 2.0.1 | 2.0.2 | Patch |
+| `@backstage/plugin-techdocs-module-addons-contrib` | 1.1.23 | 1.1.24 | Patch |
+| `@backstage/plugin-techdocs-node` | 1.13.2 | 1.13.3 | Patch |
+| `@backstage/plugin-techdocs-react` | 1.2.16 | 1.2.17 | Patch |
+| `@backstage/plugin-user-settings` | 0.8.21 | 0.8.22 | Patch |
+| `@backstage/plugin-user-settings-backend` | 0.3.1 | 0.3.2 | Patch |
+| `@backstage/release-manifests` | 0.0.12 | 0.0.13 | Patch ⚠️ |
+| `@backstage/repo-tools` | 0.13.2 | 0.13.3 | Patch |
+| `@backstage/test-utils` | 1.7.7 | 1.7.8 | Patch |
+| `@backstage/theme` | 0.6.5 | 0.6.6 | Patch |
+| `@techdocs/cli` | 1.9.2 | 1.9.3 | Patch |

@@ -48,6 +48,26 @@ function diffManifests(base: Map<string, string>, current: Map<string, string>):
 const cell = (value: string): string => value.replaceAll("|", "\\|");
 const pkg = (name: string): string => `\`${cell(name)}\``;
 
+/**
+ * Major/Minor/Patch level of a bump; ⚠️ marks potentially breaking bumps
+ * (major, 0.x minor, and 0.0.x patch changes per semver-0 conventions).
+ */
+function releaseType(from: string, to: string): string {
+  if (!semver.valid(from) || !semver.valid(to)) return "";
+  const diff = semver.diff(from, to);
+  const level =
+    diff === "major" || diff === "premajor"
+      ? "Major"
+      : diff === "minor" || diff === "preminor"
+        ? "Minor"
+        : "Patch";
+  const breaking =
+    level === "Major" ||
+    (level === "Minor" && semver.major(to) === 0) ||
+    (level === "Patch" && semver.major(to) === 0 && semver.minor(to) === 0);
+  return breaking ? `${level} ⚠️` : level;
+}
+
 function renderSection(baseline: Baseline, current: string, diff: Diff): string {
   const lines: string[] = [];
   lines.push(`## Compared to ${baseline.version} (${baseline.label})`, "");
@@ -55,7 +75,7 @@ function renderSection(baseline: Baseline, current: string, diff: Diff): string 
     `${diff.majorBumps.length} major bumps`,
     `${diff.added.length} added`,
     `${diff.removed.length} removed`,
-    `${diff.otherBumps.length} upgraded`,
+    `${diff.majorBumps.length + diff.otherBumps.length} upgraded`,
     `${diff.unchanged} unchanged`,
   ];
   lines.push(summary.join(", ") + ".", "");
@@ -84,11 +104,16 @@ function renderSection(baseline: Baseline, current: string, diff: Diff): string 
     }
     lines.push("");
   }
-  if (diff.otherBumps.length > 0) {
+  const bumps = [
+    ...diff.majorBumps.map((bump) => ({ ...bump, major: true })),
+    ...diff.otherBumps.map((bump) => ({ ...bump, major: false })),
+  ].sort((a, b) => byCodepoint(a.name, b.name));
+  if (bumps.length > 0) {
     lines.push("### Version bumps", "");
-    lines.push(`| Package | ${cell(baseline.version)} | ${cell(current)} |`, "| --- | --- | --- |");
-    for (const { name, from, to } of diff.otherBumps) {
-      lines.push(`| ${pkg(name)} | ${cell(from)} | ${cell(to)} |`);
+    lines.push(`| Package | ${cell(baseline.version)} | ${cell(current)} | Type |`, "| --- | --- | --- | --- |");
+    for (const { name, from, to, major } of bumps) {
+      const version = (value: string): string => (major ? `**${cell(value)}**` : cell(value));
+      lines.push(`| ${pkg(name)} | ${version(from)} | ${version(to)} | ${releaseType(from, to)} |`);
     }
     lines.push("");
   }
