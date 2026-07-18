@@ -1,5 +1,9 @@
 # @backstage/plugin-explore-react
 
+> [!WARNING]
+> **DEPRECATED**: This package is no longer part of the Backstage `main` branch.
+> The last Backstage release that included it was **1.26.5**.
+
 ## 0.0.39
 
 ### Patch Changes

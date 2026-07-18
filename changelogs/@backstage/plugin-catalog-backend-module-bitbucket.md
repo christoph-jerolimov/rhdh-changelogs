@@ -1,5 +1,9 @@
 # @backstage/plugin-catalog-backend-module-bitbucket
 
+> [!WARNING]
+> **DEPRECATED**: This package is no longer part of the Backstage `main` branch.
+> The last Backstage release that included it was **1.22.3**.
+
 ## 0.2.24
 
 ### Patch Changes

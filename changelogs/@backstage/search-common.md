@@ -1,5 +1,9 @@
 # @backstage/search-common
 
+> [!WARNING]
+> **DEPRECATED**: This package is no longer part of the Backstage `main` branch.
+> The last Backstage release that included it was **1.2.2**.
+
 ## 0.3.4
 
 ### Patch Changes

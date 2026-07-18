@@ -1,5 +1,9 @@
 # @backstage/plugin-github-pull-requests-board
 
+> [!WARNING]
+> **DEPRECATED**: This package is no longer part of the Backstage `main` branch.
+> The last Backstage release that included it was **1.26.5**.
+
 ## 0.2.1
 
 ### Patch Changes

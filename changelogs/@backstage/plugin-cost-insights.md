@@ -1,5 +1,9 @@
 # @backstage/plugin-cost-insights
 
+> [!WARNING]
+> **DEPRECATED**: This package is no longer part of the Backstage `main` branch.
+> The last Backstage release that included it was **1.26.5**.
+
 ## 0.12.24
 
 ### Patch Changes

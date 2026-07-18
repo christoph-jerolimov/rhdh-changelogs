@@ -2,7 +2,7 @@ import { execFileSync } from "node:child_process";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import semver from "semver";
-import { hasNextRelease, listLocalStableReleases, NEXT, readManifest, repoRoot } from "./lib.ts";
+import { hasNextRelease, listLocalStableReleases, NEXT, readManifest, repoRoot, writeFileIfChanged } from "./lib.ts";
 
 const changelogsDir = path.join(repoRoot, "changelogs");
 
@@ -42,6 +42,7 @@ function writeChangelog(name: string, content: string): void {
 
 // Phase 1: copy the changelog of every package on the main branch (always
 // overwritten — main is the source of truth for packages that still exist).
+const mainPackages = new Set<string>();
 let fromMain = 0;
 for (const group of ["packages", "plugins"]) {
   const groupDir = path.join(backstageDir, group);
@@ -53,6 +54,7 @@ for (const group of ["packages", "plugins"]) {
     const name = (JSON.parse(fs.readFileSync(packageJson, "utf8")) as { name?: string }).name;
     if (name === undefined) continue;
     writeChangelog(name, fs.readFileSync(changelog, "utf8"));
+    mainPackages.add(name);
     fromMain += 1;
   }
 }
@@ -113,9 +115,14 @@ function findDirAtTag(tag: string, name: string): string | undefined {
 }
 
 const releases = [...(hasNextRelease() ? [NEXT] : []), ...listLocalStableReleases().sort(semver.rcompare)];
+// Newest release that lists each package (releases are iterated newest first).
+const lastRelease = new Map<string, string>();
 let fromTags = 0;
 for (const release of releases) {
   const manifest = readManifest(release);
+  for (const pkg of manifest.packages) {
+    if (!lastRelease.has(pkg.name)) lastRelease.set(pkg.name, manifest.releaseVersion);
+  }
   const missing = manifest.packages.map((pkg) => pkg.name).filter((name) => !fs.existsSync(targetFile(name)));
   if (missing.length === 0) continue;
   const tag = `v${manifest.releaseVersion}`;
@@ -134,6 +141,40 @@ for (const release of releases) {
   }
 }
 console.log(`Fetched ${fromTags} changelogs from release tags`);
+
+// Packages that are gone from main carry a DEPRECATED warning below their H1.
+// Applied on every run (not just at fetch time) so already-committed files get
+// it too, and phase 1 naturally clears it if a package ever returns to main.
+const WARNING_MARKER = "> [!WARNING]";
+
+function withDeprecationWarning(content: string, last: string): string {
+  const warning = [
+    WARNING_MARKER,
+    "> **DEPRECATED**: This package is no longer part of the Backstage `main` branch.",
+    `> The last Backstage release that included it was **${last}**.`,
+  ];
+  const lines = content.split("\n");
+  const h1 = lines.findIndex((line) => line.startsWith("# "));
+  const insertAt = h1 === -1 ? 0 : h1 + 1;
+  const rest = lines.slice(insertAt);
+  while (rest.length > 0 && rest[0]!.trim() === "") rest.shift();
+  if (rest[0]?.startsWith(WARNING_MARKER)) {
+    while (rest.length > 0 && rest[0]!.startsWith(">")) rest.shift();
+    while (rest.length > 0 && rest[0]!.trim() === "") rest.shift();
+  }
+  const head = lines.slice(0, insertAt);
+  return [...head, ...(head.length > 0 ? [""] : []), ...warning, "", ...rest].join("\n");
+}
+
+let deprecatedCount = 0;
+for (const [name, last] of lastRelease) {
+  if (mainPackages.has(name)) continue;
+  const file = targetFile(name);
+  if (!fs.existsSync(file)) continue; // reported by the verification below
+  writeFileIfChanged(file, withDeprecationWarning(fs.readFileSync(file, "utf8"), last));
+  deprecatedCount += 1;
+}
+console.log(`Ensured deprecation warnings on ${deprecatedCount} changelogs`);
 
 // Every package that ever appeared in a release manifest must have a changelog.
 const listedIn = new Map<string, string[]>();
