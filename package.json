@@ -9,8 +9,10 @@
     "resolutions": "tsx scripts/generate-resolutions.ts",
     "tables": "tsx scripts/generate-tables.ts",
     "changes": "tsx scripts/generate-changes.ts",
+    "changelog": "tsx scripts/build-changelog.ts",
+    "changelogs": "tsx scripts/generate-changelogs.ts",
     "metadata": "tsx scripts/fetch-metadata.ts",
-    "generate": "npm run copy && npm run readmes && npm run resolutions && npm run tables && npm run changes",
+    "generate": "npm run copy && npm run readmes && npm run resolutions && npm run tables && npm run changes && npm run changelogs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

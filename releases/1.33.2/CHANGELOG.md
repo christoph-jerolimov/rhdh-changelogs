@@ -1,0 +1,7 @@
+# Backstage Release 1.33.2 changelog
+
+Changes between 1.33.1 and 1.33.2 — 1 changed and 0 added packages.
+
+## `@backstage/plugin-app-backend` (0.4.0 → 0.4.1)
+
+_No changelog entries found._

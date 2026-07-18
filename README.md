@@ -32,6 +32,7 @@ Each `releases/<version>/` folder contains:
 - `yarn-plugin` — copied verbatim, for releases that ship one
 - `README.md` — generated diff against the previous patch release (if any) and the previous minor release (highest patch of the previous minor line), highlighting ⚠️ major version bumps, 🆕 added and ❌ removed packages
 - `resolutions.json` — the manifest transformed into a package.json-style `{ "resolutions": { "<package>": "<version>" } }` map
+- `CHANGELOG.md` — the changelog sections of all packages changed or added since the direct previous release, sliced from [`changelogs/`](changelogs) to the versions after the previous release (exclusive) up to this release (inclusive); can be built for any release pair with `npm run changelog -- <from> <to>`
 
 `0.x` and prerelease versions are ignored. `releases/next/` exists only while `backstage/versions` has a `-next` release that is newer than the latest stable release; it is removed otherwise.
 
