@@ -6,6 +6,7 @@ Changes between 1.24.0 and 1.24.1 — 35 changed and 0 added packages.
 
 - [Minor version bumps](#minor-version-bumps): 2 packages
 - [Patch version bumps](#patch-version-bumps): 2 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 31 packages
 
 ## Table of contents
 
@@ -15,6 +16,7 @@ Changes between 1.24.0 and 1.24.1 — 35 changed and 0 added packages.
 - [Patch version bumps](#patch-version-bumps)
   - [`@backstage/plugin-catalog-backend-module-unprocessed` (0.4.0 → 0.4.1)](#backstageplugin-catalog-backend-module-unprocessed-040--041)
   - [`@backstage/plugin-permission-backend` (0.5.37 → 0.5.38)](#backstageplugin-permission-backend-0537--0538)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Minor version bumps
 
@@ -52,4 +54,36 @@ Changes between 1.24.0 and 1.24.1 — 35 changed and 0 added packages.
 
 - 9c7fb30: Properly forward causes of errors from upstream backends in the `PermissionIntegrationClient`
 
-_Excluded dependency updates for packages: `@backstage/backend-dynamic-feature-service`, `@backstage/plugin-auth-backend`, `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-backend-module-oidc-provider`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-github`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-msgraph`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-kubernetes-backend`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-linguist-backend`, `@backstage/plugin-scaffolder-backend`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-todo-backend`._
+## Excluded dependency updates for packages
+
+- `@backstage/backend-dynamic-feature-service`
+- `@backstage/plugin-auth-backend`
+- `@backstage/plugin-auth-backend-module-aws-alb-provider`
+- `@backstage/plugin-auth-backend-module-oidc-provider`
+- `@backstage/plugin-azure-devops-backend`
+- `@backstage/plugin-azure-sites-backend`
+- `@backstage/plugin-catalog-backend-module-aws`
+- `@backstage/plugin-catalog-backend-module-azure`
+- `@backstage/plugin-catalog-backend-module-backstage-openapi`
+- `@backstage/plugin-catalog-backend-module-bitbucket-cloud`
+- `@backstage/plugin-catalog-backend-module-bitbucket-server`
+- `@backstage/plugin-catalog-backend-module-gcp`
+- `@backstage/plugin-catalog-backend-module-gerrit`
+- `@backstage/plugin-catalog-backend-module-github`
+- `@backstage/plugin-catalog-backend-module-github-org`
+- `@backstage/plugin-catalog-backend-module-gitlab`
+- `@backstage/plugin-catalog-backend-module-incremental-ingestion`
+- `@backstage/plugin-catalog-backend-module-ldap`
+- `@backstage/plugin-catalog-backend-module-msgraph`
+- `@backstage/plugin-catalog-backend-module-openapi`
+- `@backstage/plugin-catalog-backend-module-puppetdb`
+- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`
+- `@backstage/plugin-jenkins-backend`
+- `@backstage/plugin-kubernetes-backend`
+- `@backstage/plugin-lighthouse-backend`
+- `@backstage/plugin-linguist-backend`
+- `@backstage/plugin-scaffolder-backend`
+- `@backstage/plugin-search-backend-module-catalog`
+- `@backstage/plugin-search-backend-module-techdocs`
+- `@backstage/plugin-techdocs-backend`
+- `@backstage/plugin-todo-backend`

@@ -11,6 +11,7 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 4 packages
 - [Other minor version bumps](#other-minor-version-bumps): 10 packages
 - [Other patch version bumps](#other-patch-version-bumps): 137 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 55 packages
 
 ## Table of contents
 
@@ -190,6 +191,7 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
   - [`@backstage/test-utils` (1.4.4 → 1.4.5)](#backstagetest-utils-144--145)
   - [`@backstage/theme` (0.4.3 → 0.4.4)](#backstagetheme-043--044)
   - [`@backstage/version-bridge` (1.0.6 → 1.0.7)](#backstageversion-bridge-106--107)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -2049,4 +2051,60 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 
-_Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-node`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-common`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-backend`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-nomad-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-node`, `@backstage/plugin-playlist-common`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-common`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-todo-backend`._
+## Excluded dependency updates for packages
+
+- `@backstage/backend-defaults`
+- `@backstage/plugin-adr-common`
+- `@backstage/plugin-airbrake-backend`
+- `@backstage/plugin-app-node`
+- `@backstage/plugin-auth-backend-module-gcp-iap-provider`
+- `@backstage/plugin-auth-backend-module-github-provider`
+- `@backstage/plugin-auth-backend-module-google-provider`
+- `@backstage/plugin-auth-backend-module-oauth2-provider`
+- `@backstage/plugin-auth-node`
+- `@backstage/plugin-azure-devops-backend`
+- `@backstage/plugin-azure-sites-backend`
+- `@backstage/plugin-catalog-backend-module-azure`
+- `@backstage/plugin-catalog-backend-module-bitbucket`
+- `@backstage/plugin-catalog-backend-module-bitbucket-cloud`
+- `@backstage/plugin-catalog-backend-module-bitbucket-server`
+- `@backstage/plugin-catalog-backend-module-gerrit`
+- `@backstage/plugin-catalog-backend-module-github-org`
+- `@backstage/plugin-catalog-backend-module-ldap`
+- `@backstage/plugin-catalog-backend-module-openapi`
+- `@backstage/plugin-catalog-backend-module-puppetdb`
+- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`
+- `@backstage/plugin-catalog-common`
+- `@backstage/plugin-devtools-backend`
+- `@backstage/plugin-devtools-common`
+- `@backstage/plugin-events-backend`
+- `@backstage/plugin-events-backend-module-azure`
+- `@backstage/plugin-events-backend-module-bitbucket-cloud`
+- `@backstage/plugin-events-backend-module-gerrit`
+- `@backstage/plugin-events-backend-module-github`
+- `@backstage/plugin-events-backend-module-gitlab`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-events-node`
+- `@backstage/plugin-explore-backend`
+- `@backstage/plugin-graphql-backend`
+- `@backstage/plugin-jenkins-common`
+- `@backstage/plugin-kubernetes-node`
+- `@backstage/plugin-lighthouse-backend`
+- `@backstage/plugin-nomad-backend`
+- `@backstage/plugin-permission-backend`
+- `@backstage/plugin-permission-backend-module-allow-all-policy`
+- `@backstage/plugin-permission-node`
+- `@backstage/plugin-playlist-common`
+- `@backstage/plugin-rollbar-backend`
+- `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`
+- `@backstage/plugin-scaffolder-backend-module-cookiecutter`
+- `@backstage/plugin-scaffolder-backend-module-rails`
+- `@backstage/plugin-scaffolder-backend-module-sentry`
+- `@backstage/plugin-scaffolder-backend-module-yeoman`
+- `@backstage/plugin-search-backend-module-catalog`
+- `@backstage/plugin-search-backend-module-explore`
+- `@backstage/plugin-search-common`
+- `@backstage/plugin-sonarqube-backend`
+- `@backstage/plugin-tech-insights-backend-module-jsonfc`
+- `@backstage/plugin-tech-insights-node`
+- `@backstage/plugin-todo-backend`

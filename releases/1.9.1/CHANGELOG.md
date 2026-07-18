@@ -5,11 +5,13 @@ Changes between 1.9.0 and 1.9.1 — 75 changed and 0 added packages.
 ## Summary
 
 - [Patch version bumps](#patch-version-bumps): 1 package
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 74 packages
 
 ## Table of contents
 
 - [Patch version bumps](#patch-version-bumps)
   - [`@backstage/core-components` (0.12.1 → 0.12.2)](#backstagecore-components-0121--0122)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Patch version bumps
 
@@ -21,4 +23,79 @@ Changes between 1.9.0 and 1.9.1 — 75 changed and 0 added packages.
 
 - Fixing the UPPERCASED links in the sidebar
 
-_Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-adr`, `@backstage/plugin-airbrake`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apache-airflow`, `@backstage/plugin-api-docs`, `@backstage/plugin-apollo-explorer`, `@backstage/plugin-azure-devops`, `@backstage/plugin-azure-sites`, `@backstage/plugin-badges`, `@backstage/plugin-bazaar`, `@backstage/plugin-bitrise`, `@backstage/plugin-catalog`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-catalog-import`, `@backstage/plugin-catalog-react`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-circleci`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-code-climate`, `@backstage/plugin-code-coverage`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-cost-insights`, `@backstage/plugin-dynatrace`, `@backstage/plugin-explore`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcalendar`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-git-release-manager`, `@backstage/plugin-github-actions`, `@backstage/plugin-github-deployments`, `@backstage/plugin-github-issues`, `@backstage/plugin-github-pull-requests-board`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-home`, `@backstage/plugin-ilert`, `@backstage/plugin-jenkins`, `@backstage/plugin-kafka`, `@backstage/plugin-kubernetes`, `@backstage/plugin-lighthouse`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-org`, `@backstage/plugin-org-react`, `@backstage/plugin-pagerduty`, `@backstage/plugin-periskop`, `@backstage/plugin-playlist`, `@backstage/plugin-rollbar`, `@backstage/plugin-scaffolder`, `@backstage/plugin-search`, `@backstage/plugin-search-react`, `@backstage/plugin-sentry`, `@backstage/plugin-shortcuts`, `@backstage/plugin-sonarqube`, `@backstage/plugin-splunk-on-call`, `@backstage/plugin-stack-overflow`, `@backstage/plugin-tech-insights`, `@backstage/plugin-tech-radar`, `@backstage/plugin-techdocs`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-todo`, `@backstage/plugin-user-settings`, `@backstage/plugin-vault`, `@backstage/plugin-xcmetrics`._
+## Excluded dependency updates for packages
+
+- `@backstage/app-defaults`
+- `@backstage/dev-utils`
+- `@backstage/integration-react`
+- `@backstage/plugin-adr`
+- `@backstage/plugin-airbrake`
+- `@backstage/plugin-allure`
+- `@backstage/plugin-analytics-module-ga`
+- `@backstage/plugin-apache-airflow`
+- `@backstage/plugin-api-docs`
+- `@backstage/plugin-apollo-explorer`
+- `@backstage/plugin-azure-devops`
+- `@backstage/plugin-azure-sites`
+- `@backstage/plugin-badges`
+- `@backstage/plugin-bazaar`
+- `@backstage/plugin-bitrise`
+- `@backstage/plugin-catalog`
+- `@backstage/plugin-catalog-graph`
+- `@backstage/plugin-catalog-import`
+- `@backstage/plugin-catalog-react`
+- `@backstage/plugin-cicd-statistics`
+- `@backstage/plugin-cicd-statistics-module-gitlab`
+- `@backstage/plugin-circleci`
+- `@backstage/plugin-cloudbuild`
+- `@backstage/plugin-code-climate`
+- `@backstage/plugin-code-coverage`
+- `@backstage/plugin-codescene`
+- `@backstage/plugin-config-schema`
+- `@backstage/plugin-cost-insights`
+- `@backstage/plugin-dynatrace`
+- `@backstage/plugin-explore`
+- `@backstage/plugin-firehydrant`
+- `@backstage/plugin-fossa`
+- `@backstage/plugin-gcalendar`
+- `@backstage/plugin-gcp-projects`
+- `@backstage/plugin-git-release-manager`
+- `@backstage/plugin-github-actions`
+- `@backstage/plugin-github-deployments`
+- `@backstage/plugin-github-issues`
+- `@backstage/plugin-github-pull-requests-board`
+- `@backstage/plugin-gitops-profiles`
+- `@backstage/plugin-gocd`
+- `@backstage/plugin-graphiql`
+- `@backstage/plugin-home`
+- `@backstage/plugin-ilert`
+- `@backstage/plugin-jenkins`
+- `@backstage/plugin-kafka`
+- `@backstage/plugin-kubernetes`
+- `@backstage/plugin-lighthouse`
+- `@backstage/plugin-newrelic`
+- `@backstage/plugin-newrelic-dashboard`
+- `@backstage/plugin-org`
+- `@backstage/plugin-org-react`
+- `@backstage/plugin-pagerduty`
+- `@backstage/plugin-periskop`
+- `@backstage/plugin-playlist`
+- `@backstage/plugin-rollbar`
+- `@backstage/plugin-scaffolder`
+- `@backstage/plugin-search`
+- `@backstage/plugin-search-react`
+- `@backstage/plugin-sentry`
+- `@backstage/plugin-shortcuts`
+- `@backstage/plugin-sonarqube`
+- `@backstage/plugin-splunk-on-call`
+- `@backstage/plugin-stack-overflow`
+- `@backstage/plugin-tech-insights`
+- `@backstage/plugin-tech-radar`
+- `@backstage/plugin-techdocs`
+- `@backstage/plugin-techdocs-addons-test-utils`
+- `@backstage/plugin-techdocs-module-addons-contrib`
+- `@backstage/plugin-techdocs-react`
+- `@backstage/plugin-todo`
+- `@backstage/plugin-user-settings`
+- `@backstage/plugin-vault`
+- `@backstage/plugin-xcmetrics`

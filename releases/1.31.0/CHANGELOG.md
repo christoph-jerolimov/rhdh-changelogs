@@ -9,6 +9,7 @@ Changes between 1.30.4 and 1.31.0 — 158 changed and 4 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 3 packages
 - [Minor version bumps](#minor-version-bumps): 15 packages
 - [Other patch version bumps](#other-patch-version-bumps): 68 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 10 packages
 
 ## Table of contents
 
@@ -169,6 +170,7 @@ Changes between 1.30.4 and 1.31.0 — 158 changed and 4 added packages.
   - [`@backstage/repo-tools` (0.9.6 → 0.9.7)](#backstagerepo-tools-096--097)
   - [`@backstage/theme` (0.5.6 → 0.5.7)](#backstagetheme-056--057)
   - [`@backstage/version-bridge` (1.0.8 → 1.0.9)](#backstageversion-bridge-108--109)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -2503,4 +2505,15 @@ Changes between 1.30.4 and 1.31.0 — 158 changed and 4 added packages.
 
 - 836127c: Updated dependency `@testing-library/react` to `^16.0.0`.
 
-_Excluded dependency updates for packages: `@backstage/plugin-app-visualizer`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-notifications-node`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend-node`, `@techdocs/cli`._
+## Excluded dependency updates for packages
+
+- `@backstage/plugin-app-visualizer`
+- `@backstage/plugin-bitbucket-cloud-common`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-kubernetes-common`
+- `@backstage/plugin-notifications-node`
+- `@backstage/plugin-scaffolder-common`
+- `@backstage/plugin-scaffolder-node`
+- `@backstage/plugin-scaffolder-node-test-utils`
+- `@backstage/plugin-search-backend-node`
+- `@techdocs/cli`

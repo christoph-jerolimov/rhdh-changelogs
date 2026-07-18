@@ -9,6 +9,7 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 3 packages
 - [Other minor version bumps](#other-minor-version-bumps): 12 packages
 - [Other patch version bumps](#other-patch-version-bumps): 95 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 18 packages
 
 ## Table of contents
 
@@ -140,6 +141,7 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
   - [`@backstage/plugin-user-settings` (0.8.13 → 0.8.14)](#backstageplugin-user-settings-0813--0814)
   - [`@backstage/plugin-user-settings-backend` (0.2.24 → 0.2.25)](#backstageplugin-user-settings-backend-0224--0225)
   - [`@backstage/version-bridge` (1.0.9 → 1.0.10)](#backstageversion-bridge-109--1010)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Breaking changes
 
@@ -1545,4 +1547,23 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 
-_Excluded dependency updates for packages: `@backstage/backend-plugin-api`, `@backstage/frontend-defaults`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@techdocs/cli`._
+## Excluded dependency updates for packages
+
+- `@backstage/backend-plugin-api`
+- `@backstage/frontend-defaults`
+- `@backstage/plugin-app-node`
+- `@backstage/plugin-auth-backend-module-auth0-provider`
+- `@backstage/plugin-auth-backend-module-azure-easyauth-provider`
+- `@backstage/plugin-auth-backend-module-bitbucket-server-provider`
+- `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`
+- `@backstage/plugin-auth-backend-module-pinniped-provider`
+- `@backstage/plugin-bitbucket-cloud-common`
+- `@backstage/plugin-catalog-backend-module-backstage-openapi`
+- `@backstage/plugin-catalog-backend-module-gcp`
+- `@backstage/plugin-catalog-backend-module-github-org`
+- `@backstage/plugin-catalog-backend-module-ldap`
+- `@backstage/plugin-catalog-backend-module-logs`
+- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-permission-backend-module-allow-all-policy`
+- `@techdocs/cli`

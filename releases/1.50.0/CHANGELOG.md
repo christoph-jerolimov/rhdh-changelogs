@@ -9,6 +9,7 @@ Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 1 package
 - [Other minor version bumps](#other-minor-version-bumps): 7 packages
 - [Other patch version bumps](#other-patch-version-bumps): 61 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 116 packages
 
 ## Table of contents
 
@@ -98,6 +99,7 @@ Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
   - [`@backstage/repo-tools` (0.17.0 → 0.17.1)](#backstagerepo-tools-0170--0171)
   - [`@backstage/theme` (0.7.2 → 0.7.3)](#backstagetheme-072--073)
   - [`@techdocs/cli` (1.10.6 → 1.10.7)](#techdocscli-1106--1107)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Breaking changes
 
@@ -1058,4 +1060,121 @@ Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
 
 - 980b7f5: Updated proxy documentation to recommend Node.js built-in proxy support via `NODE_USE_ENV_PROXY` instead of `global-agent`.
 
-_Excluded dependency updates for packages: `@backstage/cli-defaults`, `@backstage/cli-module-config`, `@backstage/cli-module-github`, `@backstage/cli-module-info`, `@backstage/cli-module-lint`, `@backstage/cli-module-maintenance`, `@backstage/cli-module-translations`, `@backstage/codemods`, `@backstage/config`, `@backstage/core-plugin-api`, `@backstage/dev-utils`, `@backstage/frontend-defaults`, `@backstage/frontend-dev-utils`, `@backstage/frontend-dynamic-feature-loader`, `@backstage/frontend-test-utils`, `@backstage/integration-aws-node`, `@backstage/integration-react`, `@backstage/module-federation-common`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-app-react`, `@backstage/plugin-auth-backend-module-atlassian-provider`, `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-cloudflare-access-provider`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-oidc-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-auth-backend-module-openshift-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-gitea`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-msgraph`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-unprocessed-entities-common`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools`, `@backstage/plugin-devtools-common`, `@backstage/plugin-devtools-react`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-home`, `@backstage/plugin-home-react`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-kubernetes-react`, `@backstage/plugin-mui-to-bui`, `@backstage/plugin-notifications-common`, `@backstage/plugin-notifications-node`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-common`, `@backstage/plugin-permission-node`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-common`, `@backstage/plugin-search-react`, `@backstage/plugin-signals-backend`, `@backstage/plugin-signals-react`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-user-settings`, `@backstage/plugin-user-settings-backend`, `@backstage/test-utils`._
+## Excluded dependency updates for packages
+
+- `@backstage/cli-defaults`
+- `@backstage/cli-module-config`
+- `@backstage/cli-module-github`
+- `@backstage/cli-module-info`
+- `@backstage/cli-module-lint`
+- `@backstage/cli-module-maintenance`
+- `@backstage/cli-module-translations`
+- `@backstage/codemods`
+- `@backstage/config`
+- `@backstage/core-plugin-api`
+- `@backstage/dev-utils`
+- `@backstage/frontend-defaults`
+- `@backstage/frontend-dev-utils`
+- `@backstage/frontend-dynamic-feature-loader`
+- `@backstage/frontend-test-utils`
+- `@backstage/integration-aws-node`
+- `@backstage/integration-react`
+- `@backstage/module-federation-common`
+- `@backstage/plugin-app-backend`
+- `@backstage/plugin-app-node`
+- `@backstage/plugin-app-react`
+- `@backstage/plugin-auth-backend-module-atlassian-provider`
+- `@backstage/plugin-auth-backend-module-aws-alb-provider`
+- `@backstage/plugin-auth-backend-module-azure-easyauth-provider`
+- `@backstage/plugin-auth-backend-module-bitbucket-provider`
+- `@backstage/plugin-auth-backend-module-bitbucket-server-provider`
+- `@backstage/plugin-auth-backend-module-cloudflare-access-provider`
+- `@backstage/plugin-auth-backend-module-gcp-iap-provider`
+- `@backstage/plugin-auth-backend-module-github-provider`
+- `@backstage/plugin-auth-backend-module-gitlab-provider`
+- `@backstage/plugin-auth-backend-module-google-provider`
+- `@backstage/plugin-auth-backend-module-guest-provider`
+- `@backstage/plugin-auth-backend-module-microsoft-provider`
+- `@backstage/plugin-auth-backend-module-oauth2-provider`
+- `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`
+- `@backstage/plugin-auth-backend-module-oidc-provider`
+- `@backstage/plugin-auth-backend-module-okta-provider`
+- `@backstage/plugin-auth-backend-module-onelogin-provider`
+- `@backstage/plugin-auth-backend-module-openshift-provider`
+- `@backstage/plugin-auth-backend-module-pinniped-provider`
+- `@backstage/plugin-auth-backend-module-vmware-cloud-provider`
+- `@backstage/plugin-auth-react`
+- `@backstage/plugin-bitbucket-cloud-common`
+- `@backstage/plugin-catalog-backend-module-aws`
+- `@backstage/plugin-catalog-backend-module-backstage-openapi`
+- `@backstage/plugin-catalog-backend-module-bitbucket-server`
+- `@backstage/plugin-catalog-backend-module-gcp`
+- `@backstage/plugin-catalog-backend-module-gerrit`
+- `@backstage/plugin-catalog-backend-module-gitea`
+- `@backstage/plugin-catalog-backend-module-github-org`
+- `@backstage/plugin-catalog-backend-module-gitlab-org`
+- `@backstage/plugin-catalog-backend-module-ldap`
+- `@backstage/plugin-catalog-backend-module-logs`
+- `@backstage/plugin-catalog-backend-module-msgraph`
+- `@backstage/plugin-catalog-backend-module-openapi`
+- `@backstage/plugin-catalog-backend-module-puppetdb`
+- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`
+- `@backstage/plugin-catalog-backend-module-unprocessed`
+- `@backstage/plugin-catalog-common`
+- `@backstage/plugin-catalog-unprocessed-entities-common`
+- `@backstage/plugin-config-schema`
+- `@backstage/plugin-devtools`
+- `@backstage/plugin-devtools-common`
+- `@backstage/plugin-devtools-react`
+- `@backstage/plugin-events-backend`
+- `@backstage/plugin-events-backend-module-aws-sqs`
+- `@backstage/plugin-events-backend-module-azure`
+- `@backstage/plugin-events-backend-module-bitbucket-cloud`
+- `@backstage/plugin-events-backend-module-bitbucket-server`
+- `@backstage/plugin-events-backend-module-gerrit`
+- `@backstage/plugin-events-backend-module-github`
+- `@backstage/plugin-events-backend-module-gitlab`
+- `@backstage/plugin-events-backend-module-kafka`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-events-node`
+- `@backstage/plugin-home`
+- `@backstage/plugin-home-react`
+- `@backstage/plugin-kubernetes-cluster`
+- `@backstage/plugin-kubernetes-common`
+- `@backstage/plugin-kubernetes-node`
+- `@backstage/plugin-kubernetes-react`
+- `@backstage/plugin-mui-to-bui`
+- `@backstage/plugin-notifications-common`
+- `@backstage/plugin-notifications-node`
+- `@backstage/plugin-permission-backend`
+- `@backstage/plugin-permission-backend-module-allow-all-policy`
+- `@backstage/plugin-permission-common`
+- `@backstage/plugin-permission-node`
+- `@backstage/plugin-proxy-backend`
+- `@backstage/plugin-proxy-node`
+- `@backstage/plugin-scaffolder-backend-module-azure`
+- `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`
+- `@backstage/plugin-scaffolder-backend-module-cookiecutter`
+- `@backstage/plugin-scaffolder-backend-module-gcp`
+- `@backstage/plugin-scaffolder-backend-module-gerrit`
+- `@backstage/plugin-scaffolder-backend-module-gitea`
+- `@backstage/plugin-scaffolder-backend-module-gitlab`
+- `@backstage/plugin-scaffolder-backend-module-notifications`
+- `@backstage/plugin-scaffolder-backend-module-sentry`
+- `@backstage/plugin-scaffolder-backend-module-yeoman`
+- `@backstage/plugin-scaffolder-node-test-utils`
+- `@backstage/plugin-search-backend`
+- `@backstage/plugin-search-backend-module-catalog`
+- `@backstage/plugin-search-backend-module-elasticsearch`
+- `@backstage/plugin-search-backend-module-explore`
+- `@backstage/plugin-search-backend-module-stack-overflow-collator`
+- `@backstage/plugin-search-common`
+- `@backstage/plugin-search-react`
+- `@backstage/plugin-signals-backend`
+- `@backstage/plugin-signals-react`
+- `@backstage/plugin-techdocs-addons-test-utils`
+- `@backstage/plugin-techdocs-module-addons-contrib`
+- `@backstage/plugin-techdocs-react`
+- `@backstage/plugin-user-settings`
+- `@backstage/plugin-user-settings-backend`
+- `@backstage/test-utils`

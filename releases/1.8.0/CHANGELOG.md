@@ -10,6 +10,7 @@ Changes between 1.7.2 and 1.8.0 — 158 changed and 13 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 1 package
 - [Other minor version bumps](#other-minor-version-bumps): 6 packages
 - [Other patch version bumps](#other-patch-version-bumps): 60 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 78 packages
 
 ## Table of contents
 
@@ -112,6 +113,7 @@ Changes between 1.7.2 and 1.8.0 — 158 changed and 13 added packages.
   - [`@backstage/plugin-xcmetrics` (0.2.30 → 0.2.31)](#backstageplugin-xcmetrics-0230--0231)
   - [`@backstage/types` (1.0.0 → 1.0.1)](#backstagetypes-100--101)
   - [`@backstage/version-bridge` (1.0.1 → 1.0.2)](#backstageversion-bridge-101--102)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -1437,4 +1439,83 @@ Changes between 1.7.2 and 1.8.0 — 158 changed and 13 added packages.
 
 - e70984325d: Updated the value created by `createVersionedValueMap` to give it an extra hidden property that makes it easier to inspect during debugging.
 
-_Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-app-api`, `@backstage/backend-defaults`, `@backstage/backend-plugin-api`, `@backstage/catalog-client`, `@backstage/config`, `@backstage/config-loader`, `@backstage/dev-utils`, `@backstage/errors`, `@backstage/integration-react`, `@backstage/plugin-adr`, `@backstage/plugin-adr-backend`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apollo-explorer`, `@backstage/plugin-app-backend`, `@backstage/plugin-azure-devops`, `@backstage/plugin-badges`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-catalog-node`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-code-climate`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-github-deployments`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-home`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-lighthouse`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-search`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-search-react`, `@backstage/plugin-sentry`, `@backstage/plugin-shortcuts`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-common`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/plugin-user-settings`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault`, `@backstage/test-utils`, `@techdocs/cli`._
+## Excluded dependency updates for packages
+
+- `@backstage/app-defaults`
+- `@backstage/backend-app-api`
+- `@backstage/backend-defaults`
+- `@backstage/backend-plugin-api`
+- `@backstage/catalog-client`
+- `@backstage/config`
+- `@backstage/config-loader`
+- `@backstage/dev-utils`
+- `@backstage/errors`
+- `@backstage/integration-react`
+- `@backstage/plugin-adr`
+- `@backstage/plugin-adr-backend`
+- `@backstage/plugin-adr-common`
+- `@backstage/plugin-airbrake`
+- `@backstage/plugin-airbrake-backend`
+- `@backstage/plugin-allure`
+- `@backstage/plugin-analytics-module-ga`
+- `@backstage/plugin-apollo-explorer`
+- `@backstage/plugin-app-backend`
+- `@backstage/plugin-azure-devops`
+- `@backstage/plugin-badges`
+- `@backstage/plugin-badges-backend`
+- `@backstage/plugin-bazaar-backend`
+- `@backstage/plugin-catalog-backend-module-ldap`
+- `@backstage/plugin-catalog-common`
+- `@backstage/plugin-catalog-graphql`
+- `@backstage/plugin-catalog-node`
+- `@backstage/plugin-cicd-statistics`
+- `@backstage/plugin-cicd-statistics-module-gitlab`
+- `@backstage/plugin-code-climate`
+- `@backstage/plugin-codescene`
+- `@backstage/plugin-config-schema`
+- `@backstage/plugin-explore-react`
+- `@backstage/plugin-firehydrant`
+- `@backstage/plugin-fossa`
+- `@backstage/plugin-gcp-projects`
+- `@backstage/plugin-github-deployments`
+- `@backstage/plugin-gocd`
+- `@backstage/plugin-graphiql`
+- `@backstage/plugin-graphql-backend`
+- `@backstage/plugin-home`
+- `@backstage/plugin-jenkins-backend`
+- `@backstage/plugin-jenkins-common`
+- `@backstage/plugin-kafka-backend`
+- `@backstage/plugin-lighthouse`
+- `@backstage/plugin-newrelic`
+- `@backstage/plugin-newrelic-dashboard`
+- `@backstage/plugin-periskop-backend`
+- `@backstage/plugin-permission-backend`
+- `@backstage/plugin-permission-node`
+- `@backstage/plugin-permission-react`
+- `@backstage/plugin-playlist-common`
+- `@backstage/plugin-proxy-backend`
+- `@backstage/plugin-rollbar-backend`
+- `@backstage/plugin-scaffolder-backend-module-cookiecutter`
+- `@backstage/plugin-scaffolder-backend-module-rails`
+- `@backstage/plugin-scaffolder-backend-module-yeoman`
+- `@backstage/plugin-scaffolder-common`
+- `@backstage/plugin-search`
+- `@backstage/plugin-search-backend`
+- `@backstage/plugin-search-backend-module-elasticsearch`
+- `@backstage/plugin-search-backend-module-pg`
+- `@backstage/plugin-search-backend-node`
+- `@backstage/plugin-search-common`
+- `@backstage/plugin-search-react`
+- `@backstage/plugin-sentry`
+- `@backstage/plugin-shortcuts`
+- `@backstage/plugin-sonarqube-backend`
+- `@backstage/plugin-tech-insights-backend-module-jsonfc`
+- `@backstage/plugin-tech-insights-common`
+- `@backstage/plugin-techdocs-addons-test-utils`
+- `@backstage/plugin-todo`
+- `@backstage/plugin-todo-backend`
+- `@backstage/plugin-user-settings`
+- `@backstage/plugin-user-settings-backend`
+- `@backstage/plugin-vault`
+- `@backstage/test-utils`
+- `@techdocs/cli`

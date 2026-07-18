@@ -10,6 +10,7 @@ Changes between 1.39.1 and 1.40.0 — 160 changed and 2 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 2 packages
 - [Other minor version bumps](#other-minor-version-bumps): 8 packages
 - [Other patch version bumps](#other-patch-version-bumps): 52 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 84 packages
 
 ## Table of contents
 
@@ -97,6 +98,7 @@ Changes between 1.39.1 and 1.40.0 — 160 changed and 2 added packages.
   - [`@backstage/plugin-techdocs-common` (0.1.0 → 0.1.1)](#backstageplugin-techdocs-common-010--011)
   - [`@backstage/plugin-techdocs-module-addons-contrib` (1.1.24 → 1.1.25)](#backstageplugin-techdocs-module-addons-contrib-1124--1125)
   - [`@backstage/plugin-user-settings` (0.8.22 → 0.8.23)](#backstageplugin-user-settings-0822--0823)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -1251,4 +1253,89 @@ Changes between 1.39.1 and 1.40.0 — 160 changed and 2 added packages.
 - ab6d3dd: Add some translation to user-setting plugin
 - c83cd8b: Fixed some circular or otherwise unclear imports
 
-_Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-openapi-utils`, `@backstage/core-app-api`, `@backstage/core-compat-api`, `@backstage/dev-utils`, `@backstage/frontend-dynamic-feature-loader`, `@backstage/frontend-test-utils`, `@backstage/integration-react`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend`, `@backstage/plugin-auth-backend-module-atlassian-provider`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-cloudflare-access-provider`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-oidc-provider`, `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-gitea`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-msgraph`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-config-schema`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-kubernetes-backend`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-notifications-backend-module-slack`, `@backstage/plugin-notifications-node`, `@backstage/plugin-org-react`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-signals-backend`, `@backstage/plugin-signals-node`, `@backstage/plugin-signals-react`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-techdocs-node`, `@backstage/plugin-user-settings-backend`, `@backstage/test-utils`, `@techdocs/cli`._
+## Excluded dependency updates for packages
+
+- `@backstage/app-defaults`
+- `@backstage/backend-openapi-utils`
+- `@backstage/core-app-api`
+- `@backstage/core-compat-api`
+- `@backstage/dev-utils`
+- `@backstage/frontend-dynamic-feature-loader`
+- `@backstage/frontend-test-utils`
+- `@backstage/integration-react`
+- `@backstage/plugin-app-backend`
+- `@backstage/plugin-app-node`
+- `@backstage/plugin-auth-backend`
+- `@backstage/plugin-auth-backend-module-atlassian-provider`
+- `@backstage/plugin-auth-backend-module-auth0-provider`
+- `@backstage/plugin-auth-backend-module-azure-easyauth-provider`
+- `@backstage/plugin-auth-backend-module-bitbucket-provider`
+- `@backstage/plugin-auth-backend-module-bitbucket-server-provider`
+- `@backstage/plugin-auth-backend-module-cloudflare-access-provider`
+- `@backstage/plugin-auth-backend-module-gcp-iap-provider`
+- `@backstage/plugin-auth-backend-module-github-provider`
+- `@backstage/plugin-auth-backend-module-gitlab-provider`
+- `@backstage/plugin-auth-backend-module-google-provider`
+- `@backstage/plugin-auth-backend-module-guest-provider`
+- `@backstage/plugin-auth-backend-module-microsoft-provider`
+- `@backstage/plugin-auth-backend-module-oauth2-provider`
+- `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`
+- `@backstage/plugin-auth-backend-module-oidc-provider`
+- `@backstage/plugin-auth-backend-module-onelogin-provider`
+- `@backstage/plugin-auth-backend-module-pinniped-provider`
+- `@backstage/plugin-auth-backend-module-vmware-cloud-provider`
+- `@backstage/plugin-auth-react`
+- `@backstage/plugin-catalog-backend-module-aws`
+- `@backstage/plugin-catalog-backend-module-azure`
+- `@backstage/plugin-catalog-backend-module-backstage-openapi`
+- `@backstage/plugin-catalog-backend-module-gcp`
+- `@backstage/plugin-catalog-backend-module-gerrit`
+- `@backstage/plugin-catalog-backend-module-gitea`
+- `@backstage/plugin-catalog-backend-module-github-org`
+- `@backstage/plugin-catalog-backend-module-gitlab-org`
+- `@backstage/plugin-catalog-backend-module-incremental-ingestion`
+- `@backstage/plugin-catalog-backend-module-logs`
+- `@backstage/plugin-catalog-backend-module-msgraph`
+- `@backstage/plugin-catalog-backend-module-openapi`
+- `@backstage/plugin-catalog-backend-module-puppetdb`
+- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`
+- `@backstage/plugin-catalog-backend-module-unprocessed`
+- `@backstage/plugin-config-schema`
+- `@backstage/plugin-events-backend-module-aws-sqs`
+- `@backstage/plugin-events-backend-module-azure`
+- `@backstage/plugin-events-backend-module-bitbucket-cloud`
+- `@backstage/plugin-events-backend-module-bitbucket-server`
+- `@backstage/plugin-events-backend-module-gerrit`
+- `@backstage/plugin-events-backend-module-github`
+- `@backstage/plugin-events-backend-module-gitlab`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-events-node`
+- `@backstage/plugin-gateway-backend`
+- `@backstage/plugin-kubernetes-backend`
+- `@backstage/plugin-kubernetes-cluster`
+- `@backstage/plugin-kubernetes-node`
+- `@backstage/plugin-notifications-backend-module-slack`
+- `@backstage/plugin-notifications-node`
+- `@backstage/plugin-org-react`
+- `@backstage/plugin-permission-backend`
+- `@backstage/plugin-permission-backend-module-allow-all-policy`
+- `@backstage/plugin-permission-node`
+- `@backstage/plugin-permission-react`
+- `@backstage/plugin-proxy-backend`
+- `@backstage/plugin-proxy-node`
+- `@backstage/plugin-scaffolder-backend-module-gcp`
+- `@backstage/plugin-search-backend-module-catalog`
+- `@backstage/plugin-search-backend-module-elasticsearch`
+- `@backstage/plugin-search-backend-module-explore`
+- `@backstage/plugin-search-backend-module-pg`
+- `@backstage/plugin-search-backend-module-stack-overflow-collator`
+- `@backstage/plugin-search-backend-node`
+- `@backstage/plugin-signals-backend`
+- `@backstage/plugin-signals-node`
+- `@backstage/plugin-signals-react`
+- `@backstage/plugin-techdocs-addons-test-utils`
+- `@backstage/plugin-techdocs-backend`
+- `@backstage/plugin-techdocs-node`
+- `@backstage/plugin-user-settings-backend`
+- `@backstage/test-utils`
+- `@techdocs/cli`

@@ -10,6 +10,7 @@ Changes between 1.21.1 and 1.22.0 — 226 changed and 2 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 5 packages
 - [Other minor version bumps](#other-minor-version-bumps): 1 package
 - [Other patch version bumps](#other-patch-version-bumps): 167 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 50 packages
 
 ## Table of contents
 
@@ -197,6 +198,7 @@ Changes between 1.21.1 and 1.22.0 — 226 changed and 2 added packages.
   - [`@backstage/plugin-vault` (0.1.23 → 0.1.24)](#backstageplugin-vault-0123--0124)
   - [`@backstage/plugin-xcmetrics` (0.2.46 → 0.2.47)](#backstageplugin-xcmetrics-0246--0247)
   - [`@backstage/repo-tools` (0.5.1 → 0.5.2)](#backstagerepo-tools-051--052)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -1733,4 +1735,55 @@ Changes between 1.21.1 and 1.22.0 — 226 changed and 2 added packages.
 - 883782e: Updated the OpenAPI template to export the `TypedResponse` interface so that client code can leverage it
 - 7acbb5a: Removed `mock-fs` dev dependency.
 
-_Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-tasks`, `@backstage/backend-test-utils`, `@backstage/core-app-api`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-adr-common`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-node`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-github`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-msgraph`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-import`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kubernetes-backend`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-search-react`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-techdocs-node`, `@backstage/plugin-vault-backend`, `@backstage/plugin-vault-node`, `@backstage/test-utils`, `@techdocs/cli`._
+## Excluded dependency updates for packages
+
+- `@backstage/app-defaults`
+- `@backstage/backend-tasks`
+- `@backstage/backend-test-utils`
+- `@backstage/core-app-api`
+- `@backstage/dev-utils`
+- `@backstage/integration-react`
+- `@backstage/plugin-adr-common`
+- `@backstage/plugin-app-node`
+- `@backstage/plugin-auth-node`
+- `@backstage/plugin-catalog-backend-module-bitbucket-cloud`
+- `@backstage/plugin-catalog-backend-module-bitbucket-server`
+- `@backstage/plugin-catalog-backend-module-gcp`
+- `@backstage/plugin-catalog-backend-module-github`
+- `@backstage/plugin-catalog-backend-module-github-org`
+- `@backstage/plugin-catalog-backend-module-gitlab`
+- `@backstage/plugin-catalog-backend-module-incremental-ingestion`
+- `@backstage/plugin-catalog-backend-module-ldap`
+- `@backstage/plugin-catalog-backend-module-msgraph`
+- `@backstage/plugin-catalog-backend-module-puppetdb`
+- `@backstage/plugin-catalog-backend-module-unprocessed`
+- `@backstage/plugin-catalog-common`
+- `@backstage/plugin-catalog-import`
+- `@backstage/plugin-cicd-statistics`
+- `@backstage/plugin-cicd-statistics-module-gitlab`
+- `@backstage/plugin-devtools-common`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-events-node`
+- `@backstage/plugin-jenkins-common`
+- `@backstage/plugin-kubernetes-backend`
+- `@backstage/plugin-kubernetes-node`
+- `@backstage/plugin-lighthouse-backend`
+- `@backstage/plugin-playlist-common`
+- `@backstage/plugin-proxy-backend`
+- `@backstage/plugin-rollbar-backend`
+- `@backstage/plugin-scaffolder-backend-module-gerrit`
+- `@backstage/plugin-scaffolder-backend-module-rails`
+- `@backstage/plugin-scaffolder-backend-module-sentry`
+- `@backstage/plugin-scaffolder-node`
+- `@backstage/plugin-search-backend-module-elasticsearch`
+- `@backstage/plugin-search-backend-module-pg`
+- `@backstage/plugin-search-backend-node`
+- `@backstage/plugin-search-common`
+- `@backstage/plugin-search-react`
+- `@backstage/plugin-sonarqube-react`
+- `@backstage/plugin-tech-insights-backend`
+- `@backstage/plugin-techdocs-node`
+- `@backstage/plugin-vault-backend`
+- `@backstage/plugin-vault-node`
+- `@backstage/test-utils`
+- `@techdocs/cli`

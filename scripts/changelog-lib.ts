@@ -196,6 +196,7 @@ export function buildChangelog(
     }
   }
   for (const group of groups) group.sort((a, b) => byCodepoint(a.name, b.name));
+  excluded.sort(byCodepoint);
 
   const titles = [
     "Newly added packages",
@@ -216,11 +217,16 @@ export function buildChangelog(
     "",
   );
 
+  const EXCLUDED_TITLE = "Excluded dependency updates for packages";
+  const count = (length: number): string => `${length} ${length === 1 ? "package" : "packages"}`;
   const nonEmpty = groups.map((entries, index) => ({ entries, title: titles[index]! })).filter(({ entries }) => entries.length > 0);
-  if (nonEmpty.length > 0) {
+  if (nonEmpty.length > 0 || excluded.length > 0) {
     lines.push("## Summary", "");
     for (const { entries, title } of nonEmpty) {
-      lines.push(`- [${title}](#${slug(title)}): ${entries.length} ${entries.length === 1 ? "package" : "packages"}`);
+      lines.push(`- [${title}](#${slug(title)}): ${count(entries.length)}`);
+    }
+    if (excluded.length > 0) {
+      lines.push(`- [${EXCLUDED_TITLE}](#${slug(EXCLUDED_TITLE)}): ${count(excluded.length)}`);
     }
     lines.push("", "## Table of contents", "");
     for (const { entries, title } of nonEmpty) {
@@ -229,6 +235,9 @@ export function buildChangelog(
         const heading = packageHeading(entry);
         lines.push(`  - [${heading}](#${slug(heading)})`);
       }
+    }
+    if (excluded.length > 0) {
+      lines.push(`- [${EXCLUDED_TITLE}](#${slug(EXCLUDED_TITLE)})`);
     }
     lines.push("");
   }
@@ -242,10 +251,11 @@ export function buildChangelog(
   }
 
   if (excluded.length > 0) {
-    lines.push(
-      `_Excluded dependency updates for packages: ${excluded.map((name) => `\`${name}\``).join(", ")}._`,
-      "",
-    );
+    lines.push(`## ${EXCLUDED_TITLE}`, "");
+    for (const name of excluded) {
+      lines.push(`- \`${name}\``);
+    }
+    lines.push("");
   }
   return trimBlankEdges(lines).join("\n") + "\n";
 }

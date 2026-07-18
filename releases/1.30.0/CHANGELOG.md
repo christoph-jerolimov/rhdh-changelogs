@@ -10,6 +10,7 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 2 packages
 - [Other minor version bumps](#other-minor-version-bumps): 9 packages
 - [Other patch version bumps](#other-patch-version-bumps): 66 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 46 packages
 
 ## Table of contents
 
@@ -131,6 +132,7 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
   - [`@backstage/plugin-techdocs-backend` (1.10.9 → 1.10.10)](#backstageplugin-techdocs-backend-1109--11010)
   - [`@backstage/plugin-techdocs-node` (1.12.8 → 1.12.9)](#backstageplugin-techdocs-node-1128--1129)
   - [`@backstage/plugin-user-settings` (0.8.10 → 0.8.11)](#backstageplugin-user-settings-0810--0811)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -1823,4 +1825,51 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 - c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
 - 6349099: Added config input type to the extensions
 
-_Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-openapi-utils`, `@backstage/catalog-client`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-unprocessed-entities`, `@backstage/plugin-catalog-unprocessed-entities-common`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-home-react`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-org-react`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-react`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-signals`, `@backstage/plugin-signals-node`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-user-settings-backend`, `@backstage/repo-tools`, `@backstage/test-utils`, `@techdocs/cli`._
+## Excluded dependency updates for packages
+
+- `@backstage/app-defaults`
+- `@backstage/backend-openapi-utils`
+- `@backstage/catalog-client`
+- `@backstage/dev-utils`
+- `@backstage/integration-react`
+- `@backstage/plugin-app-node`
+- `@backstage/plugin-auth-backend-module-azure-easyauth-provider`
+- `@backstage/plugin-auth-backend-module-guest-provider`
+- `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`
+- `@backstage/plugin-auth-backend-module-pinniped-provider`
+- `@backstage/plugin-catalog-backend-module-logs`
+- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`
+- `@backstage/plugin-catalog-backend-module-unprocessed`
+- `@backstage/plugin-catalog-common`
+- `@backstage/plugin-catalog-unprocessed-entities`
+- `@backstage/plugin-catalog-unprocessed-entities-common`
+- `@backstage/plugin-config-schema`
+- `@backstage/plugin-devtools-common`
+- `@backstage/plugin-events-backend`
+- `@backstage/plugin-events-backend-module-azure`
+- `@backstage/plugin-events-backend-module-bitbucket-cloud`
+- `@backstage/plugin-events-backend-module-gerrit`
+- `@backstage/plugin-events-backend-module-github`
+- `@backstage/plugin-events-backend-module-gitlab`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-events-node`
+- `@backstage/plugin-home-react`
+- `@backstage/plugin-kubernetes-cluster`
+- `@backstage/plugin-kubernetes-common`
+- `@backstage/plugin-org-react`
+- `@backstage/plugin-permission-backend-module-allow-all-policy`
+- `@backstage/plugin-permission-react`
+- `@backstage/plugin-scaffolder-backend-module-gcp`
+- `@backstage/plugin-scaffolder-backend-module-yeoman`
+- `@backstage/plugin-scaffolder-common`
+- `@backstage/plugin-scaffolder-node-test-utils`
+- `@backstage/plugin-search-backend-module-elasticsearch`
+- `@backstage/plugin-signals`
+- `@backstage/plugin-signals-node`
+- `@backstage/plugin-techdocs-addons-test-utils`
+- `@backstage/plugin-techdocs-module-addons-contrib`
+- `@backstage/plugin-techdocs-react`
+- `@backstage/plugin-user-settings-backend`
+- `@backstage/repo-tools`
+- `@backstage/test-utils`
+- `@techdocs/cli`

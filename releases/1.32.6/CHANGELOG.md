@@ -5,6 +5,7 @@ Changes between 1.32.5 and 1.32.6 — 19 changed and 0 added packages.
 ## Summary
 
 - [Patch version bumps](#patch-version-bumps): 9 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 10 packages
 
 ## Table of contents
 
@@ -18,6 +19,7 @@ Changes between 1.32.5 and 1.32.6 — 19 changed and 0 added packages.
   - [`@backstage/plugin-scaffolder-backend-module-rails` (0.5.1 → 0.5.2)](#backstageplugin-scaffolder-backend-module-rails-051--052)
   - [`@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.2 → 0.4.3)](#backstageplugin-scaffolder-backend-module-yeoman-042--043)
   - [`@backstage/plugin-scaffolder-node` (0.5.0 → 0.5.1)](#backstageplugin-scaffolder-node-050--051)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Patch version bumps
 
@@ -96,4 +98,15 @@ _No changelog entries found._
 
 _No changelog entries found._
 
-_Excluded dependency updates for packages: `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-github`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-node-test-utils`._
+## Excluded dependency updates for packages
+
+- `@backstage/plugin-scaffolder-backend-module-azure`
+- `@backstage/plugin-scaffolder-backend-module-bitbucket`
+- `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`
+- `@backstage/plugin-scaffolder-backend-module-cookiecutter`
+- `@backstage/plugin-scaffolder-backend-module-gcp`
+- `@backstage/plugin-scaffolder-backend-module-gerrit`
+- `@backstage/plugin-scaffolder-backend-module-gitea`
+- `@backstage/plugin-scaffolder-backend-module-github`
+- `@backstage/plugin-scaffolder-backend-module-sentry`
+- `@backstage/plugin-scaffolder-node-test-utils`

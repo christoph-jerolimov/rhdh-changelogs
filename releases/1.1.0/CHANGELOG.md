@@ -10,6 +10,7 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 1 package
 - [Other minor version bumps](#other-minor-version-bumps): 9 packages
 - [Other patch version bumps](#other-patch-version-bumps): 76 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 21 packages
 
 ## Table of contents
 
@@ -127,6 +128,7 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
   - [`@backstage/plugin-xcmetrics` (0.2.23 → 0.2.24)](#backstageplugin-xcmetrics-0223--0224)
   - [`@backstage/test-utils` (1.0.0 → 1.0.1)](#backstagetest-utils-100--101)
   - [`@backstage/version-bridge` (1.0.0 → 1.0.1)](#backstageversion-bridge-100--101)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -2193,4 +2195,26 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
 
-_Excluded dependency updates for packages: `@backstage/catalog-client`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-app-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-github`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-code-coverage-backend`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/search-common`, `@backstage/techdocs-common`._
+## Excluded dependency updates for packages
+
+- `@backstage/catalog-client`
+- `@backstage/plugin-airbrake-backend`
+- `@backstage/plugin-app-backend`
+- `@backstage/plugin-bazaar-backend`
+- `@backstage/plugin-catalog-backend-module-azure`
+- `@backstage/plugin-catalog-backend-module-github`
+- `@backstage/plugin-catalog-backend-module-gitlab`
+- `@backstage/plugin-catalog-graphql`
+- `@backstage/plugin-cicd-statistics`
+- `@backstage/plugin-code-coverage-backend`
+- `@backstage/plugin-graphql-backend`
+- `@backstage/plugin-kubernetes-common`
+- `@backstage/plugin-newrelic-dashboard`
+- `@backstage/plugin-periskop-backend`
+- `@backstage/plugin-proxy-backend`
+- `@backstage/plugin-rollbar-backend`
+- `@backstage/plugin-scaffolder-backend-module-cookiecutter`
+- `@backstage/plugin-scaffolder-backend-module-yeoman`
+- `@backstage/plugin-scaffolder-common`
+- `@backstage/search-common`
+- `@backstage/techdocs-common`

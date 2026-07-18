@@ -11,6 +11,7 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 3 packages
 - [Other minor version bumps](#other-minor-version-bumps): 12 packages
 - [Other patch version bumps](#other-patch-version-bumps): 139 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 27 packages
 
 ## Table of contents
 
@@ -185,6 +186,7 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
   - [`@backstage/repo-tools` (0.1.2 → 0.1.3)](#backstagerepo-tools-012--013)
   - [`@backstage/test-utils` (1.2.5 → 1.2.6)](#backstagetest-utils-125--126)
   - [`@backstage/theme` (0.2.17 → 0.2.18)](#backstagetheme-0217--0218)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -1892,4 +1894,32 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 482dae5de1c: Updated link to docs.
 
-_Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/integration-aws-node`, `@backstage/plugin-adr-common`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-lighthouse-common`, `@backstage/plugin-permission-react`, `@backstage/plugin-playlist-common`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-user-settings-backend`._
+## Excluded dependency updates for packages
+
+- `@backstage/app-defaults`
+- `@backstage/integration-aws-node`
+- `@backstage/plugin-adr-common`
+- `@backstage/plugin-badges-backend`
+- `@backstage/plugin-bazaar`
+- `@backstage/plugin-bazaar-backend`
+- `@backstage/plugin-catalog-backend-module-openapi`
+- `@backstage/plugin-catalog-graph`
+- `@backstage/plugin-cicd-statistics`
+- `@backstage/plugin-cicd-statistics-module-gitlab`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-kafka-backend`
+- `@backstage/plugin-kubernetes-common`
+- `@backstage/plugin-lighthouse-common`
+- `@backstage/plugin-permission-react`
+- `@backstage/plugin-playlist-common`
+- `@backstage/plugin-scaffolder-backend-module-rails`
+- `@backstage/plugin-scaffolder-backend-module-sentry`
+- `@backstage/plugin-scaffolder-backend-module-yeoman`
+- `@backstage/plugin-scaffolder-common`
+- `@backstage/plugin-scaffolder-node`
+- `@backstage/plugin-search-backend`
+- `@backstage/plugin-search-backend-module-pg`
+- `@backstage/plugin-search-backend-node`
+- `@backstage/plugin-search-common`
+- `@backstage/plugin-tech-insights-node`
+- `@backstage/plugin-user-settings-backend`

@@ -5,6 +5,7 @@ Changes between 1.31.3 and 1.31.4 — 19 changed and 0 added packages.
 ## Summary
 
 - [Patch version bumps](#patch-version-bumps): 14 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 5 packages
 
 ## Table of contents
 
@@ -23,6 +24,7 @@ Changes between 1.31.3 and 1.31.4 — 19 changed and 0 added packages.
   - [`@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.0 → 0.4.1)](#backstageplugin-scaffolder-backend-module-yeoman-040--041)
   - [`@backstage/plugin-scaffolder-node` (0.4.11 → 0.4.12)](#backstageplugin-scaffolder-node-0411--0412)
   - [`@backstage/plugin-scaffolder-node-test-utils` (0.1.12 → 0.1.13)](#backstageplugin-scaffolder-node-test-utils-0112--0113)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Patch version bumps
 
@@ -162,4 +164,10 @@ _No changelog entries found._
 - e969dc7: Move `@types/react` to a peer dependency.
 - 094eaa3: Remove references to in-repo backend-common
 
-_Excluded dependency updates for packages: `@backstage/plugin-scaffolder-backend-module-bitbucket`, `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`._
+## Excluded dependency updates for packages
+
+- `@backstage/plugin-scaffolder-backend-module-bitbucket`
+- `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`
+- `@backstage/plugin-scaffolder-backend-module-gcp`
+- `@backstage/plugin-scaffolder-backend-module-gerrit`
+- `@backstage/plugin-scaffolder-backend-module-gitea`

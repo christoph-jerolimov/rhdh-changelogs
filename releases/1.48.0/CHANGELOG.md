@@ -11,6 +11,7 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 3 packages
 - [Other minor version bumps](#other-minor-version-bumps): 10 packages
 - [Other patch version bumps](#other-patch-version-bumps): 124 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 29 packages
 
 ## Table of contents
 
@@ -180,6 +181,7 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
   - [`@backstage/theme` (0.7.1 → 0.7.2)](#backstagetheme-071--072)
   - [`@backstage/version-bridge` (1.0.11 → 1.0.12)](#backstageversion-bridge-1011--1012)
   - [`@techdocs/cli` (1.10.4 → 1.10.5)](#techdocscli-1104--1105)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -2401,4 +2403,34 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 27798df: Migrate the Techdocs CLI embedded app to the New Frontend System (NFS)
 - 508d127: Updated dependency `find-process` to `^2.0.0`.
 
-_Excluded dependency updates for packages: `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-openshift-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-unprocessed-entities-common`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-notifications-backend-module-slack`, `@backstage/plugin-notifications-node`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-signals-node`._
+## Excluded dependency updates for packages
+
+- `@backstage/plugin-auth-backend-module-guest-provider`
+- `@backstage/plugin-auth-backend-module-openshift-provider`
+- `@backstage/plugin-auth-backend-module-vmware-cloud-provider`
+- `@backstage/plugin-catalog-backend-module-logs`
+- `@backstage/plugin-catalog-backend-module-unprocessed`
+- `@backstage/plugin-catalog-common`
+- `@backstage/plugin-catalog-unprocessed-entities-common`
+- `@backstage/plugin-devtools-common`
+- `@backstage/plugin-events-backend-module-aws-sqs`
+- `@backstage/plugin-events-backend-module-azure`
+- `@backstage/plugin-events-backend-module-bitbucket-cloud`
+- `@backstage/plugin-events-backend-module-bitbucket-server`
+- `@backstage/plugin-events-backend-module-gerrit`
+- `@backstage/plugin-events-backend-module-github`
+- `@backstage/plugin-events-backend-module-gitlab`
+- `@backstage/plugin-events-backend-module-kafka`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-events-node`
+- `@backstage/plugin-gateway-backend`
+- `@backstage/plugin-notifications-backend-module-slack`
+- `@backstage/plugin-notifications-node`
+- `@backstage/plugin-permission-backend-module-allow-all-policy`
+- `@backstage/plugin-proxy-node`
+- `@backstage/plugin-scaffolder-backend-module-azure`
+- `@backstage/plugin-scaffolder-backend-module-bitbucket-server`
+- `@backstage/plugin-scaffolder-backend-module-gcp`
+- `@backstage/plugin-scaffolder-backend-module-notifications`
+- `@backstage/plugin-scaffolder-common`
+- `@backstage/plugin-signals-node`

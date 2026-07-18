@@ -11,6 +11,7 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 2 packages
 - [Other minor version bumps](#other-minor-version-bumps): 8 packages
 - [Other patch version bumps](#other-patch-version-bumps): 102 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 9 packages
 
 ## Table of contents
 
@@ -162,6 +163,7 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - [`@backstage/test-utils` (1.1.1 → 1.1.2)](#backstagetest-utils-111--112)
   - [`@backstage/theme` (0.2.15 → 0.2.16)](#backstagetheme-0215--0216)
   - [`@techdocs/cli` (1.1.2 → 1.1.3)](#techdocscli-112--113)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -2244,4 +2246,14 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 - a5d73da942: Fix the flag parsing for `legacyCopyReadmeMdToIndexMd` in `techdocs-cli generate` command, and decouple it's logic from the `techdocs-ref` flag.
 - 14ce0d9347: Fixed a bug that prevented docker images from being pulled by default when generating TechDocs.
 
-_Excluded dependency updates for packages: `@backstage/dev-utils`, `@backstage/plugin-adr-common`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-permission-react`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`._
+## Excluded dependency updates for packages
+
+- `@backstage/dev-utils`
+- `@backstage/plugin-adr-common`
+- `@backstage/plugin-catalog-common`
+- `@backstage/plugin-catalog-graph`
+- `@backstage/plugin-jenkins-common`
+- `@backstage/plugin-permission-react`
+- `@backstage/plugin-scaffolder-backend-module-rails`
+- `@backstage/plugin-scaffolder-backend-module-yeoman`
+- `@backstage/plugin-scaffolder-common`

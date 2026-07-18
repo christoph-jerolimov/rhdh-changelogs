@@ -10,6 +10,7 @@ Changes between 1.17.5 and 1.18.0 — 217 changed and 10 added packages.
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 4 packages
 - [Other minor version bumps](#other-minor-version-bumps): 15 packages
 - [Other patch version bumps](#other-patch-version-bumps): 142 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 34 packages
 
 ## Table of contents
 
@@ -212,6 +213,7 @@ Changes between 1.17.5 and 1.18.0 — 217 changed and 10 added packages.
   - [`@backstage/theme` (0.4.1 → 0.4.2)](#backstagetheme-041--042)
   - [`@backstage/types` (1.1.0 → 1.1.1)](#backstagetypes-110--111)
   - [`@backstage/version-bridge` (1.0.4 → 1.0.5)](#backstageversion-bridge-104--105)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## Newly added packages
 
@@ -3034,4 +3036,39 @@ Skipped due to publishing issues.
 
 - 406b786a2a2c: Mark package as being free of side effects, allowing more optimized Webpack builds.
 
-_Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/backend-openapi-utils`, `@backstage/cli-node`, `@backstage/integration-aws-node`, `@backstage/plugin-app-node`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-catalog-node`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-backend`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-nomad-backend`, `@backstage/plugin-playlist-backend`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-tech-insights-node`._
+## Excluded dependency updates for packages
+
+- `@backstage/backend-defaults`
+- `@backstage/backend-openapi-utils`
+- `@backstage/cli-node`
+- `@backstage/integration-aws-node`
+- `@backstage/plugin-app-node`
+- `@backstage/plugin-azure-sites-backend`
+- `@backstage/plugin-catalog-backend-module-bitbucket`
+- `@backstage/plugin-catalog-backend-module-ldap`
+- `@backstage/plugin-catalog-backend-module-openapi`
+- `@backstage/plugin-catalog-graphql`
+- `@backstage/plugin-catalog-node`
+- `@backstage/plugin-events-backend-module-azure`
+- `@backstage/plugin-events-backend-module-bitbucket-cloud`
+- `@backstage/plugin-events-backend-module-gerrit`
+- `@backstage/plugin-events-backend-module-github`
+- `@backstage/plugin-events-backend-module-gitlab`
+- `@backstage/plugin-events-backend-test-utils`
+- `@backstage/plugin-events-node`
+- `@backstage/plugin-explore-backend`
+- `@backstage/plugin-graphql-backend`
+- `@backstage/plugin-jenkins-backend`
+- `@backstage/plugin-nomad-backend`
+- `@backstage/plugin-playlist-backend`
+- `@backstage/plugin-rollbar-backend`
+- `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`
+- `@backstage/plugin-scaffolder-backend-module-cookiecutter`
+- `@backstage/plugin-scaffolder-backend-module-gitlab`
+- `@backstage/plugin-scaffolder-backend-module-rails`
+- `@backstage/plugin-scaffolder-backend-module-sentry`
+- `@backstage/plugin-scaffolder-node`
+- `@backstage/plugin-search-backend-node`
+- `@backstage/plugin-sonarqube-backend`
+- `@backstage/plugin-stack-overflow-backend`
+- `@backstage/plugin-tech-insights-node`

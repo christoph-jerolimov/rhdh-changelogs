@@ -6,6 +6,7 @@ Changes between 1.30.3 and 1.30.4 — 103 changed and 0 added packages.
 
 - [0.0.x patch version bumps](#00x-patch-version-bumps): 3 packages
 - [Other patch version bumps](#other-patch-version-bumps): 99 packages
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages): 1 package
 
 ## Table of contents
 
@@ -113,6 +114,7 @@ Changes between 1.30.3 and 1.30.4 — 103 changed and 0 added packages.
   - [`@backstage/plugin-user-settings-backend` (0.2.22 → 0.2.23)](#backstageplugin-user-settings-backend-0222--0223)
   - [`@backstage/repo-tools` (0.9.5 → 0.9.6)](#backstagerepo-tools-095--096)
   - [`@techdocs/cli` (1.8.17 → 1.8.18)](#techdocscli-1817--1818)
+- [Excluded dependency updates for packages](#excluded-dependency-updates-for-packages)
 
 ## 0.0.x patch version bumps
 
@@ -526,4 +528,6 @@ _No changelog entries found._
 
 _No changelog entries found._
 
-_Excluded dependency updates for packages: `@backstage/backend-tasks`._
+## Excluded dependency updates for packages
+
+- `@backstage/backend-tasks`
