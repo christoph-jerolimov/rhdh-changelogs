@@ -1,4 +1,4 @@
-# backstage-versions
+# Backstage Release Overview
 
 Automatically maintained mirror and analysis of the official [Backstage release manifests](https://github.com/backstage/versions).
 
