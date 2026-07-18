@@ -33,16 +33,22 @@ interface Variant {
   name: string;
   title: string;
   releases: string[];
+  minorNote?: boolean;
 }
 
 // Each row compares a release with the direct previous release of its variant;
 // the next release (if any) is compared against the latest stable release.
 const variants: Variant[] = [
-  { name: "number-of-changed-packages-all-releases", title: "Changes per Backstage release", releases: stableDescending },
+  {
+    name: "number-of-changed-packages-all-releases",
+    title: "Number of changed packages — all releases",
+    releases: stableDescending,
+  },
   {
     name: "number-of-changed-packages-minor-releases",
-    title: "Changes per Backstage minor release (latest patch per minor)",
+    title: "Number of changed packages — minor releases",
     releases: minorDescending,
+    minorNote: true,
   },
 ].map((variant) => ({ ...variant, releases: withNext ? [NEXT, ...variant.releases] : variant.releases }));
 
@@ -88,6 +94,13 @@ for (const variant of variants) {
 
   const md: string[] = [];
   md.push(`# ${variant.title}`, "");
+  md.push(
+    `**${rows.length} releases**, newest to oldest — each row compares a release with the direct previous ` +
+      `${variant.minorNote ? "minor " : ""}release.` +
+      (variant.minorNote ? " Each minor release is represented by the latest patch of its minor line." : "") +
+      (withNext ? " The `next` release is compared against the latest stable release." : ""),
+    "",
+  );
   md.push(`| ${HEADER.map(mdCell).join(" | ")} |`);
   md.push(`| ${HEADER.map(() => "---").join(" | ")} |`);
   for (const row of rows) {

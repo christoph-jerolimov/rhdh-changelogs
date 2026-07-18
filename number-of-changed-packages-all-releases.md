@@ -1,4 +1,6 @@
-# Changes per Backstage release
+# Number of changed packages — all releases
+
+**202 releases**, newest to oldest — each row compares a release with the direct previous release.
 
 | Release | Compared to | Added | Removed | Upgraded | Unchanged | Major ⚠️ | 0.x Minor ⚠️ | 0.0.x Patch ⚠️ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |

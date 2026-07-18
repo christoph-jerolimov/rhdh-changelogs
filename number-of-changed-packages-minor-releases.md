@@ -1,4 +1,6 @@
-# Changes per Backstage minor release (latest patch per minor)
+# Number of changed packages — minor releases
+
+**54 releases**, newest to oldest — each row compares a release with the direct previous minor release. Each minor release is represented by the latest patch of its minor line.
 
 | Release | Compared to | Added | Removed | Upgraded | Unchanged | Major ⚠️ | 0.x Minor ⚠️ | 0.0.x Patch ⚠️ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |

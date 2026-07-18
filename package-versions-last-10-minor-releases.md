@@ -1,4 +1,6 @@
-# Last 10 Backstage minor releases (latest patch per minor)
+# Package versions — last 10 minor releases
+
+Versions of **212 packages** across **10 releases** — columns ordered newest to oldest. Each minor release is represented by the latest patch of its minor line.
 
 | Package | 1.53.0 | 1.52.1 | 1.51.2 | 1.50.4 | 1.49.5 | 1.48.6 | 1.47.4 | 1.46.7 | 1.45.6 | 1.44.3 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

@@ -31,25 +31,28 @@ interface Variant {
   name: string;
   title: string;
   releases: string[];
+  minorNote?: boolean;
 }
 
 // The next column is prepended to every variant and does not consume a "last 10" slot.
 const variants: Variant[] = [
-  { name: "package-versions-all-releases", title: "All Backstage releases", releases: stableDescending },
+  { name: "package-versions-all-releases", title: "Package versions — all releases", releases: stableDescending },
   {
     name: "package-versions-minor-releases",
-    title: "Backstage minor releases (latest patch per minor)",
+    title: "Package versions — minor releases",
     releases: minorDescending,
+    minorNote: true,
   },
   {
     name: "package-versions-last-10-releases",
-    title: "Last 10 Backstage releases",
+    title: "Package versions — last 10 releases",
     releases: stableDescending.slice(0, 10),
   },
   {
     name: "package-versions-last-10-minor-releases",
-    title: "Last 10 Backstage minor releases (latest patch per minor)",
+    title: "Package versions — last 10 minor releases",
     releases: minorDescending.slice(0, 10),
+    minorNote: true,
   },
 ].map((variant) => ({ ...variant, releases: withNext ? [NEXT, ...variant.releases] : variant.releases }));
 
@@ -74,6 +77,12 @@ for (const variant of variants) {
 
   const md: string[] = [];
   md.push(`# ${variant.title}`, "");
+  md.push(
+    `Versions of **${packageNames.length} packages** across **${shown.length} releases** — columns ordered ` +
+      `${withNext ? "\`next\` first, then " : ""}newest to oldest.` +
+      (variant.minorNote ? " Each minor release is represented by the latest patch of its minor line." : ""),
+    "",
+  );
   md.push(`| Package | ${shown.map(({ release }) => mdCell(release)).join(" | ")} |`);
   md.push(`| --- | ${shown.map(() => "---").join(" | ")} |`);
   for (const name of packageNames) {
