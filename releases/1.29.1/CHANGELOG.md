@@ -13,6 +13,6 @@ Changes between 1.29.0 and 1.29.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-defaults` (0.4.0 → 0.4.1)
+### `@backstage/backend-defaults` (0.4.0 → [0.4.1](../../changelogs/@backstage/backend-defaults.md#041))
 
 _No changelog entries found._

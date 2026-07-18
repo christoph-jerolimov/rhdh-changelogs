@@ -15,14 +15,14 @@ Changes between 1.36.0 and 1.36.1 — 3 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-defaults` (0.8.0 → 0.8.1)
+### `@backstage/backend-defaults` (0.8.0 → [0.8.1](../../changelogs/@backstage/backend-defaults.md#081))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-backend` (0.4.2 → 0.4.3)
+### `@backstage/plugin-events-backend` (0.4.2 → [0.4.3](../../changelogs/@backstage/plugin-events-backend.md#043))
 
 _No changelog entries found._
 
-### `@backstage/plugin-notifications-backend` (0.5.2 → 0.5.3)
+### `@backstage/plugin-notifications-backend` (0.5.2 → [0.5.3](../../changelogs/@backstage/plugin-notifications-backend.md#053))
 
 _No changelog entries found._

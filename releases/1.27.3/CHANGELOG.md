@@ -13,6 +13,6 @@ Changes between 1.27.2 and 1.27.3 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-scaffolder-react` (1.8.5 → 1.8.6)
+### `@backstage/plugin-scaffolder-react` (1.8.5 → [1.8.6](../../changelogs/@backstage/plugin-scaffolder-react.md#186))
 
 _No changelog entries found._

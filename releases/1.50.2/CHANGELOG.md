@@ -23,46 +23,46 @@ Changes between 1.50.1 and 1.50.2 — 11 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/frontend-plugin-api` (0.16.1 → 0.16.2)
+### `@backstage/frontend-plugin-api` (0.16.1 → [0.16.2](../../changelogs/@backstage/frontend-plugin-api.md#0162))
 
 _No changelog entries found._
 
-### `@backstage/plugin-app` (0.4.4 → 0.4.5)
+### `@backstage/plugin-app` (0.4.4 → [0.4.5](../../changelogs/@backstage/plugin-app.md#045))
 
 _No changelog entries found._
 
-### `@backstage/plugin-app-visualizer` (0.2.2 → 0.2.3)
+### `@backstage/plugin-app-visualizer` (0.2.2 → [0.2.3](../../changelogs/@backstage/plugin-app-visualizer.md#023))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog` (2.0.3 → 2.0.4)
+### `@backstage/plugin-catalog` (2.0.3 → [2.0.4](../../changelogs/@backstage/plugin-catalog.md#204))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-graph` (0.6.2 → 0.6.3)
+### `@backstage/plugin-catalog-graph` (0.6.2 → [0.6.3](../../changelogs/@backstage/plugin-catalog-graph.md#063))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-react` (2.1.3 → 2.1.4)
+### `@backstage/plugin-catalog-react` (2.1.3 → [2.1.4](../../changelogs/@backstage/plugin-catalog-react.md#214))
 
 _No changelog entries found._
 
-### `@backstage/plugin-org` (0.7.2 → 0.7.3)
+### `@backstage/plugin-org` (0.7.2 → [0.7.3](../../changelogs/@backstage/plugin-org.md#073))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search` (1.7.2 → 1.7.3)
+### `@backstage/plugin-search` (1.7.2 → [1.7.3](../../changelogs/@backstage/plugin-search.md#173))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-react` (1.11.2 → 1.11.3)
+### `@backstage/plugin-search-react` (1.11.2 → [1.11.3](../../changelogs/@backstage/plugin-search-react.md#1113))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs` (1.17.4 → 1.17.5)
+### `@backstage/plugin-techdocs` (1.17.4 → [1.17.5](../../changelogs/@backstage/plugin-techdocs.md#1175))
 
 _No changelog entries found._
 
-### `@backstage/ui` (0.14.1 → 0.14.2)
+### `@backstage/ui` (0.14.1 → [0.14.2](../../changelogs/@backstage/ui.md#0142))
 
 _No changelog entries found._

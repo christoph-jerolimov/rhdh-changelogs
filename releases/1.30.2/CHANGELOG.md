@@ -13,6 +13,6 @@ Changes between 1.30.1 and 1.30.2 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-app-api` (0.9.1 → 0.9.2)
+### `@backstage/backend-app-api` (0.9.1 → [0.9.2](../../changelogs/@backstage/backend-app-api.md#092))
 
 _No changelog entries found._

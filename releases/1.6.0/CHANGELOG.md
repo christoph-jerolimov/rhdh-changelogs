@@ -172,48 +172,48 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
 
 ## Newly added packages
 
-### `@backstage/plugin-playlist` (new, 0.1.0)
+### `@backstage/plugin-playlist` (new, [0.1.0](../../changelogs/@backstage/plugin-playlist.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- d3737da337: Implement playlist plugin, check out the `README.md` for more details!
+- [`d3737da337`](https://github.com/backstage/backstage/commit/d3737da337): Implement playlist plugin, check out the `README.md` for more details!
 
-### `@backstage/plugin-playlist-backend` (new, 0.1.0)
-
-#### 0.1.0
-
-##### Minor Changes
-
-- d3737da337: Implement playlist plugin, check out the `README.md` for more details!
-
-### `@backstage/plugin-playlist-common` (new, 0.1.0)
+### `@backstage/plugin-playlist-backend` (new, [0.1.0](../../changelogs/@backstage/plugin-playlist-backend.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- d3737da337: Implement playlist plugin, check out the `README.md` for more details!
+- [`d3737da337`](https://github.com/backstage/backstage/commit/d3737da337): Implement playlist plugin, check out the `README.md` for more details!
 
-### `@backstage/plugin-user-settings-backend` (new, 0.1.0)
+### `@backstage/plugin-playlist-common` (new, [0.1.0](../../changelogs/@backstage/plugin-playlist-common.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 108cdc3912: Added new plugin `@backstage/plugin-user-settings-backend` to store user related
+- [`d3737da337`](https://github.com/backstage/backstage/commit/d3737da337): Implement playlist plugin, check out the `README.md` for more details!
+
+### `@backstage/plugin-user-settings-backend` (new, [0.1.0](../../changelogs/@backstage/plugin-user-settings-backend.md#010))
+
+#### 0.1.0
+
+##### Minor Changes
+
+- [`108cdc3912`](https://github.com/backstage/backstage/commit/108cdc3912): Added new plugin `@backstage/plugin-user-settings-backend` to store user related
   settings in the database.
 
 ## Breaking changes
 
-### `@backstage/cli` (0.18.1 → 0.19.0)
+### `@backstage/cli` (0.18.1 → [0.19.0](../../changelogs/@backstage/cli.md#0190))
 
 #### 0.19.0
 
 ##### Minor Changes
 
-- 1fe6823bb5: Updated dependency `eslint-plugin-jest` to `^27.0.0`.
+- [`1fe6823bb5`](https://github.com/backstage/backstage/commit/1fe6823bb5): Updated dependency `eslint-plugin-jest` to `^27.0.0`.
 
   Note that this major update to the Jest plugin contains some breaking changes.
   This means that some of your tests may start seeing some new lint errors. [Read about them here](https://github.com/jest-community/eslint-plugin-jest/blob/main/CHANGELOG.md#2700-2022-08-28).
@@ -223,17 +223,17 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
 
 ##### Patch Changes
 
-- 8d886dd33e: The `create-plugin` and `create` commands have both been deprecated in favor of a new `new` command. The `new` command is functionally identical to `create`, but the new naming makes it possible to use as yarn script, since `yarn create` is reserved.
-- cc63eb8611: Sort entries in skeleton.tar.gz for better docker layer caching
-- 548053614a: Deprecated the `plugin:diff` command. If you wish to keep running similar checks in your project we recommend using bespoke scripts. A useful utility for such scripts is `@manypkg/get-packages`, which helps you enumerate all packages in a monorepo.
-- 513b4dd4ef: The `versions:bump` command will now update dependency ranges in `package.json`, even if the new version is within the current range.
-- 221e951298: Added support for custom certificate for webpack dev server.
-- 934cc34563: Avoid validating the backend configuration schema when loading static configuration for building the frontend.
-- 3d4f5daadf: Remove use of deprecated trimLeft/trimRight
-- 817f3196f6: Added a new `migrate react-router-deps` command to aid in the migration to React Router v6 stable.
-- 742cb4f3d7: Fix issue when using `.jsx` files inside tests
-- e7600bdb04: Tweaked workspace packaging to not rewrite existing `package.json` files.
-- 6ae0f6a719: Switch out `sucrase` for `swc` for transpilation.
+- [`8d886dd33e`](https://github.com/backstage/backstage/commit/8d886dd33e): The `create-plugin` and `create` commands have both been deprecated in favor of a new `new` command. The `new` command is functionally identical to `create`, but the new naming makes it possible to use as yarn script, since `yarn create` is reserved.
+- [`cc63eb8611`](https://github.com/backstage/backstage/commit/cc63eb8611): Sort entries in skeleton.tar.gz for better docker layer caching
+- [`548053614a`](https://github.com/backstage/backstage/commit/548053614a): Deprecated the `plugin:diff` command. If you wish to keep running similar checks in your project we recommend using bespoke scripts. A useful utility for such scripts is `@manypkg/get-packages`, which helps you enumerate all packages in a monorepo.
+- [`513b4dd4ef`](https://github.com/backstage/backstage/commit/513b4dd4ef): The `versions:bump` command will now update dependency ranges in `package.json`, even if the new version is within the current range.
+- [`221e951298`](https://github.com/backstage/backstage/commit/221e951298): Added support for custom certificate for webpack dev server.
+- [`934cc34563`](https://github.com/backstage/backstage/commit/934cc34563): Avoid validating the backend configuration schema when loading static configuration for building the frontend.
+- [`3d4f5daadf`](https://github.com/backstage/backstage/commit/3d4f5daadf): Remove use of deprecated trimLeft/trimRight
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Added a new `migrate react-router-deps` command to aid in the migration to React Router v6 stable.
+- [`742cb4f3d7`](https://github.com/backstage/backstage/commit/742cb4f3d7): Fix issue when using `.jsx` files inside tests
+- [`e7600bdb04`](https://github.com/backstage/backstage/commit/e7600bdb04): Tweaked workspace packaging to not rewrite existing `package.json` files.
+- [`6ae0f6a719`](https://github.com/backstage/backstage/commit/6ae0f6a719): Switch out `sucrase` for `swc` for transpilation.
 
   `sucrase` is a little more relaxed when it comes to supporting the ways of mocking in `jest`. You might have to make some changes to your tests to meet the `jest` standard and spec if your tests seems to start failing.
 
@@ -293,23 +293,23 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   }
   ```
 
-- 1cb078ad9f: Fixed a misconfiguration where all modules where treated as ESM by the React Refresh plugin for Webpack.
-- 1fd4f2746f: Removed internal dependencies on Lerna. It is now no longer necessary to have Lerna installed in a project to use all features of the Backstage CLI.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 33fbd9f9a4: Updated dependency `@types/minimatch` to `^5.0.0`.
-- 68c2697077: Added a new `backstage-cli repo clean` command that cleans the repo root and runs the clean script in all packages.
-- 7d47def9c4: Added dependency on `@types/jest` v27. The `@types/jest` dependency has also been removed from the plugin template and should be removed from any of your own internal packages. If you wish to override the version of `@types/jest` or `jest`, use Yarn resolutions.
-- a7e82c9b01: Updated `versions:bump` command to be compatible with Yarn 3.
+- [`1cb078ad9f`](https://github.com/backstage/backstage/commit/1cb078ad9f): Fixed a misconfiguration where all modules where treated as ESM by the React Refresh plugin for Webpack.
+- [`1fd4f2746f`](https://github.com/backstage/backstage/commit/1fd4f2746f): Removed internal dependencies on Lerna. It is now no longer necessary to have Lerna installed in a project to use all features of the Backstage CLI.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`33fbd9f9a4`](https://github.com/backstage/backstage/commit/33fbd9f9a4): Updated dependency `@types/minimatch` to `^5.0.0`.
+- [`68c2697077`](https://github.com/backstage/backstage/commit/68c2697077): Added a new `backstage-cli repo clean` command that cleans the repo root and runs the clean script in all packages.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Added dependency on `@types/jest` v27. The `@types/jest` dependency has also been removed from the plugin template and should be removed from any of your own internal packages. If you wish to override the version of `@types/jest` or `jest`, use Yarn resolutions.
+- [`a7e82c9b01`](https://github.com/backstage/backstage/commit/a7e82c9b01): Updated `versions:bump` command to be compatible with Yarn 3.
 
-### `@backstage/plugin-tech-insights` (0.2.4 → 0.3.0)
+### `@backstage/plugin-tech-insights` (0.2.4 → [0.3.0](../../changelogs/@backstage/plugin-tech-insights.md#030))
 
 #### 0.3.0
 
 ##### Minor Changes
 
-- f7e99ac1d8: Added the possibility to display check results of different types on a single scorecard.
+- [`f7e99ac1d8`](https://github.com/backstage/backstage/commit/f7e99ac1d8): Added the possibility to display check results of different types on a single scorecard.
 
   - **BREAKING** Removed the `getScorecardsDefinition` method from the `TechInsightsApi` interface. Added the `getCheckResultRenderers` method that returns rendering components for given types.
   - **BREAKING** The `CheckResultRenderer` type now exposes the `component` factory method that creates a React component used to display a result of a provided check result.
@@ -324,44 +324,44 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 3f739be9d9: Minor API signatures cleanup
-- 763fb81e82: Internal refactor to use more type safe code when dealing with route parameters.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`763fb81e82`](https://github.com/backstage/backstage/commit/763fb81e82): Internal refactor to use more type safe code when dealing with route parameters.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
 ## 0.x minor version bumps
 
-### `@backstage/plugin-auth-backend` (0.15.1 → 0.16.0)
+### `@backstage/plugin-auth-backend` (0.15.1 → [0.16.0](../../changelogs/@backstage/plugin-auth-backend.md#0160))
 
 #### 0.16.0
 
 ##### Minor Changes
 
-- 2fc41ebf07: Removed the previously deprecated class `AtlassianAuthProvider`. Please use `providers.atlassian.create(...)` instead.
-- a291688bc5: Renamed the `RedirectInfo` type to `OAuthStartResponse`
-- 8600855fbf: The auth0 integration is updated to use the `passport-auth0` library. The configuration under `auth.providers.auth0.\*` now supports an optional `audience` parameter; providing that allows you to connect to the correct API to get permissions, access tokens, and full profile information.
+- [`2fc41ebf07`](https://github.com/backstage/backstage/commit/2fc41ebf07): Removed the previously deprecated class `AtlassianAuthProvider`. Please use `providers.atlassian.create(...)` instead.
+- [`a291688bc5`](https://github.com/backstage/backstage/commit/a291688bc5): Renamed the `RedirectInfo` type to `OAuthStartResponse`
+- [`8600855fbf`](https://github.com/backstage/backstage/commit/8600855fbf): The auth0 integration is updated to use the `passport-auth0` library. The configuration under `auth.providers.auth0.\*` now supports an optional `audience` parameter; providing that allows you to connect to the correct API to get permissions, access tokens, and full profile information.
 
   [What is an Audience](https://community.auth0.com/t/what-is-the-audience/71414)
 
 ##### Patch Changes
 
-- 5b011fb2e6: Allow adding misc claims to JWT
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- e1ebaeb332: Cloudflare Access Provider: Add JWT to CloudflareAccessResult
+- [`5b011fb2e6`](https://github.com/backstage/backstage/commit/5b011fb2e6): Allow adding misc claims to JWT
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`e1ebaeb332`](https://github.com/backstage/backstage/commit/e1ebaeb332): Cloudflare Access Provider: Add JWT to CloudflareAccessResult
 
-### `@backstage/plugin-azure-devops` (0.1.24 → 0.2.0)
+### `@backstage/plugin-azure-devops` (0.1.24 → [0.2.0](../../changelogs/@backstage/plugin-azure-devops.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- 6c1c59b96e: Added README card `EntityAzureReadmeCard` for Azure Devops.
+- [`6c1c59b96e`](https://github.com/backstage/backstage/commit/6c1c59b96e): Added README card `EntityAzureReadmeCard` for Azure Devops.
 
   To get the README component working you'll need to do the following two steps:
 
@@ -408,20 +408,20 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-azure-devops-common` (0.2.4 → 0.3.0)
+### `@backstage/plugin-azure-devops-common` (0.2.4 → [0.3.0](../../changelogs/@backstage/plugin-azure-devops-common.md#030))
 
 #### 0.3.0
 
 ##### Minor Changes
 
-- 6c1c59b96e: Added README card `EntityAzureReadmeCard` for Azure Devops.
+- [`6c1c59b96e`](https://github.com/backstage/backstage/commit/6c1c59b96e): Added README card `EntityAzureReadmeCard` for Azure Devops.
 
   To get the README component working you'll need to do the following two steps:
 
@@ -468,15 +468,15 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
 
 ##### Patch Changes
 
-- 3f739be9d9: Minor API signatures cleanup
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
 
-### `@backstage/plugin-dynatrace` (0.1.2 → 0.2.0)
+### `@backstage/plugin-dynatrace` (0.1.2 → [0.2.0](../../changelogs/@backstage/plugin-dynatrace.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- e44c0b3811: New features:
+- [`e44c0b3811`](https://github.com/backstage/backstage/commit/e44c0b3811): New features:
 
   - Some visual improvements to the table that displays Problems
   - Added support for viewing recent Synthetics results using
@@ -484,20 +484,20 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 148568b5c2: Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`148568b5c2`](https://github.com/backstage/backstage/commit/148568b5c2): Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-search-backend-module-pg` (0.3.6 → 0.4.0)
+### `@backstage/plugin-search-backend-module-pg` (0.3.6 → [0.4.0](../../changelogs/@backstage/plugin-search-backend-module-pg.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- 8872cc735d: Fixed a bug in search-backend-module-pg where it ignores the skip migration database options when using the database.
+- [`8872cc735d`](https://github.com/backstage/backstage/commit/8872cc735d): Fixed a bug in search-backend-module-pg where it ignores the skip migration database options when using the database.
 
   To use this new implementation you need to create the instance of `DatabaseDocumentStore` using the `PluginDatabaseManager` instead of `Knex`;
 
@@ -512,71 +512,71 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
 
 ##### Patch Changes
 
-- d669d89206: Minor API signatures cleanup
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
 
 ## 0.0.x patch version bumps
 
-### `@backstage/plugin-explore-react` (0.0.20 → 0.0.21)
+### `@backstage/plugin-explore-react` (0.0.20 → [0.0.21](../../changelogs/@backstage/plugin-explore-react.md#0021))
 
 #### 0.0.21
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/release-manifests` (0.0.5 → 0.0.6)
+### `@backstage/release-manifests` (0.0.5 → [0.0.6](../../changelogs/@backstage/release-manifests.md#006))
 
 #### 0.0.6
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
 ## Other minor version bumps
 
-### `@backstage/catalog-client` (1.0.4 → 1.1.0)
+### `@backstage/catalog-client` (1.0.4 → [1.1.0](../../changelogs/@backstage/catalog-client.md#110))
 
 #### 1.1.0
 
 ##### Minor Changes
 
-- 65d1d4343f: Adding `validateEntity` method that calls `/validate-entity` endpoint.
+- [`65d1d4343f`](https://github.com/backstage/backstage/commit/65d1d4343f): Adding `validateEntity` method that calls `/validate-entity` endpoint.
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ef9ab322de: Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/core-app-api` (1.0.5 → 1.1.0)
+### `@backstage/core-app-api` (1.0.5 → [1.1.0](../../changelogs/@backstage/core-app-api.md#110))
 
 #### 1.1.0
 
 ##### Minor Changes
 
-- a448fea691: Updated the routing system to be compatible with React Router v6 stable.
+- [`a448fea691`](https://github.com/backstage/backstage/commit/a448fea691): Updated the routing system to be compatible with React Router v6 stable.
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- f9ec4e46e3: When using React Router v6 stable, it is now possible for components within the `Route` element tree to have `path` props, although they will be ignored.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 744fea158b: Added `getSystemIcons()` function to the `AppContext` available through `useApp` that will pull a list of all the icons that have been registered in the App.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 8448b53dd6: Clarify that the `WebStorage` observable returns `JsonValue` items.
-- 70299c99d5: Updated `FlatRoutes` to be compatible with React Router v6 stable.
-- e9d40ebf54: If you'd like to send analytics events to multiple implementations, you may now
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`f9ec4e46e3`](https://github.com/backstage/backstage/commit/f9ec4e46e3): When using React Router v6 stable, it is now possible for components within the `Route` element tree to have `path` props, although they will be ignored.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`744fea158b`](https://github.com/backstage/backstage/commit/744fea158b): Added `getSystemIcons()` function to the `AppContext` available through `useApp` that will pull a list of all the icons that have been registered in the App.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`8448b53dd6`](https://github.com/backstage/backstage/commit/8448b53dd6): Clarify that the `WebStorage` observable returns `JsonValue` items.
+- [`70299c99d5`](https://github.com/backstage/backstage/commit/70299c99d5): Updated `FlatRoutes` to be compatible with React Router v6 stable.
+- [`e9d40ebf54`](https://github.com/backstage/backstage/commit/e9d40ebf54): If you'd like to send analytics events to multiple implementations, you may now
   do so using the `MultipleAnalyticsApi` implementation provided by this package.
 
   ```tsx
@@ -601,78 +601,78 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   }),
   ```
 
-### `@backstage/plugin-catalog-backend` (1.3.1 → 1.4.0)
+### `@backstage/plugin-catalog-backend` (1.3.1 → [1.4.0](../../changelogs/@backstage/plugin-catalog-backend.md#140))
 
 #### 1.4.0
 
 ##### Minor Changes
 
-- dd395335bc: Allow unknown typed location from being registered via the location service by configuration settings
-- 651c9d6800: The search index now does retain fields that have a very long value, but in the form of just a null. This makes it possible to at least filter for their existence.
-- 6e63bc43f2: Added the `refresh` function to the Connection of the entity providers.
+- [`dd395335bc`](https://github.com/backstage/backstage/commit/dd395335bc): Allow unknown typed location from being registered via the location service by configuration settings
+- [`651c9d6800`](https://github.com/backstage/backstage/commit/651c9d6800): The search index now does retain fields that have a very long value, but in the form of just a null. This makes it possible to at least filter for their existence.
+- [`6e63bc43f2`](https://github.com/backstage/backstage/commit/6e63bc43f2): Added the `refresh` function to the Connection of the entity providers.
 
 ##### Patch Changes
 
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
-- 07dda0b746: Add optional value to `hasAnnotation` permission rule
-- 243533ecdc: Added support to mysql on some raw queries
-- ce77e78c93: Fixes a bug to be able to utilize refresh keys after the entity is loaded from cache
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 679f7c5e95: Include entity ref into error message when catalog policies fail
-- 06e2b077a1: Limit the length of error messages that get written to the database and logs - to prevent performance issues
-- 62788b2ee8: The experimental `CatalogProcessingExtensionPoint` now accepts multiple providers and processors at once.
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
+- [`07dda0b746`](https://github.com/backstage/backstage/commit/07dda0b746): Add optional value to `hasAnnotation` permission rule
+- [`243533ecdc`](https://github.com/backstage/backstage/commit/243533ecdc): Added support to mysql on some raw queries
+- [`ce77e78c93`](https://github.com/backstage/backstage/commit/ce77e78c93): Fixes a bug to be able to utilize refresh keys after the entity is loaded from cache
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`679f7c5e95`](https://github.com/backstage/backstage/commit/679f7c5e95): Include entity ref into error message when catalog policies fail
+- [`06e2b077a1`](https://github.com/backstage/backstage/commit/06e2b077a1): Limit the length of error messages that get written to the database and logs - to prevent performance issues
+- [`62788b2ee8`](https://github.com/backstage/backstage/commit/62788b2ee8): The experimental `CatalogProcessingExtensionPoint` now accepts multiple providers and processors at once.
 
-### `@backstage/plugin-catalog-node` (1.0.1 → 1.1.0)
+### `@backstage/plugin-catalog-node` (1.0.1 → [1.1.0](../../changelogs/@backstage/plugin-catalog-node.md#110))
 
 #### 1.1.0
 
 ##### Minor Changes
 
-- 9743bc788c: Added refresh function to the `EntityProviderConnection` to be able to schedule refreshes from entity providers.
+- [`9743bc788c`](https://github.com/backstage/backstage/commit/9743bc788c): Added refresh function to the `EntityProviderConnection` to be able to schedule refreshes from entity providers.
 
 ##### Patch Changes
 
-- 7d7d947352: Adds experimental `catalogServiceRef` for obtaining a `CatalogClient` in the new backend system.
-- 409ed984e8: Updated usage of experimental backend service APIs.
-- 62788b2ee8: The experimental `CatalogProcessingExtensionPoint` now accepts multiple providers and processors at once.
+- [`7d7d947352`](https://github.com/backstage/backstage/commit/7d7d947352): Adds experimental `catalogServiceRef` for obtaining a `CatalogClient` in the new backend system.
+- [`409ed984e8`](https://github.com/backstage/backstage/commit/409ed984e8): Updated usage of experimental backend service APIs.
+- [`62788b2ee8`](https://github.com/backstage/backstage/commit/62788b2ee8): The experimental `CatalogProcessingExtensionPoint` now accepts multiple providers and processors at once.
 
-### `@backstage/plugin-scaffolder` (1.5.0 → 1.6.0)
+### `@backstage/plugin-scaffolder` (1.5.0 → [1.6.0](../../changelogs/@backstage/plugin-scaffolder.md#160))
 
 #### 1.6.0
 
 ##### Minor Changes
 
-- 3424a8075d: Added support for `async` validation for the `next` version of the plugin
-- ad036784e9: Ability to modify the layout of the step form
-- 192d856495: Implementing review step for the scaffolder under `create/next`
+- [`3424a8075d`](https://github.com/backstage/backstage/commit/3424a8075d): Added support for `async` validation for the `next` version of the plugin
+- [`ad036784e9`](https://github.com/backstage/backstage/commit/ad036784e9): Ability to modify the layout of the step form
+- [`192d856495`](https://github.com/backstage/backstage/commit/192d856495): Implementing review step for the scaffolder under `create/next`
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
-- 9ffb75616d: Fix bug with empty strings in `EntityPicker`
-- 3f739be9d9: Minor API signatures cleanup
-- 763fb81e82: Internal refactor to use more type safe code when dealing with route parameters.
-- a66d44b72b: Fixing bug when the workspace would not be automatically saved when using `allowedOwners`
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 6522e459aa: Support displaying and ordering by counts in `EntityTagPicker` field. Add the `showCounts` option to enable this. Also support configuring `helperText`.
-- f0510a20b5: Addition of a dismissible Error Banner in Scaffolder page
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- 9097278df2: Updated dependency `json-schema-library` to `^7.0.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- de336de9cd: fix uiSchema generation when using complex dependencies
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
+- [`9ffb75616d`](https://github.com/backstage/backstage/commit/9ffb75616d): Fix bug with empty strings in `EntityPicker`
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`763fb81e82`](https://github.com/backstage/backstage/commit/763fb81e82): Internal refactor to use more type safe code when dealing with route parameters.
+- [`a66d44b72b`](https://github.com/backstage/backstage/commit/a66d44b72b): Fixing bug when the workspace would not be automatically saved when using `allowedOwners`
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`6522e459aa`](https://github.com/backstage/backstage/commit/6522e459aa): Support displaying and ordering by counts in `EntityTagPicker` field. Add the `showCounts` option to enable this. Also support configuring `helperText`.
+- [`f0510a20b5`](https://github.com/backstage/backstage/commit/f0510a20b5): Addition of a dismissible Error Banner in Scaffolder page
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`9097278df2`](https://github.com/backstage/backstage/commit/9097278df2): Updated dependency `json-schema-library` to `^7.0.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`de336de9cd`](https://github.com/backstage/backstage/commit/de336de9cd): fix uiSchema generation when using complex dependencies
 
-### `@backstage/plugin-scaffolder-backend` (1.5.1 → 1.6.0)
+### `@backstage/plugin-scaffolder-backend` (1.5.1 → [1.6.0](../../changelogs/@backstage/plugin-scaffolder-backend.md#160))
 
 #### 1.6.0
 
 ##### Minor Changes
 
-- ea2eee9e6a: Add the option for a homepage when using the `github:publish` action
-- 8872cc735d: Fixed a bug in plugin-scaffolder-backend where it ignores the skip migration database options.
+- [`ea2eee9e6a`](https://github.com/backstage/backstage/commit/ea2eee9e6a): Add the option for a homepage when using the `github:publish` action
+- [`8872cc735d`](https://github.com/backstage/backstage/commit/8872cc735d): Fixed a bug in plugin-scaffolder-backend where it ignores the skip migration database options.
 
   To use this new implementation you need to create the instance of `DatabaseTaskStore` using the `PluginDatabaseManager` instead of `Knex`;
 
@@ -685,42 +685,42 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   const databaseTaskStore = await DatabaseTaskStore.create(databaseManager);
   ```
 
-- 7db9613671: Added `projectId` for gitlab projects to be displayed in the `gitlab:publish` output
-- d1f7ba58e3: Added `repositoryId` output when create a repository in Azure
-- 1ff817b3f0: add entity metadata to the template info type
+- [`7db9613671`](https://github.com/backstage/backstage/commit/7db9613671): Added `projectId` for gitlab projects to be displayed in the `gitlab:publish` output
+- [`d1f7ba58e3`](https://github.com/backstage/backstage/commit/d1f7ba58e3): Added `repositoryId` output when create a repository in Azure
+- [`1ff817b3f0`](https://github.com/backstage/backstage/commit/1ff817b3f0): add entity metadata to the template info type
 
 ##### Patch Changes
 
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
-- de8ee4afe3: Provide information about the user into scaffolder template action's context
-- 096631e571: Added support for handling broken symlinks within the scaffolder backend. This is intended for templates that may hold a symlink that is invalid at build time but valid within the destination repo.
-- 0d8d650e32: Applied the fix from version 1.5.1 of this package, which is part of the v1.5.1 release of Backstage.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 2df9955f4a: Removed the depreacated `publish:file` action, use the template editor to test templates instead.
-- 0ecc9a6784: Properly set `ctx.isDryRun` when running actions in dry run mode. Also always log action inputs for debugging purposes when running in dry run mode.
-- 6b9f6c0a4d: Added alpha `scaffolderPlugin` to be used with experimental backend system.
-- 83c037cd46: Disable octokit throttling in publish:github:pull-request
-- 2cbd533426: Uptake the `IdentityApi` change to use `getIdentity` instead of `authenticate` for retrieving the logged in users identity.
-- ef9ab322de: Minor API signatures cleanup
-- 50467bc15b: The number of task workers used to execute templates now default to 3, rather than 1.
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
+- [`de8ee4afe3`](https://github.com/backstage/backstage/commit/de8ee4afe3): Provide information about the user into scaffolder template action's context
+- [`096631e571`](https://github.com/backstage/backstage/commit/096631e571): Added support for handling broken symlinks within the scaffolder backend. This is intended for templates that may hold a symlink that is invalid at build time but valid within the destination repo.
+- [`0d8d650e32`](https://github.com/backstage/backstage/commit/0d8d650e32): Applied the fix from version 1.5.1 of this package, which is part of the v1.5.1 release of Backstage.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`2df9955f4a`](https://github.com/backstage/backstage/commit/2df9955f4a): Removed the depreacated `publish:file` action, use the template editor to test templates instead.
+- [`0ecc9a6784`](https://github.com/backstage/backstage/commit/0ecc9a6784): Properly set `ctx.isDryRun` when running actions in dry run mode. Also always log action inputs for debugging purposes when running in dry run mode.
+- [`6b9f6c0a4d`](https://github.com/backstage/backstage/commit/6b9f6c0a4d): Added alpha `scaffolderPlugin` to be used with experimental backend system.
+- [`83c037cd46`](https://github.com/backstage/backstage/commit/83c037cd46): Disable octokit throttling in publish:github:pull-request
+- [`2cbd533426`](https://github.com/backstage/backstage/commit/2cbd533426): Uptake the `IdentityApi` change to use `getIdentity` instead of `authenticate` for retrieving the logged in users identity.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
+- [`50467bc15b`](https://github.com/backstage/backstage/commit/50467bc15b): The number of task workers used to execute templates now default to 3, rather than 1.
 
-### `@backstage/plugin-scaffolder-common` (1.1.2 → 1.2.0)
+### `@backstage/plugin-scaffolder-common` (1.1.2 → [1.2.0](../../changelogs/@backstage/plugin-scaffolder-common.md#120))
 
 #### 1.2.0
 
 ##### Minor Changes
 
-- 1ff817b3f0: add entity metadata to the template info type
+- [`1ff817b3f0`](https://github.com/backstage/backstage/commit/1ff817b3f0): add entity metadata to the template info type
 
-### `@backstage/plugin-search-react` (1.0.1 → 1.1.0)
+### `@backstage/plugin-search-react` (1.0.1 → [1.1.0](../../changelogs/@backstage/plugin-search-react.md#110))
 
 #### 1.1.0
 
 ##### Minor Changes
 
-- 97f2b8f3fd: The `<SearchResult/>` component now accepts a optional `query` prop to request results from the search api:
+- [`97f2b8f3fd`](https://github.com/backstage/backstage/commit/97f2b8f3fd): The `<SearchResult/>` component now accepts a optional `query` prop to request results from the search api:
 
   > Note: If a query prop is not defined, the results will by default be consumed from the context.
 
@@ -1003,7 +1003,7 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   };
   ```
 
-- 18f60427f2: Provides search autocomplete functionality through a `SearchAutocomplete` component.
+- [`18f60427f2`](https://github.com/backstage/backstage/commit/18f60427f2): Provides search autocomplete functionality through a `SearchAutocomplete` component.
   A `SearchAutocompleteDefaultOption` can also be used to render options with icons, primary texts, and secondary texts.
   Example:
 
@@ -1059,98 +1059,98 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   };
   ```
 
-- ca8d5a6eae: We noticed a repeated check for the existence of a parent context before creating a child search context in more the one component such as Search Modal and Search Bar and to remove code duplication we extract the conditional to the context provider, now you can use it passing an `inheritParentContextIfAvailable` prop to the `SearchContextProvider`.
+- [`ca8d5a6eae`](https://github.com/backstage/backstage/commit/ca8d5a6eae): We noticed a repeated check for the existence of a parent context before creating a child search context in more the one component such as Search Modal and Search Bar and to remove code duplication we extract the conditional to the context provider, now you can use it passing an `inheritParentContextIfAvailable` prop to the `SearchContextProvider`.
 
   Note: This added property does not create a local context if there is a parent context and in this case, you cannot use it together with `initialState`, it will result in a type error because the parent context is already initialized.
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- d3737da337: Reset page cursor on search filter change
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`d3737da337`](https://github.com/backstage/backstage/commit/d3737da337): Reset page cursor on search filter change
 
-### `@backstage/plugin-techdocs-backend` (1.2.1 → 1.3.0)
+### `@backstage/plugin-techdocs-backend` (1.2.1 → [1.3.0](../../changelogs/@backstage/plugin-techdocs-backend.md#130))
 
 #### 1.3.0
 
 ##### Minor Changes
 
-- aa524a5377: Add `projectId` config option to GCP Cloud Storage techdocs publisher. This will allow users to override the project ID, instead of implicitly using the same one as found in a credentials bundle.
+- [`aa524a5377`](https://github.com/backstage/backstage/commit/aa524a5377): Add `projectId` config option to GCP Cloud Storage techdocs publisher. This will allow users to override the project ID, instead of implicitly using the same one as found in a credentials bundle.
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-techdocs-node` (1.3.0 → 1.4.0)
+### `@backstage/plugin-techdocs-node` (1.3.0 → [1.4.0](../../changelogs/@backstage/plugin-techdocs-node.md#140))
 
 #### 1.4.0
 
 ##### Minor Changes
 
-- aa524a5377: Add `projectId` config option to GCP Cloud Storage techdocs publisher. This will allow users to override the project ID, instead of implicitly using the same one as found in a credentials bundle.
+- [`aa524a5377`](https://github.com/backstage/backstage/commit/aa524a5377): Add `projectId` config option to GCP Cloud Storage techdocs publisher. This will allow users to override the project ID, instead of implicitly using the same one as found in a credentials bundle.
 
 ##### Patch Changes
 
-- 33ac0c0546: Fix Techdocs S3 and GCS publisher to include bucketRootPath in requests
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
+- [`33ac0c0546`](https://github.com/backstage/backstage/commit/33ac0c0546): Fix Techdocs S3 and GCS publisher to include bucketRootPath in requests
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
 
-### `@backstage/test-utils` (1.1.3 → 1.2.0)
+### `@backstage/test-utils` (1.1.3 → [1.2.0](../../changelogs/@backstage/test-utils.md#120))
 
 #### 1.2.0
 
 ##### Minor Changes
 
-- 817f3196f6: Elements rendered in a test app are no longer wrapped in a `Routes` and `Route` element, as this is not compatible with React Router v6 stable.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Elements rendered in a test app are no longer wrapped in a `Routes` and `Route` element, as this is not compatible with React Router v6 stable.
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- d9e39544be: Add missing peer dependencies
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`d9e39544be`](https://github.com/backstage/backstage/commit/d9e39544be): Add missing peer dependencies
 
 ## Other patch version bumps
 
-### `@backstage/app-defaults` (1.0.5 → 1.0.6)
+### `@backstage/app-defaults` (1.0.5 → [1.0.6](../../changelogs/@backstage/app-defaults.md#106))
 
 #### 1.0.6
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d9e39544be: Add missing peer dependencies
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d9e39544be`](https://github.com/backstage/backstage/commit/d9e39544be): Add missing peer dependencies
 
-### `@backstage/backend-app-api` (0.2.0 → 0.2.1)
+### `@backstage/backend-app-api` (0.2.0 → [0.2.1](../../changelogs/@backstage/backend-app-api.md#021))
 
 #### 0.2.1
 
 ##### Patch Changes
 
-- 2c57c0c499: Made `ApiRef.defaultFactory` internal.
-- 854ba37357: Updated to support new `ServiceFactory` formats.
-- af6bb42c68: Updated `ServiceRegistry` to not initialize factories more than once.
-- 409ed984e8: Updated service implementations and backend wiring to support scoped service.
-- de3347ca74: Updated usages of `ServiceFactory`.
-- 1f384c5644: Improved error messaging when failing to instantiate services.
+- [`2c57c0c499`](https://github.com/backstage/backstage/commit/2c57c0c499): Made `ApiRef.defaultFactory` internal.
+- [`854ba37357`](https://github.com/backstage/backstage/commit/854ba37357): Updated to support new `ServiceFactory` formats.
+- [`af6bb42c68`](https://github.com/backstage/backstage/commit/af6bb42c68): Updated `ServiceRegistry` to not initialize factories more than once.
+- [`409ed984e8`](https://github.com/backstage/backstage/commit/409ed984e8): Updated service implementations and backend wiring to support scoped service.
+- [`de3347ca74`](https://github.com/backstage/backstage/commit/de3347ca74): Updated usages of `ServiceFactory`.
+- [`1f384c5644`](https://github.com/backstage/backstage/commit/1f384c5644): Improved error messaging when failing to instantiate services.
 
-### `@backstage/backend-common` (0.15.0 → 0.15.1)
+### `@backstage/backend-common` (0.15.0 → [0.15.1](../../changelogs/@backstage/backend-common.md#0151))
 
 #### 0.15.1
 
 ##### Patch Changes
 
-- 399286d7dd: Workaround support for `swc` instead of `sucrase`
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
-- c3c90280be: Added a keep-alive refresh loop to the `DatabaseManager`, keeping the connection
+- [`399286d7dd`](https://github.com/backstage/backstage/commit/399286d7dd): Workaround support for `swc` instead of `sucrase`
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
+- [`c3c90280be`](https://github.com/backstage/backstage/commit/c3c90280be): Added a keep-alive refresh loop to the `DatabaseManager`, keeping the connection
   pool up.
-- c3c90280be: The options part of `DatabaseManager.fromConfig` now accepts an optional logger
+- [`c3c90280be`](https://github.com/backstage/backstage/commit/c3c90280be): The options part of `DatabaseManager.fromConfig` now accepts an optional logger
   field.
-- 3d4f5daadf: Remove use of deprecated trimLeft/trimRight
-- bf3cc134eb: Implemented KubernetesContainerRunner: a ContainerRunner implementation that leverages Jobs on a kubernetes cluster
+- [`3d4f5daadf`](https://github.com/backstage/backstage/commit/3d4f5daadf): Remove use of deprecated trimLeft/trimRight
+- [`bf3cc134eb`](https://github.com/backstage/backstage/commit/bf3cc134eb): Implemented KubernetesContainerRunner: a ContainerRunner implementation that leverages Jobs on a kubernetes cluster
 
   ```ts
   const kubeConfig = new KubeConfig();
@@ -1198,7 +1198,7 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   containerRunner.runContainer(runOptions);
   ```
 
-- e3b1993788: Added port ranges in allowed hosts:
+- [`e3b1993788`](https://github.com/backstage/backstage/commit/e3b1993788): Added port ranges in allowed hosts:
 
   ```yaml
   reading:
@@ -1206,139 +1206,139 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
         - host: *.examples.org:900-1000
   ```
 
-- 2f52e74b49: Got rid of usages of the uppercase String type
-- 60b85d8ade: Updated dependency `helmet` to `^6.0.0`.
+- [`2f52e74b49`](https://github.com/backstage/backstage/commit/2f52e74b49): Got rid of usages of the uppercase String type
+- [`60b85d8ade`](https://github.com/backstage/backstage/commit/60b85d8ade): Updated dependency `helmet` to `^6.0.0`.
 
   Please note that these policies are no longer applied by default:
 
   helmet.contentSecurityPolicy no longer sets block-all-mixed-content directive by default
   helmet.expectCt is no longer set by default. It can, however, be explicitly enabled. It will be removed in Helmet 7.
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 709f468330: The `branch` command has been added to the `isomorphic-git` wrapper.
-- 0c780278e0: Fix for entries being skipped or incomplete when reading large zip archives.
-- 96689fbdcb: Workaround for a rare race condition in tests.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`709f468330`](https://github.com/backstage/backstage/commit/709f468330): The `branch` command has been added to the `isomorphic-git` wrapper.
+- [`0c780278e0`](https://github.com/backstage/backstage/commit/0c780278e0): Fix for entries being skipped or incomplete when reading large zip archives.
+- [`96689fbdcb`](https://github.com/backstage/backstage/commit/96689fbdcb): Workaround for a rare race condition in tests.
 
-### `@backstage/backend-defaults` (0.1.0 → 0.1.1)
+### `@backstage/backend-defaults` (0.1.0 → [0.1.1](../../changelogs/@backstage/backend-defaults.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 854ba37357: Updated to support new `ServiceFactory` formats.
-- de3347ca74: Updated usages of `ServiceFactory`.
+- [`854ba37357`](https://github.com/backstage/backstage/commit/854ba37357): Updated to support new `ServiceFactory` formats.
+- [`de3347ca74`](https://github.com/backstage/backstage/commit/de3347ca74): Updated usages of `ServiceFactory`.
 
-### `@backstage/backend-plugin-api` (0.1.1 → 0.1.2)
+### `@backstage/backend-plugin-api` (0.1.1 → [0.1.2](../../changelogs/@backstage/backend-plugin-api.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- 2c57c0c499: Made `ApiRef.defaultFactory` internal.
-- 91eed37a39: Updated `createBackendPlugin` and `createBackendModule` to properly forward lack of options.
-- 409ed984e8: Service are now scoped to either `'plugin'` or `'root'` scope. Service factories have been updated to provide dependency instances directly rather than factory functions.
-- eef91a2558: Simplified the `ServiceFactory` type and removed `AnyServiceFactory`.
-- 854ba37357: The `createServiceFactory` method has been updated to return a higher-order factory that can accept options.
-- 68513f169a: When defining a new `ServiceRef` you can now also include a `defaultFactory`, which will be used to construct instances of the service in case there is no explicit factory defined.
+- [`2c57c0c499`](https://github.com/backstage/backstage/commit/2c57c0c499): Made `ApiRef.defaultFactory` internal.
+- [`91eed37a39`](https://github.com/backstage/backstage/commit/91eed37a39): Updated `createBackendPlugin` and `createBackendModule` to properly forward lack of options.
+- [`409ed984e8`](https://github.com/backstage/backstage/commit/409ed984e8): Service are now scoped to either `'plugin'` or `'root'` scope. Service factories have been updated to provide dependency instances directly rather than factory functions.
+- [`eef91a2558`](https://github.com/backstage/backstage/commit/eef91a2558): Simplified the `ServiceFactory` type and removed `AnyServiceFactory`.
+- [`854ba37357`](https://github.com/backstage/backstage/commit/854ba37357): The `createServiceFactory` method has been updated to return a higher-order factory that can accept options.
+- [`68513f169a`](https://github.com/backstage/backstage/commit/68513f169a): When defining a new `ServiceRef` you can now also include a `defaultFactory`, which will be used to construct instances of the service in case there is no explicit factory defined.
 
-### `@backstage/backend-tasks` (0.3.4 → 0.3.5)
+### `@backstage/backend-tasks` (0.3.4 → [0.3.5](../../changelogs/@backstage/backend-tasks.md#035))
 
 #### 0.3.5
 
 ##### Patch Changes
 
-- 243533ecdc: Added support to mysql on some raw queries
-- 8872cc735d: Fixed a bug where the database option to skip migrations was ignored.
+- [`243533ecdc`](https://github.com/backstage/backstage/commit/243533ecdc): Added support to mysql on some raw queries
+- [`8872cc735d`](https://github.com/backstage/backstage/commit/8872cc735d): Fixed a bug where the database option to skip migrations was ignored.
 
-### `@backstage/backend-test-utils` (0.1.27 → 0.1.28)
+### `@backstage/backend-test-utils` (0.1.27 → [0.1.28](../../changelogs/@backstage/backend-test-utils.md#0128))
 
 #### 0.1.28
 
 ##### Patch Changes
 
-- 854ba37357: Updated to support new `ServiceFactory` formats.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- de3347ca74: Updated usages of `ServiceFactory`.
+- [`854ba37357`](https://github.com/backstage/backstage/commit/854ba37357): Updated to support new `ServiceFactory` formats.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`de3347ca74`](https://github.com/backstage/backstage/commit/de3347ca74): Updated usages of `ServiceFactory`.
 
-### `@backstage/catalog-model` (1.1.0 → 1.1.1)
+### `@backstage/catalog-model` (1.1.0 → [1.1.1](../../changelogs/@backstage/catalog-model.md#111))
 
 #### 1.1.1
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
 
-### `@backstage/cli-common` (0.1.9 → 0.1.10)
+### `@backstage/cli-common` (0.1.9 → [0.1.10](../../changelogs/@backstage/cli-common.md#0110))
 
 #### 0.1.10
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
 
-### `@backstage/config` (1.0.1 → 1.0.2)
+### `@backstage/config` (1.0.1 → [1.0.2](../../changelogs/@backstage/config.md#102))
 
 #### 1.0.2
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
 
-### `@backstage/config-loader` (1.1.3 → 1.1.4)
+### `@backstage/config-loader` (1.1.3 → [1.1.4](../../changelogs/@backstage/config-loader.md#114))
 
 #### 1.1.4
 
 ##### Patch Changes
 
-- 5ecca7e44b: No longer log when reloading remote config.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`5ecca7e44b`](https://github.com/backstage/backstage/commit/5ecca7e44b): No longer log when reloading remote config.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/core-components` (0.11.0 → 0.11.1)
+### `@backstage/core-components` (0.11.0 → [0.11.1](../../changelogs/@backstage/core-components.md#0111))
 
 #### 0.11.1
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- d3737da337: Export `HeaderActionMenu` and expose default `Table` icons via `Table.icons`
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- b29c44d895: Adds code to generate ids for headers parsed through the MarkdownContent component.
-- 37e8c5e128: The `RoutedTabs` component has been updated to be compatible with React Router v6 stable.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 13f23f6510: Allow custom images in the empty state component
-- 023d14c52b: Fix overflow bug on MicDrop image for 404 page by moving the image and making it relative rather than absolute
-- c8bb0ff8ce: Minor cleanup of the public API surface to reduce the number of warnings
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`d3737da337`](https://github.com/backstage/backstage/commit/d3737da337): Export `HeaderActionMenu` and expose default `Table` icons via `Table.icons`
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`b29c44d895`](https://github.com/backstage/backstage/commit/b29c44d895): Adds code to generate ids for headers parsed through the MarkdownContent component.
+- [`37e8c5e128`](https://github.com/backstage/backstage/commit/37e8c5e128): The `RoutedTabs` component has been updated to be compatible with React Router v6 stable.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`13f23f6510`](https://github.com/backstage/backstage/commit/13f23f6510): Allow custom images in the empty state component
+- [`023d14c52b`](https://github.com/backstage/backstage/commit/023d14c52b): Fix overflow bug on MicDrop image for 404 page by moving the image and making it relative rather than absolute
+- [`c8bb0ff8ce`](https://github.com/backstage/backstage/commit/c8bb0ff8ce): Minor cleanup of the public API surface to reduce the number of warnings
 
-### `@backstage/core-plugin-api` (1.0.5 → 1.0.6)
+### `@backstage/core-plugin-api` (1.0.5 → [1.0.6](../../changelogs/@backstage/core-plugin-api.md#106))
 
 #### 1.0.6
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 744fea158b: Added `getSystemIcons()` function to the `AppContext` available through `useApp` that will pull a list of all the icons that have been registered in the App.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ef9ab322de: Minor API signatures cleanup
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`744fea158b`](https://github.com/backstage/backstage/commit/744fea158b): Added `getSystemIcons()` function to the `AppContext` available through `useApp` that will pull a list of all the icons that have been registered in the App.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/create-app` (0.4.30 → 0.4.31)
+### `@backstage/create-app` (0.4.30 → [0.4.31](../../changelogs/@backstage/create-app.md#0431))
 
 #### 0.4.31
 
 ##### Patch Changes
 
-- 6ff94d60d5: Removed usage of the deprecated `diff` command in the root `package.json`.
+- [`6ff94d60d5`](https://github.com/backstage/backstage/commit/6ff94d60d5): Removed usage of the deprecated `diff` command in the root `package.json`.
 
   To make this change in an existing app, make the following change in the root `package.json`:
 
@@ -1346,10 +1346,10 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   -    "diff": "lerna run diff --",
   ```
 
-- c1f1a4c760: The Backstage packages and plugins have all been updated to support React Router v6 stable. The `create-app` template has not been migrated yet, but if you want to migrate your own app or plugins, check out the [migration guide](https://backstage.io/docs/tutorials/react-router-stable-migration).
-- e83de28e36: Fix typo in the documentation
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 208d6780c9: The `packages/backend/Dockerfile` received a couple of updates, it now looks as follows:
+- [`c1f1a4c760`](https://github.com/backstage/backstage/commit/c1f1a4c760): The Backstage packages and plugins have all been updated to support React Router v6 stable. The `create-app` template has not been migrated yet, but if you want to migrate your own app or plugins, check out the [migration guide](https://backstage.io/docs/tutorials/react-router-stable-migration).
+- [`e83de28e36`](https://github.com/backstage/backstage/commit/e83de28e36): Fix typo in the documentation
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`208d6780c9`](https://github.com/backstage/backstage/commit/208d6780c9): The `packages/backend/Dockerfile` received a couple of updates, it now looks as follows:
 
   ```Dockerfile
   FROM node:16-bullseye-slim
@@ -1417,7 +1417,7 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
      const config = await loadBackendConfig({
   ```
 
-- 49416194e8: Adds `IdentityApi` configuration to `create-app` scaffolding templates.
+- [`49416194e8`](https://github.com/backstage/backstage/commit/49416194e8): Adds `IdentityApi` configuration to `create-app` scaffolding templates.
 
   To migrate to the new `IdentityApi`, edit the `packages/backend/src/index.ts` adding the following import:
 
@@ -1467,7 +1467,7 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
       ...
   ```
 
-- 8d886dd33e: Added `yarn new` as one of the scripts installed by default, which calls `backstage-cli new`. This script replaces `create-plugin`, which you can now remove if you want to. It is kept in the `create-app` template for backwards compatibility.
+- [`8d886dd33e`](https://github.com/backstage/backstage/commit/8d886dd33e): Added `yarn new` as one of the scripts installed by default, which calls `backstage-cli new`. This script replaces `create-plugin`, which you can now remove if you want to. It is kept in the `create-app` template for backwards compatibility.
 
   The `remove-plugin` command has been removed, as it has been removed from the Backstage CLI.
 
@@ -1478,7 +1478,7 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   +    "new": "backstage-cli new --scope internal"
   ```
 
-- c3c90280be: The options part of `DatabaseManager.fromConfig` now accepts an optional logger
+- [`c3c90280be`](https://github.com/backstage/backstage/commit/c3c90280be): The options part of `DatabaseManager.fromConfig` now accepts an optional logger
   field. You may want to supply that logger in your backend initialization code to
   ensure that you can get relevant logging data when things happen related to the
   connection pool.
@@ -1493,7 +1493,7 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   +  const databaseManager = DatabaseManager.fromConfig(config, { logger: root });
   ```
 
-- a578558180: Updated the root `package.json` to use the new `backstage-cli repo clean` command.
+- [`a578558180`](https://github.com/backstage/backstage/commit/a578558180): Updated the root `package.json` to use the new `backstage-cli repo clean` command.
 
   To apply this change to an existing project, make the following change to the root `package.json`:
 
@@ -1502,7 +1502,7 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   +    "clean": "backstage-cli repo clean",
   ```
 
-- c0a08fd08c: Added `EntityLinksCard` to the system `EntityPage`.
+- [`c0a08fd08c`](https://github.com/backstage/backstage/commit/c0a08fd08c): Added `EntityLinksCard` to the system `EntityPage`.
 
   For an existing installation where you want to display the links card for entity pages of kind `system` you should make the following adjustment to `packages/app/src/components/catalog/EntityPage.tsx`
 
@@ -1523,208 +1523,208 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
   );
   ```
 
-### `@backstage/dev-utils` (1.0.5 → 1.0.6)
+### `@backstage/dev-utils` (1.0.5 → [1.0.6](../../changelogs/@backstage/dev-utils.md#106))
 
 #### 1.0.6
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 329ed2b9c7: Fixed routing when using React Router v6 stable.
-- 4c5e85ddf3: Removed the dependency and setup of `react-hot-loader`, since the `@backstage/cli` now uses `swc` with `React Refresh` instead.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`329ed2b9c7`](https://github.com/backstage/backstage/commit/329ed2b9c7): Fixed routing when using React Router v6 stable.
+- [`4c5e85ddf3`](https://github.com/backstage/backstage/commit/4c5e85ddf3): Removed the dependency and setup of `react-hot-loader`, since the `@backstage/cli` now uses `swc` with `React Refresh` instead.
 
-### `@backstage/errors` (1.1.0 → 1.1.1)
+### `@backstage/errors` (1.1.0 → [1.1.1](../../changelogs/@backstage/errors.md#111))
 
 #### 1.1.1
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
 
-### `@backstage/integration` (1.3.0 → 1.3.1)
+### `@backstage/integration` (1.3.0 → [1.3.1](../../changelogs/@backstage/integration.md#131))
 
 #### 1.3.1
 
 ##### Patch Changes
 
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 42918e085c: Fixed bug in the `bitbucketServer` integration where token did not take precedence over supplied username and password which is described in the documentation.
-- f76f22c649: Improved caching around github app tokens.
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`42918e085c`](https://github.com/backstage/backstage/commit/42918e085c): Fixed bug in the `bitbucketServer` integration where token did not take precedence over supplied username and password which is described in the documentation.
+- [`f76f22c649`](https://github.com/backstage/backstage/commit/f76f22c649): Improved caching around github app tokens.
   Tokens are now cached for 50 minutes, not 10.
   Calls to get app installations are also included in this cache.
   If you have more than one github app configured, consider adding `allowedInstallationOwners` to your apps configuration to gain the most benefit from these performance changes.
 
-### `@backstage/integration-react` (1.1.3 → 1.1.4)
+### `@backstage/integration-react` (1.1.3 → [1.1.4](../../changelogs/@backstage/integration-react.md#114))
 
 #### 1.1.4
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-adr` (0.2.0 → 0.2.1)
-
-#### 0.2.1
-
-##### Patch Changes
-
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- c8bb0ff8ce: Minor cleanup of the public API surface to reduce the number of warnings
-- b489de83b1: Fix parsing of ADR location which includes a trailing slash
-
-### `@backstage/plugin-adr-backend` (0.2.0 → 0.2.1)
+### `@backstage/plugin-adr` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-adr.md#021))
 
 #### 0.2.1
 
 ##### Patch Changes
 
-- b489de83b1: Continue processing subsequent entities when an error occurs in collator
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`c8bb0ff8ce`](https://github.com/backstage/backstage/commit/c8bb0ff8ce): Minor cleanup of the public API surface to reduce the number of warnings
+- [`b489de83b1`](https://github.com/backstage/backstage/commit/b489de83b1): Fix parsing of ADR location which includes a trailing slash
 
-### `@backstage/plugin-airbrake` (0.3.8 → 0.3.9)
+### `@backstage/plugin-adr-backend` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-adr-backend.md#021))
+
+#### 0.2.1
+
+##### Patch Changes
+
+- [`b489de83b1`](https://github.com/backstage/backstage/commit/b489de83b1): Continue processing subsequent entities when an error occurs in collator
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+
+### `@backstage/plugin-airbrake` (0.3.8 → [0.3.9](../../changelogs/@backstage/plugin-airbrake.md#039))
 
 #### 0.3.9
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-airbrake-backend` (0.2.8 → 0.2.9)
+### `@backstage/plugin-airbrake-backend` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-airbrake-backend.md#029))
 
 #### 0.2.9
 
 ##### Patch Changes
 
-- 148568b5c2: Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`148568b5c2`](https://github.com/backstage/backstage/commit/148568b5c2): Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-allure` (0.1.24 → 0.1.25)
+### `@backstage/plugin-allure` (0.1.24 → [0.1.25](../../changelogs/@backstage/plugin-allure.md#0125))
 
 #### 0.1.25
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-analytics-module-ga` (0.1.19 → 0.1.20)
+### `@backstage/plugin-analytics-module-ga` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-analytics-module-ga.md#0120))
 
 #### 0.1.20
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-apache-airflow` (0.2.1 → 0.2.2)
+### `@backstage/plugin-apache-airflow` (0.2.1 → [0.2.2](../../changelogs/@backstage/plugin-apache-airflow.md#022))
 
 #### 0.2.2
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 2f52e74b49: Got rid of usages of the uppercase String type
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- c8bb0ff8ce: Minor cleanup of the public API surface to reduce the number of warnings
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`2f52e74b49`](https://github.com/backstage/backstage/commit/2f52e74b49): Got rid of usages of the uppercase String type
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`c8bb0ff8ce`](https://github.com/backstage/backstage/commit/c8bb0ff8ce): Minor cleanup of the public API surface to reduce the number of warnings
 
-### `@backstage/plugin-api-docs` (0.8.8 → 0.8.9)
+### `@backstage/plugin-api-docs` (0.8.8 → [0.8.9](../../changelogs/@backstage/plugin-api-docs.md#089))
 
 #### 0.8.9
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ef9ab322de: Minor API signatures cleanup
-- c8bb0ff8ce: Minor cleanup of the public API surface to reduce the number of warnings
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
+- [`c8bb0ff8ce`](https://github.com/backstage/backstage/commit/c8bb0ff8ce): Minor cleanup of the public API surface to reduce the number of warnings
 
-### `@backstage/plugin-apollo-explorer` (0.1.1 → 0.1.2)
+### `@backstage/plugin-apollo-explorer` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-apollo-explorer.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ef9ab322de: Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/plugin-app-backend` (0.3.35 → 0.3.36)
+### `@backstage/plugin-app-backend` (0.3.35 → [0.3.36](../../changelogs/@backstage/plugin-app-backend.md#0336))
 
 #### 0.3.36
 
 ##### Patch Changes
 
-- d669d89206: Minor API signatures cleanup
-- 60b85d8ade: Updated dependency `helmet` to `^6.0.0`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`60b85d8ade`](https://github.com/backstage/backstage/commit/60b85d8ade): Updated dependency `helmet` to `^6.0.0`.
 
   Please note that these policies are no longer applied by default:
 
   helmet.contentSecurityPolicy no longer sets block-all-mixed-content directive by default
   helmet.expectCt is no longer set by default. It can, however, be explicitly enabled. It will be removed in Helmet 7.
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 8872cc735d: Fixed a bug where the database option to skip migrations was ignored.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`8872cc735d`](https://github.com/backstage/backstage/commit/8872cc735d): Fixed a bug where the database option to skip migrations was ignored.
 
-### `@backstage/plugin-auth-node` (0.2.4 → 0.2.5)
+### `@backstage/plugin-auth-node` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-auth-node.md#025))
 
 #### 0.2.5
 
 ##### Patch Changes
 
-- 9212439d15: Minor update to tests
-- 2cbd533426: `IdentityClient` is now deprecated. Please migrate to `IdentityApi` and `DefaultIdentityClient` instead. The authenticate function on `DefaultIdentityClient` is also deprecated. Please use `getIdentity` instead.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`9212439d15`](https://github.com/backstage/backstage/commit/9212439d15): Minor update to tests
+- [`2cbd533426`](https://github.com/backstage/backstage/commit/2cbd533426): `IdentityClient` is now deprecated. Please migrate to `IdentityApi` and `DefaultIdentityClient` instead. The authenticate function on `DefaultIdentityClient` is also deprecated. Please use `getIdentity` instead.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-azure-devops-backend` (0.3.14 → 0.3.15)
+### `@backstage/plugin-azure-devops-backend` (0.3.14 → [0.3.15](../../changelogs/@backstage/plugin-azure-devops-backend.md#0315))
 
 #### 0.3.15
 
 ##### Patch Changes
 
-- 3f739be9d9: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- cb1cfc018b: `createRouter` now requires an additional reader: `UrlReader` argument
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`cb1cfc018b`](https://github.com/backstage/backstage/commit/cb1cfc018b): `createRouter` now requires an additional reader: `UrlReader` argument
 
   ```diff
   export default async function createPlugin(
@@ -1760,1131 +1760,1131 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
         token: ${AZURE_TOKEN}
   ```
 
-- ef9ab322de: Minor API signatures cleanup
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/plugin-badges` (0.2.32 → 0.2.33)
+### `@backstage/plugin-badges` (0.2.32 → [0.2.33](../../changelogs/@backstage/plugin-badges.md#0233))
 
 #### 0.2.33
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ef9ab322de: Minor API signatures cleanup
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/plugin-badges-backend` (0.1.29 → 0.1.30)
+### `@backstage/plugin-badges-backend` (0.1.29 → [0.1.30](../../changelogs/@backstage/plugin-badges-backend.md#0130))
 
 #### 0.1.30
 
 ##### Patch Changes
 
-- ef9ab322de: Minor API signatures cleanup
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/plugin-bazaar` (0.1.23 → 0.1.24)
+### `@backstage/plugin-bazaar` (0.1.23 → [0.1.24](../../changelogs/@backstage/plugin-bazaar.md#0124))
 
 #### 0.1.24
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 1dd12349d1: Fixed broken routing by removing the wrapping `Router` from the `RoutedTabs` children.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`1dd12349d1`](https://github.com/backstage/backstage/commit/1dd12349d1): Fixed broken routing by removing the wrapping `Router` from the `RoutedTabs` children.
 
-### `@backstage/plugin-bazaar-backend` (0.1.19 → 0.1.20)
+### `@backstage/plugin-bazaar-backend` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-bazaar-backend.md#0120))
 
 #### 0.1.20
 
 ##### Patch Changes
 
-- 8872cc735d: Fixed a bug where the database option to skip migrations was ignored.
+- [`8872cc735d`](https://github.com/backstage/backstage/commit/8872cc735d): Fixed a bug where the database option to skip migrations was ignored.
 
-### `@backstage/plugin-bitbucket-cloud-common` (0.1.2 → 0.1.3)
+### `@backstage/plugin-bitbucket-cloud-common` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-bitbucket-cloud-common.md#013))
 
 #### 0.1.3
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-bitrise` (0.1.35 → 0.1.36)
+### `@backstage/plugin-bitrise` (0.1.35 → [0.1.36](../../changelogs/@backstage/plugin-bitrise.md#0136))
 
 #### 0.1.36
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-catalog` (1.5.0 → 1.5.1)
+### `@backstage/plugin-catalog` (1.5.0 → [1.5.1](../../changelogs/@backstage/plugin-catalog.md#151))
 
 #### 1.5.1
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
 
-### `@backstage/plugin-catalog-backend-module-azure` (0.1.6 → 0.1.7)
+### `@backstage/plugin-catalog-backend-module-azure` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-catalog-backend-module-azure.md#017))
 
 #### 0.1.7
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.2 → 0.2.3)
+### `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.2 → [0.2.3](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket.md#023))
 
 #### 0.2.3
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.2 → 0.1.3)
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-cloud.md#013))
 
 #### 0.1.3
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.0 → 0.1.1)
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-server.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 148568b5c2: Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`148568b5c2`](https://github.com/backstage/backstage/commit/148568b5c2): Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.3 → 0.1.4)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.3 → [0.1.4](../../changelogs/@backstage/plugin-catalog-backend-module-gerrit.md#014))
 
 #### 0.1.4
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-catalog-backend-module-github` (0.1.6 → 0.1.7)
-
-#### 0.1.7
-
-##### Patch Changes
-
-- 3c4a388537: New experimental alpha exports for use with the upcoming backend system.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 3a62594a11: Add support for including (or excluding) Github repositories by topic
-- 287a64bf97: Added the ability to configure the host for the `GitHubEntityProvider` to use against GitHub Enterprise
-- 91e2abbd46: Remove the duplicated `scheduleFn` initialization in `GitHubEntityProvider`.
-
-### `@backstage/plugin-catalog-backend-module-gitlab` (0.1.6 → 0.1.7)
+### `@backstage/plugin-catalog-backend-module-github` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#017))
 
 #### 0.1.7
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`3c4a388537`](https://github.com/backstage/backstage/commit/3c4a388537): New experimental alpha exports for use with the upcoming backend system.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`3a62594a11`](https://github.com/backstage/backstage/commit/3a62594a11): Add support for including (or excluding) Github repositories by topic
+- [`287a64bf97`](https://github.com/backstage/backstage/commit/287a64bf97): Added the ability to configure the host for the `GitHubEntityProvider` to use against GitHub Enterprise
+- [`91e2abbd46`](https://github.com/backstage/backstage/commit/91e2abbd46): Remove the duplicated `scheduleFn` initialization in `GitHubEntityProvider`.
 
-### `@backstage/plugin-catalog-backend-module-ldap` (0.5.2 → 0.5.3)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#017))
+
+#### 0.1.7
+
+##### Patch Changes
+
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+
+### `@backstage/plugin-catalog-backend-module-ldap` (0.5.2 → [0.5.3](../../changelogs/@backstage/plugin-catalog-backend-module-ldap.md#053))
 
 #### 0.5.3
 
 ##### Patch Changes
 
-- 7fa54c3c77: Added ae-dir LDAP vendor to correctly extract DN.
-- c54fcea9af: Now the `searchStream` method in LDAP client awaits the callbacks
+- [`7fa54c3c77`](https://github.com/backstage/backstage/commit/7fa54c3c77): Added ae-dir LDAP vendor to correctly extract DN.
+- [`c54fcea9af`](https://github.com/backstage/backstage/commit/c54fcea9af): Now the `searchStream` method in LDAP client awaits the callbacks
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.4.1 → 0.4.2)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.4.1 → [0.4.2](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#042))
 
 #### 0.4.2
 
 ##### Patch Changes
 
-- c1d32d2b76: Fixed a bug in the `MicrosoftGraphEntityProvider` that ignored the `userExpand` and `groupExpand` configuration parameters
-- d80aab31ae: Added $select attribute to user query
-- a246d5a9b8: Read `queryMode` from the `microsoftGraphOrg` config
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 4c82b955fc: Fix typo
+- [`c1d32d2b76`](https://github.com/backstage/backstage/commit/c1d32d2b76): Fixed a bug in the `MicrosoftGraphEntityProvider` that ignored the `userExpand` and `groupExpand` configuration parameters
+- [`d80aab31ae`](https://github.com/backstage/backstage/commit/d80aab31ae): Added $select attribute to user query
+- [`a246d5a9b8`](https://github.com/backstage/backstage/commit/a246d5a9b8): Read `queryMode` from the `microsoftGraphOrg` config
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`4c82b955fc`](https://github.com/backstage/backstage/commit/4c82b955fc): Fix typo
 
-### `@backstage/plugin-catalog-graph` (0.2.20 → 0.2.21)
+### `@backstage/plugin-catalog-graph` (0.2.20 → [0.2.21](../../changelogs/@backstage/plugin-catalog-graph.md#0221))
 
 #### 0.2.21
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
 
-### `@backstage/plugin-catalog-graphql` (0.3.12 → 0.3.13)
+### `@backstage/plugin-catalog-graphql` (0.3.12 → [0.3.13](../../changelogs/@backstage/plugin-catalog-graphql.md#0313))
 
 #### 0.3.13
 
 ##### Patch Changes
 
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-catalog-import` (0.8.11 → 0.8.12)
+### `@backstage/plugin-catalog-import` (0.8.11 → [0.8.12](../../changelogs/@backstage/plugin-catalog-import.md#0812))
 
 #### 0.8.12
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-catalog-react` (1.1.3 → 1.1.4)
+### `@backstage/plugin-catalog-react` (1.1.3 → [1.1.4](../../changelogs/@backstage/plugin-catalog-react.md#114))
 
 #### 1.1.4
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- f6033d1121: humanizeEntityRef function can now be forced to include default namespace
-- c86741a052: Support showing counts in option labels of the `EntityTagPicker`. You can enable this by adding the `showCounts` property
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- a6d551fad9: Properly handle free-text entity filtering in the case of empty tag arrays
-- ef9ab322de: Minor API signatures cleanup
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`f6033d1121`](https://github.com/backstage/backstage/commit/f6033d1121): humanizeEntityRef function can now be forced to include default namespace
+- [`c86741a052`](https://github.com/backstage/backstage/commit/c86741a052): Support showing counts in option labels of the `EntityTagPicker`. You can enable this by adding the `showCounts` property
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`a6d551fad9`](https://github.com/backstage/backstage/commit/a6d551fad9): Properly handle free-text entity filtering in the case of empty tag arrays
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/plugin-cicd-statistics` (0.1.10 → 0.1.11)
+### `@backstage/plugin-cicd-statistics` (0.1.10 → [0.1.11](../../changelogs/@backstage/plugin-cicd-statistics.md#0111))
 
 #### 0.1.11
 
 ##### Patch Changes
 
-- d669d89206: Minor API signatures cleanup
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
 
-### `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.4 → 0.1.5)
+### `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-cicd-statistics-module-gitlab.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- 71b7464a7c: Fixing typo in the Readme file: `'@backstage plugin-cicd-statistics-module-gitlab';` -> `'@backstage/plugin-cicd-statistics-module-gitlab';`
-- a98f5d4c21: add the ability to add CICD default options to createGitlabApi constructor
+- [`71b7464a7c`](https://github.com/backstage/backstage/commit/71b7464a7c): Fixing typo in the Readme file: `'@backstage plugin-cicd-statistics-module-gitlab';` -> `'@backstage/plugin-cicd-statistics-module-gitlab';`
+- [`a98f5d4c21`](https://github.com/backstage/backstage/commit/a98f5d4c21): add the ability to add CICD default options to createGitlabApi constructor
 
-### `@backstage/plugin-circleci` (0.3.8 → 0.3.9)
-
-#### 0.3.9
-
-##### Patch Changes
-
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ef9ab322de: Minor API signatures cleanup
-
-### `@backstage/plugin-cloudbuild` (0.3.8 → 0.3.9)
+### `@backstage/plugin-circleci` (0.3.8 → [0.3.9](../../changelogs/@backstage/plugin-circleci.md#039))
 
 #### 0.3.9
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 3f739be9d9: Minor API signatures cleanup
-- 763fb81e82: Internal refactor to use more type safe code when dealing with route parameters.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ef9ab322de: Minor API signatures cleanup
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/plugin-code-climate` (0.1.8 → 0.1.9)
+### `@backstage/plugin-cloudbuild` (0.3.8 → [0.3.9](../../changelogs/@backstage/plugin-cloudbuild.md#039))
+
+#### 0.3.9
+
+##### Patch Changes
+
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`763fb81e82`](https://github.com/backstage/backstage/commit/763fb81e82): Internal refactor to use more type safe code when dealing with route parameters.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
+
+### `@backstage/plugin-code-climate` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-code-climate.md#019))
 
 #### 0.1.9
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-code-coverage` (0.2.1 → 0.2.2)
-
-#### 0.2.2
-
-##### Patch Changes
-
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-
-### `@backstage/plugin-code-coverage-backend` (0.2.1 → 0.2.2)
+### `@backstage/plugin-code-coverage` (0.2.1 → [0.2.2](../../changelogs/@backstage/plugin-code-coverage.md#022))
 
 #### 0.2.2
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 8872cc735d: Fixed a bug where the database option to skip migrations was ignored.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-codescene` (0.1.3 → 0.1.4)
+### `@backstage/plugin-code-coverage-backend` (0.2.1 → [0.2.2](../../changelogs/@backstage/plugin-code-coverage-backend.md#022))
+
+#### 0.2.2
+
+##### Patch Changes
+
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`8872cc735d`](https://github.com/backstage/backstage/commit/8872cc735d): Fixed a bug where the database option to skip migrations was ignored.
+
+### `@backstage/plugin-codescene` (0.1.3 → [0.1.4](../../changelogs/@backstage/plugin-codescene.md#014))
 
 #### 0.1.4
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-config-schema` (0.1.31 → 0.1.32)
+### `@backstage/plugin-config-schema` (0.1.31 → [0.1.32](../../changelogs/@backstage/plugin-config-schema.md#0132))
 
 #### 0.1.32
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-cost-insights` (0.11.30 → 0.11.31)
+### `@backstage/plugin-cost-insights` (0.11.30 → [0.11.31](../../changelogs/@backstage/plugin-cost-insights.md#01131))
 
 #### 0.11.31
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 9318bf15d4: The `CostInsightsHeader`component now uses group names if available
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`9318bf15d4`](https://github.com/backstage/backstage/commit/9318bf15d4): The `CostInsightsHeader`component now uses group names if available
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-explore` (0.3.39 → 0.3.40)
+### `@backstage/plugin-explore` (0.3.39 → [0.3.40](../../changelogs/@backstage/plugin-explore.md#0340))
 
 #### 0.3.40
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-firehydrant` (0.1.25 → 0.1.26)
+### `@backstage/plugin-firehydrant` (0.1.25 → [0.1.26](../../changelogs/@backstage/plugin-firehydrant.md#0126))
 
 #### 0.1.26
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-fossa` (0.2.40 → 0.2.41)
+### `@backstage/plugin-fossa` (0.2.40 → [0.2.41](../../changelogs/@backstage/plugin-fossa.md#0241))
 
 #### 0.2.41
 
 ##### Patch Changes
 
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-gcalendar` (0.3.4 → 0.3.5)
+### `@backstage/plugin-gcalendar` (0.3.4 → [0.3.5](../../changelogs/@backstage/plugin-gcalendar.md#035))
 
 #### 0.3.5
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- a69ac5b63a: Upgrade `react-query:3` to `@tanstack/react-query:4`
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`a69ac5b63a`](https://github.com/backstage/backstage/commit/a69ac5b63a): Upgrade `react-query:3` to `@tanstack/react-query:4`
 
-### `@backstage/plugin-gcp-projects` (0.3.27 → 0.3.28)
+### `@backstage/plugin-gcp-projects` (0.3.27 → [0.3.28](../../changelogs/@backstage/plugin-gcp-projects.md#0328))
 
 #### 0.3.28
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-git-release-manager` (0.3.21 → 0.3.22)
+### `@backstage/plugin-git-release-manager` (0.3.21 → [0.3.22](../../changelogs/@backstage/plugin-git-release-manager.md#0322))
 
 #### 0.3.22
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-github-actions` (0.5.8 → 0.5.9)
+### `@backstage/plugin-github-actions` (0.5.8 → [0.5.9](../../changelogs/@backstage/plugin-github-actions.md#059))
 
 #### 0.5.9
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 1bdb0bf24b: Modify RecentWorkflowRunsCard use constructed route instead of hardcoded route.
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`1bdb0bf24b`](https://github.com/backstage/backstage/commit/1bdb0bf24b): Modify RecentWorkflowRunsCard use constructed route instead of hardcoded route.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-github-deployments` (0.1.39 → 0.1.40)
+### `@backstage/plugin-github-deployments` (0.1.39 → [0.1.40](../../changelogs/@backstage/plugin-github-deployments.md#0140))
 
 #### 0.1.40
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-github-issues` (0.1.0 → 0.1.1)
+### `@backstage/plugin-github-issues` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-github-issues.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-github-pull-requests-board` (0.1.2 → 0.1.3)
+### `@backstage/plugin-github-pull-requests-board` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-github-pull-requests-board.md#013))
 
 #### 0.1.3
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 2665ee4ed4: Clarified GitHub app permissions required by plugin
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 723113296b: Add optional `pullRequestLimit` prop to `EntityTeamPullRequestsCard` and `EntityTeamPullRequestsContent` to limit the number of PRs shown per repository. Excluding this prop will default the number of pull requests shown to 10 per repository (the existing functionality).
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`2665ee4ed4`](https://github.com/backstage/backstage/commit/2665ee4ed4): Clarified GitHub app permissions required by plugin
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`723113296b`](https://github.com/backstage/backstage/commit/723113296b): Add optional `pullRequestLimit` prop to `EntityTeamPullRequestsCard` and `EntityTeamPullRequestsContent` to limit the number of PRs shown per repository. Excluding this prop will default the number of pull requests shown to 10 per repository (the existing functionality).
 
-### `@backstage/plugin-gitops-profiles` (0.3.26 → 0.3.27)
+### `@backstage/plugin-gitops-profiles` (0.3.26 → [0.3.27](../../changelogs/@backstage/plugin-gitops-profiles.md#0327))
 
 #### 0.3.27
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-gocd` (0.1.14 → 0.1.15)
+### `@backstage/plugin-gocd` (0.1.14 → [0.1.15](../../changelogs/@backstage/plugin-gocd.md#0115))
 
 #### 0.1.15
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-graphiql` (0.2.40 → 0.2.41)
+### `@backstage/plugin-graphiql` (0.2.40 → [0.2.41](../../changelogs/@backstage/plugin-graphiql.md#0241))
 
 #### 0.2.41
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-graphql-backend` (0.1.25 → 0.1.26)
+### `@backstage/plugin-graphql-backend` (0.1.25 → [0.1.26](../../changelogs/@backstage/plugin-graphql-backend.md#0126))
 
 #### 0.1.26
 
 ##### Patch Changes
 
-- d669d89206: Minor API signatures cleanup
-- 60b85d8ade: Updated dependency `helmet` to `^6.0.0`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`60b85d8ade`](https://github.com/backstage/backstage/commit/60b85d8ade): Updated dependency `helmet` to `^6.0.0`.
 
   Please note that these policies are no longer applied by default:
 
   helmet.contentSecurityPolicy no longer sets block-all-mixed-content directive by default
   helmet.expectCt is no longer set by default. It can, however, be explicitly enabled. It will be removed in Helmet 7.
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-home` (0.4.24 → 0.4.25)
+### `@backstage/plugin-home` (0.4.24 → [0.4.25](../../changelogs/@backstage/plugin-home.md#0425))
 
 #### 0.4.25
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-ilert` (0.1.34 → 0.1.35)
+### `@backstage/plugin-ilert` (0.1.34 → [0.1.35](../../changelogs/@backstage/plugin-ilert.md#0135))
 
 #### 0.1.35
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-jenkins` (0.7.7 → 0.7.8)
+### `@backstage/plugin-jenkins` (0.7.7 → [0.7.8](../../changelogs/@backstage/plugin-jenkins.md#078))
 
 #### 0.7.8
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-jenkins-backend` (0.1.25 → 0.1.26)
+### `@backstage/plugin-jenkins-backend` (0.1.25 → [0.1.26](../../changelogs/@backstage/plugin-jenkins-backend.md#0126))
 
 #### 0.1.26
 
 ##### Patch Changes
 
-- 618c06f838: Add example on how to pass through permissions
-- a966ed8385: Unwrap error message when getting projects
-- 47952621dc: Extend configuration so that extra headers can be sent to jenkins instance
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- 69ec1cf39f: Updated dependency `jenkins` to `^1.0.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- e55d855a6b: Jenkins plugin works again
+- [`618c06f838`](https://github.com/backstage/backstage/commit/618c06f838): Add example on how to pass through permissions
+- [`a966ed8385`](https://github.com/backstage/backstage/commit/a966ed8385): Unwrap error message when getting projects
+- [`47952621dc`](https://github.com/backstage/backstage/commit/47952621dc): Extend configuration so that extra headers can be sent to jenkins instance
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`69ec1cf39f`](https://github.com/backstage/backstage/commit/69ec1cf39f): Updated dependency `jenkins` to `^1.0.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`e55d855a6b`](https://github.com/backstage/backstage/commit/e55d855a6b): Jenkins plugin works again
 
-### `@backstage/plugin-kafka` (0.3.8 → 0.3.9)
+### `@backstage/plugin-kafka` (0.3.8 → [0.3.9](../../changelogs/@backstage/plugin-kafka.md#039))
 
 #### 0.3.9
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- f6be17460d: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`f6be17460d`](https://github.com/backstage/backstage/commit/f6be17460d): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-kafka-backend` (0.2.28 → 0.2.29)
+### `@backstage/plugin-kafka-backend` (0.2.28 → [0.2.29](../../changelogs/@backstage/plugin-kafka-backend.md#0229))
 
 #### 0.2.29
 
 ##### Patch Changes
 
-- f6be17460d: Minor API signatures cleanup
+- [`f6be17460d`](https://github.com/backstage/backstage/commit/f6be17460d): Minor API signatures cleanup
 
-### `@backstage/plugin-kubernetes` (0.7.1 → 0.7.2)
-
-#### 0.7.2
-
-##### Patch Changes
-
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 0768d6dece: add new kubernetes backend endpoints to kubernetes backend client
-- 19a27929fb: Reset error state on success
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ef9ab322de: Minor API signatures cleanup
-
-### `@backstage/plugin-kubernetes-backend` (0.7.1 → 0.7.2)
+### `@backstage/plugin-kubernetes` (0.7.1 → [0.7.2](../../changelogs/@backstage/plugin-kubernetes.md#072))
 
 #### 0.7.2
 
 ##### Patch Changes
 
-- 8902c2e39d: chore: Exporting KubernetesClientProvider and everything in kubernetes-auth-translator as requested in issue #10457
-- a57d29d572: Adds skipMetricsLookup to the kubernetes-backend schema
-- 0768d6dece: add new kubernetes backend endpoints to kubernetes backend client
-- 60b85d8ade: Updated dependency `helmet` to `^6.0.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`0768d6dece`](https://github.com/backstage/backstage/commit/0768d6dece): add new kubernetes backend endpoints to kubernetes backend client
+- [`19a27929fb`](https://github.com/backstage/backstage/commit/19a27929fb): Reset error state on success
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
+
+### `@backstage/plugin-kubernetes-backend` (0.7.1 → [0.7.2](../../changelogs/@backstage/plugin-kubernetes-backend.md#072))
+
+#### 0.7.2
+
+##### Patch Changes
+
+- [`8902c2e39d`](https://github.com/backstage/backstage/commit/8902c2e39d): chore: Exporting KubernetesClientProvider and everything in kubernetes-auth-translator as requested in issue #10457
+- [`a57d29d572`](https://github.com/backstage/backstage/commit/a57d29d572): Adds skipMetricsLookup to the kubernetes-backend schema
+- [`0768d6dece`](https://github.com/backstage/backstage/commit/0768d6dece): add new kubernetes backend endpoints to kubernetes backend client
+- [`60b85d8ade`](https://github.com/backstage/backstage/commit/60b85d8ade): Updated dependency `helmet` to `^6.0.0`.
 
   Please note that these policies are no longer applied by default:
 
   helmet.contentSecurityPolicy no longer sets block-all-mixed-content directive by default
   helmet.expectCt is no longer set by default. It can, however, be explicitly enabled. It will be removed in Helmet 7.
 
-### `@backstage/plugin-kubernetes-common` (0.4.1 → 0.4.2)
+### `@backstage/plugin-kubernetes-common` (0.4.1 → [0.4.2](../../changelogs/@backstage/plugin-kubernetes-common.md#042))
 
 #### 0.4.2
 
 ##### Patch Changes
 
-- 0768d6dece: add new kubernetes backend endpoints to kubernetes backend client
-- d669d89206: Minor API signatures cleanup
+- [`0768d6dece`](https://github.com/backstage/backstage/commit/0768d6dece): add new kubernetes backend endpoints to kubernetes backend client
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
 
-### `@backstage/plugin-lighthouse` (0.3.8 → 0.3.9)
+### `@backstage/plugin-lighthouse` (0.3.8 → [0.3.9](../../changelogs/@backstage/plugin-lighthouse.md#039))
 
 #### 0.3.9
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- f6be17460d: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`f6be17460d`](https://github.com/backstage/backstage/commit/f6be17460d): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-newrelic` (0.3.26 → 0.3.27)
+### `@backstage/plugin-newrelic` (0.3.26 → [0.3.27](../../changelogs/@backstage/plugin-newrelic.md#0327))
 
 #### 0.3.27
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-newrelic-dashboard` (0.2.1 → 0.2.2)
+### `@backstage/plugin-newrelic-dashboard` (0.2.1 → [0.2.2](../../changelogs/@backstage/plugin-newrelic-dashboard.md#022))
 
 #### 0.2.2
 
 ##### Patch Changes
 
-- 3f739be9d9: Minor API signatures cleanup
-- d669d89206: Minor API signatures cleanup
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
 
-### `@backstage/plugin-org` (0.5.8 → 0.5.9)
+### `@backstage/plugin-org` (0.5.8 → [0.5.9](../../changelogs/@backstage/plugin-org.md#059))
 
 #### 0.5.9
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- ab6650ede9: Added an edit button to the `UserProfileCard` that is enabled when the `backstage.io/edit-url` is present, this matches how the `GroupProfileCard` works
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`ab6650ede9`](https://github.com/backstage/backstage/commit/ab6650ede9): Added an edit button to the `UserProfileCard` that is enabled when the `backstage.io/edit-url` is present, this matches how the `GroupProfileCard` works
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-pagerduty` (0.5.1 → 0.5.2)
+### `@backstage/plugin-pagerduty` (0.5.1 → [0.5.2](../../changelogs/@backstage/plugin-pagerduty.md#052))
 
 #### 0.5.2
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-periskop` (0.1.6 → 0.1.7)
-
-#### 0.1.7
-
-##### Patch Changes
-
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-
-### `@backstage/plugin-periskop-backend` (0.1.6 → 0.1.7)
+### `@backstage/plugin-periskop` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-periskop.md#017))
 
 #### 0.1.7
 
 ##### Patch Changes
 
-- 148568b5c2: Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-permission-backend` (0.5.10 → 0.5.11)
+### `@backstage/plugin-periskop-backend` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-periskop-backend.md#017))
+
+#### 0.1.7
+
+##### Patch Changes
+
+- [`148568b5c2`](https://github.com/backstage/backstage/commit/148568b5c2): Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+
+### `@backstage/plugin-permission-backend` (0.5.10 → [0.5.11](../../changelogs/@backstage/plugin-permission-backend.md#0511))
 
 #### 0.5.11
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 2cbd533426: Uptake the `IdentityApi` change to use `getIdentity` instead of `authenticate` for retrieving the logged in users identity.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`2cbd533426`](https://github.com/backstage/backstage/commit/2cbd533426): Uptake the `IdentityApi` change to use `getIdentity` instead of `authenticate` for retrieving the logged in users identity.
 
-### `@backstage/plugin-permission-common` (0.6.3 → 0.6.4)
+### `@backstage/plugin-permission-common` (0.6.3 → [0.6.4](../../changelogs/@backstage/plugin-permission-common.md#064))
 
 #### 0.6.4
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-permission-node` (0.6.4 → 0.6.5)
+### `@backstage/plugin-permission-node` (0.6.4 → [0.6.5](../../changelogs/@backstage/plugin-permission-node.md#065))
 
 #### 0.6.5
 
 ##### Patch Changes
 
-- 9212439d15: Minor update to tests
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`9212439d15`](https://github.com/backstage/backstage/commit/9212439d15): Minor update to tests
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-permission-react` (0.4.4 → 0.4.5)
+### `@backstage/plugin-permission-react` (0.4.4 → [0.4.5](../../changelogs/@backstage/plugin-permission-react.md#045))
 
 #### 0.4.5
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 817f3196f6: **DEPRECATION**: The `PermissionedRoute` component has been deprecated in favor of the new `RequirePermission` component. This is because the usage pattern of `PermissionedRoute` is not compatible with React Router v6 stable.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): **DEPRECATION**: The `PermissionedRoute` component has been deprecated in favor of the new `RequirePermission` component. This is because the usage pattern of `PermissionedRoute` is not compatible with React Router v6 stable.
 
   Embed the type from `react-router` instead of exporting it directly.
 
-### `@backstage/plugin-proxy-backend` (0.2.29 → 0.2.30)
+### `@backstage/plugin-proxy-backend` (0.2.29 → [0.2.30](../../changelogs/@backstage/plugin-proxy-backend.md#0230))
 
 #### 0.2.30
 
 ##### Patch Changes
 
-- f6be17460d: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`f6be17460d`](https://github.com/backstage/backstage/commit/f6be17460d): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-rollbar` (0.4.8 → 0.4.9)
+### `@backstage/plugin-rollbar` (0.4.8 → [0.4.9](../../changelogs/@backstage/plugin-rollbar.md#049))
 
 #### 0.4.9
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-rollbar-backend` (0.1.32 → 0.1.33)
+### `@backstage/plugin-rollbar-backend` (0.1.32 → [0.1.33](../../changelogs/@backstage/plugin-rollbar-backend.md#0133))
 
 #### 0.1.33
 
 ##### Patch Changes
 
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.10 → 0.2.11)
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.10 → [0.2.11](../../changelogs/@backstage/plugin-scaffolder-backend-module-cookiecutter.md#0211))
 
 #### 0.2.11
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.3 → 0.4.4)
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.3 → [0.4.4](../../changelogs/@backstage/plugin-scaffolder-backend-module-rails.md#044))
 
 #### 0.4.4
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
 
-### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.8 → 0.2.9)
+### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-scaffolder-backend-module-yeoman.md#029))
 
 #### 0.2.9
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
 
-### `@backstage/plugin-search` (1.0.1 → 1.0.2)
-
-#### 1.0.2
-
-##### Patch Changes
-
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 18f60427f2: Use the new `inheritParentContextIfAvailable` search context property in `SearchModal` instead of manually checking if a parent context exists, this conditional statement was previously duplicated in more than one component like in `SearchBar` as well and is now only done in ` SearchContextProvider`.
-
-### `@backstage/plugin-search-backend-module-elasticsearch` (1.0.1 → 1.0.2)
+### `@backstage/plugin-search` (1.0.1 → [1.0.2](../../changelogs/@backstage/plugin-search.md#102))
 
 #### 1.0.2
 
 ##### Patch Changes
 
-- 1bea488bd4: Updated dependency `aws-os-connection` to `^0.2.0`.
-- ef9ab322de: Minor API signatures cleanup
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`18f60427f2`](https://github.com/backstage/backstage/commit/18f60427f2): Use the new `inheritParentContextIfAvailable` search context property in `SearchModal` instead of manually checking if a parent context exists, this conditional statement was previously duplicated in more than one component like in `SearchBar` as well and is now only done in ` SearchContextProvider`.
 
-### `@backstage/plugin-search-backend-node` (1.0.1 → 1.0.2)
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.0.1 → [1.0.2](../../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#102))
 
 #### 1.0.2
 
 ##### Patch Changes
 
-- 3f739be9d9: Minor API signatures cleanup
-- a1124adf5e: Fixed bug in LunrSearchEngine where stopwords in title is causing in-doc search not working
+- [`1bea488bd4`](https://github.com/backstage/backstage/commit/1bea488bd4): Updated dependency `aws-os-connection` to `^0.2.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/plugin-sentry` (0.4.1 → 0.4.2)
+### `@backstage/plugin-search-backend-node` (1.0.1 → [1.0.2](../../changelogs/@backstage/plugin-search-backend-node.md#102))
+
+#### 1.0.2
+
+##### Patch Changes
+
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`a1124adf5e`](https://github.com/backstage/backstage/commit/a1124adf5e): Fixed bug in LunrSearchEngine where stopwords in title is causing in-doc search not working
+
+### `@backstage/plugin-sentry` (0.4.1 → [0.4.2](../../changelogs/@backstage/plugin-sentry.md#042))
 
 #### 0.4.2
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-shortcuts` (0.3.0 → 0.3.1)
+### `@backstage/plugin-shortcuts` (0.3.0 → [0.3.1](../../changelogs/@backstage/plugin-shortcuts.md#031))
 
 #### 0.3.1
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 8a57ffc0fa: Ensure that a stable observable is used in the shortcuts API
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`8a57ffc0fa`](https://github.com/backstage/backstage/commit/8a57ffc0fa): Ensure that a stable observable is used in the shortcuts API
 
-### `@backstage/plugin-sonarqube` (0.4.0 → 0.4.1)
+### `@backstage/plugin-sonarqube` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-sonarqube.md#041))
 
 #### 0.4.1
 
 ##### Patch Changes
 
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-sonarqube-backend` (0.1.0 → 0.1.1)
+### `@backstage/plugin-sonarqube-backend` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-sonarqube-backend.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ef9ab322de: Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/plugin-splunk-on-call` (0.3.32 → 0.3.33)
+### `@backstage/plugin-splunk-on-call` (0.3.32 → [0.3.33](../../changelogs/@backstage/plugin-splunk-on-call.md#0333))
 
 #### 0.3.33
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-stack-overflow` (0.1.4 → 0.1.5)
-
-#### 0.1.5
-
-##### Patch Changes
-
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- b8190af939: Create a front end API.
-- a720c44070: Support showing HTML entity references from the API response before rendering the question title to the list component.
-
-### `@backstage/plugin-stack-overflow-backend` (0.1.4 → 0.1.5)
+### `@backstage/plugin-stack-overflow` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-stack-overflow.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- 79040f73f7: Now requests all questions available using pagination. Default max page is set to 100, with a configurable `maxPage` option on the collator.
-- 148568b5c2: Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`b8190af939`](https://github.com/backstage/backstage/commit/b8190af939): Create a front end API.
+- [`a720c44070`](https://github.com/backstage/backstage/commit/a720c44070): Support showing HTML entity references from the API response before rendering the question title to the list component.
 
-### `@backstage/plugin-tech-insights-backend` (0.5.1 → 0.5.2)
+### `@backstage/plugin-stack-overflow-backend` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-stack-overflow-backend.md#015))
+
+#### 0.1.5
+
+##### Patch Changes
+
+- [`79040f73f7`](https://github.com/backstage/backstage/commit/79040f73f7): Now requests all questions available using pagination. Default max page is set to 100, with a configurable `maxPage` option on the collator.
+- [`148568b5c2`](https://github.com/backstage/backstage/commit/148568b5c2): Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
+
+### `@backstage/plugin-tech-insights-backend` (0.5.1 → [0.5.2](../../changelogs/@backstage/plugin-tech-insights-backend.md#052))
 
 #### 0.5.2
 
 ##### Patch Changes
 
-- 8872cc735d: Fixed a bug where the database option to skip migrations was ignored.
-- 12c6a07c2a: Changed the description of the `techdocsAnnotationFactName` fact.
-- 2e0689e536: Support for timeout in FactRetrieverRegistrationOptions
-- 9e8e9f5243: Modify Tech insight initialization to expose FactRetrieverEngine. Enables users to trigger fact retrieval manually or reschedule retrievers on runtime.
+- [`8872cc735d`](https://github.com/backstage/backstage/commit/8872cc735d): Fixed a bug where the database option to skip migrations was ignored.
+- [`12c6a07c2a`](https://github.com/backstage/backstage/commit/12c6a07c2a): Changed the description of the `techdocsAnnotationFactName` fact.
+- [`2e0689e536`](https://github.com/backstage/backstage/commit/2e0689e536): Support for timeout in FactRetrieverRegistrationOptions
+- [`9e8e9f5243`](https://github.com/backstage/backstage/commit/9e8e9f5243): Modify Tech insight initialization to expose FactRetrieverEngine. Enables users to trigger fact retrieval manually or reschedule retrievers on runtime.
 
-### `@backstage/plugin-tech-insights-node` (0.3.3 → 0.3.4)
+### `@backstage/plugin-tech-insights-node` (0.3.3 → [0.3.4](../../changelogs/@backstage/plugin-tech-insights-node.md#034))
 
 #### 0.3.4
 
 ##### Patch Changes
 
-- 3f739be9d9: Minor API signatures cleanup
-- 2e0689e536: Support for timeout in FactRetrieverRegistrationOptions
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`2e0689e536`](https://github.com/backstage/backstage/commit/2e0689e536): Support for timeout in FactRetrieverRegistrationOptions
 
-### `@backstage/plugin-tech-radar` (0.5.15 → 0.5.16)
+### `@backstage/plugin-tech-radar` (0.5.15 → [0.5.16](../../changelogs/@backstage/plugin-tech-radar.md#0516))
 
 #### 0.5.16
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-techdocs` (1.3.1 → 1.3.2)
+### `@backstage/plugin-techdocs` (1.3.1 → [1.3.2](../../changelogs/@backstage/plugin-techdocs.md#132))
 
 #### 1.3.2
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
-- 3f739be9d9: Minor API signatures cleanup
-- 763fb81e82: Internal refactor to use more type safe code when dealing with route parameters.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 817f3196f6: Updated the `TechDocsReaderPage` to be compatible with React Router v6 stable.
-- 7a95c705fa: Fixed a bug where addons wouldn't render on sub pages when using React Route v6 stable.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- ca8d5a6eae: Use the new `SearchAutocomplete` component in the `TechDocsSearch` component to maintain consistency across search experiences and avoid code duplication.
-- 829f14a9b0: Always update the title and sub-title when the location changes on a `TechDocs` reader page.
-- e97d616f08: Fixed a bug where scrolling for anchors where the id starts with number didn't work for the current page.
-- ef9ab322de: Minor API signatures cleanup
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`763fb81e82`](https://github.com/backstage/backstage/commit/763fb81e82): Internal refactor to use more type safe code when dealing with route parameters.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated the `TechDocsReaderPage` to be compatible with React Router v6 stable.
+- [`7a95c705fa`](https://github.com/backstage/backstage/commit/7a95c705fa): Fixed a bug where addons wouldn't render on sub pages when using React Route v6 stable.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`ca8d5a6eae`](https://github.com/backstage/backstage/commit/ca8d5a6eae): Use the new `SearchAutocomplete` component in the `TechDocsSearch` component to maintain consistency across search experiences and avoid code duplication.
+- [`829f14a9b0`](https://github.com/backstage/backstage/commit/829f14a9b0): Always update the title and sub-title when the location changes on a `TechDocs` reader page.
+- [`e97d616f08`](https://github.com/backstage/backstage/commit/e97d616f08): Fixed a bug where scrolling for anchors where the id starts with number didn't work for the current page.
+- [`ef9ab322de`](https://github.com/backstage/backstage/commit/ef9ab322de): Minor API signatures cleanup
 
-### `@backstage/plugin-techdocs-addons-test-utils` (1.0.3 → 1.0.4)
-
-#### 1.0.4
-
-##### Patch Changes
-
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-
-### `@backstage/plugin-techdocs-module-addons-contrib` (1.0.3 → 1.0.4)
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.3 → [1.0.4](../../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#104))
 
 #### 1.0.4
 
 ##### Patch Changes
 
-- eadf56bbbf: Bump `git-url-parse` version to `^13.0.0`
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-techdocs-react` (1.0.3 → 1.0.4)
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.0.3 → [1.0.4](../../changelogs/@backstage/plugin-techdocs-module-addons-contrib.md#104))
 
 #### 1.0.4
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
+- [`eadf56bbbf`](https://github.com/backstage/backstage/commit/eadf56bbbf): Bump `git-url-parse` version to `^13.0.0`
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-todo` (0.2.10 → 0.2.11)
+### `@backstage/plugin-techdocs-react` (1.0.3 → [1.0.4](../../changelogs/@backstage/plugin-techdocs-react.md#104))
+
+#### 1.0.4
+
+##### Patch Changes
+
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+
+### `@backstage/plugin-todo` (0.2.10 → [0.2.11](../../changelogs/@backstage/plugin-todo.md#0211))
 
 #### 0.2.11
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-todo-backend` (0.1.32 → 0.1.33)
+### `@backstage/plugin-todo-backend` (0.1.32 → [0.1.33](../../changelogs/@backstage/plugin-todo-backend.md#0133))
 
 #### 0.1.33
 
 ##### Patch Changes
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-user-settings` (0.4.7 → 0.4.8)
+### `@backstage/plugin-user-settings` (0.4.7 → [0.4.8](../../changelogs/@backstage/plugin-user-settings.md#048))
 
 #### 0.4.8
 
 ##### Patch Changes
 
-- 817f3196f6: Updated React Router dependencies to be peer dependencies.
-- 3f739be9d9: Minor API signatures cleanup
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
-- 8448b53dd6: Added a `UserSettingsStorage` implementation of the `StorageApi` for use as
+- [`817f3196f6`](https://github.com/backstage/backstage/commit/817f3196f6): Updated React Router dependencies to be peer dependencies.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
+- [`8448b53dd6`](https://github.com/backstage/backstage/commit/8448b53dd6): Added a `UserSettingsStorage` implementation of the `StorageApi` for use as
   drop-in replacement for the `WebStorage`, in conjunction with the newly created
   `@backstage/plugin-user-settings-backend`.
 
-### `@backstage/plugin-vault` (0.1.2 → 0.1.3)
+### `@backstage/plugin-vault` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-vault.md#013))
 
 #### 0.1.3
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-vault-backend` (0.2.1 → 0.2.2)
+### `@backstage/plugin-vault-backend` (0.2.1 → [0.2.2](../../changelogs/@backstage/plugin-vault-backend.md#022))
 
 #### 0.2.2
 
 ##### Patch Changes
 
-- 3f739be9d9: Minor API signatures cleanup
-- 148568b5c2: Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
-- 60b85d8ade: Updated dependency `helmet` to `^6.0.0`.
+- [`3f739be9d9`](https://github.com/backstage/backstage/commit/3f739be9d9): Minor API signatures cleanup
+- [`148568b5c2`](https://github.com/backstage/backstage/commit/148568b5c2): Switched to using node-fetch instead of cross-fetch as is standard for our backend packages
+- [`60b85d8ade`](https://github.com/backstage/backstage/commit/60b85d8ade): Updated dependency `helmet` to `^6.0.0`.
 
   Please note that these policies are no longer applied by default:
 
   helmet.contentSecurityPolicy no longer sets block-all-mixed-content directive by default
   helmet.expectCt is no longer set by default. It can, however, be explicitly enabled. It will be removed in Helmet 7.
 
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@backstage/plugin-xcmetrics` (0.2.28 → 0.2.29)
+### `@backstage/plugin-xcmetrics` (0.2.28 → [0.2.29](../../changelogs/@backstage/plugin-xcmetrics.md#0229))
 
 #### 0.2.29
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
-- d669d89206: Minor API signatures cleanup
-- 667d917488: Updated dependency `msw` to `^0.47.0`.
-- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
-- bf5e9030eb: Updated dependency `msw` to `^0.45.0`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
+- [`d669d89206`](https://github.com/backstage/backstage/commit/d669d89206): Minor API signatures cleanup
+- [`667d917488`](https://github.com/backstage/backstage/commit/667d917488): Updated dependency `msw` to `^0.47.0`.
+- [`87ec2ba4d6`](https://github.com/backstage/backstage/commit/87ec2ba4d6): Updated dependency `msw` to `^0.46.0`.
+- [`bf5e9030eb`](https://github.com/backstage/backstage/commit/bf5e9030eb): Updated dependency `msw` to `^0.45.0`.
 
-### `@techdocs/cli` (1.2.0 → 1.2.1)
+### `@techdocs/cli` (1.2.0 → [1.2.1](../../changelogs/@techdocs/cli.md#121))
 
 #### 1.2.1
 
 ##### Patch Changes
 
-- 7d47def9c4: Removed dependency on `@types/jest`.
+- [`7d47def9c4`](https://github.com/backstage/backstage/commit/7d47def9c4): Removed dependency on `@types/jest`.
 
 ## Excluded dependency updates
 
-- `@backstage/codemods` (0.1.38 → 0.1.39)
-- `@backstage/plugin-adr-common` (0.2.0 → 0.2.1)
-- `@backstage/plugin-catalog-backend-module-aws` (0.1.8 → 0.1.9)
-- `@backstage/plugin-catalog-backend-module-openapi` (0.1.1 → 0.1.2)
-- `@backstage/plugin-catalog-common` (1.0.5 → 1.0.6)
-- `@backstage/plugin-jenkins-common` (0.1.7 → 0.1.8)
-- `@backstage/plugin-search-backend` (1.0.1 → 1.0.2)
-- `@backstage/plugin-search-common` (1.0.0 → 1.0.1)
-- `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.19 → 0.1.20)
+- `@backstage/codemods` (0.1.38 → [0.1.39](../../changelogs/@backstage/codemods.md#0139))
+- `@backstage/plugin-adr-common` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-adr-common.md#021))
+- `@backstage/plugin-catalog-backend-module-aws` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-catalog-backend-module-aws.md#019))
+- `@backstage/plugin-catalog-backend-module-openapi` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#012))
+- `@backstage/plugin-catalog-common` (1.0.5 → [1.0.6](../../changelogs/@backstage/plugin-catalog-common.md#106))
+- `@backstage/plugin-jenkins-common` (0.1.7 → [0.1.8](../../changelogs/@backstage/plugin-jenkins-common.md#018))
+- `@backstage/plugin-search-backend` (1.0.1 → [1.0.2](../../changelogs/@backstage/plugin-search-backend.md#102))
+- `@backstage/plugin-search-common` (1.0.0 → [1.0.1](../../changelogs/@backstage/plugin-search-common.md#101))
+- `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-tech-insights-backend-module-jsonfc.md#0120))

@@ -13,6 +13,6 @@ Changes between 1.46.4 and 1.46.5 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-techdocs-node` (1.13.10 → 1.13.11)
+### `@backstage/plugin-techdocs-node` (1.13.10 → [1.13.11](../../changelogs/@backstage/plugin-techdocs-node.md#11311))
 
 _No changelog entries found._

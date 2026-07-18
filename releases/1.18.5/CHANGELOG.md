@@ -13,6 +13,6 @@ Changes between 1.18.4 and 1.18.5 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli` (0.22.13 → 0.22.14)
+### `@backstage/cli` (0.22.13 → [0.22.14](../../changelogs/@backstage/cli.md#02214))
 
 _No changelog entries found._

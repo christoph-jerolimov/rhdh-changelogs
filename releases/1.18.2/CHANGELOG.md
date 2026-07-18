@@ -17,22 +17,22 @@ Changes between 1.18.1 and 1.18.2 — 5 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-catalog-backend` (1.13.0 → 1.13.1)
+### `@backstage/plugin-catalog-backend` (1.13.0 → [1.13.1](../../changelogs/@backstage/plugin-catalog-backend.md#1131))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-github` (0.4.0 → 0.4.1)
+### `@backstage/plugin-catalog-backend-module-github` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#041))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.6 → 0.4.7)
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.6 → [0.4.7](../../changelogs/@backstage/plugin-catalog-backend-module-incremental-ingestion.md#047))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-openapi` (0.1.19 → 0.1.20)
+### `@backstage/plugin-catalog-backend-module-openapi` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#0120))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend` (1.17.0 → 1.17.1)
+### `@backstage/plugin-scaffolder-backend` (1.17.0 → [1.17.1](../../changelogs/@backstage/plugin-scaffolder-backend.md#1171))
 
 _No changelog entries found._

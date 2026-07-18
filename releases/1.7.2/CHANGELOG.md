@@ -13,6 +13,6 @@ Changes between 1.7.1 and 1.7.2 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-tech-insights` (0.3.1 → 0.3.2)
+### `@backstage/plugin-tech-insights` (0.3.1 → [0.3.2](../../changelogs/@backstage/plugin-tech-insights.md#032))
 
 _No changelog entries found._

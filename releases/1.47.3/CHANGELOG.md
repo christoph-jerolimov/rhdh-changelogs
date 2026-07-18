@@ -13,6 +13,6 @@ Changes between 1.47.2 and 1.47.3 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-techdocs-node` (1.14.0 → 1.14.1)
+### `@backstage/plugin-techdocs-node` (1.14.0 → [1.14.1](../../changelogs/@backstage/plugin-techdocs-node.md#1141))
 
 _No changelog entries found._

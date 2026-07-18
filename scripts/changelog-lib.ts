@@ -38,6 +38,20 @@ const demoteHeadings = (lines: string[], levels: number): string[] =>
 const slug = (heading: string): string =>
   heading.toLowerCase().replaceAll(/[^\p{L}\p{N} _-]/gu, "").replaceAll(" ", "-");
 
+/** Link from releases/<version>/CHANGELOG.md to a version headline of a copied changelog. */
+const changelogVersionLink = (name: string, version: string): string =>
+  `../../changelogs/${name}.md#${slug(version)}`;
+
+/** Link the leading 7-char commit sha of changeset bullets to backstage/backstage. */
+const linkCommitShas = (lines: string[]): string[] =>
+  lines.map((line) =>
+    line.replace(
+      /^(\s*)- ([0-9a-f]{7,40}): /,
+      (_match, indent: string, sha: string) =>
+        `${indent}- [\`${sha}\`](https://github.com/backstage/backstage/commit/${sha}): `,
+    ),
+  );
+
 const trimBlankEdges = (lines: string[]): string[] => {
   const result = [...lines];
   while (result.length > 0 && result[0]!.trim() === "") result.shift();
@@ -134,7 +148,7 @@ function sectionsInRange(
       if (filtered.removedSomething) sectionsFiltered += 1;
       continue;
     }
-    lines.push(`#### ${version}`, "", ...trimBlankEdges(demoteHeadings(content, 2)), "");
+    lines.push(`#### ${version}`, "", ...trimBlankEdges(linkCommitShas(demoteHeadings(content, 2))), "");
   }
   if (lines.length === 0) {
     if (sectionsFiltered > 0) return { kind: "filtered", lines: [] };
@@ -161,23 +175,36 @@ export function buildChangelog(
   const changed = [...diff.majorBumps, ...diff.otherBumps].sort((a, b) => byCodepoint(a.name, b.name));
   const added = [...diff.added].sort((a, b) => byCodepoint(a.name, b.name));
 
+  const versionLink = (name: string, version: string): string => `[${version}](${changelogVersionLink(name, version)})`;
   const candidates = [
-    ...added.map(({ name, version }) => ({ name, from: undefined as string | undefined, to: version, label: `new, ${version}` })),
-    ...changed.map(({ name, from, to }) => ({ name, from: from as string | undefined, to, label: `${from} → ${to}` })),
+    ...added.map(({ name, version }) => ({
+      name,
+      from: undefined as string | undefined,
+      to: version,
+      label: `new, ${version}`,
+      linkedLabel: `new, ${versionLink(name, version)}`,
+    })),
+    ...changed.map(({ name, from, to }) => ({
+      name,
+      from: from as string | undefined,
+      to,
+      label: `${from} → ${to}`,
+      linkedLabel: `${from} → ${versionLink(name, to)}`,
+    })),
   ];
 
   // Assign every package to its first matching group (newly added packages
   // stay a dedicated first group so they never drown in a large document).
   const NEWLY_ADDED = 0, BREAKING = 1, MAJOR = 2, ZERO_MINOR = 3, ZERO_PATCH = 4, MINOR = 5, PATCH = 6;
-  const groups: { name: string; label: string; content: string[] }[][] = Array.from({ length: 7 }, () => []);
-  const excluded: { name: string; label: string }[] = [];
-  for (const { name, from, to, label } of candidates) {
+  const groups: { name: string; label: string; linkedLabel: string; content: string[] }[][] = Array.from({ length: 7 }, () => []);
+  const excluded: { name: string; linkedLabel: string }[] = [];
+  for (const { name, from, to, label, linkedLabel } of candidates) {
     const sections = sectionsInRange(name, from, to, mode);
     if (sections.kind === "filtered") {
-      excluded.push({ name, label });
+      excluded.push({ name, linkedLabel });
       continue;
     }
-    const entry = { name, label, content: sections.lines };
+    const entry = { name, label, linkedLabel, content: sections.lines };
     if (from === undefined) {
       groups[NEWLY_ADDED]!.push(entry);
     } else if (sections.lines.some((line) => /breaking/i.test(line))) {
@@ -207,7 +234,12 @@ export function buildChangelog(
     groups[ZERO_MINOR]!.length > 0 ? "Other minor version bumps" : "Minor version bumps",
     groups[ZERO_PATCH]!.length > 0 ? "Other patch version bumps" : "Patch version bumps",
   ];
+  // The plain heading text drives the anchor and ToC label; the rendered
+  // heading links the "to" version to the copied changelog. Both render to the
+  // same text, so GitHub's anchors match the plain-text slug.
   const packageHeading = (entry: { name: string; label: string }): string => `\`${entry.name}\` (${entry.label})`;
+  const packageHeadingLinked = (entry: { name: string; linkedLabel: string }): string =>
+    `\`${entry.name}\` (${entry.linkedLabel})`;
 
   const lines: string[] = [];
   lines.push(`# Backstage Release ${toManifest.releaseVersion} changelog`, "");
@@ -245,15 +277,15 @@ export function buildChangelog(
   for (const { entries, title } of nonEmpty) {
     lines.push(`## ${title}`, "");
     for (const entry of entries) {
-      lines.push(`### ${packageHeading(entry)}`, "");
+      lines.push(`### ${packageHeadingLinked(entry)}`, "");
       lines.push(...entry.content, "");
     }
   }
 
   if (excluded.length > 0) {
     lines.push(`## ${EXCLUDED_TITLE}`, "");
-    for (const { name, label } of excluded) {
-      lines.push(`- \`${name}\` (${label})`);
+    for (const { name, linkedLabel } of excluded) {
+      lines.push(`- \`${name}\` (${linkedLabel})`);
     }
     lines.push("");
   }

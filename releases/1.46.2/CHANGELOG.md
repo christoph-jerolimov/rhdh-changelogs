@@ -13,6 +13,6 @@ Changes between 1.46.1 and 1.46.2 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/integration` (1.19.0 → 1.19.1)
+### `@backstage/integration` (1.19.0 → [1.19.1](../../changelogs/@backstage/integration.md#1191))
 
 _No changelog entries found._

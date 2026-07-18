@@ -145,240 +145,240 @@ Changes between 1.20.4 and 1.21.0 — 220 changed and 10 added packages.
 
 ## Newly added packages
 
-### `@backstage/core-compat-api` (new, 0.1.0)
+### `@backstage/core-compat-api` (new, [0.1.0](../../changelogs/@backstage/core-compat-api.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- cf5cc4c: Discover plugins and routes recursively beneath the root routes in `collectLecacyRoutes`
-- af7bc3e: Switched all core extensions to instead use the namespace `'app'`.
-- f63dd72: The `collectLegacyRoutes` has been removed and is replaced by `convertLegacyApp` now being able to convert a `FlatRoutes` element directly.
+- [`cf5cc4c`](https://github.com/backstage/backstage/commit/cf5cc4c): Discover plugins and routes recursively beneath the root routes in `collectLecacyRoutes`
+- [`af7bc3e`](https://github.com/backstage/backstage/commit/af7bc3e): Switched all core extensions to instead use the namespace `'app'`.
+- [`f63dd72`](https://github.com/backstage/backstage/commit/f63dd72): The `collectLegacyRoutes` has been removed and is replaced by `convertLegacyApp` now being able to convert a `FlatRoutes` element directly.
 
 ##### Patch Changes
 
-- 03d0b6d: Added `convertLegacyRouteRef` utility to convert existing route refs to be used with the new experimental packages.
-- a379243: Leverage the new `FrontendFeature` type to simplify interfaces
-- 8226442: Added `compatWrapper`, which can be used to wrap any React element to provide bi-directional interoperability between the `@backstage/core-*-api` and `@backstage/frontend-*-api` APIs.
-- 8f5d6c1: Updates to match the new extension input wrapping.
-- c219b16: Made package public so it can be published
-- b7adf24: Delete alpha DI compatibility helper for components, migrating components should be simple without a helper.
-- 046e443: Updates for compatibility with the new extension IDs.
+- [`03d0b6d`](https://github.com/backstage/backstage/commit/03d0b6d): Added `convertLegacyRouteRef` utility to convert existing route refs to be used with the new experimental packages.
+- [`a379243`](https://github.com/backstage/backstage/commit/a379243): Leverage the new `FrontendFeature` type to simplify interfaces
+- [`8226442`](https://github.com/backstage/backstage/commit/8226442): Added `compatWrapper`, which can be used to wrap any React element to provide bi-directional interoperability between the `@backstage/core-*-api` and `@backstage/frontend-*-api` APIs.
+- [`8f5d6c1`](https://github.com/backstage/backstage/commit/8f5d6c1): Updates to match the new extension input wrapping.
+- [`c219b16`](https://github.com/backstage/backstage/commit/c219b16): Made package public so it can be published
+- [`b7adf24`](https://github.com/backstage/backstage/commit/b7adf24): Delete alpha DI compatibility helper for components, migrating components should be simple without a helper.
+- [`046e443`](https://github.com/backstage/backstage/commit/046e443): Updates for compatibility with the new extension IDs.
 
-### `@backstage/frontend-test-utils` (new, 0.1.0)
+### `@backstage/frontend-test-utils` (new, [0.1.0](../../changelogs/@backstage/frontend-test-utils.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 59fabd5: New testing utility library for `@backstage/frontend-app-api` and `@backstage/frontend-plugin-api`.
-- af7bc3e: Switched all core extensions to instead use the namespace `'app'`.
+- [`59fabd5`](https://github.com/backstage/backstage/commit/59fabd5): New testing utility library for `@backstage/frontend-app-api` and `@backstage/frontend-plugin-api`.
+- [`af7bc3e`](https://github.com/backstage/backstage/commit/af7bc3e): Switched all core extensions to instead use the namespace `'app'`.
 
 ##### Patch Changes
 
-- 59fabd5: Added `createExtensionTester` for rendering extensions in tests.
-- 7e4b0db: The `createExtensionTester` helper is now able to render more than one route in the test app.
-- 818eea4: Updates for compatibility with the new extension IDs.
-- b9aa6e4: Migrate `renderInTestApp` to `@backstage/frontend-test-utils` for testing individual React components in an app.
-- e539735: Updates for `core.router` addition.
-- c21c9cf: Re-export mock API implementations as well as `TestApiProvider`, `TestApiRegistry`, `withLogCollector`, and `setupRequestMockHandlers` from `@backstage/test-utils`.
+- [`59fabd5`](https://github.com/backstage/backstage/commit/59fabd5): Added `createExtensionTester` for rendering extensions in tests.
+- [`7e4b0db`](https://github.com/backstage/backstage/commit/7e4b0db): The `createExtensionTester` helper is now able to render more than one route in the test app.
+- [`818eea4`](https://github.com/backstage/backstage/commit/818eea4): Updates for compatibility with the new extension IDs.
+- [`b9aa6e4`](https://github.com/backstage/backstage/commit/b9aa6e4): Migrate `renderInTestApp` to `@backstage/frontend-test-utils` for testing individual React components in an app.
+- [`e539735`](https://github.com/backstage/backstage/commit/e539735): Updates for `core.router` addition.
+- [`c21c9cf`](https://github.com/backstage/backstage/commit/c21c9cf): Re-export mock API implementations as well as `TestApiProvider`, `TestApiRegistry`, `withLogCollector`, and `setupRequestMockHandlers` from `@backstage/test-utils`.
 
-### `@backstage/plugin-auth-backend-module-atlassian-provider` (new, 0.1.0)
+### `@backstage/plugin-auth-backend-module-atlassian-provider` (new, [0.1.0](../../changelogs/@backstage/plugin-auth-backend-module-atlassian-provider.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 2a5891e: New module for `@backstage/plugin-auth-backend` that adds an atlassian auth provider
+- [`2a5891e`](https://github.com/backstage/backstage/commit/2a5891e): New module for `@backstage/plugin-auth-backend` that adds an atlassian auth provider
 
 ##### Patch Changes
 
-- a62764b: Updated dependency `passport` to `^0.7.0`.
+- [`a62764b`](https://github.com/backstage/backstage/commit/a62764b): Updated dependency `passport` to `^0.7.0`.
 
-### `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (new, 0.1.0)
+### `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (new, [0.1.0](../../changelogs/@backstage/plugin-auth-backend-module-oauth2-proxy-provider.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 271aa12: Release of `oauth2-proxy-provider` plugin
+- [`271aa12`](https://github.com/backstage/backstage/commit/271aa12): Release of `oauth2-proxy-provider` plugin
 
 ##### Patch Changes
 
-- a6be465: Exported the provider as default so it gets discovered when using `featureDiscoveryServiceFactory()`
-- 510dab4: Change provider id from `oauth2ProxyProvider` to `oauth2Proxy`
-- cc4228e: Switched module ID to use kebab-case.
+- [`a6be465`](https://github.com/backstage/backstage/commit/a6be465): Exported the provider as default so it gets discovered when using `featureDiscoveryServiceFactory()`
+- [`510dab4`](https://github.com/backstage/backstage/commit/510dab4): Change provider id from `oauth2ProxyProvider` to `oauth2Proxy`
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-auth-backend-module-okta-provider` (new, 0.0.1)
+### `@backstage/plugin-auth-backend-module-okta-provider` (new, [0.0.1](../../changelogs/@backstage/plugin-auth-backend-module-okta-provider.md#001))
 
 #### 0.0.1
 
 ##### Patch Changes
 
-- e1c189b: Adds okta-provider backend module for the auth plugin
-- a62764b: Updated dependency `passport` to `^0.7.0`.
+- [`e1c189b`](https://github.com/backstage/backstage/commit/e1c189b): Adds okta-provider backend module for the auth plugin
+- [`a62764b`](https://github.com/backstage/backstage/commit/a62764b): Updated dependency `passport` to `^0.7.0`.
 
-### `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (new, 0.1.0)
-
-#### 0.1.0
-
-##### Minor Changes
-
-- ed02c69: Add VMware Cloud auth backend module provider
-
-### `@backstage/plugin-scaffolder-backend-module-azure` (new, 0.1.0)
+### `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (new, [0.1.0](../../changelogs/@backstage/plugin-auth-backend-module-vmware-cloud-provider.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 219d7f0: Create new scaffolder module for external integrations
+- [`ed02c69`](https://github.com/backstage/backstage/commit/ed02c69): Add VMware Cloud auth backend module provider
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket` (new, 0.1.0)
-
-#### 0.1.0
-
-##### Minor Changes
-
-- 219d7f0: Create new scaffolder module for external integrations
-
-### `@backstage/plugin-scaffolder-backend-module-gerrit` (new, 0.1.0)
+### `@backstage/plugin-scaffolder-backend-module-azure` (new, [0.1.0](../../changelogs/@backstage/plugin-scaffolder-backend-module-azure.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 219d7f0: Create new scaffolder module for external integrations
+- [`219d7f0`](https://github.com/backstage/backstage/commit/219d7f0): Create new scaffolder module for external integrations
+
+### `@backstage/plugin-scaffolder-backend-module-bitbucket` (new, [0.1.0](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket.md#010))
+
+#### 0.1.0
+
+##### Minor Changes
+
+- [`219d7f0`](https://github.com/backstage/backstage/commit/219d7f0): Create new scaffolder module for external integrations
+
+### `@backstage/plugin-scaffolder-backend-module-gerrit` (new, [0.1.0](../../changelogs/@backstage/plugin-scaffolder-backend-module-gerrit.md#010))
+
+#### 0.1.0
+
+##### Minor Changes
+
+- [`219d7f0`](https://github.com/backstage/backstage/commit/219d7f0): Create new scaffolder module for external integrations
 
 ##### Patch Changes
 
-- d86cd98: Add dry run support for the `publish:gerrit` action.
+- [`d86cd98`](https://github.com/backstage/backstage/commit/d86cd98): Add dry run support for the `publish:gerrit` action.
 
-### `@backstage/plugin-scaffolder-backend-module-github` (new, 0.1.0)
+### `@backstage/plugin-scaffolder-backend-module-github` (new, [0.1.0](../../changelogs/@backstage/plugin-scaffolder-backend-module-github.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 219d7f0: Create new scaffolder module for external integrations
+- [`219d7f0`](https://github.com/backstage/backstage/commit/219d7f0): Create new scaffolder module for external integrations
 
 ##### Patch Changes
 
-- cb6a65e: The `scaffolder.defaultCommitMessage` config value is now being used if provided and uses "initial commit" when it is not provided.
-- 28949ea: Add a new action for creating github-autolink references for a repository: `github:autolinks:create`
+- [`cb6a65e`](https://github.com/backstage/backstage/commit/cb6a65e): The `scaffolder.defaultCommitMessage` config value is now being used if provided and uses "initial commit" when it is not provided.
+- [`28949ea`](https://github.com/backstage/backstage/commit/28949ea): Add a new action for creating github-autolink references for a repository: `github:autolinks:create`
 
 ## Breaking changes
 
-### `@backstage/frontend-plugin-api` (0.3.0 → 0.4.0)
+### `@backstage/frontend-plugin-api` (0.3.0 → [0.4.0](../../changelogs/@backstage/frontend-plugin-api.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- af7bc3e: Switched all core extensions to instead use the namespace `'app'`.
-- 5cdf2b3: Changed `Extension` and `ExtensionDefinition` to use opaque types.
-- 8f5d6c1: Extension inputs are now wrapped into an additional object when passed to the extension factory, with the previous values being available at the `output` property. The `ExtensionInputValues` type has also been replaced by `ResolvedExtensionInputs`.
-- 8837a96: **BREAKING**: This version changes how extensions are created and how their IDs are determined. The `createExtension` function now accepts `kind`, `namespace` and `name` instead of `id`. All of the new options are optional, and are used to construct the final extension ID. By convention extension creators should set the `kind` to match their own name, for example `createNavItemExtension` sets the kind `nav-item`.
+- [`af7bc3e`](https://github.com/backstage/backstage/commit/af7bc3e): Switched all core extensions to instead use the namespace `'app'`.
+- [`5cdf2b3`](https://github.com/backstage/backstage/commit/5cdf2b3): Changed `Extension` and `ExtensionDefinition` to use opaque types.
+- [`8f5d6c1`](https://github.com/backstage/backstage/commit/8f5d6c1): Extension inputs are now wrapped into an additional object when passed to the extension factory, with the previous values being available at the `output` property. The `ExtensionInputValues` type has also been replaced by `ResolvedExtensionInputs`.
+- [`8837a96`](https://github.com/backstage/backstage/commit/8837a96): **BREAKING**: This version changes how extensions are created and how their IDs are determined. The `createExtension` function now accepts `kind`, `namespace` and `name` instead of `id`. All of the new options are optional, and are used to construct the final extension ID. By convention extension creators should set the `kind` to match their own name, for example `createNavItemExtension` sets the kind `nav-item`.
 
   The `createExtension` function as well as all extension creators now also return an `ExtensionDefinition` rather than an `Extension`, which in turn needs to be passed to `createPlugin` or `createExtensionOverrides` to be used.
 
-- f9ef632: Moved several extension data references from `coreExtensionData` to their respective extension creators.
-- a5a0473: The extension `factory` function now longer receives `id` or `source`, but instead now provides the extension's `AppNode` as `node`. The `ExtensionBoundary` component has also been updated to receive a `node` prop rather than `id` and `source`.
+- [`f9ef632`](https://github.com/backstage/backstage/commit/f9ef632): Moved several extension data references from `coreExtensionData` to their respective extension creators.
+- [`a5a0473`](https://github.com/backstage/backstage/commit/a5a0473): The extension `factory` function now longer receives `id` or `source`, but instead now provides the extension's `AppNode` as `node`. The `ExtensionBoundary` component has also been updated to receive a `node` prop rather than `id` and `source`.
 
 ##### Patch Changes
 
-- a379243: Add the `FrontendFeature` type, which is the union of `BackstagePlugin` and `ExtensionOverrides`
-- b7adf24: Update alpha component ref type to be more specific than any, delete boot page component and use new plugin type for error boundary component extensions.
-- 5eb6b8a: Added the nav logo extension for customization of sidebar logo
-- 1f12fb7: Create factories for overriding default core components extensions.
-- 5970928: Add feature flags to plugins and extension overrides.
-- e539735: Added `createSignInPageExtension`.
-- 73246ec: Added translation APIs as well as `createTranslationExtension`.
-- cb4197a: Forward ` node`` instead of  `extensionId` to resolved extension inputs.
-- f27ee7d: Migrate analytics api and context files.
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
-- f1183b7: Renamed the `component` option of `createComponentExtension` to `loader`.
+- [`a379243`](https://github.com/backstage/backstage/commit/a379243): Add the `FrontendFeature` type, which is the union of `BackstagePlugin` and `ExtensionOverrides`
+- [`b7adf24`](https://github.com/backstage/backstage/commit/b7adf24): Update alpha component ref type to be more specific than any, delete boot page component and use new plugin type for error boundary component extensions.
+- [`5eb6b8a`](https://github.com/backstage/backstage/commit/5eb6b8a): Added the nav logo extension for customization of sidebar logo
+- [`1f12fb7`](https://github.com/backstage/backstage/commit/1f12fb7): Create factories for overriding default core components extensions.
+- [`5970928`](https://github.com/backstage/backstage/commit/5970928): Add feature flags to plugins and extension overrides.
+- [`e539735`](https://github.com/backstage/backstage/commit/e539735): Added `createSignInPageExtension`.
+- [`73246ec`](https://github.com/backstage/backstage/commit/73246ec): Added translation APIs as well as `createTranslationExtension`.
+- [`cb4197a`](https://github.com/backstage/backstage/commit/cb4197a): Forward ` node`` instead of  `extensionId` to resolved extension inputs.
+- [`f27ee7d`](https://github.com/backstage/backstage/commit/f27ee7d): Migrate analytics api and context files.
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`f1183b7`](https://github.com/backstage/backstage/commit/f1183b7): Renamed the `component` option of `createComponentExtension` to `loader`.
 
-### `@backstage/plugin-azure-devops-backend` (0.4.4 → 0.5.0)
+### `@backstage/plugin-azure-devops-backend` (0.4.4 → [0.5.0](../../changelogs/@backstage/plugin-azure-devops-backend.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- 844969c: **BREAKING** New `fromConfig` static method must be used now when creating an instance of the `AzureDevOpsApi`
+- [`844969c`](https://github.com/backstage/backstage/commit/844969c): **BREAKING** New `fromConfig` static method must be used now when creating an instance of the `AzureDevOpsApi`
 
   Added support for using the `AzureDevOpsCredentialsProvider`
 
 ##### Patch Changes
 
-- c70e4f5: Added multi-org support
-- 646db72: Updated encoding of Org to use `encodeURIComponent` when building URL used to get credentials from credential provider
-- 043b724: Introduced new `AzureDevOpsAnnotatorProcessor` that adds the needed annotations automatically. Also, moved constants to common package so they can be shared more easily
+- [`c70e4f5`](https://github.com/backstage/backstage/commit/c70e4f5): Added multi-org support
+- [`646db72`](https://github.com/backstage/backstage/commit/646db72): Updated encoding of Org to use `encodeURIComponent` when building URL used to get credentials from credential provider
+- [`043b724`](https://github.com/backstage/backstage/commit/043b724): Introduced new `AzureDevOpsAnnotatorProcessor` that adds the needed annotations automatically. Also, moved constants to common package so they can be shared more easily
 
-### `@backstage/plugin-catalog-react` (1.9.1 → 1.9.2)
+### `@backstage/plugin-catalog-react` (1.9.1 → [1.9.2](../../changelogs/@backstage/plugin-catalog-react.md#192))
 
 #### 1.9.2
 
 ##### Patch Changes
 
-- 8587f06: Added pagination support to `EntityListProvider`.
-- 5360097: Ensure that passed-in icons are taken advantage of in the presentation API
-- fd9863c: Grouped all `/alpha` extension data reference exports under `catalogExtensionData`.
-- 08d9e67: Add default icon for kind resource.
-- aaa6fb3: Minor updates for TypeScript 5.2.2+ compatibility
-- a5a0473: Internal refactor of alpha exports due to a change in how extension factories are defined.
-- 4d9e3b3: Register component overrides in the global `OverrideComponentNameToClassKeys` provided by `@backstage/theme`. This will in turn will provide component style override types for `createUnifiedTheme`.
-- 8f5d6c1: Updates to the `/alpha` exports to match the extension input wrapping change.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
-- e223f22: Breaking alpha-API change to entity visibility filter functions to accept a bare entity as their first argument, instead of an object with an entity property.
+- [`8587f06`](https://github.com/backstage/backstage/commit/8587f06): Added pagination support to `EntityListProvider`.
+- [`5360097`](https://github.com/backstage/backstage/commit/5360097): Ensure that passed-in icons are taken advantage of in the presentation API
+- [`fd9863c`](https://github.com/backstage/backstage/commit/fd9863c): Grouped all `/alpha` extension data reference exports under `catalogExtensionData`.
+- [`08d9e67`](https://github.com/backstage/backstage/commit/08d9e67): Add default icon for kind resource.
+- [`aaa6fb3`](https://github.com/backstage/backstage/commit/aaa6fb3): Minor updates for TypeScript 5.2.2+ compatibility
+- [`a5a0473`](https://github.com/backstage/backstage/commit/a5a0473): Internal refactor of alpha exports due to a change in how extension factories are defined.
+- [`4d9e3b3`](https://github.com/backstage/backstage/commit/4d9e3b3): Register component overrides in the global `OverrideComponentNameToClassKeys` provided by `@backstage/theme`. This will in turn will provide component style override types for `createUnifiedTheme`.
+- [`8f5d6c1`](https://github.com/backstage/backstage/commit/8f5d6c1): Updates to the `/alpha` exports to match the extension input wrapping change.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`e223f22`](https://github.com/backstage/backstage/commit/e223f22): Breaking alpha-API change to entity visibility filter functions to accept a bare entity as their first argument, instead of an object with an entity property.
 
   Functions that accept such filters now also support the string expression form of filters.
 
-- eee0ff2: Fixed a issue where `CatalogPage` wasn't using the chosen `initiallySelectedFilter` as intended.
+- [`eee0ff2`](https://github.com/backstage/backstage/commit/eee0ff2): Fixed a issue where `CatalogPage` wasn't using the chosen `initiallySelectedFilter` as intended.
 
-### `@backstage/plugin-kubernetes` (0.11.2 → 0.11.3)
+### `@backstage/plugin-kubernetes` (0.11.2 → [0.11.3](../../changelogs/@backstage/plugin-kubernetes.md#0113))
 
 #### 0.11.3
 
 ##### Patch Changes
 
-- 899d71a: Change `formatClusterLink` to be an API and make it async for further customization possibilities.
+- [`899d71a`](https://github.com/backstage/backstage/commit/899d71a): Change `formatClusterLink` to be an API and make it async for further customization possibilities.
 
   **BREAKING**
   If you have a custom k8s page and used `formatClusterLink` directly, you need to migrate to new `kubernetesClusterLinkFormatterApiRef`
 
-- 706fc3a: Updated dependency `@kubernetes/client-node` to `0.20.0`.
+- [`706fc3a`](https://github.com/backstage/backstage/commit/706fc3a): Updated dependency `@kubernetes/client-node` to `0.20.0`.
 
-### `@backstage/plugin-kubernetes-react` (0.1.1 → 0.2.0)
+### `@backstage/plugin-kubernetes-react` (0.1.1 → [0.2.0](../../changelogs/@backstage/plugin-kubernetes-react.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- 899d71a: Change `formatClusterLink` to be an API and make it async for further customization possibilities.
+- [`899d71a`](https://github.com/backstage/backstage/commit/899d71a): Change `formatClusterLink` to be an API and make it async for further customization possibilities.
 
   **BREAKING**
   If you have a custom k8s page and used `formatClusterLink` directly, you need to migrate to new `kubernetesClusterLinkFormatterApiRef`
 
 ##### Patch Changes
 
-- b5ae2e5: Add ID property to the table displaying kubernetes pods to avoid closing the info sidebar when the data reloads and needs to rerender.
-- 706fc3a: Updated dependency `@kubernetes/client-node` to `0.20.0`.
+- [`b5ae2e5`](https://github.com/backstage/backstage/commit/b5ae2e5): Add ID property to the table displaying kubernetes pods to avoid closing the info sidebar when the data reloads and needs to rerender.
+- [`706fc3a`](https://github.com/backstage/backstage/commit/706fc3a): Updated dependency `@kubernetes/client-node` to `0.20.0`.
 
-### `@backstage/repo-tools` (0.4.0 → 0.5.0)
+### `@backstage/repo-tools` (0.4.0 → [0.5.0](../../changelogs/@backstage/repo-tools.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- aea8f8d: **BREAKING**: API Reports generated for sub-path exports now place the name as a suffix rather than prefix, for example `api-report-alpha.md` instead of `alpha-api-report.md`. When upgrading to this version you'll need to re-create any such API reports and delete the old ones.
-- 3834067: Adds a new command `schema openapi generate-client` that creates a Typescript client with Backstage flavor, including the discovery API and fetch API. This command doesn't currently generate a complete client and needs to be wrapped or exported manually by a separate Backstage plugin. See `@backstage/catalog-client/src/generated` for example output.
+- [`aea8f8d`](https://github.com/backstage/backstage/commit/aea8f8d): **BREAKING**: API Reports generated for sub-path exports now place the name as a suffix rather than prefix, for example `api-report-alpha.md` instead of `alpha-api-report.md`. When upgrading to this version you'll need to re-create any such API reports and delete the old ones.
+- [`3834067`](https://github.com/backstage/backstage/commit/3834067): Adds a new command `schema openapi generate-client` that creates a Typescript client with Backstage flavor, including the discovery API and fetch API. This command doesn't currently generate a complete client and needs to be wrapped or exported manually by a separate Backstage plugin. See `@backstage/catalog-client/src/generated` for example output.
 
 ##### Patch Changes
 
-- f909e9d: Includes templates in @backstage/repo-tools package and use them in the CLI
-- da3c4db: Updates the `schema openapi generate-client` command to export all generated types from the generated directory.
-- 7959f23: The `api-reports` command now checks for api report files that no longer apply.
+- [`f909e9d`](https://github.com/backstage/backstage/commit/f909e9d): Includes templates in @backstage/repo-tools package and use them in the CLI
+- [`da3c4db`](https://github.com/backstage/backstage/commit/da3c4db): Updates the `schema openapi generate-client` command to export all generated types from the generated directory.
+- [`7959f23`](https://github.com/backstage/backstage/commit/7959f23): The `api-reports` command now checks for api report files that no longer apply.
   If it finds such files, it's treated basically the same as report errors do, and
   the check fails.
 
@@ -386,133 +386,133 @@ Changes between 1.20.4 and 1.21.0 — 220 changed and 10 added packages.
   export, the reports generator would now report that this file needs to be
   deleted.
 
-- f49e237: Fixed a bug where `schema openapi init` created an invalid test command.
-- f91be2c: Updated dependency `@stoplight/types` to `^14.0.0`.
-- 45bfb20: Execute `openapi-generator-cli` from `@backstage/repo-tools` directory to force it to use our openapitools.json config file.
+- [`f49e237`](https://github.com/backstage/backstage/commit/f49e237): Fixed a bug where `schema openapi init` created an invalid test command.
+- [`f91be2c`](https://github.com/backstage/backstage/commit/f91be2c): Updated dependency `@stoplight/types` to `^14.0.0`.
+- [`45bfb20`](https://github.com/backstage/backstage/commit/45bfb20): Execute `openapi-generator-cli` from `@backstage/repo-tools` directory to force it to use our openapitools.json config file.
 
 ## 0.x minor version bumps
 
-### `@backstage/backend-common` (0.19.10 → 0.20.0)
+### `@backstage/backend-common` (0.19.10 → [0.20.0](../../changelogs/@backstage/backend-common.md#0200))
 
 #### 0.20.0
 
 ##### Minor Changes
 
-- 870db76: Implemented `readTree` for Gitea provider to support TechDocs functionality
+- [`870db76`](https://github.com/backstage/backstage/commit/870db76): Implemented `readTree` for Gitea provider to support TechDocs functionality
 
 ##### Patch Changes
 
-- 7f04128: Allow a default cache TTL to be set through the app config
-- 1ad8906: Use `Readable.from` to fix some of the stream issues
-- d86a007: Fixed the AwsS3UrlReader host regex and host to allow the S3 reading for CN AWS domain
-- bc67498: Updated dependency `archiver` to `^6.0.0`.
+- [`7f04128`](https://github.com/backstage/backstage/commit/7f04128): Allow a default cache TTL to be set through the app config
+- [`1ad8906`](https://github.com/backstage/backstage/commit/1ad8906): Use `Readable.from` to fix some of the stream issues
+- [`d86a007`](https://github.com/backstage/backstage/commit/d86a007): Fixed the AwsS3UrlReader host regex and host to allow the S3 reading for CN AWS domain
+- [`bc67498`](https://github.com/backstage/backstage/commit/bc67498): Updated dependency `archiver` to `^6.0.0`.
   Updated dependency `@types/archiver` to `^6.0.0`.
-- 706fc3a: Updated dependency `@kubernetes/client-node` to `0.20.0`.
-- 2666675: Updated dependency `@google-cloud/storage` to `^7.0.0`.
-- d15d483: Add command `--runAsDefaultUser` for `@techdocs/cli generate` to bypass running the docker builds as host user for macOS and Linux.
-- d1e00aa: Expose an `onAuth` handler for `git` actions to provide custom credentials
+- [`706fc3a`](https://github.com/backstage/backstage/commit/706fc3a): Updated dependency `@kubernetes/client-node` to `0.20.0`.
+- [`2666675`](https://github.com/backstage/backstage/commit/2666675): Updated dependency `@google-cloud/storage` to `^7.0.0`.
+- [`d15d483`](https://github.com/backstage/backstage/commit/d15d483): Add command `--runAsDefaultUser` for `@techdocs/cli generate` to bypass running the docker builds as host user for macOS and Linux.
+- [`d1e00aa`](https://github.com/backstage/backstage/commit/d1e00aa): Expose an `onAuth` handler for `git` actions to provide custom credentials
 
-### `@backstage/cli` (0.24.0 → 0.25.0)
+### `@backstage/cli` (0.24.0 → [0.25.0](../../changelogs/@backstage/cli.md#0250))
 
 #### 0.25.0
 
 ##### Minor Changes
 
-- 3834067: Updates the ESLint config to ignore issues created by generated files in `**/src/generated/**`.
+- [`3834067`](https://github.com/backstage/backstage/commit/3834067): Updates the ESLint config to ignore issues created by generated files in `**/src/generated/**`.
 
 ##### Patch Changes
 
-- 32018ff: Enable the `tsx` loader to work on Node 18.19 and up
-- 0ffee55: Toned down the warning message when git is not found
-- c6f3743: Added a warning when starting a standalone backend plugin that hasn't been updated to the new backend system.
-- 3e358b0: Added deprecation warning for React Router v6 beta, please make sure you have migrated your apps to use React Router v6 stable as support for the beta version will be removed. See the [migration tutorial](https://backstage.io/docs/tutorials/react-router-stable-migration) for more information.
-- 219d7f0: Updating template generation for scaffolder module
-- 8cda3c7: Tweaked Node.js version check for when to use the new module register API with the new backend `package start` command.
-- a3edc18: Updated dependency `vite-plugin-node-polyfills` to `^0.17.0`.
-- 627554e: Updated dependency `@rollup/plugin-node-resolve` to `^15.0.0`.
-- c07cee5: Updated dependency `@rollup/plugin-json` to `^6.0.0`.
-- bd586a5: Updated dependency `bfj` to `^8.0.0`.
-- 8056425: Updated dependency `@typescript-eslint/eslint-plugin` to `6.12.0`.
-- 017c425: Updated dependency `@typescript-eslint/eslint-plugin` to `6.11.0`.
-- 2565cc8: Updated dependency `@rollup/plugin-commonjs` to `^25.0.0`.
-- 33e96e5: Switched the `@typescript-eslint/eslint-plugin` dependency back to using a `^` version range.
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`32018ff`](https://github.com/backstage/backstage/commit/32018ff): Enable the `tsx` loader to work on Node 18.19 and up
+- [`0ffee55`](https://github.com/backstage/backstage/commit/0ffee55): Toned down the warning message when git is not found
+- [`c6f3743`](https://github.com/backstage/backstage/commit/c6f3743): Added a warning when starting a standalone backend plugin that hasn't been updated to the new backend system.
+- [`3e358b0`](https://github.com/backstage/backstage/commit/3e358b0): Added deprecation warning for React Router v6 beta, please make sure you have migrated your apps to use React Router v6 stable as support for the beta version will be removed. See the [migration tutorial](https://backstage.io/docs/tutorials/react-router-stable-migration) for more information.
+- [`219d7f0`](https://github.com/backstage/backstage/commit/219d7f0): Updating template generation for scaffolder module
+- [`8cda3c7`](https://github.com/backstage/backstage/commit/8cda3c7): Tweaked Node.js version check for when to use the new module register API with the new backend `package start` command.
+- [`a3edc18`](https://github.com/backstage/backstage/commit/a3edc18): Updated dependency `vite-plugin-node-polyfills` to `^0.17.0`.
+- [`627554e`](https://github.com/backstage/backstage/commit/627554e): Updated dependency `@rollup/plugin-node-resolve` to `^15.0.0`.
+- [`c07cee5`](https://github.com/backstage/backstage/commit/c07cee5): Updated dependency `@rollup/plugin-json` to `^6.0.0`.
+- [`bd586a5`](https://github.com/backstage/backstage/commit/bd586a5): Updated dependency `bfj` to `^8.0.0`.
+- [`8056425`](https://github.com/backstage/backstage/commit/8056425): Updated dependency `@typescript-eslint/eslint-plugin` to `6.12.0`.
+- [`017c425`](https://github.com/backstage/backstage/commit/017c425): Updated dependency `@typescript-eslint/eslint-plugin` to `6.11.0`.
+- [`2565cc8`](https://github.com/backstage/backstage/commit/2565cc8): Updated dependency `@rollup/plugin-commonjs` to `^25.0.0`.
+- [`33e96e5`](https://github.com/backstage/backstage/commit/33e96e5): Switched the `@typescript-eslint/eslint-plugin` dependency back to using a `^` version range.
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/frontend-app-api` (0.3.0 → 0.4.0)
+### `@backstage/frontend-app-api` (0.3.0 → [0.4.0](../../changelogs/@backstage/frontend-app-api.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- e539735: Updated core extension structure to make space for the sign-in page by adding `core.router`.
-- 44735df: Removed `featureLoader` from `createApp`, `features` instead accepts both `FrontendFeature` and `CreateAppFeatureLoader`
-- af7bc3e: Switched all core extensions to instead use the namespace `'app'`.
-- ea06590: The app no longer provides the `AppContext` from `@backstage/core-plugin-api`. Components that require this context to be available should use the `compatWrapper` helper from `@backstage/core-compat-api`.
+- [`e539735`](https://github.com/backstage/backstage/commit/e539735): Updated core extension structure to make space for the sign-in page by adding `core.router`.
+- [`44735df`](https://github.com/backstage/backstage/commit/44735df): Removed `featureLoader` from `createApp`, `features` instead accepts both `FrontendFeature` and `CreateAppFeatureLoader`
+- [`af7bc3e`](https://github.com/backstage/backstage/commit/af7bc3e): Switched all core extensions to instead use the namespace `'app'`.
+- [`ea06590`](https://github.com/backstage/backstage/commit/ea06590): The app no longer provides the `AppContext` from `@backstage/core-plugin-api`. Components that require this context to be available should use the `compatWrapper` helper from `@backstage/core-compat-api`.
 
 ##### Patch Changes
 
-- 5eb6b8a: Added the nav logo extension for customization of sidebar logo
-- aeb8008: Add support for translation extensions.
-- 1f12fb7: Create a core components extension that allows adopters to override core app components such as `Progress`, `BootErrorPage`, `NotFoundErrorPage` and `ErrorBoundaryFallback`.
-- a379243: Leverage the new `FrontendFeature` type to simplify interfaces
-- 60d6eb5: Removed `@backstage/plugin-graphiql` dependency.
-- b7adf24: Use the new plugin type for error boundary components.
-- 5970928: Collect and register feature flags from plugins and extension overrides.
-- 9ad4039: Bringing over apis from core-plugin-api
-- 8f5d6c1: Updates to match the new extension input wrapping.
-- c35036b: A `configLoader` passed to `createApp` now returns an object, to make room for future expansion
-- f27ee7d: Migrate analytics route tracker component.
-- b8cb780: Added `createSpecializedApp`, which is a synchronous version of `createApp` where config and features already need to be loaded.
-- c36e0b9: Renamed `AppRouteBinder` to `CreateAppRouteBinder`
-- cb4197a: Forward ` node`` instead of  `extensionId` to resolved extension inputs.
-- 8837a96: Updates to match the introduction of `ExtensionDefinition` and new extension ID naming patterns.
-- a5a0473: Updates to provide `node` to extension factories instead of `id` and `source`.
-- 5cdf2b3: Updated usage of `Extension` and `ExtensionDefinition` as they are now opaque.
-- f9ef632: Updates to match the new `coreExtensionData` structure.
-- f1183b7: Renamed the `component` option of `createComponentExtension` to `loader`.
+- [`5eb6b8a`](https://github.com/backstage/backstage/commit/5eb6b8a): Added the nav logo extension for customization of sidebar logo
+- [`aeb8008`](https://github.com/backstage/backstage/commit/aeb8008): Add support for translation extensions.
+- [`1f12fb7`](https://github.com/backstage/backstage/commit/1f12fb7): Create a core components extension that allows adopters to override core app components such as `Progress`, `BootErrorPage`, `NotFoundErrorPage` and `ErrorBoundaryFallback`.
+- [`a379243`](https://github.com/backstage/backstage/commit/a379243): Leverage the new `FrontendFeature` type to simplify interfaces
+- [`60d6eb5`](https://github.com/backstage/backstage/commit/60d6eb5): Removed `@backstage/plugin-graphiql` dependency.
+- [`b7adf24`](https://github.com/backstage/backstage/commit/b7adf24): Use the new plugin type for error boundary components.
+- [`5970928`](https://github.com/backstage/backstage/commit/5970928): Collect and register feature flags from plugins and extension overrides.
+- [`9ad4039`](https://github.com/backstage/backstage/commit/9ad4039): Bringing over apis from core-plugin-api
+- [`8f5d6c1`](https://github.com/backstage/backstage/commit/8f5d6c1): Updates to match the new extension input wrapping.
+- [`c35036b`](https://github.com/backstage/backstage/commit/c35036b): A `configLoader` passed to `createApp` now returns an object, to make room for future expansion
+- [`f27ee7d`](https://github.com/backstage/backstage/commit/f27ee7d): Migrate analytics route tracker component.
+- [`b8cb780`](https://github.com/backstage/backstage/commit/b8cb780): Added `createSpecializedApp`, which is a synchronous version of `createApp` where config and features already need to be loaded.
+- [`c36e0b9`](https://github.com/backstage/backstage/commit/c36e0b9): Renamed `AppRouteBinder` to `CreateAppRouteBinder`
+- [`cb4197a`](https://github.com/backstage/backstage/commit/cb4197a): Forward ` node`` instead of  `extensionId` to resolved extension inputs.
+- [`8837a96`](https://github.com/backstage/backstage/commit/8837a96): Updates to match the introduction of `ExtensionDefinition` and new extension ID naming patterns.
+- [`a5a0473`](https://github.com/backstage/backstage/commit/a5a0473): Updates to provide `node` to extension factories instead of `id` and `source`.
+- [`5cdf2b3`](https://github.com/backstage/backstage/commit/5cdf2b3): Updated usage of `Extension` and `ExtensionDefinition` as they are now opaque.
+- [`f9ef632`](https://github.com/backstage/backstage/commit/f9ef632): Updates to match the new `coreExtensionData` structure.
+- [`f1183b7`](https://github.com/backstage/backstage/commit/f1183b7): Renamed the `component` option of `createComponentExtension` to `loader`.
 
-### `@backstage/plugin-home` (0.5.11 → 0.6.0)
+### `@backstage/plugin-home` (0.5.11 → [0.6.0](../../changelogs/@backstage/plugin-home.md#060))
 
 #### 0.6.0
 
 ##### Minor Changes
 
-- 5a317f5: Added view of entities grouped by kind to make it easier to distinguish entities with different kind but same name
+- [`5a317f5`](https://github.com/backstage/backstage/commit/5a317f5): Added view of entities grouped by kind to make it easier to distinguish entities with different kind but same name
 
 ##### Patch Changes
 
-- 2633d64: Change user settings backend plugin id and fix when using user setting backend home page first will cause edit page loop render
-- a1227cc: Wrap `/alpha` export extension elements in backwards compatibility wrapper.
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 8f5d6c1: Updates to the `/alpha` exports to match the extension input wrapping change.
-- 2b72591: Updated dependency `@rjsf/utils` to `5.14.3`.
+- [`2633d64`](https://github.com/backstage/backstage/commit/2633d64): Change user settings backend plugin id and fix when using user setting backend home page first will cause edit page loop render
+- [`a1227cc`](https://github.com/backstage/backstage/commit/a1227cc): Wrap `/alpha` export extension elements in backwards compatibility wrapper.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`8f5d6c1`](https://github.com/backstage/backstage/commit/8f5d6c1): Updates to the `/alpha` exports to match the extension input wrapping change.
+- [`2b72591`](https://github.com/backstage/backstage/commit/2b72591): Updated dependency `@rjsf/utils` to `5.14.3`.
   Updated dependency `@rjsf/core` to `5.14.3`.
   Updated dependency `@rjsf/material-ui` to `5.14.3`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.3`.
-- 6cd12f2: Updated dependency `@rjsf/utils` to `5.14.1`.
+- [`6cd12f2`](https://github.com/backstage/backstage/commit/6cd12f2): Updated dependency `@rjsf/utils` to `5.14.1`.
   Updated dependency `@rjsf/core` to `5.14.1`.
   Updated dependency `@rjsf/material-ui` to `5.14.1`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.1`.
-- 64301d3: Updated dependency `@rjsf/utils` to `5.15.0`.
+- [`64301d3`](https://github.com/backstage/backstage/commit/64301d3): Updated dependency `@rjsf/utils` to `5.15.0`.
   Updated dependency `@rjsf/core` to `5.15.0`.
   Updated dependency `@rjsf/material-ui` to `5.15.0`.
   Updated dependency `@rjsf/validator-ajv8` to `5.15.0`.
-- 63c494e: Updated dependency `@rjsf/utils` to `5.14.2`.
+- [`63c494e`](https://github.com/backstage/backstage/commit/63c494e): Updated dependency `@rjsf/utils` to `5.14.2`.
   Updated dependency `@rjsf/core` to `5.14.2`.
   Updated dependency `@rjsf/material-ui` to `5.14.2`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.2`.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
-- 54cef27: StarredEntities component calls `getEntitiesByRefs` instead of `getEntities` to improve performance since we have the `entityRefs`
-- c8908d4: Use new option from RJSF 5.15
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`54cef27`](https://github.com/backstage/backstage/commit/54cef27): StarredEntities component calls `getEntitiesByRefs` instead of `getEntities` to improve performance since we have the `entityRefs`
+- [`c8908d4`](https://github.com/backstage/backstage/commit/c8908d4): Use new option from RJSF 5.15
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-kubernetes-backend` (0.13.1 → 0.14.0)
+### `@backstage/plugin-kubernetes-backend` (0.13.1 → [0.14.0](../../changelogs/@backstage/plugin-kubernetes-backend.md#0140))
 
 #### 0.14.0
 
 ##### Minor Changes
 
-- 52050ad: You can now select `single` kubernetes cluster that the entity is part-of from all your defined kubernetes clusters, by passing `backstage.io/kubernetes-cluster` annotation with the defined cluster name.
+- [`52050ad`](https://github.com/backstage/backstage/commit/52050ad): You can now select `single` kubernetes cluster that the entity is part-of from all your defined kubernetes clusters, by passing `backstage.io/kubernetes-cluster` annotation with the defined cluster name.
 
   If you do not specify the annotation by `default it fetches all` defined kubernetes cluster.
 
@@ -530,7 +530,7 @@ Changes between 1.20.4 and 1.21.0 — 220 changed and 10 added packages.
 
 ##### Patch Changes
 
-- 6010564: The `kubernetes-node` plugin has been modified to house a new extension points for Kubernetes backend plugin;
+- [`6010564`](https://github.com/backstage/backstage/commit/6010564): The `kubernetes-node` plugin has been modified to house a new extension points for Kubernetes backend plugin;
   `KubernetesClusterSupplierExtensionPoint` is introduced .
   `kubernetesAuthStrategyExtensionPoint` is introduced .
   `kubernetesFetcherExtensionPoint` is introduced .
@@ -538,98 +538,98 @@ Changes between 1.20.4 and 1.21.0 — 220 changed and 10 added packages.
 
   The `kubernetes-backend` plugin was modified to use this new extension point.
 
-- 706fc3a: Updated dependency `@kubernetes/client-node` to `0.20.0`.
-- ae94d3c: Updated dependency `@aws-crypto/sha256-js` to `^5.0.0`.
-- 99fb541: Updated dependency `@azure/identity` to `^4.0.0`.
-- 42c1aee: Updated dependency `@google-cloud/container` to `^5.0.0`.
+- [`706fc3a`](https://github.com/backstage/backstage/commit/706fc3a): Updated dependency `@kubernetes/client-node` to `0.20.0`.
+- [`ae94d3c`](https://github.com/backstage/backstage/commit/ae94d3c): Updated dependency `@aws-crypto/sha256-js` to `^5.0.0`.
+- [`99fb541`](https://github.com/backstage/backstage/commit/99fb541): Updated dependency `@azure/identity` to `^4.0.0`.
+- [`42c1aee`](https://github.com/backstage/backstage/commit/42c1aee): Updated dependency `@google-cloud/container` to `^5.0.0`.
 
-### `@backstage/plugin-lighthouse-backend` (0.3.4 → 0.4.0)
+### `@backstage/plugin-lighthouse-backend` (0.3.4 → [0.4.0](../../changelogs/@backstage/plugin-lighthouse-backend.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- 7f0dbfd: Fixed crashes faced with custom schedule configuration. The configuration schema has been update to leverage the TaskScheduleDefinition interface. It is highly recommended to move the `lighthouse.shedule` and `lighthouse.timeout` respectively to `lighthouse.schedule.frequency` and `lighthouse.schedule.timeout`.
+- [`7f0dbfd`](https://github.com/backstage/backstage/commit/7f0dbfd): Fixed crashes faced with custom schedule configuration. The configuration schema has been update to leverage the TaskScheduleDefinition interface. It is highly recommended to move the `lighthouse.shedule` and `lighthouse.timeout` respectively to `lighthouse.schedule.frequency` and `lighthouse.schedule.timeout`.
 
-### `@backstage/plugin-pagerduty` (0.6.8 → 0.7.0)
+### `@backstage/plugin-pagerduty` (0.6.8 → [0.7.0](../../changelogs/@backstage/plugin-pagerduty.md#070))
 
 #### 0.7.0
 
 ##### Minor Changes
 
-- 5fca16f: This package has been deprecated, consider using [@pagerduty/backstage-plugin](https://github.com/pagerduty/backstage-plugin) instead.
+- [`5fca16f`](https://github.com/backstage/backstage/commit/5fca16f): This package has been deprecated, consider using [@pagerduty/backstage-plugin](https://github.com/pagerduty/backstage-plugin) instead.
 
-### `@backstage/theme` (0.4.4 → 0.5.0)
+### `@backstage/theme` (0.4.4 → [0.5.0](../../changelogs/@backstage/theme.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- 4d9e3b3: Added a global `OverrideComponentNameToClassKeys` for other plugins and packages to populate using module augmentation. This will in turn will provide component style override types for `createUnifiedTheme`.
+- [`4d9e3b3`](https://github.com/backstage/backstage/commit/4d9e3b3): Added a global `OverrideComponentNameToClassKeys` for other plugins and packages to populate using module augmentation. This will in turn will provide component style override types for `createUnifiedTheme`.
 
 ##### Patch Changes
 
-- cd0dd4c: Align Material UI v5 `Paper` component background color in dark mode to v4.
+- [`cd0dd4c`](https://github.com/backstage/backstage/commit/cd0dd4c): Align Material UI v5 `Paper` component background color in dark mode to v4.
 
 ## Other minor version bumps
 
-### `@backstage/catalog-client` (1.4.6 → 1.5.0)
+### `@backstage/catalog-client` (1.4.6 → [1.5.0](../../changelogs/@backstage/catalog-client.md#150))
 
 #### 1.5.0
 
 ##### Minor Changes
 
-- 3834067: The internals of `CatalogClient` are now auto-generated using the `backstage-repo-tools schema openapi generate-client` command.
+- [`3834067`](https://github.com/backstage/backstage/commit/3834067): The internals of `CatalogClient` are now auto-generated using the `backstage-repo-tools schema openapi generate-client` command.
 
 ##### Patch Changes
 
-- 82fa88b: Fixes a bug where some query parameters were double URL encoded.
+- [`82fa88b`](https://github.com/backstage/backstage/commit/82fa88b): Fixes a bug where some query parameters were double URL encoded.
 
-### `@backstage/config-loader` (1.5.3 → 1.6.0)
+### `@backstage/config-loader` (1.5.3 → [1.6.0](../../changelogs/@backstage/config-loader.md#160))
 
 #### 1.6.0
 
 ##### Minor Changes
 
-- 24f5a85: Add "path" to `TransformFunc` context
+- [`24f5a85`](https://github.com/backstage/backstage/commit/24f5a85): Add "path" to `TransformFunc` context
 
-### `@backstage/integration` (1.7.2 → 1.8.0)
+### `@backstage/integration` (1.7.2 → [1.8.0](../../changelogs/@backstage/integration.md#180))
 
 #### 1.8.0
 
 ##### Minor Changes
 
-- 870db76: Implemented `readTree` for Gitea provider to support TechDocs functionality
+- [`870db76`](https://github.com/backstage/backstage/commit/870db76): Implemented `readTree` for Gitea provider to support TechDocs functionality
 
 ##### Patch Changes
 
-- 99fb541: Updated dependency `@azure/identity` to `^4.0.0`.
+- [`99fb541`](https://github.com/backstage/backstage/commit/99fb541): Updated dependency `@azure/identity` to `^4.0.0`.
 
-### `@backstage/plugin-catalog` (1.15.1 → 1.16.0)
+### `@backstage/plugin-catalog` (1.15.1 → [1.16.0](../../changelogs/@backstage/plugin-catalog.md#1160))
 
 #### 1.16.0
 
 ##### Minor Changes
 
-- e223f22: Properly support both function- and string-form visibility filter expressions in the new extensions exported via `/alpha`.
-- b8e1eb2: The `columns` prop can be an array or a function that returns an array in order to override the default columns of the `CatalogIndexPage`.
+- [`e223f22`](https://github.com/backstage/backstage/commit/e223f22): Properly support both function- and string-form visibility filter expressions in the new extensions exported via `/alpha`.
+- [`b8e1eb2`](https://github.com/backstage/backstage/commit/b8e1eb2): The `columns` prop can be an array or a function that returns an array in order to override the default columns of the `CatalogIndexPage`.
 
 ##### Patch Changes
 
-- bc7e6d3: Fix copy entity url function in http contexts.
-- 5360097: Ensure that passed-in icons are taken advantage of in the presentation API
-- 4785d05: Add permission check to catalog create and refresh button
-- cd910c4: - Fixes bug where after unregistering an entity you are redirected to `/`.
+- [`bc7e6d3`](https://github.com/backstage/backstage/commit/bc7e6d3): Fix copy entity url function in http contexts.
+- [`5360097`](https://github.com/backstage/backstage/commit/5360097): Ensure that passed-in icons are taken advantage of in the presentation API
+- [`4785d05`](https://github.com/backstage/backstage/commit/4785d05): Add permission check to catalog create and refresh button
+- [`cd910c4`](https://github.com/backstage/backstage/commit/cd910c4): - Fixes bug where after unregistering an entity you are redirected to `/`.
   - Adds an optional external route `unregisterRedirect` to override this behaviour to another route.
-- 03d0b6d: The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
-- 2d708d8: Internal naming updates for `/alpha` exports.
-- a5a0473: Internal refactor of alpha exports due to a change in how extension factories are defined.
-- 4d9e3b3: Register component overrides in the global `OverrideComponentNameToClassKeys` provided by `@backstage/theme`. This will in turn will provide component style override types for `createUnifiedTheme`.
-- a1227cc: Wrap `/alpha` export extension elements in backwards compatibility wrapper.
-- 78a10bb: Adding in spec.type chip to search results for clarity
-- 8f5d6c1: Updates to the `/alpha` exports to match the extension input wrapping change.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
-- 8587f06: Added pagination support to `CatalogIndexPage`
+- [`03d0b6d`](https://github.com/backstage/backstage/commit/03d0b6d): The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
+- [`2d708d8`](https://github.com/backstage/backstage/commit/2d708d8): Internal naming updates for `/alpha` exports.
+- [`a5a0473`](https://github.com/backstage/backstage/commit/a5a0473): Internal refactor of alpha exports due to a change in how extension factories are defined.
+- [`4d9e3b3`](https://github.com/backstage/backstage/commit/4d9e3b3): Register component overrides in the global `OverrideComponentNameToClassKeys` provided by `@backstage/theme`. This will in turn will provide component style override types for `createUnifiedTheme`.
+- [`a1227cc`](https://github.com/backstage/backstage/commit/a1227cc): Wrap `/alpha` export extension elements in backwards compatibility wrapper.
+- [`78a10bb`](https://github.com/backstage/backstage/commit/78a10bb): Adding in spec.type chip to search results for clarity
+- [`8f5d6c1`](https://github.com/backstage/backstage/commit/8f5d6c1): Updates to the `/alpha` exports to match the extension input wrapping change.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`8587f06`](https://github.com/backstage/backstage/commit/8587f06): Added pagination support to `CatalogIndexPage`
 
   `CatalogIndexPage` now offers an optional pagination feature, designed to accommodate adopters managing extensive catalogs. This new capability allows for better handling of large amounts of data.
 
@@ -646,665 +646,665 @@ Changes between 1.20.4 and 1.21.0 — 220 changed and 10 added packages.
 
   In case you have a custom catalog page and you want to enable pagination, you need to pass the `pagination` prop to `EntityListProvider` instead.
 
-- fb8f3bd: Updated alpha translation message keys to use nested format and camel case.
-- 531e1a2: Updated alpha plugin to include the `unregisterRedirect` external route.
+- [`fb8f3bd`](https://github.com/backstage/backstage/commit/fb8f3bd): Updated alpha translation message keys to use nested format and camel case.
+- [`531e1a2`](https://github.com/backstage/backstage/commit/531e1a2): Updated alpha plugin to include the `unregisterRedirect` external route.
 
-### `@backstage/plugin-catalog-backend` (1.15.0 → 1.16.0)
+### `@backstage/plugin-catalog-backend` (1.15.0 → [1.16.0](../../changelogs/@backstage/plugin-catalog-backend.md#1160))
 
 #### 1.16.0
 
 ##### Minor Changes
 
-- 7804597: Permission rules can now be added for the Catalog plugin through the `CatalogPermissionExtensionPoint` interface.
+- [`7804597`](https://github.com/backstage/backstage/commit/7804597): Permission rules can now be added for the Catalog plugin through the `CatalogPermissionExtensionPoint` interface.
 
 ##### Patch Changes
 
-- 3834067: Update the OpenAPI spec to support the use of `openapi-generator`.
-- 50ee804: Wrap single `pipelineLoop` of TaskPipeline in a span for better traces
-- 7123c58: Updated dependency `@types/glob` to `^8.0.0`.
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
-- a168507: Deprecated `EntitiesSearchFilter` and `EntityFilter`, which can now be imported from `@backstage/plugin-catalog-node` instead
+- [`3834067`](https://github.com/backstage/backstage/commit/3834067): Update the OpenAPI spec to support the use of `openapi-generator`.
+- [`50ee804`](https://github.com/backstage/backstage/commit/50ee804): Wrap single `pipelineLoop` of TaskPipeline in a span for better traces
+- [`7123c58`](https://github.com/backstage/backstage/commit/7123c58): Updated dependency `@types/glob` to `^8.0.0`.
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`a168507`](https://github.com/backstage/backstage/commit/a168507): Deprecated `EntitiesSearchFilter` and `EntityFilter`, which can now be imported from `@backstage/plugin-catalog-node` instead
 
-### `@backstage/plugin-catalog-node` (1.5.0 → 1.6.0)
+### `@backstage/plugin-catalog-node` (1.5.0 → [1.6.0](../../changelogs/@backstage/plugin-catalog-node.md#160))
 
 #### 1.6.0
 
 ##### Minor Changes
 
-- a168507: Added `EntitiesSearchFilter` and `EntityFilter` from `@backstage/plugin-catalog-backend`, for reuse
-- 7804597: Permission rules can now be added for the Catalog plugin through the `CatalogPermissionExtensionPoint` interface.
+- [`a168507`](https://github.com/backstage/backstage/commit/a168507): Added `EntitiesSearchFilter` and `EntityFilter` from `@backstage/plugin-catalog-backend`, for reuse
+- [`7804597`](https://github.com/backstage/backstage/commit/7804597): Permission rules can now be added for the Catalog plugin through the `CatalogPermissionExtensionPoint` interface.
 
-### `@backstage/plugin-scaffolder` (1.16.1 → 1.17.0)
+### `@backstage/plugin-scaffolder` (1.16.1 → [1.17.0](../../changelogs/@backstage/plugin-scaffolder.md#1170))
 
 #### 1.17.0
 
 ##### Minor Changes
 
-- df88d09: Add a new git repository url picker for `gitea`. This `GiteaRepoPicker` can be used in a template to scaffold a project to be cloned using gitea.
-- 33edf50: Added support for dealing with user provided secrets using a new field extension `ui:field: Secret`
+- [`df88d09`](https://github.com/backstage/backstage/commit/df88d09): Add a new git repository url picker for `gitea`. This `GiteaRepoPicker` can be used in a template to scaffold a project to be cloned using gitea.
+- [`33edf50`](https://github.com/backstage/backstage/commit/33edf50): Added support for dealing with user provided secrets using a new field extension `ui:field: Secret`
 
 ##### Patch Changes
 
-- 6806d10: Added `headerOptions` to `TemplateListPage` to optionally override default values.
+- [`6806d10`](https://github.com/backstage/backstage/commit/6806d10): Added `headerOptions` to `TemplateListPage` to optionally override default values.
   Changed `themeId` of TemplateListPage from `website` to `home`.
-- aaa6fb3: Minor updates for TypeScript 5.2.2+ compatibility
-- 2b72591: Updated dependency `@rjsf/utils` to `5.14.3`.
+- [`aaa6fb3`](https://github.com/backstage/backstage/commit/aaa6fb3): Minor updates for TypeScript 5.2.2+ compatibility
+- [`2b72591`](https://github.com/backstage/backstage/commit/2b72591): Updated dependency `@rjsf/utils` to `5.14.3`.
   Updated dependency `@rjsf/core` to `5.14.3`.
   Updated dependency `@rjsf/material-ui` to `5.14.3`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.3`.
-- 6cd12f2: Updated dependency `@rjsf/utils` to `5.14.1`.
+- [`6cd12f2`](https://github.com/backstage/backstage/commit/6cd12f2): Updated dependency `@rjsf/utils` to `5.14.1`.
   Updated dependency `@rjsf/core` to `5.14.1`.
   Updated dependency `@rjsf/material-ui` to `5.14.1`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.1`.
-- a518c5a: Updated dependency `@react-hookz/web` to `^23.0.0`.
-- 64301d3: Updated dependency `@rjsf/utils` to `5.15.0`.
+- [`a518c5a`](https://github.com/backstage/backstage/commit/a518c5a): Updated dependency `@react-hookz/web` to `^23.0.0`.
+- [`64301d3`](https://github.com/backstage/backstage/commit/64301d3): Updated dependency `@rjsf/utils` to `5.15.0`.
   Updated dependency `@rjsf/core` to `5.15.0`.
   Updated dependency `@rjsf/material-ui` to `5.15.0`.
   Updated dependency `@rjsf/validator-ajv8` to `5.15.0`.
-- 63c494e: Updated dependency `@rjsf/utils` to `5.14.2`.
+- [`63c494e`](https://github.com/backstage/backstage/commit/63c494e): Updated dependency `@rjsf/utils` to `5.14.2`.
   Updated dependency `@rjsf/core` to `5.14.2`.
   Updated dependency `@rjsf/material-ui` to `5.14.2`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.2`.
-- b5fa691: Fixing `headerOptions` not being passed through the `TemplatePage` component
-- c8908d4: Use new option from RJSF 5.15
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`b5fa691`](https://github.com/backstage/backstage/commit/b5fa691): Fixing `headerOptions` not being passed through the `TemplatePage` component
+- [`c8908d4`](https://github.com/backstage/backstage/commit/c8908d4): Use new option from RJSF 5.15
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-scaffolder-react` (1.6.1 → 1.7.0)
+### `@backstage/plugin-scaffolder-react` (1.6.1 → [1.7.0](../../changelogs/@backstage/plugin-scaffolder-react.md#170))
 
 #### 1.7.0
 
 ##### Minor Changes
 
-- 33edf50: Added support for dealing with user provided secrets using a new field extension `ui:field: Secret`
+- [`33edf50`](https://github.com/backstage/backstage/commit/33edf50): Added support for dealing with user provided secrets using a new field extension `ui:field: Secret`
 
 ##### Patch Changes
 
-- 670c7cc: Fix bug where `properties` is set to empty object when it should be empty for schema dependencies
-- fa66d1b: Fixed bug in `ReviewState` where `enum` value was displayed in step review instead of the corresponding label when using `enumNames`
-- e516bf4: Step titles in the Stepper are now clickable and redirect the user to the corresponding step, as an alternative to using the back buttons.
-- aaa6fb3: Minor updates for TypeScript 5.2.2+ compatibility
-- 2aee53b: Add horizontal slider if stepper overflows
-- 2b72591: Updated dependency `@rjsf/utils` to `5.14.3`.
+- [`670c7cc`](https://github.com/backstage/backstage/commit/670c7cc): Fix bug where `properties` is set to empty object when it should be empty for schema dependencies
+- [`fa66d1b`](https://github.com/backstage/backstage/commit/fa66d1b): Fixed bug in `ReviewState` where `enum` value was displayed in step review instead of the corresponding label when using `enumNames`
+- [`e516bf4`](https://github.com/backstage/backstage/commit/e516bf4): Step titles in the Stepper are now clickable and redirect the user to the corresponding step, as an alternative to using the back buttons.
+- [`aaa6fb3`](https://github.com/backstage/backstage/commit/aaa6fb3): Minor updates for TypeScript 5.2.2+ compatibility
+- [`2aee53b`](https://github.com/backstage/backstage/commit/2aee53b): Add horizontal slider if stepper overflows
+- [`2b72591`](https://github.com/backstage/backstage/commit/2b72591): Updated dependency `@rjsf/utils` to `5.14.3`.
   Updated dependency `@rjsf/core` to `5.14.3`.
   Updated dependency `@rjsf/material-ui` to `5.14.3`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.3`.
-- 6cd12f2: Updated dependency `@rjsf/utils` to `5.14.1`.
+- [`6cd12f2`](https://github.com/backstage/backstage/commit/6cd12f2): Updated dependency `@rjsf/utils` to `5.14.1`.
   Updated dependency `@rjsf/core` to `5.14.1`.
   Updated dependency `@rjsf/material-ui` to `5.14.1`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.1`.
-- a518c5a: Updated dependency `@react-hookz/web` to `^23.0.0`.
-- 64301d3: Updated dependency `@rjsf/utils` to `5.15.0`.
+- [`a518c5a`](https://github.com/backstage/backstage/commit/a518c5a): Updated dependency `@react-hookz/web` to `^23.0.0`.
+- [`64301d3`](https://github.com/backstage/backstage/commit/64301d3): Updated dependency `@rjsf/utils` to `5.15.0`.
   Updated dependency `@rjsf/core` to `5.15.0`.
   Updated dependency `@rjsf/material-ui` to `5.15.0`.
   Updated dependency `@rjsf/validator-ajv8` to `5.15.0`.
-- 63c494e: Updated dependency `@rjsf/utils` to `5.14.2`.
+- [`63c494e`](https://github.com/backstage/backstage/commit/63c494e): Updated dependency `@rjsf/utils` to `5.14.2`.
   Updated dependency `@rjsf/core` to `5.14.2`.
   Updated dependency `@rjsf/material-ui` to `5.14.2`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.2`.
-- c8908d4: Use new option from RJSF 5.15
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
-- 5bb5240: Fixed issue for showing undefined for hidden form items
+- [`c8908d4`](https://github.com/backstage/backstage/commit/c8908d4): Use new option from RJSF 5.15
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`5bb5240`](https://github.com/backstage/backstage/commit/5bb5240): Fixed issue for showing undefined for hidden form items
 
-### `@backstage/plugin-techdocs-node` (1.10.0 → 1.11.0)
+### `@backstage/plugin-techdocs-node` (1.10.0 → [1.11.0](../../changelogs/@backstage/plugin-techdocs-node.md#1110))
 
 #### 1.11.0
 
 ##### Minor Changes
 
-- d15d483: Add command `--runAsDefaultUser` for `@techdocs/cli generate` to bypass running the docker builds as host user for macOS and Linux.
+- [`d15d483`](https://github.com/backstage/backstage/commit/d15d483): Add command `--runAsDefaultUser` for `@techdocs/cli generate` to bypass running the docker builds as host user for macOS and Linux.
 
 ##### Patch Changes
 
-- 99fb541: Updated dependency `@azure/identity` to `^4.0.0`.
-- 2666675: Updated dependency `@google-cloud/storage` to `^7.0.0`.
-- 4f773c1: Bumped the default TechDocs docker image version to the latest which was released several month ago
+- [`99fb541`](https://github.com/backstage/backstage/commit/99fb541): Updated dependency `@azure/identity` to `^4.0.0`.
+- [`2666675`](https://github.com/backstage/backstage/commit/2666675): Updated dependency `@google-cloud/storage` to `^7.0.0`.
+- [`4f773c1`](https://github.com/backstage/backstage/commit/4f773c1): Bumped the default TechDocs docker image version to the latest which was released several month ago
 
-### `@techdocs/cli` (1.7.0 → 1.8.0)
+### `@techdocs/cli` (1.7.0 → [1.8.0](../../changelogs/@techdocs/cli.md#180))
 
 #### 1.8.0
 
 ##### Minor Changes
 
-- d15d483: Add command `--runAsDefaultUser` for `@techdocs/cli generate` to bypass running the docker builds as host user for macOS and Linux.
-- b2dccad: Support passing additional `mkdocs-server` CLI parameters (`--dirtyreload`, `--strict` and `--clean`) when run in containerized mode.
+- [`d15d483`](https://github.com/backstage/backstage/commit/d15d483): Add command `--runAsDefaultUser` for `@techdocs/cli generate` to bypass running the docker builds as host user for macOS and Linux.
+- [`b2dccad`](https://github.com/backstage/backstage/commit/b2dccad): Support passing additional `mkdocs-server` CLI parameters (`--dirtyreload`, `--strict` and `--clean`) when run in containerized mode.
 
 ## Patch version bumps
 
-### `@backstage/backend-app-api` (0.5.8 → 0.5.9)
+### `@backstage/backend-app-api` (0.5.8 → [0.5.9](../../changelogs/@backstage/backend-app-api.md#059))
 
 #### 0.5.9
 
 ##### Patch Changes
 
-- 1da5f43: Ensure redaction of secrets that have accidental extra whitespace around them
-- 9f8f266: Add redacting for secrets in stack traces of logs
+- [`1da5f43`](https://github.com/backstage/backstage/commit/1da5f43): Ensure redaction of secrets that have accidental extra whitespace around them
+- [`9f8f266`](https://github.com/backstage/backstage/commit/9f8f266): Add redacting for secrets in stack traces of logs
 
-### `@backstage/backend-openapi-utils` (0.1.0 → 0.1.1)
+### `@backstage/backend-openapi-utils` (0.1.0 → [0.1.1](../../changelogs/@backstage/backend-openapi-utils.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- aaa6fb3: Minor updates for TypeScript 5.2.2+ compatibility
+- [`aaa6fb3`](https://github.com/backstage/backstage/commit/aaa6fb3): Minor updates for TypeScript 5.2.2+ compatibility
 
-### `@backstage/backend-tasks` (0.5.12 → 0.5.13)
+### `@backstage/backend-tasks` (0.5.12 → [0.5.13](../../changelogs/@backstage/backend-tasks.md#0513))
 
 #### 0.5.13
 
 ##### Patch Changes
 
-- d8f488a: Allow tasks to run more often that the default work check interval, which is 5 seconds.
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`d8f488a`](https://github.com/backstage/backstage/commit/d8f488a): Allow tasks to run more often that the default work check interval, which is 5 seconds.
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/backend-test-utils` (0.2.8 → 0.2.9)
+### `@backstage/backend-test-utils` (0.2.8 → [0.2.9](../../changelogs/@backstage/backend-test-utils.md#029))
 
 #### 0.2.9
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
-- b7de76a: Added support for PostgreSQL versions 15 and 16
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
+- [`b7de76a`](https://github.com/backstage/backstage/commit/b7de76a): Added support for PostgreSQL versions 15 and 16
 
   Also introduced a new `setDefaults(options: { ids?: TestDatabaseId[] })` static method that can be added to the `setupTests.ts` file to define the default database ids you want to use throughout your package. Usage would look like this: `TestDatabases.setDefaults({ ids: ['POSTGRES_12','POSTGRES_16'] })` and would result in PostgreSQL versions 12 and 16 being used for your tests.
 
-### `@backstage/cli-node` (0.2.0 → 0.2.1)
+### `@backstage/cli-node` (0.2.0 → [0.2.1](../../changelogs/@backstage/cli-node.md#021))
 
 #### 0.2.1
 
 ##### Patch Changes
 
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/core-app-api` (1.11.1 → 1.11.2)
+### `@backstage/core-app-api` (1.11.1 → [1.11.2](../../changelogs/@backstage/core-app-api.md#1112))
 
 #### 1.11.2
 
 ##### Patch Changes
 
-- 3e358b0: Added deprecation warning for React Router v6 beta, please make sure you have migrated your apps to use React Router v6 stable as support for the beta version will be removed. See the [migration tutorial](https://backstage.io/docs/tutorials/react-router-stable-migration) for more information.
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`3e358b0`](https://github.com/backstage/backstage/commit/3e358b0): Added deprecation warning for React Router v6 beta, please make sure you have migrated your apps to use React Router v6 stable as support for the beta version will be removed. See the [migration tutorial](https://backstage.io/docs/tutorials/react-router-stable-migration) for more information.
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/core-components` (0.13.8 → 0.13.9)
+### `@backstage/core-components` (0.13.8 → [0.13.9](../../changelogs/@backstage/core-components.md#0139))
 
 #### 0.13.9
 
 ##### Patch Changes
 
-- e8f2ace: Added a new `/testUtils` sub-path that initially exports a `mockBreakpoint` helper.
-- 381ed86: Add missing export for IconLinkVertical
-- 5c8a3e3: Minor improvements to `Table` component.
-- 752df93: Fixes a problem where the `LogViewer` was not able to handle very large logs
-- 4d9e3b3: Register component overrides in the global `OverrideComponentNameToClassKeys` provided by `@backstage/theme`. This will in turn will provide component style override types for `createUnifiedTheme`.
-- 07dfdf3: Updated dependency `linkifyjs` to `4.1.3`.
-- a518c5a: Updated dependency `@react-hookz/web` to `^23.0.0`.
-- f291757: Update `linkify-react` to version `4.1.3`
-- 175d86b: Fixed an issue where the `onChange` prop within `HeaderTabs` was triggering twice upon tab-switching.
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`e8f2ace`](https://github.com/backstage/backstage/commit/e8f2ace): Added a new `/testUtils` sub-path that initially exports a `mockBreakpoint` helper.
+- [`381ed86`](https://github.com/backstage/backstage/commit/381ed86): Add missing export for IconLinkVertical
+- [`5c8a3e3`](https://github.com/backstage/backstage/commit/5c8a3e3): Minor improvements to `Table` component.
+- [`752df93`](https://github.com/backstage/backstage/commit/752df93): Fixes a problem where the `LogViewer` was not able to handle very large logs
+- [`4d9e3b3`](https://github.com/backstage/backstage/commit/4d9e3b3): Register component overrides in the global `OverrideComponentNameToClassKeys` provided by `@backstage/theme`. This will in turn will provide component style override types for `createUnifiedTheme`.
+- [`07dfdf3`](https://github.com/backstage/backstage/commit/07dfdf3): Updated dependency `linkifyjs` to `4.1.3`.
+- [`a518c5a`](https://github.com/backstage/backstage/commit/a518c5a): Updated dependency `@react-hookz/web` to `^23.0.0`.
+- [`f291757`](https://github.com/backstage/backstage/commit/f291757): Update `linkify-react` to version `4.1.3`
+- [`175d86b`](https://github.com/backstage/backstage/commit/175d86b): Fixed an issue where the `onChange` prop within `HeaderTabs` was triggering twice upon tab-switching.
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/core-plugin-api` (1.8.0 → 1.8.1)
+### `@backstage/core-plugin-api` (1.8.0 → [1.8.1](../../changelogs/@backstage/core-plugin-api.md#181))
 
 #### 1.8.1
 
 ##### Patch Changes
 
-- 03d0b6d: Removed the alpha `convertLegacyRouteRef` utility, which as been moved to `@backstage/core-compat-api`
-- 0c93dc3: The `createTranslationRef` function from the `/alpha` subpath can now also accept a nested object structure of default translation messages, which will be flatted using `.` separators.
+- [`03d0b6d`](https://github.com/backstage/backstage/commit/03d0b6d): Removed the alpha `convertLegacyRouteRef` utility, which as been moved to `@backstage/core-compat-api`
+- [`0c93dc3`](https://github.com/backstage/backstage/commit/0c93dc3): The `createTranslationRef` function from the `/alpha` subpath can now also accept a nested object structure of default translation messages, which will be flatted using `.` separators.
 
-### `@backstage/create-app` (0.5.7 → 0.5.8)
+### `@backstage/create-app` (0.5.7 → [0.5.8](../../changelogs/@backstage/create-app.md#058))
 
 #### 0.5.8
 
 ##### Patch Changes
 
-- 8ece804: Bumped create-app version.
-- 0351e09: Bumped create-app version.
-- 3f1192f: Bumped create-app version.
-- a96c2d4: Include the `<EntityLinksCard />` for group entities by default
-- 375b6f7: CircelCI plugin moved permanently
+- [`8ece804`](https://github.com/backstage/backstage/commit/8ece804): Bumped create-app version.
+- [`0351e09`](https://github.com/backstage/backstage/commit/0351e09): Bumped create-app version.
+- [`3f1192f`](https://github.com/backstage/backstage/commit/3f1192f): Bumped create-app version.
+- [`a96c2d4`](https://github.com/backstage/backstage/commit/a96c2d4): Include the `<EntityLinksCard />` for group entities by default
+- [`375b6f7`](https://github.com/backstage/backstage/commit/375b6f7): CircelCI plugin moved permanently
 
-### `@backstage/eslint-plugin` (0.1.3 → 0.1.4)
+### `@backstage/eslint-plugin` (0.1.3 → [0.1.4](../../changelogs/@backstage/eslint-plugin.md#014))
 
 #### 0.1.4
 
 ##### Patch Changes
 
-- 107dc46: The `no-undeclared-imports` rule will now prefer using version queries that already exist en the repo for the same dependency type when installing new packages.
+- [`107dc46`](https://github.com/backstage/backstage/commit/107dc46): The `no-undeclared-imports` rule will now prefer using version queries that already exist en the repo for the same dependency type when installing new packages.
 
-### `@backstage/plugin-adr` (0.6.10 → 0.6.11)
+### `@backstage/plugin-adr` (0.6.10 → [0.6.11](../../changelogs/@backstage/plugin-adr.md#0611))
 
 #### 0.6.11
 
 ##### Patch Changes
 
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
-- fb8f3bd: Updated alpha translation message keys to use nested format and camel case.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`fb8f3bd`](https://github.com/backstage/backstage/commit/fb8f3bd): Updated alpha translation message keys to use nested format and camel case.
 
-### `@backstage/plugin-analytics-module-ga4` (0.1.6 → 0.1.7)
+### `@backstage/plugin-analytics-module-ga4` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-analytics-module-ga4.md#017))
 
 #### 0.1.7
 
 ##### Patch Changes
 
-- af6f227: Disabled `send_page_view` to get rid of events duplication
+- [`af6f227`](https://github.com/backstage/backstage/commit/af6f227): Disabled `send_page_view` to get rid of events duplication
 
-### `@backstage/plugin-api-docs` (0.10.1 → 0.10.2)
+### `@backstage/plugin-api-docs` (0.10.1 → [0.10.2](../../changelogs/@backstage/plugin-api-docs.md#0102))
 
 #### 0.10.2
 
 ##### Patch Changes
 
-- 816d331: Add dependency on `graphql-config` to compensate for `graphql-language-service` needing it but not shipping the dep properly
-- 615159e: Updated dependency `graphiql` to `3.0.10`.
-- e16e7ce: Updated dependency `@asyncapi/react-component` to `1.2.2`.
-- 82fb18b: Updated dependency `@asyncapi/react-component` to `1.2.6`.
-- 53e2c06: Updated dependency `@asyncapi/react-component` to `1.1.0`.
+- [`816d331`](https://github.com/backstage/backstage/commit/816d331): Add dependency on `graphql-config` to compensate for `graphql-language-service` needing it but not shipping the dep properly
+- [`615159e`](https://github.com/backstage/backstage/commit/615159e): Updated dependency `graphiql` to `3.0.10`.
+- [`e16e7ce`](https://github.com/backstage/backstage/commit/e16e7ce): Updated dependency `@asyncapi/react-component` to `1.2.2`.
+- [`82fb18b`](https://github.com/backstage/backstage/commit/82fb18b): Updated dependency `@asyncapi/react-component` to `1.2.6`.
+- [`53e2c06`](https://github.com/backstage/backstage/commit/53e2c06): Updated dependency `@asyncapi/react-component` to `1.1.0`.
 
-### `@backstage/plugin-apollo-explorer` (0.1.17 → 0.1.18)
+### `@backstage/plugin-apollo-explorer` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-apollo-explorer.md#0118))
 
 #### 0.1.18
 
 ##### Patch Changes
 
-- e296b94: Updated dependency `@apollo/explorer` to `^3.0.0`.
+- [`e296b94`](https://github.com/backstage/backstage/commit/e296b94): Updated dependency `@apollo/explorer` to `^3.0.0`.
 
-### `@backstage/plugin-auth-backend` (0.20.0 → 0.20.1)
+### `@backstage/plugin-auth-backend` (0.20.0 → [0.20.1](../../changelogs/@backstage/plugin-auth-backend.md#0201))
 
 #### 0.20.1
 
 ##### Patch Changes
 
-- 7ac2575: `oauth2-proxy` auth implementation has been moved to `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`
-- 2a5891e: Migrate the atlassian auth provider to be implemented using the new `@backstage/plugin-auth-backend-module-atlassian-provider` module
-- 783797a: fix static token issuer not being able to initialize
-- e1c189b: The Okta provider implementation is moved to the new module
-- a62764b: Updated dependency `passport` to `^0.7.0`.
-- bcbbf8e: Updated dependency `@google-cloud/firestore` to `^7.0.0`.
+- [`7ac2575`](https://github.com/backstage/backstage/commit/7ac2575): `oauth2-proxy` auth implementation has been moved to `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`
+- [`2a5891e`](https://github.com/backstage/backstage/commit/2a5891e): Migrate the atlassian auth provider to be implemented using the new `@backstage/plugin-auth-backend-module-atlassian-provider` module
+- [`783797a`](https://github.com/backstage/backstage/commit/783797a): fix static token issuer not being able to initialize
+- [`e1c189b`](https://github.com/backstage/backstage/commit/e1c189b): The Okta provider implementation is moved to the new module
+- [`a62764b`](https://github.com/backstage/backstage/commit/a62764b): Updated dependency `passport` to `^0.7.0`.
+- [`bcbbf8e`](https://github.com/backstage/backstage/commit/bcbbf8e): Updated dependency `@google-cloud/firestore` to `^7.0.0`.
 
-### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.1 → 0.2.2)
+### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.1 → [0.2.2](../../changelogs/@backstage/plugin-auth-backend-module-gcp-iap-provider.md#022))
 
 #### 0.2.2
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.4 → 0.1.5)
-
-#### 0.1.5
-
-##### Patch Changes
-
-- a62764b: Updated dependency `passport` to `^0.7.0`.
-
-### `@backstage/plugin-auth-backend-module-google-provider` (0.1.4 → 0.1.5)
+### `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-auth-backend-module-gitlab-provider.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`a62764b`](https://github.com/backstage/backstage/commit/a62764b): Updated dependency `passport` to `^0.7.0`.
 
-### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.2 → 0.1.3)
+### `@backstage/plugin-auth-backend-module-google-provider` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-auth-backend-module-google-provider.md#015))
+
+#### 0.1.5
+
+##### Patch Changes
+
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
+
+### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-auth-backend-module-microsoft-provider.md#013))
 
 #### 0.1.3
 
 ##### Patch Changes
 
-- a62764b: Updated dependency `passport` to `^0.7.0`.
+- [`a62764b`](https://github.com/backstage/backstage/commit/a62764b): Updated dependency `passport` to `^0.7.0`.
 
-### `@backstage/plugin-auth-backend-module-oauth2-provider` (0.1.4 → 0.1.5)
+### `@backstage/plugin-auth-backend-module-oauth2-provider` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-auth-backend-module-oauth2-provider.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- a62764b: Updated dependency `passport` to `^0.7.0`.
+- [`a62764b`](https://github.com/backstage/backstage/commit/a62764b): Updated dependency `passport` to `^0.7.0`.
 
-### `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.1 → 0.1.2)
+### `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-auth-backend-module-pinniped-provider.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- a62764b: Updated dependency `passport` to `^0.7.0`.
+- [`a62764b`](https://github.com/backstage/backstage/commit/a62764b): Updated dependency `passport` to `^0.7.0`.
 
-### `@backstage/plugin-auth-node` (0.4.1 → 0.4.2)
+### `@backstage/plugin-auth-node` (0.4.1 → [0.4.2](../../changelogs/@backstage/plugin-auth-node.md#042))
 
 #### 0.4.2
 
 ##### Patch Changes
 
-- a62764b: Updated dependency `passport` to `^0.7.0`.
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`a62764b`](https://github.com/backstage/backstage/commit/a62764b): Updated dependency `passport` to `^0.7.0`.
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-azure-devops` (0.3.9 → 0.3.10)
+### `@backstage/plugin-azure-devops` (0.3.9 → [0.3.10](../../changelogs/@backstage/plugin-azure-devops.md#0310))
 
 #### 0.3.10
 
 ##### Patch Changes
 
-- c70e4f5: Added multi-org support
-- 7c9af0b: Added support for annotations that use a subpath for the host. Also validated that the annotations have the correct number of slashes.
-- 043b724: Introduced new `AzureDevOpsAnnotatorProcessor` that adds the needed annotations automatically. Also, moved constants to common package so they can be shared more easily
+- [`c70e4f5`](https://github.com/backstage/backstage/commit/c70e4f5): Added multi-org support
+- [`7c9af0b`](https://github.com/backstage/backstage/commit/7c9af0b): Added support for annotations that use a subpath for the host. Also validated that the annotations have the correct number of slashes.
+- [`043b724`](https://github.com/backstage/backstage/commit/043b724): Introduced new `AzureDevOpsAnnotatorProcessor` that adds the needed annotations automatically. Also, moved constants to common package so they can be shared more easily
 
-### `@backstage/plugin-azure-devops-common` (0.3.1 → 0.3.2)
+### `@backstage/plugin-azure-devops-common` (0.3.1 → [0.3.2](../../changelogs/@backstage/plugin-azure-devops-common.md#032))
 
 #### 0.3.2
 
 ##### Patch Changes
 
-- c70e4f5: Added multi-org support
-- 043b724: Introduced new `AzureDevOpsAnnotatorProcessor` that adds the needed annotations automatically. Also, moved constants to common package so they can be shared more easily
+- [`c70e4f5`](https://github.com/backstage/backstage/commit/c70e4f5): Added multi-org support
+- [`043b724`](https://github.com/backstage/backstage/commit/043b724): Introduced new `AzureDevOpsAnnotatorProcessor` that adds the needed annotations automatically. Also, moved constants to common package so they can be shared more easily
 
-### `@backstage/plugin-azure-sites-backend` (0.1.17 → 0.1.18)
+### `@backstage/plugin-azure-sites-backend` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-azure-sites-backend.md#0118))
 
 #### 0.1.18
 
 ##### Patch Changes
 
-- 99fb541: Updated dependency `@azure/identity` to `^4.0.0`.
-- b7a13ed: Updated dependency `@azure/arm-appservice` to `^14.0.0`.
+- [`99fb541`](https://github.com/backstage/backstage/commit/99fb541): Updated dependency `@azure/identity` to `^4.0.0`.
+- [`b7a13ed`](https://github.com/backstage/backstage/commit/b7a13ed): Updated dependency `@azure/arm-appservice` to `^14.0.0`.
 
-### `@backstage/plugin-bazaar` (0.2.19 → 0.2.20)
+### `@backstage/plugin-bazaar` (0.2.19 → [0.2.20](../../changelogs/@backstage/plugin-bazaar.md#0220))
 
 #### 0.2.20
 
 ##### Patch Changes
 
-- 5d79682: Internalize 'AboutField' to break catalog dependency
+- [`5d79682`](https://github.com/backstage/backstage/commit/5d79682): Internalize 'AboutField' to break catalog dependency
 
-### `@backstage/plugin-bitbucket-cloud-common` (0.2.14 → 0.2.15)
+### `@backstage/plugin-bitbucket-cloud-common` (0.2.14 → [0.2.15](../../changelogs/@backstage/plugin-bitbucket-cloud-common.md#0215))
 
 #### 0.2.15
 
 ##### Patch Changes
 
-- acf9390: Updated dependency `ts-morph` to `^20.0.0`.
+- [`acf9390`](https://github.com/backstage/backstage/commit/acf9390): Updated dependency `ts-morph` to `^20.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-aws` (0.3.1 → 0.3.2)
+### `@backstage/plugin-catalog-backend-module-aws` (0.3.1 → [0.3.2](../../changelogs/@backstage/plugin-catalog-backend-module-aws.md#032))
 
 #### 0.3.2
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-azure` (0.1.26 → 0.1.27)
+### `@backstage/plugin-catalog-backend-module-azure` (0.1.26 → [0.1.27](../../changelogs/@backstage/plugin-catalog-backend-module-azure.md#0127))
 
 #### 0.1.27
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.1.0 → 0.1.1)
+### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-catalog-backend-module-backstage-openapi.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- eb44e92: Support authenticated backends
+- [`eb44e92`](https://github.com/backstage/backstage/commit/eb44e92): Support authenticated backends
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.22 → 0.1.23)
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.22 → [0.1.23](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-cloud.md#0123))
 
 #### 0.1.23
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.20 → 0.1.21)
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.20 → [0.1.21](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-server.md#0121))
 
 #### 0.1.21
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-gcp` (0.1.7 → 0.1.8)
+### `@backstage/plugin-catalog-backend-module-gcp` (0.1.7 → [0.1.8](../../changelogs/@backstage/plugin-catalog-backend-module-gcp.md#018))
 
 #### 0.1.8
 
 ##### Patch Changes
 
-- 42c1aee: Updated dependency `@google-cloud/container` to `^5.0.0`.
-- cc4228e: Switched module ID to use kebab-case.
+- [`42c1aee`](https://github.com/backstage/backstage/commit/42c1aee): Updated dependency `@google-cloud/container` to `^5.0.0`.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.23 → 0.1.24)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.23 → [0.1.24](../../changelogs/@backstage/plugin-catalog-backend-module-gerrit.md#0124))
 
 #### 0.1.24
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-github` (0.4.5 → 0.4.6)
+### `@backstage/plugin-catalog-backend-module-github` (0.4.5 → [0.4.6](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#046))
 
 #### 0.4.6
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-github-org` (0.1.1 → 0.1.2)
+### `@backstage/plugin-catalog-backend-module-github-org` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-catalog-backend-module-github-org.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.4 → 0.3.5)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.4 → [0.3.5](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#035))
 
 #### 0.3.5
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.11 → 0.4.12)
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.11 → [0.4.12](../../changelogs/@backstage/plugin-catalog-backend-module-incremental-ingestion.md#0412))
 
 #### 0.4.12
 
 ##### Patch Changes
 
-- 43b2eb8: Ensure that cursors always come back as JSON on sqlite too
-- cc4228e: Switched module ID to use kebab-case.
+- [`43b2eb8`](https://github.com/backstage/backstage/commit/43b2eb8): Ensure that cursors always come back as JSON on sqlite too
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.14 → 0.5.15)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.14 → [0.5.15](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#0515))
 
 #### 0.5.15
 
 ##### Patch Changes
 
-- 99fb541: Updated dependency `@azure/identity` to `^4.0.0`.
+- [`99fb541`](https://github.com/backstage/backstage/commit/99fb541): Updated dependency `@azure/identity` to `^4.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.12 → 0.1.13)
+### `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.12 → [0.1.13](../../changelogs/@backstage/plugin-catalog-backend-module-puppetdb.md#0113))
 
 #### 0.1.13
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.4 → 0.1.5)
+### `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-catalog-backend-module-scaffolder-entity-model.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-backend-module-unprocessed` (0.3.4 → 0.3.5)
+### `@backstage/plugin-catalog-backend-module-unprocessed` (0.3.4 → [0.3.5](../../changelogs/@backstage/plugin-catalog-backend-module-unprocessed.md#035))
 
 #### 0.3.5
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-catalog-import` (0.10.3 → 0.10.4)
+### `@backstage/plugin-catalog-import` (0.10.3 → [0.10.4](../../changelogs/@backstage/plugin-catalog-import.md#0104))
 
 #### 0.10.4
 
 ##### Patch Changes
 
-- 03d0b6d: The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
-- a1227cc: Wrap `/alpha` export extension elements in backwards compatibility wrapper.
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`03d0b6d`](https://github.com/backstage/backstage/commit/03d0b6d): The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
+- [`a1227cc`](https://github.com/backstage/backstage/commit/a1227cc): Wrap `/alpha` export extension elements in backwards compatibility wrapper.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
 
-### `@backstage/plugin-circleci` (0.3.27 → 0.3.28)
+### `@backstage/plugin-circleci` (0.3.27 → [0.3.28](../../changelogs/@backstage/plugin-circleci.md#0328))
 
 #### 0.3.28
 
 ##### Patch Changes
 
-- 375b6f7: CircelCI plugin moved permanently
+- [`375b6f7`](https://github.com/backstage/backstage/commit/375b6f7): CircelCI plugin moved permanently
 
-### `@backstage/plugin-entity-validation` (0.1.12 → 0.1.13)
+### `@backstage/plugin-entity-validation` (0.1.12 → [0.1.13](../../changelogs/@backstage/plugin-entity-validation.md#0113))
 
 #### 0.1.13
 
 ##### Patch Changes
 
-- a518c5a: Updated dependency `@react-hookz/web` to `^23.0.0`.
+- [`a518c5a`](https://github.com/backstage/backstage/commit/a518c5a): Updated dependency `@react-hookz/web` to `^23.0.0`.
 
-### `@backstage/plugin-events-backend` (0.2.16 → 0.2.17)
+### `@backstage/plugin-events-backend` (0.2.16 → [0.2.17](../../changelogs/@backstage/plugin-events-backend.md#0217))
 
 #### 0.2.17
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-events-backend-module-aws-sqs` (0.2.10 → 0.2.11)
+### `@backstage/plugin-events-backend-module-aws-sqs` (0.2.10 → [0.2.11](../../changelogs/@backstage/plugin-events-backend-module-aws-sqs.md#0211))
 
 #### 0.2.11
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-events-backend-module-azure` (0.1.17 → 0.1.18)
-
-#### 0.1.18
-
-##### Patch Changes
-
-- cc4228e: Switched module ID to use kebab-case.
-
-### `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.1.17 → 0.1.18)
+### `@backstage/plugin-events-backend-module-azure` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-events-backend-module-azure.md#0118))
 
 #### 0.1.18
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-events-backend-module-gerrit` (0.1.17 → 0.1.18)
-
-#### 0.1.18
-
-##### Patch Changes
-
-- cc4228e: Switched module ID to use kebab-case.
-
-### `@backstage/plugin-events-backend-module-github` (0.1.17 → 0.1.18)
+### `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-events-backend-module-bitbucket-cloud.md#0118))
 
 #### 0.1.18
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-events-backend-module-gitlab` (0.1.17 → 0.1.18)
+### `@backstage/plugin-events-backend-module-gerrit` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-events-backend-module-gerrit.md#0118))
 
 #### 0.1.18
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-explore` (0.4.13 → 0.4.14)
+### `@backstage/plugin-events-backend-module-github` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-events-backend-module-github.md#0118))
+
+#### 0.1.18
+
+##### Patch Changes
+
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
+
+### `@backstage/plugin-events-backend-module-gitlab` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-events-backend-module-gitlab.md#0118))
+
+#### 0.1.18
+
+##### Patch Changes
+
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
+
+### `@backstage/plugin-explore` (0.4.13 → [0.4.14](../../changelogs/@backstage/plugin-explore.md#0414))
 
 #### 0.4.14
 
 ##### Patch Changes
 
-- aac659e: Added option to set `Direction` for the graph in the `GroupsDiagram`
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`aac659e`](https://github.com/backstage/backstage/commit/aac659e): Added option to set `Direction` for the graph in the `GroupsDiagram`
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
 
-### `@backstage/plugin-gcp-projects` (0.3.43 → 0.3.44)
+### `@backstage/plugin-gcp-projects` (0.3.43 → [0.3.44](../../changelogs/@backstage/plugin-gcp-projects.md#0344))
 
 #### 0.3.44
 
 ##### Patch Changes
 
-- a518c5a: Updated dependency `@react-hookz/web` to `^23.0.0`.
-- d2f5662: Fix query parameter for project details page which should point to projectId rather than project name
+- [`a518c5a`](https://github.com/backstage/backstage/commit/a518c5a): Updated dependency `@react-hookz/web` to `^23.0.0`.
+- [`d2f5662`](https://github.com/backstage/backstage/commit/d2f5662): Fix query parameter for project details page which should point to projectId rather than project name
 
-### `@backstage/plugin-github-actions` (0.6.8 → 0.6.9)
+### `@backstage/plugin-github-actions` (0.6.8 → [0.6.9](../../changelogs/@backstage/plugin-github-actions.md#069))
 
 #### 0.6.9
 
 ##### Patch Changes
 
-- 08d7e46: Github Workflow Runs UI is modified to show in optional Card view instead of table, with branch selection option
+- [`08d7e46`](https://github.com/backstage/backstage/commit/08d7e46): Github Workflow Runs UI is modified to show in optional Card view instead of table, with branch selection option
 
-### `@backstage/plugin-graphiql` (0.3.0 → 0.3.1)
+### `@backstage/plugin-graphiql` (0.3.0 → [0.3.1](../../changelogs/@backstage/plugin-graphiql.md#031))
 
 #### 0.3.1
 
 ##### Patch Changes
 
-- 03d0b6d: The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
-- a1227cc: Wrap `/alpha` export extension elements in backwards compatibility wrapper.
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 8f5d6c1: Updates to the `/alpha` exports to match the extension input wrapping change.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`03d0b6d`](https://github.com/backstage/backstage/commit/03d0b6d): The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
+- [`a1227cc`](https://github.com/backstage/backstage/commit/a1227cc): Wrap `/alpha` export extension elements in backwards compatibility wrapper.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`8f5d6c1`](https://github.com/backstage/backstage/commit/8f5d6c1): Updates to the `/alpha` exports to match the extension input wrapping change.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
 
-### `@backstage/plugin-home-react` (0.1.5 → 0.1.6)
+### `@backstage/plugin-home-react` (0.1.5 → [0.1.6](../../changelogs/@backstage/plugin-home-react.md#016))
 
 #### 0.1.6
 
 ##### Patch Changes
 
-- 2b72591: Updated dependency `@rjsf/utils` to `5.14.3`.
+- [`2b72591`](https://github.com/backstage/backstage/commit/2b72591): Updated dependency `@rjsf/utils` to `5.14.3`.
   Updated dependency `@rjsf/core` to `5.14.3`.
   Updated dependency `@rjsf/material-ui` to `5.14.3`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.3`.
-- 6cd12f2: Updated dependency `@rjsf/utils` to `5.14.1`.
+- [`6cd12f2`](https://github.com/backstage/backstage/commit/6cd12f2): Updated dependency `@rjsf/utils` to `5.14.1`.
   Updated dependency `@rjsf/core` to `5.14.1`.
   Updated dependency `@rjsf/material-ui` to `5.14.1`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.1`.
-- 64301d3: Updated dependency `@rjsf/utils` to `5.15.0`.
+- [`64301d3`](https://github.com/backstage/backstage/commit/64301d3): Updated dependency `@rjsf/utils` to `5.15.0`.
   Updated dependency `@rjsf/core` to `5.15.0`.
   Updated dependency `@rjsf/material-ui` to `5.15.0`.
   Updated dependency `@rjsf/validator-ajv8` to `5.15.0`.
-- 63c494e: Updated dependency `@rjsf/utils` to `5.14.2`.
+- [`63c494e`](https://github.com/backstage/backstage/commit/63c494e): Updated dependency `@rjsf/utils` to `5.14.2`.
   Updated dependency `@rjsf/core` to `5.14.2`.
   Updated dependency `@rjsf/material-ui` to `5.14.2`.
   Updated dependency `@rjsf/validator-ajv8` to `5.14.2`.
 
-### `@backstage/plugin-kubernetes-common` (0.7.1 → 0.7.2)
+### `@backstage/plugin-kubernetes-common` (0.7.1 → [0.7.2](../../changelogs/@backstage/plugin-kubernetes-common.md#072))
 
 #### 0.7.2
 
 ##### Patch Changes
 
-- 706fc3a: Updated dependency `@kubernetes/client-node` to `0.20.0`.
-- 5d79682: Remove unused dependency
+- [`706fc3a`](https://github.com/backstage/backstage/commit/706fc3a): Updated dependency `@kubernetes/client-node` to `0.20.0`.
+- [`5d79682`](https://github.com/backstage/backstage/commit/5d79682): Remove unused dependency
 
-### `@backstage/plugin-kubernetes-node` (0.1.1 → 0.1.2)
+### `@backstage/plugin-kubernetes-node` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-kubernetes-node.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- 6010564: The `kubernetes-node` plugin has been modified to house a new extension points for Kubernetes backend plugin;
+- [`6010564`](https://github.com/backstage/backstage/commit/6010564): The `kubernetes-node` plugin has been modified to house a new extension points for Kubernetes backend plugin;
   `KubernetesClusterSupplierExtensionPoint` is introduced .
   `kubernetesAuthStrategyExtensionPoint` is introduced .
   `kubernetesFetcherExtensionPoint` is introduced .
@@ -1312,381 +1312,381 @@ Changes between 1.20.4 and 1.21.0 — 220 changed and 10 added packages.
 
   The `kubernetes-backend` plugin was modified to use this new extension point.
 
-### `@backstage/plugin-lighthouse` (0.4.12 → 0.4.13)
+### `@backstage/plugin-lighthouse` (0.4.12 → [0.4.13](../../changelogs/@backstage/plugin-lighthouse.md#0413))
 
 #### 0.4.13
 
 ##### Patch Changes
 
-- ffbf656: Updated README
+- [`ffbf656`](https://github.com/backstage/backstage/commit/ffbf656): Updated README
 
-### `@backstage/plugin-org` (0.6.17 → 0.6.18)
+### `@backstage/plugin-org` (0.6.17 → [0.6.18](../../changelogs/@backstage/plugin-org.md#0618))
 
 #### 0.6.18
 
 ##### Patch Changes
 
-- 59c24b9: Fix issue where members inside of `<EntityMembersListCard>` would be rendered as squished when the card itself was shrunk down.
-- 3a65d9c: Support member list scrollable when parent has specified height
-- 4785d05: Add permission check to catalog create and refresh button
+- [`59c24b9`](https://github.com/backstage/backstage/commit/59c24b9): Fix issue where members inside of `<EntityMembersListCard>` would be rendered as squished when the card itself was shrunk down.
+- [`3a65d9c`](https://github.com/backstage/backstage/commit/3a65d9c): Support member list scrollable when parent has specified height
+- [`4785d05`](https://github.com/backstage/backstage/commit/4785d05): Add permission check to catalog create and refresh button
 
-### `@backstage/plugin-permission-backend` (0.5.30 → 0.5.31)
+### `@backstage/plugin-permission-backend` (0.5.30 → [0.5.31](../../changelogs/@backstage/plugin-permission-backend.md#0531))
 
 #### 0.5.31
 
 ##### Patch Changes
 
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.4 → 0.1.5)
+### `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-permission-backend-module-allow-all-policy.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-permission-common` (0.7.10 → 0.7.11)
+### `@backstage/plugin-permission-common` (0.7.10 → [0.7.11](../../changelogs/@backstage/plugin-permission-common.md#0711))
 
 #### 0.7.11
 
 ##### Patch Changes
 
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-permission-node` (0.7.18 → 0.7.19)
+### `@backstage/plugin-permission-node` (0.7.18 → [0.7.19](../../changelogs/@backstage/plugin-permission-node.md#0719))
 
 #### 0.7.19
 
 ##### Patch Changes
 
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-playlist-backend` (0.3.11 → 0.3.12)
+### `@backstage/plugin-playlist-backend` (0.3.11 → [0.3.12](../../changelogs/@backstage/plugin-playlist-backend.md#0312))
 
 #### 0.3.12
 
 ##### Patch Changes
 
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-scaffolder-backend` (1.19.1 → 1.19.2)
+### `@backstage/plugin-scaffolder-backend` (1.19.1 → [1.19.2](../../changelogs/@backstage/plugin-scaffolder-backend.md#1192))
 
 #### 1.19.2
 
 ##### Patch Changes
 
-- 219d7f0: Refactor some methods to `-node` instead and use the new external modules
-- aff34fc: Fix issue with Circular JSON dependencies in templating
-- 48667b4: Fix creating env secret in github:environment:create action
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
-- 28949ea: Add a new action for creating github-autolink references for a repository: `github:autolinks:create`
+- [`219d7f0`](https://github.com/backstage/backstage/commit/219d7f0): Refactor some methods to `-node` instead and use the new external modules
+- [`aff34fc`](https://github.com/backstage/backstage/commit/aff34fc): Fix issue with Circular JSON dependencies in templating
+- [`48667b4`](https://github.com/backstage/backstage/commit/48667b4): Fix creating env secret in github:environment:create action
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`28949ea`](https://github.com/backstage/backstage/commit/28949ea): Add a new action for creating github-autolink references for a repository: `github:autolinks:create`
 
-### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.2.10 → 0.2.11)
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.2.10 → [0.2.11](../../changelogs/@backstage/plugin-scaffolder-backend-module-gitlab.md#0211))
 
 #### 0.2.11
 
 ##### Patch Changes
 
-- 219d7f0: Extract some more actions to this library
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`219d7f0`](https://github.com/backstage/backstage/commit/219d7f0): Extract some more actions to this library
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.15 → 0.1.16)
+### `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.15 → [0.1.16](../../changelogs/@backstage/plugin-scaffolder-backend-module-sentry.md#0116))
 
 #### 0.1.16
 
 ##### Patch Changes
 
-- 7f8a801: Added examples for `sentry:project:create` scaffolder action and unit tests.
+- [`7f8a801`](https://github.com/backstage/backstage/commit/7f8a801): Added examples for `sentry:project:create` scaffolder action and unit tests.
 
-### `@backstage/plugin-scaffolder-node` (0.2.8 → 0.2.9)
+### `@backstage/plugin-scaffolder-node` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-scaffolder-node.md#029))
 
 #### 0.2.9
 
 ##### Patch Changes
 
-- 219d7f0: Refactor some methods to `-node` instead and use the new external modules
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`219d7f0`](https://github.com/backstage/backstage/commit/219d7f0): Refactor some methods to `-node` instead and use the new external modules
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-search` (1.4.3 → 1.4.4)
+### `@backstage/plugin-search` (1.4.3 → [1.4.4](../../changelogs/@backstage/plugin-search.md#144))
 
 #### 1.4.4
 
 ##### Patch Changes
 
-- 03d0b6d: The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
-- a1227cc: Wrap `/alpha` export extension elements in backwards compatibility wrapper.
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 8f5d6c1: Updates to the `/alpha` exports to match the extension input wrapping change.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`03d0b6d`](https://github.com/backstage/backstage/commit/03d0b6d): The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
+- [`a1227cc`](https://github.com/backstage/backstage/commit/a1227cc): Wrap `/alpha` export extension elements in backwards compatibility wrapper.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`8f5d6c1`](https://github.com/backstage/backstage/commit/8f5d6c1): Updates to the `/alpha` exports to match the extension input wrapping change.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
 
-### `@backstage/plugin-search-backend` (1.4.7 → 1.4.8)
+### `@backstage/plugin-search-backend` (1.4.7 → [1.4.8](../../changelogs/@backstage/plugin-search-backend.md#148))
 
 #### 1.4.8
 
 ##### Patch Changes
 
-- 0cbb03b: Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
+- [`0cbb03b`](https://github.com/backstage/backstage/commit/0cbb03b): Fixing regular expression ReDoS with zod packages. Upgrading to latest. ref: https://security.snyk.io/vuln/SNYK-JS-ZOD-5925617
 
-### `@backstage/plugin-search-backend-module-catalog` (0.1.11 → 0.1.12)
+### `@backstage/plugin-search-backend-module-catalog` (0.1.11 → [0.1.12](../../changelogs/@backstage/plugin-search-backend-module-catalog.md#0112))
 
 #### 0.1.12
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-search-backend-module-elasticsearch` (1.3.10 → 1.3.11)
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.3.10 → [1.3.11](../../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#1311))
 
 #### 1.3.11
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-search-backend-module-explore` (0.1.11 → 0.1.12)
+### `@backstage/plugin-search-backend-module-explore` (0.1.11 → [0.1.12](../../changelogs/@backstage/plugin-search-backend-module-explore.md#0112))
 
 #### 0.1.12
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-search-backend-module-pg` (0.5.16 → 0.5.17)
+### `@backstage/plugin-search-backend-module-pg` (0.5.16 → [0.5.17](../../changelogs/@backstage/plugin-search-backend-module-pg.md#0517))
 
 #### 0.5.17
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.0 → 0.1.1)
+### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-search-backend-module-stack-overflow-collator.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-search-backend-module-techdocs` (0.1.11 → 0.1.12)
+### `@backstage/plugin-search-backend-module-techdocs` (0.1.11 → [0.1.12](../../changelogs/@backstage/plugin-search-backend-module-techdocs.md#0112))
 
 #### 0.1.12
 
 ##### Patch Changes
 
-- cc4228e: Switched module ID to use kebab-case.
+- [`cc4228e`](https://github.com/backstage/backstage/commit/cc4228e): Switched module ID to use kebab-case.
 
-### `@backstage/plugin-search-react` (1.7.3 → 1.7.4)
+### `@backstage/plugin-search-react` (1.7.3 → [1.7.4](../../changelogs/@backstage/plugin-search-react.md#174))
 
 #### 1.7.4
 
 ##### Patch Changes
 
-- a5a0473: Internal refactor of alpha exports due to a change in how extension factories are defined.
-- 84dabc5: Removed `@backstage/frontend-app-api` dependency.
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 6f280fa: Capture analytics even when number of results is not available, since the total result count is not something that is always available for all search engines and configurations.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`a5a0473`](https://github.com/backstage/backstage/commit/a5a0473): Internal refactor of alpha exports due to a change in how extension factories are defined.
+- [`84dabc5`](https://github.com/backstage/backstage/commit/84dabc5): Removed `@backstage/frontend-app-api` dependency.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`6f280fa`](https://github.com/backstage/backstage/commit/6f280fa): Capture analytics even when number of results is not available, since the total result count is not something that is always available for all search engines and configurations.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
 
-### `@backstage/plugin-stack-overflow` (0.1.22 → 0.1.23)
+### `@backstage/plugin-stack-overflow` (0.1.22 → [0.1.23](../../changelogs/@backstage/plugin-stack-overflow.md#0123))
 
 #### 0.1.23
 
 ##### Patch Changes
 
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
 
-### `@backstage/plugin-tech-radar` (0.6.10 → 0.6.11)
+### `@backstage/plugin-tech-radar` (0.6.10 → [0.6.11](../../changelogs/@backstage/plugin-tech-radar.md#0611))
 
 #### 0.6.11
 
 ##### Patch Changes
 
-- 03d0b6d: The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
-- a1227cc: Wrap `/alpha` export extension elements in backwards compatibility wrapper.
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`03d0b6d`](https://github.com/backstage/backstage/commit/03d0b6d): The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
+- [`a1227cc`](https://github.com/backstage/backstage/commit/a1227cc): Wrap `/alpha` export extension elements in backwards compatibility wrapper.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
 
-### `@backstage/plugin-techdocs` (1.9.1 → 1.9.2)
+### `@backstage/plugin-techdocs` (1.9.1 → [1.9.2](../../changelogs/@backstage/plugin-techdocs.md#192))
 
 #### 1.9.2
 
 ##### Patch Changes
 
-- 03d0b6d: The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
-- a1227cc: Wrap `/alpha` export extension elements in backwards compatibility wrapper.
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`03d0b6d`](https://github.com/backstage/backstage/commit/03d0b6d): The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
+- [`a1227cc`](https://github.com/backstage/backstage/commit/a1227cc): Wrap `/alpha` export extension elements in backwards compatibility wrapper.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
 
-### `@backstage/plugin-techdocs-addons-test-utils` (1.0.24 → 1.0.25)
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.24 → [1.0.25](../../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#1025))
 
 #### 1.0.25
 
 ##### Patch Changes
 
-- 3f354e6: Move `@testing-library/react` to be a `peerDependency`
-- 5d79682: Remove unnecessary catalog dependency
+- [`3f354e6`](https://github.com/backstage/backstage/commit/3f354e6): Move `@testing-library/react` to be a `peerDependency`
+- [`5d79682`](https://github.com/backstage/backstage/commit/5d79682): Remove unnecessary catalog dependency
 
-### `@backstage/plugin-techdocs-backend` (1.9.0 → 1.9.1)
+### `@backstage/plugin-techdocs-backend` (1.9.0 → [1.9.1](../../changelogs/@backstage/plugin-techdocs-backend.md#191))
 
 #### 1.9.1
 
 ##### Patch Changes
 
-- a402644: Regenerates a fresh token for each call to the search index when collating techdocs.
+- [`a402644`](https://github.com/backstage/backstage/commit/a402644): Regenerates a fresh token for each call to the search index when collating techdocs.
 
-### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.2 → 1.1.3)
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.2 → [1.1.3](../../changelogs/@backstage/plugin-techdocs-module-addons-contrib.md#113))
 
 #### 1.1.3
 
 ##### Patch Changes
 
-- a518c5a: Updated dependency `@react-hookz/web` to `^23.0.0`.
+- [`a518c5a`](https://github.com/backstage/backstage/commit/a518c5a): Updated dependency `@react-hookz/web` to `^23.0.0`.
 
-### `@backstage/plugin-user-settings` (0.7.13 → 0.7.14)
+### `@backstage/plugin-user-settings` (0.7.13 → [0.7.14](../../changelogs/@backstage/plugin-user-settings.md#0714))
 
 #### 0.7.14
 
 ##### Patch Changes
 
-- 03d0b6d: The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
-- a1227cc: Wrap `/alpha` export extension elements in backwards compatibility wrapper.
-- 5814122: Updated `/alpha` exports to fit new naming patterns.
-- 8f5d6c1: Updates to the `/alpha` exports to match the extension input wrapping change.
-- 36c94b8: Refactor of the alpha exports due to API change in how extension IDs are constructed.
-- fb8f3bd: Updated alpha translation message keys to use nested format and camel case.
+- [`03d0b6d`](https://github.com/backstage/backstage/commit/03d0b6d): The `convertLegacyRouteRef` utility used by the alpha exports is now imported from `@backstage/core-compat-api`.
+- [`a1227cc`](https://github.com/backstage/backstage/commit/a1227cc): Wrap `/alpha` export extension elements in backwards compatibility wrapper.
+- [`5814122`](https://github.com/backstage/backstage/commit/5814122): Updated `/alpha` exports to fit new naming patterns.
+- [`8f5d6c1`](https://github.com/backstage/backstage/commit/8f5d6c1): Updates to the `/alpha` exports to match the extension input wrapping change.
+- [`36c94b8`](https://github.com/backstage/backstage/commit/36c94b8): Refactor of the alpha exports due to API change in how extension IDs are constructed.
+- [`fb8f3bd`](https://github.com/backstage/backstage/commit/fb8f3bd): Updated alpha translation message keys to use nested format and camel case.
 
-### `@backstage/plugin-user-settings-backend` (0.2.6 → 0.2.7)
+### `@backstage/plugin-user-settings-backend` (0.2.6 → [0.2.7](../../changelogs/@backstage/plugin-user-settings-backend.md#027))
 
 #### 0.2.7
 
 ##### Patch Changes
 
-- 2633d64: Change user settings backend plugin id and fix when using user setting backend home page first will cause edit page loop render
+- [`2633d64`](https://github.com/backstage/backstage/commit/2633d64): Change user settings backend plugin id and fix when using user setting backend home page first will cause edit page loop render
 
-### `@backstage/plugin-vault-backend` (0.4.0 → 0.4.1)
+### `@backstage/plugin-vault-backend` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-vault-backend.md#041))
 
 #### 0.4.1
 
 ##### Patch Changes
 
-- b7de76a: Updated to test using PostgreSQL 12 and 16
+- [`b7de76a`](https://github.com/backstage/backstage/commit/b7de76a): Updated to test using PostgreSQL 12 and 16
 
-### `@backstage/test-utils` (1.4.5 → 1.4.6)
+### `@backstage/test-utils` (1.4.5 → [1.4.6](../../changelogs/@backstage/test-utils.md#146))
 
 #### 1.4.6
 
 ##### Patch Changes
 
-- e8f2ace: Deprecated `mockBreakpoint`, as it is now available from `@backstage/core-components/testUtils` instead.
+- [`e8f2ace`](https://github.com/backstage/backstage/commit/e8f2ace): Deprecated `mockBreakpoint`, as it is now available from `@backstage/core-components/testUtils` instead.
 
 ## Excluded dependency updates
 
-- `@backstage/app-defaults` (1.4.5 → 1.4.6)
-- `@backstage/backend-defaults` (0.2.7 → 0.2.8)
-- `@backstage/backend-plugin-api` (0.6.7 → 0.6.8)
-- `@backstage/dev-utils` (1.0.24 → 1.0.25)
-- `@backstage/integration-react` (1.1.21 → 1.1.22)
-- `@backstage/plugin-adr-backend` (0.4.4 → 0.4.5)
-- `@backstage/plugin-adr-common` (0.2.17 → 0.2.18)
-- `@backstage/plugin-airbrake` (0.3.27 → 0.3.28)
-- `@backstage/plugin-airbrake-backend` (0.3.4 → 0.3.5)
-- `@backstage/plugin-allure` (0.1.43 → 0.1.44)
-- `@backstage/plugin-analytics-module-ga` (0.1.35 → 0.1.36)
-- `@backstage/plugin-analytics-module-newrelic-browser` (0.0.4 → 0.0.5)
-- `@backstage/plugin-apache-airflow` (0.2.17 → 0.2.18)
-- `@backstage/plugin-app-backend` (0.3.55 → 0.3.56)
-- `@backstage/plugin-app-node` (0.1.7 → 0.1.8)
-- `@backstage/plugin-auth-backend-module-github-provider` (0.1.4 → 0.1.5)
-- `@backstage/plugin-azure-sites` (0.1.16 → 0.1.17)
-- `@backstage/plugin-badges` (0.2.51 → 0.2.52)
-- `@backstage/plugin-badges-backend` (0.3.4 → 0.3.5)
-- `@backstage/plugin-bazaar-backend` (0.3.5 → 0.3.6)
-- `@backstage/plugin-bitrise` (0.1.54 → 0.1.55)
-- `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.22 → 0.2.23)
-- `@backstage/plugin-catalog-backend-module-ldap` (0.5.22 → 0.5.23)
-- `@backstage/plugin-catalog-backend-module-openapi` (0.1.24 → 0.1.25)
-- `@backstage/plugin-catalog-common` (1.0.18 → 1.0.19)
-- `@backstage/plugin-catalog-graph` (0.3.1 → 0.3.2)
-- `@backstage/plugin-catalog-unprocessed-entities` (0.1.5 → 0.1.6)
-- `@backstage/plugin-cicd-statistics` (0.1.29 → 0.1.30)
-- `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.23 → 0.1.24)
-- `@backstage/plugin-cloudbuild` (0.3.27 → 0.3.28)
-- `@backstage/plugin-code-climate` (0.1.27 → 0.1.28)
-- `@backstage/plugin-code-coverage` (0.2.20 → 0.2.21)
-- `@backstage/plugin-code-coverage-backend` (0.2.21 → 0.2.22)
-- `@backstage/plugin-codescene` (0.1.19 → 0.1.20)
-- `@backstage/plugin-config-schema` (0.1.47 → 0.1.48)
-- `@backstage/plugin-cost-insights` (0.12.16 → 0.12.17)
-- `@backstage/plugin-devtools` (0.1.6 → 0.1.7)
-- `@backstage/plugin-devtools-backend` (0.2.4 → 0.2.5)
-- `@backstage/plugin-devtools-common` (0.1.6 → 0.1.7)
-- `@backstage/plugin-dynatrace` (8.0.1 → 8.0.2)
-- `@backstage/plugin-entity-feedback` (0.2.10 → 0.2.11)
-- `@backstage/plugin-entity-feedback-backend` (0.2.4 → 0.2.5)
-- `@backstage/plugin-events-backend-test-utils` (0.1.17 → 0.1.18)
-- `@backstage/plugin-events-node` (0.2.16 → 0.2.17)
-- `@backstage/plugin-explore-backend` (0.0.17 → 0.0.18)
-- `@backstage/plugin-explore-react` (0.0.33 → 0.0.34)
-- `@backstage/plugin-firehydrant` (0.2.11 → 0.2.12)
-- `@backstage/plugin-fossa` (0.2.59 → 0.2.60)
-- `@backstage/plugin-gcalendar` (0.3.20 → 0.3.21)
-- `@backstage/plugin-git-release-manager` (0.3.39 → 0.3.40)
-- `@backstage/plugin-github-deployments` (0.1.58 → 0.1.59)
-- `@backstage/plugin-github-issues` (0.2.16 → 0.2.17)
-- `@backstage/plugin-github-pull-requests-board` (0.1.21 → 0.1.22)
-- `@backstage/plugin-gitops-profiles` (0.3.42 → 0.3.43)
-- `@backstage/plugin-gocd` (0.1.33 → 0.1.34)
-- `@backstage/plugin-graphql-voyager` (0.1.9 → 0.1.10)
-- `@backstage/plugin-ilert` (0.2.16 → 0.2.17)
-- `@backstage/plugin-jenkins` (0.9.2 → 0.9.3)
-- `@backstage/plugin-jenkins-backend` (0.3.1 → 0.3.2)
-- `@backstage/plugin-jenkins-common` (0.1.21 → 0.1.22)
-- `@backstage/plugin-kafka` (0.3.27 → 0.3.28)
-- `@backstage/plugin-kafka-backend` (0.3.5 → 0.3.6)
-- `@backstage/plugin-kubernetes-cluster` (0.0.3 → 0.0.4)
-- `@backstage/plugin-linguist` (0.1.12 → 0.1.13)
-- `@backstage/plugin-linguist-backend` (0.5.4 → 0.5.5)
-- `@backstage/plugin-microsoft-calendar` (0.1.9 → 0.1.10)
-- `@backstage/plugin-newrelic` (0.3.42 → 0.3.43)
-- `@backstage/plugin-newrelic-dashboard` (0.3.2 → 0.3.3)
-- `@backstage/plugin-nomad` (0.1.8 → 0.1.9)
-- `@backstage/plugin-nomad-backend` (0.1.9 → 0.1.10)
-- `@backstage/plugin-octopus-deploy` (0.2.9 → 0.2.10)
-- `@backstage/plugin-opencost` (0.2.2 → 0.2.3)
-- `@backstage/plugin-org-react` (0.1.16 → 0.1.17)
-- `@backstage/plugin-periskop` (0.1.25 → 0.1.26)
-- `@backstage/plugin-periskop-backend` (0.2.5 → 0.2.6)
-- `@backstage/plugin-permission-react` (0.4.17 → 0.4.18)
-- `@backstage/plugin-playlist` (0.2.1 → 0.2.2)
-- `@backstage/plugin-playlist-common` (0.1.12 → 0.1.13)
-- `@backstage/plugin-proxy-backend` (0.4.5 → 0.4.6)
-- `@backstage/plugin-puppetdb` (0.1.10 → 0.1.11)
-- `@backstage/plugin-rollbar` (0.4.27 → 0.4.28)
-- `@backstage/plugin-rollbar-backend` (0.1.52 → 0.1.53)
-- `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.8 → 0.2.9)
-- `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.31 → 0.2.32)
-- `@backstage/plugin-scaffolder-backend-module-rails` (0.4.24 → 0.4.25)
-- `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.28 → 0.2.29)
-- `@backstage/plugin-scaffolder-common` (1.4.3 → 1.4.4)
-- `@backstage/plugin-search-backend-node` (1.2.11 → 1.2.12)
-- `@backstage/plugin-search-common` (1.2.8 → 1.2.9)
-- `@backstage/plugin-sentry` (0.5.12 → 0.5.13)
-- `@backstage/plugin-shortcuts` (0.3.16 → 0.3.17)
-- `@backstage/plugin-sonarqube` (0.7.9 → 0.7.10)
-- `@backstage/plugin-sonarqube-backend` (0.2.9 → 0.2.10)
-- `@backstage/plugin-sonarqube-react` (0.1.10 → 0.1.11)
-- `@backstage/plugin-splunk-on-call` (0.4.16 → 0.4.17)
-- `@backstage/plugin-stack-overflow-backend` (0.2.11 → 0.2.12)
-- `@backstage/plugin-stackstorm` (0.1.8 → 0.1.9)
-- `@backstage/plugin-tech-insights` (0.3.19 → 0.3.20)
-- `@backstage/plugin-tech-insights-backend` (0.5.21 → 0.5.22)
-- `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.39 → 0.1.40)
-- `@backstage/plugin-tech-insights-node` (0.4.13 → 0.4.14)
-- `@backstage/plugin-techdocs-react` (1.1.13 → 1.1.14)
-- `@backstage/plugin-todo` (0.2.31 → 0.2.32)
-- `@backstage/plugin-todo-backend` (0.3.5 → 0.3.6)
-- `@backstage/plugin-vault` (0.1.22 → 0.1.23)
-- `@backstage/plugin-vault-node` (0.1.0 → 0.1.1)
-- `@backstage/plugin-xcmetrics` (0.2.45 → 0.2.46)
+- `@backstage/app-defaults` (1.4.5 → [1.4.6](../../changelogs/@backstage/app-defaults.md#146))
+- `@backstage/backend-defaults` (0.2.7 → [0.2.8](../../changelogs/@backstage/backend-defaults.md#028))
+- `@backstage/backend-plugin-api` (0.6.7 → [0.6.8](../../changelogs/@backstage/backend-plugin-api.md#068))
+- `@backstage/dev-utils` (1.0.24 → [1.0.25](../../changelogs/@backstage/dev-utils.md#1025))
+- `@backstage/integration-react` (1.1.21 → [1.1.22](../../changelogs/@backstage/integration-react.md#1122))
+- `@backstage/plugin-adr-backend` (0.4.4 → [0.4.5](../../changelogs/@backstage/plugin-adr-backend.md#045))
+- `@backstage/plugin-adr-common` (0.2.17 → [0.2.18](../../changelogs/@backstage/plugin-adr-common.md#0218))
+- `@backstage/plugin-airbrake` (0.3.27 → [0.3.28](../../changelogs/@backstage/plugin-airbrake.md#0328))
+- `@backstage/plugin-airbrake-backend` (0.3.4 → [0.3.5](../../changelogs/@backstage/plugin-airbrake-backend.md#035))
+- `@backstage/plugin-allure` (0.1.43 → [0.1.44](../../changelogs/@backstage/plugin-allure.md#0144))
+- `@backstage/plugin-analytics-module-ga` (0.1.35 → [0.1.36](../../changelogs/@backstage/plugin-analytics-module-ga.md#0136))
+- `@backstage/plugin-analytics-module-newrelic-browser` (0.0.4 → [0.0.5](../../changelogs/@backstage/plugin-analytics-module-newrelic-browser.md#005))
+- `@backstage/plugin-apache-airflow` (0.2.17 → [0.2.18](../../changelogs/@backstage/plugin-apache-airflow.md#0218))
+- `@backstage/plugin-app-backend` (0.3.55 → [0.3.56](../../changelogs/@backstage/plugin-app-backend.md#0356))
+- `@backstage/plugin-app-node` (0.1.7 → [0.1.8](../../changelogs/@backstage/plugin-app-node.md#018))
+- `@backstage/plugin-auth-backend-module-github-provider` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-auth-backend-module-github-provider.md#015))
+- `@backstage/plugin-azure-sites` (0.1.16 → [0.1.17](../../changelogs/@backstage/plugin-azure-sites.md#0117))
+- `@backstage/plugin-badges` (0.2.51 → [0.2.52](../../changelogs/@backstage/plugin-badges.md#0252))
+- `@backstage/plugin-badges-backend` (0.3.4 → [0.3.5](../../changelogs/@backstage/plugin-badges-backend.md#035))
+- `@backstage/plugin-bazaar-backend` (0.3.5 → [0.3.6](../../changelogs/@backstage/plugin-bazaar-backend.md#036))
+- `@backstage/plugin-bitrise` (0.1.54 → [0.1.55](../../changelogs/@backstage/plugin-bitrise.md#0155))
+- `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.22 → [0.2.23](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket.md#0223))
+- `@backstage/plugin-catalog-backend-module-ldap` (0.5.22 → [0.5.23](../../changelogs/@backstage/plugin-catalog-backend-module-ldap.md#0523))
+- `@backstage/plugin-catalog-backend-module-openapi` (0.1.24 → [0.1.25](../../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#0125))
+- `@backstage/plugin-catalog-common` (1.0.18 → [1.0.19](../../changelogs/@backstage/plugin-catalog-common.md#1019))
+- `@backstage/plugin-catalog-graph` (0.3.1 → [0.3.2](../../changelogs/@backstage/plugin-catalog-graph.md#032))
+- `@backstage/plugin-catalog-unprocessed-entities` (0.1.5 → [0.1.6](../../changelogs/@backstage/plugin-catalog-unprocessed-entities.md#016))
+- `@backstage/plugin-cicd-statistics` (0.1.29 → [0.1.30](../../changelogs/@backstage/plugin-cicd-statistics.md#0130))
+- `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.23 → [0.1.24](../../changelogs/@backstage/plugin-cicd-statistics-module-gitlab.md#0124))
+- `@backstage/plugin-cloudbuild` (0.3.27 → [0.3.28](../../changelogs/@backstage/plugin-cloudbuild.md#0328))
+- `@backstage/plugin-code-climate` (0.1.27 → [0.1.28](../../changelogs/@backstage/plugin-code-climate.md#0128))
+- `@backstage/plugin-code-coverage` (0.2.20 → [0.2.21](../../changelogs/@backstage/plugin-code-coverage.md#0221))
+- `@backstage/plugin-code-coverage-backend` (0.2.21 → [0.2.22](../../changelogs/@backstage/plugin-code-coverage-backend.md#0222))
+- `@backstage/plugin-codescene` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-codescene.md#0120))
+- `@backstage/plugin-config-schema` (0.1.47 → [0.1.48](../../changelogs/@backstage/plugin-config-schema.md#0148))
+- `@backstage/plugin-cost-insights` (0.12.16 → [0.12.17](../../changelogs/@backstage/plugin-cost-insights.md#01217))
+- `@backstage/plugin-devtools` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-devtools.md#017))
+- `@backstage/plugin-devtools-backend` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-devtools-backend.md#025))
+- `@backstage/plugin-devtools-common` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-devtools-common.md#017))
+- `@backstage/plugin-dynatrace` (8.0.1 → [8.0.2](../../changelogs/@backstage/plugin-dynatrace.md#802))
+- `@backstage/plugin-entity-feedback` (0.2.10 → [0.2.11](../../changelogs/@backstage/plugin-entity-feedback.md#0211))
+- `@backstage/plugin-entity-feedback-backend` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-entity-feedback-backend.md#025))
+- `@backstage/plugin-events-backend-test-utils` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-events-backend-test-utils.md#0118))
+- `@backstage/plugin-events-node` (0.2.16 → [0.2.17](../../changelogs/@backstage/plugin-events-node.md#0217))
+- `@backstage/plugin-explore-backend` (0.0.17 → [0.0.18](../../changelogs/@backstage/plugin-explore-backend.md#0018))
+- `@backstage/plugin-explore-react` (0.0.33 → [0.0.34](../../changelogs/@backstage/plugin-explore-react.md#0034))
+- `@backstage/plugin-firehydrant` (0.2.11 → [0.2.12](../../changelogs/@backstage/plugin-firehydrant.md#0212))
+- `@backstage/plugin-fossa` (0.2.59 → [0.2.60](../../changelogs/@backstage/plugin-fossa.md#0260))
+- `@backstage/plugin-gcalendar` (0.3.20 → [0.3.21](../../changelogs/@backstage/plugin-gcalendar.md#0321))
+- `@backstage/plugin-git-release-manager` (0.3.39 → [0.3.40](../../changelogs/@backstage/plugin-git-release-manager.md#0340))
+- `@backstage/plugin-github-deployments` (0.1.58 → [0.1.59](../../changelogs/@backstage/plugin-github-deployments.md#0159))
+- `@backstage/plugin-github-issues` (0.2.16 → [0.2.17](../../changelogs/@backstage/plugin-github-issues.md#0217))
+- `@backstage/plugin-github-pull-requests-board` (0.1.21 → [0.1.22](../../changelogs/@backstage/plugin-github-pull-requests-board.md#0122))
+- `@backstage/plugin-gitops-profiles` (0.3.42 → [0.3.43](../../changelogs/@backstage/plugin-gitops-profiles.md#0343))
+- `@backstage/plugin-gocd` (0.1.33 → [0.1.34](../../changelogs/@backstage/plugin-gocd.md#0134))
+- `@backstage/plugin-graphql-voyager` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-graphql-voyager.md#0110))
+- `@backstage/plugin-ilert` (0.2.16 → [0.2.17](../../changelogs/@backstage/plugin-ilert.md#0217))
+- `@backstage/plugin-jenkins` (0.9.2 → [0.9.3](../../changelogs/@backstage/plugin-jenkins.md#093))
+- `@backstage/plugin-jenkins-backend` (0.3.1 → [0.3.2](../../changelogs/@backstage/plugin-jenkins-backend.md#032))
+- `@backstage/plugin-jenkins-common` (0.1.21 → [0.1.22](../../changelogs/@backstage/plugin-jenkins-common.md#0122))
+- `@backstage/plugin-kafka` (0.3.27 → [0.3.28](../../changelogs/@backstage/plugin-kafka.md#0328))
+- `@backstage/plugin-kafka-backend` (0.3.5 → [0.3.6](../../changelogs/@backstage/plugin-kafka-backend.md#036))
+- `@backstage/plugin-kubernetes-cluster` (0.0.3 → [0.0.4](../../changelogs/@backstage/plugin-kubernetes-cluster.md#004))
+- `@backstage/plugin-linguist` (0.1.12 → [0.1.13](../../changelogs/@backstage/plugin-linguist.md#0113))
+- `@backstage/plugin-linguist-backend` (0.5.4 → [0.5.5](../../changelogs/@backstage/plugin-linguist-backend.md#055))
+- `@backstage/plugin-microsoft-calendar` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-microsoft-calendar.md#0110))
+- `@backstage/plugin-newrelic` (0.3.42 → [0.3.43](../../changelogs/@backstage/plugin-newrelic.md#0343))
+- `@backstage/plugin-newrelic-dashboard` (0.3.2 → [0.3.3](../../changelogs/@backstage/plugin-newrelic-dashboard.md#033))
+- `@backstage/plugin-nomad` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-nomad.md#019))
+- `@backstage/plugin-nomad-backend` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-nomad-backend.md#0110))
+- `@backstage/plugin-octopus-deploy` (0.2.9 → [0.2.10](../../changelogs/@backstage/plugin-octopus-deploy.md#0210))
+- `@backstage/plugin-opencost` (0.2.2 → [0.2.3](../../changelogs/@backstage/plugin-opencost.md#023))
+- `@backstage/plugin-org-react` (0.1.16 → [0.1.17](../../changelogs/@backstage/plugin-org-react.md#0117))
+- `@backstage/plugin-periskop` (0.1.25 → [0.1.26](../../changelogs/@backstage/plugin-periskop.md#0126))
+- `@backstage/plugin-periskop-backend` (0.2.5 → [0.2.6](../../changelogs/@backstage/plugin-periskop-backend.md#026))
+- `@backstage/plugin-permission-react` (0.4.17 → [0.4.18](../../changelogs/@backstage/plugin-permission-react.md#0418))
+- `@backstage/plugin-playlist` (0.2.1 → [0.2.2](../../changelogs/@backstage/plugin-playlist.md#022))
+- `@backstage/plugin-playlist-common` (0.1.12 → [0.1.13](../../changelogs/@backstage/plugin-playlist-common.md#0113))
+- `@backstage/plugin-proxy-backend` (0.4.5 → [0.4.6](../../changelogs/@backstage/plugin-proxy-backend.md#046))
+- `@backstage/plugin-puppetdb` (0.1.10 → [0.1.11](../../changelogs/@backstage/plugin-puppetdb.md#0111))
+- `@backstage/plugin-rollbar` (0.4.27 → [0.4.28](../../changelogs/@backstage/plugin-rollbar.md#0428))
+- `@backstage/plugin-rollbar-backend` (0.1.52 → [0.1.53](../../changelogs/@backstage/plugin-rollbar-backend.md#0153))
+- `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-scaffolder-backend-module-confluence-to-markdown.md#029))
+- `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.31 → [0.2.32](../../changelogs/@backstage/plugin-scaffolder-backend-module-cookiecutter.md#0232))
+- `@backstage/plugin-scaffolder-backend-module-rails` (0.4.24 → [0.4.25](../../changelogs/@backstage/plugin-scaffolder-backend-module-rails.md#0425))
+- `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.28 → [0.2.29](../../changelogs/@backstage/plugin-scaffolder-backend-module-yeoman.md#0229))
+- `@backstage/plugin-scaffolder-common` (1.4.3 → [1.4.4](../../changelogs/@backstage/plugin-scaffolder-common.md#144))
+- `@backstage/plugin-search-backend-node` (1.2.11 → [1.2.12](../../changelogs/@backstage/plugin-search-backend-node.md#1212))
+- `@backstage/plugin-search-common` (1.2.8 → [1.2.9](../../changelogs/@backstage/plugin-search-common.md#129))
+- `@backstage/plugin-sentry` (0.5.12 → [0.5.13](../../changelogs/@backstage/plugin-sentry.md#0513))
+- `@backstage/plugin-shortcuts` (0.3.16 → [0.3.17](../../changelogs/@backstage/plugin-shortcuts.md#0317))
+- `@backstage/plugin-sonarqube` (0.7.9 → [0.7.10](../../changelogs/@backstage/plugin-sonarqube.md#0710))
+- `@backstage/plugin-sonarqube-backend` (0.2.9 → [0.2.10](../../changelogs/@backstage/plugin-sonarqube-backend.md#0210))
+- `@backstage/plugin-sonarqube-react` (0.1.10 → [0.1.11](../../changelogs/@backstage/plugin-sonarqube-react.md#0111))
+- `@backstage/plugin-splunk-on-call` (0.4.16 → [0.4.17](../../changelogs/@backstage/plugin-splunk-on-call.md#0417))
+- `@backstage/plugin-stack-overflow-backend` (0.2.11 → [0.2.12](../../changelogs/@backstage/plugin-stack-overflow-backend.md#0212))
+- `@backstage/plugin-stackstorm` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-stackstorm.md#019))
+- `@backstage/plugin-tech-insights` (0.3.19 → [0.3.20](../../changelogs/@backstage/plugin-tech-insights.md#0320))
+- `@backstage/plugin-tech-insights-backend` (0.5.21 → [0.5.22](../../changelogs/@backstage/plugin-tech-insights-backend.md#0522))
+- `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.39 → [0.1.40](../../changelogs/@backstage/plugin-tech-insights-backend-module-jsonfc.md#0140))
+- `@backstage/plugin-tech-insights-node` (0.4.13 → [0.4.14](../../changelogs/@backstage/plugin-tech-insights-node.md#0414))
+- `@backstage/plugin-techdocs-react` (1.1.13 → [1.1.14](../../changelogs/@backstage/plugin-techdocs-react.md#1114))
+- `@backstage/plugin-todo` (0.2.31 → [0.2.32](../../changelogs/@backstage/plugin-todo.md#0232))
+- `@backstage/plugin-todo-backend` (0.3.5 → [0.3.6](../../changelogs/@backstage/plugin-todo-backend.md#036))
+- `@backstage/plugin-vault` (0.1.22 → [0.1.23](../../changelogs/@backstage/plugin-vault.md#0123))
+- `@backstage/plugin-vault-node` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-vault-node.md#011))
+- `@backstage/plugin-xcmetrics` (0.2.45 → [0.2.46](../../changelogs/@backstage/plugin-xcmetrics.md#0246))

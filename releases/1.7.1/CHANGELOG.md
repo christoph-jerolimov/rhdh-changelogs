@@ -13,6 +13,6 @@ Changes between 1.7.0 and 1.7.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/create-app` (0.4.32 → 0.4.33)
+### `@backstage/create-app` (0.4.32 → [0.4.33](../../changelogs/@backstage/create-app.md#0433))
 
 _No changelog entries found._

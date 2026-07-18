@@ -13,6 +13,6 @@ Changes between 1.19.2 and 1.19.3 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-auth-backend` (0.19.3 → 0.19.4)
+### `@backstage/plugin-auth-backend` (0.19.3 → [0.19.4](../../changelogs/@backstage/plugin-auth-backend.md#0194))
 
 _No changelog entries found._

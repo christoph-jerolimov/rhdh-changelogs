@@ -13,6 +13,6 @@ Changes between 1.33.5 and 1.33.6 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli` (0.29.2 → 0.29.3)
+### `@backstage/cli` (0.29.2 → [0.29.3](../../changelogs/@backstage/cli.md#0293))
 
 _No changelog entries found._

@@ -16,18 +16,18 @@ Changes between 1.35.0 and 1.35.1 — 4 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli` (0.29.5 → 0.29.6)
+### `@backstage/cli` (0.29.5 → [0.29.6](../../changelogs/@backstage/cli.md#0296))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder` (1.27.4 → 1.27.5)
+### `@backstage/plugin-scaffolder` (1.27.4 → [1.27.5](../../changelogs/@backstage/plugin-scaffolder.md#1275))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-react` (1.14.3 → 1.14.4)
+### `@backstage/plugin-scaffolder-react` (1.14.3 → [1.14.4](../../changelogs/@backstage/plugin-scaffolder-react.md#1144))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs` (1.12.1 → 1.12.2)
+### `@backstage/plugin-techdocs` (1.12.1 → [1.12.2](../../changelogs/@backstage/plugin-techdocs.md#1122))
 
 _No changelog entries found._

@@ -13,6 +13,6 @@ Changes between 1.22.1 and 1.22.2 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-catalog-backend` (1.16.1 → 1.16.2)
+### `@backstage/plugin-catalog-backend` (1.16.1 → [1.16.2](../../changelogs/@backstage/plugin-catalog-backend.md#1162))
 
 _No changelog entries found._

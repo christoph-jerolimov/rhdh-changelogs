@@ -13,6 +13,6 @@ Changes between 1.32.0 and 1.32.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-scaffolder-backend` (1.26.0 → 1.26.1)
+### `@backstage/plugin-scaffolder-backend` (1.26.0 → [1.26.1](../../changelogs/@backstage/plugin-scaffolder-backend.md#1261))
 
 _No changelog entries found._

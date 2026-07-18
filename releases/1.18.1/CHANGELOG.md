@@ -13,6 +13,6 @@ Changes between 1.18.0 and 1.18.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-test-utils` (0.2.3 → 0.2.4)
+### `@backstage/backend-test-utils` (0.2.3 → [0.2.4](../../changelogs/@backstage/backend-test-utils.md#024))
 
 _No changelog entries found._

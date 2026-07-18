@@ -21,38 +21,38 @@ Changes between 1.11.0 and 1.11.1 — 9 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli` (0.22.2 → 0.22.3)
+### `@backstage/cli` (0.22.2 → [0.22.3](../../changelogs/@backstage/cli.md#0223))
 
 _No changelog entries found._
 
-### `@backstage/eslint-plugin` (0.1.0 → 0.1.1)
+### `@backstage/eslint-plugin` (0.1.0 → [0.1.1](../../changelogs/@backstage/eslint-plugin.md#011))
 
 _No changelog entries found._
 
-### `@backstage/plugin-bazaar` (0.2.4 → 0.2.5)
+### `@backstage/plugin-bazaar` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-bazaar.md#025))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-aws` (0.1.15 → 0.1.16)
+### `@backstage/plugin-catalog-backend-module-aws` (0.1.15 → [0.1.16](../../changelogs/@backstage/plugin-catalog-backend-module-aws.md#0116))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.2.0 → 0.2.1)
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-catalog-backend-module-incremental-ingestion.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.0 → 0.5.1)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.0 → [0.5.1](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#051))
 
 _No changelog entries found._
 
-### `@backstage/plugin-sonarqube` (0.6.3 → 0.6.4)
+### `@backstage/plugin-sonarqube` (0.6.3 → [0.6.4](../../changelogs/@backstage/plugin-sonarqube.md#064))
 
 _No changelog entries found._
 
-### `@backstage/plugin-sonarqube-react` (0.1.2 → 0.1.3)
+### `@backstage/plugin-sonarqube-react` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-sonarqube-react.md#013))
 
 _No changelog entries found._
 
-### `@backstage/plugin-vault-backend` (0.2.8 → 0.2.9)
+### `@backstage/plugin-vault-backend` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-vault-backend.md#029))
 
 _No changelog entries found._

@@ -15,14 +15,14 @@ Changes between 1.1.0 and 1.1.1 — 3 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-catalog-backend` (1.1.0 → 1.1.1)
+### `@backstage/plugin-catalog-backend` (1.1.0 → [1.1.1](../../changelogs/@backstage/plugin-catalog-backend.md#111))
 
 _No changelog entries found._
 
-### `@backstage/plugin-jenkins-backend` (0.1.20 → 0.1.21)
+### `@backstage/plugin-jenkins-backend` (0.1.20 → [0.1.21](../../changelogs/@backstage/plugin-jenkins-backend.md#0121))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend` (0.5.0 → 0.5.1)
+### `@backstage/plugin-search-backend` (0.5.0 → [0.5.1](../../changelogs/@backstage/plugin-search-backend.md#051))
 
 _No changelog entries found._

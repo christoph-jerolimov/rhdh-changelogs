@@ -13,7 +13,7 @@ Changes between 1.5.0 and 1.5.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-scaffolder-backend` (1.5.0 → 1.5.1)
+### `@backstage/plugin-scaffolder-backend` (1.5.0 → [1.5.1](../../changelogs/@backstage/plugin-scaffolder-backend.md#151))
 
 #### 1.5.1
 

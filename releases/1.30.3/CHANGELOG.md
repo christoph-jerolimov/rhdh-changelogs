@@ -24,44 +24,44 @@ Changes between 1.30.2 and 1.30.3 — 10 changed and 0 added packages.
 
 ## 0.0.x patch version bumps
 
-### `@backstage/plugin-catalog-backend-module-logs` (0.0.2 → 0.0.3)
+### `@backstage/plugin-catalog-backend-module-logs` (0.0.2 → [0.0.3](../../changelogs/@backstage/plugin-catalog-backend-module-logs.md#003))
 
 _No changelog entries found._
 
 ## Other patch version bumps
 
-### `@backstage/backend-dynamic-feature-service` (0.3.0 → 0.3.1)
+### `@backstage/backend-dynamic-feature-service` (0.3.0 → [0.3.1](../../changelogs/@backstage/backend-dynamic-feature-service.md#031))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend` (0.22.10 → 0.22.11)
+### `@backstage/plugin-auth-backend` (0.22.10 → [0.22.11](../../changelogs/@backstage/plugin-auth-backend.md#02211))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.15 → 0.1.16)
+### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.15 → [0.1.16](../../changelogs/@backstage/plugin-auth-backend-module-aws-alb-provider.md#0116))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-oidc-provider` (0.2.4 → 0.2.5)
+### `@backstage/plugin-auth-backend-module-oidc-provider` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-auth-backend-module-oidc-provider.md#025))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend` (1.25.0 → 1.25.1)
+### `@backstage/plugin-catalog-backend` (1.25.0 → [1.25.1](../../changelogs/@backstage/plugin-catalog-backend.md#1251))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-github` (0.7.0 → 0.7.1)
+### `@backstage/plugin-catalog-backend-module-github` (0.7.0 → [0.7.1](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#071))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-github-org` (0.2.0 → 0.2.1)
+### `@backstage/plugin-catalog-backend-module-github-org` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-catalog-backend-module-github-org.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.5.0 → 0.5.1)
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.5.0 → [0.5.1](../../changelogs/@backstage/plugin-catalog-backend-module-incremental-ingestion.md#051))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-openapi` (0.1.41 → 0.1.42)
+### `@backstage/plugin-catalog-backend-module-openapi` (0.1.41 → [0.1.42](../../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#0142))
 
 _No changelog entries found._

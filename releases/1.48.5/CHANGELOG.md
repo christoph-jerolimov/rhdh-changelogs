@@ -14,10 +14,10 @@ Changes between 1.48.4 and 1.48.5 — 2 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-auth-backend` (0.27.0 → 0.27.1)
+### `@backstage/plugin-auth-backend` (0.27.0 → [0.27.1](../../changelogs/@backstage/plugin-auth-backend.md#0271))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend` (3.1.4 → 3.1.5)
+### `@backstage/plugin-scaffolder-backend` (3.1.4 → [3.1.5](../../changelogs/@backstage/plugin-scaffolder-backend.md#315))
 
 _No changelog entries found._

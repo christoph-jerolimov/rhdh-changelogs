@@ -15,14 +15,14 @@ Changes between 1.37.0 and 1.37.1 — 3 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli` (0.31.0 → 0.31.1)
+### `@backstage/cli` (0.31.0 → [0.31.1](../../changelogs/@backstage/cli.md#0311))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-import` (0.12.11 → 0.12.12)
+### `@backstage/plugin-catalog-import` (0.12.11 → [0.12.12](../../changelogs/@backstage/plugin-catalog-import.md#01212))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-node` (1.16.1 → 1.16.2)
+### `@backstage/plugin-catalog-node` (1.16.1 → [1.16.2](../../changelogs/@backstage/plugin-catalog-node.md#1162))
 
 _No changelog entries found._

@@ -13,6 +13,6 @@ Changes between 1.27.5 and 1.27.6 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.16 → 0.3.17)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.16 → [0.3.17](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#0317))
 
 _No changelog entries found._

@@ -167,84 +167,84 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ## Newly added packages
 
-### `@backstage/backend-app-api` (new, 0.1.0)
+### `@backstage/backend-app-api` (new, [0.1.0](../../changelogs/@backstage/backend-app-api.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 91c1d12123: Add initial plumbing for creating backends using the experimental backend framework.
+- [`91c1d12123`](https://github.com/backstage/backstage/commit/91c1d12123): Add initial plumbing for creating backends using the experimental backend framework.
 
   This package is highly **EXPERIMENTAL** and should not be used in production.
 
-### `@backstage/backend-plugin-api` (new, 0.1.0)
+### `@backstage/backend-plugin-api` (new, [0.1.0](../../changelogs/@backstage/backend-plugin-api.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 91c1d12123: Introduced new package for creating backend plugins using the new alpha backend plugin framework.
+- [`91c1d12123`](https://github.com/backstage/backstage/commit/91c1d12123): Introduced new package for creating backend plugins using the new alpha backend plugin framework.
   This package is still considered **EXPERIMENTAL** and things will change without warning. Do not use this for production.
 
-### `@backstage/plugin-api-docs-module-protoc-gen-doc` (new, 0.1.0)
+### `@backstage/plugin-api-docs-module-protoc-gen-doc` (new, [0.1.0](../../changelogs/@backstage/plugin-api-docs-module-protoc-gen-doc.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- e0328f2107: Added the new `grpcDocsApiWidget` to render `protoc-gen-doc` generated descriptors by the `grpc-docs` package.
+- [`e0328f2107`](https://github.com/backstage/backstage/commit/e0328f2107): Added the new `grpcDocsApiWidget` to render `protoc-gen-doc` generated descriptors by the `grpc-docs` package.
 
-### `@backstage/plugin-apollo-explorer` (new, 0.1.0)
-
-#### 0.1.0
-
-##### Minor Changes
-
-- d8fec19542: Apollo Explorer plugin now available! Installation instructions can be found in the plugin README
-
-### `@backstage/plugin-catalog-backend-module-openapi` (new, 0.1.0)
+### `@backstage/plugin-apollo-explorer` (new, [0.1.0](../../changelogs/@backstage/plugin-apollo-explorer.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 67503d159e: Add basic OpenAPI \$ref support.
+- [`d8fec19542`](https://github.com/backstage/backstage/commit/d8fec19542): Apollo Explorer plugin now available! Installation instructions can be found in the plugin README
+
+### `@backstage/plugin-catalog-backend-module-openapi` (new, [0.1.0](../../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#010))
+
+#### 0.1.0
+
+##### Minor Changes
+
+- [`67503d159e`](https://github.com/backstage/backstage/commit/67503d159e): Add basic OpenAPI \$ref support.
 
   For more information see [here](https://github.com/backstage/backstage/tree/master/plugins/catalog-backend-module-openapi).
 
 ##### Patch Changes
 
-- 4881dc4c84: Updated dependency `openapi-types` to `^12.0.0`.
+- [`4881dc4c84`](https://github.com/backstage/backstage/commit/4881dc4c84): Updated dependency `openapi-types` to `^12.0.0`.
 
-### `@backstage/plugin-catalog-node` (new, 1.0.0)
+### `@backstage/plugin-catalog-node` (new, [1.0.0](../../changelogs/@backstage/plugin-catalog-node.md#100))
 
 #### 1.0.0
 
 ##### Major Changes
 
-- 9a6aba1d85: This package houses stable types from the `@backstage/plugin-catalog-backend` package and is intended for creation of catalog modules. Prefer importing from this package over the `@backstage/plugin-catalog-backend` package.
+- [`9a6aba1d85`](https://github.com/backstage/backstage/commit/9a6aba1d85): This package houses stable types from the `@backstage/plugin-catalog-backend` package and is intended for creation of catalog modules. Prefer importing from this package over the `@backstage/plugin-catalog-backend` package.
 
 ##### Minor Changes
 
-- 91c1d12123: Added alpha exports for the new experimental backend system.
+- [`91c1d12123`](https://github.com/backstage/backstage/commit/91c1d12123): Added alpha exports for the new experimental backend system.
 
-### `@backstage/plugin-cost-insights-common` (new, 0.1.0)
+### `@backstage/plugin-cost-insights-common` (new, [0.1.0](../../changelogs/@backstage/plugin-cost-insights-common.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 81dd5ea989: Introduces a new isomorphic @backstage/plugin-cost-insight-common package to contain shared types across all other cost insights packages and modules.
+- [`81dd5ea989`](https://github.com/backstage/backstage/commit/81dd5ea989): Introduces a new isomorphic @backstage/plugin-cost-insight-common package to contain shared types across all other cost insights packages and modules.
 
 ## Breaking changes
 
-### `@backstage/cli` (0.17.2 → 0.18.0)
+### `@backstage/cli` (0.17.2 → [0.18.0](../../changelogs/@backstage/cli.md#0180))
 
 #### 0.18.0
 
 ##### Minor Changes
 
-- 96a82d9791: **BREAKING**: Removed the following deprecated package commands:
+- [`96a82d9791`](https://github.com/backstage/backstage/commit/96a82d9791): **BREAKING**: Removed the following deprecated package commands:
 
   - `app:build` - Use `package build` instead
   - `app:serve` - Use `package start` instead
@@ -262,40 +262,40 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ##### Patch Changes
 
-- 86640214f0: Upgrade `@rollup/plugin-node-resolve` to `^13.0.6`
-- d2256c0384: Fix `webpack-dev-server` deprecations.
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
-- e661242844: Updated dependency `run-script-webpack-plugin` to `^0.1.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- e8ed804d4f: Updated dependency `@spotify/prettier-config` to `^14.0.0`.
+- [`86640214f0`](https://github.com/backstage/backstage/commit/86640214f0): Upgrade `@rollup/plugin-node-resolve` to `^13.0.6`
+- [`d2256c0384`](https://github.com/backstage/backstage/commit/d2256c0384): Fix `webpack-dev-server` deprecations.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
+- [`e661242844`](https://github.com/backstage/backstage/commit/e661242844): Updated dependency `run-script-webpack-plugin` to `^0.1.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`e8ed804d4f`](https://github.com/backstage/backstage/commit/e8ed804d4f): Updated dependency `@spotify/prettier-config` to `^14.0.0`.
   Updated dependency `@spotify/eslint-config-base` to `^14.0.0`.
   Updated dependency `@spotify/eslint-config-react` to `^14.0.0`.
   Updated dependency `@spotify/eslint-config-typescript` to `^14.0.0`.
-- e662b573cf: Updated dependency `@octokit/request` to `^6.0.0`.
-- f6b6fb7165: The `test` command now ensures that all IO is flushed before exiting when printing `--help`.
+- [`e662b573cf`](https://github.com/backstage/backstage/commit/e662b573cf): Updated dependency `@octokit/request` to `^6.0.0`.
+- [`f6b6fb7165`](https://github.com/backstage/backstage/commit/f6b6fb7165): The `test` command now ensures that all IO is flushed before exiting when printing `--help`.
 
-### `@backstage/errors` (1.0.0 → 1.1.0)
+### `@backstage/errors` (1.0.0 → [1.1.0](../../changelogs/@backstage/errors.md#110))
 
 #### 1.1.0
 
 ##### Minor Changes
 
-- 6d61b44466: The `ResponseError.fromResponse` now accepts a more narrow response type, in order to avoid incompatibilities between different fetch implementations.
+- [`6d61b44466`](https://github.com/backstage/backstage/commit/6d61b44466): The `ResponseError.fromResponse` now accepts a more narrow response type, in order to avoid incompatibilities between different fetch implementations.
 
   The `response` property of `ResponseError` has also been narrowed to a new `ConsumedResponse` type that omits all the properties for consuming the body of the response. This is not considered a breaking change as it was always an error to try to consume the body of the response.
 
 ##### Patch Changes
 
-- c1a8bbf5e5: Inline the type of `ConsumedResponse.headers` and tweaked it to be the intersection of the built-in type and `node-fetch` type.
+- [`c1a8bbf5e5`](https://github.com/backstage/backstage/commit/c1a8bbf5e5): Inline the type of `ConsumedResponse.headers` and tweaked it to be the intersection of the built-in type and `node-fetch` type.
 
-### `@backstage/plugin-auth-backend` (0.14.1 → 0.15.0)
+### `@backstage/plugin-auth-backend` (0.14.1 → [0.15.0](../../changelogs/@backstage/plugin-auth-backend.md#0150))
 
 #### 0.15.0
 
 ##### Minor Changes
 
-- 9d4040777e: **BREAKING**: Removed all directly exported auth provider factories, option types, and sign-in resolvers. For example: `AwsAlbProviderOptions`, `bitbucketUserIdSignInResolver`, `createGithubProvider`. These are all still accessible via the `providers` export. For example, use `providers.github.create()` rather than `createGithubProvider()`, and `providers.bitbucket.resolvers.userIdMatchingUserEntityAnnotation()` rather than `bitbucketUserIdSignInResolver`.
+- [`9d4040777e`](https://github.com/backstage/backstage/commit/9d4040777e): **BREAKING**: Removed all directly exported auth provider factories, option types, and sign-in resolvers. For example: `AwsAlbProviderOptions`, `bitbucketUserIdSignInResolver`, `createGithubProvider`. These are all still accessible via the `providers` export. For example, use `providers.github.create()` rather than `createGithubProvider()`, and `providers.bitbucket.resolvers.userIdMatchingUserEntityAnnotation()` rather than `bitbucketUserIdSignInResolver`.
 
   **BREAKING**: Removed the exported `AuthProviderFactoryOptions` type as well as the deprecated option fields of the `AuthProviderFactory` callback. This includes the `tokenManager`, `tokenIssuer`, `discovery`, and `catalogApi` fields. Existing usage of these should be replaced with the new utilities in the `resolverContext` field. The deprecated `TokenIssuer` type is now also removed, since it is no longer used.
 
@@ -303,27 +303,27 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
   **DEPRECATION**: Deprecated `AtlassianAuthProvider` as it was unintentionally exported.
 
-- fe8e025af5: Allowed post method on /refresh path
+- [`fe8e025af5`](https://github.com/backstage/backstage/commit/fe8e025af5): Allowed post method on /refresh path
 
 ##### Patch Changes
 
-- 3cedfd8365: add Cloudflare Access auth provider to auth-backend
-- f2cf79d62e: Added an option for the auth backend router to select the algorithm for the JWT token signing keys
-- 8e03db907a: Auth provider now also export createAuthProviderIntegration
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
-- 859346bfbb: Updated dependency `google-auth-library` to `^8.0.0`.
-- 3a014730dc: Add new config option for okta auth server and IDP
+- [`3cedfd8365`](https://github.com/backstage/backstage/commit/3cedfd8365): add Cloudflare Access auth provider to auth-backend
+- [`f2cf79d62e`](https://github.com/backstage/backstage/commit/f2cf79d62e): Added an option for the auth backend router to select the algorithm for the JWT token signing keys
+- [`8e03db907a`](https://github.com/backstage/backstage/commit/8e03db907a): Auth provider now also export createAuthProviderIntegration
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
+- [`859346bfbb`](https://github.com/backstage/backstage/commit/859346bfbb): Updated dependency `google-auth-library` to `^8.0.0`.
+- [`3a014730dc`](https://github.com/backstage/backstage/commit/3a014730dc): Add new config option for okta auth server and IDP
 
-### `@backstage/plugin-kubernetes-backend` (0.6.0 → 0.7.0)
+### `@backstage/plugin-kubernetes-backend` (0.6.0 → [0.7.0](../../changelogs/@backstage/plugin-kubernetes-backend.md#070))
 
 #### 0.7.0
 
 ##### Minor Changes
 
-- f5c9730639: Add `localKubectlProxy` cluster locator method to make local development simpler to setup.
+- [`f5c9730639`](https://github.com/backstage/backstage/commit/f5c9730639): Add `localKubectlProxy` cluster locator method to make local development simpler to setup.
 
   Consolidated no-op server side auth decorators.
   The following Kubernetes auth decorators are now one class (`ServerSideKubernetesAuthProvider`):
@@ -332,7 +332,7 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - `AzureKubernetesAuthProvider`
   - `ServiceAccountKubernetesAuthProvider`
 
-- 1454bf98e7: Add new endpoints to Kubernetes backend plugin
+- [`1454bf98e7`](https://github.com/backstage/backstage/commit/1454bf98e7): Add new endpoints to Kubernetes backend plugin
 
   BREAKING: Kubernetes backend plugin now depends on CatalogApi
 
@@ -349,32 +349,32 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   }).build();
   ```
 
-- 0791af993f: Refactor `KubernetesObjectsProvider` with new methods, `KubernetesServiceLocator` now takes an `Entity` instead of `serviceId`
+- [`0791af993f`](https://github.com/backstage/backstage/commit/0791af993f): Refactor `KubernetesObjectsProvider` with new methods, `KubernetesServiceLocator` now takes an `Entity` instead of `serviceId`
 
 ##### Patch Changes
 
-- 60e5f9fe68: Fixed the lack of `limitranges` as part of the Default Objects to fetch from the kubernetes api
-- 746ec700ea: Add support for Kubernetes clusters in the catalog.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- eadb3a8d2e: Updated dependency `@kubernetes/client-node` to `^0.17.0`.
+- [`60e5f9fe68`](https://github.com/backstage/backstage/commit/60e5f9fe68): Fixed the lack of `limitranges` as part of the Default Objects to fetch from the kubernetes api
+- [`746ec700ea`](https://github.com/backstage/backstage/commit/746ec700ea): Add support for Kubernetes clusters in the catalog.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`eadb3a8d2e`](https://github.com/backstage/backstage/commit/eadb3a8d2e): Updated dependency `@kubernetes/client-node` to `^0.17.0`.
 
-### `@backstage/plugin-newrelic-dashboard` (0.1.14 → 0.2.0)
+### `@backstage/plugin-newrelic-dashboard` (0.1.14 → [0.2.0](../../changelogs/@backstage/plugin-newrelic-dashboard.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- 79ecedded9: Fix bug where the default time window/snapshot duration was supposed to be 30 days, but ended up being 43 weeks
+- [`79ecedded9`](https://github.com/backstage/backstage/commit/79ecedded9): Fix bug where the default time window/snapshot duration was supposed to be 30 days, but ended up being 43 weeks
 
   **BREAKING**: Add a select input to change the time window of the snapshot displayed. This removes the duration prop from the `DashboardSnapshot` component.
 
-### `@backstage/plugin-pagerduty` (0.4.0 → 0.5.0)
+### `@backstage/plugin-pagerduty` (0.4.0 → [0.5.0](../../changelogs/@backstage/plugin-pagerduty.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- 8798f8d93f: Introduces a new annotation `pagerduty.com/service-id` that can be used instead of the `pagerduty.com/integration-key` annotation.
+- [`8798f8d93f`](https://github.com/backstage/backstage/commit/8798f8d93f): Introduces a new annotation `pagerduty.com/service-id` that can be used instead of the `pagerduty.com/integration-key` annotation.
   _Note: If both annotations are specified on a given Entity, then the `pagerduty.com/integration-key` annotation will be prefered_
 
   **BREAKING** The `PagerDutyClient.fromConfig` static method now expects a `FetchApi` compatible object and has been refactored to
@@ -401,21 +401,21 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-search-backend-module-elasticsearch` (0.1.5 → 1.0.0)
+### `@backstage/plugin-search-backend-module-elasticsearch` (0.1.5 → [1.0.0](../../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#100))
 
 #### 1.0.0
 
 ##### Major Changes
 
-- 7bd7d336b2: This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
+- [`7bd7d336b2`](https://github.com/backstage/backstage/commit/7bd7d336b2): This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
 
 ##### Minor Changes
 
-- c5af773757: **BREAKING**: In order to remain interoperable with all currently supported
+- [`c5af773757`](https://github.com/backstage/backstage/commit/c5af773757): **BREAKING**: In order to remain interoperable with all currently supported
   deployments of Elasticsearch, this package will now conditionally use either
   the `@elastic/elasticsearch` or `@opensearch-project/opensearch` client when
   communicating with your deployed cluster.
@@ -438,8 +438,8 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ##### Patch Changes
 
-- 71de198828: Updated dependency `@opensearch-project/opensearch` to `^2.0.0`.
-- b0b8213056: Feature: add a new option to set the batch size for elastic search engine, if not given the default batch size is 1000
+- [`71de198828`](https://github.com/backstage/backstage/commit/71de198828): Updated dependency `@opensearch-project/opensearch` to `^2.0.0`.
+- [`b0b8213056`](https://github.com/backstage/backstage/commit/b0b8213056): Feature: add a new option to set the batch size for elastic search engine, if not given the default batch size is 1000
 
   Example usage:
 
@@ -449,15 +449,15 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
       batchSize: 100
   ```
 
-- a21cd43467: Throws `MissingIndexError` when no index of type exist.
+- [`a21cd43467`](https://github.com/backstage/backstage/commit/a21cd43467): Throws `MissingIndexError` when no index of type exist.
 
-### `@backstage/plugin-sentry` (0.3.44 → 0.4.0)
+### `@backstage/plugin-sentry` (0.3.44 → [0.4.0](../../changelogs/@backstage/plugin-sentry.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- 1b7c691a3b: Added the possibility to specify organization per component, now the annotation `sentry.io/project-slug` can have the format of `[organization]/[project-slug]` or just `[project-slug]`.
+- [`1b7c691a3b`](https://github.com/backstage/backstage/commit/1b7c691a3b): Added the possibility to specify organization per component, now the annotation `sentry.io/project-slug` can have the format of `[organization]/[project-slug]` or just `[project-slug]`.
 
   **BREAKING**: The method `fetchIssue` changed the signature:
 
@@ -478,43 +478,43 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-tech-insights-backend` (0.4.1 → 0.5.0)
+### `@backstage/plugin-tech-insights-backend` (0.4.1 → [0.5.0](../../changelogs/@backstage/plugin-tech-insights-backend.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- 818fa28d71: Allow FactRetrieverRegistry to be injected into buildTechInsightsContext so that we can override default registry implementation.
-- 46cfda58aa: **BREAKING**: Update FactRetrieverRegistry interface to be async so that db backed implementations can be passed through to the FactRetrieverEngine.
+- [`818fa28d71`](https://github.com/backstage/backstage/commit/818fa28d71): Allow FactRetrieverRegistry to be injected into buildTechInsightsContext so that we can override default registry implementation.
+- [`46cfda58aa`](https://github.com/backstage/backstage/commit/46cfda58aa): **BREAKING**: Update FactRetrieverRegistry interface to be async so that db backed implementations can be passed through to the FactRetrieverEngine.
 
   If you have existing custom `FactRetrieverRegistry` implementations, you'll need to remove the `retrievers` member and make all the methods async.
 
 ##### Patch Changes
 
-- 2ef58ab539: TechInsightsBackend: Added missing 'scheduler' to code examples
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
-- bcc122c46d: The `FactRetriever` model has been extended by adding optional title and description fields, allowing you to display them in the UI.
+- [`2ef58ab539`](https://github.com/backstage/backstage/commit/2ef58ab539): TechInsightsBackend: Added missing 'scheduler' to code examples
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
+- [`bcc122c46d`](https://github.com/backstage/backstage/commit/bcc122c46d): The `FactRetriever` model has been extended by adding optional title and description fields, allowing you to display them in the UI.
 
 ## Major version bumps
 
-### `@backstage/plugin-search` (0.9.0 → 1.0.0)
+### `@backstage/plugin-search` (0.9.0 → [1.0.0](../../changelogs/@backstage/plugin-search.md#100))
 
 #### 1.0.0
 
 ##### Major Changes
 
-- 7bd7d336b2: This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
+- [`7bd7d336b2`](https://github.com/backstage/backstage/commit/7bd7d336b2): This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 509c4092f0: To allow people to use a global search context in the search modal, the code for the search modal has been changed to only create a local search context if there is no parent context already defined.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`509c4092f0`](https://github.com/backstage/backstage/commit/509c4092f0): To allow people to use a global search context in the search modal, the code for the search modal has been changed to only create a local search context if there is no parent context already defined.
 
   If you want to continue using a local context even if you define a global one, you will have to wrap the modal in a new local context manually:
 
@@ -524,95 +524,95 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   </SearchContextProvider>
   ```
 
-### `@backstage/plugin-search-backend` (0.5.3 → 1.0.0)
+### `@backstage/plugin-search-backend` (0.5.3 → [1.0.0](../../changelogs/@backstage/plugin-search-backend.md#100))
 
 #### 1.0.0
 
 ##### Major Changes
 
-- 7bd7d336b2: This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
+- [`7bd7d336b2`](https://github.com/backstage/backstage/commit/7bd7d336b2): This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
 
 ##### Patch Changes
 
-- a21cd43467: If error is `MissingIndexError` we return a 400 response with a more clear error message.
+- [`a21cd43467`](https://github.com/backstage/backstage/commit/a21cd43467): If error is `MissingIndexError` we return a 400 response with a more clear error message.
 
-### `@backstage/plugin-search-backend-node` (0.6.2 → 1.0.0)
+### `@backstage/plugin-search-backend-node` (0.6.2 → [1.0.0](../../changelogs/@backstage/plugin-search-backend-node.md#100))
 
 #### 1.0.0
 
 ##### Major Changes
 
-- 7bd7d336b2: This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
+- [`7bd7d336b2`](https://github.com/backstage/backstage/commit/7bd7d336b2): This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
 
 ##### Patch Changes
 
-- a21cd43467: Exports `MissingIndexError` that can be used by the search engines for better error handling when missing index.
+- [`a21cd43467`](https://github.com/backstage/backstage/commit/a21cd43467): Exports `MissingIndexError` that can be used by the search engines for better error handling when missing index.
 
-### `@backstage/plugin-search-common` (0.3.5 → 1.0.0)
-
-#### 1.0.0
-
-##### Major Changes
-
-- 7bd7d336b2: This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
-
-### `@backstage/plugin-search-react` (0.2.1 → 1.0.0)
+### `@backstage/plugin-search-common` (0.3.5 → [1.0.0](../../changelogs/@backstage/plugin-search-common.md#100))
 
 #### 1.0.0
 
 ##### Major Changes
 
-- 7bd7d336b2: This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
+- [`7bd7d336b2`](https://github.com/backstage/backstage/commit/7bd7d336b2): This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
+
+### `@backstage/plugin-search-react` (0.2.1 → [1.0.0](../../changelogs/@backstage/plugin-search-react.md#100))
+
+#### 1.0.0
+
+##### Major Changes
+
+- [`7bd7d336b2`](https://github.com/backstage/backstage/commit/7bd7d336b2): This package has been promoted to 1.0. Read more about what it means in [New release: Backstage Search 1.0 blog](https://backstage.io/blog/2022/07/19/releasing-backstage-search-1.0)
 
 ##### Patch Changes
 
-- 60408ca9d4: Fix search pagination to reset page cursor also when a term is cleared.
+- [`60408ca9d4`](https://github.com/backstage/backstage/commit/60408ca9d4): Fix search pagination to reset page cursor also when a term is cleared.
 
 ## 0.x minor version bumps
 
-### `@backstage/core-components` (0.9.5 → 0.10.0)
+### `@backstage/core-components` (0.9.5 → [0.10.0](../../changelogs/@backstage/core-components.md#0100))
 
 #### 0.10.0
 
 ##### Minor Changes
 
-- 32204fa794: Add `transformLinkUri` and `transformImageUri` to `MarkdownContent`
+- [`32204fa794`](https://github.com/backstage/backstage/commit/32204fa794): Add `transformLinkUri` and `transformImageUri` to `MarkdownContent`
 
 ##### Patch Changes
 
-- 3c440ea77e: Change BackstageIconLinkVertical style to use pallette instead of explicit color
-- c3cfc83af2: Updated JSDoc to be MDX compatible.
-- b4b711bcc2: Fix the EntityLayout header style so that EntityContextMenu button can display in correct shape when user hover on it
-- 944af7f2a8: Work around a bug calling `onChange` twice in `mui` for `RoutedTab` so you don't have to press back twice to navigate through tabs
-- 7f5e79961d: Fix relative `sub-paths` by concatenating the app's base path with them.
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 693990d4fe: Updated dependency `@react-hookz/web` to `^15.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 15201b1032: Updated dependency `rc-progress` to `3.4.0`.
-- 7e115d42f9: Support displaying subtitle text in `SidebarSubmenuItem`
-- ae746946f7: Improve accessibility for CopyTextButton
-- 385389d23c: Updated to remove usage of the `bursts` object in the theme palette
+- [`3c440ea77e`](https://github.com/backstage/backstage/commit/3c440ea77e): Change BackstageIconLinkVertical style to use pallette instead of explicit color
+- [`c3cfc83af2`](https://github.com/backstage/backstage/commit/c3cfc83af2): Updated JSDoc to be MDX compatible.
+- [`b4b711bcc2`](https://github.com/backstage/backstage/commit/b4b711bcc2): Fix the EntityLayout header style so that EntityContextMenu button can display in correct shape when user hover on it
+- [`944af7f2a8`](https://github.com/backstage/backstage/commit/944af7f2a8): Work around a bug calling `onChange` twice in `mui` for `RoutedTab` so you don't have to press back twice to navigate through tabs
+- [`7f5e79961d`](https://github.com/backstage/backstage/commit/7f5e79961d): Fix relative `sub-paths` by concatenating the app's base path with them.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`693990d4fe`](https://github.com/backstage/backstage/commit/693990d4fe): Updated dependency `@react-hookz/web` to `^15.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`15201b1032`](https://github.com/backstage/backstage/commit/15201b1032): Updated dependency `rc-progress` to `3.4.0`.
+- [`7e115d42f9`](https://github.com/backstage/backstage/commit/7e115d42f9): Support displaying subtitle text in `SidebarSubmenuItem`
+- [`ae746946f7`](https://github.com/backstage/backstage/commit/ae746946f7): Improve accessibility for CopyTextButton
+- [`385389d23c`](https://github.com/backstage/backstage/commit/385389d23c): Updated to remove usage of the `bursts` object in the theme palette
 
-### `@backstage/plugin-apache-airflow` (0.1.14 → 0.2.0)
+### `@backstage/plugin-apache-airflow` (0.1.14 → [0.2.0](../../changelogs/@backstage/plugin-apache-airflow.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- 01f976ea72: Exposed DagTableComponent as standalone component + added a prop to get only select DAGs instead of the full list
+- [`01f976ea72`](https://github.com/backstage/backstage/commit/01f976ea72): Exposed DagTableComponent as standalone component + added a prop to get only select DAGs instead of the full list
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.3.3 → 0.4.0)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.3.3 → [0.4.0](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- a145672f0f: Align `msgraph` plugin's entity provider config with other providers. **Deprecated** entity processor as well as previous config.
+- [`a145672f0f`](https://github.com/backstage/backstage/commit/a145672f0f): Align `msgraph` plugin's entity provider config with other providers. **Deprecated** entity processor as well as previous config.
 
   You will see warning at the log output until you migrate to the new setup.
   All deprecated parts will be removed eventually after giving some time to migrate.
@@ -700,7 +700,7 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   you can provide these directly at the one `fromConfig` call
   by passing a Record with the provider ID as key.
 
-- b8ebecd100: Microsoft Graph plugin can supports many more options for authenticating with the Microsoft Graph API.
+- [`b8ebecd100`](https://github.com/backstage/backstage/commit/b8ebecd100): Microsoft Graph plugin can supports many more options for authenticating with the Microsoft Graph API.
   Previously only ClientId/ClientSecret was supported, but now all the authentication options of `DefaultAzureCredential` from `@azure/identity` are supported.
   Including Managed Identity, Client Certificate, Azure CLI and VS Code.
 
@@ -710,16 +710,16 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-code-coverage` (0.1.33 → 0.2.0)
+### `@backstage/plugin-code-coverage` (0.1.33 → [0.2.0](../../changelogs/@backstage/plugin-code-coverage.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- d70aaa7622: Cleaned up API exports.
+- [`d70aaa7622`](https://github.com/backstage/backstage/commit/d70aaa7622): Cleaned up API exports.
 
   The `Router` export has been removed; users are expected to use `EntityCodeCoverageContent` instead.
 
@@ -727,33 +727,33 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-code-coverage-backend` (0.1.31 → 0.2.0)
+### `@backstage/plugin-code-coverage-backend` (0.1.31 → [0.2.0](../../changelogs/@backstage/plugin-code-coverage-backend.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- d70aaa7622: Cleaned up API exports.
+- [`d70aaa7622`](https://github.com/backstage/backstage/commit/d70aaa7622): Cleaned up API exports.
 
   The `CodeCoverageApi` and `makeRouter` exports have been removed from the backend, since they were not meant to be exported in the first place.
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
 
-### `@backstage/plugin-kubernetes` (0.6.6 → 0.7.0)
+### `@backstage/plugin-kubernetes` (0.6.6 → [0.7.0](../../changelogs/@backstage/plugin-kubernetes.md#070))
 
 #### 0.7.0
 
 ##### Minor Changes
 
-- f5c9730639: Add `localKubectlProxy` cluster locator method to make local development simpler to setup.
+- [`f5c9730639`](https://github.com/backstage/backstage/commit/f5c9730639): Add `localKubectlProxy` cluster locator method to make local development simpler to setup.
 
   Consolidated no-op server side auth decorators.
   The following Kubernetes auth decorators are now one class (`ServerSideKubernetesAuthProvider`):
@@ -764,90 +764,90 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ##### Patch Changes
 
-- 3ec294a186: expose detectErrors function publicly
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- eadb3a8d2e: Updated dependency `@kubernetes/client-node` to `^0.17.0`.
+- [`3ec294a186`](https://github.com/backstage/backstage/commit/3ec294a186): expose detectErrors function publicly
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`eadb3a8d2e`](https://github.com/backstage/backstage/commit/eadb3a8d2e): Updated dependency `@kubernetes/client-node` to `^0.17.0`.
 
-### `@backstage/plugin-kubernetes-common` (0.3.0 → 0.4.0)
+### `@backstage/plugin-kubernetes-common` (0.3.0 → [0.4.0](../../changelogs/@backstage/plugin-kubernetes-common.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- 0791af993f: Refactor `KubernetesObjectsProvider` with new methods, `KubernetesServiceLocator` now takes an `Entity` instead of `serviceId`
+- [`0791af993f`](https://github.com/backstage/backstage/commit/0791af993f): Refactor `KubernetesObjectsProvider` with new methods, `KubernetesServiceLocator` now takes an `Entity` instead of `serviceId`
 
 ##### Patch Changes
 
-- 60e5f9fe68: Fixed the lack of `limitranges` as part of the Default Objects to fetch from the kubernetes api
-- eadb3a8d2e: Updated dependency `@kubernetes/client-node` to `^0.17.0`.
+- [`60e5f9fe68`](https://github.com/backstage/backstage/commit/60e5f9fe68): Fixed the lack of `limitranges` as part of the Default Objects to fetch from the kubernetes api
+- [`eadb3a8d2e`](https://github.com/backstage/backstage/commit/eadb3a8d2e): Updated dependency `@kubernetes/client-node` to `^0.17.0`.
 
-### `@backstage/plugin-vault-backend` (0.1.0 → 0.2.0)
+### `@backstage/plugin-vault-backend` (0.1.0 → [0.2.0](../../changelogs/@backstage/plugin-vault-backend.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- 5ebf2c7023: Throw exceptions instead of swallow them, remove some exported types from the `api-report`, small changes in the API responses & expose the vault `baseUrl` to the frontend as well
+- [`5ebf2c7023`](https://github.com/backstage/backstage/commit/5ebf2c7023): Throw exceptions instead of swallow them, remove some exported types from the `api-report`, small changes in the API responses & expose the vault `baseUrl` to the frontend as well
 
 ##### Patch Changes
 
-- 7ee4abdcc9: Added a path notion in addition to secret name to allow to differentiate secrets in sub-paths
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`7ee4abdcc9`](https://github.com/backstage/backstage/commit/7ee4abdcc9): Added a path notion in addition to secret name to allow to differentiate secrets in sub-paths
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
 ## 0.0.x patch version bumps
 
-### `@backstage/plugin-explore-react` (0.0.18 → 0.0.19)
+### `@backstage/plugin-explore-react` (0.0.18 → [0.0.19](../../changelogs/@backstage/plugin-explore-react.md#0019))
 
 #### 0.0.19
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/release-manifests` (0.0.4 → 0.0.5)
+### `@backstage/release-manifests` (0.0.4 → [0.0.5](../../changelogs/@backstage/release-manifests.md#005))
 
 #### 0.0.5
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
 ## Other minor version bumps
 
-### `@backstage/catalog-model` (1.0.3 → 1.1.0)
+### `@backstage/catalog-model` (1.0.3 → [1.1.0](../../changelogs/@backstage/catalog-model.md#110))
 
 #### 1.1.0
 
 ##### Minor Changes
 
-- 4cc81372f8: Introduced `GroupDefaultParentEntityPolicy` to set a default group entity parent.
-- 1380b389dc: Adding an optional type field to entity links to group and categorize links
+- [`4cc81372f8`](https://github.com/backstage/backstage/commit/4cc81372f8): Introduced `GroupDefaultParentEntityPolicy` to set a default group entity parent.
+- [`1380b389dc`](https://github.com/backstage/backstage/commit/1380b389dc): Adding an optional type field to entity links to group and categorize links
 
 ##### Patch Changes
 
-- c3cfc83af2: Updated JSDoc to be MDX compatible.
-- f9f1de8100: Add shared annotations for Kubernetes clusters
-- f1dcc6f3c6: Added type predicates for all entity types, e.g. isUserEntity
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
+- [`c3cfc83af2`](https://github.com/backstage/backstage/commit/c3cfc83af2): Updated JSDoc to be MDX compatible.
+- [`f9f1de8100`](https://github.com/backstage/backstage/commit/f9f1de8100): Add shared annotations for Kubernetes clusters
+- [`f1dcc6f3c6`](https://github.com/backstage/backstage/commit/f1dcc6f3c6): Added type predicates for all entity types, e.g. isUserEntity
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
 
-### `@backstage/plugin-catalog` (1.3.0 → 1.4.0)
+### `@backstage/plugin-catalog` (1.3.0 → [1.4.0](../../changelogs/@backstage/plugin-catalog.md#140))
 
 #### 1.4.0
 
 ##### Minor Changes
 
-- 97c46f2359: Add `spec.targets` (or `spec.target`) for Location entities at the `CatalogTable`.
-- cf288221d1: Add `Location` target(s) to `AboutCard`.
-- a274fe38b9: Add hidden title column to catalog and API table to enable filtering by title.
+- [`97c46f2359`](https://github.com/backstage/backstage/commit/97c46f2359): Add `spec.targets` (or `spec.target`) for Location entities at the `CatalogTable`.
+- [`cf288221d1`](https://github.com/backstage/backstage/commit/cf288221d1): Add `Location` target(s) to `AboutCard`.
+- [`a274fe38b9`](https://github.com/backstage/backstage/commit/a274fe38b9): Add hidden title column to catalog and API table to enable filtering by title.
 
 ##### Patch Changes
 
-- dcaf1cb418: Previously, the color of the Entity Context Menu (in the Entity Page Header) was hardcoded as `white`.
+- [`dcaf1cb418`](https://github.com/backstage/backstage/commit/dcaf1cb418): Previously, the color of the Entity Context Menu (in the Entity Page Header) was hardcoded as `white`.
 
   This was an issue for themes that use a header with a white background. By default, the color of the icon is now `theme.page.fontColor`.
 
@@ -867,13 +867,13 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
     }
   ```
 
-- f1dcc6f3c6: Use entity type predicates from catalog-model
-- 258057a4b9: Adding ability to customize the "unregister entity" menu item in the entity context menu on the entity page with options 'visible','hidden','disabled'.With this three new options, one can hide the "unregister entity" menu item from the list, disable or keep it enabled.
+- [`f1dcc6f3c6`](https://github.com/backstage/backstage/commit/f1dcc6f3c6): Use entity type predicates from catalog-model
+- [`258057a4b9`](https://github.com/backstage/backstage/commit/258057a4b9): Adding ability to customize the "unregister entity" menu item in the entity context menu on the entity page with options 'visible','hidden','disabled'.With this three new options, one can hide the "unregister entity" menu item from the list, disable or keep it enabled.
 
   The boolean input for "unregister entity" will be deprecated later in favour of the above three options.
 
-- 385389d23c: Updated to remove usage of the `bursts` object in the theme palette
-- be26d95141: Added new `EntityProcessingStatusPicker` that will filter for entities with orphans and/or errors.
+- [`385389d23c`](https://github.com/backstage/backstage/commit/385389d23c): Updated to remove usage of the `bursts` object in the theme palette
+- [`be26d95141`](https://github.com/backstage/backstage/commit/be26d95141): Added new `EntityProcessingStatusPicker` that will filter for entities with orphans and/or errors.
 
   If you are using the default Catalog page this picker will be added automatically. For those who have customized their Catalog page you'll need to add this manually by doing something like this:
 
@@ -912,13 +912,13 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   };
   ```
 
-### `@backstage/plugin-catalog-backend` (1.2.0 → 1.3.0)
+### `@backstage/plugin-catalog-backend` (1.2.0 → [1.3.0](../../changelogs/@backstage/plugin-catalog-backend.md#130))
 
 #### 1.3.0
 
 ##### Minor Changes
 
-- 1dd6c22cc8: Added an option to be able to trigger refreshes on entities based on a prestored arbitrary key.
+- [`1dd6c22cc8`](https://github.com/backstage/backstage/commit/1dd6c22cc8): Added an option to be able to trigger refreshes on entities based on a prestored arbitrary key.
 
   The UrlReaderProcessor, FileReaderProcessor got updated to store the absolute URL of the catalog file as a refresh key. In the format of `<type>:<target>`
   The PlaceholderProcessor got updated to store the resolverValues as refreshKeys for the entities.
@@ -934,18 +934,18 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
     ...
   ```
 
-- 91c1d12123: Export experimental `catalogPlugin` for the new backend system. This export is not considered stable and should not be used in production.
+- [`91c1d12123`](https://github.com/backstage/backstage/commit/91c1d12123): Export experimental `catalogPlugin` for the new backend system. This export is not considered stable and should not be used in production.
 
 ##### Patch Changes
 
-- 1e02fe46d6: Fixed bug where catalog metrics weren't being tracked.
-- 5f6b847c15: Fix Error Code in Register Component DryRun
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
-- fa0533e604: CatalogBuilder supports now subscription to processing engine errors.
+- [`1e02fe46d6`](https://github.com/backstage/backstage/commit/1e02fe46d6): Fixed bug where catalog metrics weren't being tracked.
+- [`5f6b847c15`](https://github.com/backstage/backstage/commit/5f6b847c15): Fix Error Code in Register Component DryRun
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
+- [`fa0533e604`](https://github.com/backstage/backstage/commit/fa0533e604): CatalogBuilder supports now subscription to processing engine errors.
 
   ```ts
   subscribe(options: {
@@ -956,7 +956,7 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   If you want to get notified on errors while processing the entities, you call CatalogBuilder.subscribe
   to get notifications with the parameters defined as above.
 
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -965,31 +965,31 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - SNYK-JS-PARSEURL-2935947
   - SNYK-JS-PARSEURL-2936249
 
-- f1dcc6f3c6: Use entity type predicates from catalog-model
-- 9a6aba1d85: Many symbol declarations have been moved to `@backstage/plugin-catalog-node`. This has no affect on users of this package as they are all re-exported. Modules that build on top of the catalog backend plugin should switch all of their imports to the `@backstage/plugin-catalog-node` package and remove the dependency on `@backstage/plugin-catalog-backend`.
+- [`f1dcc6f3c6`](https://github.com/backstage/backstage/commit/f1dcc6f3c6): Use entity type predicates from catalog-model
+- [`9a6aba1d85`](https://github.com/backstage/backstage/commit/9a6aba1d85): Many symbol declarations have been moved to `@backstage/plugin-catalog-node`. This has no affect on users of this package as they are all re-exported. Modules that build on top of the catalog backend plugin should switch all of their imports to the `@backstage/plugin-catalog-node` package and remove the dependency on `@backstage/plugin-catalog-backend`.
 
-### `@backstage/plugin-scaffolder` (1.3.0 → 1.4.0)
+### `@backstage/plugin-scaffolder` (1.3.0 → [1.4.0](../../changelogs/@backstage/plugin-scaffolder.md#140))
 
 #### 1.4.0
 
 ##### Minor Changes
 
-- d8eb82f447: Add `allowedRepos` `ui:option` to `RepoUrlPicker` component, and move `repoName` field to own component
-- 9a96199f86: Add support for `allowedOwners` to the `BitbucketRepoPicker` used for the workspace value.
+- [`d8eb82f447`](https://github.com/backstage/backstage/commit/d8eb82f447): Add `allowedRepos` `ui:option` to `RepoUrlPicker` component, and move `repoName` field to own component
+- [`9a96199f86`](https://github.com/backstage/backstage/commit/9a96199f86): Add support for `allowedOwners` to the `BitbucketRepoPicker` used for the workspace value.
 
 ##### Patch Changes
 
-- 37539e29d8: The template editor now shows the cause of request errors that happen during a dry-run.
-- b557e6c58d: Fixed that adding more than one `allowedOwner` or `allowedRepo` in the template config will now still set the first value as default in the initial form state of `RepoUrlPicker`.
-- 842282ecf9: Bumped `codemirror` dependencies to `v6.0.0`.
-- 11a5ca35f3: Add allowArbitraryValues for <OwnerPicker /> to provide input validation. This makes it a better experience of users, as they can now expect the values they enter to correspond to a valid owner. This is set to the default behavior by default.
-- d600cb2ab6: contextMenu prop passed through to <ScaffolderPageContents /> from the <ScaffolderPage /> component
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
-- 693990d4fe: Updated dependency `@react-hookz/web` to `^15.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`37539e29d8`](https://github.com/backstage/backstage/commit/37539e29d8): The template editor now shows the cause of request errors that happen during a dry-run.
+- [`b557e6c58d`](https://github.com/backstage/backstage/commit/b557e6c58d): Fixed that adding more than one `allowedOwner` or `allowedRepo` in the template config will now still set the first value as default in the initial form state of `RepoUrlPicker`.
+- [`842282ecf9`](https://github.com/backstage/backstage/commit/842282ecf9): Bumped `codemirror` dependencies to `v6.0.0`.
+- [`11a5ca35f3`](https://github.com/backstage/backstage/commit/11a5ca35f3): Add allowArbitraryValues for <OwnerPicker /> to provide input validation. This makes it a better experience of users, as they can now expect the values they enter to correspond to a valid owner. This is set to the default behavior by default.
+- [`d600cb2ab6`](https://github.com/backstage/backstage/commit/d600cb2ab6): contextMenu prop passed through to <ScaffolderPageContents /> from the <ScaffolderPage /> component
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
+- [`693990d4fe`](https://github.com/backstage/backstage/commit/693990d4fe): Updated dependency `@react-hookz/web` to `^15.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -998,45 +998,45 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - SNYK-JS-PARSEURL-2935947
   - SNYK-JS-PARSEURL-2936249
 
-- 464bb0e6c8: The max content size for dry-run files has been reduced from 256k to 64k.
-- 14146703e5: Add `allowArbitraryValues` to `ui:options` in `OwnedEntityPicker`, similar to `allowArbitraryValues` in `EntityPicker`
-- a7c0b34d70: Swap usage of `MaterialTable` with `Table` from `core-components`
-- 1764296a68: Allow to create Gerrit project using default owner
+- [`464bb0e6c8`](https://github.com/backstage/backstage/commit/464bb0e6c8): The max content size for dry-run files has been reduced from 256k to 64k.
+- [`14146703e5`](https://github.com/backstage/backstage/commit/14146703e5): Add `allowArbitraryValues` to `ui:options` in `OwnedEntityPicker`, similar to `allowArbitraryValues` in `EntityPicker`
+- [`a7c0b34d70`](https://github.com/backstage/backstage/commit/a7c0b34d70): Swap usage of `MaterialTable` with `Table` from `core-components`
+- [`1764296a68`](https://github.com/backstage/backstage/commit/1764296a68): Allow to create Gerrit project using default owner
 
-### `@backstage/plugin-scaffolder-backend` (1.3.1 → 1.4.0)
+### `@backstage/plugin-scaffolder-backend` (1.3.1 → [1.4.0](../../changelogs/@backstage/plugin-scaffolder-backend.md#140))
 
 #### 1.4.0
 
 ##### Minor Changes
 
-- e1a08d872c: Added optional assignee parameter for Gitlab Merge Request action
-- dab9bcf2e7: Add `protectEnforceAdmins` as an option to GitHub publish actions
-- 4baf8a4ece: Update GitLab Merge Request Action to allow source branch to be deleted
-- 91c1d12123: Export experimental `scaffolderCatalogExtension` for the new backend system. This export is not considered stable and should not be used in production.
-- d10ccc2ed1: Introduced audit log message when a new scaffolder task is created
-- 2db07887cb: Added two new scaffolder actions: `github:repo:create` and `github:repo:push`
+- [`e1a08d872c`](https://github.com/backstage/backstage/commit/e1a08d872c): Added optional assignee parameter for Gitlab Merge Request action
+- [`dab9bcf2e7`](https://github.com/backstage/backstage/commit/dab9bcf2e7): Add `protectEnforceAdmins` as an option to GitHub publish actions
+- [`4baf8a4ece`](https://github.com/backstage/backstage/commit/4baf8a4ece): Update GitLab Merge Request Action to allow source branch to be deleted
+- [`91c1d12123`](https://github.com/backstage/backstage/commit/91c1d12123): Export experimental `scaffolderCatalogExtension` for the new backend system. This export is not considered stable and should not be used in production.
+- [`d10ccc2ed1`](https://github.com/backstage/backstage/commit/d10ccc2ed1): Introduced audit log message when a new scaffolder task is created
+- [`2db07887cb`](https://github.com/backstage/backstage/commit/2db07887cb): Added two new scaffolder actions: `github:repo:create` and `github:repo:push`
 
 ##### Patch Changes
 
-- ff316b86d8: Add `copyWithoutTemplating` to the fetch template action input. `copyWithoutTemplating` also accepts an array of glob patterns. Contents of matched files or directories are copied without being processed, but paths are subject to rendering.
+- [`ff316b86d8`](https://github.com/backstage/backstage/commit/ff316b86d8): Add `copyWithoutTemplating` to the fetch template action input. `copyWithoutTemplating` also accepts an array of glob patterns. Contents of matched files or directories are copied without being processed, but paths are subject to rendering.
 
   Deprecate `copyWithoutRender` in favor of `copyWithoutTemplating`.
 
-- 801d606909: Improve error messaging when passing in malformed auth
-- 089d846962: Fix issues with optional directories and files
-- ea6dcb84a4: Don't resolve symlinks, treat them as binary files and copy them as-is
-- af02f54483: new setUserAsOwner flag for publish:gitlab action
+- [`801d606909`](https://github.com/backstage/backstage/commit/801d606909): Improve error messaging when passing in malformed auth
+- [`089d846962`](https://github.com/backstage/backstage/commit/089d846962): Fix issues with optional directories and files
+- [`ea6dcb84a4`](https://github.com/backstage/backstage/commit/ea6dcb84a4): Don't resolve symlinks, treat them as binary files and copy them as-is
+- [`af02f54483`](https://github.com/backstage/backstage/commit/af02f54483): new setUserAsOwner flag for publish:gitlab action
 
   The field default is `false`. When true it will use the token configured in the gitlab integration for the matching host, to try and set the user logged in via `repoUrlPicker` `requestUserCredentials` OAuth flow as owner of the repository created in GitLab.
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
-- 511f49ee43: Updated dependency `octokit` to `^2.0.0`.
-- 735853353b: Updated dependency `@octokit/webhooks` to `^10.0.0`.
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
+- [`511f49ee43`](https://github.com/backstage/backstage/commit/511f49ee43): Updated dependency `octokit` to `^2.0.0`.
+- [`735853353b`](https://github.com/backstage/backstage/commit/735853353b): Updated dependency `@octokit/webhooks` to `^10.0.0`.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -1045,16 +1045,16 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - SNYK-JS-PARSEURL-2935947
   - SNYK-JS-PARSEURL-2936249
 
-- 945a27fa6a: Add sourcePath option to publish:gerrit action
-- 1764296a68: Allow to create Gerrit project using default owner
+- [`945a27fa6a`](https://github.com/backstage/backstage/commit/945a27fa6a): Add sourcePath option to publish:gerrit action
+- [`1764296a68`](https://github.com/backstage/backstage/commit/1764296a68): Allow to create Gerrit project using default owner
 
-### `@backstage/plugin-techdocs` (1.2.0 → 1.3.0)
+### `@backstage/plugin-techdocs` (1.2.0 → [1.3.0](../../changelogs/@backstage/plugin-techdocs.md#130))
 
 #### 1.3.0
 
 ##### Minor Changes
 
-- ebf3eb1641: Use the same initial filter `owned` for the `TechDocsIndexPage` as for the `CatalogPage`.
+- [`ebf3eb1641`](https://github.com/backstage/backstage/commit/ebf3eb1641): Use the same initial filter `owned` for the `TechDocsIndexPage` as for the `CatalogPage`.
 
   If you prefer to keep the previous behavior, you can change the default for the initial filter
   to `all` (or `starred` if you rather prefer that).
@@ -1067,9 +1067,9 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -1078,38 +1078,38 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - SNYK-JS-PARSEURL-2935947
   - SNYK-JS-PARSEURL-2936249
 
-- 3cbebf710e: Reorder browser tab title in Techdocs pages to have the site name first.
-- 726577958f: Remove the 60% factor from the font size calculation of headers to use the exact size defined in BackstageTheme.
-- 7739141ab2: Fix: When docs are shown in an entity page under the docs tab the sidebars start overlapping with the header and tabs in the page when you scroll the documentation content.
+- [`3cbebf710e`](https://github.com/backstage/backstage/commit/3cbebf710e): Reorder browser tab title in Techdocs pages to have the site name first.
+- [`726577958f`](https://github.com/backstage/backstage/commit/726577958f): Remove the 60% factor from the font size calculation of headers to use the exact size defined in BackstageTheme.
+- [`7739141ab2`](https://github.com/backstage/backstage/commit/7739141ab2): Fix: When docs are shown in an entity page under the docs tab the sidebars start overlapping with the header and tabs in the page when you scroll the documentation content.
 
-### `@backstage/plugin-techdocs-backend` (1.1.2 → 1.2.0)
-
-#### 1.2.0
-
-##### Minor Changes
-
-- 860765ff45: Added local publishing target directory `config`: `techdocs.publisher.local.publishDirectory`
-
-##### Patch Changes
-
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
-- 726577958f: Add sample headings on the documented component homepage.
-
-### `@backstage/plugin-techdocs-node` (1.1.2 → 1.2.0)
+### `@backstage/plugin-techdocs-backend` (1.1.2 → [1.2.0](../../changelogs/@backstage/plugin-techdocs-backend.md#120))
 
 #### 1.2.0
 
 ##### Minor Changes
 
-- 860765ff45: Added local publishing target directory `config`: `techdocs.publisher.local.publishDirectory`
+- [`860765ff45`](https://github.com/backstage/backstage/commit/860765ff45): Added local publishing target directory `config`: `techdocs.publisher.local.publishDirectory`
 
 ##### Patch Changes
 
-- a5d73da942: Fix the flag parsing for `legacyCopyReadmeMdToIndexMd` in `techdocs-cli generate` command, and decouple it's logic from the `techdocs-ref` flag.
-- d505b7b37d: Fixed issue with git feedback buttons not appearing automatically in docs pages. This was done by appending `repo_url` to the helper function `getRepoUrlFromLocationAnnotation`.
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
+- [`726577958f`](https://github.com/backstage/backstage/commit/726577958f): Add sample headings on the documented component homepage.
+
+### `@backstage/plugin-techdocs-node` (1.1.2 → [1.2.0](../../changelogs/@backstage/plugin-techdocs-node.md#120))
+
+#### 1.2.0
+
+##### Minor Changes
+
+- [`860765ff45`](https://github.com/backstage/backstage/commit/860765ff45): Added local publishing target directory `config`: `techdocs.publisher.local.publishDirectory`
+
+##### Patch Changes
+
+- [`a5d73da942`](https://github.com/backstage/backstage/commit/a5d73da942): Fix the flag parsing for `legacyCopyReadmeMdToIndexMd` in `techdocs-cli generate` command, and decouple it's logic from the `techdocs-ref` flag.
+- [`d505b7b37d`](https://github.com/backstage/backstage/commit/d505b7b37d): Fixed issue with git feedback buttons not appearing automatically in docs pages. This was done by appending `repo_url` to the helper function `getRepoUrlFromLocationAnnotation`.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -1120,32 +1120,32 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 ## Other patch version bumps
 
-### `@backstage/app-defaults` (1.0.3 → 1.0.4)
+### `@backstage/app-defaults` (1.0.3 → [1.0.4](../../changelogs/@backstage/app-defaults.md#104))
 
 #### 1.0.4
 
 ##### Patch Changes
 
-- 881fc75a75: Internal tweak removing usage of explicit type parameters for the `BackstagePlugin` type.
+- [`881fc75a75`](https://github.com/backstage/backstage/commit/881fc75a75): Internal tweak removing usage of explicit type parameters for the `BackstagePlugin` type.
 
-### `@backstage/backend-common` (0.14.0 → 0.14.1)
+### `@backstage/backend-common` (0.14.0 → [0.14.1](../../changelogs/@backstage/backend-common.md#0141))
 
 #### 0.14.1
 
 ##### Patch Changes
 
-- b1edb5cfd9: Fix parsing of S3 URLs for the default region.
-- c3cfc83af2: Updated JSDoc to be MDX compatible.
-- e57180e45e: Added some more information to the error messages for `isomorphic-git` errors
-- 1f75dfac29: Fix edge case bug when gitlab relativePath is repeated in the target URL.
-- 90c87f28e8: Moving from Bitbucket Server endpoint from https://docs.atlassian.com/bitbucket-server/rest/7.9.0/bitbucket-rest.html#idp222 to https://docs.atlassian.com/bitbucket-server/rest/7.9.0/bitbucket-rest.html#idp224, to have the last commit in function of different branch, and not only the list of default branch
-- 9de15a41d7: Upgrade @octokit/rest to 19.0.3
-- 0fc57887e8: Improve plural handling in logging output for secrets
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`b1edb5cfd9`](https://github.com/backstage/backstage/commit/b1edb5cfd9): Fix parsing of S3 URLs for the default region.
+- [`c3cfc83af2`](https://github.com/backstage/backstage/commit/c3cfc83af2): Updated JSDoc to be MDX compatible.
+- [`e57180e45e`](https://github.com/backstage/backstage/commit/e57180e45e): Added some more information to the error messages for `isomorphic-git` errors
+- [`1f75dfac29`](https://github.com/backstage/backstage/commit/1f75dfac29): Fix edge case bug when gitlab relativePath is repeated in the target URL.
+- [`90c87f28e8`](https://github.com/backstage/backstage/commit/90c87f28e8): Moving from Bitbucket Server endpoint from https://docs.atlassian.com/bitbucket-server/rest/7.9.0/bitbucket-rest.html#idp222 to https://docs.atlassian.com/bitbucket-server/rest/7.9.0/bitbucket-rest.html#idp224, to have the last commit in function of different branch, and not only the list of default branch
+- [`9de15a41d7`](https://github.com/backstage/backstage/commit/9de15a41d7): Upgrade @octokit/rest to 19.0.3
+- [`0fc57887e8`](https://github.com/backstage/backstage/commit/0fc57887e8): Improve plural handling in logging output for secrets
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -1154,81 +1154,81 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - SNYK-JS-PARSEURL-2935947
   - SNYK-JS-PARSEURL-2936249
 
-- 954a94f52f: Support self-hosted gitlab installations with relative URL.
+- [`954a94f52f`](https://github.com/backstage/backstage/commit/954a94f52f): Support self-hosted gitlab installations with relative URL.
 
-### `@backstage/backend-tasks` (0.3.2 → 0.3.3)
+### `@backstage/backend-tasks` (0.3.2 → [0.3.3](../../changelogs/@backstage/backend-tasks.md#033))
 
 #### 0.3.3
 
 ##### Patch Changes
 
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
 
-### `@backstage/backend-test-utils` (0.1.25 → 0.1.26)
+### `@backstage/backend-test-utils` (0.1.25 → [0.1.26](../../changelogs/@backstage/backend-test-utils.md#0126))
 
 #### 0.1.26
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
 
-### `@backstage/catalog-client` (1.0.3 → 1.0.4)
+### `@backstage/catalog-client` (1.0.3 → [1.0.4](../../changelogs/@backstage/catalog-client.md#104))
 
 #### 1.0.4
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/config-loader` (1.1.2 → 1.1.3)
+### `@backstage/config-loader` (1.1.2 → [1.1.3](../../changelogs/@backstage/config-loader.md#113))
 
 #### 1.1.3
 
 ##### Patch Changes
 
-- bcada7cd9f: From now on the `$file` placeholder will trim the whitespaces and newline characters from the end of the file it reads.
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- a3acec8819: Updated dependency `typescript-json-schema` to `^0.54.0`.
+- [`bcada7cd9f`](https://github.com/backstage/backstage/commit/bcada7cd9f): From now on the `$file` placeholder will trim the whitespaces and newline characters from the end of the file it reads.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`a3acec8819`](https://github.com/backstage/backstage/commit/a3acec8819): Updated dependency `typescript-json-schema` to `^0.54.0`.
 
-### `@backstage/core-app-api` (1.0.3 → 1.0.4)
-
-#### 1.0.4
-
-##### Patch Changes
-
-- 881fc75a75: Internal tweak removing usage of explicit type parameters for the `BackstagePlugin` type.
-- 8fe2357101: The `signOut` method of the `IdentityApi` will now navigate the user back to the base URL of the app as indicated by the `app.baseUrl` config.
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-
-### `@backstage/core-plugin-api` (1.0.3 → 1.0.4)
+### `@backstage/core-app-api` (1.0.3 → [1.0.4](../../changelogs/@backstage/core-app-api.md#104))
 
 #### 1.0.4
 
 ##### Patch Changes
 
-- 881fc75a75: Internal tweak removing usage of explicit type parameters for the `BackstagePlugin` type.
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 2990fff4e5: Enabled the `@backstage/core-plugin-api/alpha` entry point.
+- [`881fc75a75`](https://github.com/backstage/backstage/commit/881fc75a75): Internal tweak removing usage of explicit type parameters for the `BackstagePlugin` type.
+- [`8fe2357101`](https://github.com/backstage/backstage/commit/8fe2357101): The `signOut` method of the `IdentityApi` will now navigate the user back to the base URL of the app as indicated by the `app.baseUrl` config.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/create-app` (0.4.28 → 0.4.29)
+### `@backstage/core-plugin-api` (1.0.3 → [1.0.4](../../changelogs/@backstage/core-plugin-api.md#104))
+
+#### 1.0.4
+
+##### Patch Changes
+
+- [`881fc75a75`](https://github.com/backstage/backstage/commit/881fc75a75): Internal tweak removing usage of explicit type parameters for the `BackstagePlugin` type.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`2990fff4e5`](https://github.com/backstage/backstage/commit/2990fff4e5): Enabled the `@backstage/core-plugin-api/alpha` entry point.
+
+### `@backstage/create-app` (0.4.28 → [0.4.29](../../changelogs/@backstage/create-app.md#0429))
 
 #### 0.4.29
 
 ##### Patch Changes
 
-- f281ad17c0: Adds the ability to define the Backstage app name using a `BACKSTAGE_APP_NAME`
+- [`f281ad17c0`](https://github.com/backstage/backstage/commit/f281ad17c0): Adds the ability to define the Backstage app name using a `BACKSTAGE_APP_NAME`
   environment variable when running `create-app`.
-- c92deffe39: Bumped create-app version.
-- 0e967f188b: Bumped create-app version.
-- bc87604c26: Added an explicit `node-gyp` dependency to the root `package.json`. This is to work around a bug in older versions of `node-gyp` that causes Python execution to fail on macOS.
+- [`c92deffe39`](https://github.com/backstage/backstage/commit/c92deffe39): Bumped create-app version.
+- [`0e967f188b`](https://github.com/backstage/backstage/commit/0e967f188b): Bumped create-app version.
+- [`bc87604c26`](https://github.com/backstage/backstage/commit/bc87604c26): Added an explicit `node-gyp` dependency to the root `package.json`. This is to work around a bug in older versions of `node-gyp` that causes Python execution to fail on macOS.
 
   You can add this workaround to your existing project by adding `node-gyp` as a `devDependency` in your root `package.json` file:
 
@@ -1238,18 +1238,18 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
      },
   ```
 
-### `@backstage/integration` (1.2.1 → 1.2.2)
+### `@backstage/integration` (1.2.1 → [1.2.2](../../changelogs/@backstage/integration.md#122))
 
 #### 1.2.2
 
 ##### Patch Changes
 
-- 9de15a41d7: Upgrade @octokit/rest to 19.0.3
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 1f29047bad: Updated dependency `@octokit/auth-app` to `^4.0.0`.
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`9de15a41d7`](https://github.com/backstage/backstage/commit/9de15a41d7): Upgrade @octokit/rest to 19.0.3
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`1f29047bad`](https://github.com/backstage/backstage/commit/1f29047bad): Updated dependency `@octokit/auth-app` to `^4.0.0`.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -1258,29 +1258,29 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - SNYK-JS-PARSEURL-2935947
   - SNYK-JS-PARSEURL-2936249
 
-- 8829e175f2: Allow frontend visibility for `integrations` itself.
-- 954a94f52f: Support self-hosted gitlab installations with relative URL.
-- 4df3390795: Avoid double encoding of the file path in `getBitbucketServerDownloadUrl`
+- [`8829e175f2`](https://github.com/backstage/backstage/commit/8829e175f2): Allow frontend visibility for `integrations` itself.
+- [`954a94f52f`](https://github.com/backstage/backstage/commit/954a94f52f): Support self-hosted gitlab installations with relative URL.
+- [`4df3390795`](https://github.com/backstage/backstage/commit/4df3390795): Avoid double encoding of the file path in `getBitbucketServerDownloadUrl`
 
-### `@backstage/integration-react` (1.1.1 → 1.1.2)
+### `@backstage/integration-react` (1.1.1 → [1.1.2](../../changelogs/@backstage/integration-react.md#112))
 
 #### 1.1.2
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-adr` (0.1.1 → 0.1.2)
+### `@backstage/plugin-adr` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-adr.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 511f49ee43: Updated dependency `octokit` to `^2.0.0`.
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`511f49ee43`](https://github.com/backstage/backstage/commit/511f49ee43): Updated dependency `octokit` to `^2.0.0`.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -1289,238 +1289,238 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - SNYK-JS-PARSEURL-2935947
   - SNYK-JS-PARSEURL-2936249
 
-- 7d47e7e512: Track discover event and result rank for `AdrSearchResultListItem`
+- [`7d47e7e512`](https://github.com/backstage/backstage/commit/7d47e7e512): Track discover event and result rank for `AdrSearchResultListItem`
 
-### `@backstage/plugin-adr-backend` (0.1.1 → 0.1.2)
+### `@backstage/plugin-adr-backend` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-adr-backend.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-airbrake` (0.3.6 → 0.3.7)
+### `@backstage/plugin-airbrake` (0.3.6 → [0.3.7](../../changelogs/@backstage/plugin-airbrake.md#037))
 
 #### 0.3.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-airbrake-backend` (0.2.6 → 0.2.7)
+### `@backstage/plugin-airbrake-backend` (0.2.6 → [0.2.7](../../changelogs/@backstage/plugin-airbrake-backend.md#027))
 
 #### 0.2.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-allure` (0.1.22 → 0.1.23)
+### `@backstage/plugin-allure` (0.1.22 → [0.1.23](../../changelogs/@backstage/plugin-allure.md#0123))
 
 #### 0.1.23
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-analytics-module-ga` (0.1.17 → 0.1.18)
+### `@backstage/plugin-analytics-module-ga` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-analytics-module-ga.md#0118))
 
 #### 0.1.18
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-api-docs` (0.8.6 → 0.8.7)
+### `@backstage/plugin-api-docs` (0.8.6 → [0.8.7](../../changelogs/@backstage/plugin-api-docs.md#087))
 
 #### 0.8.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- b76eea25ed: Updated dependency `@asyncapi/react-component` to `1.0.0-next.39`.
-- a274fe38b9: Add hidden title column to catalog and API table to enable filtering by title.
-- 9432a05cf3: Set font colors correctly for descriptions containing HTML
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`b76eea25ed`](https://github.com/backstage/backstage/commit/b76eea25ed): Updated dependency `@asyncapi/react-component` to `1.0.0-next.39`.
+- [`a274fe38b9`](https://github.com/backstage/backstage/commit/a274fe38b9): Add hidden title column to catalog and API table to enable filtering by title.
+- [`9432a05cf3`](https://github.com/backstage/backstage/commit/9432a05cf3): Set font colors correctly for descriptions containing HTML
 
-### `@backstage/plugin-app-backend` (0.3.33 → 0.3.34)
+### `@backstage/plugin-app-backend` (0.3.33 → [0.3.34](../../changelogs/@backstage/plugin-app-backend.md#0334))
 
 #### 0.3.34
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
 
-### `@backstage/plugin-auth-node` (0.2.2 → 0.2.3)
+### `@backstage/plugin-auth-node` (0.2.2 → [0.2.3](../../changelogs/@backstage/plugin-auth-node.md#023))
 
 #### 0.2.3
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-azure-devops` (0.1.22 → 0.1.23)
+### `@backstage/plugin-azure-devops` (0.1.22 → [0.1.23](../../changelogs/@backstage/plugin-azure-devops.md#0123))
 
 #### 0.1.23
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- e049e41048: Exporting azureDevOpsApiRef, AzureGitTagsIcon, and all hooks for the benefit of other plugins.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`e049e41048`](https://github.com/backstage/backstage/commit/e049e41048): Exporting azureDevOpsApiRef, AzureGitTagsIcon, and all hooks for the benefit of other plugins.
 
-### `@backstage/plugin-azure-devops-backend` (0.3.12 → 0.3.13)
+### `@backstage/plugin-azure-devops-backend` (0.3.12 → [0.3.13](../../changelogs/@backstage/plugin-azure-devops-backend.md#0313))
 
 #### 0.3.13
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 13a232ec22: Added comments to example to help avoid confusion as to where lines need to be added
-- e67c4b7d5a: Adding getProjects endpoint to list out all projects associated with the Azure DevOps organization.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`13a232ec22`](https://github.com/backstage/backstage/commit/13a232ec22): Added comments to example to help avoid confusion as to where lines need to be added
+- [`e67c4b7d5a`](https://github.com/backstage/backstage/commit/e67c4b7d5a): Adding getProjects endpoint to list out all projects associated with the Azure DevOps organization.
 
   It can be accessed by using this endpoint `{backendUrl}/api/azure-devops/projects`
 
-### `@backstage/plugin-azure-devops-common` (0.2.3 → 0.2.4)
+### `@backstage/plugin-azure-devops-common` (0.2.3 → [0.2.4](../../changelogs/@backstage/plugin-azure-devops-common.md#024))
 
 #### 0.2.4
 
 ##### Patch Changes
 
-- e67c4b7d5a: Adding getProjects endpoint to list out all projects associated with the Azure DevOps organization.
+- [`e67c4b7d5a`](https://github.com/backstage/backstage/commit/e67c4b7d5a): Adding getProjects endpoint to list out all projects associated with the Azure DevOps organization.
 
   It can be accessed by using this endpoint `{backendUrl}/api/azure-devops/projects`
 
-### `@backstage/plugin-badges` (0.2.30 → 0.2.31)
+### `@backstage/plugin-badges` (0.2.30 → [0.2.31](../../changelogs/@backstage/plugin-badges.md#0231))
 
 #### 0.2.31
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-badges-backend` (0.1.27 → 0.1.28)
+### `@backstage/plugin-badges-backend` (0.1.27 → [0.1.28](../../changelogs/@backstage/plugin-badges-backend.md#0128))
 
 #### 0.1.28
 
 ##### Patch Changes
 
-- 58fd5ee9d5: Add missing installation instructions
+- [`58fd5ee9d5`](https://github.com/backstage/backstage/commit/58fd5ee9d5): Add missing installation instructions
 
-### `@backstage/plugin-bazaar` (0.1.21 → 0.1.22)
+### `@backstage/plugin-bazaar` (0.1.21 → [0.1.22](../../changelogs/@backstage/plugin-bazaar.md#0122))
 
 #### 0.1.22
 
 ##### Patch Changes
 
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 77abf50acf: Fixed api warnings
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`77abf50acf`](https://github.com/backstage/backstage/commit/77abf50acf): Fixed api warnings
 
-### `@backstage/plugin-bazaar-backend` (0.1.17 → 0.1.18)
+### `@backstage/plugin-bazaar-backend` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-bazaar-backend.md#0118))
 
 #### 0.1.18
 
 ##### Patch Changes
 
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
-- 77abf50acf: Fixed api warnings
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
+- [`77abf50acf`](https://github.com/backstage/backstage/commit/77abf50acf): Fixed api warnings
 
-### `@backstage/plugin-bitbucket-cloud-common` (0.1.0 → 0.1.1)
+### `@backstage/plugin-bitbucket-cloud-common` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-bitbucket-cloud-common.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-bitrise` (0.1.33 → 0.1.34)
+### `@backstage/plugin-bitrise` (0.1.33 → [0.1.34](../../changelogs/@backstage/plugin-bitrise.md#0134))
 
 #### 0.1.34
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-catalog-backend-module-aws` (0.1.6 → 0.1.7)
+### `@backstage/plugin-catalog-backend-module-aws` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-catalog-backend-module-aws.md#017))
 
 #### 0.1.7
 
 ##### Patch Changes
 
-- f9f1de8100: Add processor for ingesting EKS clusters into the catalog
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
+- [`f9f1de8100`](https://github.com/backstage/backstage/commit/f9f1de8100): Add processor for ingesting EKS clusters into the catalog
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-azure` (0.1.4 → 0.1.5)
+### `@backstage/plugin-catalog-backend-module-azure` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-catalog-backend-module-azure.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.0 → 0.2.1)
+### `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket.md#021))
 
 #### 0.2.1
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.0 → 0.1.1)
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-cloud.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.1 → 0.1.2)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-catalog-backend-module-gerrit.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-catalog-backend-module-github` (0.1.4 → 0.1.5)
-
-#### 0.1.5
-
-##### Patch Changes
-
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 0f25116d28: Updated dependency `@octokit/graphql` to `^5.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-
-### `@backstage/plugin-catalog-backend-module-gitlab` (0.1.4 → 0.1.5)
+### `@backstage/plugin-catalog-backend-module-github` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 49ff472c0b: Add the possibility in the `GitlabDiscoveryEntityProvider` to scan the whole project instead of concrete groups. For that, use a configuration like this one, where the group parameter is omitted (not mandatory anymore):
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`0f25116d28`](https://github.com/backstage/backstage/commit/0f25116d28): Updated dependency `@octokit/graphql` to `^5.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#015))
+
+#### 0.1.5
+
+##### Patch Changes
+
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`49ff472c0b`](https://github.com/backstage/backstage/commit/49ff472c0b): Add the possibility in the `GitlabDiscoveryEntityProvider` to scan the whole project instead of concrete groups. For that, use a configuration like this one, where the group parameter is omitted (not mandatory anymore):
 
   ```yaml
   catalog:
@@ -1532,35 +1532,35 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
           entityFilename: catalog-info.yaml # Optional. Defaults to `catalog-info.yaml`
   ```
 
-### `@backstage/plugin-catalog-backend-module-ldap` (0.5.0 → 0.5.1)
+### `@backstage/plugin-catalog-backend-module-ldap` (0.5.0 → [0.5.1](../../changelogs/@backstage/plugin-catalog-backend-module-ldap.md#051))
 
 #### 0.5.1
 
 ##### Patch Changes
 
-- ddfd566606: Fix mapping between users and groups for FreeIPA when using the LdapOrgProcessor
-- fbfbff6bf7: Add possibility to resolve relations by RDN, in addition to UUID and DN
+- [`ddfd566606`](https://github.com/backstage/backstage/commit/ddfd566606): Fix mapping between users and groups for FreeIPA when using the LdapOrgProcessor
+- [`fbfbff6bf7`](https://github.com/backstage/backstage/commit/fbfbff6bf7): Add possibility to resolve relations by RDN, in addition to UUID and DN
 
-### `@backstage/plugin-catalog-graphql` (0.3.10 → 0.3.11)
+### `@backstage/plugin-catalog-graphql` (0.3.10 → [0.3.11](../../changelogs/@backstage/plugin-catalog-graphql.md#0311))
 
 #### 0.3.11
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-catalog-import` (0.8.9 → 0.8.10)
+### `@backstage/plugin-catalog-import` (0.8.9 → [0.8.10](../../changelogs/@backstage/plugin-catalog-import.md#0810))
 
 #### 0.8.10
 
 ##### Patch Changes
 
-- 9de15a41d7: Upgrade @octokit/rest to 19.0.3
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`9de15a41d7`](https://github.com/backstage/backstage/commit/9de15a41d7): Upgrade @octokit/rest to 19.0.3
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -1569,16 +1569,16 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - SNYK-JS-PARSEURL-2935947
   - SNYK-JS-PARSEURL-2936249
 
-- 272106fdad: Support use without `integrations` or only integrations without frontend visible properties (e.g., `bitbucketCloud`) being configured by checking `integrations.github` directly without attempting to load `integrations`.
+- [`272106fdad`](https://github.com/backstage/backstage/commit/272106fdad): Support use without `integrations` or only integrations without frontend visible properties (e.g., `bitbucketCloud`) being configured by checking `integrations.github` directly without attempting to load `integrations`.
 
-### `@backstage/plugin-catalog-react` (1.1.1 → 1.1.2)
+### `@backstage/plugin-catalog-react` (1.1.1 → [1.1.2](../../changelogs/@backstage/plugin-catalog-react.md#112))
 
 #### 1.1.2
 
 ##### Patch Changes
 
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
-- be26d95141: Added new `EntityProcessingStatusPicker` that will filter for entities with orphans and/or errors.
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
+- [`be26d95141`](https://github.com/backstage/backstage/commit/be26d95141): Added new `EntityProcessingStatusPicker` that will filter for entities with orphans and/or errors.
 
   If you are using the default Catalog page this picker will be added automatically. For those who have customized their Catalog page you'll need to add this manually by doing something like this:
 
@@ -1617,235 +1617,235 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   };
   ```
 
-### `@backstage/plugin-cicd-statistics` (0.1.8 → 0.1.9)
+### `@backstage/plugin-cicd-statistics` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-cicd-statistics.md#019))
 
 #### 0.1.9
 
 ##### Patch Changes
 
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
 
-### `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.2 → 0.1.3)
+### `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-cicd-statistics-module-gitlab.md#013))
 
 #### 0.1.3
 
 ##### Patch Changes
 
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
 
-### `@backstage/plugin-circleci` (0.3.6 → 0.3.7)
-
-#### 0.3.7
-
-##### Patch Changes
-
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-
-### `@backstage/plugin-cloudbuild` (0.3.6 → 0.3.7)
+### `@backstage/plugin-circleci` (0.3.6 → [0.3.7](../../changelogs/@backstage/plugin-circleci.md#037))
 
 #### 0.3.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-code-climate` (0.1.6 → 0.1.7)
+### `@backstage/plugin-cloudbuild` (0.3.6 → [0.3.7](../../changelogs/@backstage/plugin-cloudbuild.md#037))
+
+#### 0.3.7
+
+##### Patch Changes
+
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+
+### `@backstage/plugin-code-climate` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-code-climate.md#017))
 
 #### 0.1.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-codescene` (0.1.1 → 0.1.2)
+### `@backstage/plugin-codescene` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-codescene.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 15201b1032: Updated dependency `rc-progress` to `3.4.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`15201b1032`](https://github.com/backstage/backstage/commit/15201b1032): Updated dependency `rc-progress` to `3.4.0`.
 
-### `@backstage/plugin-config-schema` (0.1.29 → 0.1.30)
+### `@backstage/plugin-config-schema` (0.1.29 → [0.1.30](../../changelogs/@backstage/plugin-config-schema.md#0130))
 
 #### 0.1.30
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-cost-insights` (0.11.28 → 0.11.29)
+### `@backstage/plugin-cost-insights` (0.11.28 → [0.11.29](../../changelogs/@backstage/plugin-cost-insights.md#01129))
 
 #### 0.11.29
 
 ##### Patch Changes
 
-- 3e032a5de2: Move cost-insights data specific API types (non react) into an @backstage/plugin-cost-insights-common
+- [`3e032a5de2`](https://github.com/backstage/backstage/commit/3e032a5de2): Move cost-insights data specific API types (non react) into an @backstage/plugin-cost-insights-common
   isomorphic package. This allows these types to be shared in any backend packages or other cost-insight
   modules.
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-dynatrace` (0.1.0 → 0.1.1)
+### `@backstage/plugin-dynatrace` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-dynatrace.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-explore` (0.3.37 → 0.3.38)
+### `@backstage/plugin-explore` (0.3.37 → [0.3.38](../../changelogs/@backstage/plugin-explore.md#0338))
 
 #### 0.3.38
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-firehydrant` (0.1.23 → 0.1.24)
+### `@backstage/plugin-firehydrant` (0.1.23 → [0.1.24](../../changelogs/@backstage/plugin-firehydrant.md#0124))
 
 #### 0.1.24
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-fossa` (0.2.38 → 0.2.39)
+### `@backstage/plugin-fossa` (0.2.38 → [0.2.39](../../changelogs/@backstage/plugin-fossa.md#0239))
 
 #### 0.2.39
 
 ##### Patch Changes
 
-- 322d1ceeba: Allow configuration of base URL for Fossa links
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`322d1ceeba`](https://github.com/backstage/backstage/commit/322d1ceeba): Allow configuration of base URL for Fossa links
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-gcalendar` (0.3.2 → 0.3.3)
+### `@backstage/plugin-gcalendar` (0.3.2 → [0.3.3](../../changelogs/@backstage/plugin-gcalendar.md#033))
 
 #### 0.3.3
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-gcp-projects` (0.3.25 → 0.3.26)
+### `@backstage/plugin-gcp-projects` (0.3.25 → [0.3.26](../../changelogs/@backstage/plugin-gcp-projects.md#0326))
 
 #### 0.3.26
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 693990d4fe: Updated dependency `@react-hookz/web` to `^15.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`693990d4fe`](https://github.com/backstage/backstage/commit/693990d4fe): Updated dependency `@react-hookz/web` to `^15.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-git-release-manager` (0.3.19 → 0.3.20)
+### `@backstage/plugin-git-release-manager` (0.3.19 → [0.3.20](../../changelogs/@backstage/plugin-git-release-manager.md#0320))
 
 #### 0.3.20
 
 ##### Patch Changes
 
-- 9de15a41d7: Upgrade @octokit/rest to 19.0.3
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`9de15a41d7`](https://github.com/backstage/backstage/commit/9de15a41d7): Upgrade @octokit/rest to 19.0.3
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-github-actions` (0.5.6 → 0.5.7)
+### `@backstage/plugin-github-actions` (0.5.6 → [0.5.7](../../changelogs/@backstage/plugin-github-actions.md#057))
 
 #### 0.5.7
 
 ##### Patch Changes
 
-- 9de15a41d7: Upgrade @octokit/rest to 19.0.3
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 217f919f0a: Minor cleanup of the API surface.
+- [`9de15a41d7`](https://github.com/backstage/backstage/commit/9de15a41d7): Upgrade @octokit/rest to 19.0.3
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`217f919f0a`](https://github.com/backstage/backstage/commit/217f919f0a): Minor cleanup of the API surface.
 
-### `@backstage/plugin-github-deployments` (0.1.37 → 0.1.38)
+### `@backstage/plugin-github-deployments` (0.1.37 → [0.1.38](../../changelogs/@backstage/plugin-github-deployments.md#0138))
 
 #### 0.1.38
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 0f25116d28: Updated dependency `@octokit/graphql` to `^5.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`0f25116d28`](https://github.com/backstage/backstage/commit/0f25116d28): Updated dependency `@octokit/graphql` to `^5.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-github-pull-requests-board` (0.1.0 → 0.1.1)
+### `@backstage/plugin-github-pull-requests-board` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-github-pull-requests-board.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- c6690d9d24: Fix bug on fetching teams repositories where were being filtered by type service unnecessarily
-- 04e1504e85: Support namespaced teams and fetch all kinds
-- 9de15a41d7: Upgrade @octokit/rest to 19.0.3
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`c6690d9d24`](https://github.com/backstage/backstage/commit/c6690d9d24): Fix bug on fetching teams repositories where were being filtered by type service unnecessarily
+- [`04e1504e85`](https://github.com/backstage/backstage/commit/04e1504e85): Support namespaced teams and fetch all kinds
+- [`9de15a41d7`](https://github.com/backstage/backstage/commit/9de15a41d7): Upgrade @octokit/rest to 19.0.3
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-gitops-profiles` (0.3.24 → 0.3.25)
+### `@backstage/plugin-gitops-profiles` (0.3.24 → [0.3.25](../../changelogs/@backstage/plugin-gitops-profiles.md#0325))
 
 #### 0.3.25
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-gocd` (0.1.12 → 0.1.13)
+### `@backstage/plugin-gocd` (0.1.12 → [0.1.13](../../changelogs/@backstage/plugin-gocd.md#0113))
 
 #### 0.1.13
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-graphiql` (0.2.38 → 0.2.39)
+### `@backstage/plugin-graphiql` (0.2.38 → [0.2.39](../../changelogs/@backstage/plugin-graphiql.md#0239))
 
 #### 0.2.39
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-graphql-backend` (0.1.23 → 0.1.24)
+### `@backstage/plugin-graphql-backend` (0.1.23 → [0.1.24](../../changelogs/@backstage/plugin-graphql-backend.md#0124))
 
 #### 0.1.24
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-home` (0.4.22 → 0.4.23)
+### `@backstage/plugin-home` (0.4.22 → [0.4.23](../../changelogs/@backstage/plugin-home.md#0423))
 
 #### 0.4.23
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- a46e317a75: Added support for customizing the time format used in the `HeaderWorldClock` component
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`a46e317a75`](https://github.com/backstage/backstage/commit/a46e317a75): Added support for customizing the time format used in the `HeaderWorldClock` component
 
   Here's an example of how this can be used in the `HomePage.tsx` found in `\packages\app\src\components\home` to change the clock to be in the 24hr time format:
 
@@ -1868,290 +1868,290 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
           </Grid>
   ```
 
-### `@backstage/plugin-ilert` (0.1.32 → 0.1.33)
+### `@backstage/plugin-ilert` (0.1.32 → [0.1.33](../../changelogs/@backstage/plugin-ilert.md#0133))
 
 #### 0.1.33
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-jenkins` (0.7.5 → 0.7.6)
+### `@backstage/plugin-jenkins` (0.7.5 → [0.7.6](../../changelogs/@backstage/plugin-jenkins.md#076))
 
 #### 0.7.6
 
 ##### Patch Changes
 
-- 8747824221: feature: added support for multiple branches to the `JenkinsApi`
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`8747824221`](https://github.com/backstage/backstage/commit/8747824221): feature: added support for multiple branches to the `JenkinsApi`
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-jenkins-backend` (0.1.23 → 0.1.24)
+### `@backstage/plugin-jenkins-backend` (0.1.23 → [0.1.24](../../changelogs/@backstage/plugin-jenkins-backend.md#0124))
 
 #### 0.1.24
 
 ##### Patch Changes
 
-- 8747824221: feature: added support for multiple branches to the `JenkinsApi`
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`8747824221`](https://github.com/backstage/backstage/commit/8747824221): feature: added support for multiple branches to the `JenkinsApi`
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-kafka` (0.3.6 → 0.3.7)
+### `@backstage/plugin-kafka` (0.3.6 → [0.3.7](../../changelogs/@backstage/plugin-kafka.md#037))
 
 #### 0.3.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-kafka-backend` (0.2.26 → 0.2.27)
+### `@backstage/plugin-kafka-backend` (0.2.26 → [0.2.27](../../changelogs/@backstage/plugin-kafka-backend.md#0227))
 
 #### 0.2.27
 
 ##### Patch Changes
 
-- 8751667541: Updated dependency `kafkajs` to `^2.0.0`.
+- [`8751667541`](https://github.com/backstage/backstage/commit/8751667541): Updated dependency `kafkajs` to `^2.0.0`.
 
-### `@backstage/plugin-lighthouse` (0.3.6 → 0.3.7)
+### `@backstage/plugin-lighthouse` (0.3.6 → [0.3.7](../../changelogs/@backstage/plugin-lighthouse.md#037))
 
 #### 0.3.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-newrelic` (0.3.24 → 0.3.25)
+### `@backstage/plugin-newrelic` (0.3.24 → [0.3.25](../../changelogs/@backstage/plugin-newrelic.md#0325))
 
 #### 0.3.25
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-org` (0.5.6 → 0.5.7)
+### `@backstage/plugin-org` (0.5.6 → [0.5.7](../../changelogs/@backstage/plugin-org.md#057))
 
 #### 0.5.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 1e984b11fc: Render namespaces for teams with subtitles in `MyGroupsSidebarItem`
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`1e984b11fc`](https://github.com/backstage/backstage/commit/1e984b11fc): Render namespaces for teams with subtitles in `MyGroupsSidebarItem`
 
-### `@backstage/plugin-periskop` (0.1.4 → 0.1.5)
-
-#### 0.1.5
-
-##### Patch Changes
-
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-
-### `@backstage/plugin-periskop-backend` (0.1.4 → 0.1.5)
+### `@backstage/plugin-periskop` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-periskop.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-permission-backend` (0.5.8 → 0.5.9)
+### `@backstage/plugin-periskop-backend` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-periskop-backend.md#015))
+
+#### 0.1.5
+
+##### Patch Changes
+
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+
+### `@backstage/plugin-permission-backend` (0.5.8 → [0.5.9](../../changelogs/@backstage/plugin-permission-backend.md#059))
 
 #### 0.5.9
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-permission-common` (0.6.2 → 0.6.3)
-
-#### 0.6.3
-
-##### Patch Changes
-
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-
-### `@backstage/plugin-permission-node` (0.6.2 → 0.6.3)
+### `@backstage/plugin-permission-common` (0.6.2 → [0.6.3](../../changelogs/@backstage/plugin-permission-common.md#063))
 
 #### 0.6.3
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-proxy-backend` (0.2.27 → 0.2.28)
+### `@backstage/plugin-permission-node` (0.6.2 → [0.6.3](../../changelogs/@backstage/plugin-permission-node.md#063))
+
+#### 0.6.3
+
+##### Patch Changes
+
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+
+### `@backstage/plugin-proxy-backend` (0.2.27 → [0.2.28](../../changelogs/@backstage/plugin-proxy-backend.md#0228))
 
 #### 0.2.28
 
 ##### Patch Changes
 
-- a4fa1ce090: The proxy-backend now automatically reloads configuration when app-config.yaml is updated.
-- 72622d9143: Updated dependency `yaml` to `^2.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a4fa1ce090`](https://github.com/backstage/backstage/commit/a4fa1ce090): The proxy-backend now automatically reloads configuration when app-config.yaml is updated.
+- [`72622d9143`](https://github.com/backstage/backstage/commit/72622d9143): Updated dependency `yaml` to `^2.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-rollbar` (0.4.6 → 0.4.7)
+### `@backstage/plugin-rollbar` (0.4.6 → [0.4.7](../../changelogs/@backstage/plugin-rollbar.md#047))
 
 #### 0.4.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-rollbar-backend` (0.1.30 → 0.1.31)
+### `@backstage/plugin-rollbar-backend` (0.1.30 → [0.1.31](../../changelogs/@backstage/plugin-rollbar-backend.md#0131))
 
 #### 0.1.31
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.8 → 0.2.9)
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-scaffolder-backend-module-cookiecutter.md#029))
 
 #### 0.2.9
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-search-backend-module-pg` (0.3.4 → 0.3.5)
+### `@backstage/plugin-search-backend-module-pg` (0.3.4 → [0.3.5](../../changelogs/@backstage/plugin-search-backend-module-pg.md#035))
 
 #### 0.3.5
 
 ##### Patch Changes
 
-- 423e3d8e95: **DEPRECATED**: `PgSearchEngine` static `from` has been deprecated and will be removed in a future release. Use static `fromConfig` method to instantiate.
+- [`423e3d8e95`](https://github.com/backstage/backstage/commit/423e3d8e95): **DEPRECATED**: `PgSearchEngine` static `from` has been deprecated and will be removed in a future release. Use static `fromConfig` method to instantiate.
 
   Added support for highlighting matched terms in search result data
 
-- 679b32172e: Updated dependency `knex` to `^2.0.0`.
-- 886e99b8e7: Now imports `SearchEngine` interface from `@backstage/plugin-search-common` instead of `@backstage/plugin-search-backend-node`
+- [`679b32172e`](https://github.com/backstage/backstage/commit/679b32172e): Updated dependency `knex` to `^2.0.0`.
+- [`886e99b8e7`](https://github.com/backstage/backstage/commit/886e99b8e7): Now imports `SearchEngine` interface from `@backstage/plugin-search-common` instead of `@backstage/plugin-search-backend-node`
 
-### `@backstage/plugin-shortcuts` (0.2.7 → 0.2.8)
+### `@backstage/plugin-shortcuts` (0.2.7 → [0.2.8](../../changelogs/@backstage/plugin-shortcuts.md#028))
 
 #### 0.2.8
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-sonarqube` (0.3.6 → 0.3.7)
+### `@backstage/plugin-sonarqube` (0.3.6 → [0.3.7](../../changelogs/@backstage/plugin-sonarqube.md#037))
 
 #### 0.3.7
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 15201b1032: Updated dependency `rc-progress` to `3.4.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`15201b1032`](https://github.com/backstage/backstage/commit/15201b1032): Updated dependency `rc-progress` to `3.4.0`.
 
-### `@backstage/plugin-splunk-on-call` (0.3.30 → 0.3.31)
+### `@backstage/plugin-splunk-on-call` (0.3.30 → [0.3.31](../../changelogs/@backstage/plugin-splunk-on-call.md#0331))
 
 #### 0.3.31
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-stack-overflow` (0.1.2 → 0.1.3)
+### `@backstage/plugin-stack-overflow` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-stack-overflow.md#013))
 
 #### 0.1.3
 
 ##### Patch Changes
 
-- 12ae3eed2f: - Publicly exports `StackOverflowIcon`.
+- [`12ae3eed2f`](https://github.com/backstage/backstage/commit/12ae3eed2f): - Publicly exports `StackOverflowIcon`.
   - `HomePageStackOverflowQuestions` accepts optional icon property.
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 52b4f796e3: app-config is now picked up properly.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`52b4f796e3`](https://github.com/backstage/backstage/commit/52b4f796e3): app-config is now picked up properly.
 
-### `@backstage/plugin-stack-overflow-backend` (0.1.2 → 0.1.3)
+### `@backstage/plugin-stack-overflow-backend` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-stack-overflow-backend.md#013))
 
 #### 0.1.3
 
 ##### Patch Changes
 
-- 52b4f796e3: app-config is now picked up properly.
+- [`52b4f796e3`](https://github.com/backstage/backstage/commit/52b4f796e3): app-config is now picked up properly.
 
-### `@backstage/plugin-tech-insights` (0.2.2 → 0.2.3)
+### `@backstage/plugin-tech-insights` (0.2.2 → [0.2.3](../../changelogs/@backstage/plugin-tech-insights.md#023))
 
 #### 0.2.3
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.17 → 0.1.18)
+### `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-tech-insights-backend-module-jsonfc.md#0118))
 
 #### 0.1.18
 
 ##### Patch Changes
 
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
 
-### `@backstage/plugin-tech-insights-common` (0.2.4 → 0.2.5)
+### `@backstage/plugin-tech-insights-common` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-tech-insights-common.md#025))
 
 #### 0.2.5
 
 ##### Patch Changes
 
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
 
-### `@backstage/plugin-tech-insights-node` (0.3.1 → 0.3.2)
+### `@backstage/plugin-tech-insights-node` (0.3.1 → [0.3.2](../../changelogs/@backstage/plugin-tech-insights-node.md#032))
 
 #### 0.3.2
 
 ##### Patch Changes
 
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- bcc122c46d: The `FactRetriever` model has been extended by adding optional title and description fields, allowing you to display them in the UI.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`bcc122c46d`](https://github.com/backstage/backstage/commit/bcc122c46d): The `FactRetriever` model has been extended by adding optional title and description fields, allowing you to display them in the UI.
 
-### `@backstage/plugin-tech-radar` (0.5.13 → 0.5.14)
+### `@backstage/plugin-tech-radar` (0.5.13 → [0.5.14](../../changelogs/@backstage/plugin-tech-radar.md#0514))
 
 #### 0.5.14
 
 ##### Patch Changes
 
-- b8f608f1ec: Update tech-radar documentation on how to use an external json data source with dates.
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`b8f608f1ec`](https://github.com/backstage/backstage/commit/b8f608f1ec): Update tech-radar documentation on how to use an external json data source with dates.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-techdocs-addons-test-utils` (1.0.1 → 1.0.2)
-
-#### 1.0.2
-
-##### Patch Changes
-
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-
-### `@backstage/plugin-techdocs-module-addons-contrib` (1.0.1 → 1.0.2)
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.1 → [1.0.2](../../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#102))
 
 #### 1.0.2
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 693990d4fe: Updated dependency `@react-hookz/web` to `^15.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- e2d7b76f43: Upgrade git-url-parse to 12.0.0.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.0.1 → [1.0.2](../../changelogs/@backstage/plugin-techdocs-module-addons-contrib.md#102))
+
+#### 1.0.2
+
+##### Patch Changes
+
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`693990d4fe`](https://github.com/backstage/backstage/commit/693990d4fe): Updated dependency `@react-hookz/web` to `^15.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`e2d7b76f43`](https://github.com/backstage/backstage/commit/e2d7b76f43): Upgrade git-url-parse to 12.0.0.
 
   Motivation for upgrade is transitively upgrading parse-url which is vulnerable
   to several CVEs detected by Snyk.
@@ -2160,100 +2160,100 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
   - SNYK-JS-PARSEURL-2935947
   - SNYK-JS-PARSEURL-2936249
 
-### `@backstage/plugin-techdocs-react` (1.0.1 → 1.0.2)
+### `@backstage/plugin-techdocs-react` (1.0.1 → [1.0.2](../../changelogs/@backstage/plugin-techdocs-react.md#102))
 
 #### 1.0.2
 
 ##### Patch Changes
 
-- c3cfc83af2: Updated JSDoc to be MDX compatible.
+- [`c3cfc83af2`](https://github.com/backstage/backstage/commit/c3cfc83af2): Updated JSDoc to be MDX compatible.
 
-### `@backstage/plugin-todo` (0.2.8 → 0.2.9)
+### `@backstage/plugin-todo` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-todo.md#029))
 
 #### 0.2.9
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-todo-backend` (0.1.30 → 0.1.31)
+### `@backstage/plugin-todo-backend` (0.1.30 → [0.1.31](../../changelogs/@backstage/plugin-todo-backend.md#0131))
 
 #### 0.1.31
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-user-settings` (0.4.5 → 0.4.6)
+### `@backstage/plugin-user-settings` (0.4.5 → [0.4.6](../../changelogs/@backstage/plugin-user-settings.md#046))
 
 #### 0.4.6
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/plugin-vault` (0.1.0 → 0.1.1)
+### `@backstage/plugin-vault` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-vault.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 7ee4abdcc9: Added a path notion in addition to secret name to allow to differentiate secrets in sub-paths
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
-- 5ebf2c7023: Export missing parameters and added them to the api-report. Also adapted the API to the expected response from the backend
+- [`7ee4abdcc9`](https://github.com/backstage/backstage/commit/7ee4abdcc9): Added a path notion in addition to secret name to allow to differentiate secrets in sub-paths
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
+- [`5ebf2c7023`](https://github.com/backstage/backstage/commit/5ebf2c7023): Export missing parameters and added them to the api-report. Also adapted the API to the expected response from the backend
 
-### `@backstage/plugin-xcmetrics` (0.2.26 → 0.2.27)
+### `@backstage/plugin-xcmetrics` (0.2.26 → [0.2.27](../../changelogs/@backstage/plugin-xcmetrics.md#0227))
 
 #### 0.2.27
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 4e9a90e307: Updated dependency `luxon` to `^3.0.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`4e9a90e307`](https://github.com/backstage/backstage/commit/4e9a90e307): Updated dependency `luxon` to `^3.0.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/test-utils` (1.1.1 → 1.1.2)
+### `@backstage/test-utils` (1.1.1 → [1.1.2](../../changelogs/@backstage/test-utils.md#112))
 
 #### 1.1.2
 
 ##### Patch Changes
 
-- a70869e775: Updated dependency `msw` to `^0.43.0`.
-- 8006d0f9bf: Updated dependency `msw` to `^0.44.0`.
+- [`a70869e775`](https://github.com/backstage/backstage/commit/a70869e775): Updated dependency `msw` to `^0.43.0`.
+- [`8006d0f9bf`](https://github.com/backstage/backstage/commit/8006d0f9bf): Updated dependency `msw` to `^0.44.0`.
 
-### `@backstage/theme` (0.2.15 → 0.2.16)
+### `@backstage/theme` (0.2.15 → [0.2.16](../../changelogs/@backstage/theme.md#0216))
 
 #### 0.2.16
 
 ##### Patch Changes
 
-- ff4f56eb49: **DEPRECATED**: The `bursts` object from `BackstagePaletteAdditions` has been depreciated and will be removed in a future release
+- [`ff4f56eb49`](https://github.com/backstage/backstage/commit/ff4f56eb49): **DEPRECATED**: The `bursts` object from `BackstagePaletteAdditions` has been depreciated and will be removed in a future release
 
   The `genPageTheme` function now includes an optional options object with an optional `fontColor` which defaults to white if not provided.
 
-- 4c09c09102: Adds optional `htmlFontSize` property and also sets typography design tokens for h5 and h6 in base theme.
+- [`4c09c09102`](https://github.com/backstage/backstage/commit/4c09c09102): Adds optional `htmlFontSize` property and also sets typography design tokens for h5 and h6 in base theme.
 
-### `@techdocs/cli` (1.1.2 → 1.1.3)
+### `@techdocs/cli` (1.1.2 → [1.1.3](../../changelogs/@techdocs/cli.md#113))
 
 #### 1.1.3
 
 ##### Patch Changes
 
-- a5d73da942: Fix the flag parsing for `legacyCopyReadmeMdToIndexMd` in `techdocs-cli generate` command, and decouple it's logic from the `techdocs-ref` flag.
-- 14ce0d9347: Fixed a bug that prevented docker images from being pulled by default when generating TechDocs.
+- [`a5d73da942`](https://github.com/backstage/backstage/commit/a5d73da942): Fix the flag parsing for `legacyCopyReadmeMdToIndexMd` in `techdocs-cli generate` command, and decouple it's logic from the `techdocs-ref` flag.
+- [`14ce0d9347`](https://github.com/backstage/backstage/commit/14ce0d9347): Fixed a bug that prevented docker images from being pulled by default when generating TechDocs.
 
 ## Excluded dependency updates
 
-- `@backstage/dev-utils` (1.0.3 → 1.0.4)
-- `@backstage/plugin-adr-common` (0.1.1 → 0.1.2)
-- `@backstage/plugin-catalog-common` (1.0.3 → 1.0.4)
-- `@backstage/plugin-catalog-graph` (0.2.18 → 0.2.19)
-- `@backstage/plugin-jenkins-common` (0.1.5 → 0.1.6)
-- `@backstage/plugin-permission-react` (0.4.2 → 0.4.3)
-- `@backstage/plugin-scaffolder-backend-module-rails` (0.4.1 → 0.4.2)
-- `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.6 → 0.2.7)
-- `@backstage/plugin-scaffolder-common` (1.1.1 → 1.1.2)
+- `@backstage/dev-utils` (1.0.3 → [1.0.4](../../changelogs/@backstage/dev-utils.md#104))
+- `@backstage/plugin-adr-common` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-adr-common.md#012))
+- `@backstage/plugin-catalog-common` (1.0.3 → [1.0.4](../../changelogs/@backstage/plugin-catalog-common.md#104))
+- `@backstage/plugin-catalog-graph` (0.2.18 → [0.2.19](../../changelogs/@backstage/plugin-catalog-graph.md#0219))
+- `@backstage/plugin-jenkins-common` (0.1.5 → [0.1.6](../../changelogs/@backstage/plugin-jenkins-common.md#016))
+- `@backstage/plugin-permission-react` (0.4.2 → [0.4.3](../../changelogs/@backstage/plugin-permission-react.md#043))
+- `@backstage/plugin-scaffolder-backend-module-rails` (0.4.1 → [0.4.2](../../changelogs/@backstage/plugin-scaffolder-backend-module-rails.md#042))
+- `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.6 → [0.2.7](../../changelogs/@backstage/plugin-scaffolder-backend-module-yeoman.md#027))
+- `@backstage/plugin-scaffolder-common` (1.1.1 → [1.1.2](../../changelogs/@backstage/plugin-scaffolder-common.md#112))

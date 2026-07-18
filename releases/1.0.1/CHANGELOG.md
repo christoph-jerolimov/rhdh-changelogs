@@ -13,7 +13,7 @@ Changes between 1.0.0 and 1.0.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-auth-backend` (0.12.2 → 0.12.3)
+### `@backstage/plugin-auth-backend` (0.12.2 → [0.12.3](../../changelogs/@backstage/plugin-auth-backend.md#0123))
 
 #### 0.12.3
 

@@ -14,10 +14,10 @@ Changes between 1.48.2 and 1.48.3 — 2 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/module-federation-common` (0.1.0 → 0.1.1)
+### `@backstage/module-federation-common` (0.1.0 → [0.1.1](../../changelogs/@backstage/module-federation-common.md#011))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog` (1.33.0 → 1.33.1)
+### `@backstage/plugin-catalog` (1.33.0 → [1.33.1](../../changelogs/@backstage/plugin-catalog.md#1331))
 
 _No changelog entries found._

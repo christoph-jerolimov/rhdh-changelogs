@@ -18,26 +18,26 @@ Changes between 1.26.3 and 1.26.4 — 6 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-app-api` (0.7.0 → 0.7.1)
+### `@backstage/backend-app-api` (0.7.0 → [0.7.1](../../changelogs/@backstage/backend-app-api.md#071))
 
 _No changelog entries found._
 
-### `@backstage/core-components` (0.14.4 → 0.14.5)
+### `@backstage/core-components` (0.14.4 → [0.14.5](../../changelogs/@backstage/core-components.md#0145))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-react` (0.1.0 → 0.1.1)
+### `@backstage/plugin-auth-react` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-auth-react.md#011))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-catalog` (0.1.22 → 0.1.23)
+### `@backstage/plugin-search-backend-module-catalog` (0.1.22 → [0.1.23](../../changelogs/@backstage/plugin-search-backend-module-catalog.md#0123))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-explore` (0.1.22 → 0.1.23)
+### `@backstage/plugin-search-backend-module-explore` (0.1.22 → [0.1.23](../../changelogs/@backstage/plugin-search-backend-module-explore.md#0123))
 
 _No changelog entries found._
 
-### `@techdocs/cli` (1.8.9 → 1.8.10)
+### `@techdocs/cli` (1.8.9 → [1.8.10](../../changelogs/@techdocs/cli.md#1810))
 
 _No changelog entries found._

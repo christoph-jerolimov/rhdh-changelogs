@@ -62,196 +62,196 @@ Changes between 1.33.2 and 1.33.3 — 48 changed and 0 added packages.
 
 ## 0.0.x patch version bumps
 
-### `@backstage/plugin-kubernetes-cluster` (0.0.18 → 0.0.19)
+### `@backstage/plugin-kubernetes-cluster` (0.0.18 → [0.0.19](../../changelogs/@backstage/plugin-kubernetes-cluster.md#0019))
 
 _No changelog entries found._
 
-### `@backstage/plugin-signals` (0.0.12 → 0.0.13)
+### `@backstage/plugin-signals` (0.0.12 → [0.0.13](../../changelogs/@backstage/plugin-signals.md#0013))
 
 _No changelog entries found._
 
 ## Other patch version bumps
 
-### `@backstage/app-defaults` (1.5.13 → 1.5.14)
+### `@backstage/app-defaults` (1.5.13 → [1.5.14](../../changelogs/@backstage/app-defaults.md#1514))
 
 _No changelog entries found._
 
-### `@backstage/cli` (0.29.1 → 0.29.2)
+### `@backstage/cli` (0.29.1 → [0.29.2](../../changelogs/@backstage/cli.md#0292))
 
 _No changelog entries found._
 
-### `@backstage/core-compat-api` (0.3.2 → 0.3.3)
+### `@backstage/core-compat-api` (0.3.2 → [0.3.3](../../changelogs/@backstage/core-compat-api.md#033))
 
 _No changelog entries found._
 
-### `@backstage/core-components` (0.16.0 → 0.16.1)
+### `@backstage/core-components` (0.16.0 → [0.16.1](../../changelogs/@backstage/core-components.md#0161))
 
 _No changelog entries found._
 
-### `@backstage/dev-utils` (1.1.3 → 1.1.4)
+### `@backstage/dev-utils` (1.1.3 → [1.1.4](../../changelogs/@backstage/dev-utils.md#114))
 
 _No changelog entries found._
 
-### `@backstage/frontend-app-api` (0.10.1 → 0.10.2)
+### `@backstage/frontend-app-api` (0.10.1 → [0.10.2](../../changelogs/@backstage/frontend-app-api.md#0102))
 
 _No changelog entries found._
 
-### `@backstage/frontend-defaults` (0.1.2 → 0.1.3)
+### `@backstage/frontend-defaults` (0.1.2 → [0.1.3](../../changelogs/@backstage/frontend-defaults.md#013))
 
 _No changelog entries found._
 
-### `@backstage/frontend-plugin-api` (0.9.1 → 0.9.2)
+### `@backstage/frontend-plugin-api` (0.9.1 → [0.9.2](../../changelogs/@backstage/frontend-plugin-api.md#092))
 
 _No changelog entries found._
 
-### `@backstage/frontend-test-utils` (0.2.2 → 0.2.3)
+### `@backstage/frontend-test-utils` (0.2.2 → [0.2.3](../../changelogs/@backstage/frontend-test-utils.md#023))
 
 _No changelog entries found._
 
-### `@backstage/plugin-api-docs` (0.12.0 → 0.12.1)
+### `@backstage/plugin-api-docs` (0.12.0 → [0.12.1](../../changelogs/@backstage/plugin-api-docs.md#0121))
 
 _No changelog entries found._
 
-### `@backstage/plugin-app` (0.1.2 → 0.1.3)
+### `@backstage/plugin-app` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-app.md#013))
 
 _No changelog entries found._
 
-### `@backstage/plugin-app-visualizer` (0.1.12 → 0.1.13)
+### `@backstage/plugin-app-visualizer` (0.1.12 → [0.1.13](../../changelogs/@backstage/plugin-app-visualizer.md#0113))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-react` (0.1.8 → 0.1.9)
+### `@backstage/plugin-auth-react` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-auth-react.md#019))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog` (1.25.0 → 1.25.1)
+### `@backstage/plugin-catalog` (1.25.0 → [1.25.1](../../changelogs/@backstage/plugin-catalog.md#1251))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-ldap` (0.10.0 → 0.10.1)
+### `@backstage/plugin-catalog-backend-module-ldap` (0.10.0 → [0.10.1](../../changelogs/@backstage/plugin-catalog-backend-module-ldap.md#0101))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-graph` (0.4.12 → 0.4.13)
+### `@backstage/plugin-catalog-graph` (0.4.12 → [0.4.13](../../changelogs/@backstage/plugin-catalog-graph.md#0413))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-import` (0.12.6 → 0.12.7)
+### `@backstage/plugin-catalog-import` (0.12.6 → [0.12.7](../../changelogs/@backstage/plugin-catalog-import.md#0127))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-react` (1.14.1 → 1.14.2)
+### `@backstage/plugin-catalog-react` (1.14.1 → [1.14.2](../../changelogs/@backstage/plugin-catalog-react.md#1142))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-unprocessed-entities` (0.2.10 → 0.2.11)
+### `@backstage/plugin-catalog-unprocessed-entities` (0.2.10 → [0.2.11](../../changelogs/@backstage/plugin-catalog-unprocessed-entities.md#0211))
 
 _No changelog entries found._
 
-### `@backstage/plugin-config-schema` (0.1.61 → 0.1.62)
+### `@backstage/plugin-config-schema` (0.1.61 → [0.1.62](../../changelogs/@backstage/plugin-config-schema.md#0162))
 
 _No changelog entries found._
 
-### `@backstage/plugin-devtools` (0.1.20 → 0.1.21)
+### `@backstage/plugin-devtools` (0.1.20 → [0.1.21](../../changelogs/@backstage/plugin-devtools.md#0121))
 
 _No changelog entries found._
 
-### `@backstage/plugin-home` (0.8.1 → 0.8.2)
+### `@backstage/plugin-home` (0.8.1 → [0.8.2](../../changelogs/@backstage/plugin-home.md#082))
 
 _No changelog entries found._
 
-### `@backstage/plugin-home-react` (0.1.19 → 0.1.20)
+### `@backstage/plugin-home-react` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-home-react.md#0120))
 
 _No changelog entries found._
 
-### `@backstage/plugin-kubernetes` (0.12.0 → 0.12.1)
+### `@backstage/plugin-kubernetes` (0.12.0 → [0.12.1](../../changelogs/@backstage/plugin-kubernetes.md#0121))
 
 _No changelog entries found._
 
-### `@backstage/plugin-kubernetes-react` (0.5.0 → 0.5.1)
+### `@backstage/plugin-kubernetes-react` (0.5.0 → [0.5.1](../../changelogs/@backstage/plugin-kubernetes-react.md#051))
 
 _No changelog entries found._
 
-### `@backstage/plugin-notifications` (0.4.0 → 0.4.1)
+### `@backstage/plugin-notifications` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-notifications.md#041))
 
 _No changelog entries found._
 
-### `@backstage/plugin-org` (0.6.32 → 0.6.33)
+### `@backstage/plugin-org` (0.6.32 → [0.6.33](../../changelogs/@backstage/plugin-org.md#0633))
 
 _No changelog entries found._
 
-### `@backstage/plugin-org-react` (0.1.31 → 0.1.32)
+### `@backstage/plugin-org-react` (0.1.31 → [0.1.32](../../changelogs/@backstage/plugin-org-react.md#0132))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder` (1.27.0 → 1.27.1)
+### `@backstage/plugin-scaffolder` (1.27.0 → [1.27.1](../../changelogs/@backstage/plugin-scaffolder.md#1271))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend` (1.27.0 → 1.27.1)
+### `@backstage/plugin-scaffolder-backend` (1.27.0 → [1.27.1](../../changelogs/@backstage/plugin-scaffolder-backend.md#1271))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.2 → 0.3.3)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.2 → [0.3.3](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket.md#033))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-react` (1.14.0 → 1.14.1)
+### `@backstage/plugin-scaffolder-react` (1.14.0 → [1.14.1](../../changelogs/@backstage/plugin-scaffolder-react.md#1141))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search` (1.4.19 → 1.4.20)
+### `@backstage/plugin-search` (1.4.19 → [1.4.20](../../changelogs/@backstage/plugin-search.md#1420))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-techdocs` (0.3.2 → 0.3.3)
+### `@backstage/plugin-search-backend-module-techdocs` (0.3.2 → [0.3.3](../../changelogs/@backstage/plugin-search-backend-module-techdocs.md#033))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-react` (1.8.2 → 1.8.3)
+### `@backstage/plugin-search-react` (1.8.2 → [1.8.3](../../changelogs/@backstage/plugin-search-react.md#183))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs` (1.11.1 → 1.11.2)
+### `@backstage/plugin-techdocs` (1.11.1 → [1.11.2](../../changelogs/@backstage/plugin-techdocs.md#1112))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs-addons-test-utils` (1.0.41 → 1.0.42)
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.41 → [1.0.42](../../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#1042))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs-backend` (1.11.2 → 1.11.3)
+### `@backstage/plugin-techdocs-backend` (1.11.2 → [1.11.3](../../changelogs/@backstage/plugin-techdocs-backend.md#1113))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.17 → 1.1.18)
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.17 → [1.1.18](../../changelogs/@backstage/plugin-techdocs-module-addons-contrib.md#1118))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs-node` (1.12.13 → 1.12.14)
+### `@backstage/plugin-techdocs-node` (1.12.13 → [1.12.14](../../changelogs/@backstage/plugin-techdocs-node.md#11214))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs-react` (1.2.10 → 1.2.11)
+### `@backstage/plugin-techdocs-react` (1.2.10 → [1.2.11](../../changelogs/@backstage/plugin-techdocs-react.md#1211))
 
 _No changelog entries found._
 
-### `@backstage/plugin-user-settings` (0.8.15 → 0.8.16)
+### `@backstage/plugin-user-settings` (0.8.15 → [0.8.16](../../changelogs/@backstage/plugin-user-settings.md#0816))
 
 _No changelog entries found._
 
-### `@backstage/repo-tools` (0.11.0 → 0.11.1)
+### `@backstage/repo-tools` (0.11.0 → [0.11.1](../../changelogs/@backstage/repo-tools.md#0111))
 
 _No changelog entries found._
 
-### `@backstage/test-utils` (1.7.1 → 1.7.2)
+### `@backstage/test-utils` (1.7.1 → [1.7.2](../../changelogs/@backstage/test-utils.md#172))
 
 _No changelog entries found._
 
-### `@backstage/theme` (0.6.1 → 0.6.2)
+### `@backstage/theme` (0.6.1 → [0.6.2](../../changelogs/@backstage/theme.md#062))
 
 _No changelog entries found._
 
-### `@techdocs/cli` (1.8.22 → 1.8.23)
+### `@techdocs/cli` (1.8.22 → [1.8.23](../../changelogs/@techdocs/cli.md#1823))
 
 _No changelog entries found._

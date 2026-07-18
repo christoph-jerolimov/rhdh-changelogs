@@ -17,22 +17,22 @@ Changes between 1.51.0 and 1.51.1 — 5 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-defaults` (0.17.1 → 0.17.2)
+### `@backstage/backend-defaults` (0.17.1 → [0.17.2](../../changelogs/@backstage/backend-defaults.md#0172))
 
 _No changelog entries found._
 
-### `@backstage/catalog-client` (1.15.1 → 1.15.2)
+### `@backstage/catalog-client` (1.15.1 → [1.15.2](../../changelogs/@backstage/catalog-client.md#1152))
 
 _No changelog entries found._
 
-### `@backstage/frontend-plugin-api` (0.17.0 → 0.17.1)
+### `@backstage/frontend-plugin-api` (0.17.0 → [0.17.1](../../changelogs/@backstage/frontend-plugin-api.md#0171))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend` (3.7.0 → 3.7.1)
+### `@backstage/plugin-catalog-backend` (3.7.0 → [3.7.1](../../changelogs/@backstage/plugin-catalog-backend.md#371))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.10.0 → 0.10.1)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.10.0 → [0.10.1](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#0101))
 
 _No changelog entries found._

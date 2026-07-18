@@ -13,6 +13,6 @@ Changes between 1.22.0 and 1.22.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/create-app` (0.5.9 → 0.5.10)
+### `@backstage/create-app` (0.5.9 → [0.5.10](../../changelogs/@backstage/create-app.md#0510))
 
 _No changelog entries found._

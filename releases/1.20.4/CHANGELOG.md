@@ -13,6 +13,6 @@ Changes between 1.20.3 and 1.20.4 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-common` (0.19.9 → 0.19.10)
+### `@backstage/backend-common` (0.19.9 → [0.19.10](../../changelogs/@backstage/backend-common.md#01910))
 
 _No changelog entries found._

@@ -22,42 +22,42 @@ Changes between 1.28.1 and 1.28.2 — 10 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-app-api` (0.7.7 → 0.7.8)
+### `@backstage/backend-app-api` (0.7.7 → [0.7.8](../../changelogs/@backstage/backend-app-api.md#078))
 
 _No changelog entries found._
 
-### `@backstage/backend-defaults` (0.3.1 → 0.3.2)
+### `@backstage/backend-defaults` (0.3.1 → [0.3.2](../../changelogs/@backstage/backend-defaults.md#032))
 
 _No changelog entries found._
 
-### `@backstage/backend-dynamic-feature-service` (0.2.12 → 0.2.13)
+### `@backstage/backend-dynamic-feature-service` (0.2.12 → [0.2.13](../../changelogs/@backstage/backend-dynamic-feature-service.md#0213))
 
 _No changelog entries found._
 
-### `@backstage/backend-test-utils` (0.4.1 → 0.4.2)
+### `@backstage/backend-test-utils` (0.4.1 → [0.4.2](../../changelogs/@backstage/backend-test-utils.md#042))
 
 _No changelog entries found._
 
-### `@backstage/cli` (0.26.8 → 0.26.9)
+### `@backstage/cli` (0.26.8 → [0.26.9](../../changelogs/@backstage/cli.md#0269))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.3.3 → 0.3.4)
+### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.3.3 → [0.3.4](../../changelogs/@backstage/plugin-scaffolder-backend-module-yeoman.md#034))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-node-test-utils` (0.1.6 → 0.1.7)
+### `@backstage/plugin-scaffolder-node-test-utils` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-scaffolder-node-test-utils.md#017))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend` (1.5.11 → 1.5.12)
+### `@backstage/plugin-search-backend` (1.5.11 → [1.5.12](../../changelogs/@backstage/plugin-search-backend.md#1512))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-pg` (0.5.29 → 0.5.30)
+### `@backstage/plugin-search-backend-module-pg` (0.5.29 → [0.5.30](../../changelogs/@backstage/plugin-search-backend-module-pg.md#0530))
 
 _No changelog entries found._
 
-### `@techdocs/cli` (1.8.13 → 1.8.14)
+### `@techdocs/cli` (1.8.13 → [1.8.14](../../changelogs/@techdocs/cli.md#1814))
 
 _No changelog entries found._

@@ -13,10 +13,10 @@ Changes between 1.2.0 and 1.2.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-common` (0.13.3 → 0.13.4)
+### `@backstage/backend-common` (0.13.3 → [0.13.4](../../changelogs/@backstage/backend-common.md#0134))
 
 #### 0.13.4
 
 ##### Patch Changes
 
-- 739be2b079: Fixed potential crash by bumping the `luxon` dependency to `^2.3.1`.
+- [`739be2b079`](https://github.com/backstage/backstage/commit/739be2b079): Fixed potential crash by bumping the `luxon` dependency to `^2.3.1`.

@@ -13,6 +13,6 @@ Changes between 1.39.0 and 1.39.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/repo-tools` (0.13.3 → 0.13.4)
+### `@backstage/repo-tools` (0.13.3 → [0.13.4](../../changelogs/@backstage/repo-tools.md#0134))
 
 _No changelog entries found._

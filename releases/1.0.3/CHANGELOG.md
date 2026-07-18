@@ -13,6 +13,6 @@ Changes between 1.0.2 and 1.0.3 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/create-app` (0.4.24 → 0.4.25)
+### `@backstage/create-app` (0.4.24 → [0.4.25](../../changelogs/@backstage/create-app.md#0425))
 
 _No changelog entries found._
