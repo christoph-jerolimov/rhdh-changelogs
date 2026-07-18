@@ -2,6 +2,56 @@
 
 Changes between 1.14.2 and 1.15.0 — 199 changed and 5 added packages.
 
+Newly added: `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-unprocessed-entities`, `@backstage/plugin-home-react`, `@backstage/plugin-nomad`, `@backstage/plugin-nomad-backend`.
+
+## `@backstage/plugin-catalog-backend-module-unprocessed` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d44fcd9829c2: Added a new plugin to expose entities which are unprocessed or have errors processing
+
+## `@backstage/plugin-catalog-unprocessed-entities` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d44fcd9829c2: Added a new plugin to expose entities which are unprocessed or have errors processing
+
+#### Patch Changes
+
+- 493eab8c577f: Use FetchApi instead of native fetch
+
+## `@backstage/plugin-home-react` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 41e8037a8a6d: Extract new plugin-home-react package and deprecate createCardExtension in plugin-home
+
+#### Patch Changes
+
+- 2ff94da135a4: bump `rjsf` dependencies to 5.7.3
+
+## `@backstage/plugin-nomad` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 05bf04ca6863: Initialize Nomad plugin with frontend and backend. List jobs/allocations
+
+## `@backstage/plugin-nomad-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 05bf04ca6863: Initialize Nomad plugin with frontend and backend. List jobs/allocations
+
 ## `@backstage/app-defaults` (1.3.1 → 1.4.0)
 
 ### 1.4.0
@@ -1010,53 +1060,5 @@ Changes between 1.14.2 and 1.15.0 — 199 changed and 5 added packages.
 #### Patch Changes
 
 - 68a21956ef52: Remove reference to deprecated import
-
-## `@backstage/plugin-catalog-backend-module-unprocessed` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d44fcd9829c2: Added a new plugin to expose entities which are unprocessed or have errors processing
-
-## `@backstage/plugin-catalog-unprocessed-entities` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d44fcd9829c2: Added a new plugin to expose entities which are unprocessed or have errors processing
-
-#### Patch Changes
-
-- 493eab8c577f: Use FetchApi instead of native fetch
-
-## `@backstage/plugin-home-react` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 41e8037a8a6d: Extract new plugin-home-react package and deprecate createCardExtension in plugin-home
-
-#### Patch Changes
-
-- 2ff94da135a4: bump `rjsf` dependencies to 5.7.3
-
-## `@backstage/plugin-nomad` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 05bf04ca6863: Initialize Nomad plugin with frontend and backend. List jobs/allocations
-
-## `@backstage/plugin-nomad-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 05bf04ca6863: Initialize Nomad plugin with frontend and backend. List jobs/allocations
 
 _Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/backend-tasks`, `@backstage/cli-node`, `@backstage/config`, `@backstage/integration-react`, `@backstage/plugin-airbrake`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apache-airflow`, `@backstage/plugin-apollo-explorer`, `@backstage/plugin-app-backend`, `@backstage/plugin-auth-node`, `@backstage/plugin-azure-devops`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites`, `@backstage/plugin-badges`, `@backstage/plugin-bazaar`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-catalog-node`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-circleci`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-code-climate`, `@backstage/plugin-code-coverage`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-cost-insights`, `@backstage/plugin-entity-feedback-backend`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcalendar`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-git-release-manager`, `@backstage/plugin-github-deployments`, `@backstage/plugin-github-issues`, `@backstage/plugin-github-pull-requests-board`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-graphql-voyager`, `@backstage/plugin-ilert`, `@backstage/plugin-kafka`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-lighthouse`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-lighthouse-common`, `@backstage/plugin-linguist`, `@backstage/plugin-microsoft-calendar`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-org-react`, `@backstage/plugin-periskop`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-common`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-playlist-backend`, `@backstage/plugin-playlist-common`, `@backstage/plugin-puppetdb`, `@backstage/plugin-rollbar`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-sentry`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-splunk-on-call`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-stackstorm`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-common`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-tech-radar`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault`, `@backstage/plugin-vault-backend`, `@backstage/plugin-xcmetrics`._

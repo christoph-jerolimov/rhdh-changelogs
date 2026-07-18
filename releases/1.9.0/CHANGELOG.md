@@ -2,6 +2,120 @@
 
 Changes between 1.8.3 and 1.9.0 — 171 changed and 6 added packages.
 
+Newly added: `@backstage/integration-aws-node`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-explore-backend`, `@backstage/plugin-explore-common`, `@backstage/plugin-sonarqube-react`, `@backstage/repo-tools`.
+
+## `@backstage/integration-aws-node` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 13278732f6: New package for AWS integration node library
+
+## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 98c643a1a2: Introduces incremental entity providers, which are used for streaming very large data sources into the catalog.
+
+#### Patch Changes
+
+- c507aee8a2: Ensured typescript type checks in migration files.
+- 884d749b14: Refactored to use `coreServices` from `@backstage/backend-plugin-api`.
+- de8a975911: Changed to use native `AbortController` and `AbortSignal` from Node.js, instead
+  of the one from `node-abort-controller`. This is possible now that the minimum
+  supported Node.js version of the project is 16.
+
+  Note that their interfaces are very slightly different, but typically not in a
+  way that matters to consumers. If you see any typescript errors as a direct
+  result from this, they are compatible with each other in the ways that we
+  interact with them, and should be possible to type-cast across without ill
+  effects.
+
+- 05a928e296: Updated usages of types from `@backstage/backend-plugin-api`.
+- 61d4efe978: Make incremental providers more resilient to failures
+
+## `@backstage/plugin-explore-backend` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 4dec6f16be: Added new `@backstage/plugin-explore-backend` & `@backstage/plugin-explore-common` packages.
+
+  This deprecates the `ExploreToolsConfig` API (in `@backstage/plugin-explore-react`) which is replaced by the `ExploreApi` & `ExploreClient`. The list of `ExploreTool` data can now be provided on the backend by either using the supplied `StaticExploreToolProvider` or by implementing a custom `ExploreToolProvider`. See the [explore-backend README](https://github.com/backstage/backstage/blob/master/plugins/explore-backend/README.md) for full details.
+
+  NOTE: Existing installations that have customized the `ExploreToolConfig` will continue to work through the new `ExploreClient`. However, existing data should be migrated over to new `explore-backend` plugin as `ExploreToolConfig` will be removed in the future.
+
+  BREAKING CHANGE: If you have previously installed the `explore` plugin, but not yet customized the `ExploreToolConfig` API in your `packages/app`, this will result in an empty list of tools.
+
+## `@backstage/plugin-explore-common` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 4dec6f16be: Added new `@backstage/plugin-explore-backend` & `@backstage/plugin-explore-common` packages.
+
+  This deprecates the `ExploreToolsConfig` API (in `@backstage/plugin-explore-react`) which is replaced by the `ExploreApi` & `ExploreClient`. The list of `ExploreTool` data can now be provided on the backend by either using the supplied `StaticExploreToolProvider` or by implementing a custom `ExploreToolProvider`. See the [explore-backend README](https://github.com/backstage/backstage/blob/master/plugins/explore-backend/README.md) for full details.
+
+  NOTE: Existing installations that have customized the `ExploreToolConfig` will continue to work through the new `ExploreClient`. However, existing data should be migrated over to new `explore-backend` plugin as `ExploreToolConfig` will be removed in the future.
+
+  BREAKING CHANGE: If you have previously installed the `explore` plugin, but not yet customized the `ExploreToolConfig` API in your `packages/app`, this will result in an empty list of tools.
+
+## `@backstage/plugin-sonarqube-react` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 6b59903bfa: Parts of plugin-sonarqube have been moved into a new plugin-sonarqube-react package. Additionally some types that were
+  previously internal to plugin-sonarqube have been made public and will allow access for third-parties. As the sonarqube
+  plugin has not yet reached 1.0 breaking changes are expected in the future. As such exports of plugin-sonarqube-react
+  require importing via the `/alpha` entrypoint:
+
+  ```ts
+  import { sonarQubeApiRef } from '@backstage/plugin-sonarqube-react/alpha';
+
+  const sonarQubeApi = useApi(sonarQubeApiRef);
+  ```
+
+  Moved from plugin-sonarqube to plugin-sonarqube-react:
+
+  - isSonarQubeAvailable
+  - SONARQUBE_PROJECT_KEY_ANNOTATION
+
+  Exports that been introduced to plugin-sonarqube-react are documented in the [API report](https://github.com/backstage/backstage/blob/master/plugins/sonarqube-react/api-report.md).
+
+## `@backstage/repo-tools` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 99713fd671: Introducing repo-tools package
+- 03843259b4: Api reference documentation improvements
+
+  - breadcrumbs links semantics as code spans
+  - new `@config` annotation to describe related config keys
+
+#### Patch Changes
+
+- 9b1193f277: declare dependencies
+- a8611bcac4: Add new command options to the `api-report`
+
+  - added `--allow-warnings`, `-a` to continue processing packages if selected packages have warnings
+  - added `--allow-all-warnings` to continue processing packages any packages have warnings
+  - added `--omit-messages`, `-o` to pass some warnings messages code to be omitted from the api-report.md files
+  - The `paths` argument for this command now takes as default the value on `workspaces.packages` inside the root package.json
+  - change the path resolution to use the `@backstage/cli-common` packages instead
+
+- 25ec5c0c3a: Include asset-types.d.ts while running the api report command
+- 71f80eb354: add the command type-deps to the repo tool package.
+- ac440299ef: Updated api docs generation to be compatible with Docusaurus 2-alpha and 2.x.
+
 ## `@backstage/app-defaults` (1.0.8 → 1.0.9)
 
 ### 1.0.9
@@ -1861,117 +1975,5 @@ Changes between 1.8.3 and 1.9.0 — 171 changed and 6 added packages.
 #### Patch Changes
 
 - 8015ff1258: Tweaked wording to use inclusive terminology
-
-## `@backstage/integration-aws-node` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 13278732f6: New package for AWS integration node library
-
-## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 98c643a1a2: Introduces incremental entity providers, which are used for streaming very large data sources into the catalog.
-
-#### Patch Changes
-
-- c507aee8a2: Ensured typescript type checks in migration files.
-- 884d749b14: Refactored to use `coreServices` from `@backstage/backend-plugin-api`.
-- de8a975911: Changed to use native `AbortController` and `AbortSignal` from Node.js, instead
-  of the one from `node-abort-controller`. This is possible now that the minimum
-  supported Node.js version of the project is 16.
-
-  Note that their interfaces are very slightly different, but typically not in a
-  way that matters to consumers. If you see any typescript errors as a direct
-  result from this, they are compatible with each other in the ways that we
-  interact with them, and should be possible to type-cast across without ill
-  effects.
-
-- 05a928e296: Updated usages of types from `@backstage/backend-plugin-api`.
-- 61d4efe978: Make incremental providers more resilient to failures
-
-## `@backstage/plugin-explore-backend` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 4dec6f16be: Added new `@backstage/plugin-explore-backend` & `@backstage/plugin-explore-common` packages.
-
-  This deprecates the `ExploreToolsConfig` API (in `@backstage/plugin-explore-react`) which is replaced by the `ExploreApi` & `ExploreClient`. The list of `ExploreTool` data can now be provided on the backend by either using the supplied `StaticExploreToolProvider` or by implementing a custom `ExploreToolProvider`. See the [explore-backend README](https://github.com/backstage/backstage/blob/master/plugins/explore-backend/README.md) for full details.
-
-  NOTE: Existing installations that have customized the `ExploreToolConfig` will continue to work through the new `ExploreClient`. However, existing data should be migrated over to new `explore-backend` plugin as `ExploreToolConfig` will be removed in the future.
-
-  BREAKING CHANGE: If you have previously installed the `explore` plugin, but not yet customized the `ExploreToolConfig` API in your `packages/app`, this will result in an empty list of tools.
-
-## `@backstage/plugin-explore-common` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 4dec6f16be: Added new `@backstage/plugin-explore-backend` & `@backstage/plugin-explore-common` packages.
-
-  This deprecates the `ExploreToolsConfig` API (in `@backstage/plugin-explore-react`) which is replaced by the `ExploreApi` & `ExploreClient`. The list of `ExploreTool` data can now be provided on the backend by either using the supplied `StaticExploreToolProvider` or by implementing a custom `ExploreToolProvider`. See the [explore-backend README](https://github.com/backstage/backstage/blob/master/plugins/explore-backend/README.md) for full details.
-
-  NOTE: Existing installations that have customized the `ExploreToolConfig` will continue to work through the new `ExploreClient`. However, existing data should be migrated over to new `explore-backend` plugin as `ExploreToolConfig` will be removed in the future.
-
-  BREAKING CHANGE: If you have previously installed the `explore` plugin, but not yet customized the `ExploreToolConfig` API in your `packages/app`, this will result in an empty list of tools.
-
-## `@backstage/plugin-sonarqube-react` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 6b59903bfa: Parts of plugin-sonarqube have been moved into a new plugin-sonarqube-react package. Additionally some types that were
-  previously internal to plugin-sonarqube have been made public and will allow access for third-parties. As the sonarqube
-  plugin has not yet reached 1.0 breaking changes are expected in the future. As such exports of plugin-sonarqube-react
-  require importing via the `/alpha` entrypoint:
-
-  ```ts
-  import { sonarQubeApiRef } from '@backstage/plugin-sonarqube-react/alpha';
-
-  const sonarQubeApi = useApi(sonarQubeApiRef);
-  ```
-
-  Moved from plugin-sonarqube to plugin-sonarqube-react:
-
-  - isSonarQubeAvailable
-  - SONARQUBE_PROJECT_KEY_ANNOTATION
-
-  Exports that been introduced to plugin-sonarqube-react are documented in the [API report](https://github.com/backstage/backstage/blob/master/plugins/sonarqube-react/api-report.md).
-
-## `@backstage/repo-tools` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 99713fd671: Introducing repo-tools package
-- 03843259b4: Api reference documentation improvements
-
-  - breadcrumbs links semantics as code spans
-  - new `@config` annotation to describe related config keys
-
-#### Patch Changes
-
-- 9b1193f277: declare dependencies
-- a8611bcac4: Add new command options to the `api-report`
-
-  - added `--allow-warnings`, `-a` to continue processing packages if selected packages have warnings
-  - added `--allow-all-warnings` to continue processing packages any packages have warnings
-  - added `--omit-messages`, `-o` to pass some warnings messages code to be omitted from the api-report.md files
-  - The `paths` argument for this command now takes as default the value on `workspaces.packages` inside the root package.json
-  - change the path resolution to use the `@backstage/cli-common` packages instead
-
-- 25ec5c0c3a: Include asset-types.d.ts while running the api report command
-- 71f80eb354: add the command type-deps to the repo tool package.
-- ac440299ef: Updated api docs generation to be compatible with Docusaurus 2-alpha and 2.x.
 
 _Excluded dependency updates for packages: `@backstage/catalog-model`, `@backstage/codemods`, `@backstage/config`, `@backstage/plugin-adr-common`, `@backstage/plugin-badges-backend`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-common`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-playlist-common`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-common`, `@backstage/plugin-tech-insights-node`._

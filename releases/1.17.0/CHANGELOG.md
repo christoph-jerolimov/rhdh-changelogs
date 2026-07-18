@@ -2,6 +2,36 @@
 
 Changes between 1.16.0 and 1.17.0 — 189 changed and 3 added packages.
 
+Newly added: `@backstage/plugin-analytics-module-newrelic-browser`, `@backstage/plugin-app-node`, `@backstage/plugin-catalog-backend-module-gcp`.
+
+## `@backstage/plugin-analytics-module-newrelic-browser` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- ec7357258853: Introduced the New Relic Browser analytics module. Check out the plugins [README.md](https://github.com/backstage/backstage/tree/master/plugins/analytics-module-newrelic-browser) for more details!
+
+## `@backstage/plugin-app-node` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 9fbe95ef6503: Added the `app` plugin node library, initially providing an extension point that can be used to configure a static fallback handler.
+
+## `@backstage/plugin-catalog-backend-module-gcp` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 290eff6692aa: Added GCP catalog plugin with GKE provider
+
+#### Patch Changes
+
+- 629cbd194a87: Use `coreServices.rootConfig` instead of `coreService.config`
+
 ## `@backstage/backend-app-api` (0.4.5 → 0.5.0)
 
 ### 0.5.0
@@ -1392,33 +1422,5 @@ Changes between 1.16.0 and 1.17.0 — 189 changed and 3 added packages.
 #### Patch Changes
 
 - 971bdd6a4732: Bumped internal `nodemon` dependency.
-
-## `@backstage/plugin-analytics-module-newrelic-browser` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- ec7357258853: Introduced the New Relic Browser analytics module. Check out the plugins [README.md](https://github.com/backstage/backstage/tree/master/plugins/analytics-module-newrelic-browser) for more details!
-
-## `@backstage/plugin-app-node` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 9fbe95ef6503: Added the `app` plugin node library, initially providing an extension point that can be used to configure a static fallback handler.
-
-## `@backstage/plugin-catalog-backend-module-gcp` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 290eff6692aa: Added GCP catalog plugin with GKE provider
-
-#### Patch Changes
-
-- 629cbd194a87: Use `coreServices.rootConfig` instead of `coreService.config`
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/plugin-adr-backend`, `@backstage/plugin-adr-common`, `@backstage/plugin-api-docs`, `@backstage/plugin-azure-devops`, `@backstage/plugin-azure-sites`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-badges`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-import`, `@backstage/plugin-catalog-unprocessed-entities`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-circleci`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-cost-insights`, `@backstage/plugin-fossa`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-github-actions`, `@backstage/plugin-github-pull-requests-board`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-jenkins`, `@backstage/plugin-lighthouse`, `@backstage/plugin-linguist`, `@backstage/plugin-permission-node`, `@backstage/plugin-puppetdb`, `@backstage/plugin-rollbar`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-search`, `@backstage/plugin-search-react`, `@backstage/plugin-sentry`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-stackstorm`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-tech-radar`, `@backstage/plugin-techdocs`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-techdocs-node`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-todo`, `@backstage/plugin-user-settings`, `@backstage/plugin-vault`, `@backstage/plugin-vault-backend`, `@backstage/test-utils`._

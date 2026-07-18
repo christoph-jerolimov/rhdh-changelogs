@@ -2,6 +2,40 @@
 
 Changes between 1.13.2 and 1.14.0 — 178 changed and 4 added packages.
 
+Newly added: `@backstage/plugin-analytics-module-ga4`, `@backstage/plugin-devtools`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-common`.
+
+## `@backstage/plugin-analytics-module-ga4` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 22b46f7f562: Plugin provides Backstage Analytics API for Google Analytics 4. Once installed and configured, analytics events will be sent to GA4 as your users navigate and use your Backstage instance
+
+## `@backstage/plugin-devtools` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 347aeca204c: Introduced the DevTools plugin, checkout the plugin's [`README.md`](https://github.com/backstage/backstage/tree/master/plugins/devtools) for more details!
+
+## `@backstage/plugin-devtools-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 347aeca204c: Introduced the DevTools plugin, checkout the plugin's [`README.md`](https://github.com/backstage/backstage/tree/master/plugins/devtools) for more details!
+
+## `@backstage/plugin-devtools-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 347aeca204c: Introduced the DevTools plugin, checkout the plugin's [`README.md`](https://github.com/backstage/backstage/tree/master/plugins/devtools) for more details!
+
 ## `@backstage/app-defaults` (1.3.0 → 1.3.1)
 
 ### 1.3.1
@@ -801,37 +835,5 @@ Changes between 1.13.2 and 1.14.0 — 178 changed and 4 added packages.
 #### Patch Changes
 
 - 83b45f9df50: Fix accessibility issue with Backstage Table's header style
-
-## `@backstage/plugin-analytics-module-ga4` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 22b46f7f562: Plugin provides Backstage Analytics API for Google Analytics 4. Once installed and configured, analytics events will be sent to GA4 as your users navigate and use your Backstage instance
-
-## `@backstage/plugin-devtools` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 347aeca204c: Introduced the DevTools plugin, checkout the plugin's [`README.md`](https://github.com/backstage/backstage/tree/master/plugins/devtools) for more details!
-
-## `@backstage/plugin-devtools-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 347aeca204c: Introduced the DevTools plugin, checkout the plugin's [`README.md`](https://github.com/backstage/backstage/tree/master/plugins/devtools) for more details!
-
-## `@backstage/plugin-devtools-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 347aeca204c: Introduced the DevTools plugin, checkout the plugin's [`README.md`](https://github.com/backstage/backstage/tree/master/plugins/devtools) for more details!
 
 _Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/backend-plugin-api`, `@backstage/backend-tasks`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-adr-backend`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apache-airflow`, `@backstage/plugin-api-docs`, `@backstage/plugin-apollo-explorer`, `@backstage/plugin-app-backend`, `@backstage/plugin-auth-node`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-bitrise`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-msgraph`, `@backstage/plugin-catalog-import`, `@backstage/plugin-catalog-node`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-code-climate`, `@backstage/plugin-code-coverage`, `@backstage/plugin-code-coverage-backend`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-cost-insights`, `@backstage/plugin-dynatrace`, `@backstage/plugin-entity-feedback`, `@backstage/plugin-entity-feedback-backend`, `@backstage/plugin-entity-validation`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-backend`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-git-release-manager`, `@backstage/plugin-github-actions`, `@backstage/plugin-github-deployments`, `@backstage/plugin-github-issues`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-graphql-voyager`, `@backstage/plugin-ilert`, `@backstage/plugin-kafka`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-lighthouse`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-linguist`, `@backstage/plugin-linguist-backend`, `@backstage/plugin-microsoft-calendar`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-org-react`, `@backstage/plugin-pagerduty`, `@backstage/plugin-periskop`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-playlist`, `@backstage/plugin-playlist-backend`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-puppetdb`, `@backstage/plugin-rollbar`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-sentry`, `@backstage/plugin-sonarqube`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-splunk-on-call`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-stackstorm`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-todo`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault`, `@backstage/plugin-vault-backend`, `@backstage/plugin-xcmetrics`, `@backstage/test-utils`, `@techdocs/cli`._

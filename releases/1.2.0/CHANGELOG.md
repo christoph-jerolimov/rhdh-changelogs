@@ -2,6 +2,127 @@
 
 Changes between 1.1.1 and 1.2.0 — 132 changed and 7 added packages.
 
+Newly added: `@backstage/plugin-adr`, `@backstage/plugin-adr-backend`, `@backstage/plugin-adr-common`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-codescene`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`.
+
+## `@backstage/plugin-adr` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- e73075a301: Implement ADR plugin
+
+## `@backstage/plugin-adr-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- e73075a301: Implement ADR plugin
+
+## `@backstage/plugin-adr-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- e73075a301: Implement ADR plugin
+
+## `@backstage/plugin-catalog-backend-module-gerrit` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 566407bf8a: Initial version of the `plugin-catalog-backend-module-gerrit` plugin
+
+#### Patch Changes
+
+- 57f684f59c: Fix incorrect main path in `publishConfig`
+- cfc0f19699: Updated dependency `fs-extra` to `10.1.0`.
+
+## `@backstage/plugin-codescene` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 9bc6e9493f: Add CodeScene plugin
+
+#### Patch Changes
+
+- 95598f4fd5: Updated dependency `@testing-library/user-event` to `^14.0.0`.
+- e462112be5: Updated dependency `rc-progress` to `3.3.2`.
+
+## `@backstage/plugin-techdocs-addons-test-utils` (new, 1.0.0)
+
+### 1.0.0
+
+#### Major Changes
+
+- 0ad901569f: The TechDocs Addon framework is now generally available.
+
+#### Minor Changes
+
+- 52fddad92d: Introducing a package with utilities to help test TechDocs Addons.
+
+#### Patch Changes
+
+- f84e0e2818: Fixed a bug preventing testing of TechDocs Addons whose dom contained `<img />` tags.
+- 7c398c6473: The `TechDocsAddonTester` class may now be extended if custom test configuration is needed.
+- 614bd96e2a: Fixed a type bug preventing `buildAddonsInTechDocs().withApis()` from being called with multiple partial API implementations.
+
+## `@backstage/plugin-techdocs-module-addons-contrib` (new, 1.0.0)
+
+### 1.0.0
+
+#### Major Changes
+
+- 0ad901569f: The TechDocs Addon framework is now generally available.
+
+#### Minor Changes
+
+- 5f4dbd2b52: A package for contributed TechDocs addons.
+
+  In this release it will introduce the ReportIssue addon, which lets you select text and open a GitHub/Gitlab issue.
+
+#### Patch Changes
+
+- 10d86dedc0: Improved inline/type documentation for the <ReportIssue /> addon.
+- 52419be116: Create a TechDocs `<TextSize/>` addon that allows users to set a font size in the browser's local storage for the text of documentation pages.
+
+  Here's an example on how to use it in a Backstage app:
+
+  ```diff
+  import {
+    DefaultTechDocsHome,
+    TechDocsIndexPage,
+    TechDocsReaderPage,
+  } from '@backstage/plugin-techdocs';
+  import { TechDocsAddons } from '@backstage/plugin-techdocs-react/alpha';
+  +import { TextSize } from '@backstage/plugin-techdocs-module-addons-contrib';
+
+  const AppRoutes = () => {
+    <FlatRoutes>
+      // other plugin routes
+      <Route path="/docs" element={<TechDocsIndexPage />}>
+        <DefaultTechDocsHome />
+      </Route>
+      <Route
+        path="/docs/:namespace/:kind/:name/*"
+        element={<TechDocsReaderPage />}
+      >
+        <TechDocsAddons>
+  +       <TextSize />
+        </TechDocsAddons>
+      </Route>
+    </FlatRoutes>;
+  };
+  ```
+
+- 075a9a067b: Updated the return type of `createTechDocsAddonExtension` to better reflect the fact that passing children to Addon components is not a valid use-case.
+- c25e880e36: Introducing the Expandable Navigation addon, which lets you expand and collapse the TechDocs main navigation and store your preference in local storage.
+
 ## `@backstage/backend-common` (0.13.2 → 0.13.3)
 
 ### 0.13.3
@@ -1086,124 +1207,5 @@ Changes between 1.1.1 and 1.2.0 — 132 changed and 7 added packages.
 - 344ea56acc: Bump `commander` to version 9.1.0
 - 52fddad92d: The TechDocs CLI's embedded app now imports all API refs from the `@backstage/plugin-techdocs-react` package.
 - c14e78a367: Update `techdocs-cli serve`'s `proxyEndpoint` to match the base URL of the embedded techdocs app.
-
-## `@backstage/plugin-adr` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- e73075a301: Implement ADR plugin
-
-## `@backstage/plugin-adr-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- e73075a301: Implement ADR plugin
-
-## `@backstage/plugin-adr-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- e73075a301: Implement ADR plugin
-
-## `@backstage/plugin-catalog-backend-module-gerrit` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 566407bf8a: Initial version of the `plugin-catalog-backend-module-gerrit` plugin
-
-#### Patch Changes
-
-- 57f684f59c: Fix incorrect main path in `publishConfig`
-- cfc0f19699: Updated dependency `fs-extra` to `10.1.0`.
-
-## `@backstage/plugin-codescene` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 9bc6e9493f: Add CodeScene plugin
-
-#### Patch Changes
-
-- 95598f4fd5: Updated dependency `@testing-library/user-event` to `^14.0.0`.
-- e462112be5: Updated dependency `rc-progress` to `3.3.2`.
-
-## `@backstage/plugin-techdocs-addons-test-utils` (new, 1.0.0)
-
-### 1.0.0
-
-#### Major Changes
-
-- 0ad901569f: The TechDocs Addon framework is now generally available.
-
-#### Minor Changes
-
-- 52fddad92d: Introducing a package with utilities to help test TechDocs Addons.
-
-#### Patch Changes
-
-- f84e0e2818: Fixed a bug preventing testing of TechDocs Addons whose dom contained `<img />` tags.
-- 7c398c6473: The `TechDocsAddonTester` class may now be extended if custom test configuration is needed.
-- 614bd96e2a: Fixed a type bug preventing `buildAddonsInTechDocs().withApis()` from being called with multiple partial API implementations.
-
-## `@backstage/plugin-techdocs-module-addons-contrib` (new, 1.0.0)
-
-### 1.0.0
-
-#### Major Changes
-
-- 0ad901569f: The TechDocs Addon framework is now generally available.
-
-#### Minor Changes
-
-- 5f4dbd2b52: A package for contributed TechDocs addons.
-
-  In this release it will introduce the ReportIssue addon, which lets you select text and open a GitHub/Gitlab issue.
-
-#### Patch Changes
-
-- 10d86dedc0: Improved inline/type documentation for the <ReportIssue /> addon.
-- 52419be116: Create a TechDocs `<TextSize/>` addon that allows users to set a font size in the browser's local storage for the text of documentation pages.
-
-  Here's an example on how to use it in a Backstage app:
-
-  ```diff
-  import {
-    DefaultTechDocsHome,
-    TechDocsIndexPage,
-    TechDocsReaderPage,
-  } from '@backstage/plugin-techdocs';
-  import { TechDocsAddons } from '@backstage/plugin-techdocs-react/alpha';
-  +import { TextSize } from '@backstage/plugin-techdocs-module-addons-contrib';
-
-  const AppRoutes = () => {
-    <FlatRoutes>
-      // other plugin routes
-      <Route path="/docs" element={<TechDocsIndexPage />}>
-        <DefaultTechDocsHome />
-      </Route>
-      <Route
-        path="/docs/:namespace/:kind/:name/*"
-        element={<TechDocsReaderPage />}
-      >
-        <TechDocsAddons>
-  +       <TextSize />
-        </TechDocsAddons>
-      </Route>
-    </FlatRoutes>;
-  };
-  ```
-
-- 075a9a067b: Updated the return type of `createTechDocsAddonExtension` to better reflect the fact that passing children to Addon components is not a valid use-case.
-- c25e880e36: Introducing the Expandable Navigation addon, which lets you expand and collapse the TechDocs main navigation and store your preference in local storage.
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-test-utils`, `@backstage/catalog-client`, `@backstage/catalog-model`, `@backstage/plugin-airbrake`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apache-airflow`, `@backstage/plugin-badges`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitrise`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-catalog-import`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-circleci`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-code-climate`, `@backstage/plugin-code-coverage`, `@backstage/plugin-code-coverage-backend`, `@backstage/plugin-config-schema`, `@backstage/plugin-cost-insights`, `@backstage/plugin-explore`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-git-release-manager`, `@backstage/plugin-github-actions`, `@backstage/plugin-github-deployments`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-ilert`, `@backstage/plugin-jenkins`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-lighthouse`, `@backstage/plugin-newrelic`, `@backstage/plugin-pagerduty`, `@backstage/plugin-periskop`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-common`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-sentry`, `@backstage/plugin-shortcuts`, `@backstage/plugin-splunk-on-call`, `@backstage/plugin-stack-overflow`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/plugin-xcmetrics`, `@backstage/search-common`, `@backstage/techdocs-common`._

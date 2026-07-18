@@ -2,6 +2,93 @@
 
 Changes between 1.23.4 and 1.24.0 — 251 changed and 4 added packages.
 
+Newly added: `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-catalog-unprocessed-entities-common`, `@backstage/plugin-scaffolder-node-test-utils`.
+
+## `@backstage/plugin-auth-backend-module-guest-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 1bedb23: Adds a new guest provider that maps guest users to actual tokens. This also shifts the default guest login to `user:development/guest` to reduce overlap with your production/real data. To change that (or set it back to the old default, use the new `auth.providers.guest.userEntityRef` config key) like so,
+
+  ```yaml title=app-config.yaml
+  auth:
+    providers:
+      guest:
+        userEntityRef: user:default/guest
+  ```
+
+  This also adds a new property to control the ownership entity refs,
+
+  ```yaml title=app-config.yaml
+  auth:
+    providers:
+      guest:
+        ownershipEntityRefs:
+          - guests
+          - development/custom
+  ```
+
+#### Patch Changes
+
+- 72dd380: Ensure that the config schema is present
+- 50a331b: Fix issue for issuing a token when `guest` user does not exist in catalog
+
+## `@backstage/plugin-auth-react` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 62bcaf8: Create a generic React component for refreshing user cookie.
+
+## `@backstage/plugin-catalog-unprocessed-entities-common` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 924c1ac: **BREAKING**- the `@backstage/plugin-catalog-backend-module-unprocessed` constructor is now private, and have been moved to using the static `.create` method instead which now requires a `PermissionService` and `DiscoveryService`.
+
+  If you're using this module in the old backend system you'll need to migrate to using the `.create` method and pass in the new required parameters in `packages/backend/src/plugins/catalog.ts`.
+
+  No changes should be required if you're using the new backend system.
+
+  ```diff
+  -  const unprocessed = new UnprocessedEntitiesModule(
+  -    await env.database.getClient(),
+  -    router,
+  -  );
+  + const unprocessed = UnprocessedEntitiesModule.create({
+  +    database: await env.database.getClient(),
+  +    router,
+  +    permissions: env.permissions,
+  +    discovery: env.discovery,
+  +  });
+
+    unprocessed.registerRoutes();
+  ```
+
+  Adds the ability to delete an unprocessed entity from the `refresh_state` table. This change requires enabling permissions for your Backstage instance.
+
+## `@backstage/plugin-scaffolder-node-test-utils` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- f44589d: Introduced `createMockActionContext` to unify the way of creating scaffolder mock context.
+
+  It will help to maintain tests in a long run during structural changes of action context.
+
+#### Patch Changes
+
+- 2bd1410: Removed unused dependencies
+- aa543c9: Add an initiator credentials getter to the default mock context.
+- 563dfd0: Fix issue with package bundling, should be `dist/index.cjs.js` instead of `dist/index.esm.js`.
+- bbd1fe1: Made "checkpoint" on scaffolder action context non-optional
+
 ## `@backstage/backend-app-api` (0.5.14 → 0.6.0)
 
 ### 0.6.0
@@ -2608,90 +2695,5 @@ Changes between 1.23.4 and 1.24.0 — 251 changed and 4 added packages.
 #### Patch Changes
 
 - 1bd4596: Removed the `ts-node` dev dependency.
-
-## `@backstage/plugin-auth-backend-module-guest-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 1bedb23: Adds a new guest provider that maps guest users to actual tokens. This also shifts the default guest login to `user:development/guest` to reduce overlap with your production/real data. To change that (or set it back to the old default, use the new `auth.providers.guest.userEntityRef` config key) like so,
-
-  ```yaml title=app-config.yaml
-  auth:
-    providers:
-      guest:
-        userEntityRef: user:default/guest
-  ```
-
-  This also adds a new property to control the ownership entity refs,
-
-  ```yaml title=app-config.yaml
-  auth:
-    providers:
-      guest:
-        ownershipEntityRefs:
-          - guests
-          - development/custom
-  ```
-
-#### Patch Changes
-
-- 72dd380: Ensure that the config schema is present
-- 50a331b: Fix issue for issuing a token when `guest` user does not exist in catalog
-
-## `@backstage/plugin-auth-react` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 62bcaf8: Create a generic React component for refreshing user cookie.
-
-## `@backstage/plugin-catalog-unprocessed-entities-common` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 924c1ac: **BREAKING**- the `@backstage/plugin-catalog-backend-module-unprocessed` constructor is now private, and have been moved to using the static `.create` method instead which now requires a `PermissionService` and `DiscoveryService`.
-
-  If you're using this module in the old backend system you'll need to migrate to using the `.create` method and pass in the new required parameters in `packages/backend/src/plugins/catalog.ts`.
-
-  No changes should be required if you're using the new backend system.
-
-  ```diff
-  -  const unprocessed = new UnprocessedEntitiesModule(
-  -    await env.database.getClient(),
-  -    router,
-  -  );
-  + const unprocessed = UnprocessedEntitiesModule.create({
-  +    database: await env.database.getClient(),
-  +    router,
-  +    permissions: env.permissions,
-  +    discovery: env.discovery,
-  +  });
-
-    unprocessed.registerRoutes();
-  ```
-
-  Adds the ability to delete an unprocessed entity from the `refresh_state` table. This change requires enabling permissions for your Backstage instance.
-
-## `@backstage/plugin-scaffolder-node-test-utils` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- f44589d: Introduced `createMockActionContext` to unify the way of creating scaffolder mock context.
-
-  It will help to maintain tests in a long run during structural changes of action context.
-
-#### Patch Changes
-
-- 2bd1410: Removed unused dependencies
-- aa543c9: Add an initiator credentials getter to the default mock context.
-- 563dfd0: Fix issue with package bundling, should be `dist/index.cjs.js` instead of `dist/index.esm.js`.
-- bbd1fe1: Made "checkpoint" on scaffolder action context non-optional
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/catalog-model`, `@backstage/cli-node`, `@backstage/core-app-api`, `@backstage/core-compat-api`, `@backstage/core-plugin-api`, `@backstage/dev-utils`, `@backstage/frontend-plugin-api`, `@backstage/frontend-test-utils`, `@backstage/integration-aws-node`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-analytics-module-ga4`, `@backstage/plugin-analytics-module-newrelic-browser`, `@backstage/plugin-app-node`, `@backstage/plugin-app-visualizer`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-azure-sites-common`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-common`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools-common`, `@backstage/plugin-entity-validation`, `@backstage/plugin-explore-backend`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-git-release-manager`, `@backstage/plugin-github-deployments`, `@backstage/plugin-github-issues`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-graphql-voyager`, `@backstage/plugin-ilert`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-lighthouse-common`, `@backstage/plugin-microsoft-calendar`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-nomad`, `@backstage/plugin-opencost`, `@backstage/plugin-org-react`, `@backstage/plugin-pagerduty`, `@backstage/plugin-periskop`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-react`, `@backstage/plugin-playlist-common`, `@backstage/plugin-puppetdb`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-react`, `@backstage/plugin-signals-react`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-todo`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault-node`, `@backstage/test-utils`._

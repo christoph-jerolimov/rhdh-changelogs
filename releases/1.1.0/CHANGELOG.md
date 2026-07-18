@@ -2,6 +2,74 @@
 
 Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
+Newly added: `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-search-react`, `@backstage/plugin-stack-overflow`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-techdocs-react`.
+
+## `@backstage/plugin-cicd-statistics-module-gitlab` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d3af30b47d: Created a module to extract the CI/CD statistics from a Gitlab repository.
+  Read the `README.md` in the `cicd-statistics-module-gitlab` plugin folder on how to set it up.
+
+## `@backstage/plugin-search-react` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- ab230a433f: New search package to hold things the search plugin itself and other frontend plugins (e.g. techdocs, home) depend on.
+
+#### Patch Changes
+
+- 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
+- 076b091113: api-report clean up - the package now exports following additional types:
+
+  `SearchContextProviderProps`
+  `SearchContextValue`
+  `SearchContextProviderForStorybookProps`
+  `SearchApiProviderForStorybookProps`
+
+- e1de8526aa: Versioned search context managed through version-bridge
+
+## `@backstage/plugin-stack-overflow` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- ac323de4ad: Add stack overflow plugin
+
+#### Patch Changes
+
+- 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
+- 230ad0826f: Bump to using `@types/node` v16
+
+## `@backstage/plugin-stack-overflow-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- ac323de4ad: Add stack overflow backend plugin
+
+## `@backstage/plugin-techdocs-react` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- ff1cc8bced: This package will house frontend utilities related to TechDocs to be shared across other frontend Backstage packages.
+
+  In this release, it introduces a framework that can be used create TechDocs addons.
+
+  Note: this package is not necessarily stable yet. After iteration on this package, its stability will be signaled by a major-version bump.
+
+#### Patch Changes
+
+- 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
+
 ## `@backstage/app-defaults` (1.0.0 → 1.0.1)
 
 ### 1.0.1
@@ -1988,71 +2056,5 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 230ad0826f: Bump to using `@types/node` v16
 - eb470ea54c: Adds a new flag to override the entrypoint when using a custom docker image. It could be used to reuse existing images with different entrypoints.
-
-## `@backstage/plugin-cicd-statistics-module-gitlab` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d3af30b47d: Created a module to extract the CI/CD statistics from a Gitlab repository.
-  Read the `README.md` in the `cicd-statistics-module-gitlab` plugin folder on how to set it up.
-
-## `@backstage/plugin-search-react` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- ab230a433f: New search package to hold things the search plugin itself and other frontend plugins (e.g. techdocs, home) depend on.
-
-#### Patch Changes
-
-- 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
-- 076b091113: api-report clean up - the package now exports following additional types:
-
-  `SearchContextProviderProps`
-  `SearchContextValue`
-  `SearchContextProviderForStorybookProps`
-  `SearchApiProviderForStorybookProps`
-
-- e1de8526aa: Versioned search context managed through version-bridge
-
-## `@backstage/plugin-stack-overflow` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- ac323de4ad: Add stack overflow plugin
-
-#### Patch Changes
-
-- 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
-- 230ad0826f: Bump to using `@types/node` v16
-
-## `@backstage/plugin-stack-overflow-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- ac323de4ad: Add stack overflow backend plugin
-
-## `@backstage/plugin-techdocs-react` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- ff1cc8bced: This package will house frontend utilities related to TechDocs to be shared across other frontend Backstage packages.
-
-  In this release, it introduces a framework that can be used create TechDocs addons.
-
-  Note: this package is not necessarily stable yet. After iteration on this package, its stability will be signaled by a major-version bump.
-
-#### Patch Changes
-
-- 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
 
 _Excluded dependency updates for packages: `@backstage/catalog-client`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-app-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-github`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-code-coverage-backend`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/search-common`, `@backstage/techdocs-common`._

@@ -2,6 +2,37 @@
 
 Changes between 1.46.7 and 1.47.0 — 109 changed and 2 added packages.
 
+Newly added: `@backstage/plugin-app-react`, `@backstage/plugin-devtools-react`.
+
+## `@backstage/plugin-app-react` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 9ccf84e: Initial release of this web library for `@backstage/plugin-app`.
+
+#### Patch Changes
+
+- 9ccf84e: Moved the following blueprints from `@backstage/frontend-plugin-api`:
+
+  - `AppRootWrapperBlueprint`
+  - `IconBundleBlueprint`
+  - `NavContentBlueprint`
+  - `RouterBlueprint`
+  - `SignInPageBlueprint`
+  - `SwappableComponentBlueprint`
+  - `ThemeBlueprint`
+  - `TranslationBlueprint`
+
+## `@backstage/plugin-devtools-react` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- be6cef5: Add support for adding `unprocessed-entities` and other tabs to `devtools` when using the New Frontend system
+
 ## `@backstage/backend-app-api` (1.4.0 → 1.4.1)
 
 ### 1.4.1
@@ -643,34 +674,5 @@ Changes between 1.46.7 and 1.47.0 — 109 changed and 2 added packages.
 - 2532d2a: Added `className` and `style` props to the `Table` component.
 
   **Affected components:** Table
-
-## `@backstage/plugin-app-react` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 9ccf84e: Initial release of this web library for `@backstage/plugin-app`.
-
-#### Patch Changes
-
-- 9ccf84e: Moved the following blueprints from `@backstage/frontend-plugin-api`:
-
-  - `AppRootWrapperBlueprint`
-  - `IconBundleBlueprint`
-  - `NavContentBlueprint`
-  - `RouterBlueprint`
-  - `SignInPageBlueprint`
-  - `SwappableComponentBlueprint`
-  - `ThemeBlueprint`
-  - `TranslationBlueprint`
-
-## `@backstage/plugin-devtools-react` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- be6cef5: Add support for adding `unprocessed-entities` and other tabs to `devtools` when using the New Frontend system
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-dynamic-feature-service`, `@backstage/core-compat-api`, `@backstage/dev-utils`, `@backstage/frontend-defaults`, `@backstage/frontend-test-utils`, `@backstage/integration-react`, `@backstage/plugin-auth`, `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-gitea`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-import`, `@backstage/plugin-catalog-react`, `@backstage/plugin-config-schema`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-home-react`, `@backstage/plugin-kubernetes`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-react`, `@backstage/plugin-org-react`, `@backstage/plugin-scaffolder-backend-module-bitbucket`, `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-react`, `@backstage/plugin-signals`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-user-settings`, `@techdocs/cli`._

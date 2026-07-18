@@ -2,6 +2,169 @@
 
 Changes between 1.22.3 and 1.23.0 — 233 changed and 13 added packages.
 
+Newly added: `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-backend-module-oidc-provider`, `@backstage/plugin-notifications`, `@backstage/plugin-notifications-backend`, `@backstage/plugin-notifications-common`, `@backstage/plugin-notifications-node`, `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-signals`, `@backstage/plugin-signals-backend`, `@backstage/plugin-signals-node`, `@backstage/plugin-signals-react`.
+
+## `@backstage/plugin-auth-backend-module-aws-alb-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 23a98f8: Migrated the AWS ALB auth provider to new `@backstage/plugin-auth-backend-module-aws-alb-provider` module package.
+
+#### Patch Changes
+
+- d309cad: Refactored to use the `jose` library for JWT handling.
+
+## `@backstage/plugin-auth-backend-module-oidc-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 5d2fcba: Created new `@backstage/plugin-auth-backend-module-oidc-provider` module package to house oidc auth provider migration.
+
+#### Patch Changes
+
+- e471890: Fixed a bug where the OIDC authenticator did not properly persist granted OAuth scopes.
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- 8afb6f4: Updated dependency `passport` to `^0.7.0`.
+
+## `@backstage/plugin-notifications` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 9873c44: Add support for signal type in notifications
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- fb8fc24: Initial notifications system for backstage
+
+## `@backstage/plugin-notifications-backend` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 9873c44: Add support for signal type in notifications
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- fb8fc24: Initial notifications system for backstage
+
+## `@backstage/plugin-notifications-common` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 9873c44: Add support for signal type in notifications
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- fb8fc24: Initial notifications system for backstage
+
+## `@backstage/plugin-notifications-node` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- fb8fc24: Initial notifications system for backstage
+
+## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 5eb6882: New scaffolder module `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`.
+
+  Extracted from `@backstage/plugin-scaffolder-backend-module-bitbucket`
+  and replaces its actions related to Bitbucket Cloud.
+
+  - `publish:bitbucketCloud`
+  - `bitbucket:pipelines:run`
+
+#### Patch Changes
+
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- 6bb6f3e: Updated dependency `fs-extra` to `^11.2.0`.
+  Updated dependency `@types/fs-extra` to `^11.0.0`.
+
+## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 5eb6882: New scaffolder module `@backstage/plugin-scaffolder-backend-module-bitbucket-server`.
+
+  Extracted from `@backstage/plugin-scaffolder-backend-module-bitbucket`
+  and replaces its actions related to Bitbucket Server.
+
+  - `publish:bitbucketServer`
+  - `publish:bitbucketServer:pull-request`
+
+#### Patch Changes
+
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- 6bb6f3e: Updated dependency `fs-extra` to `^11.2.0`.
+  Updated dependency `@types/fs-extra` to `^11.0.0`.
+
+## `@backstage/plugin-scaffolder-backend-module-gitea` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 458bf21: Created a gitea module for the scaffolder. This module provides a new action "publish:gitea" able to create a gitea repository owned by an organization. See: https://gitea.com/api/swagger#/organization/createOrgRepo
+
+#### Patch Changes
+
+- ef0f44e: - Fix issue for infinite loop when repository already exists
+  - Log the root cause of error reported by `checkGiteaOrg`
+
+## `@backstage/plugin-signals` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 447d210: Fix disconnect loop on server start
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- 047bead: Add support to subscribe and publish messages through signals plugins
+- 1ab22c4: Allow defining signal type to publish and receive
+
+## `@backstage/plugin-signals-backend` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 447d210: Fix disconnect loop on server start
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- 047bead: Add support to subscribe and publish messages through signals plugins
+
+## `@backstage/plugin-signals-node` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 447d210: Fix disconnect loop on server start
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- 047bead: Add support to subscribe and publish messages through signals plugins
+- 1ab22c4: Allow defining signal type to publish and receive
+
+## `@backstage/plugin-signals-react` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 447d210: Fix disconnect loop on server start
+- 8472188: Added or fixed the `repository` field in `package.json`.
+- 047bead: Add support to subscribe and publish messages through signals plugins
+- 1ab22c4: Allow defining signal type to publish and receive
+
 ## `@backstage/app-defaults` (1.4.7 → 1.5.0)
 
 ### 1.5.0
@@ -2664,166 +2827,5 @@ Changes between 1.22.3 and 1.23.0 — 233 changed and 13 added packages.
 - d2e3ab9: Updated dependency `dockerode` to `^4.0.0`.
 - 6ba64c4: Updated dependency `commander` to `^12.0.0`.
 - d8d243c: fix: mkdocs parameter casing
-
-## `@backstage/plugin-auth-backend-module-aws-alb-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 23a98f8: Migrated the AWS ALB auth provider to new `@backstage/plugin-auth-backend-module-aws-alb-provider` module package.
-
-#### Patch Changes
-
-- d309cad: Refactored to use the `jose` library for JWT handling.
-
-## `@backstage/plugin-auth-backend-module-oidc-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 5d2fcba: Created new `@backstage/plugin-auth-backend-module-oidc-provider` module package to house oidc auth provider migration.
-
-#### Patch Changes
-
-- e471890: Fixed a bug where the OIDC authenticator did not properly persist granted OAuth scopes.
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- 8afb6f4: Updated dependency `passport` to `^0.7.0`.
-
-## `@backstage/plugin-notifications` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 9873c44: Add support for signal type in notifications
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- fb8fc24: Initial notifications system for backstage
-
-## `@backstage/plugin-notifications-backend` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 9873c44: Add support for signal type in notifications
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- fb8fc24: Initial notifications system for backstage
-
-## `@backstage/plugin-notifications-common` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 9873c44: Add support for signal type in notifications
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- fb8fc24: Initial notifications system for backstage
-
-## `@backstage/plugin-notifications-node` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- fb8fc24: Initial notifications system for backstage
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 5eb6882: New scaffolder module `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`.
-
-  Extracted from `@backstage/plugin-scaffolder-backend-module-bitbucket`
-  and replaces its actions related to Bitbucket Cloud.
-
-  - `publish:bitbucketCloud`
-  - `bitbucket:pipelines:run`
-
-#### Patch Changes
-
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- 6bb6f3e: Updated dependency `fs-extra` to `^11.2.0`.
-  Updated dependency `@types/fs-extra` to `^11.0.0`.
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 5eb6882: New scaffolder module `@backstage/plugin-scaffolder-backend-module-bitbucket-server`.
-
-  Extracted from `@backstage/plugin-scaffolder-backend-module-bitbucket`
-  and replaces its actions related to Bitbucket Server.
-
-  - `publish:bitbucketServer`
-  - `publish:bitbucketServer:pull-request`
-
-#### Patch Changes
-
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- 6bb6f3e: Updated dependency `fs-extra` to `^11.2.0`.
-  Updated dependency `@types/fs-extra` to `^11.0.0`.
-
-## `@backstage/plugin-scaffolder-backend-module-gitea` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 458bf21: Created a gitea module for the scaffolder. This module provides a new action "publish:gitea" able to create a gitea repository owned by an organization. See: https://gitea.com/api/swagger#/organization/createOrgRepo
-
-#### Patch Changes
-
-- ef0f44e: - Fix issue for infinite loop when repository already exists
-  - Log the root cause of error reported by `checkGiteaOrg`
-
-## `@backstage/plugin-signals` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 447d210: Fix disconnect loop on server start
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- 047bead: Add support to subscribe and publish messages through signals plugins
-- 1ab22c4: Allow defining signal type to publish and receive
-
-## `@backstage/plugin-signals-backend` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 447d210: Fix disconnect loop on server start
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- 047bead: Add support to subscribe and publish messages through signals plugins
-
-## `@backstage/plugin-signals-node` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 447d210: Fix disconnect loop on server start
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- 047bead: Add support to subscribe and publish messages through signals plugins
-- 1ab22c4: Allow defining signal type to publish and receive
-
-## `@backstage/plugin-signals-react` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 447d210: Fix disconnect loop on server start
-- 8472188: Added or fixed the `repository` field in `package.json`.
-- 047bead: Add support to subscribe and publish messages through signals plugins
-- 1ab22c4: Allow defining signal type to publish and receive
 
 _Excluded dependency updates for packages: `@backstage/integration-react`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-common`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-react`, `@backstage/plugin-gocd`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-node`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-todo`, `@backstage/plugin-user-settings-backend`._

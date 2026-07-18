@@ -2,6 +2,77 @@
 
 Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
+Newly added: `@backstage/backend-app-api`, `@backstage/backend-plugin-api`, `@backstage/plugin-api-docs-module-protoc-gen-doc`, `@backstage/plugin-apollo-explorer`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-node`, `@backstage/plugin-cost-insights-common`.
+
+## `@backstage/backend-app-api` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 91c1d12123: Add initial plumbing for creating backends using the experimental backend framework.
+
+  This package is highly **EXPERIMENTAL** and should not be used in production.
+
+## `@backstage/backend-plugin-api` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 91c1d12123: Introduced new package for creating backend plugins using the new alpha backend plugin framework.
+  This package is still considered **EXPERIMENTAL** and things will change without warning. Do not use this for production.
+
+## `@backstage/plugin-api-docs-module-protoc-gen-doc` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- e0328f2107: Added the new `grpcDocsApiWidget` to render `protoc-gen-doc` generated descriptors by the `grpc-docs` package.
+
+## `@backstage/plugin-apollo-explorer` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d8fec19542: Apollo Explorer plugin now available! Installation instructions can be found in the plugin README
+
+## `@backstage/plugin-catalog-backend-module-openapi` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 67503d159e: Add basic OpenAPI \$ref support.
+
+  For more information see [here](https://github.com/backstage/backstage/tree/master/plugins/catalog-backend-module-openapi).
+
+#### Patch Changes
+
+- 4881dc4c84: Updated dependency `openapi-types` to `^12.0.0`.
+
+## `@backstage/plugin-catalog-node` (new, 1.0.0)
+
+### 1.0.0
+
+#### Major Changes
+
+- 9a6aba1d85: This package houses stable types from the `@backstage/plugin-catalog-backend` package and is intended for creation of catalog modules. Prefer importing from this package over the `@backstage/plugin-catalog-backend` package.
+
+#### Minor Changes
+
+- 91c1d12123: Added alpha exports for the new experimental backend system.
+
+## `@backstage/plugin-cost-insights-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 81dd5ea989: Introduces a new isomorphic @backstage/plugin-cost-insight-common package to contain shared types across all other cost insights packages and modules.
+
 ## `@backstage/app-defaults` (1.0.3 → 1.0.4)
 
 ### 1.0.4
@@ -1999,74 +2070,5 @@ Changes between 1.3.1 and 1.4.0 — 143 changed and 7 added packages.
 
 - a5d73da942: Fix the flag parsing for `legacyCopyReadmeMdToIndexMd` in `techdocs-cli generate` command, and decouple it's logic from the `techdocs-ref` flag.
 - 14ce0d9347: Fixed a bug that prevented docker images from being pulled by default when generating TechDocs.
-
-## `@backstage/backend-app-api` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 91c1d12123: Add initial plumbing for creating backends using the experimental backend framework.
-
-  This package is highly **EXPERIMENTAL** and should not be used in production.
-
-## `@backstage/backend-plugin-api` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 91c1d12123: Introduced new package for creating backend plugins using the new alpha backend plugin framework.
-  This package is still considered **EXPERIMENTAL** and things will change without warning. Do not use this for production.
-
-## `@backstage/plugin-api-docs-module-protoc-gen-doc` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- e0328f2107: Added the new `grpcDocsApiWidget` to render `protoc-gen-doc` generated descriptors by the `grpc-docs` package.
-
-## `@backstage/plugin-apollo-explorer` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d8fec19542: Apollo Explorer plugin now available! Installation instructions can be found in the plugin README
-
-## `@backstage/plugin-catalog-backend-module-openapi` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 67503d159e: Add basic OpenAPI \$ref support.
-
-  For more information see [here](https://github.com/backstage/backstage/tree/master/plugins/catalog-backend-module-openapi).
-
-#### Patch Changes
-
-- 4881dc4c84: Updated dependency `openapi-types` to `^12.0.0`.
-
-## `@backstage/plugin-catalog-node` (new, 1.0.0)
-
-### 1.0.0
-
-#### Major Changes
-
-- 9a6aba1d85: This package houses stable types from the `@backstage/plugin-catalog-backend` package and is intended for creation of catalog modules. Prefer importing from this package over the `@backstage/plugin-catalog-backend` package.
-
-#### Minor Changes
-
-- 91c1d12123: Added alpha exports for the new experimental backend system.
-
-## `@backstage/plugin-cost-insights-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 81dd5ea989: Introduces a new isomorphic @backstage/plugin-cost-insight-common package to contain shared types across all other cost insights packages and modules.
 
 _Excluded dependency updates for packages: `@backstage/dev-utils`, `@backstage/plugin-adr-common`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-permission-react`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`._

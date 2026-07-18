@@ -2,6 +2,24 @@
 
 Changes between 1.21.1 and 1.22.0 — 226 changed and 2 added packages.
 
+Newly added: `@backstage/backend-dynamic-feature-service`, `@backstage/plugin-app-visualizer`.
+
+## `@backstage/backend-dynamic-feature-service` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- eb81f42: New `backend-dynamic-feature-service` package, for the discovery of dynamic frontend and backend plugins (and modules) and the loading of the backend ones inside the backend application.
+
+## `@backstage/plugin-app-visualizer` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- e57cc9f: Initial release of the app visualizer plugin.
+
 ## `@backstage/backend-app-api` (0.5.9 → 0.5.10)
 
 ### 0.5.10
@@ -1508,21 +1526,5 @@ Changes between 1.21.1 and 1.22.0 — 226 changed and 2 added packages.
 
 - 883782e: Updated the OpenAPI template to export the `TypedResponse` interface so that client code can leverage it
 - 7acbb5a: Removed `mock-fs` dev dependency.
-
-## `@backstage/backend-dynamic-feature-service` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- eb81f42: New `backend-dynamic-feature-service` package, for the discovery of dynamic frontend and backend plugins (and modules) and the loading of the backend ones inside the backend application.
-
-## `@backstage/plugin-app-visualizer` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- e57cc9f: Initial release of the app visualizer plugin.
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-tasks`, `@backstage/backend-test-utils`, `@backstage/core-app-api`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-adr-common`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-node`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-github`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-msgraph`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-import`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kubernetes-backend`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-search-react`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-techdocs-node`, `@backstage/plugin-vault-backend`, `@backstage/plugin-vault-node`, `@backstage/test-utils`, `@techdocs/cli`._

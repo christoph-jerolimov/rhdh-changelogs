@@ -2,6 +2,30 @@
 
 Changes between 1.27.7 and 1.28.0 — 159 changed and 2 added packages.
 
+Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-user-settings-common`.
+
+## `@backstage/plugin-auth-backend-module-onelogin-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 566d7cb: Separate out the OneLogin provider into its own module
+
+#### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+## `@backstage/plugin-user-settings-common` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+- e6ec179: Use signals to update user settings across sessions
+
 ## `@backstage/backend-app-api` (0.7.5 → 0.7.6)
 
 ### 0.7.6
@@ -1811,27 +1835,5 @@ Changes between 1.27.7 and 1.28.0 — 159 changed and 2 added packages.
 #### Patch Changes
 
 - 2110d76: Removed `dockerode` dependency.
-
-## `@backstage/plugin-auth-backend-module-onelogin-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 566d7cb: Separate out the OneLogin provider into its own module
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-user-settings-common` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-- e6ec179: Use signals to update user settings across sessions
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-openapi-utils`, `@backstage/codemods`, `@backstage/config-loader`, `@backstage/dev-utils`, `@backstage/frontend-app-api`, `@backstage/frontend-plugin-api`, `@backstage/frontend-test-utils`, `@backstage/test-utils`._

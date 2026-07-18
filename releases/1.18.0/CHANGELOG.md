@@ -2,6 +2,183 @@
 
 Changes between 1.17.5 and 1.18.0 — 217 changed and 10 added packages.
 
+Newly added: `@backstage/frontend-app-api`, `@backstage/frontend-plugin-api`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-opencost`, `@backstage/plugin-permission-backend-module-allow-all-policy`.
+
+## `@backstage/frontend-app-api` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 628ca7e458e4: Initial release
+
+## `@backstage/frontend-plugin-api` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 628ca7e458e4: Initial release
+
+## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 8513cd7d00e3: New module for `@backstage/plugin-auth-backend` that adds a GCP IAP auth provider.
+
+#### Patch Changes
+
+- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
+
+  For example, if you are currently importing the plugin using the following pattern:
+
+  ```ts
+  import { examplePlugin } from '@backstage/plugin-example-backend';
+
+  backend.add(examplePlugin);
+  ```
+
+  It should be migrated to this:
+
+  ```ts
+  backend.add(import('@backstage/plugin-example-backend'));
+  ```
+
+## `@backstage/plugin-auth-backend-module-github-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 23af27f5ce79: New module for `@backstage/plugin-auth-backend` that adds a GitHub auth provider.
+
+#### Patch Changes
+
+- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
+
+  For example, if you are currently importing the plugin using the following pattern:
+
+  ```ts
+  import { examplePlugin } from '@backstage/plugin-example-backend';
+
+  backend.add(examplePlugin);
+  ```
+
+  It should be migrated to this:
+
+  ```ts
+  backend.add(import('@backstage/plugin-example-backend'));
+  ```
+
+## `@backstage/plugin-auth-backend-module-gitlab-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 080cc7794700: New module for `@backstage/plugin-auth-backend` that adds a GitLab auth provider.
+
+#### Patch Changes
+
+- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
+
+  For example, if you are currently importing the plugin using the following pattern:
+
+  ```ts
+  import { examplePlugin } from '@backstage/plugin-example-backend';
+
+  backend.add(examplePlugin);
+  ```
+
+  It should be migrated to this:
+
+  ```ts
+  backend.add(import('@backstage/plugin-example-backend'));
+  ```
+
+## `@backstage/plugin-auth-backend-module-google-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 8513cd7d00e3: New module for `@backstage/plugin-auth-backend` that adds a Google auth provider.
+
+#### Patch Changes
+
+- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
+
+  For example, if you are currently importing the plugin using the following pattern:
+
+  ```ts
+  import { examplePlugin } from '@backstage/plugin-example-backend';
+
+  backend.add(examplePlugin);
+  ```
+
+  It should be migrated to this:
+
+  ```ts
+  backend.add(import('@backstage/plugin-example-backend'));
+  ```
+
+## `@backstage/plugin-auth-backend-module-oauth2-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 101cf1d13b04: New module for `@backstage/plugin-auth-backend` that adds a `oauth2` auth provider.
+
+## `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d5313ede3529: Added a dedicated module to collect the `ScaffolderEntitiesProcessor` and `catalogModuleTemplateKind`.
+
+## `@backstage/plugin-opencost` (new, 0.2.0)
+
+### 0.2.0
+
+#### Minor Changes
+
+- 1380a689ab56: New OpenCost plugin provides an port of the latest OpenCost UI to Backstage with updated dependencies. The plugin's README covers installation and configuration
+
+#### Patch Changes
+
+- 482bb5c0bbf8: Moved `@types/react` to be a regular dependency
+- 406b786a2a2c: Mark package as being free of side effects, allowing more optimized Webpack builds.
+
+## `@backstage/plugin-permission-backend-module-allow-all-policy` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 5f7b2153526b: Created package with policy `permissionModuleAllowAllPolicy`
+
+#### Patch Changes
+
+- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
+
+  For example, if you are currently importing the plugin using the following pattern:
+
+  ```ts
+  import { examplePlugin } from '@backstage/plugin-example-backend';
+
+  backend.add(examplePlugin);
+  ```
+
+  It should be migrated to this:
+
+  ```ts
+  backend.add(import('@backstage/plugin-example-backend'));
+  ```
+
 ## `@backstage/app-defaults` (1.4.2 → 1.4.3)
 
 ### 1.4.3
@@ -2635,180 +2812,5 @@ Skipped due to publishing issues.
 #### Minor Changes
 
 - 10a86bd4ae12: Add optional config and cli option for techdocs to specify default mkdocs plugins.
-
-## `@backstage/frontend-app-api` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 628ca7e458e4: Initial release
-
-## `@backstage/frontend-plugin-api` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 628ca7e458e4: Initial release
-
-## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 8513cd7d00e3: New module for `@backstage/plugin-auth-backend` that adds a GCP IAP auth provider.
-
-#### Patch Changes
-
-- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
-
-  For example, if you are currently importing the plugin using the following pattern:
-
-  ```ts
-  import { examplePlugin } from '@backstage/plugin-example-backend';
-
-  backend.add(examplePlugin);
-  ```
-
-  It should be migrated to this:
-
-  ```ts
-  backend.add(import('@backstage/plugin-example-backend'));
-  ```
-
-## `@backstage/plugin-auth-backend-module-github-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 23af27f5ce79: New module for `@backstage/plugin-auth-backend` that adds a GitHub auth provider.
-
-#### Patch Changes
-
-- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
-
-  For example, if you are currently importing the plugin using the following pattern:
-
-  ```ts
-  import { examplePlugin } from '@backstage/plugin-example-backend';
-
-  backend.add(examplePlugin);
-  ```
-
-  It should be migrated to this:
-
-  ```ts
-  backend.add(import('@backstage/plugin-example-backend'));
-  ```
-
-## `@backstage/plugin-auth-backend-module-gitlab-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 080cc7794700: New module for `@backstage/plugin-auth-backend` that adds a GitLab auth provider.
-
-#### Patch Changes
-
-- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
-
-  For example, if you are currently importing the plugin using the following pattern:
-
-  ```ts
-  import { examplePlugin } from '@backstage/plugin-example-backend';
-
-  backend.add(examplePlugin);
-  ```
-
-  It should be migrated to this:
-
-  ```ts
-  backend.add(import('@backstage/plugin-example-backend'));
-  ```
-
-## `@backstage/plugin-auth-backend-module-google-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 8513cd7d00e3: New module for `@backstage/plugin-auth-backend` that adds a Google auth provider.
-
-#### Patch Changes
-
-- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
-
-  For example, if you are currently importing the plugin using the following pattern:
-
-  ```ts
-  import { examplePlugin } from '@backstage/plugin-example-backend';
-
-  backend.add(examplePlugin);
-  ```
-
-  It should be migrated to this:
-
-  ```ts
-  backend.add(import('@backstage/plugin-example-backend'));
-  ```
-
-## `@backstage/plugin-auth-backend-module-oauth2-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 101cf1d13b04: New module for `@backstage/plugin-auth-backend` that adds a `oauth2` auth provider.
-
-## `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d5313ede3529: Added a dedicated module to collect the `ScaffolderEntitiesProcessor` and `catalogModuleTemplateKind`.
-
-## `@backstage/plugin-opencost` (new, 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- 1380a689ab56: New OpenCost plugin provides an port of the latest OpenCost UI to Backstage with updated dependencies. The plugin's README covers installation and configuration
-
-#### Patch Changes
-
-- 482bb5c0bbf8: Moved `@types/react` to be a regular dependency
-- 406b786a2a2c: Mark package as being free of side effects, allowing more optimized Webpack builds.
-
-## `@backstage/plugin-permission-backend-module-allow-all-policy` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 5f7b2153526b: Created package with policy `permissionModuleAllowAllPolicy`
-
-#### Patch Changes
-
-- 71114ac50e02: The export for the new backend system has been moved to be the `default` export.
-
-  For example, if you are currently importing the plugin using the following pattern:
-
-  ```ts
-  import { examplePlugin } from '@backstage/plugin-example-backend';
-
-  backend.add(examplePlugin);
-  ```
-
-  It should be migrated to this:
-
-  ```ts
-  backend.add(import('@backstage/plugin-example-backend'));
-  ```
 
 _Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/backend-openapi-utils`, `@backstage/cli-node`, `@backstage/integration-aws-node`, `@backstage/plugin-app-node`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-catalog-node`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-backend`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-nomad-backend`, `@backstage/plugin-playlist-backend`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-tech-insights-node`._

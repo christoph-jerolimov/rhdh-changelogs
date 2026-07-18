@@ -2,6 +2,76 @@
 
 Changes between 1.12.1 and 1.13.0 — 186 changed and 8 added packages.
 
+Newly added: `@backstage/backend-openapi-utils`, `@backstage/cli-node`, `@backstage/plugin-puppetdb`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-techdocs`.
+
+## `@backstage/backend-openapi-utils` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 62fe726fdc5: New plugin! Primary focus is to support types on `Router`s in backend packages. Developers can use the `ApiRouter` from this package in their packages to support a typed experience based on their OpenAPI specs. The `ApiRouter` supports request bodies, response bodies, query parameters and path parameters, as well as full path-based context of the above. This means no more guessing on an endpoint like `req.post('/not-my-route', (req, res)=>{res.send(req.body.badparam)})`. Typescript would catch `/not-my-route`, `req.body.badparam`, `res.send(req.body.badparam)`.
+
+## `@backstage/cli-node` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 3156b0d85dc: Introduced the new `@backstage/cli-node` package, which provides utilities for use across Backstage CLIs.
+
+## `@backstage/plugin-puppetdb` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 70a036e940e: Initial version of [PuppetDB plugin](https://github.com/backstage/backstage/blob/master/plugins/puppetdb/README.md).
+
+## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 1b49a18bf8d: Created `confluence:transform:markdown` action for converting confluence docs to Markdown.
+
+#### Patch Changes
+
+- e0c6e8b9c3c: Update peer dependencies
+
+## `@backstage/plugin-scaffolder-backend-module-gitlab` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 1ad400bb2de: Add Gitlab Scaffolder Plugin
+
+## `@backstage/plugin-search-backend-module-catalog` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 01ae205352e: Package introduced to export search backend modules that can be used with the new backend system to extend search with plugin specific functionality, such as collators. For documentation on how to migrate, check out the [how to migrate to the new backend system guide](https://backstage.io/docs/features/search/how-to-guides/#how-to-migrate-your-backend-installation-to-use-search-together-with-the-new-backend-system).
+
+## `@backstage/plugin-search-backend-module-explore` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 01ae205352e: Package introduced to export search backend modules that can be used with the new backend system to extend search with plugin specific functionality, such as collators. For documentation on how to migrate, check out the [how to migrate to the new backend system guide](https://backstage.io/docs/features/search/how-to-guides/#how-to-migrate-your-backend-installation-to-use-search-together-with-the-new-backend-system).
+
+## `@backstage/plugin-search-backend-module-techdocs` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 01ae205352e: Package introduced to export search backend modules that can be used with the new backend system to extend search with plugin specific functionality, such as collators. For documentation on how to migrate, check out the [how to migrate to the new backend system guide](https://backstage.io/docs/features/search/how-to-guides/#how-to-migrate-your-backend-installation-to-use-search-together-with-the-new-backend-system).
+
 ## `@backstage/app-defaults` (1.2.1 → 1.3.0)
 
 ### 1.3.0
@@ -1622,73 +1692,5 @@ Changes between 1.12.1 and 1.13.0 — 186 changed and 8 added packages.
 #### Patch Changes
 
 - b348420a804: Adding global-agent to enable the ability to publish through a proxy
-
-## `@backstage/backend-openapi-utils` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 62fe726fdc5: New plugin! Primary focus is to support types on `Router`s in backend packages. Developers can use the `ApiRouter` from this package in their packages to support a typed experience based on their OpenAPI specs. The `ApiRouter` supports request bodies, response bodies, query parameters and path parameters, as well as full path-based context of the above. This means no more guessing on an endpoint like `req.post('/not-my-route', (req, res)=>{res.send(req.body.badparam)})`. Typescript would catch `/not-my-route`, `req.body.badparam`, `res.send(req.body.badparam)`.
-
-## `@backstage/cli-node` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 3156b0d85dc: Introduced the new `@backstage/cli-node` package, which provides utilities for use across Backstage CLIs.
-
-## `@backstage/plugin-puppetdb` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 70a036e940e: Initial version of [PuppetDB plugin](https://github.com/backstage/backstage/blob/master/plugins/puppetdb/README.md).
-
-## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 1b49a18bf8d: Created `confluence:transform:markdown` action for converting confluence docs to Markdown.
-
-#### Patch Changes
-
-- e0c6e8b9c3c: Update peer dependencies
-
-## `@backstage/plugin-scaffolder-backend-module-gitlab` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 1ad400bb2de: Add Gitlab Scaffolder Plugin
-
-## `@backstage/plugin-search-backend-module-catalog` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 01ae205352e: Package introduced to export search backend modules that can be used with the new backend system to extend search with plugin specific functionality, such as collators. For documentation on how to migrate, check out the [how to migrate to the new backend system guide](https://backstage.io/docs/features/search/how-to-guides/#how-to-migrate-your-backend-installation-to-use-search-together-with-the-new-backend-system).
-
-## `@backstage/plugin-search-backend-module-explore` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 01ae205352e: Package introduced to export search backend modules that can be used with the new backend system to extend search with plugin specific functionality, such as collators. For documentation on how to migrate, check out the [how to migrate to the new backend system guide](https://backstage.io/docs/features/search/how-to-guides/#how-to-migrate-your-backend-installation-to-use-search-together-with-the-new-backend-system).
-
-## `@backstage/plugin-search-backend-module-techdocs` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 01ae205352e: Package introduced to export search backend modules that can be used with the new backend system to extend search with plugin specific functionality, such as collators. For documentation on how to migrate, check out the [how to migrate to the new backend system guide](https://backstage.io/docs/features/search/how-to-guides/#how-to-migrate-your-backend-installation-to-use-search-together-with-the-new-backend-system).
 
 _Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/backend-plugin-api`, `@backstage/backend-test-utils`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-app-backend`, `@backstage/plugin-auth-node`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-node`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-linguist-backend`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-search-common`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-todo-backend`, `@backstage/plugin-user-settings-backend`._

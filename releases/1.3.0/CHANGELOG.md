@@ -2,6 +2,120 @@
 
 Changes between 1.2.2 and 1.3.0 — 133 changed and 6 added packages.
 
+Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-dynatrace`, `@backstage/plugin-github-pull-requests-board`, `@backstage/plugin-vault`, `@backstage/plugin-vault-backend`.
+
+## `@backstage/plugin-bitbucket-cloud-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 1dffa7dd4d: Add new common library `bitbucket-cloud-common` with a client for Bitbucket Cloud.
+
+  This client can be reused across all packages and might be the future place for additional
+  features like managing the rate limits, etc.
+
+  The client itself was generated in parts using the `@openapitools/openapi-generator-cli`.
+
+#### Patch Changes
+
+- 9122060776: Updated dependency `msw` to `^0.42.0`.
+
+## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- dfc4efcbf0: Add new plugin `catalog-backend-module-bitbucket-cloud` with `BitbucketCloudEntityProvider`.
+
+  This entity provider is an alternative/replacement to the `BitbucketDiscoveryProcessor` **_(for Bitbucket Cloud only!)_**.
+  It replaces use cases using `search=true` and should be powerful enough as a complete replacement.
+
+  If any feature for Bitbucket Cloud is missing and preventing you from switching, please raise an issue.
+
+  **Before:**
+
+  ```typescript
+  // packages/backend/src/plugins/catalog.ts
+
+  builder.addProcessor(
+    BitbucketDiscoveryProcessor.fromConfig(env.config, { logger: env.logger }),
+  );
+  ```
+
+  ```yaml
+  # app-config.yaml
+
+  catalog:
+    locations:
+      - type: bitbucket-discovery
+        target: 'https://bitbucket.org/workspaces/workspace-name/projects/apis-*/repos/service-*?search=true&catalogPath=/catalog-info.yaml'
+  ```
+
+  **After:**
+
+  ```typescript
+  // packages/backend/src/plugins/catalog.ts
+  builder.addEntityProvider(
+    BitbucketCloudEntityProvider.fromConfig(env.config, {
+      logger: env.logger,
+      schedule: env.scheduler.createScheduledTaskRunner({
+        frequency: { minutes: 30 },
+        timeout: { minutes: 3 },
+      }),
+    }),
+  );
+  ```
+
+  ```yaml
+  # app-config.yaml
+
+  catalog:
+    providers:
+      bitbucketCloud:
+        yourProviderId: # identifies your ingested dataset
+          catalogPath: /catalog-info.yaml # default value
+          filters: # optional
+            projectKey: '^apis-.*
+  ```
+
+## `@backstage/plugin-dynatrace` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 70027d09aa: Adds Dynatrace plugin
+
+## `@backstage/plugin-github-pull-requests-board` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- fc9927c81d: Add Github Pull Requests board plugin
+
+#### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+## `@backstage/plugin-vault` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 7c310a5bc2: First implementation of the frontend vault plugin. For more information refer to its `README.md`.
+
+## `@backstage/plugin-vault-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 7c310a5bc2: First implementation for the backend vault plugin. For more information refer to its `README.md`.
+
 ## `@backstage/backend-common` (0.13.5 → 0.14.0)
 
 ### 0.14.0
@@ -1539,117 +1653,5 @@ Changes between 1.2.2 and 1.3.0 — 133 changed and 6 added packages.
 
 - f96e98f4cd: Updated dependency `cypress` to `^10.0.0`.
 - bff65e6958: Updated sidebar-related logic to use `<SidebarPinStateProvider>` + `useSidebarPinState()` and/or `<SidebarOpenStateProvider>` + `useSidebarOpenState()` from `@backstage/core-components`.
-
-## `@backstage/plugin-bitbucket-cloud-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 1dffa7dd4d: Add new common library `bitbucket-cloud-common` with a client for Bitbucket Cloud.
-
-  This client can be reused across all packages and might be the future place for additional
-  features like managing the rate limits, etc.
-
-  The client itself was generated in parts using the `@openapitools/openapi-generator-cli`.
-
-#### Patch Changes
-
-- 9122060776: Updated dependency `msw` to `^0.42.0`.
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- dfc4efcbf0: Add new plugin `catalog-backend-module-bitbucket-cloud` with `BitbucketCloudEntityProvider`.
-
-  This entity provider is an alternative/replacement to the `BitbucketDiscoveryProcessor` **_(for Bitbucket Cloud only!)_**.
-  It replaces use cases using `search=true` and should be powerful enough as a complete replacement.
-
-  If any feature for Bitbucket Cloud is missing and preventing you from switching, please raise an issue.
-
-  **Before:**
-
-  ```typescript
-  // packages/backend/src/plugins/catalog.ts
-
-  builder.addProcessor(
-    BitbucketDiscoveryProcessor.fromConfig(env.config, { logger: env.logger }),
-  );
-  ```
-
-  ```yaml
-  # app-config.yaml
-
-  catalog:
-    locations:
-      - type: bitbucket-discovery
-        target: 'https://bitbucket.org/workspaces/workspace-name/projects/apis-*/repos/service-*?search=true&catalogPath=/catalog-info.yaml'
-  ```
-
-  **After:**
-
-  ```typescript
-  // packages/backend/src/plugins/catalog.ts
-  builder.addEntityProvider(
-    BitbucketCloudEntityProvider.fromConfig(env.config, {
-      logger: env.logger,
-      schedule: env.scheduler.createScheduledTaskRunner({
-        frequency: { minutes: 30 },
-        timeout: { minutes: 3 },
-      }),
-    }),
-  );
-  ```
-
-  ```yaml
-  # app-config.yaml
-
-  catalog:
-    providers:
-      bitbucketCloud:
-        yourProviderId: # identifies your ingested dataset
-          catalogPath: /catalog-info.yaml # default value
-          filters: # optional
-            projectKey: '^apis-.*
-  ```
-
-## `@backstage/plugin-dynatrace` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 70027d09aa: Adds Dynatrace plugin
-
-## `@backstage/plugin-github-pull-requests-board` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- fc9927c81d: Add Github Pull Requests board plugin
-
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-vault` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 7c310a5bc2: First implementation of the frontend vault plugin. For more information refer to its `README.md`.
-
-## `@backstage/plugin-vault-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 7c310a5bc2: First implementation for the backend vault plugin. For more information refer to its `README.md`.
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/dev-utils`, `@backstage/plugin-adr-common`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-permission-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`._

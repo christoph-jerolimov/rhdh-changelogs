@@ -2,6 +2,43 @@
 
 Changes between 1.37.1 and 1.38.0 — 154 changed and 4 added packages.
 
+Newly added: `@backstage/frontend-dynamic-feature-loader`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-notifications-backend-module-slack`.
+
+## `@backstage/frontend-dynamic-feature-loader` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 3bee3c3: The new package `frontend-dynamic-features-loader` provides a frontend feature loader that dynamically
+  loads frontend features based on the new frontend system and exposed as module federation remotes.
+  This new frontend feature loader works hand-in-hand with a new server of frontend plugin module federation
+  remotes, which is added as part of backend dynamic feature service in package `@backstage/backend-dynamic-feature-service`.
+
+## `@backstage/plugin-events-backend-module-bitbucket-server` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 7b3ed9b: Added the ability for the plugin to receive events coming from Bitbucket Server push webhooks. It then performs a delta mutation on the catalog.
+
+## `@backstage/plugin-gateway-backend` (new, 1.0.0)
+
+### 1.0.0
+
+#### Major Changes
+
+- 6b5681c: Initial release of `@backstage/plugin-gateway-backend`
+
+## `@backstage/plugin-notifications-backend-module-slack` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 552170d: Added a new Slack NotificationProcessor for use with the notifications plugin
+
 ## `@backstage/app-defaults` (1.6.0 → 1.6.1)
 
 ### 1.6.1
@@ -1054,40 +1091,5 @@ Changes between 1.37.1 and 1.38.0 — 154 changed and 4 added packages.
 - a47fd39: Removes instances of default React imports, a necessary update for the upcoming React 19 migration.
 
   <https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html>
-
-## `@backstage/frontend-dynamic-feature-loader` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 3bee3c3: The new package `frontend-dynamic-features-loader` provides a frontend feature loader that dynamically
-  loads frontend features based on the new frontend system and exposed as module federation remotes.
-  This new frontend feature loader works hand-in-hand with a new server of frontend plugin module federation
-  remotes, which is added as part of backend dynamic feature service in package `@backstage/backend-dynamic-feature-service`.
-
-## `@backstage/plugin-events-backend-module-bitbucket-server` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 7b3ed9b: Added the ability for the plugin to receive events coming from Bitbucket Server push webhooks. It then performs a delta mutation on the catalog.
-
-## `@backstage/plugin-gateway-backend` (new, 1.0.0)
-
-### 1.0.0
-
-#### Major Changes
-
-- 6b5681c: Initial release of `@backstage/plugin-gateway-backend`
-
-## `@backstage/plugin-notifications-backend-module-slack` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 552170d: Added a new Slack NotificationProcessor for use with the notifications plugin
 
 _Excluded dependency updates for packages: `@backstage/backend-app-api`, `@backstage/backend-openapi-utils`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-atlassian-provider`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-cloudflare-access-provider`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-node`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-msgraph`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-kubernetes-backend`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-notifications-backend-module-email`, `@backstage/plugin-notifications-node`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-node`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-signals`, `@backstage/plugin-signals-backend`, `@backstage/plugin-signals-node`, `@backstage/plugin-signals-react`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-user-settings-backend`, `@techdocs/cli`._

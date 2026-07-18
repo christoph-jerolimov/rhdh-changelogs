@@ -2,6 +2,130 @@
 
 Changes between 1.20.4 and 1.21.0 — 220 changed and 10 added packages.
 
+Newly added: `@backstage/core-compat-api`, `@backstage/frontend-test-utils`, `@backstage/plugin-auth-backend-module-atlassian-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-github`.
+
+## `@backstage/core-compat-api` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- cf5cc4c: Discover plugins and routes recursively beneath the root routes in `collectLecacyRoutes`
+- af7bc3e: Switched all core extensions to instead use the namespace `'app'`.
+- f63dd72: The `collectLegacyRoutes` has been removed and is replaced by `convertLegacyApp` now being able to convert a `FlatRoutes` element directly.
+
+#### Patch Changes
+
+- 03d0b6d: Added `convertLegacyRouteRef` utility to convert existing route refs to be used with the new experimental packages.
+- a379243: Leverage the new `FrontendFeature` type to simplify interfaces
+- 8226442: Added `compatWrapper`, which can be used to wrap any React element to provide bi-directional interoperability between the `@backstage/core-*-api` and `@backstage/frontend-*-api` APIs.
+- 8f5d6c1: Updates to match the new extension input wrapping.
+- c219b16: Made package public so it can be published
+- b7adf24: Delete alpha DI compatibility helper for components, migrating components should be simple without a helper.
+- 046e443: Updates for compatibility with the new extension IDs.
+
+## `@backstage/frontend-test-utils` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 59fabd5: New testing utility library for `@backstage/frontend-app-api` and `@backstage/frontend-plugin-api`.
+- af7bc3e: Switched all core extensions to instead use the namespace `'app'`.
+
+#### Patch Changes
+
+- 59fabd5: Added `createExtensionTester` for rendering extensions in tests.
+- 7e4b0db: The `createExtensionTester` helper is now able to render more than one route in the test app.
+- 818eea4: Updates for compatibility with the new extension IDs.
+- b9aa6e4: Migrate `renderInTestApp` to `@backstage/frontend-test-utils` for testing individual React components in an app.
+- e539735: Updates for `core.router` addition.
+- c21c9cf: Re-export mock API implementations as well as `TestApiProvider`, `TestApiRegistry`, `withLogCollector`, and `setupRequestMockHandlers` from `@backstage/test-utils`.
+
+## `@backstage/plugin-auth-backend-module-atlassian-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 2a5891e: New module for `@backstage/plugin-auth-backend` that adds an atlassian auth provider
+
+#### Patch Changes
+
+- a62764b: Updated dependency `passport` to `^0.7.0`.
+
+## `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 271aa12: Release of `oauth2-proxy-provider` plugin
+
+#### Patch Changes
+
+- a6be465: Exported the provider as default so it gets discovered when using `featureDiscoveryServiceFactory()`
+- 510dab4: Change provider id from `oauth2ProxyProvider` to `oauth2Proxy`
+- cc4228e: Switched module ID to use kebab-case.
+
+## `@backstage/plugin-auth-backend-module-okta-provider` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- e1c189b: Adds okta-provider backend module for the auth plugin
+- a62764b: Updated dependency `passport` to `^0.7.0`.
+
+## `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- ed02c69: Add VMware Cloud auth backend module provider
+
+## `@backstage/plugin-scaffolder-backend-module-azure` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 219d7f0: Create new scaffolder module for external integrations
+
+## `@backstage/plugin-scaffolder-backend-module-bitbucket` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 219d7f0: Create new scaffolder module for external integrations
+
+## `@backstage/plugin-scaffolder-backend-module-gerrit` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 219d7f0: Create new scaffolder module for external integrations
+
+#### Patch Changes
+
+- d86cd98: Add dry run support for the `publish:gerrit` action.
+
+## `@backstage/plugin-scaffolder-backend-module-github` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 219d7f0: Create new scaffolder module for external integrations
+
+#### Patch Changes
+
+- cb6a65e: The `scaffolder.defaultCommitMessage` config value is now being used if provided and uses "initial commit" when it is not provided.
+- 28949ea: Add a new action for creating github-autolink references for a repository: `github:autolinks:create`
+
 ## `@backstage/backend-app-api` (0.5.8 → 0.5.9)
 
 ### 0.5.9
@@ -1307,127 +1431,5 @@ Changes between 1.20.4 and 1.21.0 — 220 changed and 10 added packages.
 
 - d15d483: Add command `--runAsDefaultUser` for `@techdocs/cli generate` to bypass running the docker builds as host user for macOS and Linux.
 - b2dccad: Support passing additional `mkdocs-server` CLI parameters (`--dirtyreload`, `--strict` and `--clean`) when run in containerized mode.
-
-## `@backstage/core-compat-api` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- cf5cc4c: Discover plugins and routes recursively beneath the root routes in `collectLecacyRoutes`
-- af7bc3e: Switched all core extensions to instead use the namespace `'app'`.
-- f63dd72: The `collectLegacyRoutes` has been removed and is replaced by `convertLegacyApp` now being able to convert a `FlatRoutes` element directly.
-
-#### Patch Changes
-
-- 03d0b6d: Added `convertLegacyRouteRef` utility to convert existing route refs to be used with the new experimental packages.
-- a379243: Leverage the new `FrontendFeature` type to simplify interfaces
-- 8226442: Added `compatWrapper`, which can be used to wrap any React element to provide bi-directional interoperability between the `@backstage/core-*-api` and `@backstage/frontend-*-api` APIs.
-- 8f5d6c1: Updates to match the new extension input wrapping.
-- c219b16: Made package public so it can be published
-- b7adf24: Delete alpha DI compatibility helper for components, migrating components should be simple without a helper.
-- 046e443: Updates for compatibility with the new extension IDs.
-
-## `@backstage/frontend-test-utils` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 59fabd5: New testing utility library for `@backstage/frontend-app-api` and `@backstage/frontend-plugin-api`.
-- af7bc3e: Switched all core extensions to instead use the namespace `'app'`.
-
-#### Patch Changes
-
-- 59fabd5: Added `createExtensionTester` for rendering extensions in tests.
-- 7e4b0db: The `createExtensionTester` helper is now able to render more than one route in the test app.
-- 818eea4: Updates for compatibility with the new extension IDs.
-- b9aa6e4: Migrate `renderInTestApp` to `@backstage/frontend-test-utils` for testing individual React components in an app.
-- e539735: Updates for `core.router` addition.
-- c21c9cf: Re-export mock API implementations as well as `TestApiProvider`, `TestApiRegistry`, `withLogCollector`, and `setupRequestMockHandlers` from `@backstage/test-utils`.
-
-## `@backstage/plugin-auth-backend-module-atlassian-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 2a5891e: New module for `@backstage/plugin-auth-backend` that adds an atlassian auth provider
-
-#### Patch Changes
-
-- a62764b: Updated dependency `passport` to `^0.7.0`.
-
-## `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 271aa12: Release of `oauth2-proxy-provider` plugin
-
-#### Patch Changes
-
-- a6be465: Exported the provider as default so it gets discovered when using `featureDiscoveryServiceFactory()`
-- 510dab4: Change provider id from `oauth2ProxyProvider` to `oauth2Proxy`
-- cc4228e: Switched module ID to use kebab-case.
-
-## `@backstage/plugin-auth-backend-module-okta-provider` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- e1c189b: Adds okta-provider backend module for the auth plugin
-- a62764b: Updated dependency `passport` to `^0.7.0`.
-
-## `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- ed02c69: Add VMware Cloud auth backend module provider
-
-## `@backstage/plugin-scaffolder-backend-module-azure` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 219d7f0: Create new scaffolder module for external integrations
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 219d7f0: Create new scaffolder module for external integrations
-
-## `@backstage/plugin-scaffolder-backend-module-gerrit` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 219d7f0: Create new scaffolder module for external integrations
-
-#### Patch Changes
-
-- d86cd98: Add dry run support for the `publish:gerrit` action.
-
-## `@backstage/plugin-scaffolder-backend-module-github` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 219d7f0: Create new scaffolder module for external integrations
-
-#### Patch Changes
-
-- cb6a65e: The `scaffolder.defaultCommitMessage` config value is now being used if provided and uses "initial commit" when it is not provided.
-- 28949ea: Add a new action for creating github-autolink references for a repository: `github:autolinks:create`
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-defaults`, `@backstage/backend-plugin-api`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-adr-backend`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-analytics-module-newrelic-browser`, `@backstage/plugin-apache-airflow`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-azure-sites`, `@backstage/plugin-badges`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitrise`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-catalog-unprocessed-entities`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-code-climate`, `@backstage/plugin-code-coverage`, `@backstage/plugin-code-coverage-backend`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-cost-insights`, `@backstage/plugin-devtools`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-common`, `@backstage/plugin-dynatrace`, `@backstage/plugin-entity-feedback`, `@backstage/plugin-entity-feedback-backend`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-backend`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcalendar`, `@backstage/plugin-git-release-manager`, `@backstage/plugin-github-deployments`, `@backstage/plugin-github-issues`, `@backstage/plugin-github-pull-requests-board`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphql-voyager`, `@backstage/plugin-ilert`, `@backstage/plugin-jenkins`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-linguist`, `@backstage/plugin-linguist-backend`, `@backstage/plugin-microsoft-calendar`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-nomad`, `@backstage/plugin-nomad-backend`, `@backstage/plugin-octopus-deploy`, `@backstage/plugin-opencost`, `@backstage/plugin-org-react`, `@backstage/plugin-periskop`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-react`, `@backstage/plugin-playlist`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-puppetdb`, `@backstage/plugin-rollbar`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-sentry`, `@backstage/plugin-shortcuts`, `@backstage/plugin-sonarqube`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-splunk-on-call`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-stackstorm`, `@backstage/plugin-tech-insights`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/plugin-vault`, `@backstage/plugin-vault-node`, `@backstage/plugin-xcmetrics`._

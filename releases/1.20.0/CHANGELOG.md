@@ -2,6 +2,37 @@
 
 Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
+Newly added: `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-vault-node`.
+
+## `@backstage/plugin-catalog-backend-module-backstage-openapi` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 785fb1ea75: Adds a new catalog module for ingesting Backstage plugin OpenAPI specs into the catalog for display as an API entity.
+
+#### Patch Changes
+
+- 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
+
+## `@backstage/plugin-search-backend-module-stack-overflow-collator` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 46f0f1700e: Extract a package for the Stack Overflow new backend system plugin.
+
+## `@backstage/plugin-vault-node` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 7a41bcf2af: Initial version of the `plugin-vault-node`` package. It contains the extension point definitions
+  for the vault backend, as well as some types that will be deprecated in the backend plugin.
+
 ## `@backstage/app-defaults` (1.4.4 → 1.4.5)
 
 ### 1.4.5
@@ -1816,34 +1847,5 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Minor Changes
 
 - 8600b86820: validate Docker status before running mkdocs server
-
-## `@backstage/plugin-catalog-backend-module-backstage-openapi` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 785fb1ea75: Adds a new catalog module for ingesting Backstage plugin OpenAPI specs into the catalog for display as an API entity.
-
-#### Patch Changes
-
-- 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-
-## `@backstage/plugin-search-backend-module-stack-overflow-collator` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 46f0f1700e: Extract a package for the Stack Overflow new backend system plugin.
-
-## `@backstage/plugin-vault-node` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 7a41bcf2af: Initial version of the `plugin-vault-node`` package. It contains the extension point definitions
-  for the vault backend, as well as some types that will be deprecated in the backend plugin.
 
 _Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-node`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-common`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-backend`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-nomad-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-node`, `@backstage/plugin-playlist-common`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-common`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-todo-backend`._

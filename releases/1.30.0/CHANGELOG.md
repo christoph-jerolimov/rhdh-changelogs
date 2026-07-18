@@ -2,6 +2,16 @@
 
 Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
+Newly added: `@backstage/plugin-techdocs-common`.
+
+## `@backstage/plugin-techdocs-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 4698e1f: Initial release of the techdocs-common package.
+
 ## `@backstage/backend-app-api` (0.8.0 → 0.9.0)
 
 ### 0.9.0
@@ -1672,13 +1682,5 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
 - c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
 - 6349099: Added config input type to the extensions
-
-## `@backstage/plugin-techdocs-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 4698e1f: Initial release of the techdocs-common package.
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-openapi-utils`, `@backstage/catalog-client`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-unprocessed-entities`, `@backstage/plugin-catalog-unprocessed-entities-common`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-home-react`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-org-react`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-react`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-signals`, `@backstage/plugin-signals-node`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-user-settings-backend`, `@backstage/repo-tools`, `@backstage/test-utils`, `@techdocs/cli`._

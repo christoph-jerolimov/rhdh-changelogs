@@ -2,6 +2,73 @@
 
 Changes between 1.18.5 and 1.19.0 — 221 changed and 7 added packages.
 
+Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-kubernetes-react`.
+
+## `@backstage/e2e-test-utils` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- f5b41b27a9: Initial release.
+
+## `@backstage/plugin-auth-backend-module-microsoft-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 2d8f7e82c1: Migrated the Microsoft auth provider to new `@backstage/plugin-auth-backend-module-microsoft-provider` module package.
+
+## `@backstage/plugin-auth-backend-module-pinniped-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- ae34255836: Add new Pinniped auth module and authenticator to be used alongside the new Pinniped auth provider.
+
+## `@backstage/plugin-catalog-backend-module-github-org` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- c101e683d5: Added `catalogModuleGithubOrgEntityProvider` to ingest users and teams from multiple Github organizations.
+
+## `@backstage/plugin-kubernetes-cluster` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+- 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
+
+## `@backstage/plugin-kubernetes-node` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- cbb0e3c3f4: A new plugin has been introduced to house the extension points for Kubernetes backend plugin; at the moment only the `KubernetesObjectsProviderExtensionPoint` is present. The `kubernetes-backend` plugin was modified to use this new extension point.
+
+## `@backstage/plugin-kubernetes-react` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 2d8151061c: Refactor Kubernetes plugins in line with ADR 11, no breaking changes yet
+
+#### Patch Changes
+
+- 4262e12921: Handle mixed decimals and bigint when calculating k8s resource usage
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
+- 5dac12e435: The kubernetes APIs invokes Authentication Strategies when Backstage-Kubernetes-Authorization-X-X headers are provided, this enable the possibility to invoke strategies that executes additional steps to get a kubernetes token like on pinniped or custom strategies
+
 ## `@backstage/app-defaults` (1.4.3 → 1.4.4)
 
 ### 1.4.4
@@ -1629,70 +1696,5 @@ Changes between 1.18.5 and 1.19.0 — 221 changed and 7 added packages.
 
 - de42eebaaf: Bumped dev dependencies `@types/node` and `mock-fs`.
 - 2b6e572051: Restructured tests.
-
-## `@backstage/e2e-test-utils` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- f5b41b27a9: Initial release.
-
-## `@backstage/plugin-auth-backend-module-microsoft-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 2d8f7e82c1: Migrated the Microsoft auth provider to new `@backstage/plugin-auth-backend-module-microsoft-provider` module package.
-
-## `@backstage/plugin-auth-backend-module-pinniped-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- ae34255836: Add new Pinniped auth module and authenticator to be used alongside the new Pinniped auth provider.
-
-## `@backstage/plugin-catalog-backend-module-github-org` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- c101e683d5: Added `catalogModuleGithubOrgEntityProvider` to ingest users and teams from multiple Github organizations.
-
-## `@backstage/plugin-kubernetes-cluster` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-- 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
-
-## `@backstage/plugin-kubernetes-node` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- cbb0e3c3f4: A new plugin has been introduced to house the extension points for Kubernetes backend plugin; at the moment only the `KubernetesObjectsProviderExtensionPoint` is present. The `kubernetes-backend` plugin was modified to use this new extension point.
-
-## `@backstage/plugin-kubernetes-react` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 2d8151061c: Refactor Kubernetes plugins in line with ADR 11, no breaking changes yet
-
-#### Patch Changes
-
-- 4262e12921: Handle mixed decimals and bigint when calculating k8s resource usage
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
-- 5dac12e435: The kubernetes APIs invokes Authentication Strategies when Backstage-Kubernetes-Authorization-X-X headers are provided, this enable the possibility to invoke strategies that executes additional steps to get a kubernetes token like on pinniped or custom strategies
 
 _Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/backend-plugin-api`, `@backstage/catalog-client`, `@backstage/cli-node`, `@backstage/config`, `@backstage/integration-aws-node`, `@backstage/plugin-adr-backend`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-common`, `@backstage/plugin-entity-feedback-backend`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-lighthouse-common`, `@backstage/plugin-linguist-backend`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-common`, `@backstage/plugin-permission-node`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-todo-backend`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault-backend`._

@@ -2,6 +2,24 @@
 
 Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
+Newly added: `@backstage/filter-predicates`, `@backstage/module-federation-common`.
+
+## `@backstage/filter-predicates` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 7feb83b: Introduced package, basically as the extracted predicate types from `@backstage/plugin-catalog-react/alpha`
+
+## `@backstage/module-federation-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- ce12dec: Added new `@backstage/module-federation-common` package that provides shared types, default configurations, and runtime utilities for module federation. It includes `loadModuleFederationHostShared` for loading shared dependencies in parallel at runtime, `defaultHostSharedDependencies` and `defaultRemoteSharedDependencies` for consistent dependency configuration, and types such as `HostSharedDependencies`, `RemoteSharedDependencies`, and `RuntimeSharedDependenciesGlobal`.
+
 ## `@backstage/app-defaults` (1.7.4 → 1.7.5)
 
 ### 1.7.5
@@ -2191,21 +2209,5 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - 27798df: Migrate the Techdocs CLI embedded app to the New Frontend System (NFS)
 - 508d127: Updated dependency `find-process` to `^2.0.0`.
-
-## `@backstage/filter-predicates` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 7feb83b: Introduced package, basically as the extracted predicate types from `@backstage/plugin-catalog-react/alpha`
-
-## `@backstage/module-federation-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- ce12dec: Added new `@backstage/module-federation-common` package that provides shared types, default configurations, and runtime utilities for module federation. It includes `loadModuleFederationHostShared` for loading shared dependencies in parallel at runtime, `defaultHostSharedDependencies` and `defaultRemoteSharedDependencies` for consistent dependency configuration, and types such as `HostSharedDependencies`, `RemoteSharedDependencies`, and `RuntimeSharedDependenciesGlobal`.
 
 _Excluded dependency updates for packages: `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-openshift-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-unprocessed-entities-common`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-notifications-backend-module-slack`, `@backstage/plugin-notifications-node`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-signals-node`._

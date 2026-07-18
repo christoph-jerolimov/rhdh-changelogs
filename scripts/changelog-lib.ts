@@ -165,9 +165,14 @@ export function buildChangelog(
       `${changed.length} changed and ${added.length} added packages.`,
     "",
   );
+  if (added.length > 0) {
+    lines.push(`Newly added: ${added.map(({ name }) => `\`${name}\``).join(", ")}.`, "");
+  }
+  // Added packages come first — they are the most notable and must not drown
+  // at the bottom of a large document that GitHub may render truncated.
   const entries = [
+    ...added.map(({ name, version }) => ({ name, from: undefined as string | undefined, to: version, label: `new, ${version}` })),
     ...changed.map(({ name, from, to }) => ({ name, from: from as string | undefined, to, label: `${from} → ${to}` })),
-    ...added.map(({ name, version }) => ({ name, from: undefined, to: version, label: `new, ${version}` })),
   ];
   for (const { name, from, to, label } of entries) {
     const sections = sectionsInRange(name, from, to, mode);

@@ -2,6 +2,27 @@
 
 Changes between 1.28.4 and 1.29.0 — 153 changed and 2 added packages.
 
+Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-scaffolder-backend-module-gcp`.
+
+## `@backstage/plugin-catalog-backend-module-logs` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 97caf55: Creates a new module to make logging catalog errors simple. This module subscribes to catalog events and logs them.
+
+  See [Backstage documentation](https://backstage.io/docs/features/software-catalog/configuration#subscribing-to-catalog-errors) for details on how to install
+  and configure the plugin.
+
+## `@backstage/plugin-scaffolder-backend-module-gcp` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 0b52438: Serialization of the scaffolder workspace into GCP bucket
+
 ## `@backstage/backend-app-api` (0.7.9 → 0.8.0)
 
 ### 0.8.0
@@ -750,24 +771,5 @@ Changes between 1.28.4 and 1.29.0 — 153 changed and 2 added packages.
 #### Patch Changes
 
 - c964a3d: Import discovery from backend-defaults instead of backend-common
-
-## `@backstage/plugin-catalog-backend-module-logs` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 97caf55: Creates a new module to make logging catalog errors simple. This module subscribes to catalog events and logs them.
-
-  See [Backstage documentation](https://backstage.io/docs/features/software-catalog/configuration#subscribing-to-catalog-errors) for details on how to install
-  and configure the plugin.
-
-## `@backstage/plugin-scaffolder-backend-module-gcp` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 0b52438: Serialization of the scaffolder workspace into GCP bucket
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-openapi-utils`, `@backstage/core-compat-api`, `@backstage/dev-utils`, `@backstage/frontend-plugin-api`, `@backstage/integration-react`, `@backstage/plugin-api-docs`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-app-visualizer`, `@backstage/plugin-auth-backend`, `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-provider`, `@backstage/plugin-auth-backend-module-cloudflare-access-provider`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-oidc-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-catalog-import`, `@backstage/plugin-catalog-node`, `@backstage/plugin-catalog-unprocessed-entities`, `@backstage/plugin-catalog-unprocessed-entities-common`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-kubernetes`, `@backstage/plugin-kubernetes-backend`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-org-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-scaffolder-backend-module-bitbucket`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-search-react`, `@backstage/plugin-signals`, `@backstage/plugin-signals-backend`, `@backstage/plugin-signals-node`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-user-settings`, `@backstage/plugin-user-settings-backend`, `@backstage/repo-tools`._

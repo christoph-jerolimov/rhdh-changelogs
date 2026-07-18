@@ -2,6 +2,215 @@
 
 Changes between 1.7.2 and 1.8.0 — 158 changed and 13 added packages.
 
+Newly added: `@backstage/plugin-azure-sites`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-azure-sites-common`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-org-react`.
+
+## `@backstage/plugin-azure-sites` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 4a75ce761c: Azure Sites (Apps & Functions) support for a given entity. View the current status of the site, quickly jump to site's Overview page, or Log Stream page.
+
+#### Patch Changes
+
+- f905853ad6: Prefer using `Link` from `@backstage/core-components` rather than material-UI.
+
+## `@backstage/plugin-azure-sites-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 4a75ce761c: Azure Sites (Apps & Functions) support for a given entity. View the current status of the site, quickly jump to site's Overview page, or Log Stream page.
+
+## `@backstage/plugin-azure-sites-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 4a75ce761c: Azure Sites (Apps & Functions) support for a given entity. View the current status of the site, quickly jump to site's Overview page, or Log Stream page.
+
+## `@backstage/plugin-events-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- dc9da28abd: Support events received via HTTP endpoints at plugin-events-backend.
+
+  The plugin provides an event publisher `HttpPostIngressEventPublisher`
+  which will allow you to receive events via
+  HTTP endpoints `POST /api/events/http/{topic}`
+  and will publish these to the used event broker.
+
+  Using a provided custom validator, you can participate in the decision
+  which events are accepted, e.g. by verifying the source of the request.
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
+
+- 7bbd2403a1: Adds a new backend plugin plugin-events-backend for managing events.
+
+  plugin-events-node exposes interfaces which can be used by modules.
+
+  plugin-events-backend-test-utils provides utilities which can be used while writing tests e.g. for modules.
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
+
+## `@backstage/plugin-events-backend-module-aws-sqs` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d3ecb2382d: Adds a new module `aws-sqs` for plugin-events-backend.
+
+  The module provides an event publisher `AwsSqsConsumingEventPublisher`
+  which will allow you to receive events from
+  an AWS SQS queue and will publish these to the used event broker.
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-aws-sqs/README.md.
+
+## `@backstage/plugin-events-backend-module-azure` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 12cd94b7e9: Adds a new module `azure` to plugin-events-backend.
+
+  The module adds a new event router `AzureDevOpsEventRouter`.
+
+  The event router will re-publish events received at topic `azureDevOps`
+  under a more specific topic depending on their `$.eventType` value
+  (e.g., `azureDevOps.git.push`).
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-azure/README.md.
+
+## `@backstage/plugin-events-backend-module-bitbucket-cloud` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 6bc121bf0d: Adds a new module `bitbucket-cloud` to plugin-events-backend.
+
+  The module adds a new event router `BitbucketCloudEventRouter`.
+
+  The event router will re-publish events received at topic `bitbucketCloud`
+  under a more specific topic depending on their `x-event-key` value
+  (e.g., `bitbucketCloud.repo:push`).
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-bitbucket-cloud/README.md.
+
+## `@backstage/plugin-events-backend-module-gerrit` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 25f6d7bddb: Adds a new module `gerrit` to plugin-events-backend.
+
+  The module adds a new event router `GerritEventRouter`.
+
+  The event router will re-publish events received at topic `gerrit`
+  under a more specific topic depending on their `$.type` value
+  (e.g., `gerrit.change-merged`).
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-gerrit/README.md.
+
+## `@backstage/plugin-events-backend-module-github` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- b3a4edb885: Adds a new module `github` to plugin-events-backend.
+
+  The module adds a new event router `GithubEventRouter`.
+
+  The event router will re-publish events received at topic `github`
+  under a more specific topic depending on their `x-github-event` value
+  (e.g., `github.push`).
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-github/README.md.
+
+## `@backstage/plugin-events-backend-module-gitlab` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 63f7983398: Adds a new module `gitlab` to plugin-events-backend.
+
+  The module adds a new event router `GitlabEventRouter`.
+
+  The event router will re-publish events received at topic `gitlab`
+  under a more specific topic depending on their `$.event_name` value
+  (e.g., `gitlab.push`).
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-gitlab/README.md.
+
+## `@backstage/plugin-events-backend-test-utils` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 7bbd2403a1: Adds a new backend plugin plugin-events-backend for managing events.
+
+  plugin-events-node exposes interfaces which can be used by modules.
+
+  plugin-events-backend-test-utils provides utilities which can be used while writing tests e.g. for modules.
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
+
+## `@backstage/plugin-events-node` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- dc9da28abd: Support events received via HTTP endpoints at plugin-events-backend.
+
+  The plugin provides an event publisher `HttpPostIngressEventPublisher`
+  which will allow you to receive events via
+  HTTP endpoints `POST /api/events/http/{topic}`
+  and will publish these to the used event broker.
+
+  Using a provided custom validator, you can participate in the decision
+  which events are accepted, e.g. by verifying the source of the request.
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
+
+- 7bbd2403a1: Adds a new backend plugin plugin-events-backend for managing events.
+
+  plugin-events-node exposes interfaces which can be used by modules.
+
+  plugin-events-backend-test-utils provides utilities which can be used while writing tests e.g. for modules.
+
+  Please find more information at
+  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
+
+## `@backstage/plugin-org-react` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- e96274f1fe: Implemented the org-react plugin, with it's first component being: a `GroupListPicker` component that will give the user the ability to choose a group
+
 ## `@backstage/backend-common` (0.15.2 → 0.16.0)
 
 ### 0.16.0
@@ -1106,212 +1315,5 @@ Changes between 1.7.2 and 1.8.0 — 158 changed and 13 added packages.
 #### Patch Changes
 
 - e70984325d: Updated the value created by `createVersionedValueMap` to give it an extra hidden property that makes it easier to inspect during debugging.
-
-## `@backstage/plugin-azure-sites` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 4a75ce761c: Azure Sites (Apps & Functions) support for a given entity. View the current status of the site, quickly jump to site's Overview page, or Log Stream page.
-
-#### Patch Changes
-
-- f905853ad6: Prefer using `Link` from `@backstage/core-components` rather than material-UI.
-
-## `@backstage/plugin-azure-sites-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 4a75ce761c: Azure Sites (Apps & Functions) support for a given entity. View the current status of the site, quickly jump to site's Overview page, or Log Stream page.
-
-## `@backstage/plugin-azure-sites-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 4a75ce761c: Azure Sites (Apps & Functions) support for a given entity. View the current status of the site, quickly jump to site's Overview page, or Log Stream page.
-
-## `@backstage/plugin-events-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- dc9da28abd: Support events received via HTTP endpoints at plugin-events-backend.
-
-  The plugin provides an event publisher `HttpPostIngressEventPublisher`
-  which will allow you to receive events via
-  HTTP endpoints `POST /api/events/http/{topic}`
-  and will publish these to the used event broker.
-
-  Using a provided custom validator, you can participate in the decision
-  which events are accepted, e.g. by verifying the source of the request.
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
-
-- 7bbd2403a1: Adds a new backend plugin plugin-events-backend for managing events.
-
-  plugin-events-node exposes interfaces which can be used by modules.
-
-  plugin-events-backend-test-utils provides utilities which can be used while writing tests e.g. for modules.
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
-
-## `@backstage/plugin-events-backend-module-aws-sqs` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d3ecb2382d: Adds a new module `aws-sqs` for plugin-events-backend.
-
-  The module provides an event publisher `AwsSqsConsumingEventPublisher`
-  which will allow you to receive events from
-  an AWS SQS queue and will publish these to the used event broker.
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-aws-sqs/README.md.
-
-## `@backstage/plugin-events-backend-module-azure` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 12cd94b7e9: Adds a new module `azure` to plugin-events-backend.
-
-  The module adds a new event router `AzureDevOpsEventRouter`.
-
-  The event router will re-publish events received at topic `azureDevOps`
-  under a more specific topic depending on their `$.eventType` value
-  (e.g., `azureDevOps.git.push`).
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-azure/README.md.
-
-## `@backstage/plugin-events-backend-module-bitbucket-cloud` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 6bc121bf0d: Adds a new module `bitbucket-cloud` to plugin-events-backend.
-
-  The module adds a new event router `BitbucketCloudEventRouter`.
-
-  The event router will re-publish events received at topic `bitbucketCloud`
-  under a more specific topic depending on their `x-event-key` value
-  (e.g., `bitbucketCloud.repo:push`).
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-bitbucket-cloud/README.md.
-
-## `@backstage/plugin-events-backend-module-gerrit` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 25f6d7bddb: Adds a new module `gerrit` to plugin-events-backend.
-
-  The module adds a new event router `GerritEventRouter`.
-
-  The event router will re-publish events received at topic `gerrit`
-  under a more specific topic depending on their `$.type` value
-  (e.g., `gerrit.change-merged`).
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-gerrit/README.md.
-
-## `@backstage/plugin-events-backend-module-github` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- b3a4edb885: Adds a new module `github` to plugin-events-backend.
-
-  The module adds a new event router `GithubEventRouter`.
-
-  The event router will re-publish events received at topic `github`
-  under a more specific topic depending on their `x-github-event` value
-  (e.g., `github.push`).
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-github/README.md.
-
-## `@backstage/plugin-events-backend-module-gitlab` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 63f7983398: Adds a new module `gitlab` to plugin-events-backend.
-
-  The module adds a new event router `GitlabEventRouter`.
-
-  The event router will re-publish events received at topic `gitlab`
-  under a more specific topic depending on their `$.event_name` value
-  (e.g., `gitlab.push`).
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend-module-gitlab/README.md.
-
-## `@backstage/plugin-events-backend-test-utils` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 7bbd2403a1: Adds a new backend plugin plugin-events-backend for managing events.
-
-  plugin-events-node exposes interfaces which can be used by modules.
-
-  plugin-events-backend-test-utils provides utilities which can be used while writing tests e.g. for modules.
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
-
-## `@backstage/plugin-events-node` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- dc9da28abd: Support events received via HTTP endpoints at plugin-events-backend.
-
-  The plugin provides an event publisher `HttpPostIngressEventPublisher`
-  which will allow you to receive events via
-  HTTP endpoints `POST /api/events/http/{topic}`
-  and will publish these to the used event broker.
-
-  Using a provided custom validator, you can participate in the decision
-  which events are accepted, e.g. by verifying the source of the request.
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
-
-- 7bbd2403a1: Adds a new backend plugin plugin-events-backend for managing events.
-
-  plugin-events-node exposes interfaces which can be used by modules.
-
-  plugin-events-backend-test-utils provides utilities which can be used while writing tests e.g. for modules.
-
-  Please find more information at
-  https://github.com/backstage/backstage/tree/master/plugins/events-backend/README.md.
-
-## `@backstage/plugin-org-react` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- e96274f1fe: Implemented the org-react plugin, with it's first component being: a `GroupListPicker` component that will give the user the ability to choose a group
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-app-api`, `@backstage/backend-defaults`, `@backstage/backend-plugin-api`, `@backstage/catalog-client`, `@backstage/config`, `@backstage/config-loader`, `@backstage/dev-utils`, `@backstage/errors`, `@backstage/integration-react`, `@backstage/plugin-adr`, `@backstage/plugin-adr-backend`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apollo-explorer`, `@backstage/plugin-app-backend`, `@backstage/plugin-azure-devops`, `@backstage/plugin-badges`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-catalog-node`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-code-climate`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-github-deployments`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-home`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-lighthouse`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-search`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-search-react`, `@backstage/plugin-sentry`, `@backstage/plugin-shortcuts`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-common`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/plugin-user-settings`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault`, `@backstage/test-utils`, `@techdocs/cli`._

@@ -2,6 +2,93 @@
 
 Changes between 1.4.0 and 1.5.0 — 139 changed and 4 added packages.
 
+Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-github-issues`, `@backstage/plugin-sonarqube-backend`.
+
+## `@backstage/backend-defaults` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 5df230d48c: Introduced a new `backend-defaults` package carrying `createBackend` which was previously exported from `backend-app-api`.
+  The `backend-app-api` package now exports the `createSpecializedBacked` that does not add any service factories by default.
+
+## `@backstage/plugin-catalog-backend-module-bitbucket-server` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- f7607f9d85: Add new plugin catalog-backend-module-bitbucket-server which adds the `BitbucketServerEntityProvider`.
+
+  The entity provider is meant as a replacement for the `BitbucketDiscoveryProcessor` to be used with Bitbucket Server (Bitbucket Cloud already has a replacement).
+
+  **Before:**
+
+  ```typescript
+  // packages/backend/src/plugins/catalog.ts
+  builder.addProcessor(
+    BitbucketDiscoveryProcessor.fromConfig(env.config, { logger: env.logger }),
+  );
+  ```
+
+  ```yaml
+  # app-config.yaml
+  catalog:
+    locations:
+      - type: bitbucket-discovery
+        target: 'https://bitbucket.mycompany.com/projects/*/repos/*/catalog-info.yaml
+  ```
+
+  **After:**
+
+  ```typescript
+  // packages/backend/src/plugins/catalog.ts
+  builder.addEntityProvider(
+    BitbucketServerEntityProvider.fromConfig(env.config, {
+      logger: env.logger,
+      schedule: env.scheduler.createScheduledTaskRunner({
+        frequency: { minutes: 30 },
+        timeout: { minutes: 3 },
+      }),
+    }),
+  );
+  ```
+
+  ```yaml
+  # app-config.yaml
+  catalog:
+    providers:
+      bitbucketServer:
+        yourProviderId: # identifies your ingested dataset
+          catalogPath: /catalog-info.yaml # default value
+          filters: # optional
+            projectKey: '.*' # optional; RegExp
+            repoSlug: '.*' # optional; RegExp
+  ```
+
+## `@backstage/plugin-github-issues` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- ffd5e47fb5: New plugin for displaying GitHub Issues added
+
+#### Patch Changes
+
+- 347ea327c2: Moved communication with GitHub graphql API to the dedicated plugin API.
+  Fixes issue when no GitHub Issues are rendered when partial failure is returned from GitHub API.
+- b522f49403: Updated dependency `@spotify/prettier-config` to `^14.0.0`.
+
+## `@backstage/plugin-sonarqube-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- e2be9ab3a4: Initial creation of the plugin
+
 ## `@backstage/backend-app-api` (0.1.0 → 0.2.0)
 
 ### 0.2.0
@@ -636,90 +723,5 @@ Changes between 1.4.0 and 1.5.0 — 139 changed and 4 added packages.
 #### Minor Changes
 
 - 855952db53: Added CLI option `--docker-option` to allow passing additional options to the `docker run` command executed my `serve` and `serve:mkdocs`.
-
-## `@backstage/backend-defaults` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 5df230d48c: Introduced a new `backend-defaults` package carrying `createBackend` which was previously exported from `backend-app-api`.
-  The `backend-app-api` package now exports the `createSpecializedBacked` that does not add any service factories by default.
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-server` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- f7607f9d85: Add new plugin catalog-backend-module-bitbucket-server which adds the `BitbucketServerEntityProvider`.
-
-  The entity provider is meant as a replacement for the `BitbucketDiscoveryProcessor` to be used with Bitbucket Server (Bitbucket Cloud already has a replacement).
-
-  **Before:**
-
-  ```typescript
-  // packages/backend/src/plugins/catalog.ts
-  builder.addProcessor(
-    BitbucketDiscoveryProcessor.fromConfig(env.config, { logger: env.logger }),
-  );
-  ```
-
-  ```yaml
-  # app-config.yaml
-  catalog:
-    locations:
-      - type: bitbucket-discovery
-        target: 'https://bitbucket.mycompany.com/projects/*/repos/*/catalog-info.yaml
-  ```
-
-  **After:**
-
-  ```typescript
-  // packages/backend/src/plugins/catalog.ts
-  builder.addEntityProvider(
-    BitbucketServerEntityProvider.fromConfig(env.config, {
-      logger: env.logger,
-      schedule: env.scheduler.createScheduledTaskRunner({
-        frequency: { minutes: 30 },
-        timeout: { minutes: 3 },
-      }),
-    }),
-  );
-  ```
-
-  ```yaml
-  # app-config.yaml
-  catalog:
-    providers:
-      bitbucketServer:
-        yourProviderId: # identifies your ingested dataset
-          catalogPath: /catalog-info.yaml # default value
-          filters: # optional
-            projectKey: '.*' # optional; RegExp
-            repoSlug: '.*' # optional; RegExp
-  ```
-
-## `@backstage/plugin-github-issues` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- ffd5e47fb5: New plugin for displaying GitHub Issues added
-
-#### Patch Changes
-
-- 347ea327c2: Moved communication with GitHub graphql API to the dedicated plugin API.
-  Fixes issue when no GitHub Issues are rendered when partial failure is returned from GitHub API.
-- b522f49403: Updated dependency `@spotify/prettier-config` to `^14.0.0`.
-
-## `@backstage/plugin-sonarqube-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- e2be9ab3a4: Initial creation of the plugin
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/core-app-api`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-airbrake`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apache-airflow`, `@backstage/plugin-apollo-explorer`, `@backstage/plugin-app-backend`, `@backstage/plugin-auth-node`, `@backstage/plugin-azure-devops`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-badges`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-bitrise`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-catalog-import`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-circleci`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-code-coverage`, `@backstage/plugin-code-coverage-backend`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-dynatrace`, `@backstage/plugin-explore`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcalendar`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-git-release-manager`, `@backstage/plugin-github-actions`, `@backstage/plugin-github-deployments`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-ilert`, `@backstage/plugin-jenkins`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-lighthouse`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-org`, `@backstage/plugin-pagerduty`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-search`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-react`, `@backstage/plugin-stack-overflow`, `@backstage/plugin-tech-insights`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/plugin-user-settings`, `@backstage/plugin-vault`, `@backstage/plugin-vault-backend`, `@backstage/test-utils`._

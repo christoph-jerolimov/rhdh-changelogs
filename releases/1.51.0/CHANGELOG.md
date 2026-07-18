@@ -2,6 +2,25 @@
 
 Changes between 1.50.4 and 1.51.0 — 198 changed and 2 added packages.
 
+Newly added: `@backstage/plugin-catalog-backend-module-ai-model`, `@backstage/plugin-catalog-backend-module-msgraph-incremental`.
+
+## `@backstage/plugin-catalog-backend-module-ai-model` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 3664148: Introduced the `AiResource` catalog entity kind. Entity types, validators, type guards, and the model layer are exported from `@backstage/catalog-model/alpha`. Install `@backstage/plugin-catalog-backend-module-ai-model` in your backend to register the kind with the catalog.
+
+## `@backstage/plugin-catalog-backend-module-msgraph-incremental` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 2bd0450: **BREAKING**: Disabled user accounts are now filtered out by default. The provider automatically applies an `accountEnabled eq true` filter, combining it with any custom `user.filter` you provide. If you previously included `accountEnabled eq true` in your user filter, it is safe to remove it, but leaving it in will not cause any issues.
+- f1279ea: Introduces a cursor-based incremental ingestion provider for Microsoft Graph that processes users and groups one page at a time. Unlike `MicrosoftGraphOrgEntityProvider`, this module never holds the full dataset in memory — each burst processes a single page (up to 999 users or 100 groups). The `@odata.nextLink` cursor is persisted so a pod restart resumes from the last completed page rather than starting over.
+
 ## `@backstage/backend-app-api` (1.6.1 → 1.7.0)
 
 ### 1.7.0
@@ -1280,22 +1299,5 @@ Changes between 1.50.4 and 1.51.0 — 198 changed and 2 added packages.
 #### Patch Changes
 
 - 0c5e41f: Removed unused dependencies that had no imports in source code.
-
-## `@backstage/plugin-catalog-backend-module-ai-model` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 3664148: Introduced the `AiResource` catalog entity kind. Entity types, validators, type guards, and the model layer are exported from `@backstage/catalog-model/alpha`. Install `@backstage/plugin-catalog-backend-module-ai-model` in your backend to register the kind with the catalog.
-
-## `@backstage/plugin-catalog-backend-module-msgraph-incremental` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 2bd0450: **BREAKING**: Disabled user accounts are now filtered out by default. The provider automatically applies an `accountEnabled eq true` filter, combining it with any custom `user.filter` you provide. If you previously included `accountEnabled eq true` in your user filter, it is safe to remove it, but leaving it in will not cause any issues.
-- f1279ea: Introduces a cursor-based incremental ingestion provider for Microsoft Graph that processes users and groups one page at a time. Unlike `MicrosoftGraphOrgEntityProvider`, this module never holds the full dataset in memory — each burst processes a single page (up to 999 users or 100 groups). The `@odata.nextLink` cursor is persisted so a pod restart resumes from the last completed page rather than starting over.
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-openapi-utils`, `@backstage/catalog-client`, `@backstage/cli-common`, `@backstage/cli-defaults`, `@backstage/cli-module-actions`, `@backstage/cli-module-auth`, `@backstage/cli-module-config`, `@backstage/cli-module-github`, `@backstage/cli-module-info`, `@backstage/cli-module-lint`, `@backstage/cli-module-maintenance`, `@backstage/cli-module-migrate`, `@backstage/cli-module-test-jest`, `@backstage/cli-module-translations`, `@backstage/codemods`, `@backstage/config`, `@backstage/config-loader`, `@backstage/core-app-api`, `@backstage/dev-utils`, `@backstage/frontend-dev-utils`, `@backstage/integration-react`, `@backstage/plugin-app-node`, `@backstage/plugin-app-react`, `@backstage/plugin-auth-backend-module-atlassian-provider`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-auth-backend-module-openshift-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-common`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools-common`, `@backstage/plugin-devtools-react`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-module-google-pubsub`, `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-home-react`, `@backstage/plugin-kubernetes`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-mui-to-bui`, `@backstage/plugin-notifications-backend-module-email`, `@backstage/plugin-org-react`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-common`, `@backstage/plugin-signals-react`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/test-utils`._

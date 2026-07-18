@@ -2,6 +2,89 @@
 
 Changes between 1.30.4 and 1.31.0 — 158 changed and 4 added packages.
 
+Newly added: `@backstage/frontend-defaults`, `@backstage/plugin-app`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`.
+
+## `@backstage/frontend-defaults` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 7c80650: Initial release of this package, which provides a default app setup through the `createApp` function. This replaces the existing `createApp` method from `@backstage/frontend-app-api`.
+
+#### Patch Changes
+
+- 7d19cd5: Added a new `CreateAppOptions` type for the `createApp` options.
+- 7d19cd5: Added `createPublicSignInApp`, used to creating apps for the public entry point.
+- 836127c: Updated dependency `@testing-library/react` to `^16.0.0`.
+
+## `@backstage/plugin-app` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 2bb9517: Introduce the `@backstage/plugin-app` package to hold all of the built-in extensions for easy consumption and overriding.
+
+#### Patch Changes
+
+- 52f9c5a: Deprecated the `namespace` option for `createExtensionBlueprint` and `createExtension`, these are no longer required and will default to the `pluginId` instead.
+
+  You can migrate some of your extensions that use `createExtensionOverrides` to using `createFrontendModule` instead and providing a `pluginId` there.
+
+  ```ts
+  // Before
+  createExtensionOverrides({
+    extensions: [
+      createExtension({
+        name: 'my-extension',
+        namespace: 'my-namespace',
+        kind: 'test',
+        ...
+      })
+    ],
+  });
+
+  // After
+  createFrontendModule({
+    pluginId: 'my-namespace',
+    extensions: [
+      createExtension({
+        name: 'my-extension',
+        kind: 'test',
+        ...
+      })
+    ],
+  });
+  ```
+
+- 57bf6ae: Fix issue with `AlertDisplay` and other components defined with `AppRootElementBlueprint` not being rendered when at the `SignInWrapper`
+- 836127c: Updated dependency `@testing-library/react` to `^16.0.0`.
+
+## `@backstage/plugin-auth-backend-module-auth0-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d908d8c: New module for `@backstage/plugin-auth-backend` that adds a Auth0 auth provider.
+
+#### Patch Changes
+
+- 0a3a13e: Updated dependency `supertest` to `^7.0.0`.
+
+## `@backstage/plugin-auth-backend-module-bitbucket-server-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 527d973: New module for `@backstage/plugin-auth-backend` that adds a `Bitbucket Server` auth provider.
+
+#### Patch Changes
+
+- 0a3a13e: Updated dependency `supertest` to `^7.0.0`.
+
 ## `@backstage/app-defaults` (1.5.10 → 1.5.11)
 
 ### 1.5.11
@@ -2243,86 +2326,5 @@ Changes between 1.30.4 and 1.31.0 — 158 changed and 4 added packages.
 #### Patch Changes
 
 - 836127c: Updated dependency `@testing-library/react` to `^16.0.0`.
-
-## `@backstage/frontend-defaults` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 7c80650: Initial release of this package, which provides a default app setup through the `createApp` function. This replaces the existing `createApp` method from `@backstage/frontend-app-api`.
-
-#### Patch Changes
-
-- 7d19cd5: Added a new `CreateAppOptions` type for the `createApp` options.
-- 7d19cd5: Added `createPublicSignInApp`, used to creating apps for the public entry point.
-- 836127c: Updated dependency `@testing-library/react` to `^16.0.0`.
-
-## `@backstage/plugin-app` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 2bb9517: Introduce the `@backstage/plugin-app` package to hold all of the built-in extensions for easy consumption and overriding.
-
-#### Patch Changes
-
-- 52f9c5a: Deprecated the `namespace` option for `createExtensionBlueprint` and `createExtension`, these are no longer required and will default to the `pluginId` instead.
-
-  You can migrate some of your extensions that use `createExtensionOverrides` to using `createFrontendModule` instead and providing a `pluginId` there.
-
-  ```ts
-  // Before
-  createExtensionOverrides({
-    extensions: [
-      createExtension({
-        name: 'my-extension',
-        namespace: 'my-namespace',
-        kind: 'test',
-        ...
-      })
-    ],
-  });
-
-  // After
-  createFrontendModule({
-    pluginId: 'my-namespace',
-    extensions: [
-      createExtension({
-        name: 'my-extension',
-        kind: 'test',
-        ...
-      })
-    ],
-  });
-  ```
-
-- 57bf6ae: Fix issue with `AlertDisplay` and other components defined with `AppRootElementBlueprint` not being rendered when at the `SignInWrapper`
-- 836127c: Updated dependency `@testing-library/react` to `^16.0.0`.
-
-## `@backstage/plugin-auth-backend-module-auth0-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d908d8c: New module for `@backstage/plugin-auth-backend` that adds a Auth0 auth provider.
-
-#### Patch Changes
-
-- 0a3a13e: Updated dependency `supertest` to `^7.0.0`.
-
-## `@backstage/plugin-auth-backend-module-bitbucket-server-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 527d973: New module for `@backstage/plugin-auth-backend` that adds a `Bitbucket Server` auth provider.
-
-#### Patch Changes
-
-- 0a3a13e: Updated dependency `supertest` to `^7.0.0`.
 
 _Excluded dependency updates for packages: `@backstage/plugin-app-visualizer`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-notifications-node`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend-node`, `@techdocs/cli`._

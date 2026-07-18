@@ -2,6 +2,41 @@
 
 Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
 
+Newly added: `@backstage/plugin-playlist`, `@backstage/plugin-playlist-backend`, `@backstage/plugin-playlist-common`, `@backstage/plugin-user-settings-backend`.
+
+## `@backstage/plugin-playlist` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d3737da337: Implement playlist plugin, check out the `README.md` for more details!
+
+## `@backstage/plugin-playlist-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d3737da337: Implement playlist plugin, check out the `README.md` for more details!
+
+## `@backstage/plugin-playlist-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d3737da337: Implement playlist plugin, check out the `README.md` for more details!
+
+## `@backstage/plugin-user-settings-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 108cdc3912: Added new plugin `@backstage/plugin-user-settings-backend` to store user related
+  settings in the database.
+
 ## `@backstage/app-defaults` (1.0.5 → 1.0.6)
 
 ### 1.0.6
@@ -2663,38 +2698,5 @@ Changes between 1.5.1 and 1.6.0 — 153 changed and 4 added packages.
 #### Patch Changes
 
 - 7d47def9c4: Removed dependency on `@types/jest`.
-
-## `@backstage/plugin-playlist` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d3737da337: Implement playlist plugin, check out the `README.md` for more details!
-
-## `@backstage/plugin-playlist-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d3737da337: Implement playlist plugin, check out the `README.md` for more details!
-
-## `@backstage/plugin-playlist-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d3737da337: Implement playlist plugin, check out the `README.md` for more details!
-
-## `@backstage/plugin-user-settings-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 108cdc3912: Added new plugin `@backstage/plugin-user-settings-backend` to store user related
-  settings in the database.
 
 _Excluded dependency updates for packages: `@backstage/codemods`, `@backstage/plugin-adr-common`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-common`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-common`, `@backstage/plugin-tech-insights-backend-module-jsonfc`._

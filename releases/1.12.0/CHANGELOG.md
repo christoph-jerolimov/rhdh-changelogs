@@ -2,6 +2,46 @@
 
 Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
+Newly added: `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-octopus-deploy`, `@backstage/plugin-stackstorm`.
+
+## `@backstage/plugin-catalog-backend-module-puppetdb` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- a1efcf9a658: Initial version of the plugin.
+
+#### Patch Changes
+
+- 561ce41191d: Added a `catalogModulePuppetDbEntityProvider` alpha export for the new backend system
+- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+
+## `@backstage/plugin-octopus-deploy` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- b7fff1171f0: Initial version
+
+#### Patch Changes
+
+- cb0fc15a992: Added Octopus Deploy logo
+- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+
+## `@backstage/plugin-stackstorm` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- f3a15259e91: Add StackStorm plugin to Backstage which is interfacing with StackStorm API. It allows users to view workflow executions, packs and actions. For installation and configuration instructions please view [README.md](https://github.com/backstage/backstage/tree/master/plugins/stackstorm/README.md)
+
+#### Patch Changes
+
+- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+
 ## `@backstage/backend-app-api` (0.4.0 → 0.4.1)
 
 ### 0.4.1
@@ -1655,43 +1695,5 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 8e465ce52e2: Running `@techdocs/cli generate` with the `--verbose` flag will now print the mkdocs output.
 - ea2bbef1b16: Added support for an HTTPS proxy for techdocs AWS S3 requests
-
-## `@backstage/plugin-catalog-backend-module-puppetdb` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- a1efcf9a658: Initial version of the plugin.
-
-#### Patch Changes
-
-- 561ce41191d: Added a `catalogModulePuppetDbEntityProvider` alpha export for the new backend system
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-
-## `@backstage/plugin-octopus-deploy` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- b7fff1171f0: Initial version
-
-#### Patch Changes
-
-- cb0fc15a992: Added Octopus Deploy logo
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-
-## `@backstage/plugin-stackstorm` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- f3a15259e91: Add StackStorm plugin to Backstage which is interfacing with StackStorm API. It allows users to view workflow executions, packs and actions. For installation and configuration instructions please view [README.md](https://github.com/backstage/backstage/tree/master/plugins/stackstorm/README.md)
-
-#### Patch Changes
-
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/integration-aws-node`, `@backstage/plugin-adr-common`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-lighthouse-common`, `@backstage/plugin-permission-react`, `@backstage/plugin-playlist-common`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-user-settings-backend`._

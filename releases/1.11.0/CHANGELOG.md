@@ -2,6 +2,132 @@
 
 Changes between 1.10.1 and 1.11.0 — 167 changed and 14 added packages.
 
+Newly added: `@backstage/backend-dev-utils`, `@backstage/eslint-plugin`, `@backstage/plugin-entity-feedback`, `@backstage/plugin-entity-feedback-backend`, `@backstage/plugin-entity-feedback-common`, `@backstage/plugin-entity-validation`, `@backstage/plugin-graphql-voyager`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-lighthouse-common`, `@backstage/plugin-linguist`, `@backstage/plugin-linguist-backend`, `@backstage/plugin-linguist-common`, `@backstage/plugin-microsoft-calendar`, `@backstage/plugin-scaffolder-node`.
+
+## `@backstage/backend-dev-utils` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 9d9cdea117: Introduced a new package for backend development utilities. Similar to how `@backstage/dev-utils` is used in the frontend.
+
+#### Patch Changes
+
+- 725383f69d: Tweaked messaging in the README.
+
+## `@backstage/eslint-plugin` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 179d301518: Added a new ESLint plugin with common rules for Backstage projects. See the [README](https://github.com/import-js/eslint-plugin-import/blob/main/packages/eslint-plugin/README.md) for more details.
+
+## `@backstage/plugin-entity-feedback` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- a3c86a7ed2: Implement entity feedback plugin, check out the `README.md` for more details!
+
+## `@backstage/plugin-entity-feedback-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- a3c86a7ed2: Implement entity feedback plugin, check out the `README.md` for more details!
+
+## `@backstage/plugin-entity-feedback-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- a3c86a7ed2: Implement entity feedback plugin, check out the `README.md` for more details!
+
+## `@backstage/plugin-entity-validation` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d34b3267f9: First implementation for the entity validation UI. For more information refer to its `README.md`.
+
+## `@backstage/plugin-graphql-voyager` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d1fb4b7bf1: Add the new GraphQL Voyager tool as a plugin for backstage, expose necessary API and components needed for it.
+
+  For more information on how to use this plugin and configure it, please navigate to the [README](https://github.com/backstage/backstage/tree/master/plugins/graphql-voyager/README.md) of the plugin.
+
+## `@backstage/plugin-lighthouse-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- eef62546ce: Introduce Lighthouse Backend Plugin to run scheduled Lighthouse Audits
+
+## `@backstage/plugin-lighthouse-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- eef62546ce: Introduce @backstage/plugin-lighthouse-common with the API implementation
+
+## `@backstage/plugin-linguist` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 75cfee5688: Introduced the Linguist plugin, checkout the plugin's `README.md` for more details!
+
+## `@backstage/plugin-linguist-backend` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 75cfee5688: Introduced the Linguist plugin, checkout the plugin's `README.md` for more details!
+
+## `@backstage/plugin-linguist-common` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 75cfee5688: Introduced the Linguist plugin, checkout the plugin's `README.md` for more details!
+
+## `@backstage/plugin-microsoft-calendar` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 44412375bb: Created a new plugin `@backstage/plugin-microsoft-calendar` to display events from a Microsoft Calendar.
+
+  please refer to the [README.md](https://github.com/backstage/backstage/blob/master/plugins/microsoft-calendar/README.md) for step-by-step instructions to setup the plugin in your Backstage instance.
+
+#### Patch Changes
+
+- c51efce2a0: Update docs to always use `yarn add --cwd` for app & backend
+
+## `@backstage/plugin-scaffolder-node` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- d72866f0cc: New package that takes over some of the types and functionality from `@backstage/plugin-scaffolder-backend` that are shared with other modules
+
 ## `@backstage/app-defaults` (1.1.0 → 1.2.0)
 
 ### 1.2.0
@@ -1241,129 +1367,5 @@ Changes between 1.10.1 and 1.11.0 — 167 changed and 14 added packages.
 - 339d9a5b5c: Added support for using a default `mkdocs.yml` configuration file when none is provided
 - 6e0b6a0d50: Fixed publish command missing awsBucketRootPath option.
   Fixed publish command having the gcsBucketRootPath option misconfigured, previously returning a boolean vs a string.
-
-## `@backstage/backend-dev-utils` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 9d9cdea117: Introduced a new package for backend development utilities. Similar to how `@backstage/dev-utils` is used in the frontend.
-
-#### Patch Changes
-
-- 725383f69d: Tweaked messaging in the README.
-
-## `@backstage/eslint-plugin` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 179d301518: Added a new ESLint plugin with common rules for Backstage projects. See the [README](https://github.com/import-js/eslint-plugin-import/blob/main/packages/eslint-plugin/README.md) for more details.
-
-## `@backstage/plugin-entity-feedback` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- a3c86a7ed2: Implement entity feedback plugin, check out the `README.md` for more details!
-
-## `@backstage/plugin-entity-feedback-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- a3c86a7ed2: Implement entity feedback plugin, check out the `README.md` for more details!
-
-## `@backstage/plugin-entity-feedback-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- a3c86a7ed2: Implement entity feedback plugin, check out the `README.md` for more details!
-
-## `@backstage/plugin-entity-validation` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d34b3267f9: First implementation for the entity validation UI. For more information refer to its `README.md`.
-
-## `@backstage/plugin-graphql-voyager` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d1fb4b7bf1: Add the new GraphQL Voyager tool as a plugin for backstage, expose necessary API and components needed for it.
-
-  For more information on how to use this plugin and configure it, please navigate to the [README](https://github.com/backstage/backstage/tree/master/plugins/graphql-voyager/README.md) of the plugin.
-
-## `@backstage/plugin-lighthouse-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- eef62546ce: Introduce Lighthouse Backend Plugin to run scheduled Lighthouse Audits
-
-## `@backstage/plugin-lighthouse-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- eef62546ce: Introduce @backstage/plugin-lighthouse-common with the API implementation
-
-## `@backstage/plugin-linguist` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 75cfee5688: Introduced the Linguist plugin, checkout the plugin's `README.md` for more details!
-
-## `@backstage/plugin-linguist-backend` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 75cfee5688: Introduced the Linguist plugin, checkout the plugin's `README.md` for more details!
-
-## `@backstage/plugin-linguist-common` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 75cfee5688: Introduced the Linguist plugin, checkout the plugin's `README.md` for more details!
-
-## `@backstage/plugin-microsoft-calendar` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 44412375bb: Created a new plugin `@backstage/plugin-microsoft-calendar` to display events from a Microsoft Calendar.
-
-  please refer to the [README.md](https://github.com/backstage/backstage/blob/master/plugins/microsoft-calendar/README.md) for step-by-step instructions to setup the plugin in your Backstage instance.
-
-#### Patch Changes
-
-- c51efce2a0: Update docs to always use `yarn add --cwd` for app & backend
-
-## `@backstage/plugin-scaffolder-node` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- d72866f0cc: New package that takes over some of the types and functionality from `@backstage/plugin-scaffolder-backend` that are shared with other modules
 
 _Excluded dependency updates for packages: `@backstage/backend-tasks`, `@backstage/catalog-client`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-auth-node`, `@backstage/plugin-badges`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-catalog-import`, `@backstage/plugin-catalog-node`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-code-climate`, `@backstage/plugin-config-schema`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-explore-backend`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcalendar`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-github-actions`, `@backstage/plugin-github-deployments`, `@backstage/plugin-github-pull-requests-board`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-jenkins`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-periskop`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-rollbar`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-stack-overflow`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/test-utils`._

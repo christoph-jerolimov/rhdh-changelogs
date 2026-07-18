@@ -2,6 +2,32 @@
 
 Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
+Newly added: `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-provider`, `@backstage/plugin-auth-backend-module-cloudflare-access-provider`.
+
+## `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 06a6725: New auth backend module to add `azure-easyauth` provider. Note that as part of this change the default provider ID has been changed from `easyAuth` to `azureEasyAuth`, which means that if you switch to this new module you need to update your app config as well as the `provider` prop of the `ProxiedSignInPage` in the frontend.
+
+## `@backstage/plugin-auth-backend-module-bitbucket-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- ba763b6: Migrate the Bitbucket auth provider to the new `@backstage/plugin-auth-backend-module-bitbucket-provider` module package.
+
+## `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- c26218d: Created a separate module for the Cloudflare Access auth provider
+
 ## `@backstage/app-defaults` (1.5.3 → 1.5.4)
 
 ### 1.5.4
@@ -1826,29 +1852,5 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-
-## `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 06a6725: New auth backend module to add `azure-easyauth` provider. Note that as part of this change the default provider ID has been changed from `easyAuth` to `azureEasyAuth`, which means that if you switch to this new module you need to update your app config as well as the `provider` prop of the `ProxiedSignInPage` in the frontend.
-
-## `@backstage/plugin-auth-backend-module-bitbucket-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- ba763b6: Migrate the Bitbucket auth provider to the new `@backstage/plugin-auth-backend-module-bitbucket-provider` module package.
-
-## `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- c26218d: Created a separate module for the Cloudflare Access auth provider
 
 _Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/backend-openapi-utils`, `@backstage/plugin-adr-common`, `@backstage/plugin-app-node`, `@backstage/plugin-app-visualizer`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-bazaar`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-node`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-circleci`, `@backstage/plugin-devtools`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-linguist`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-opencost`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-signals-node`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault-backend`, `@backstage/plugin-vault-node`, `@techdocs/cli`._

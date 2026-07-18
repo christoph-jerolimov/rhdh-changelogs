@@ -2,6 +2,141 @@
 
 Changes between 1.48.6 and 1.49.0 — 176 changed and 14 added packages.
 
+Newly added: `@backstage/cli-defaults`, `@backstage/cli-module-actions`, `@backstage/cli-module-auth`, `@backstage/cli-module-build`, `@backstage/cli-module-config`, `@backstage/cli-module-github`, `@backstage/cli-module-info`, `@backstage/cli-module-lint`, `@backstage/cli-module-maintenance`, `@backstage/cli-module-migrate`, `@backstage/cli-module-new`, `@backstage/cli-module-test-jest`, `@backstage/cli-module-translations`, `@backstage/frontend-dev-utils`.
+
+## `@backstage/cli-defaults` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 7781ae5: Introduced `@backstage/cli-defaults`, a convenience package that bundles all standard Backstage CLI modules. Install this single package as a `devDependency` to get the full default set of CLI commands without listing each module individually.
+
+#### Patch Changes
+
+- 42960f1: Added `@backstage/cli-module-actions` to the default set of CLI modules.
+
+## `@backstage/cli-module-actions` (new, 0.0.1)
+
+### 0.0.1
+
+#### Patch Changes
+
+- 42960f1: Added `actions` CLI module for listing and executing actions from the distributed actions registry. Includes `actions list`, `actions execute`, and `actions sources` commands for managing plugin sources.
+
+## `@backstage/cli-module-auth` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+#### Patch Changes
+
+- a49a40d: Updated dependency `zod` to `^3.25.76 || ^4.0.0` & migrated to `/v3` or `/v4` imports.
+
+## `@backstage/cli-module-build` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 62d0849: Added `package bundle` command to create self-contained plugin bundles for dynamic loading, to be used by the `backend-dynamic-feature-service`. Supports backend and frontend plugins, with optional `--pre-packed-dir` for batch bundling from a pre-built workspace.
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+## `@backstage/cli-module-config` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+## `@backstage/cli-module-github` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+## `@backstage/cli-module-info` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+## `@backstage/cli-module-lint` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+## `@backstage/cli-module-maintenance` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+#### Patch Changes
+
+- f189d8f: Added auto-fill of `backstage.pluginPackage` metadata for known plugins during `repo fix`.
+
+## `@backstage/cli-module-migrate` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+## `@backstage/cli-module-new` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+#### Patch Changes
+
+- edf2b77: Added support for the `cli-module` template role for scaffolding new CLI module packages.
+- ea90ab0: The built-in `yarn new` templates have been moved to this package from `@backstage/cli`. The default template references have been updated from `@backstage/cli/templates/*` to `@backstage/cli-module-new/templates/*`. Existing references to `@backstage/cli/templates/*` in your root `package.json` will continue to work through a backwards compatibility rewrite.
+- ebeb0d4: Updated the new frontend plugin template to use `@backstage/frontend-dev-utils` in its `dev/` entry point instead of wiring `createApp` manually. Generated plugins now get the same dev app helper setup as the built-in examples.
+- 971cc94: The `new` command now prompts for the plugin package name when creating plugin modules, in order to properly populate the `package.json` file.
+- a49a40d: Updated dependency `zod` to `^3.25.76 || ^4.0.0` & migrated to `/v3` or `/v4` imports.
+
+## `@backstage/cli-module-test-jest` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+## `@backstage/cli-module-translations` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
+
+## `@backstage/frontend-dev-utils` (new, 0.1.0)
+
+### 0.1.0
+
+#### Minor Changes
+
+- c25532a: Added `@backstage/frontend-dev-utils`, a new package that provides a minimal helper for wiring up a development app for frontend plugins using the new frontend system. It exports a `createDevApp` function that handles creating and rendering a development app from a `dev/` entry point. The dev app automatically bypasses the sign-in page and loads the `@backstage/ui` CSS. The options interface accepts `features` together with route bindings through `bindRoutes`.
+
 ## `@backstage/backend-app-api` (1.5.0 → 1.6.0)
 
 ### 1.6.0
@@ -1819,138 +1954,5 @@ Changes between 1.48.6 and 1.49.0 — 176 changed and 14 added packages.
 
 - 70fc178: Migrated from deprecated `findPaths` to `targetPaths` and `findOwnPaths` from `@backstage/cli-common`.
 - de62a9d: Upgraded `commander` dependency from `^12.0.0` to `^14.0.3` across all CLI packages.
-
-## `@backstage/cli-defaults` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 7781ae5: Introduced `@backstage/cli-defaults`, a convenience package that bundles all standard Backstage CLI modules. Install this single package as a `devDependency` to get the full default set of CLI commands without listing each module individually.
-
-#### Patch Changes
-
-- 42960f1: Added `@backstage/cli-module-actions` to the default set of CLI modules.
-
-## `@backstage/cli-module-actions` (new, 0.0.1)
-
-### 0.0.1
-
-#### Patch Changes
-
-- 42960f1: Added `actions` CLI module for listing and executing actions from the distributed actions registry. Includes `actions list`, `actions execute`, and `actions sources` commands for managing plugin sources.
-
-## `@backstage/cli-module-auth` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-#### Patch Changes
-
-- a49a40d: Updated dependency `zod` to `^3.25.76 || ^4.0.0` & migrated to `/v3` or `/v4` imports.
-
-## `@backstage/cli-module-build` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 62d0849: Added `package bundle` command to create self-contained plugin bundles for dynamic loading, to be used by the `backend-dynamic-feature-service`. Supports backend and frontend plugins, with optional `--pre-packed-dir` for batch bundling from a pre-built workspace.
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-## `@backstage/cli-module-config` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-## `@backstage/cli-module-github` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-## `@backstage/cli-module-info` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-## `@backstage/cli-module-lint` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-## `@backstage/cli-module-maintenance` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-#### Patch Changes
-
-- f189d8f: Added auto-fill of `backstage.pluginPackage` metadata for known plugins during `repo fix`.
-
-## `@backstage/cli-module-migrate` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-## `@backstage/cli-module-new` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-#### Patch Changes
-
-- edf2b77: Added support for the `cli-module` template role for scaffolding new CLI module packages.
-- ea90ab0: The built-in `yarn new` templates have been moved to this package from `@backstage/cli`. The default template references have been updated from `@backstage/cli/templates/*` to `@backstage/cli-module-new/templates/*`. Existing references to `@backstage/cli/templates/*` in your root `package.json` will continue to work through a backwards compatibility rewrite.
-- ebeb0d4: Updated the new frontend plugin template to use `@backstage/frontend-dev-utils` in its `dev/` entry point instead of wiring `createApp` manually. Generated plugins now get the same dev app helper setup as the built-in examples.
-- 971cc94: The `new` command now prompts for the plugin package name when creating plugin modules, in order to properly populate the `package.json` file.
-- a49a40d: Updated dependency `zod` to `^3.25.76 || ^4.0.0` & migrated to `/v3` or `/v4` imports.
-
-## `@backstage/cli-module-test-jest` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-## `@backstage/cli-module-translations` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 329f394: Initial release of the CLI module packages. Each module provides a set of commands that can be discovered automatically by `@backstage/cli` or executed standalone.
-
-## `@backstage/frontend-dev-utils` (new, 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- c25532a: Added `@backstage/frontend-dev-utils`, a new package that provides a minimal helper for wiring up a development app for frontend plugins using the new frontend system. It exports a `createDevApp` function that handles creating and rendering a development app from a `dev/` entry point. The dev app automatically bypasses the sign-in page and loads the `@backstage/ui` CSS. The options interface accepts `features` together with route bindings through `bindRoutes`.
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-openapi-utils`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-gitea`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-module-google-pubsub`, `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-notifications-backend`, `@backstage/plugin-notifications-backend-module-email`, `@backstage/plugin-notifications-node`, `@backstage/plugin-org-react`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-signals`, `@backstage/plugin-signals-backend`, `@backstage/plugin-signals-node`, `@backstage/plugin-signals-react`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-react`, `@backstage/test-utils`._
