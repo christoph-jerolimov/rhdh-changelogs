@@ -9,9 +9,9 @@ on:
 permissions:
   contents: write
 
-# A manual run must never race a scheduled run's push.
+# Shared with update-changelogs.yml — both workflows push to main and must not race.
 concurrency:
-  group: update-versions
+  group: update-data
   cancel-in-progress: false
 
 jobs:

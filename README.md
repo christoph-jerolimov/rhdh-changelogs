@@ -35,6 +35,14 @@ Each `releases/<version>/` folder contains:
 
 `0.x` and prerelease versions are ignored. `releases/next/` exists only while `backstage/versions` has a `-next` release that is newer than the latest stable release; it is removed otherwise.
 
+## Changelogs
+
+The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every package that ever appeared in a release manifest**, stored as `changelogs/<scope>/<name>.md` (e.g. `changelogs/@backstage/plugin-scaffolder.md`). A second [GitHub workflow](.github/workflows/update-changelogs.yml) refreshes them daily (and on demand):
+
+- Packages still present on `backstage/backstage` `main` (in `packages/*` and `plugins/*`) are copied from there on every run.
+- Packages that were removed from `main` (e.g. plugins moved to community repos) are fetched once from the release tag of the newest release that still listed them; existing files are never re-fetched.
+- The job fails if any package listed in any release manifest ends up without a changelog.
+
 ## Scripts
 
 TypeScript scripts in [`scripts/`](scripts), run with `tsx` (Node 22):
