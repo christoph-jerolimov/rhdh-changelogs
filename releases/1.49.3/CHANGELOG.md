@@ -14,10 +14,10 @@ Changes between 1.49.2 and 1.49.3 — 2 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-catalog-react` (2.1.0 → 2.1.1)
+### `@backstage/plugin-catalog-react` (2.1.0 → [2.1.1](../../changelogs/@backstage/plugin-catalog-react.md#211))
 
 _No changelog entries found._
 
-### `@backstage/ui` (0.13.1 → 0.13.2)
+### `@backstage/ui` (0.13.1 → [0.13.2](../../changelogs/@backstage/ui.md#0132))
 
 _No changelog entries found._

@@ -13,6 +13,6 @@ Changes between 1.45.0 and 1.45.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/frontend-plugin-api` (0.13.0 → 0.13.1)
+### `@backstage/frontend-plugin-api` (0.13.0 → [0.13.1](../../changelogs/@backstage/frontend-plugin-api.md#0131))
 
 _No changelog entries found._

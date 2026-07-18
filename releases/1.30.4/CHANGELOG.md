@@ -118,416 +118,416 @@ Changes between 1.30.3 and 1.30.4 — 103 changed and 0 added packages.
 
 ## 0.0.x patch version bumps
 
-### `@backstage/plugin-auth-backend-module-okta-provider` (0.0.16 → 0.0.17)
+### `@backstage/plugin-auth-backend-module-okta-provider` (0.0.16 → [0.0.17](../../changelogs/@backstage/plugin-auth-backend-module-okta-provider.md#0017))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-logs` (0.0.3 → 0.0.4)
+### `@backstage/plugin-catalog-backend-module-logs` (0.0.3 → [0.0.4](../../changelogs/@backstage/plugin-catalog-backend-module-logs.md#004))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-notifications` (0.0.6 → 0.0.7)
+### `@backstage/plugin-scaffolder-backend-module-notifications` (0.0.6 → [0.0.7](../../changelogs/@backstage/plugin-scaffolder-backend-module-notifications.md#007))
 
 _No changelog entries found._
 
 ## Other patch version bumps
 
-### `@backstage/backend-app-api` (0.9.2 → 0.9.3)
+### `@backstage/backend-app-api` (0.9.2 → [0.9.3](../../changelogs/@backstage/backend-app-api.md#093))
 
 _No changelog entries found._
 
-### `@backstage/backend-common` (0.24.0 → 0.24.1)
+### `@backstage/backend-common` (0.24.0 → [0.24.1](../../changelogs/@backstage/backend-common.md#0241))
 
 _No changelog entries found._
 
-### `@backstage/backend-defaults` (0.4.3 → 0.4.4)
+### `@backstage/backend-defaults` (0.4.3 → [0.4.4](../../changelogs/@backstage/backend-defaults.md#044))
 
 _No changelog entries found._
 
-### `@backstage/backend-dynamic-feature-service` (0.3.1 → 0.3.2)
+### `@backstage/backend-dynamic-feature-service` (0.3.1 → [0.3.2](../../changelogs/@backstage/backend-dynamic-feature-service.md#032))
 
 _No changelog entries found._
 
-### `@backstage/backend-openapi-utils` (0.1.16 → 0.1.17)
+### `@backstage/backend-openapi-utils` (0.1.16 → [0.1.17](../../changelogs/@backstage/backend-openapi-utils.md#0117))
 
 _No changelog entries found._
 
-### `@backstage/backend-plugin-api` (0.8.0 → 0.8.1)
+### `@backstage/backend-plugin-api` (0.8.0 → [0.8.1](../../changelogs/@backstage/backend-plugin-api.md#081))
 
 _No changelog entries found._
 
-### `@backstage/backend-test-utils` (0.5.0 → 0.5.1)
+### `@backstage/backend-test-utils` (0.5.0 → [0.5.1](../../changelogs/@backstage/backend-test-utils.md#051))
 
 _No changelog entries found._
 
-### `@backstage/plugin-app-backend` (0.3.72 → 0.3.73)
+### `@backstage/plugin-app-backend` (0.3.72 → [0.3.73](../../changelogs/@backstage/plugin-app-backend.md#0373))
 
 _No changelog entries found._
 
-### `@backstage/plugin-app-node` (0.1.23 → 0.1.24)
+### `@backstage/plugin-app-node` (0.1.23 → [0.1.24](../../changelogs/@backstage/plugin-app-node.md#0124))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend` (0.22.11 → 0.22.12)
+### `@backstage/plugin-auth-backend` (0.22.11 → [0.22.12](../../changelogs/@backstage/plugin-auth-backend.md#02212))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-atlassian-provider` (0.2.4 → 0.2.5)
+### `@backstage/plugin-auth-backend-module-atlassian-provider` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-auth-backend-module-atlassian-provider.md#025))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.16 → 0.1.17)
+### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.16 → [0.1.17](../../changelogs/@backstage/plugin-auth-backend-module-aws-alb-provider.md#0117))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.1.6 → 0.1.7)
+### `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-auth-backend-module-azure-easyauth-provider.md#017))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.1.6 → 0.1.7)
+### `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-auth-backend-module-bitbucket-provider.md#017))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.2.0 → 0.2.1)
+### `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-auth-backend-module-cloudflare-access-provider.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.18 → 0.2.19)
+### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.18 → [0.2.19](../../changelogs/@backstage/plugin-auth-backend-module-gcp-iap-provider.md#0219))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-github-provider` (0.1.20 → 0.1.21)
+### `@backstage/plugin-auth-backend-module-github-provider` (0.1.20 → [0.1.21](../../changelogs/@backstage/plugin-auth-backend-module-github-provider.md#0121))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.20 → 0.1.21)
+### `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.20 → [0.1.21](../../changelogs/@backstage/plugin-auth-backend-module-gitlab-provider.md#0121))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-google-provider` (0.1.20 → 0.1.21)
+### `@backstage/plugin-auth-backend-module-google-provider` (0.1.20 → [0.1.21](../../changelogs/@backstage/plugin-auth-backend-module-google-provider.md#0121))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-guest-provider` (0.1.9 → 0.1.10)
+### `@backstage/plugin-auth-backend-module-guest-provider` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-auth-backend-module-guest-provider.md#0110))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.18 → 0.1.19)
+### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.18 → [0.1.19](../../changelogs/@backstage/plugin-auth-backend-module-microsoft-provider.md#0119))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-oauth2-provider` (0.2.4 → 0.2.5)
+### `@backstage/plugin-auth-backend-module-oauth2-provider` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-auth-backend-module-oauth2-provider.md#025))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.16 → 0.1.17)
+### `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.16 → [0.1.17](../../changelogs/@backstage/plugin-auth-backend-module-oauth2-proxy-provider.md#0117))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-oidc-provider` (0.2.5 → 0.2.6)
+### `@backstage/plugin-auth-backend-module-oidc-provider` (0.2.5 → [0.2.6](../../changelogs/@backstage/plugin-auth-backend-module-oidc-provider.md#026))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-onelogin-provider` (0.1.4 → 0.1.5)
+### `@backstage/plugin-auth-backend-module-onelogin-provider` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-auth-backend-module-onelogin-provider.md#015))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.17 → 0.1.18)
+### `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-auth-backend-module-pinniped-provider.md#0118))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.2.4 → 0.2.5)
+### `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-auth-backend-module-vmware-cloud-provider.md#025))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-node` (0.5.0 → 0.5.1)
+### `@backstage/plugin-auth-node` (0.5.0 → [0.5.1](../../changelogs/@backstage/plugin-auth-node.md#051))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend` (1.25.1 → 1.25.2)
+### `@backstage/plugin-catalog-backend` (1.25.1 → [1.25.2](../../changelogs/@backstage/plugin-catalog-backend.md#1252))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-aws` (0.4.0 → 0.4.1)
+### `@backstage/plugin-catalog-backend-module-aws` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-catalog-backend-module-aws.md#041))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-azure` (0.2.0 → 0.2.1)
+### `@backstage/plugin-catalog-backend-module-azure` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-catalog-backend-module-azure.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.3.0 → 0.3.1)
+### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.3.0 → [0.3.1](../../changelogs/@backstage/plugin-catalog-backend-module-backstage-openapi.md#031))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.3.0 → 0.3.1)
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.3.0 → [0.3.1](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-cloud.md#031))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.2.0 → 0.2.1)
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-server.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-gcp` (0.2.0 → 0.2.1)
+### `@backstage/plugin-catalog-backend-module-gcp` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-catalog-backend-module-gcp.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-gerrit` (0.2.0 → 0.2.1)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-catalog-backend-module-gerrit.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-github` (0.7.1 → 0.7.2)
+### `@backstage/plugin-catalog-backend-module-github` (0.7.1 → [0.7.2](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#072))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-github-org` (0.2.1 → 0.2.2)
+### `@backstage/plugin-catalog-backend-module-github-org` (0.2.1 → [0.2.2](../../changelogs/@backstage/plugin-catalog-backend-module-github-org.md#022))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-gitlab` (0.4.0 → 0.4.1)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#041))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-gitlab-org` (0.1.0 → 0.1.1)
+### `@backstage/plugin-catalog-backend-module-gitlab-org` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab-org.md#011))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.5.1 → 0.5.2)
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.5.1 → [0.5.2](../../changelogs/@backstage/plugin-catalog-backend-module-incremental-ingestion.md#052))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-ldap` (0.8.0 → 0.8.1)
+### `@backstage/plugin-catalog-backend-module-ldap` (0.8.0 → [0.8.1](../../changelogs/@backstage/plugin-catalog-backend-module-ldap.md#081))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.6.0 → 0.6.1)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.6.0 → [0.6.1](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#061))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-openapi` (0.1.42 → 0.1.43)
+### `@backstage/plugin-catalog-backend-module-openapi` (0.1.42 → [0.1.43](../../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#0143))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-puppetdb` (0.2.0 → 0.2.1)
+### `@backstage/plugin-catalog-backend-module-puppetdb` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-catalog-backend-module-puppetdb.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.21 → 0.1.22)
+### `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.21 → [0.1.22](../../changelogs/@backstage/plugin-catalog-backend-module-scaffolder-entity-model.md#0122))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-unprocessed` (0.4.10 → 0.4.11)
+### `@backstage/plugin-catalog-backend-module-unprocessed` (0.4.10 → [0.4.11](../../changelogs/@backstage/plugin-catalog-backend-module-unprocessed.md#0411))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-node` (1.12.5 → 1.12.6)
+### `@backstage/plugin-catalog-node` (1.12.5 → [1.12.6](../../changelogs/@backstage/plugin-catalog-node.md#1126))
 
 _No changelog entries found._
 
-### `@backstage/plugin-devtools-backend` (0.3.9 → 0.3.10)
+### `@backstage/plugin-devtools-backend` (0.3.9 → [0.3.10](../../changelogs/@backstage/plugin-devtools-backend.md#0310))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-backend` (0.3.10 → 0.3.11)
+### `@backstage/plugin-events-backend` (0.3.10 → [0.3.11](../../changelogs/@backstage/plugin-events-backend.md#0311))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-backend-module-aws-sqs` (0.4.0 → 0.4.1)
+### `@backstage/plugin-events-backend-module-aws-sqs` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-events-backend-module-aws-sqs.md#041))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-backend-module-azure` (0.2.9 → 0.2.10)
+### `@backstage/plugin-events-backend-module-azure` (0.2.9 → [0.2.10](../../changelogs/@backstage/plugin-events-backend-module-azure.md#0210))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.9 → 0.2.10)
+### `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.9 → [0.2.10](../../changelogs/@backstage/plugin-events-backend-module-bitbucket-cloud.md#0210))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-backend-module-gerrit` (0.2.9 → 0.2.10)
+### `@backstage/plugin-events-backend-module-gerrit` (0.2.9 → [0.2.10](../../changelogs/@backstage/plugin-events-backend-module-gerrit.md#0210))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-backend-module-github` (0.2.9 → 0.2.10)
+### `@backstage/plugin-events-backend-module-github` (0.2.9 → [0.2.10](../../changelogs/@backstage/plugin-events-backend-module-github.md#0210))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-backend-module-gitlab` (0.2.9 → 0.2.10)
+### `@backstage/plugin-events-backend-module-gitlab` (0.2.9 → [0.2.10](../../changelogs/@backstage/plugin-events-backend-module-gitlab.md#0210))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-backend-test-utils` (0.1.33 → 0.1.34)
+### `@backstage/plugin-events-backend-test-utils` (0.1.33 → [0.1.34](../../changelogs/@backstage/plugin-events-backend-test-utils.md#0134))
 
 _No changelog entries found._
 
-### `@backstage/plugin-events-node` (0.3.9 → 0.3.10)
+### `@backstage/plugin-events-node` (0.3.9 → [0.3.10](../../changelogs/@backstage/plugin-events-node.md#0310))
 
 _No changelog entries found._
 
-### `@backstage/plugin-kubernetes-backend` (0.18.4 → 0.18.5)
+### `@backstage/plugin-kubernetes-backend` (0.18.4 → [0.18.5](../../changelogs/@backstage/plugin-kubernetes-backend.md#0185))
 
 _No changelog entries found._
 
-### `@backstage/plugin-kubernetes-node` (0.1.17 → 0.1.18)
+### `@backstage/plugin-kubernetes-node` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-kubernetes-node.md#0118))
 
 _No changelog entries found._
 
-### `@backstage/plugin-notifications-backend` (0.3.4 → 0.3.5)
+### `@backstage/plugin-notifications-backend` (0.3.4 → [0.3.5](../../changelogs/@backstage/plugin-notifications-backend.md#035))
 
 _No changelog entries found._
 
-### `@backstage/plugin-notifications-backend-module-email` (0.2.0 → 0.2.1)
+### `@backstage/plugin-notifications-backend-module-email` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-notifications-backend-module-email.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-notifications-node` (0.2.4 → 0.2.5)
+### `@backstage/plugin-notifications-node` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-notifications-node.md#025))
 
 _No changelog entries found._
 
-### `@backstage/plugin-permission-backend` (0.5.47 → 0.5.48)
+### `@backstage/plugin-permission-backend` (0.5.47 → [0.5.48](../../changelogs/@backstage/plugin-permission-backend.md#0548))
 
 _No changelog entries found._
 
-### `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.20 → 0.1.21)
+### `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.20 → [0.1.21](../../changelogs/@backstage/plugin-permission-backend-module-allow-all-policy.md#0121))
 
 _No changelog entries found._
 
-### `@backstage/plugin-permission-node` (0.8.1 → 0.8.2)
+### `@backstage/plugin-permission-node` (0.8.1 → [0.8.2](../../changelogs/@backstage/plugin-permission-node.md#082))
 
 _No changelog entries found._
 
-### `@backstage/plugin-proxy-backend` (0.5.4 → 0.5.5)
+### `@backstage/plugin-proxy-backend` (0.5.4 → [0.5.5](../../changelogs/@backstage/plugin-proxy-backend.md#055))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend` (1.24.0 → 1.24.1)
+### `@backstage/plugin-scaffolder-backend` (1.24.0 → [1.24.1](../../changelogs/@backstage/plugin-scaffolder-backend.md#1241))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-azure` (0.1.15 → 0.1.16)
+### `@backstage/plugin-scaffolder-backend-module-azure` (0.1.15 → [0.1.16](../../changelogs/@backstage/plugin-scaffolder-backend-module-azure.md#0116))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.13 → 0.2.14)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.13 → [0.2.14](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket.md#0214))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.13 → 0.1.14)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.13 → [0.1.14](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket-cloud.md#0114))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.13 → 0.1.14)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.13 → [0.1.14](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket-server.md#0114))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.24 → 0.2.25)
+### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.24 → [0.2.25](../../changelogs/@backstage/plugin-scaffolder-backend-module-confluence-to-markdown.md#0225))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.47 → 0.2.48)
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.47 → [0.2.48](../../changelogs/@backstage/plugin-scaffolder-backend-module-cookiecutter.md#0248))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-gcp` (0.1.1 → 0.1.2)
+### `@backstage/plugin-scaffolder-backend-module-gcp` (0.1.1 → [0.1.2](../../changelogs/@backstage/plugin-scaffolder-backend-module-gcp.md#012))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.15 → 0.1.16)
+### `@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.15 → [0.1.16](../../changelogs/@backstage/plugin-scaffolder-backend-module-gerrit.md#0116))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-gitea` (0.1.13 → 0.1.14)
+### `@backstage/plugin-scaffolder-backend-module-gitea` (0.1.13 → [0.1.14](../../changelogs/@backstage/plugin-scaffolder-backend-module-gitea.md#0114))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-github` (0.4.1 → 0.4.2)
+### `@backstage/plugin-scaffolder-backend-module-github` (0.4.1 → [0.4.2](../../changelogs/@backstage/plugin-scaffolder-backend-module-github.md#042))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.5 → 0.4.6)
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.5 → [0.4.6](../../changelogs/@backstage/plugin-scaffolder-backend-module-gitlab.md#046))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.40 → 0.4.41)
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.40 → [0.4.41](../../changelogs/@backstage/plugin-scaffolder-backend-module-rails.md#0441))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.31 → 0.1.32)
+### `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.31 → [0.1.32](../../changelogs/@backstage/plugin-scaffolder-backend-module-sentry.md#0132))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.3.7 → 0.3.8)
+### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.3.7 → [0.3.8](../../changelogs/@backstage/plugin-scaffolder-backend-module-yeoman.md#038))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-node` (0.4.9 → 0.4.10)
+### `@backstage/plugin-scaffolder-node` (0.4.9 → [0.4.10](../../changelogs/@backstage/plugin-scaffolder-node.md#0410))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-node-test-utils` (0.1.10 → 0.1.11)
+### `@backstage/plugin-scaffolder-node-test-utils` (0.1.10 → [0.1.11](../../changelogs/@backstage/plugin-scaffolder-node-test-utils.md#0111))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend` (1.5.15 → 1.5.16)
+### `@backstage/plugin-search-backend` (1.5.15 → [1.5.16](../../changelogs/@backstage/plugin-search-backend.md#1516))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-catalog` (0.2.0 → 0.2.1)
+### `@backstage/plugin-search-backend-module-catalog` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-search-backend-module-catalog.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-elasticsearch` (1.5.4 → 1.5.5)
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.5.4 → [1.5.5](../../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#155))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-explore` (0.2.0 → 0.2.1)
+### `@backstage/plugin-search-backend-module-explore` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-search-backend-module-explore.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-pg` (0.5.33 → 0.5.34)
+### `@backstage/plugin-search-backend-module-pg` (0.5.33 → [0.5.34](../../changelogs/@backstage/plugin-search-backend-module-pg.md#0534))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.2.0 → 0.2.1)
+### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-search-backend-module-stack-overflow-collator.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-techdocs` (0.2.0 → 0.2.1)
+### `@backstage/plugin-search-backend-module-techdocs` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-search-backend-module-techdocs.md#021))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-node` (1.3.0 → 1.3.1)
+### `@backstage/plugin-search-backend-node` (1.3.0 → [1.3.1](../../changelogs/@backstage/plugin-search-backend-node.md#131))
 
 _No changelog entries found._
 
-### `@backstage/plugin-signals-backend` (0.1.9 → 0.1.10)
+### `@backstage/plugin-signals-backend` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-signals-backend.md#0110))
 
 _No changelog entries found._
 
-### `@backstage/plugin-signals-node` (0.1.9 → 0.1.10)
+### `@backstage/plugin-signals-node` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-signals-node.md#0110))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs-backend` (1.10.11 → 1.10.12)
+### `@backstage/plugin-techdocs-backend` (1.10.11 → [1.10.12](../../changelogs/@backstage/plugin-techdocs-backend.md#11012))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs-node` (1.12.9 → 1.12.10)
+### `@backstage/plugin-techdocs-node` (1.12.9 → [1.12.10](../../changelogs/@backstage/plugin-techdocs-node.md#11210))
 
 _No changelog entries found._
 
-### `@backstage/plugin-user-settings-backend` (0.2.22 → 0.2.23)
+### `@backstage/plugin-user-settings-backend` (0.2.22 → [0.2.23](../../changelogs/@backstage/plugin-user-settings-backend.md#0223))
 
 _No changelog entries found._
 
-### `@backstage/repo-tools` (0.9.5 → 0.9.6)
+### `@backstage/repo-tools` (0.9.5 → [0.9.6](../../changelogs/@backstage/repo-tools.md#096))
 
 _No changelog entries found._
 
-### `@techdocs/cli` (1.8.17 → 1.8.18)
+### `@techdocs/cli` (1.8.17 → [1.8.18](../../changelogs/@techdocs/cli.md#1818))
 
 _No changelog entries found._
 
 ## Excluded dependency updates
 
-- `@backstage/backend-tasks` (0.6.0 → 0.6.1)
+- `@backstage/backend-tasks` (0.6.0 → [0.6.1](../../changelogs/@backstage/backend-tasks.md#061))

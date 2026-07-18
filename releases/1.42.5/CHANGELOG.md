@@ -13,6 +13,6 @@ Changes between 1.42.4 and 1.42.5 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@techdocs/cli` (1.9.6 → 1.9.7)
+### `@techdocs/cli` (1.9.6 → [1.9.7](../../changelogs/@techdocs/cli.md#197))
 
 _No changelog entries found._

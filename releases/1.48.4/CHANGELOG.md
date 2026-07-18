@@ -15,14 +15,14 @@ Changes between 1.48.3 and 1.48.4 — 3 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/integration` (1.20.0 → 1.20.1)
+### `@backstage/integration` (1.20.0 → [1.20.1](../../changelogs/@backstage/integration.md#1201))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend` (3.1.3 → 3.1.4)
+### `@backstage/plugin-scaffolder-backend` (3.1.3 → [3.1.4](../../changelogs/@backstage/plugin-scaffolder-backend.md#314))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs-node` (1.14.2 → 1.14.3)
+### `@backstage/plugin-techdocs-node` (1.14.2 → [1.14.3](../../changelogs/@backstage/plugin-techdocs-node.md#1143))
 
 _No changelog entries found._

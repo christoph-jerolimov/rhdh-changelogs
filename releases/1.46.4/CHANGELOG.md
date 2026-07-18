@@ -13,6 +13,6 @@ Changes between 1.46.3 and 1.46.4 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-defaults` (0.14.0 → 0.14.1)
+### `@backstage/backend-defaults` (0.14.0 → [0.14.1](../../changelogs/@backstage/backend-defaults.md#0141))
 
 _No changelog entries found._

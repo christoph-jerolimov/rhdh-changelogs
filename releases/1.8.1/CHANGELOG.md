@@ -13,6 +13,6 @@ Changes between 1.8.0 and 1.8.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-catalog-backend-module-github` (0.2.0 → 0.2.1)
+### `@backstage/plugin-catalog-backend-module-github` (0.2.0 → [0.2.1](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#021))
 
 _No changelog entries found._

@@ -13,6 +13,6 @@ Changes between 1.27.6 and 1.27.7 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-scaffolder-backend` (1.22.7 → 1.22.8)
+### `@backstage/plugin-scaffolder-backend` (1.22.7 → [1.22.8](../../changelogs/@backstage/plugin-scaffolder-backend.md#1228))
 
 _No changelog entries found._

@@ -15,14 +15,14 @@ Changes between 1.43.2 and 1.43.3 — 3 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/config` (1.3.3 → 1.3.4)
+### `@backstage/config` (1.3.3 → [1.3.4](../../changelogs/@backstage/config.md#134))
 
 _No changelog entries found._
 
-### `@backstage/config-loader` (1.10.3 → 1.10.4)
+### `@backstage/config-loader` (1.10.3 → [1.10.4](../../changelogs/@backstage/config-loader.md#1104))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend` (3.1.0 → 3.1.1)
+### `@backstage/plugin-catalog-backend` (3.1.0 → [3.1.1](../../changelogs/@backstage/plugin-catalog-backend.md#311))
 
 _No changelog entries found._

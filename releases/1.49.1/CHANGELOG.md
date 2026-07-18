@@ -21,38 +21,38 @@ Changes between 1.49.0 and 1.49.1 — 9 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/create-app` (0.8.0 → 0.8.1)
+### `@backstage/create-app` (0.8.0 → [0.8.1](../../changelogs/@backstage/create-app.md#081))
 
 _No changelog entries found._
 
-### `@backstage/frontend-app-api` (0.16.0 → 0.16.1)
+### `@backstage/frontend-app-api` (0.16.0 → [0.16.1](../../changelogs/@backstage/frontend-app-api.md#0161))
 
 _No changelog entries found._
 
-### `@backstage/frontend-plugin-api` (0.15.0 → 0.15.1)
+### `@backstage/frontend-plugin-api` (0.15.0 → [0.15.1](../../changelogs/@backstage/frontend-plugin-api.md#0151))
 
 _No changelog entries found._
 
-### `@backstage/plugin-app` (0.4.1 → 0.4.2)
+### `@backstage/plugin-app` (0.4.1 → [0.4.2](../../changelogs/@backstage/plugin-app.md#042))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog` (2.0.0 → 2.0.1)
+### `@backstage/plugin-catalog` (2.0.0 → [2.0.1](../../changelogs/@backstage/plugin-catalog.md#201))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-unprocessed-entities` (0.2.27 → 0.2.28)
+### `@backstage/plugin-catalog-unprocessed-entities` (0.2.27 → [0.2.28](../../changelogs/@backstage/plugin-catalog-unprocessed-entities.md#0228))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder` (1.36.0 → 1.36.1)
+### `@backstage/plugin-scaffolder` (1.36.0 → [1.36.1](../../changelogs/@backstage/plugin-scaffolder.md#1361))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs` (1.17.1 → 1.17.2)
+### `@backstage/plugin-techdocs` (1.17.1 → [1.17.2](../../changelogs/@backstage/plugin-techdocs.md#1172))
 
 _No changelog entries found._
 
-### `@backstage/ui` (0.13.0 → 0.13.1)
+### `@backstage/ui` (0.13.0 → [0.13.1](../../changelogs/@backstage/ui.md#0131))
 
 _No changelog entries found._

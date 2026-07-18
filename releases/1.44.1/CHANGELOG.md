@@ -15,14 +15,14 @@ Changes between 1.44.0 and 1.44.1 — 3 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/dev-utils` (1.1.15 → 1.1.16)
+### `@backstage/dev-utils` (1.1.15 → [1.1.16](../../changelogs/@backstage/dev-utils.md#1116))
 
 _No changelog entries found._
 
-### `@backstage/plugin-user-settings` (0.8.27 → 0.8.28)
+### `@backstage/plugin-user-settings` (0.8.27 → [0.8.28](../../changelogs/@backstage/plugin-user-settings.md#0828))
 
 _No changelog entries found._
 
-### `@backstage/ui` (0.8.0 → 0.8.1)
+### `@backstage/ui` (0.8.0 → [0.8.1](../../changelogs/@backstage/ui.md#081))
 
 _No changelog entries found._

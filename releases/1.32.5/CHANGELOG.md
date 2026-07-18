@@ -13,6 +13,6 @@ Changes between 1.32.4 and 1.32.5 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-events-node` (0.4.3 → 0.4.4)
+### `@backstage/plugin-events-node` (0.4.3 → [0.4.4](../../changelogs/@backstage/plugin-events-node.md#044))
 
 _No changelog entries found._

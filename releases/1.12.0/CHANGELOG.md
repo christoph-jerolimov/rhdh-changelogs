@@ -190,53 +190,53 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 ## Newly added packages
 
-### `@backstage/plugin-catalog-backend-module-puppetdb` (new, 0.1.0)
+### `@backstage/plugin-catalog-backend-module-puppetdb` (new, [0.1.0](../../changelogs/@backstage/plugin-catalog-backend-module-puppetdb.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- a1efcf9a658: Initial version of the plugin.
+- [`a1efcf9a658`](https://github.com/backstage/backstage/commit/a1efcf9a658): Initial version of the plugin.
 
 ##### Patch Changes
 
-- 561ce41191d: Added a `catalogModulePuppetDbEntityProvider` alpha export for the new backend system
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`561ce41191d`](https://github.com/backstage/backstage/commit/561ce41191d): Added a `catalogModulePuppetDbEntityProvider` alpha export for the new backend system
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
 
-### `@backstage/plugin-octopus-deploy` (new, 0.1.0)
+### `@backstage/plugin-octopus-deploy` (new, [0.1.0](../../changelogs/@backstage/plugin-octopus-deploy.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- b7fff1171f0: Initial version
+- [`b7fff1171f0`](https://github.com/backstage/backstage/commit/b7fff1171f0): Initial version
 
 ##### Patch Changes
 
-- cb0fc15a992: Added Octopus Deploy logo
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`cb0fc15a992`](https://github.com/backstage/backstage/commit/cb0fc15a992): Added Octopus Deploy logo
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-stackstorm` (new, 0.1.0)
+### `@backstage/plugin-stackstorm` (new, [0.1.0](../../changelogs/@backstage/plugin-stackstorm.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- f3a15259e91: Add StackStorm plugin to Backstage which is interfacing with StackStorm API. It allows users to view workflow executions, packs and actions. For installation and configuration instructions please view [README.md](https://github.com/backstage/backstage/tree/master/plugins/stackstorm/README.md)
+- [`f3a15259e91`](https://github.com/backstage/backstage/commit/f3a15259e91): Add StackStorm plugin to Backstage which is interfacing with StackStorm API. It allows users to view workflow executions, packs and actions. For installation and configuration instructions please view [README.md](https://github.com/backstage/backstage/tree/master/plugins/stackstorm/README.md)
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
 ## Breaking changes
 
-### `@backstage/core-app-api` (1.5.0 → 1.6.0)
+### `@backstage/core-app-api` (1.5.0 → [1.6.0](../../changelogs/@backstage/core-app-api.md#160))
 
 #### 1.6.0
 
 ##### Minor Changes
 
-- 456eaa8cf83: `OAuth2` now gets ID tokens from a session with the `openid` scope explicitly
+- [`456eaa8cf83`](https://github.com/backstage/backstage/commit/456eaa8cf83): `OAuth2` now gets ID tokens from a session with the `openid` scope explicitly
   requested.
 
   This should not be considered a breaking change, because spec-compliant OIDC
@@ -253,22 +253,22 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-linguist-backend` (0.1.0 → 0.2.0)
+### `@backstage/plugin-linguist-backend` (0.1.0 → [0.2.0](../../changelogs/@backstage/plugin-linguist-backend.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- 4a1c318853d: **BREAKING** The linguist-backend `createRouter` now requires that the `tokenManger` is passed to the router.
+- [`4a1c318853d`](https://github.com/backstage/backstage/commit/4a1c318853d): **BREAKING** The linguist-backend `createRouter` now requires that the `tokenManger` is passed to the router.
 
 ##### Patch Changes
 
-- 8a298b47240: Added support for linguist-js options using the linguistJSOptions in the plugin, the available config can be found [here](https://www.npmjs.com/package/linguist-js#API).
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 2ea57821629: Fixed bug in LinguistBackendApi that caused initial batch of entities to be skipped.
-- b271d5ca052: Allow kind to be configurable
+- [`8a298b47240`](https://github.com/backstage/backstage/commit/8a298b47240): Added support for linguist-js options using the linguistJSOptions in the plugin, the available config can be found [here](https://www.npmjs.com/package/linguist-js#API).
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`2ea57821629`](https://github.com/backstage/backstage/commit/2ea57821629): Fixed bug in LinguistBackendApi that caused initial batch of entities to be skipped.
+- [`b271d5ca052`](https://github.com/backstage/backstage/commit/b271d5ca052): Allow kind to be configurable
 
   ```ts
   return createRouter({ schedule: schedule, kind: ['Component'] }, { ...env });
@@ -276,132 +276,132 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 ## Major version bumps
 
-### `@backstage/plugin-dynatrace` (2.0.0 → 3.0.0)
+### `@backstage/plugin-dynatrace` (2.0.0 → [3.0.0](../../changelogs/@backstage/plugin-dynatrace.md#300))
 
 #### 3.0.0
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
 ## 0.x minor version bumps
 
-### `@backstage/backend-plugin-api` (0.4.0 → 0.5.0)
+### `@backstage/backend-plugin-api` (0.4.0 → [0.5.0](../../changelogs/@backstage/backend-plugin-api.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- c1ee073a82b: Added `lastModifiedAt` field on `UrlReaderService` responses and a `lastModifiedAfter` option to `UrlReaderService.readUrl`.
+- [`c1ee073a82b`](https://github.com/backstage/backstage/commit/c1ee073a82b): Added `lastModifiedAt` field on `UrlReaderService` responses and a `lastModifiedAfter` option to `UrlReaderService.readUrl`.
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 482dae5de1c: Updated link to docs.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/backend-tasks` (0.4.3 → 0.5.0)
+### `@backstage/backend-tasks` (0.4.3 → [0.5.0](../../changelogs/@backstage/backend-tasks.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- 1578276708a: add functionality to get descriptions from the scheduler for triggering
+- [`1578276708a`](https://github.com/backstage/backstage/commit/1578276708a): add functionality to get descriptions from the scheduler for triggering
 
 ##### Patch Changes
 
-- f0685193efa: Added the adapted query to mysql and sqlite3 databases to not returning warning on logs
-- 482dae5de1c: Updated link to docs.
+- [`f0685193efa`](https://github.com/backstage/backstage/commit/f0685193efa): Added the adapted query to mysql and sqlite3 databases to not returning warning on logs
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.2.1 → 0.3.0)
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.2.1 → [0.3.0](../../changelogs/@backstage/plugin-catalog-backend-module-incremental-ingestion.md#030))
 
 #### 0.3.0
 
 ##### Minor Changes
 
-- a811bd246c4: Added endpoint to get a list of known incremental entity providers
+- [`a811bd246c4`](https://github.com/backstage/backstage/commit/a811bd246c4): Added endpoint to get a list of known incremental entity providers
 
 ##### Patch Changes
 
-- 90469c02c8c: Renamed `incrementalIngestionEntityProviderCatalogModule` to `catalogModuleIncrementalIngestionEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- bf611cf019a: Fix missing `dependencies` in `package.json`
-- 6e612b58577: Move `@backstage/backend-defaults` to `devDependencies`
+- [`90469c02c8c`](https://github.com/backstage/backstage/commit/90469c02c8c): Renamed `incrementalIngestionEntityProviderCatalogModule` to `catalogModuleIncrementalIngestionEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`bf611cf019a`](https://github.com/backstage/backstage/commit/bf611cf019a): Fix missing `dependencies` in `package.json`
+- [`6e612b58577`](https://github.com/backstage/backstage/commit/6e612b58577): Move `@backstage/backend-defaults` to `devDependencies`
 
-### `@backstage/plugin-firehydrant` (0.1.32 → 0.2.0)
+### `@backstage/plugin-firehydrant` (0.1.32 → [0.2.0](../../changelogs/@backstage/plugin-firehydrant.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- e2e3dd08a54: Allow firehydrant to use component annotation
+- [`e2e3dd08a54`](https://github.com/backstage/backstage/commit/e2e3dd08a54): Allow firehydrant to use component annotation
 
 ##### Patch Changes
 
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
 ## 0.0.x patch version bumps
 
-### `@backstage/plugin-explore-backend` (0.0.4 → 0.0.5)
+### `@backstage/plugin-explore-backend` (0.0.4 → [0.0.5](../../changelogs/@backstage/plugin-explore-backend.md#005))
 
 #### 0.0.5
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-explore-react` (0.0.26 → 0.0.27)
+### `@backstage/plugin-explore-react` (0.0.26 → [0.0.27](../../changelogs/@backstage/plugin-explore-react.md#0027))
 
 #### 0.0.27
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/release-manifests` (0.0.8 → 0.0.9)
+### `@backstage/release-manifests` (0.0.8 → [0.0.9](../../changelogs/@backstage/release-manifests.md#009))
 
 #### 0.0.9
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
 ## Other minor version bumps
 
-### `@backstage/catalog-client` (1.3.1 → 1.4.0)
+### `@backstage/catalog-client` (1.3.1 → [1.4.0](../../changelogs/@backstage/catalog-client.md#140))
 
 #### 1.4.0
 
 ##### Minor Changes
 
-- 8c030b1826c: Add `queryEntities` method to `CatalogApi`.
+- [`8c030b1826c`](https://github.com/backstage/backstage/commit/8c030b1826c): Add `queryEntities` method to `CatalogApi`.
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- c630360631f: Ensure that `getEntitiesByRefs` returns `undefined` instead of `null` for missing items
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`c630360631f`](https://github.com/backstage/backstage/commit/c630360631f): Ensure that `getEntitiesByRefs` returns `undefined` instead of `null` for missing items
 
-### `@backstage/core-plugin-api` (1.4.0 → 1.5.0)
+### `@backstage/core-plugin-api` (1.4.0 → [1.5.0](../../changelogs/@backstage/core-plugin-api.md#150))
 
 #### 1.5.0
 
 ##### Minor Changes
 
-- ab750ddc4f2: The GitLab auth provider can now be used to get OpenID tokens.
+- [`ab750ddc4f2`](https://github.com/backstage/backstage/commit/ab750ddc4f2): The GitLab auth provider can now be used to get OpenID tokens.
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog` (1.8.0 → 1.9.0)
+### `@backstage/plugin-catalog` (1.8.0 → [1.9.0](../../changelogs/@backstage/plugin-catalog.md#190))
 
 #### 1.9.0
 
 ##### Minor Changes
 
-- 23cc40039c0: Allow `EntitySwitch` to render all cases that match the condition.
+- [`23cc40039c0`](https://github.com/backstage/backstage/commit/23cc40039c0): Allow `EntitySwitch` to render all cases that match the condition.
 
   This change introduces a new parameter for the `EntitySwitch` component
   `renderMultipleMatches`. In case the parameter value is `all`, the `EntitySwitch`
@@ -422,30 +422,30 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
   This allows the component to have multiple CI/CD systems and all of those are
   rendered on the same page.
 
-- 3f75b7607ca: Add ability to pass icon as function to have ability to customize it by search item
-- c9a9f3c834f: Add a `columns` prop to certain components that use the `EntityTable` for easier extensibility.
+- [`3f75b7607ca`](https://github.com/backstage/backstage/commit/3f75b7607ca): Add ability to pass icon as function to have ability to customize it by search item
+- [`c9a9f3c834f`](https://github.com/backstage/backstage/commit/c9a9f3c834f): Add a `columns` prop to certain components that use the `EntityTable` for easier extensibility.
 
 ##### Patch Changes
 
-- 3fa41696820: Make the "Copied!" message disappear automatically after some time
-- 7e8930ae1c6: Fix icon alignment in `CatalogSearchResultListItem`
-- dbbde6ed353: fix entity switch rendering when there is no default case
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
+- [`3fa41696820`](https://github.com/backstage/backstage/commit/3fa41696820): Make the "Copied!" message disappear automatically after some time
+- [`7e8930ae1c6`](https://github.com/backstage/backstage/commit/7e8930ae1c6): Fix icon alignment in `CatalogSearchResultListItem`
+- [`dbbde6ed353`](https://github.com/backstage/backstage/commit/dbbde6ed353): fix entity switch rendering when there is no default case
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
 
-### `@backstage/plugin-catalog-backend` (1.7.2 → 1.8.0)
+### `@backstage/plugin-catalog-backend` (1.7.2 → [1.8.0](../../changelogs/@backstage/plugin-catalog-backend.md#180))
 
 #### 1.8.0
 
 ##### Minor Changes
 
-- 7f4ea3d3602: Add /entities/by-query endpoint returning paginated entities.
+- [`7f4ea3d3602`](https://github.com/backstage/backstage/commit/7f4ea3d3602): Add /entities/by-query endpoint returning paginated entities.
 
   The endpoint supports cursor base pagination and server side sorting of the entities
 
 ##### Patch Changes
 
-- e675f902980: Add deprecations for symbols that were moved to `@backstage/plugin-catalog-node` a long time ago:
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Add deprecations for symbols that were moved to `@backstage/plugin-catalog-node` a long time ago:
 
   - `CatalogProcessor`
   - `CatalogProcessorCache`
@@ -469,159 +469,159 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
   - `locationSpecToLocationEntity`
   - `locationSpecToMetadataName`
 
-- ac8929f2f31: Fix export of `defaultCatalogCollatorEntityTransformer`.
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- f093ce83d58: Fix a bug where the batch fetch by ref endpoint did not work in conjunction with filtering (e.g. if authorization was enabled).
+- [`ac8929f2f31`](https://github.com/backstage/backstage/commit/ac8929f2f31): Fix export of `defaultCatalogCollatorEntityTransformer`.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`f093ce83d58`](https://github.com/backstage/backstage/commit/f093ce83d58): Fix a bug where the batch fetch by ref endpoint did not work in conjunction with filtering (e.g. if authorization was enabled).
 
-### `@backstage/plugin-catalog-react` (1.3.0 → 1.4.0)
+### `@backstage/plugin-catalog-react` (1.3.0 → [1.4.0](../../changelogs/@backstage/plugin-catalog-react.md#140))
 
 #### 1.4.0
 
 ##### Minor Changes
 
-- 0a5b73b2926: Add possibility to re-use EntityPicker for filters with multiple select.
+- [`0a5b73b2926`](https://github.com/backstage/backstage/commit/0a5b73b2926): Add possibility to re-use EntityPicker for filters with multiple select.
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 24916d23494: Do not close `Autocomplete` powered multiple-selection filters when checking boxes
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`24916d23494`](https://github.com/backstage/backstage/commit/24916d23494): Do not close `Autocomplete` powered multiple-selection filters when checking boxes
 
-### `@backstage/plugin-scaffolder` (1.11.0 → 1.12.0)
+### `@backstage/plugin-scaffolder` (1.11.0 → [1.12.0](../../changelogs/@backstage/plugin-scaffolder.md#1120))
 
 #### 1.12.0
 
 ##### Minor Changes
 
-- 0d61fcca9c3: Update `EntityPicker` to use the fully qualified entity ref instead of the humanized version.
-- 8f4d13f21cf: Move `useTaskStream`, `TaskBorder`, `TaskLogStream` and `TaskSteps` into `scaffolder-react`.
+- [`0d61fcca9c3`](https://github.com/backstage/backstage/commit/0d61fcca9c3): Update `EntityPicker` to use the fully qualified entity ref instead of the humanized version.
+- [`8f4d13f21cf`](https://github.com/backstage/backstage/commit/8f4d13f21cf): Move `useTaskStream`, `TaskBorder`, `TaskLogStream` and `TaskSteps` into `scaffolder-react`.
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 3c96e77b513: Make scaffolder adhere to page themes by using page `fontColor` consistently. If your theme overwrites template list or card headers, review those styles.
-- be3cddaab5f: Getting credentials in the RepoUrlPicker now also works for targets without owner (e.g. Bitbucket Server).
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- eb877bad736: Create an "Other Templates" group when groups are given to scaffolder/next.
-- c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 0aae4596296: Fix the scaffolder validator for arrays when the item is a field in the object
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`3c96e77b513`](https://github.com/backstage/backstage/commit/3c96e77b513): Make scaffolder adhere to page themes by using page `fontColor` consistently. If your theme overwrites template list or card headers, review those styles.
+- [`be3cddaab5f`](https://github.com/backstage/backstage/commit/be3cddaab5f): Getting credentials in the RepoUrlPicker now also works for targets without owner (e.g. Bitbucket Server).
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`eb877bad736`](https://github.com/backstage/backstage/commit/eb877bad736): Create an "Other Templates" group when groups are given to scaffolder/next.
+- [`c10384a9235`](https://github.com/backstage/backstage/commit/c10384a9235): Switch to using `LinkButton` instead of the deprecated `Button`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`0aae4596296`](https://github.com/backstage/backstage/commit/0aae4596296): Fix the scaffolder validator for arrays when the item is a field in the object
 
-### `@backstage/plugin-scaffolder-backend` (1.11.0 → 1.12.0)
+### `@backstage/plugin-scaffolder-backend` (1.11.0 → [1.12.0](../../changelogs/@backstage/plugin-scaffolder-backend.md#1120))
 
 #### 1.12.0
 
 ##### Minor Changes
 
-- 7d724d8ef56: Added the ability to be able to define an actions `input` and `output` schema using `zod` instead of hand writing types and `jsonschema`
+- [`7d724d8ef56`](https://github.com/backstage/backstage/commit/7d724d8ef56): Added the ability to be able to define an actions `input` and `output` schema using `zod` instead of hand writing types and `jsonschema`
 
 ##### Patch Changes
 
-- 860de10fa67: Make identity valid if subject of token is a backstage server-2-server auth token
-- 65454876fb2: Minor API report tweaks
-- c6c78b4acbe: throw error from catalog:fetch scaffolder action when entity is null and optional is false
-- 9968f455921: catalog write action should allow any shape of object
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 7af12854970: Extended scaffolder action `catalog:fetch` to fetch multiple catalog entities by entity references.
+- [`860de10fa67`](https://github.com/backstage/backstage/commit/860de10fa67): Make identity valid if subject of token is a backstage server-2-server auth token
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`c6c78b4acbe`](https://github.com/backstage/backstage/commit/c6c78b4acbe): throw error from catalog:fetch scaffolder action when entity is null and optional is false
+- [`9968f455921`](https://github.com/backstage/backstage/commit/9968f455921): catalog write action should allow any shape of object
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`7af12854970`](https://github.com/backstage/backstage/commit/7af12854970): Extended scaffolder action `catalog:fetch` to fetch multiple catalog entities by entity references.
 
-### `@backstage/plugin-scaffolder-react` (1.1.0 → 1.2.0)
+### `@backstage/plugin-scaffolder-react` (1.1.0 → [1.2.0](../../changelogs/@backstage/plugin-scaffolder-react.md#120))
 
 #### 1.2.0
 
 ##### Minor Changes
 
-- 8f4d13f21cf: Move `useTaskStream`, `TaskBorder`, `TaskLogStream` and `TaskSteps` into `scaffolder-react`.
+- [`8f4d13f21cf`](https://github.com/backstage/backstage/commit/8f4d13f21cf): Move `useTaskStream`, `TaskBorder`, `TaskLogStream` and `TaskSteps` into `scaffolder-react`.
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 3c96e77b513: Make scaffolder adhere to page themes by using page `fontColor` consistently. If your theme overwrites template list or card headers, review those styles.
-- c8d78b9ae9d: fix bug with `hasErrors` returning false when dealing with empty objects
-- 9b8c374ace5: Remove timer for skipped steps in Scaffolder Next's TaskSteps
-- 44941fc97eb: scaffolder/next: Move the `uiSchema` to its own property in the validation `context` to align with component development and access of `ui:options`
-- d9893263ba9: scaffolder/next: Fix for steps without properties
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- cc418d652a7: scaffolder/next: Added the ability to get the fields definition in the schema in the validation function
-- d4100d0ec42: Fix alignment bug for owners on `TemplateCard`
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`3c96e77b513`](https://github.com/backstage/backstage/commit/3c96e77b513): Make scaffolder adhere to page themes by using page `fontColor` consistently. If your theme overwrites template list or card headers, review those styles.
+- [`c8d78b9ae9d`](https://github.com/backstage/backstage/commit/c8d78b9ae9d): fix bug with `hasErrors` returning false when dealing with empty objects
+- [`9b8c374ace5`](https://github.com/backstage/backstage/commit/9b8c374ace5): Remove timer for skipped steps in Scaffolder Next's TaskSteps
+- [`44941fc97eb`](https://github.com/backstage/backstage/commit/44941fc97eb): scaffolder/next: Move the `uiSchema` to its own property in the validation `context` to align with component development and access of `ui:options`
+- [`d9893263ba9`](https://github.com/backstage/backstage/commit/d9893263ba9): scaffolder/next: Fix for steps without properties
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`cc418d652a7`](https://github.com/backstage/backstage/commit/cc418d652a7): scaffolder/next: Added the ability to get the fields definition in the schema in the validation function
+- [`d4100d0ec42`](https://github.com/backstage/backstage/commit/d4100d0ec42): Fix alignment bug for owners on `TemplateCard`
 
-### `@backstage/plugin-techdocs` (1.5.0 → 1.6.0)
+### `@backstage/plugin-techdocs` (1.5.0 → [1.6.0](../../changelogs/@backstage/plugin-techdocs.md#160))
 
 #### 1.6.0
 
 ##### Minor Changes
 
-- 3f75b7607ca: Add ability to pass icon as function to have ability to customize it by search item
+- [`3f75b7607ca`](https://github.com/backstage/backstage/commit/3f75b7607ca): Add ability to pass icon as function to have ability to customize it by search item
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 54a1e133b56: Fix bug that caused next and previous links not to work with certain versions of mkdocs-material
-- f320c299c67: The HTML tag attributes in the documentation content inserted to shadow DOM is preserved to improve accessibility
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
-- 8adfda60ae1: Updated dependency `jss` to `~10.10.0`.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 238cf657c09: Copy to clipboard now works in a not secure context.
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`54a1e133b56`](https://github.com/backstage/backstage/commit/54a1e133b56): Fix bug that caused next and previous links not to work with certain versions of mkdocs-material
+- [`f320c299c67`](https://github.com/backstage/backstage/commit/f320c299c67): The HTML tag attributes in the documentation content inserted to shadow DOM is preserved to improve accessibility
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`c10384a9235`](https://github.com/backstage/backstage/commit/c10384a9235): Switch to using `LinkButton` instead of the deprecated `Button`
+- [`8adfda60ae1`](https://github.com/backstage/backstage/commit/8adfda60ae1): Updated dependency `jss` to `~10.10.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`238cf657c09`](https://github.com/backstage/backstage/commit/238cf657c09): Copy to clipboard now works in a not secure context.
 
-### `@backstage/plugin-techdocs-backend` (1.5.3 → 1.6.0)
+### `@backstage/plugin-techdocs-backend` (1.5.3 → [1.6.0](../../changelogs/@backstage/plugin-techdocs-backend.md#160))
 
 #### 1.6.0
 
 ##### Minor Changes
 
-- 92b495328bd: Introduced alpha export of the `techdocsPlugin` using the new backend system.
+- [`92b495328bd`](https://github.com/backstage/backstage/commit/92b495328bd): Introduced alpha export of the `techdocsPlugin` using the new backend system.
 
 ##### Patch Changes
 
-- 40298b02778: Techdocs backend explains a bit more about what might have caused the docs not being found when building techdocs.
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`40298b02778`](https://github.com/backstage/backstage/commit/40298b02778): Techdocs backend explains a bit more about what might have caused the docs not being found when building techdocs.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-techdocs-node` (1.5.0 → 1.6.0)
+### `@backstage/plugin-techdocs-node` (1.5.0 → [1.6.0](../../changelogs/@backstage/plugin-techdocs-node.md#160))
 
 #### 1.6.0
 
 ##### Minor Changes
 
-- ea2bbef1b16: Added support for an HTTPS proxy for techdocs AWS S3 requests
+- [`ea2bbef1b16`](https://github.com/backstage/backstage/commit/ea2bbef1b16): Added support for an HTTPS proxy for techdocs AWS S3 requests
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- bf493710f50: Update to a newer version of `@trendyol-js/openstack-swift-sdk`
-- bfe350ef4ce: Fixed bug that prevented deletion of stale files when non-empty directories where tried to be deleted as well.
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`bf493710f50`](https://github.com/backstage/backstage/commit/bf493710f50): Update to a newer version of `@trendyol-js/openstack-swift-sdk`
+- [`bfe350ef4ce`](https://github.com/backstage/backstage/commit/bfe350ef4ce): Fixed bug that prevented deletion of stale files when non-empty directories where tried to be deleted as well.
 
-### `@techdocs/cli` (1.3.2 → 1.4.0)
+### `@techdocs/cli` (1.3.2 → [1.4.0](../../changelogs/@techdocs/cli.md#140))
 
 #### 1.4.0
 
 ##### Minor Changes
 
-- 8e465ce52e2: Running `@techdocs/cli generate` with the `--verbose` flag will now print the mkdocs output.
-- ea2bbef1b16: Added support for an HTTPS proxy for techdocs AWS S3 requests
+- [`8e465ce52e2`](https://github.com/backstage/backstage/commit/8e465ce52e2): Running `@techdocs/cli generate` with the `--verbose` flag will now print the mkdocs output.
+- [`ea2bbef1b16`](https://github.com/backstage/backstage/commit/ea2bbef1b16): Added support for an HTTPS proxy for techdocs AWS S3 requests
 
 ## Other patch version bumps
 
-### `@backstage/backend-app-api` (0.4.0 → 0.4.1)
+### `@backstage/backend-app-api` (0.4.0 → [0.4.1](../../changelogs/@backstage/backend-app-api.md#041))
 
 #### 0.4.1
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 482dae5de1c: Updated link to docs.
-- 915e46622cf: Add support for `NotImplementedError`, properly returning 501 as status code.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
+- [`915e46622cf`](https://github.com/backstage/backstage/commit/915e46622cf): Add support for `NotImplementedError`, properly returning 501 as status code.
 
-### `@backstage/backend-common` (0.18.2 → 0.18.3)
+### `@backstage/backend-common` (0.18.2 → [0.18.3](../../changelogs/@backstage/backend-common.md#0183))
 
 #### 0.18.3
 
 ##### Patch Changes
 
-- f75097868a7: Adds config option `backend.database.role` to set ownership for newly created schemas and tables in Postgres
+- [`f75097868a7`](https://github.com/backstage/backstage/commit/f75097868a7): Adds config option `backend.database.role` to set ownership for newly created schemas and tables in Postgres
 
   The example config below connects to the database as user `v-backstage-123` but sets the ownership of
   the create schemas and tables to `backstage`
@@ -637,982 +637,982 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
         ...
   ```
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 87f0bbec175: AwsS3UrlReader upgraded to use aws-sdk v3
-- c1ee073a82b: Added `lastModifiedAt` field on `UrlReaderService` responses and a `lastModifiedAfter` option to `UrlReaderService.readUrl`.
-- 482dae5de1c: Updated link to docs.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`87f0bbec175`](https://github.com/backstage/backstage/commit/87f0bbec175): AwsS3UrlReader upgraded to use aws-sdk v3
+- [`c1ee073a82b`](https://github.com/backstage/backstage/commit/c1ee073a82b): Added `lastModifiedAt` field on `UrlReaderService` responses and a `lastModifiedAfter` option to `UrlReaderService.readUrl`.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/backend-defaults` (0.1.7 → 0.1.8)
+### `@backstage/backend-defaults` (0.1.7 → [0.1.8](../../changelogs/@backstage/backend-defaults.md#018))
 
 #### 0.1.8
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 482dae5de1c: Updated link to docs.
-- 5d0693edc09: Added a workaround for the cyclic dependency bug across `@backstage/backend-common` and `@backstage/backend-app-api`.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
+- [`5d0693edc09`](https://github.com/backstage/backstage/commit/5d0693edc09): Added a workaround for the cyclic dependency bug across `@backstage/backend-common` and `@backstage/backend-app-api`.
 
-### `@backstage/backend-dev-utils` (0.1.0 → 0.1.1)
+### `@backstage/backend-dev-utils` (0.1.0 → [0.1.1](../../changelogs/@backstage/backend-dev-utils.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 482dae5de1c: Updated link to docs.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/backend-test-utils` (0.1.34 → 0.1.35)
+### `@backstage/backend-test-utils` (0.1.34 → [0.1.35](../../changelogs/@backstage/backend-test-utils.md#0135))
 
 #### 0.1.35
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 482dae5de1c: Updated link to docs.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/catalog-model` (1.2.0 → 1.2.1)
+### `@backstage/catalog-model` (1.2.0 → [1.2.1](../../changelogs/@backstage/catalog-model.md#121))
 
 #### 1.2.1
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
 
-### `@backstage/cli` (0.22.3 → 0.22.4)
+### `@backstage/cli` (0.22.3 → [0.22.4](../../changelogs/@backstage/cli.md#0224))
 
 #### 0.22.4
 
 ##### Patch Changes
 
-- 1ad8d885d30: Fixed a bug where additional backend package entry points where not properly marked as internal during local development.
-- 2011b86052c: Added templates for new plugin Web and Node.js libraries.
-- 867f4752ca1: Updated the ESLint plugin configuration that is enabled through `yarn start --check` to only pick up valid source files.
-- b4cd145b574: Added a new `migrate package-exports` command that synchronizes package exports fields in all `package.json`s.
-- 9bf50a36674: Bumped the `msw` version in templates to 1.0.0
-- 8bf24946c66: Adjust express dependencies to be the same as the rest of the project
-- 17271841de8: Updated frontend plugin template to use some more recent features
-- 4b4998466b4: Updated dependency `del` to `^7.0.0`.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- a11b9a23f5a: Keep custom exports entry points in package.json
-- 482dae5de1c: Updated link to docs.
+- [`1ad8d885d30`](https://github.com/backstage/backstage/commit/1ad8d885d30): Fixed a bug where additional backend package entry points where not properly marked as internal during local development.
+- [`2011b86052c`](https://github.com/backstage/backstage/commit/2011b86052c): Added templates for new plugin Web and Node.js libraries.
+- [`867f4752ca1`](https://github.com/backstage/backstage/commit/867f4752ca1): Updated the ESLint plugin configuration that is enabled through `yarn start --check` to only pick up valid source files.
+- [`b4cd145b574`](https://github.com/backstage/backstage/commit/b4cd145b574): Added a new `migrate package-exports` command that synchronizes package exports fields in all `package.json`s.
+- [`9bf50a36674`](https://github.com/backstage/backstage/commit/9bf50a36674): Bumped the `msw` version in templates to 1.0.0
+- [`8bf24946c66`](https://github.com/backstage/backstage/commit/8bf24946c66): Adjust express dependencies to be the same as the rest of the project
+- [`17271841de8`](https://github.com/backstage/backstage/commit/17271841de8): Updated frontend plugin template to use some more recent features
+- [`4b4998466b4`](https://github.com/backstage/backstage/commit/4b4998466b4): Updated dependency `del` to `^7.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`a11b9a23f5a`](https://github.com/backstage/backstage/commit/a11b9a23f5a): Keep custom exports entry points in package.json
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/cli-common` (0.1.11 → 0.1.12)
+### `@backstage/cli-common` (0.1.11 → [0.1.12](../../changelogs/@backstage/cli-common.md#0112))
 
 #### 0.1.12
 
 ##### Patch Changes
 
-- 482dae5de1c: Updated link to docs.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/codemods` (0.1.43 → 0.1.44)
+### `@backstage/codemods` (0.1.43 → [0.1.44](../../changelogs/@backstage/codemods.md#0144))
 
 #### 0.1.44
 
 ##### Patch Changes
 
-- 482dae5de1c: Updated link to docs.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/config` (1.0.6 → 1.0.7)
+### `@backstage/config` (1.0.6 → [1.0.7](../../changelogs/@backstage/config.md#107))
 
 #### 1.0.7
 
 ##### Patch Changes
 
-- 482dae5de1c: Updated link to docs.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/config-loader` (1.1.8 → 1.1.9)
+### `@backstage/config-loader` (1.1.8 → [1.1.9](../../changelogs/@backstage/config-loader.md#119))
 
 #### 1.1.9
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 482dae5de1c: Updated link to docs.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/core-components` (0.12.4 → 0.12.5)
+### `@backstage/core-components` (0.12.4 → [0.12.5](../../changelogs/@backstage/core-components.md#0125))
 
 #### 0.12.5
 
 ##### Patch Changes
 
-- 8bbf95b5507: Button labels in the sidebar (previously displayed in uppercase) will be displayed in the case that is provided without any transformations.
+- [`8bbf95b5507`](https://github.com/backstage/backstage/commit/8bbf95b5507): Button labels in the sidebar (previously displayed in uppercase) will be displayed in the case that is provided without any transformations.
   For example, a sidebar button with the label "Search" will appear as Search, "search" will appear as search, "SEARCH" will appear as SEARCH etc.
   This can potentially affect any overriding styles previously applied to change the appearance of Button labels in the Sidebar.
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- e1aae2f5a0c: Updated the `aria-label` of the `HeaderTabs` component.
-- 6a51a49a810: Fix bug where `<Table />` component would not take into account header styles defined in `columns[*].headerStyle`.
-- fa004f66871: Use media queries to change layout instead of `isMobile` prop in `BackstagePage` component
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`c10384a9235`](https://github.com/backstage/backstage/commit/c10384a9235): Switch to using `LinkButton` instead of the deprecated `Button`
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`e1aae2f5a0c`](https://github.com/backstage/backstage/commit/e1aae2f5a0c): Updated the `aria-label` of the `HeaderTabs` component.
+- [`6a51a49a810`](https://github.com/backstage/backstage/commit/6a51a49a810): Fix bug where `<Table />` component would not take into account header styles defined in `columns[*].headerStyle`.
+- [`fa004f66871`](https://github.com/backstage/backstage/commit/fa004f66871): Use media queries to change layout instead of `isMobile` prop in `BackstagePage` component
 
-### `@backstage/create-app` (0.4.37 → 0.4.38)
+### `@backstage/create-app` (0.4.37 → [0.4.38](../../changelogs/@backstage/create-app.md#0438))
 
 #### 0.4.38
 
 ##### Patch Changes
 
-- b4627f23b28: Bumped create-app version.
-- 0eceadb9502: Bumped create-app version.
-- 482dae5de1c: Updated link to docs.
-- 6ace2dd2c58: Added to the template `packages/app/.eslintignore` file to packages to ignore the contents of `packages/app/public`.
+- [`b4627f23b28`](https://github.com/backstage/backstage/commit/b4627f23b28): Bumped create-app version.
+- [`0eceadb9502`](https://github.com/backstage/backstage/commit/0eceadb9502): Bumped create-app version.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
+- [`6ace2dd2c58`](https://github.com/backstage/backstage/commit/6ace2dd2c58): Added to the template `packages/app/.eslintignore` file to packages to ignore the contents of `packages/app/public`.
 
-### `@backstage/dev-utils` (1.0.12 → 1.0.13)
+### `@backstage/dev-utils` (1.0.12 → [1.0.13](../../changelogs/@backstage/dev-utils.md#1013))
 
 #### 1.0.13
 
 ##### Patch Changes
 
-- 482dae5de1c: Updated link to docs.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/errors` (1.1.4 → 1.1.5)
+### `@backstage/errors` (1.1.4 → [1.1.5](../../changelogs/@backstage/errors.md#115))
 
 #### 1.1.5
 
 ##### Patch Changes
 
-- 3bf83a2aabf: Added `NotImplementedError`, which can be used when the server does not recognize the request method and is incapable of supporting it for any resource.
+- [`3bf83a2aabf`](https://github.com/backstage/backstage/commit/3bf83a2aabf): Added `NotImplementedError`, which can be used when the server does not recognize the request method and is incapable of supporting it for any resource.
 
-### `@backstage/eslint-plugin` (0.1.1 → 0.1.2)
+### `@backstage/eslint-plugin` (0.1.1 → [0.1.2](../../changelogs/@backstage/eslint-plugin.md#012))
 
 #### 0.1.2
 
 ##### Patch Changes
 
-- a061c466d66: Fixing a bug that we should check internal dependencies too
+- [`a061c466d66`](https://github.com/backstage/backstage/commit/a061c466d66): Fixing a bug that we should check internal dependencies too
 
-### `@backstage/integration` (1.4.2 → 1.4.3)
+### `@backstage/integration` (1.4.2 → [1.4.3](../../changelogs/@backstage/integration.md#143))
 
 #### 1.4.3
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/integration-react` (1.1.10 → 1.1.11)
+### `@backstage/integration-react` (1.1.10 → [1.1.11](../../changelogs/@backstage/integration-react.md#1111))
 
 #### 1.1.11
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-adr` (0.4.0 → 0.4.1)
+### `@backstage/plugin-adr` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-adr.md#041))
 
 #### 0.4.1
 
 ##### Patch Changes
 
-- d293f4aaf83: Updated readme instructions
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`d293f4aaf83`](https://github.com/backstage/backstage/commit/d293f4aaf83): Updated readme instructions
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-adr-backend` (0.3.0 → 0.3.1)
+### `@backstage/plugin-adr-backend` (0.3.0 → [0.3.1](../../changelogs/@backstage/plugin-adr-backend.md#031))
 
 #### 0.3.1
 
 ##### Patch Changes
 
-- 2a73ded3861: Support MADR v3 format
-- 8bf24946c66: Adjust express dependencies to be the same as the rest of the project
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`2a73ded3861`](https://github.com/backstage/backstage/commit/2a73ded3861): Support MADR v3 format
+- [`8bf24946c66`](https://github.com/backstage/backstage/commit/8bf24946c66): Adjust express dependencies to be the same as the rest of the project
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-airbrake` (0.3.15 → 0.3.16)
+### `@backstage/plugin-airbrake` (0.3.15 → [0.3.16](../../changelogs/@backstage/plugin-airbrake.md#0316))
 
 #### 0.3.16
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-airbrake-backend` (0.2.15 → 0.2.16)
+### `@backstage/plugin-airbrake-backend` (0.2.15 → [0.2.16](../../changelogs/@backstage/plugin-airbrake-backend.md#0216))
 
 #### 0.2.16
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-allure` (0.1.31 → 0.1.32)
+### `@backstage/plugin-allure` (0.1.31 → [0.1.32](../../changelogs/@backstage/plugin-allure.md#0132))
 
 #### 0.1.32
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-analytics-module-ga` (0.1.26 → 0.1.27)
+### `@backstage/plugin-analytics-module-ga` (0.1.26 → [0.1.27](../../changelogs/@backstage/plugin-analytics-module-ga.md#0127))
 
 #### 0.1.27
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-apache-airflow` (0.2.8 → 0.2.9)
+### `@backstage/plugin-apache-airflow` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-apache-airflow.md#029))
 
 #### 0.2.9
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-api-docs` (0.9.0 → 0.9.1)
+### `@backstage/plugin-api-docs` (0.9.0 → [0.9.1](../../changelogs/@backstage/plugin-api-docs.md#091))
 
 #### 0.9.1
 
 ##### Patch Changes
 
-- 095e755d9b5: Add ApiDefinitionDialog component for fast access to the API definition in ProvidedApiCards and ConsumedApiCards.
-- 8bc7dcec820: Fix dark theme Swagger's clear button font color.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 9820eb5d24f: Add a `columns` prop to certain components that use the `EntityTable` for easier extensibility.
+- [`095e755d9b5`](https://github.com/backstage/backstage/commit/095e755d9b5): Add ApiDefinitionDialog component for fast access to the API definition in ProvidedApiCards and ConsumedApiCards.
+- [`8bc7dcec820`](https://github.com/backstage/backstage/commit/8bc7dcec820): Fix dark theme Swagger's clear button font color.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`9820eb5d24f`](https://github.com/backstage/backstage/commit/9820eb5d24f): Add a `columns` prop to certain components that use the `EntityTable` for easier extensibility.
 
-### `@backstage/plugin-apollo-explorer` (0.1.8 → 0.1.9)
+### `@backstage/plugin-apollo-explorer` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-apollo-explorer.md#019))
 
 #### 0.1.9
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-app-backend` (0.3.42 → 0.3.43)
+### `@backstage/plugin-app-backend` (0.3.42 → [0.3.43](../../changelogs/@backstage/plugin-app-backend.md#0343))
 
 #### 0.3.43
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-auth-backend` (0.18.0 → 0.18.1)
+### `@backstage/plugin-auth-backend` (0.18.0 → [0.18.1](../../changelogs/@backstage/plugin-auth-backend.md#0181))
 
 #### 0.18.1
 
 ##### Patch Changes
 
-- e262738b8a0: Handle difference in expiration time between Microsoft session and Backstage session which caused the Backstage token to be invalid during a time frame.
-- 86cece2c1fb: Updated dependency `@types/passport-microsoft` to `^1.0.0`.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 529de8c4211: Added authentication provider for Azure Easy Authentication.
+- [`e262738b8a0`](https://github.com/backstage/backstage/commit/e262738b8a0): Handle difference in expiration time between Microsoft session and Backstage session which caused the Backstage token to be invalid during a time frame.
+- [`86cece2c1fb`](https://github.com/backstage/backstage/commit/86cece2c1fb): Updated dependency `@types/passport-microsoft` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`529de8c4211`](https://github.com/backstage/backstage/commit/529de8c4211): Added authentication provider for Azure Easy Authentication.
 
-### `@backstage/plugin-auth-node` (0.2.11 → 0.2.12)
+### `@backstage/plugin-auth-node` (0.2.11 → [0.2.12](../../changelogs/@backstage/plugin-auth-node.md#0212))
 
 #### 0.2.12
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-azure-devops` (0.2.6 → 0.2.7)
+### `@backstage/plugin-azure-devops` (0.2.6 → [0.2.7](../../changelogs/@backstage/plugin-azure-devops.md#027))
 
 #### 0.2.7
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-azure-devops-backend` (0.3.21 → 0.3.22)
+### `@backstage/plugin-azure-devops-backend` (0.3.21 → [0.3.22](../../changelogs/@backstage/plugin-azure-devops-backend.md#0322))
 
 #### 0.3.22
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-azure-sites` (0.1.4 → 0.1.5)
-
-#### 0.1.5
-
-##### Patch Changes
-
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-
-### `@backstage/plugin-azure-sites-backend` (0.1.4 → 0.1.5)
+### `@backstage/plugin-azure-sites` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-azure-sites.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-badges` (0.2.39 → 0.2.40)
+### `@backstage/plugin-azure-sites-backend` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-azure-sites-backend.md#015))
+
+#### 0.1.5
+
+##### Patch Changes
+
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+
+### `@backstage/plugin-badges` (0.2.39 → [0.2.40](../../changelogs/@backstage/plugin-badges.md#0240))
 
 #### 0.2.40
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-bitbucket-cloud-common` (0.2.3 → 0.2.4)
+### `@backstage/plugin-bitbucket-cloud-common` (0.2.3 → [0.2.4](../../changelogs/@backstage/plugin-bitbucket-cloud-common.md#024))
 
 #### 0.2.4
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-bitrise` (0.1.42 → 0.1.43)
+### `@backstage/plugin-bitrise` (0.1.42 → [0.1.43](../../changelogs/@backstage/plugin-bitrise.md#0143))
 
 #### 0.1.43
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-aws` (0.1.16 → 0.1.17)
+### `@backstage/plugin-catalog-backend-module-aws` (0.1.16 → [0.1.17](../../changelogs/@backstage/plugin-catalog-backend-module-aws.md#0117))
 
 #### 0.1.17
 
 ##### Patch Changes
 
-- 90469c02c8c: Renamed `awsS3EntityProviderCatalogModule` to `catalogModuleAwsS3EntityProviders` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 87f0bbec175: AwsS3UrlReader upgraded to use aws-sdk v3
-- bf611cf019a: Fix missing `dependencies` in `package.json`
+- [`90469c02c8c`](https://github.com/backstage/backstage/commit/90469c02c8c): Renamed `awsS3EntityProviderCatalogModule` to `catalogModuleAwsS3EntityProviders` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`87f0bbec175`](https://github.com/backstage/backstage/commit/87f0bbec175): AwsS3UrlReader upgraded to use aws-sdk v3
+- [`bf611cf019a`](https://github.com/backstage/backstage/commit/bf611cf019a): Fix missing `dependencies` in `package.json`
 
-### `@backstage/plugin-catalog-backend-module-azure` (0.1.13 → 0.1.14)
+### `@backstage/plugin-catalog-backend-module-azure` (0.1.13 → [0.1.14](../../changelogs/@backstage/plugin-catalog-backend-module-azure.md#0114))
 
 #### 0.1.14
 
 ##### Patch Changes
 
-- 90469c02c8c: Renamed `azureDevOpsEntityProviderCatalogModule` to `catalogModuleAzureDevOpsEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- c17fa101825: Add branch filter support
+- [`90469c02c8c`](https://github.com/backstage/backstage/commit/90469c02c8c): Renamed `azureDevOpsEntityProviderCatalogModule` to `catalogModuleAzureDevOpsEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`c17fa101825`](https://github.com/backstage/backstage/commit/c17fa101825): Add branch filter support
   https://backstage.io/docs/integrations/azure/discovery
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.9 → 0.2.10)
+### `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.9 → [0.2.10](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket.md#0210))
 
 #### 0.2.10
 
 ##### Patch Changes
 
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.9 → 0.1.10)
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-cloud.md#0110))
 
 #### 0.1.10
 
 ##### Patch Changes
 
-- 90469c02c8c: Renamed `bitbucketCloudEntityProviderCatalogModule` to `catalogModuleBitbucketCloudEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`90469c02c8c`](https://github.com/backstage/backstage/commit/90469c02c8c): Renamed `bitbucketCloudEntityProviderCatalogModule` to `catalogModuleBitbucketCloudEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.7 → 0.1.8)
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.7 → [0.1.8](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-server.md#018))
 
 #### 0.1.8
 
 ##### Patch Changes
 
-- 90469c02c8c: Renamed `bitbucketServerEntityProviderCatalogModule` to `catalogModuleBitbucketServerEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`90469c02c8c`](https://github.com/backstage/backstage/commit/90469c02c8c): Renamed `bitbucketServerEntityProviderCatalogModule` to `catalogModuleBitbucketServerEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.10 → 0.1.11)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.10 → [0.1.11](../../changelogs/@backstage/plugin-catalog-backend-module-gerrit.md#0111))
 
 #### 0.1.11
 
 ##### Patch Changes
 
-- 90469c02c8c: Renamed `gerritEntityProviderCatalogModule` to `catalogModuleGerritEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`90469c02c8c`](https://github.com/backstage/backstage/commit/90469c02c8c): Renamed `gerritEntityProviderCatalogModule` to `catalogModuleGerritEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-github` (0.2.5 → 0.2.6)
+### `@backstage/plugin-catalog-backend-module-github` (0.2.5 → [0.2.6](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#026))
 
 #### 0.2.6
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 90469c02c8c: Renamed `githubEntityProviderCatalogModule` to `catalogModuleGithubEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`90469c02c8c`](https://github.com/backstage/backstage/commit/90469c02c8c): Renamed `githubEntityProviderCatalogModule` to `catalogModuleGithubEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-gitlab` (0.1.13 → 0.1.14)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.1.13 → [0.1.14](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#0114))
 
 #### 0.1.14
 
 ##### Patch Changes
 
-- 90469c02c8c: Renamed `gitlabDiscoveryEntityProviderCatalogModule` to `catalogModuleGitlabDiscoveryEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- af1095f1e11: The configuration key `branch` of the `GitlabDiscoveryEntityProvider` has been deprecated in favor of the configuration key `fallbackBranch`.
+- [`90469c02c8c`](https://github.com/backstage/backstage/commit/90469c02c8c): Renamed `gitlabDiscoveryEntityProviderCatalogModule` to `catalogModuleGitlabDiscoveryEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`af1095f1e11`](https://github.com/backstage/backstage/commit/af1095f1e11): The configuration key `branch` of the `GitlabDiscoveryEntityProvider` has been deprecated in favor of the configuration key `fallbackBranch`.
   It will be reused in future release to enforce a concrete branch to be used in catalog file discovery.
   To migrate to the new configuration value, rename `branch` to `fallbackBranch`.
-- be129f8f3cd: filter gitlab groups by prefix
+- [`be129f8f3cd`](https://github.com/backstage/backstage/commit/be129f8f3cd): filter gitlab groups by prefix
 
-### `@backstage/plugin-catalog-backend-module-ldap` (0.5.9 → 0.5.10)
+### `@backstage/plugin-catalog-backend-module-ldap` (0.5.9 → [0.5.10](../../changelogs/@backstage/plugin-catalog-backend-module-ldap.md#0510))
 
 #### 0.5.10
 
 ##### Patch Changes
 
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.1 → 0.5.2)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.1 → [0.5.2](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#052))
 
 #### 0.5.2
 
 ##### Patch Changes
 
-- a4ebd513527: Revert using `baseUrl` for MS Graph provider as it breaks token retrieval
-- 26eef93c547: Fixed msgraph catalog backend to use user.select option when fetching user from AzureAD
-- 90469c02c8c: Renamed `microsoftGraphOrgEntityProviderCatalogModule` to `catalogModuleMicrosoftGraphOrgEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 2c234a89325: properly support custom graph api URL
+- [`a4ebd513527`](https://github.com/backstage/backstage/commit/a4ebd513527): Revert using `baseUrl` for MS Graph provider as it breaks token retrieval
+- [`26eef93c547`](https://github.com/backstage/backstage/commit/26eef93c547): Fixed msgraph catalog backend to use user.select option when fetching user from AzureAD
+- [`90469c02c8c`](https://github.com/backstage/backstage/commit/90469c02c8c): Renamed `microsoftGraphOrgEntityProviderCatalogModule` to `catalogModuleMicrosoftGraphOrgEntityProvider` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`2c234a89325`](https://github.com/backstage/backstage/commit/2c234a89325): properly support custom graph api URL
 
-### `@backstage/plugin-catalog-common` (1.0.11 → 1.0.12)
+### `@backstage/plugin-catalog-common` (1.0.11 → [1.0.12](../../changelogs/@backstage/plugin-catalog-common.md#1012))
 
 #### 1.0.12
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
 
-### `@backstage/plugin-catalog-graphql` (0.3.18 → 0.3.19)
+### `@backstage/plugin-catalog-graphql` (0.3.18 → [0.3.19](../../changelogs/@backstage/plugin-catalog-graphql.md#0319))
 
 #### 0.3.19
 
 ##### Patch Changes
 
-- b990021ddeb: Updated dependency `@graphql-codegen/cli` to `^3.0.0`.
+- [`b990021ddeb`](https://github.com/backstage/backstage/commit/b990021ddeb): Updated dependency `@graphql-codegen/cli` to `^3.0.0`.
   Updated dependency `@graphql-codegen/graphql-modules-preset` to `^3.0.0`.
   Updated dependency `@graphql-codegen/typescript` to `^3.0.0`.
   Updated dependency `@graphql-codegen/typescript-resolvers` to `^3.0.0`.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog-import` (0.9.5 → 0.9.6)
+### `@backstage/plugin-catalog-import` (0.9.5 → [0.9.6](../../changelogs/@backstage/plugin-catalog-import.md#096))
 
 #### 0.9.6
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-catalog-node` (1.3.3 → 1.3.4)
+### `@backstage/plugin-catalog-node` (1.3.3 → [1.3.4](../../changelogs/@backstage/plugin-catalog-node.md#134))
 
 #### 1.3.4
 
 ##### Patch Changes
 
-- e675f902980: Added `locationSpecToMetadataName` and `locationSpecToLocationEntity` as their new home, moved over from the backend package where they now are marked as deprecated.
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
+- [`e675f902980`](https://github.com/backstage/backstage/commit/e675f902980): Added `locationSpecToMetadataName` and `locationSpecToLocationEntity` as their new home, moved over from the backend package where they now are marked as deprecated.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
 
-### `@backstage/plugin-circleci` (0.3.15 → 0.3.16)
-
-#### 0.3.16
-
-##### Patch Changes
-
-- c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-
-### `@backstage/plugin-cloudbuild` (0.3.15 → 0.3.16)
+### `@backstage/plugin-circleci` (0.3.15 → [0.3.16](../../changelogs/@backstage/plugin-circleci.md#0316))
 
 #### 0.3.16
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`c10384a9235`](https://github.com/backstage/backstage/commit/c10384a9235): Switch to using `LinkButton` instead of the deprecated `Button`
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-code-climate` (0.1.15 → 0.1.16)
+### `@backstage/plugin-cloudbuild` (0.3.15 → [0.3.16](../../changelogs/@backstage/plugin-cloudbuild.md#0316))
+
+#### 0.3.16
+
+##### Patch Changes
+
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+
+### `@backstage/plugin-code-climate` (0.1.15 → [0.1.16](../../changelogs/@backstage/plugin-code-climate.md#0116))
 
 #### 0.1.16
 
 ##### Patch Changes
 
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-code-coverage` (0.2.8 → 0.2.9)
-
-#### 0.2.9
-
-##### Patch Changes
-
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-
-### `@backstage/plugin-code-coverage-backend` (0.2.8 → 0.2.9)
+### `@backstage/plugin-code-coverage` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-code-coverage.md#029))
 
 #### 0.2.9
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-codescene` (0.1.10 → 0.1.11)
+### `@backstage/plugin-code-coverage-backend` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-code-coverage-backend.md#029))
+
+#### 0.2.9
+
+##### Patch Changes
+
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+
+### `@backstage/plugin-codescene` (0.1.10 → [0.1.11](../../changelogs/@backstage/plugin-codescene.md#0111))
 
 #### 0.1.11
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-config-schema` (0.1.38 → 0.1.39)
+### `@backstage/plugin-config-schema` (0.1.38 → [0.1.39](../../changelogs/@backstage/plugin-config-schema.md#0139))
 
 #### 0.1.39
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-cost-insights` (0.12.4 → 0.12.5)
+### `@backstage/plugin-cost-insights` (0.12.4 → [0.12.5](../../changelogs/@backstage/plugin-cost-insights.md#0125))
 
 #### 0.12.5
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-entity-feedback` (0.1.0 → 0.1.1)
-
-#### 0.1.1
-
-##### Patch Changes
-
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-
-### `@backstage/plugin-entity-feedback-backend` (0.1.0 → 0.1.1)
+### `@backstage/plugin-entity-feedback` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-entity-feedback.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-entity-validation` (0.1.0 → 0.1.1)
+### `@backstage/plugin-entity-feedback-backend` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-entity-feedback-backend.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 47d246691ac: Fixed bug in EntityVaidation plugin where string in text box was unable to be updated.
-- c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-events-backend` (0.2.3 → 0.2.4)
+### `@backstage/plugin-entity-validation` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-entity-validation.md#011))
+
+#### 0.1.1
+
+##### Patch Changes
+
+- [`47d246691ac`](https://github.com/backstage/backstage/commit/47d246691ac): Fixed bug in EntityVaidation plugin where string in text box was unable to be updated.
+- [`c10384a9235`](https://github.com/backstage/backstage/commit/c10384a9235): Switch to using `LinkButton` instead of the deprecated `Button`
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+
+### `@backstage/plugin-events-backend` (0.2.3 → [0.2.4](../../changelogs/@backstage/plugin-events-backend.md#024))
 
 #### 0.2.4
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- a5de745ac17: Updated README instructions
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`a5de745ac17`](https://github.com/backstage/backstage/commit/a5de745ac17): Updated README instructions
 
-### `@backstage/plugin-events-backend-module-aws-sqs` (0.1.4 → 0.1.5)
-
-#### 0.1.5
-
-##### Patch Changes
-
-- a5de745ac17: Renamed `awsSqsConsumingEventPublisherEventsModule` to `eventsModuleAwsSqsConsumingEventPublisher` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-
-### `@backstage/plugin-events-backend-module-azure` (0.1.4 → 0.1.5)
+### `@backstage/plugin-events-backend-module-aws-sqs` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-events-backend-module-aws-sqs.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- a5de745ac17: Renamed `azureDevOpsEventRouterEventsModule` to `eventsModuleAzureDevOpsEventRouter` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
+- [`a5de745ac17`](https://github.com/backstage/backstage/commit/a5de745ac17): Renamed `awsSqsConsumingEventPublisherEventsModule` to `eventsModuleAwsSqsConsumingEventPublisher` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
 
-### `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.1.4 → 0.1.5)
-
-#### 0.1.5
-
-##### Patch Changes
-
-- a5de745ac17: Renamed `bitbucketCloudEventRouterEventsModule` to `eventsModuleBitbucketCloudEventRouter` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-
-### `@backstage/plugin-events-backend-module-gerrit` (0.1.4 → 0.1.5)
+### `@backstage/plugin-events-backend-module-azure` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-events-backend-module-azure.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- a5de745ac17: Renamed `gerritEventRouterEventsModule` to `eventsModuleGerritEventRouter` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
+- [`a5de745ac17`](https://github.com/backstage/backstage/commit/a5de745ac17): Renamed `azureDevOpsEventRouterEventsModule` to `eventsModuleAzureDevOpsEventRouter` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
 
-### `@backstage/plugin-events-backend-module-github` (0.1.4 → 0.1.5)
-
-#### 0.1.5
-
-##### Patch Changes
-
-- a5de745ac17: Renamed `githubEventRouterEventsModule` to `eventsModuleGithubEventRouter` and `githubWebhookEventsModule` to `eventsModuleGithubWebhook`, to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-
-### `@backstage/plugin-events-backend-module-gitlab` (0.1.4 → 0.1.5)
+### `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-events-backend-module-bitbucket-cloud.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- a5de745ac17: Renamed `gitlabEventRouterEventsModule` to `eventsModuleGitlabEventRouter` and `gitlabWebhookEventsModule` to `eventsModuleGitlabWebhook` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
+- [`a5de745ac17`](https://github.com/backstage/backstage/commit/a5de745ac17): Renamed `bitbucketCloudEventRouterEventsModule` to `eventsModuleBitbucketCloudEventRouter` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
 
-### `@backstage/plugin-events-node` (0.2.3 → 0.2.4)
+### `@backstage/plugin-events-backend-module-gerrit` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-events-backend-module-gerrit.md#015))
+
+#### 0.1.5
+
+##### Patch Changes
+
+- [`a5de745ac17`](https://github.com/backstage/backstage/commit/a5de745ac17): Renamed `gerritEventRouterEventsModule` to `eventsModuleGerritEventRouter` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+
+### `@backstage/plugin-events-backend-module-github` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-events-backend-module-github.md#015))
+
+#### 0.1.5
+
+##### Patch Changes
+
+- [`a5de745ac17`](https://github.com/backstage/backstage/commit/a5de745ac17): Renamed `githubEventRouterEventsModule` to `eventsModuleGithubEventRouter` and `githubWebhookEventsModule` to `eventsModuleGithubWebhook`, to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+
+### `@backstage/plugin-events-backend-module-gitlab` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-events-backend-module-gitlab.md#015))
+
+#### 0.1.5
+
+##### Patch Changes
+
+- [`a5de745ac17`](https://github.com/backstage/backstage/commit/a5de745ac17): Renamed `gitlabEventRouterEventsModule` to `eventsModuleGitlabEventRouter` and `gitlabWebhookEventsModule` to `eventsModuleGitlabWebhook` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+
+### `@backstage/plugin-events-node` (0.2.3 → [0.2.4](../../changelogs/@backstage/plugin-events-node.md#024))
 
 #### 0.2.4
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
 
-### `@backstage/plugin-explore` (0.4.0 → 0.4.1)
+### `@backstage/plugin-explore` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-explore.md#041))
 
 #### 0.4.1
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 3f75b7607ca: Add ability to pass icon as function to have ability to customize it by search item
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`c10384a9235`](https://github.com/backstage/backstage/commit/c10384a9235): Switch to using `LinkButton` instead of the deprecated `Button`
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`3f75b7607ca`](https://github.com/backstage/backstage/commit/3f75b7607ca): Add ability to pass icon as function to have ability to customize it by search item
 
-### `@backstage/plugin-fossa` (0.2.47 → 0.2.48)
+### `@backstage/plugin-fossa` (0.2.47 → [0.2.48](../../changelogs/@backstage/plugin-fossa.md#0248))
 
 #### 0.2.48
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-gcalendar` (0.3.11 → 0.3.12)
+### `@backstage/plugin-gcalendar` (0.3.11 → [0.3.12](../../changelogs/@backstage/plugin-gcalendar.md#0312))
 
 #### 0.3.12
 
 ##### Patch Changes
 
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-gcp-projects` (0.3.34 → 0.3.35)
+### `@backstage/plugin-gcp-projects` (0.3.34 → [0.3.35](../../changelogs/@backstage/plugin-gcp-projects.md#0335))
 
 #### 0.3.35
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-git-release-manager` (0.3.28 → 0.3.29)
+### `@backstage/plugin-git-release-manager` (0.3.28 → [0.3.29](../../changelogs/@backstage/plugin-git-release-manager.md#0329))
 
 #### 0.3.29
 
 ##### Patch Changes
 
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-github-actions` (0.5.15 → 0.5.16)
+### `@backstage/plugin-github-actions` (0.5.15 → [0.5.16](../../changelogs/@backstage/plugin-github-actions.md#0516))
 
 #### 0.5.16
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-github-deployments` (0.1.46 → 0.1.47)
+### `@backstage/plugin-github-deployments` (0.1.46 → [0.1.47](../../changelogs/@backstage/plugin-github-deployments.md#0147))
 
 #### 0.1.47
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-github-issues` (0.2.4 → 0.2.5)
+### `@backstage/plugin-github-issues` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-github-issues.md#025))
 
 #### 0.2.5
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-github-pull-requests-board` (0.1.9 → 0.1.10)
+### `@backstage/plugin-github-pull-requests-board` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-github-pull-requests-board.md#0110))
 
 #### 0.1.10
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-gitops-profiles` (0.3.33 → 0.3.34)
+### `@backstage/plugin-gitops-profiles` (0.3.33 → [0.3.34](../../changelogs/@backstage/plugin-gitops-profiles.md#0334))
 
 #### 0.3.34
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-gocd` (0.1.21 → 0.1.22)
+### `@backstage/plugin-gocd` (0.1.21 → [0.1.22](../../changelogs/@backstage/plugin-gocd.md#0122))
 
 #### 0.1.22
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-graphiql` (0.2.47 → 0.2.48)
+### `@backstage/plugin-graphiql` (0.2.47 → [0.2.48](../../changelogs/@backstage/plugin-graphiql.md#0248))
 
 #### 0.2.48
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-graphql-backend` (0.1.32 → 0.1.33)
+### `@backstage/plugin-graphql-backend` (0.1.32 → [0.1.33](../../changelogs/@backstage/plugin-graphql-backend.md#0133))
 
 #### 0.1.33
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-graphql-voyager` (0.1.0 → 0.1.1)
+### `@backstage/plugin-graphql-voyager` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-graphql-voyager.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-home` (0.4.31 → 0.4.32)
+### `@backstage/plugin-home` (0.4.31 → [0.4.32](../../changelogs/@backstage/plugin-home.md#0432))
 
 #### 0.4.32
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-ilert` (0.2.4 → 0.2.5)
+### `@backstage/plugin-ilert` (0.2.4 → [0.2.5](../../changelogs/@backstage/plugin-ilert.md#025))
 
 #### 0.2.5
 
 ##### Patch Changes
 
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-jenkins` (0.7.14 → 0.7.15)
+### `@backstage/plugin-jenkins` (0.7.14 → [0.7.15](../../changelogs/@backstage/plugin-jenkins.md#0715))
 
 #### 0.7.15
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-jenkins-backend` (0.1.32 → 0.1.33)
+### `@backstage/plugin-jenkins-backend` (0.1.32 → [0.1.33](../../changelogs/@backstage/plugin-jenkins-backend.md#0133))
 
 #### 0.1.33
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-jenkins-common` (0.1.13 → 0.1.14)
+### `@backstage/plugin-jenkins-common` (0.1.13 → [0.1.14](../../changelogs/@backstage/plugin-jenkins-common.md#0114))
 
 #### 0.1.14
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
 
-### `@backstage/plugin-kafka` (0.3.15 → 0.3.16)
+### `@backstage/plugin-kafka` (0.3.15 → [0.3.16](../../changelogs/@backstage/plugin-kafka.md#0316))
 
 #### 0.3.16
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-kubernetes` (0.7.8 → 0.7.9)
+### `@backstage/plugin-kubernetes` (0.7.8 → [0.7.9](../../changelogs/@backstage/plugin-kubernetes.md#079))
 
 #### 0.7.9
 
 ##### Patch Changes
 
-- 8adeb19b37d: GitLab can now be used as an `oidcTokenProvider` for Kubernetes clusters
-- c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`8adeb19b37d`](https://github.com/backstage/backstage/commit/8adeb19b37d): GitLab can now be used as an `oidcTokenProvider` for Kubernetes clusters
+- [`c10384a9235`](https://github.com/backstage/backstage/commit/c10384a9235): Switch to using `LinkButton` instead of the deprecated `Button`
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-kubernetes-backend` (0.9.3 → 0.9.4)
+### `@backstage/plugin-kubernetes-backend` (0.9.3 → [0.9.4](../../changelogs/@backstage/plugin-kubernetes-backend.md#094))
 
 #### 0.9.4
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-lighthouse` (0.4.0 → 0.4.1)
+### `@backstage/plugin-lighthouse` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-lighthouse.md#041))
 
 #### 0.4.1
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-lighthouse-backend` (0.1.0 → 0.1.1)
-
-#### 0.1.1
-
-##### Patch Changes
-
-- 46829bc2f0e: Update README.md; typo with plugin name & removed unneeded "import { Router } from 'express';"
-
-### `@backstage/plugin-linguist` (0.1.0 → 0.1.1)
+### `@backstage/plugin-lighthouse-backend` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-lighthouse-backend.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- ab997ce243f: Updated `README.md` to removed images with refresh button as this feature was not implemented in the current version
+- [`46829bc2f0e`](https://github.com/backstage/backstage/commit/46829bc2f0e): Update README.md; typo with plugin name & removed unneeded "import { Router } from 'express';"
 
-### `@backstage/plugin-microsoft-calendar` (0.1.0 → 0.1.1)
+### `@backstage/plugin-linguist` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-linguist.md#011))
 
 #### 0.1.1
 
 ##### Patch Changes
 
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`ab997ce243f`](https://github.com/backstage/backstage/commit/ab997ce243f): Updated `README.md` to removed images with refresh button as this feature was not implemented in the current version
 
-### `@backstage/plugin-newrelic` (0.3.33 → 0.3.34)
+### `@backstage/plugin-microsoft-calendar` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-microsoft-calendar.md#011))
+
+#### 0.1.1
+
+##### Patch Changes
+
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+
+### `@backstage/plugin-newrelic` (0.3.33 → [0.3.34](../../changelogs/@backstage/plugin-newrelic.md#0334))
 
 #### 0.3.34
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 66fdf05a1ef: Updated installation instructions
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`66fdf05a1ef`](https://github.com/backstage/backstage/commit/66fdf05a1ef): Updated installation instructions
 
-### `@backstage/plugin-newrelic-dashboard` (0.2.8 → 0.2.9)
+### `@backstage/plugin-newrelic-dashboard` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-newrelic-dashboard.md#029))
 
 #### 0.2.9
 
 ##### Patch Changes
 
-- cb8ec97cdeb: Change black & white colors to be theme aware
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
 
-### `@backstage/plugin-org` (0.6.5 → 0.6.6)
+### `@backstage/plugin-org` (0.6.5 → [0.6.6](../../changelogs/@backstage/plugin-org.md#066))
 
 #### 0.6.6
 
 ##### Patch Changes
 
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 36bccb5252f: Fix small UI-glitch in MemberListCard
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- a06fcac4040: Add styling to the `MembersListCard` and `ComponentsGrid` to handle overflow text.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`36bccb5252f`](https://github.com/backstage/backstage/commit/36bccb5252f): Fix small UI-glitch in MemberListCard
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`a06fcac4040`](https://github.com/backstage/backstage/commit/a06fcac4040): Add styling to the `MembersListCard` and `ComponentsGrid` to handle overflow text.
 
-### `@backstage/plugin-org-react` (0.1.4 → 0.1.5)
+### `@backstage/plugin-org-react` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-org-react.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-pagerduty` (0.5.8 → 0.5.9)
+### `@backstage/plugin-pagerduty` (0.5.8 → [0.5.9](../../changelogs/@backstage/plugin-pagerduty.md#059))
 
 #### 0.5.9
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 9c08ecbaa4b: Update readme link for discord channel
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`9c08ecbaa4b`](https://github.com/backstage/backstage/commit/9c08ecbaa4b): Update readme link for discord channel
 
-### `@backstage/plugin-periskop` (0.1.13 → 0.1.14)
-
-#### 0.1.14
-
-##### Patch Changes
-
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-
-### `@backstage/plugin-periskop-backend` (0.1.13 → 0.1.14)
+### `@backstage/plugin-periskop` (0.1.13 → [0.1.14](../../changelogs/@backstage/plugin-periskop.md#0114))
 
 #### 0.1.14
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-permission-backend` (0.5.17 → 0.5.18)
+### `@backstage/plugin-periskop-backend` (0.1.13 → [0.1.14](../../changelogs/@backstage/plugin-periskop-backend.md#0114))
+
+#### 0.1.14
+
+##### Patch Changes
+
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+
+### `@backstage/plugin-permission-backend` (0.5.17 → [0.5.18](../../changelogs/@backstage/plugin-permission-backend.md#0518))
 
 #### 0.5.18
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-permission-common` (0.7.3 → 0.7.4)
+### `@backstage/plugin-permission-common` (0.7.3 → [0.7.4](../../changelogs/@backstage/plugin-permission-common.md#074))
 
 #### 0.7.4
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-permission-node` (0.7.5 → 0.7.6)
+### `@backstage/plugin-permission-node` (0.7.5 → [0.7.6](../../changelogs/@backstage/plugin-permission-node.md#076))
 
 #### 0.7.6
 
 ##### Patch Changes
 
-- 27a103ca07b: Changed the `createPermissionIntegrationRouter` API to allow `getResources`, `resourceType` and `rules` to be optional
-- 37e9215c793: Update the service-to-service auth docs URL in error message.
+- [`27a103ca07b`](https://github.com/backstage/backstage/commit/27a103ca07b): Changed the `createPermissionIntegrationRouter` API to allow `getResources`, `resourceType` and `rules` to be optional
+- [`37e9215c793`](https://github.com/backstage/backstage/commit/37e9215c793): Update the service-to-service auth docs URL in error message.
   ``
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-playlist` (0.1.6 → 0.1.7)
+### `@backstage/plugin-playlist` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-playlist.md#017))
 
 #### 0.1.7
 
 ##### Patch Changes
 
-- c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
-- 122a37a880e: Internal update to work with newer versions of react-router
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`c10384a9235`](https://github.com/backstage/backstage/commit/c10384a9235): Switch to using `LinkButton` instead of the deprecated `Button`
+- [`122a37a880e`](https://github.com/backstage/backstage/commit/122a37a880e): Internal update to work with newer versions of react-router
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-playlist-backend` (0.2.5 → 0.2.6)
+### `@backstage/plugin-playlist-backend` (0.2.5 → [0.2.6](../../changelogs/@backstage/plugin-playlist-backend.md#026))
 
 #### 0.2.6
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-proxy-backend` (0.2.36 → 0.2.37)
+### `@backstage/plugin-proxy-backend` (0.2.36 → [0.2.37](../../changelogs/@backstage/plugin-proxy-backend.md#0237))
 
 #### 0.2.37
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 3e3eea4bc7e: The proxy-backend plugin now supports reviving request bodies that have previously been consumed by an express middleware (e.g. `express.json()`). This is done by setting `reviveConsumedRequestBodies: true` on the proxy `RouterOptions`. In order to preserve the current behavior, the proxy will **not** revive request bodies by default.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`3e3eea4bc7e`](https://github.com/backstage/backstage/commit/3e3eea4bc7e): The proxy-backend plugin now supports reviving request bodies that have previously been consumed by an express middleware (e.g. `express.json()`). This is done by setting `reviveConsumedRequestBodies: true` on the proxy `RouterOptions`. In order to preserve the current behavior, the proxy will **not** revive request bodies by default.
 
   The following is an example of a proxy `createRouter` invocation that revives request bodies:
 
@@ -1625,301 +1625,301 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
   });
   ```
 
-- 4acd93dae1d: Ensure that `@backstage/plugin-proxy-backend` logs the requests that it proxies when log level is set to `debug`.
+- [`4acd93dae1d`](https://github.com/backstage/backstage/commit/4acd93dae1d): Ensure that `@backstage/plugin-proxy-backend` logs the requests that it proxies when log level is set to `debug`.
 
-### `@backstage/plugin-rollbar` (0.4.15 → 0.4.16)
+### `@backstage/plugin-rollbar` (0.4.15 → [0.4.16](../../changelogs/@backstage/plugin-rollbar.md#0416))
 
 #### 0.4.16
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-rollbar-backend` (0.1.39 → 0.1.40)
+### `@backstage/plugin-rollbar-backend` (0.1.39 → [0.1.40](../../changelogs/@backstage/plugin-rollbar-backend.md#0140))
 
 #### 0.1.40
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.17 → 0.2.18)
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.17 → [0.2.18](../../changelogs/@backstage/plugin-scaffolder-backend-module-cookiecutter.md#0218))
 
 #### 0.2.18
 
 ##### Patch Changes
 
-- 62414770ead: allow container runner to be undefined in cookiecutter plugin
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`62414770ead`](https://github.com/backstage/backstage/commit/62414770ead): allow container runner to be undefined in cookiecutter plugin
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-search` (1.1.0 → 1.1.1)
+### `@backstage/plugin-search` (1.1.0 → [1.1.1](../../changelogs/@backstage/plugin-search.md#111))
 
 #### 1.1.1
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-search-backend-module-elasticsearch` (1.1.3 → 1.1.4)
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.1.3 → [1.1.4](../../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#114))
 
 #### 1.1.4
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
 
-### `@backstage/plugin-search-react` (1.5.0 → 1.5.1)
+### `@backstage/plugin-search-react` (1.5.0 → [1.5.1](../../changelogs/@backstage/plugin-search-react.md#151))
 
 #### 1.5.1
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 553f3c95011: Correctly disable next button in `SearchPagination` on last page
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`553f3c95011`](https://github.com/backstage/backstage/commit/553f3c95011): Correctly disable next button in `SearchPagination` on last page
 
-### `@backstage/plugin-sentry` (0.5.0 → 0.5.1)
+### `@backstage/plugin-sentry` (0.5.0 → [0.5.1](../../changelogs/@backstage/plugin-sentry.md#051))
 
 #### 0.5.1
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-shortcuts` (0.3.7 → 0.3.8)
+### `@backstage/plugin-shortcuts` (0.3.7 → [0.3.8](../../changelogs/@backstage/plugin-shortcuts.md#038))
 
 #### 0.3.8
 
 ##### Patch Changes
 
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 7c38e565d1f: Fixed bug in LocalStoredShortcuts client where adding new Shortcut results in replacing entire shortcut list.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`7c38e565d1f`](https://github.com/backstage/backstage/commit/7c38e565d1f): Fixed bug in LocalStoredShortcuts client where adding new Shortcut results in replacing entire shortcut list.
 
   Refactored LocalStoredShortcuts client to listen to `storageApi` updates to ensure that local state is always up to date.
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-sonarqube` (0.6.4 → 0.6.5)
+### `@backstage/plugin-sonarqube` (0.6.4 → [0.6.5](../../changelogs/@backstage/plugin-sonarqube.md#065))
 
 #### 0.6.5
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 8ae65a0bc1d: Moved imports from `/alpha` to main public exports.
-- d3d624e8e8d: Show a more appropriate icon if there are no code smells and/or vulnerabilities.
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`8ae65a0bc1d`](https://github.com/backstage/backstage/commit/8ae65a0bc1d): Moved imports from `/alpha` to main public exports.
+- [`d3d624e8e8d`](https://github.com/backstage/backstage/commit/d3d624e8e8d): Show a more appropriate icon if there are no code smells and/or vulnerabilities.
 
-### `@backstage/plugin-sonarqube-backend` (0.1.7 → 0.1.8)
+### `@backstage/plugin-sonarqube-backend` (0.1.7 → [0.1.8](../../changelogs/@backstage/plugin-sonarqube-backend.md#018))
 
 #### 0.1.8
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-sonarqube-react` (0.1.3 → 0.1.4)
+### `@backstage/plugin-sonarqube-react` (0.1.3 → [0.1.4](../../changelogs/@backstage/plugin-sonarqube-react.md#014))
 
 #### 0.1.4
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 8ae65a0bc1d: Moved imports from `/alpha` to main public exports.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`8ae65a0bc1d`](https://github.com/backstage/backstage/commit/8ae65a0bc1d): Moved imports from `/alpha` to main public exports.
 
-### `@backstage/plugin-splunk-on-call` (0.4.4 → 0.4.5)
+### `@backstage/plugin-splunk-on-call` (0.4.4 → [0.4.5](../../changelogs/@backstage/plugin-splunk-on-call.md#045))
 
 #### 0.4.5
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-stack-overflow` (0.1.11 → 0.1.12)
-
-#### 0.1.12
-
-##### Patch Changes
-
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 3ef5fb09ca5: Export api ref and StackOverflowApi type
-
-### `@backstage/plugin-stack-overflow-backend` (0.1.11 → 0.1.12)
+### `@backstage/plugin-stack-overflow` (0.1.11 → [0.1.12](../../changelogs/@backstage/plugin-stack-overflow.md#0112))
 
 #### 0.1.12
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`3ef5fb09ca5`](https://github.com/backstage/backstage/commit/3ef5fb09ca5): Export api ref and StackOverflowApi type
 
-### `@backstage/plugin-tech-insights` (0.3.7 → 0.3.8)
+### `@backstage/plugin-stack-overflow-backend` (0.1.11 → [0.1.12](../../changelogs/@backstage/plugin-stack-overflow-backend.md#0112))
+
+#### 0.1.12
+
+##### Patch Changes
+
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+
+### `@backstage/plugin-tech-insights` (0.3.7 → [0.3.8](../../changelogs/@backstage/plugin-tech-insights.md#038))
 
 #### 0.3.8
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-tech-insights-backend` (0.5.8 → 0.5.9)
+### `@backstage/plugin-tech-insights-backend` (0.5.8 → [0.5.9](../../changelogs/@backstage/plugin-tech-insights-backend.md#059))
 
 #### 0.5.9
 
 ##### Patch Changes
 
-- f244b589163: Add DB index to improve latency of latest fact query
+- [`f244b589163`](https://github.com/backstage/backstage/commit/f244b589163): Add DB index to improve latency of latest fact query
 
-### `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.26 → 0.1.27)
+### `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.26 → [0.1.27](../../changelogs/@backstage/plugin-tech-insights-backend-module-jsonfc.md#0127))
 
 #### 0.1.27
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
 
-### `@backstage/plugin-tech-radar` (0.6.1 → 0.6.2)
+### `@backstage/plugin-tech-radar` (0.6.1 → [0.6.2](../../changelogs/@backstage/plugin-tech-radar.md#062))
 
 #### 0.6.2
 
 ##### Patch Changes
 
-- e14dcfa4994: Update colors to match Zalando's tech radar, also add coloring on title and legend to match ring color.
-- cb8ec97cdeb: Change black & white colors to be theme aware
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`e14dcfa4994`](https://github.com/backstage/backstage/commit/e14dcfa4994): Update colors to match Zalando's tech radar, also add coloring on title and legend to match ring color.
+- [`cb8ec97cdeb`](https://github.com/backstage/backstage/commit/cb8ec97cdeb): Change black & white colors to be theme aware
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-techdocs-addons-test-utils` (1.0.10 → 1.0.11)
-
-#### 1.0.11
-
-##### Patch Changes
-
-- 2b00d8a225c: Fix bug/problem with test helper
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-
-### `@backstage/plugin-techdocs-module-addons-contrib` (1.0.10 → 1.0.11)
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.10 → [1.0.11](../../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#1011))
 
 #### 1.0.11
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 37cf85fb85c: Fixed bug in IssueLink component where the URL was not generated properly when the repository was located inside a Gitlab subgroup
+- [`2b00d8a225c`](https://github.com/backstage/backstage/commit/2b00d8a225c): Fix bug/problem with test helper
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-techdocs-react` (1.1.3 → 1.1.4)
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.0.10 → [1.0.11](../../changelogs/@backstage/plugin-techdocs-module-addons-contrib.md#1011))
+
+#### 1.0.11
+
+##### Patch Changes
+
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`37cf85fb85c`](https://github.com/backstage/backstage/commit/37cf85fb85c): Fixed bug in IssueLink component where the URL was not generated properly when the repository was located inside a Gitlab subgroup
+
+### `@backstage/plugin-techdocs-react` (1.1.3 → [1.1.4](../../changelogs/@backstage/plugin-techdocs-react.md#114))
 
 #### 1.1.4
 
 ##### Patch Changes
 
-- 65454876fb2: Minor API report tweaks
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 8adfda60ae1: Updated dependency `jss` to `~10.10.0`.
+- [`65454876fb2`](https://github.com/backstage/backstage/commit/65454876fb2): Minor API report tweaks
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`8adfda60ae1`](https://github.com/backstage/backstage/commit/8adfda60ae1): Updated dependency `jss` to `~10.10.0`.
 
-### `@backstage/plugin-todo` (0.2.17 → 0.2.18)
+### `@backstage/plugin-todo` (0.2.17 → [0.2.18](../../changelogs/@backstage/plugin-todo.md#0218))
 
 #### 0.2.18
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-todo-backend` (0.1.39 → 0.1.40)
+### `@backstage/plugin-todo-backend` (0.1.39 → [0.1.40](../../changelogs/@backstage/plugin-todo-backend.md#0140))
 
 #### 0.1.40
 
 ##### Patch Changes
 
-- 4120513412a: todo-backend is now exposed as a plugin which uses the new plugin system
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`4120513412a`](https://github.com/backstage/backstage/commit/4120513412a): todo-backend is now exposed as a plugin which uses the new plugin system
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-user-settings` (0.7.0 → 0.7.1)
+### `@backstage/plugin-user-settings` (0.7.0 → [0.7.1](../../changelogs/@backstage/plugin-user-settings.md#071))
 
 #### 0.7.1
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-vault` (0.1.9 → 0.1.10)
+### `@backstage/plugin-vault` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-vault.md#0110))
 
 #### 0.1.10
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-vault-backend` (0.2.9 → 0.2.10)
+### `@backstage/plugin-vault-backend` (0.2.9 → [0.2.10](../../changelogs/@backstage/plugin-vault-backend.md#0210))
 
 #### 0.2.10
 
 ##### Patch Changes
 
-- 66b3a3956b8: Ignore the `eslint` error
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`66b3a3956b8`](https://github.com/backstage/backstage/commit/66b3a3956b8): Ignore the `eslint` error
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/plugin-xcmetrics` (0.2.35 → 0.2.36)
+### `@backstage/plugin-xcmetrics` (0.2.35 → [0.2.36](../../changelogs/@backstage/plugin-xcmetrics.md#0236))
 
 #### 0.2.36
 
 ##### Patch Changes
 
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
 
-### `@backstage/repo-tools` (0.1.2 → 0.1.3)
+### `@backstage/repo-tools` (0.1.2 → [0.1.3](../../changelogs/@backstage/repo-tools.md#013))
 
 #### 0.1.3
 
 ##### Patch Changes
 
-- 32a4a05838c: Tweaked type dependency check to trim wildcard type imports.
-- 6ba8faf22ac: The API report generation process is now able to detect and generate reports for additional entry points declared in the package `"exports"` field.
+- [`32a4a05838c`](https://github.com/backstage/backstage/commit/32a4a05838c): Tweaked type dependency check to trim wildcard type imports.
+- [`6ba8faf22ac`](https://github.com/backstage/backstage/commit/6ba8faf22ac): The API report generation process is now able to detect and generate reports for additional entry points declared in the package `"exports"` field.
 
-### `@backstage/test-utils` (1.2.5 → 1.2.6)
+### `@backstage/test-utils` (1.2.5 → [1.2.6](../../changelogs/@backstage/test-utils.md#126))
 
 #### 1.2.6
 
 ##### Patch Changes
 
-- 928a12a9b3e: Internal refactor of `/alpha` exports.
-- 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- 482dae5de1c: Updated link to docs.
+- [`928a12a9b3e`](https://github.com/backstage/backstage/commit/928a12a9b3e): Internal refactor of `/alpha` exports.
+- [`52b0022dab7`](https://github.com/backstage/backstage/commit/52b0022dab7): Updated dependency `msw` to `^1.0.0`.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
-### `@backstage/theme` (0.2.17 → 0.2.18)
+### `@backstage/theme` (0.2.17 → [0.2.18](../../changelogs/@backstage/theme.md#0218))
 
 #### 0.2.18
 
 ##### Patch Changes
 
-- 482dae5de1c: Updated link to docs.
+- [`482dae5de1c`](https://github.com/backstage/backstage/commit/482dae5de1c): Updated link to docs.
 
 ## Excluded dependency updates
 
-- `@backstage/app-defaults` (1.2.0 → 1.2.1)
-- `@backstage/integration-aws-node` (0.1.1 → 0.1.2)
-- `@backstage/plugin-adr-common` (0.2.6 → 0.2.7)
-- `@backstage/plugin-badges-backend` (0.1.36 → 0.1.37)
-- `@backstage/plugin-bazaar` (0.2.5 → 0.2.6)
-- `@backstage/plugin-bazaar-backend` (0.2.5 → 0.2.6)
-- `@backstage/plugin-catalog-backend-module-openapi` (0.1.8 → 0.1.9)
-- `@backstage/plugin-catalog-graph` (0.2.27 → 0.2.28)
-- `@backstage/plugin-cicd-statistics` (0.1.17 → 0.1.18)
-- `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.11 → 0.1.12)
-- `@backstage/plugin-events-backend-test-utils` (0.1.4 → 0.1.5)
-- `@backstage/plugin-kafka-backend` (0.2.35 → 0.2.36)
-- `@backstage/plugin-kubernetes-common` (0.6.0 → 0.6.1)
-- `@backstage/plugin-lighthouse-common` (0.1.0 → 0.1.1)
-- `@backstage/plugin-permission-react` (0.4.10 → 0.4.11)
-- `@backstage/plugin-playlist-common` (0.1.4 → 0.1.5)
-- `@backstage/plugin-scaffolder-backend-module-rails` (0.4.10 → 0.4.11)
-- `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.2 → 0.1.3)
-- `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.15 → 0.2.16)
-- `@backstage/plugin-scaffolder-common` (1.2.5 → 1.2.6)
-- `@backstage/plugin-scaffolder-node` (0.1.0 → 0.1.1)
-- `@backstage/plugin-search-backend` (1.2.3 → 1.2.4)
-- `@backstage/plugin-search-backend-module-pg` (0.5.3 → 0.5.4)
-- `@backstage/plugin-search-backend-node` (1.1.3 → 1.1.4)
-- `@backstage/plugin-search-common` (1.2.1 → 1.2.2)
-- `@backstage/plugin-tech-insights-node` (0.4.0 → 0.4.1)
-- `@backstage/plugin-user-settings-backend` (0.1.6 → 0.1.7)
+- `@backstage/app-defaults` (1.2.0 → [1.2.1](../../changelogs/@backstage/app-defaults.md#121))
+- `@backstage/integration-aws-node` (0.1.1 → [0.1.2](../../changelogs/@backstage/integration-aws-node.md#012))
+- `@backstage/plugin-adr-common` (0.2.6 → [0.2.7](../../changelogs/@backstage/plugin-adr-common.md#027))
+- `@backstage/plugin-badges-backend` (0.1.36 → [0.1.37](../../changelogs/@backstage/plugin-badges-backend.md#0137))
+- `@backstage/plugin-bazaar` (0.2.5 → [0.2.6](../../changelogs/@backstage/plugin-bazaar.md#026))
+- `@backstage/plugin-bazaar-backend` (0.2.5 → [0.2.6](../../changelogs/@backstage/plugin-bazaar-backend.md#026))
+- `@backstage/plugin-catalog-backend-module-openapi` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#019))
+- `@backstage/plugin-catalog-graph` (0.2.27 → [0.2.28](../../changelogs/@backstage/plugin-catalog-graph.md#0228))
+- `@backstage/plugin-cicd-statistics` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-cicd-statistics.md#0118))
+- `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.11 → [0.1.12](../../changelogs/@backstage/plugin-cicd-statistics-module-gitlab.md#0112))
+- `@backstage/plugin-events-backend-test-utils` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-events-backend-test-utils.md#015))
+- `@backstage/plugin-kafka-backend` (0.2.35 → [0.2.36](../../changelogs/@backstage/plugin-kafka-backend.md#0236))
+- `@backstage/plugin-kubernetes-common` (0.6.0 → [0.6.1](../../changelogs/@backstage/plugin-kubernetes-common.md#061))
+- `@backstage/plugin-lighthouse-common` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-lighthouse-common.md#011))
+- `@backstage/plugin-permission-react` (0.4.10 → [0.4.11](../../changelogs/@backstage/plugin-permission-react.md#0411))
+- `@backstage/plugin-playlist-common` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-playlist-common.md#015))
+- `@backstage/plugin-scaffolder-backend-module-rails` (0.4.10 → [0.4.11](../../changelogs/@backstage/plugin-scaffolder-backend-module-rails.md#0411))
+- `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-scaffolder-backend-module-sentry.md#013))
+- `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.15 → [0.2.16](../../changelogs/@backstage/plugin-scaffolder-backend-module-yeoman.md#0216))
+- `@backstage/plugin-scaffolder-common` (1.2.5 → [1.2.6](../../changelogs/@backstage/plugin-scaffolder-common.md#126))
+- `@backstage/plugin-scaffolder-node` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-scaffolder-node.md#011))
+- `@backstage/plugin-search-backend` (1.2.3 → [1.2.4](../../changelogs/@backstage/plugin-search-backend.md#124))
+- `@backstage/plugin-search-backend-module-pg` (0.5.3 → [0.5.4](../../changelogs/@backstage/plugin-search-backend-module-pg.md#054))
+- `@backstage/plugin-search-backend-node` (1.1.3 → [1.1.4](../../changelogs/@backstage/plugin-search-backend-node.md#114))
+- `@backstage/plugin-search-common` (1.2.1 → [1.2.2](../../changelogs/@backstage/plugin-search-common.md#122))
+- `@backstage/plugin-tech-insights-node` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-tech-insights-node.md#041))
+- `@backstage/plugin-user-settings-backend` (0.1.6 → [0.1.7](../../changelogs/@backstage/plugin-user-settings-backend.md#017))

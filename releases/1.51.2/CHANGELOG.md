@@ -13,6 +13,6 @@ Changes between 1.51.1 and 1.51.2 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.10.1 → 0.10.2)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.10.1 → [0.10.2](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#0102))
 
 _No changelog entries found._

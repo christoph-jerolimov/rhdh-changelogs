@@ -14,10 +14,10 @@ Changes between 1.46.2 and 1.46.3 — 2 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-catalog-graph` (0.5.4 → 0.5.5)
+### `@backstage/plugin-catalog-graph` (0.5.4 → [0.5.5](../../changelogs/@backstage/plugin-catalog-graph.md#055))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search` (1.5.1 → 1.5.2)
+### `@backstage/plugin-search` (1.5.1 → [1.5.2](../../changelogs/@backstage/plugin-search.md#152))
 
 _No changelog entries found._

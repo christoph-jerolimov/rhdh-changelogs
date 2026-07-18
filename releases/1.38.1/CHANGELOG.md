@@ -16,18 +16,18 @@ Changes between 1.38.0 and 1.38.1 — 4 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/canon` (0.3.0 → 0.3.1)
+### `@backstage/canon` (0.3.0 → [0.3.1](../../changelogs/@backstage/canon.md#031))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder` (1.30.0 → 1.30.1)
+### `@backstage/plugin-scaffolder` (1.30.0 → [1.30.1](../../changelogs/@backstage/plugin-scaffolder.md#1301))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend` (1.32.0 → 1.32.1)
+### `@backstage/plugin-scaffolder-backend` (1.32.0 → [1.32.1](../../changelogs/@backstage/plugin-scaffolder-backend.md#1321))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-react` (1.15.0 → 1.15.1)
+### `@backstage/plugin-scaffolder-react` (1.15.0 → [1.15.1](../../changelogs/@backstage/plugin-scaffolder-react.md#1151))
 
 _No changelog entries found._

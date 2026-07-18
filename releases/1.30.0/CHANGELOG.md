@@ -136,40 +136,40 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
 ## Newly added packages
 
-### `@backstage/plugin-techdocs-common` (new, 0.1.0)
+### `@backstage/plugin-techdocs-common` (new, [0.1.0](../../changelogs/@backstage/plugin-techdocs-common.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- 4698e1f: Initial release of the techdocs-common package.
+- [`4698e1f`](https://github.com/backstage/backstage/commit/4698e1f): Initial release of the techdocs-common package.
 
 ## Breaking changes
 
-### `@backstage/backend-app-api` (0.8.0 → 0.9.0)
+### `@backstage/backend-app-api` (0.8.0 → [0.9.0](../../changelogs/@backstage/backend-app-api.md#090))
 
 #### 0.9.0
 
 ##### Minor Changes
 
-- da4fde5: **BREAKING**: Removed several deprecated service factories. These can instead be imported from `@backstage/backend-defaults` package.
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
-- 389f5a4: Remove deprecated `urlReaderServiceFactory`, please import from `@backstage/backend-defaults/urlReader` instead.
+- [`da4fde5`](https://github.com/backstage/backstage/commit/da4fde5): **BREAKING**: Removed several deprecated service factories. These can instead be imported from `@backstage/backend-defaults` package.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Remove deprecated `urlReaderServiceFactory`, please import from `@backstage/backend-defaults/urlReader` instead.
 
 ##### Patch Changes
 
-- 8b13183: Added support for the latest version of `BackendFeature`s from `@backstage/backend-plugin-api`, including feature loaders.
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 7c5f3b0: Update the `ServiceRegister` implementation to enable registering multiple service implementations for a given service ref.
-- 80a0737: Added configuration for the `packages` options to config schema
+- [`8b13183`](https://github.com/backstage/backstage/commit/8b13183): Added support for the latest version of `BackendFeature`s from `@backstage/backend-plugin-api`, including feature loaders.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`7c5f3b0`](https://github.com/backstage/backstage/commit/7c5f3b0): Update the `ServiceRegister` implementation to enable registering multiple service implementations for a given service ref.
+- [`80a0737`](https://github.com/backstage/backstage/commit/80a0737): Added configuration for the `packages` options to config schema
 
-### `@backstage/backend-common` (0.23.3 → 0.24.0)
+### `@backstage/backend-common` (0.23.3 → [0.24.0](../../changelogs/@backstage/backend-common.md#0240))
 
 #### 0.24.0
 
 ##### Minor Changes
 
-- 389f5a4: **BREAKING**: Removed the following `Url Reader` deprecated exports:
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): **BREAKING**: Removed the following `Url Reader` deprecated exports:
 
   - UrlReader: Use `UrlReaderService` from `@backstage/backend-plugin-api` instead;
   - AzureUrlReader: Import from `@backstage/backend-defaults/urlReader` instead;
@@ -204,10 +204,10 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
 ##### Patch Changes
 
-- ba8571e: Setup user agent header for AWS sdk clients, this enables users to better track API calls made from Backstage to AWS APIs through things like CloudTrail.
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 6795e33: This package is marked as `deprecated` and will be removed in a near future, please follow the deprecated instructions for the exports you still use.
-- 7e13b7a: The remaining exports in the package have now been deprecated:
+- [`ba8571e`](https://github.com/backstage/backstage/commit/ba8571e): Setup user agent header for AWS sdk clients, this enables users to better track API calls made from Backstage to AWS APIs through things like CloudTrail.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`6795e33`](https://github.com/backstage/backstage/commit/6795e33): This package is marked as `deprecated` and will be removed in a near future, please follow the deprecated instructions for the exports you still use.
+- [`7e13b7a`](https://github.com/backstage/backstage/commit/7e13b7a): The remaining exports in the package have now been deprecated:
 
   - `cacheToPluginCacheManager`
   - `createLegacyAuthAdapters`
@@ -218,16 +218,16 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
   Users of these export should fully [migrate to the new backend system](https://backstage.io/docs/backend-system/building-backends/migrating).
 
-- ddde5fe: Internal type refactor.
-- b63d378: export `createConfigSecretEnumerator` from `@backstage/backend-common` instead of `@backstage/backend-app-api`.
+- [`ddde5fe`](https://github.com/backstage/backstage/commit/ddde5fe): Internal type refactor.
+- [`b63d378`](https://github.com/backstage/backstage/commit/b63d378): export `createConfigSecretEnumerator` from `@backstage/backend-common` instead of `@backstage/backend-app-api`.
 
-### `@backstage/backend-plugin-api` (0.7.0 → 0.8.0)
+### `@backstage/backend-plugin-api` (0.7.0 → [0.8.0](../../changelogs/@backstage/backend-plugin-api.md#080))
 
 #### 0.8.0
 
 ##### Minor Changes
 
-- 389f5a4: **BREAKING** Deleted the following deprecated `UrlReader` exports
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): **BREAKING** Deleted the following deprecated `UrlReader` exports
 
   - ReadUrlOptions: Use `UrlReaderServiceReadUrlOptions` instead;
   - ReadUrlResponse: Use `UrlReaderServiceReadUrlResponse` instead;
@@ -239,7 +239,7 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
   - SearchResponse: Use `UrlReaderServiceSearchResponse` instead;
   - SearchResponseFile: Use `UrlReaderServiceSearchResponseFile` instead.
 
-- 7c5f3b0: The `createServiceRef` function now accepts a new boolean `multiple` option. The `multiple` option defaults to `false` and when set to `true`, it enables that multiple implementation are installed for the created service ref.
+- [`7c5f3b0`](https://github.com/backstage/backstage/commit/7c5f3b0): The `createServiceRef` function now accepts a new boolean `multiple` option. The `multiple` option defaults to `false` and when set to `true`, it enables that multiple implementation are installed for the created service ref.
 
   We're looking for ways to make it possible to augment services without the need to replace the entire service.
 
@@ -294,7 +294,7 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
   ```
 
-- c99c620: **BREAKING** Removed the following deprecated types:
+- [`c99c620`](https://github.com/backstage/backstage/commit/c99c620): **BREAKING** Removed the following deprecated types:
 
   - `ServiceRefConfig` use `ServiceRefOptions`
   - `RootServiceFactoryConfig` use `RootServiceFactoryOptions`
@@ -302,9 +302,9 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
 ##### Patch Changes
 
-- 6061061: Added `createBackendFeatureLoader`, which can be used to create an installable backend feature that can in turn load in additional backend features in a dynamic way.
-- ba9abf4: The `SchedulerService` now allows tasks with `frequency: { trigger: 'manual' }`. This means that the task will not be scheduled, but rather run only when manually triggered with `SchedulerService.triggerTask`.
-- 8b13183: Added `createBackendFeatureLoader`, which can be used to programmatically select and install backend features.
+- [`6061061`](https://github.com/backstage/backstage/commit/6061061): Added `createBackendFeatureLoader`, which can be used to create an installable backend feature that can in turn load in additional backend features in a dynamic way.
+- [`ba9abf4`](https://github.com/backstage/backstage/commit/ba9abf4): The `SchedulerService` now allows tasks with `frequency: { trigger: 'manual' }`. This means that the task will not be scheduled, but rather run only when manually triggered with `SchedulerService.triggerTask`.
+- [`8b13183`](https://github.com/backstage/backstage/commit/8b13183): Added `createBackendFeatureLoader`, which can be used to programmatically select and install backend features.
 
   A feature loader can return an list of features to be installed, for example in the form on an `Array` or other for of iterable, which allows for the loader to be defined as a generator function. Both synchronous and asynchronous loaders are supported.
 
@@ -327,16 +327,16 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
   });
   ```
 
-- ddde5fe: Fixed a type issue where plugin and modules depending on multiton services would not receive the correct type.
-- f011d1b: fix typo in `getPluginRequestToken` comments
+- [`ddde5fe`](https://github.com/backstage/backstage/commit/ddde5fe): Fixed a type issue where plugin and modules depending on multiton services would not receive the correct type.
+- [`f011d1b`](https://github.com/backstage/backstage/commit/f011d1b): fix typo in `getPluginRequestToken` comments
 
-### `@backstage/backend-test-utils` (0.4.4 → 0.5.0)
+### `@backstage/backend-test-utils` (0.4.4 → [0.5.0](../../changelogs/@backstage/backend-test-utils.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- 861f162: **BREAKING**: Removed these deprecated helpers:
+- [`861f162`](https://github.com/backstage/backstage/commit/861f162): **BREAKING**: Removed these deprecated helpers:
 
   - `setupRequestMockHandlers` is removed; use `registerMswTestHooks` instead.
   - `MockDirectoryOptions` is removed; use `CreateMockDirectoryOptions` instead.
@@ -347,18 +347,18 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
 ##### Patch Changes
 
-- 8b13183: Internal updates to support latest version of `BackendFeauture`s from `@backstage/backend-plugin-api`.
-- b63d378: Update internal imports
-- 7c5f3b0: Update the `ServiceFactoryTester` to be able to test services that enables multi implementation installation.
-- 4e79d19: The default services for `startTestBackend` and `ServiceFactoryTester` now includes the Root Health Service.
+- [`8b13183`](https://github.com/backstage/backstage/commit/8b13183): Internal updates to support latest version of `BackendFeauture`s from `@backstage/backend-plugin-api`.
+- [`b63d378`](https://github.com/backstage/backstage/commit/b63d378): Update internal imports
+- [`7c5f3b0`](https://github.com/backstage/backstage/commit/7c5f3b0): Update the `ServiceFactoryTester` to be able to test services that enables multi implementation installation.
+- [`4e79d19`](https://github.com/backstage/backstage/commit/4e79d19): The default services for `startTestBackend` and `ServiceFactoryTester` now includes the Root Health Service.
 
-### `@backstage/cli` (0.26.11 → 0.27.0)
+### `@backstage/cli` (0.26.11 → [0.27.0](../../changelogs/@backstage/cli.md#0270))
 
 #### 0.27.0
 
 ##### Minor Changes
 
-- 32a38e1: **BREAKING**: The lockfile (`yarn.lock`) dependency analysis and mutations have been removed from several commands.
+- [`32a38e1`](https://github.com/backstage/backstage/commit/32a38e1): **BREAKING**: The lockfile (`yarn.lock`) dependency analysis and mutations have been removed from several commands.
 
   The `versions:bump` command will no longer attempt to bump and deduplicate dependencies by modifying the lockfile, it will only update `package.json` files.
 
@@ -370,37 +370,37 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
 ##### Patch Changes
 
-- 7eb08a6: Add frontend-dynamic-container role to eslint config factory
-- b2d97fd: Fixing loading of additional config files with new `ConfigSources`
-- fbc7819: Use ES2022 in CLI bundler
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 6d898d8: Switched the `process` polyfill to use `require.resolve` for greater compatability.
-- e53074f: Updated default backend plugin to use `RootConfigService` instead of `Config`. This also removes the dependency on `@backstage/config` as it's no longer used.
-- ee2b0e5: The experimental module federation build now has the ability to force the use of development versions of `react` and `react-dom` by setting the `FORCE_REACT_DEVELOPMENT` flag.
-- 239dffc: Remove usage of deprecated functionality from @backstage/config-loader
-- e6e7d86: Switched the target from `'ES2022'` to `'es2022'` for better compatibility with older versions of `swc`.
-- 2ced236: Updated dependency `@module-federation/enhanced` to `0.3.1`
-- 0eedec3: Add support for dynamic plugins via the EXPERIMENTAL_MODULE_FEDERATION environment variable when running `yarn start`.
-- adabb40: New command now supports setting package license
-- dc4fb4f: Fix for `repo build --all` not properly detecting the experimental public entry point.
+- [`7eb08a6`](https://github.com/backstage/backstage/commit/7eb08a6): Add frontend-dynamic-container role to eslint config factory
+- [`b2d97fd`](https://github.com/backstage/backstage/commit/b2d97fd): Fixing loading of additional config files with new `ConfigSources`
+- [`fbc7819`](https://github.com/backstage/backstage/commit/fbc7819): Use ES2022 in CLI bundler
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`6d898d8`](https://github.com/backstage/backstage/commit/6d898d8): Switched the `process` polyfill to use `require.resolve` for greater compatability.
+- [`e53074f`](https://github.com/backstage/backstage/commit/e53074f): Updated default backend plugin to use `RootConfigService` instead of `Config`. This also removes the dependency on `@backstage/config` as it's no longer used.
+- [`ee2b0e5`](https://github.com/backstage/backstage/commit/ee2b0e5): The experimental module federation build now has the ability to force the use of development versions of `react` and `react-dom` by setting the `FORCE_REACT_DEVELOPMENT` flag.
+- [`239dffc`](https://github.com/backstage/backstage/commit/239dffc): Remove usage of deprecated functionality from @backstage/config-loader
+- [`e6e7d86`](https://github.com/backstage/backstage/commit/e6e7d86): Switched the target from `'ES2022'` to `'es2022'` for better compatibility with older versions of `swc`.
+- [`2ced236`](https://github.com/backstage/backstage/commit/2ced236): Updated dependency `@module-federation/enhanced` to `0.3.1`
+- [`0eedec3`](https://github.com/backstage/backstage/commit/0eedec3): Add support for dynamic plugins via the EXPERIMENTAL_MODULE_FEDERATION environment variable when running `yarn start`.
+- [`adabb40`](https://github.com/backstage/backstage/commit/adabb40): New command now supports setting package license
+- [`dc4fb4f`](https://github.com/backstage/backstage/commit/dc4fb4f): Fix for `repo build --all` not properly detecting the experimental public entry point.
 
-### `@backstage/frontend-plugin-api` (0.6.7 → 0.7.0)
+### `@backstage/frontend-plugin-api` (0.6.7 → [0.7.0](../../changelogs/@backstage/frontend-plugin-api.md#070))
 
 #### 0.7.0
 
 ##### Minor Changes
 
-- 72754db: **BREAKING**: All types of route refs are always considered optional by `useRouteRef`, which means the caller must always handle a potential `undefined` return value. Related to this change, the `optional` option from `createExternalRouteRef` has been removed, since it is no longer necessary.
+- [`72754db`](https://github.com/backstage/backstage/commit/72754db): **BREAKING**: All types of route refs are always considered optional by `useRouteRef`, which means the caller must always handle a potential `undefined` return value. Related to this change, the `optional` option from `createExternalRouteRef` has been removed, since it is no longer necessary.
 
   This is released as an immediate breaking change as we expect the usage of the new route refs to be extremely low or zero, since plugins that support the new system will still use route refs and `useRouteRef` from `@backstage/core-plugin-api` in combination with `convertLegacyRouteRef` from `@backstage/core-compat-api`.
 
 ##### Patch Changes
 
-- 6f72c2b: Fixing issue with extension blueprints `inputs` merging.
-- 210d066: Added support for using the `params` in other properties of the `createExtensionBlueprint` options by providing a callback.
-- 9b356dc: Renamed `createPlugin` to `createFrontendPlugin`. The old symbol is still exported but deprecated.
-- a376559: Correct the `TConfig` type of data references to only contain config
-- 4e53ad6: Introduce a new way to encapsulate extension kinds that replaces the extension creator pattern with `createExtensionBlueprint`
+- [`6f72c2b`](https://github.com/backstage/backstage/commit/6f72c2b): Fixing issue with extension blueprints `inputs` merging.
+- [`210d066`](https://github.com/backstage/backstage/commit/210d066): Added support for using the `params` in other properties of the `createExtensionBlueprint` options by providing a callback.
+- [`9b356dc`](https://github.com/backstage/backstage/commit/9b356dc): Renamed `createPlugin` to `createFrontendPlugin`. The old symbol is still exported but deprecated.
+- [`a376559`](https://github.com/backstage/backstage/commit/a376559): Correct the `TConfig` type of data references to only contain config
+- [`4e53ad6`](https://github.com/backstage/backstage/commit/4e53ad6): Introduce a new way to encapsulate extension kinds that replaces the extension creator pattern with `createExtensionBlueprint`
 
   This allows the creation of extension instances with the following pattern:
 
@@ -424,9 +424,9 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
   });
   ```
 
-- 9b89b82: The `ExtensionBoundary` now by default infers whether it's routable from whether it outputs a route path.
-- e493020: Deprecated `inputs` and `configSchema` options for `createComponentExtenion`, these will be removed in a future release
-- 7777b5f: Added a new `IconBundleBlueprint` that lets you create icon bundle extensions that can be installed in an App in order to override or add new app icons.
+- [`9b89b82`](https://github.com/backstage/backstage/commit/9b89b82): The `ExtensionBoundary` now by default infers whether it's routable from whether it outputs a route path.
+- [`e493020`](https://github.com/backstage/backstage/commit/e493020): Deprecated `inputs` and `configSchema` options for `createComponentExtenion`, these will be removed in a future release
+- [`7777b5f`](https://github.com/backstage/backstage/commit/7777b5f): Added a new `IconBundleBlueprint` that lets you create icon bundle extensions that can be installed in an App in order to override or add new app icons.
 
   ```tsx
   import { IconBundleBlueprint } from '@backstage/frontend-plugin-api';
@@ -441,7 +441,7 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
   });
   ```
 
-- 99abb6b: Support overriding of plugin extensions using the new `plugin.withOverrides` method.
+- [`99abb6b`](https://github.com/backstage/backstage/commit/99abb6b): Support overriding of plugin extensions using the new `plugin.withOverrides` method.
 
   ```tsx
   import homePlugin from '@backstage/plugin-home';
@@ -458,9 +458,9 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
   });
   ```
 
-- 813cac4: Add an `ExtensionBoundary.lazy` function to create properly wrapped lazy-loading enabled elements, suitable for use with `coreExtensionData.reactElement`. The page blueprint now automatically leverages this.
-- a65cfc8: Add support for accessing extensions definitions provided by a plugin via `plugin.getExtension(...)`. For this to work the extensions must be defined using the v2 format, typically using an extension blueprint.
-- 3be9aeb: Extensions have been changed to be declared with an array of inputs and outputs, rather than a map of named data refs. This change was made to reduce confusion around the role of the input and output names, as well as enable more powerful APIs for overriding extensions.
+- [`813cac4`](https://github.com/backstage/backstage/commit/813cac4): Add an `ExtensionBoundary.lazy` function to create properly wrapped lazy-loading enabled elements, suitable for use with `coreExtensionData.reactElement`. The page blueprint now automatically leverages this.
+- [`a65cfc8`](https://github.com/backstage/backstage/commit/a65cfc8): Add support for accessing extensions definitions provided by a plugin via `plugin.getExtension(...)`. For this to work the extensions must be defined using the v2 format, typically using an extension blueprint.
+- [`3be9aeb`](https://github.com/backstage/backstage/commit/3be9aeb): Extensions have been changed to be declared with an array of inputs and outputs, rather than a map of named data refs. This change was made to reduce confusion around the role of the input and output names, as well as enable more powerful APIs for overriding extensions.
 
   An extension that was previously declared like this:
 
@@ -514,9 +514,9 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
   });
   ```
 
-- 34f1b2a: Support merging of `inputs` in extension blueprints, but stop merging `output`. In addition, the original factory in extension blueprints now returns a data container that both provides access to the returned data, but can also be forwarded as output.
-- 3fb421d: Added support to be able to define `zod` config schema in Blueprints, with built in schema merging from the Blueprint and the extension instances.
-- 2d21599: Added support for being able to override extension definitions.
+- [`34f1b2a`](https://github.com/backstage/backstage/commit/34f1b2a): Support merging of `inputs` in extension blueprints, but stop merging `output`. In addition, the original factory in extension blueprints now returns a data container that both provides access to the returned data, but can also be forwarded as output.
+- [`3fb421d`](https://github.com/backstage/backstage/commit/3fb421d): Added support to be able to define `zod` config schema in Blueprints, with built in schema merging from the Blueprint and the extension instances.
+- [`2d21599`](https://github.com/backstage/backstage/commit/2d21599): Added support for being able to override extension definitions.
 
   ```tsx
   const TestCard = EntityCardBlueprint.make({
@@ -546,7 +546,7 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
   ```
 
-- 31bfc44: Extension data references can now be defined in a way that encapsulates the ID string in the type, in addition to the data type itself. The old way of creating extension data references is deprecated and will be removed in a future release.
+- [`31bfc44`](https://github.com/backstage/backstage/commit/31bfc44): Extension data references can now be defined in a way that encapsulates the ID string in the type, in addition to the data type itself. The old way of creating extension data references is deprecated and will be removed in a future release.
 
   For example, the following code:
 
@@ -563,27 +563,27 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
   });
   ```
 
-- 6349099: Added config input type to the extensions
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
-### `@backstage/plugin-auth-node` (0.4.17 → 0.5.0)
+### `@backstage/plugin-auth-node` (0.4.17 → [0.5.0](../../changelogs/@backstage/plugin-auth-node.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- 579afd0: **BREAKING**: Sign-in resolvers configured via `.signIn.resolvers` now take precedence over sign-in resolvers passed to `signInResolver` option of `createOAuthProviderFactory`. This effectively makes sign-in resolvers passed via the `signInResolver` the default one, which you can then override through configuration.
+- [`579afd0`](https://github.com/backstage/backstage/commit/579afd0): **BREAKING**: Sign-in resolvers configured via `.signIn.resolvers` now take precedence over sign-in resolvers passed to `signInResolver` option of `createOAuthProviderFactory`. This effectively makes sign-in resolvers passed via the `signInResolver` the default one, which you can then override through configuration.
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-notifications-backend-module-email` (0.1.3 → 0.2.0)
+### `@backstage/plugin-notifications-backend-module-email` (0.1.3 → [0.2.0](../../changelogs/@backstage/plugin-notifications-backend-module-email.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- def53a7: **BREAKING** Following `NotificationTemplateRenderer` methods now return a Promise and **must** be awaited: `getSubject`, `getText` and `getHtml`.
+- [`def53a7`](https://github.com/backstage/backstage/commit/def53a7): **BREAKING** Following `NotificationTemplateRenderer` methods now return a Promise and **must** be awaited: `getSubject`, `getText` and `getHtml`.
 
   Required changes and example usage:
 
@@ -628,45 +628,45 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
 ##### Patch Changes
 
-- d55b8e3: Avoid sending broadcast emails as a fallback in case the entity-typed notification user can not be resolved.
-- cdb630d: Add support for stream transport for debugging purposes
-- 83faf24: Notification email processor supports allowing or denying specific email addresses from receiving notifications
+- [`d55b8e3`](https://github.com/backstage/backstage/commit/d55b8e3): Avoid sending broadcast emails as a fallback in case the entity-typed notification user can not be resolved.
+- [`cdb630d`](https://github.com/backstage/backstage/commit/cdb630d): Add support for stream transport for debugging purposes
+- [`83faf24`](https://github.com/backstage/backstage/commit/83faf24): Notification email processor supports allowing or denying specific email addresses from receiving notifications
 
-### `@backstage/plugin-permission-node` (0.8.0 → 0.8.1)
+### `@backstage/plugin-permission-node` (0.8.0 → [0.8.1](../../changelogs/@backstage/plugin-permission-node.md#081))
 
 #### 0.8.1
 
 ##### Patch Changes
 
-- df784fe: The MetadataResponse type has been moved to @backstage/plugin-permission-common
+- [`df784fe`](https://github.com/backstage/backstage/commit/df784fe): The MetadataResponse type has been moved to @backstage/plugin-permission-common
   to match the recent move of MetadataResponseSerializedRule, and should be
   imported from there going forward. To avoid an immediate breaking change, this
   type is still re-exported from this package, but is marked as deprecated and
   will be removed in a future release.
-- 5cd9878: The MetadataResponseSerializedRule type has been moved to @backstage/plugin-permission-common, and should be imported from there going forward. To avoid an immediate breaking change, this type is still re-exported from this package, but is marked as deprecated and will be removed in a future release.
+- [`5cd9878`](https://github.com/backstage/backstage/commit/5cd9878): The MetadataResponseSerializedRule type has been moved to @backstage/plugin-permission-common, and should be imported from there going forward. To avoid an immediate breaking change, this type is still re-exported from this package, but is marked as deprecated and will be removed in a future release.
 
 ## 0.x minor version bumps
 
-### `@backstage/backend-dynamic-feature-service` (0.2.15 → 0.3.0)
+### `@backstage/backend-dynamic-feature-service` (0.2.15 → [0.3.0](../../changelogs/@backstage/backend-dynamic-feature-service.md#030))
 
 #### 0.3.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
-- b63d378: Update internal imports
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`b63d378`](https://github.com/backstage/backstage/commit/b63d378): Update internal imports
 
-### `@backstage/backend-tasks` (0.5.27 → 0.6.0)
+### `@backstage/backend-tasks` (0.5.27 → [0.6.0](../../changelogs/@backstage/backend-tasks.md#060))
 
 #### 0.6.0
 
 ##### Minor Changes
 
-- fc24d9e: This package is deprecated and will be removed in a near future, follow the instructions below to stop using it:
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): This package is deprecated and will be removed in a near future, follow the instructions below to stop using it:
 
   - `TaskScheduler`: Please migrate to the new backend system, and depend on `coreServices.scheduler` from `@backstage/backend-plugin-api` instead, or use `DefaultSchedulerService` from `@backstage/backend-defaults;
   - `TaskRunner`: Please import `SchedulerServiceTaskRunner` from `@backstage/backend-plugin-api` instead;
@@ -681,525 +681,525 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
 ##### Patch Changes
 
-- ba9abf4: The `PluginTaskScheduler` now allows tasks with `frequency: { trigger: 'manual' }`. This means that the task will not be scheduled, but rather run only when manually triggered with `PluginTaskScheduler.triggerTask`.
+- [`ba9abf4`](https://github.com/backstage/backstage/commit/ba9abf4): The `PluginTaskScheduler` now allows tasks with `frequency: { trigger: 'manual' }`. This means that the task will not be scheduled, but rather run only when manually triggered with `PluginTaskScheduler.triggerTask`.
 
-### `@backstage/frontend-app-api` (0.7.4 → 0.8.0)
+### `@backstage/frontend-app-api` (0.7.4 → [0.8.0](../../changelogs/@backstage/frontend-app-api.md#080))
 
 #### 0.8.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 7777b5f: Support icon overriding with the new `IconBundleBlueprint` API.
-- 72754db: Updated usage of `useRouteRef`, which can now always return `undefined`.
-- 3be9aeb: Added support for v2 extensions, which declare their inputs and outputs without using a data map.
-- fe1fbb2: Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
-- 6349099: Added config input type to the extensions
+- [`7777b5f`](https://github.com/backstage/backstage/commit/7777b5f): Support icon overriding with the new `IconBundleBlueprint` API.
+- [`72754db`](https://github.com/backstage/backstage/commit/72754db): Updated usage of `useRouteRef`, which can now always return `undefined`.
+- [`3be9aeb`](https://github.com/backstage/backstage/commit/3be9aeb): Added support for v2 extensions, which declare their inputs and outputs without using a data map.
+- [`fe1fbb2`](https://github.com/backstage/backstage/commit/fe1fbb2): Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
-### `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.1.5 → 0.2.0)
+### `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.1.5 → [0.2.0](../../changelogs/@backstage/plugin-auth-backend-module-cloudflare-access-provider.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- 75d026a: Support for Cloudflare Custom Headers and Custom Cookie Auth Name
+- [`75d026a`](https://github.com/backstage/backstage/commit/75d026a): Support for Cloudflare Custom Headers and Custom Cookie Auth Name
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-catalog-backend-module-aws` (0.3.17 → 0.4.0)
+### `@backstage/plugin-catalog-backend-module-aws` (0.3.17 → [0.4.0](../../changelogs/@backstage/plugin-catalog-backend-module-aws.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- ba8571e: Setup user agent header for AWS sdk clients, this enables users to better track API calls made from Backstage to AWS APIs through things like CloudTrail.
-- 9342ac8: Removed unused dependency
-- 389f5a4: Update deprecated url-reader-related imports.
-- 90a7340: `AwsOrganizationCloudAccountProcessor` configuration field `roleArn` is deprecated in favor of new field `accountId`
+- [`ba8571e`](https://github.com/backstage/backstage/commit/ba8571e): Setup user agent header for AWS sdk clients, this enables users to better track API calls made from Backstage to AWS APIs through things like CloudTrail.
+- [`9342ac8`](https://github.com/backstage/backstage/commit/9342ac8): Removed unused dependency
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`90a7340`](https://github.com/backstage/backstage/commit/90a7340): `AwsOrganizationCloudAccountProcessor` configuration field `roleArn` is deprecated in favor of new field `accountId`
 
-### `@backstage/plugin-catalog-backend-module-azure` (0.1.42 → 0.2.0)
+### `@backstage/plugin-catalog-backend-module-azure` (0.1.42 → [0.2.0](../../changelogs/@backstage/plugin-catalog-backend-module-azure.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 9342ac8: Removed unused dependency
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`9342ac8`](https://github.com/backstage/backstage/commit/9342ac8): Removed unused dependency
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.2.5 → 0.3.0)
+### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.2.5 → [0.3.0](../../changelogs/@backstage/plugin-catalog-backend-module-backstage-openapi.md#030))
 
 #### 0.3.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.2.9 → 0.3.0)
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.2.9 → [0.3.0](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-cloud.md#030))
 
 #### 0.3.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.36 → 0.2.0)
-
-#### 0.2.0
-
-##### Minor Changes
-
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
-
-##### Patch Changes
-
-- 9342ac8: Removed unused dependency
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-
-### `@backstage/plugin-catalog-backend-module-gcp` (0.1.23 → 0.2.0)
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.36 → [0.2.0](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-server.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 9342ac8: Removed unused dependency
+- [`9342ac8`](https://github.com/backstage/backstage/commit/9342ac8): Removed unused dependency
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.39 → 0.2.0)
+### `@backstage/plugin-catalog-backend-module-gcp` (0.1.23 → [0.2.0](../../changelogs/@backstage/plugin-catalog-backend-module-gcp.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 9342ac8: Removed unused dependency
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`9342ac8`](https://github.com/backstage/backstage/commit/9342ac8): Removed unused dependency
 
-### `@backstage/plugin-catalog-backend-module-github` (0.6.5 → 0.7.0)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.39 → [0.2.0](../../changelogs/@backstage/plugin-catalog-backend-module-gerrit.md#020))
+
+#### 0.2.0
+
+##### Minor Changes
+
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+
+##### Patch Changes
+
+- [`9342ac8`](https://github.com/backstage/backstage/commit/9342ac8): Removed unused dependency
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+
+### `@backstage/plugin-catalog-backend-module-github` (0.6.5 → [0.7.0](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#070))
 
 #### 0.7.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- c1eb809: Fix GitHub `repository` event support.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`c1eb809`](https://github.com/backstage/backstage/commit/c1eb809): Fix GitHub `repository` event support.
 
   - `$.repository.organization` is only provided for `push` events. Switched to `$.organization.login` instead.
   - `$.repository.url` is not always returning the expected and required value. Use `$.repository.html_url` instead.
 
-### `@backstage/plugin-catalog-backend-module-github-org` (0.1.17 → 0.2.0)
+### `@backstage/plugin-catalog-backend-module-github-org` (0.1.17 → [0.2.0](../../changelogs/@backstage/plugin-catalog-backend-module-github-org.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 9342ac8: Removed unused dependency
+- [`9342ac8`](https://github.com/backstage/backstage/commit/9342ac8): Removed unused dependency
 
-### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.21 → 0.4.0)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.21 → [0.4.0](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- c7b14ed: Adds new optional `excludeRepos` configuration option to the Gitlab catalog provider.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`c7b14ed`](https://github.com/backstage/backstage/commit/c7b14ed): Adds new optional `excludeRepos` configuration option to the Gitlab catalog provider.
 
-### `@backstage/plugin-catalog-backend-module-gitlab-org` (0.0.5 → 0.1.0)
+### `@backstage/plugin-catalog-backend-module-gitlab-org` (0.0.5 → [0.1.0](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab-org.md#010))
 
 #### 0.1.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
-### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.27 → 0.5.0)
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.27 → [0.5.0](../../changelogs/@backstage/plugin-catalog-backend-module-incremental-ingestion.md#050))
 
 #### 0.5.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
 
-### `@backstage/plugin-catalog-backend-module-ldap` (0.7.0 → 0.8.0)
+### `@backstage/plugin-catalog-backend-module-ldap` (0.7.0 → [0.8.0](../../changelogs/@backstage/plugin-catalog-backend-module-ldap.md#080))
 
 #### 0.8.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.30 → 0.6.0)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.30 → [0.6.0](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#060))
 
 #### 0.6.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 9342ac8: Removed unused dependency
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 58dff4d: Added option to ingest groups based on their group membership in Azure Entra ID
+- [`9342ac8`](https://github.com/backstage/backstage/commit/9342ac8): Removed unused dependency
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`58dff4d`](https://github.com/backstage/backstage/commit/58dff4d): Added option to ingest groups based on their group membership in Azure Entra ID
 
-### `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.28 → 0.2.0)
+### `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.28 → [0.2.0](../../changelogs/@backstage/plugin-catalog-backend-module-puppetdb.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 9342ac8: Removed unused dependency
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`9342ac8`](https://github.com/backstage/backstage/commit/9342ac8): Removed unused dependency
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-events-backend-module-aws-sqs` (0.3.8 → 0.4.0)
+### `@backstage/plugin-events-backend-module-aws-sqs` (0.3.8 → [0.4.0](../../changelogs/@backstage/plugin-events-backend-module-aws-sqs.md#040))
 
 #### 0.4.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- ba8571e: Setup user agent header for AWS sdk clients, this enables users to better track API calls made from Backstage to AWS APIs through things like CloudTrail.
+- [`ba8571e`](https://github.com/backstage/backstage/commit/ba8571e): Setup user agent header for AWS sdk clients, this enables users to better track API calls made from Backstage to AWS APIs through things like CloudTrail.
 
-### `@backstage/plugin-notifications` (0.2.3 → 0.3.0)
+### `@backstage/plugin-notifications` (0.2.3 → [0.3.0](../../changelogs/@backstage/plugin-notifications.md#030))
 
 #### 0.3.0
 
 ##### Minor Changes
 
-- 0410fc9: By default, set notification as read when opening snackbar or web notification link
+- [`0410fc9`](https://github.com/backstage/backstage/commit/0410fc9): By default, set notification as read when opening snackbar or web notification link
 
 ##### Patch Changes
 
-- 80b84f7: Fixed issue with notification reloading on page change
-- b58e452: Broadcast notifications are now decorated with an icon.
+- [`80b84f7`](https://github.com/backstage/backstage/commit/80b84f7): Fixed issue with notification reloading on page change
+- [`b58e452`](https://github.com/backstage/backstage/commit/b58e452): Broadcast notifications are now decorated with an icon.
 
-### `@backstage/plugin-search-backend-module-catalog` (0.1.28 → 0.2.0)
+### `@backstage/plugin-search-backend-module-catalog` (0.1.28 → [0.2.0](../../changelogs/@backstage/plugin-search-backend-module-catalog.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
-### `@backstage/plugin-search-backend-module-explore` (0.1.28 → 0.2.0)
-
-#### 0.2.0
-
-##### Minor Changes
-
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
-
-##### Patch Changes
-
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 93fc1a0: Updated dependency `@backstage-community/plugin-explore-common` to `^0.0.4`.
-
-### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.15 → 0.2.0)
+### `@backstage/plugin-search-backend-module-explore` (0.1.28 → [0.2.0](../../changelogs/@backstage/plugin-search-backend-module-explore.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`93fc1a0`](https://github.com/backstage/backstage/commit/93fc1a0): Updated dependency `@backstage-community/plugin-explore-common` to `^0.0.4`.
 
-### `@backstage/plugin-search-backend-module-techdocs` (0.1.27 → 0.2.0)
+### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.15 → [0.2.0](../../changelogs/@backstage/plugin-search-backend-module-stack-overflow-collator.md#020))
 
 #### 0.2.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+
+### `@backstage/plugin-search-backend-module-techdocs` (0.1.27 → [0.2.0](../../changelogs/@backstage/plugin-search-backend-module-techdocs.md#020))
+
+#### 0.2.0
+
+##### Minor Changes
+
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+
+##### Patch Changes
+
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
 ## 0.0.x patch version bumps
 
-### `@backstage/plugin-auth-backend-module-okta-provider` (0.0.15 → 0.0.16)
+### `@backstage/plugin-auth-backend-module-okta-provider` (0.0.15 → [0.0.16](../../changelogs/@backstage/plugin-auth-backend-module-okta-provider.md#0016))
 
 #### 0.0.16
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
 
-### `@backstage/plugin-scaffolder-backend-module-notifications` (0.0.5 → 0.0.6)
+### `@backstage/plugin-scaffolder-backend-module-notifications` (0.0.5 → [0.0.6](../../changelogs/@backstage/plugin-scaffolder-backend-module-notifications.md#006))
 
 #### 0.0.6
 
 ##### Patch Changes
 
-- 6fc03c7: Add examples for notification:send scaffolder action & improve related tests
+- [`6fc03c7`](https://github.com/backstage/backstage/commit/6fc03c7): Add examples for notification:send scaffolder action & improve related tests
 
 ## Other minor version bumps
 
-### `@backstage/catalog-model` (1.5.0 → 1.6.0)
+### `@backstage/catalog-model` (1.5.0 → [1.6.0](../../changelogs/@backstage/catalog-model.md#160))
 
 #### 1.6.0
 
 ##### Minor Changes
 
-- 34fa803: Introduce an optional spec.type attribute on the Domain and System entity kinds
+- [`34fa803`](https://github.com/backstage/backstage/commit/34fa803): Introduce an optional spec.type attribute on the Domain and System entity kinds
 
-### `@backstage/config-loader` (1.8.1 → 1.9.0)
+### `@backstage/config-loader` (1.8.1 → [1.9.0](../../changelogs/@backstage/config-loader.md#190))
 
 #### 1.9.0
 
 ##### Minor Changes
 
-- 274428f: Add configuration key to File and Remote `ConfigSource`s that enables configuration of parsing logic. Previously limited to yaml, these `ConfigSource`s now allow for a multitude of parsing options (e.g. JSON).
+- [`274428f`](https://github.com/backstage/backstage/commit/274428f): Add configuration key to File and Remote `ConfigSource`s that enables configuration of parsing logic. Previously limited to yaml, these `ConfigSource`s now allow for a multitude of parsing options (e.g. JSON).
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 1edd6c2: The `env` option of `ConfigSources.default` now correctly allows undefined members.
-- 493feac: Add boolean `allowMissingDefaultConfig` option to `ConfigSources.default` and
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`1edd6c2`](https://github.com/backstage/backstage/commit/1edd6c2): The `env` option of `ConfigSources.default` now correctly allows undefined members.
+- [`493feac`](https://github.com/backstage/backstage/commit/493feac): Add boolean `allowMissingDefaultConfig` option to `ConfigSources.default` and
   `ConfigSources.defaultForTargets`, which results in omission of a ConfigSource
   for the default app-config.yaml configuration file if it's not present.
 
-### `@backstage/integration` (1.13.0 → 1.14.0)
+### `@backstage/integration` (1.13.0 → [1.14.0](../../changelogs/@backstage/integration.md#1140))
 
 #### 1.14.0
 
 ##### Minor Changes
 
-- 78c1329: Updated `GitlabUrlReader.readUrl` and `GitlabUrlReader.readTree` to accept a user-provided token, supporting both bearer and private tokens.
+- [`78c1329`](https://github.com/backstage/backstage/commit/78c1329): Updated `GitlabUrlReader.readUrl` and `GitlabUrlReader.readTree` to accept a user-provided token, supporting both bearer and private tokens.
 
 ##### Patch Changes
 
-- c591670: Updated functions for `getHarnessEditContentsUrl`, `getHarnessFileContentsUrl`, `getHarnessArchiveUrl`, `getHarnessLatestCommitUrl` and `parseHarnessUrl` to handle account and org level urls
+- [`c591670`](https://github.com/backstage/backstage/commit/c591670): Updated functions for `getHarnessEditContentsUrl`, `getHarnessFileContentsUrl`, `getHarnessArchiveUrl`, `getHarnessLatestCommitUrl` and `parseHarnessUrl` to handle account and org level urls
 
-### `@backstage/plugin-catalog` (1.21.1 → 1.22.0)
+### `@backstage/plugin-catalog` (1.21.1 → [1.22.0](../../changelogs/@backstage/plugin-catalog.md#1220))
 
 #### 1.22.0
 
 ##### Minor Changes
 
-- 6925dcb: Introduces the HasSubdomainsCard component that displays the subdomains of a given domain
+- [`6925dcb`](https://github.com/backstage/backstage/commit/6925dcb): Introduces the HasSubdomainsCard component that displays the subdomains of a given domain
 
 ##### Patch Changes
 
-- 496b8a9: Export `RelatedEntitiesCard` presets to be reused.
-- 604a504: The entity relation cards available for the new frontend system via `/alpha` now have more accurate and granular default filters.
-- 7bd27e1: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead.
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
-- 6582799: Add `tableOptions` to all tables and additionally `title` to API tables.
-- 6349099: Added config input type to the extensions
+- [`496b8a9`](https://github.com/backstage/backstage/commit/496b8a9): Export `RelatedEntitiesCard` presets to be reused.
+- [`604a504`](https://github.com/backstage/backstage/commit/604a504): The entity relation cards available for the new frontend system via `/alpha` now have more accurate and granular default filters.
+- [`7bd27e1`](https://github.com/backstage/backstage/commit/7bd27e1): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead.
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`6582799`](https://github.com/backstage/backstage/commit/6582799): Add `tableOptions` to all tables and additionally `title` to API tables.
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
-### `@backstage/plugin-catalog-backend` (1.24.0 → 1.25.0)
+### `@backstage/plugin-catalog-backend` (1.24.0 → [1.25.0](../../changelogs/@backstage/plugin-catalog-backend.md#1250))
 
 #### 1.25.0
 
 ##### Minor Changes
 
-- 163ba08: Deprecated `RouterOptions`, `CatalogBuilder`, and `CatalogEnvironment`. Please make sure to upgrade to the new backend system.
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`163ba08`](https://github.com/backstage/backstage/commit/163ba08): Deprecated `RouterOptions`, `CatalogBuilder`, and `CatalogEnvironment`. Please make sure to upgrade to the new backend system.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 776eb56: `ProcessorOutputCollector` returns an error when receiving deferred entities that have an invalid `metadata.annotations` format.
+- [`776eb56`](https://github.com/backstage/backstage/commit/776eb56): `ProcessorOutputCollector` returns an error when receiving deferred entities that have an invalid `metadata.annotations` format.
 
   This allows to return an error on an actual validation issue instead of reporting that the location annotations are missing afterwards, which is misleading for the users.
 
-- 389f5a4: Update deprecated url-reader-related imports.
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- a629fb2: Added setAllowedLocationTypes while introducing a new extension point called CatalogLocationsExtensionPoint
-- 51240ee: Preserve default `allowedLocationTypes` when `setAllowedLocationTypes()` of `CatalogLocationsExtensionPoint` is not called.
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`a629fb2`](https://github.com/backstage/backstage/commit/a629fb2): Added setAllowedLocationTypes while introducing a new extension point called CatalogLocationsExtensionPoint
+- [`51240ee`](https://github.com/backstage/backstage/commit/51240ee): Preserve default `allowedLocationTypes` when `setAllowedLocationTypes()` of `CatalogLocationsExtensionPoint` is not called.
 
-### `@backstage/plugin-scaffolder` (1.23.0 → 1.24.0)
-
-#### 1.24.0
-
-##### Minor Changes
-
-- 1552c33: Changed the way to display entities in `MyGroupsPicker` to use `entityPresentationApi` and make it consistent across scaffolder pickers
-- 3fca643: Added field extension `RepoBranchPicker` that supports autocompletion for Bitbucket
-
-##### Patch Changes
-
-- 47ed51b: Add an extra bit of height to the EntityPicker dropdown to make it clear there are more options to select from, and to remove the scroll bar when there is less than 10 options
-- 46e5e55: Change scaffolder widgets to use `TextField` component for more flexibility in theme overrides.
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
-- 2ae63cd: add i18n for scaffolder
-- d18f4eb: Fix undefined in the title of Scaffolder Runs on the page load
-- 896a22d: Fix helper text margin for scaffolder EntityNamePicker and EntityTagsPicker when using outlined text field
-- bbd9f56: Cleaned up codebase of RepoUrlPicker
-- b8600fe: Fix issue with `RepoUrlPicker` not refreshing the credentials for a different host
-
-### `@backstage/plugin-scaffolder-backend` (1.23.0 → 1.24.0)
+### `@backstage/plugin-scaffolder` (1.23.0 → [1.24.0](../../changelogs/@backstage/plugin-scaffolder.md#1240))
 
 #### 1.24.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
-- dcd6a79: Added OpenTelemetry support to Scaffolder metrics
+- [`1552c33`](https://github.com/backstage/backstage/commit/1552c33): Changed the way to display entities in `MyGroupsPicker` to use `entityPresentationApi` and make it consistent across scaffolder pickers
+- [`3fca643`](https://github.com/backstage/backstage/commit/3fca643): Added field extension `RepoBranchPicker` that supports autocompletion for Bitbucket
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
-- c544f81: Add support for status filtering in scaffolder tasks endpoint
-- b63d378: Update internal imports
-- ef87e06: Fix scaffolder action `catalog:write` to write to directories that don't already exist
+- [`47ed51b`](https://github.com/backstage/backstage/commit/47ed51b): Add an extra bit of height to the EntityPicker dropdown to make it clear there are more options to select from, and to remove the scroll bar when there is less than 10 options
+- [`46e5e55`](https://github.com/backstage/backstage/commit/46e5e55): Change scaffolder widgets to use `TextField` component for more flexibility in theme overrides.
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`2ae63cd`](https://github.com/backstage/backstage/commit/2ae63cd): add i18n for scaffolder
+- [`d18f4eb`](https://github.com/backstage/backstage/commit/d18f4eb): Fix undefined in the title of Scaffolder Runs on the page load
+- [`896a22d`](https://github.com/backstage/backstage/commit/896a22d): Fix helper text margin for scaffolder EntityNamePicker and EntityTagsPicker when using outlined text field
+- [`bbd9f56`](https://github.com/backstage/backstage/commit/bbd9f56): Cleaned up codebase of RepoUrlPicker
+- [`b8600fe`](https://github.com/backstage/backstage/commit/b8600fe): Fix issue with `RepoUrlPicker` not refreshing the credentials for a different host
 
-### `@backstage/plugin-scaffolder-react` (1.10.0 → 1.11.0)
+### `@backstage/plugin-scaffolder-backend` (1.23.0 → [1.24.0](../../changelogs/@backstage/plugin-scaffolder-backend.md#1240))
+
+#### 1.24.0
+
+##### Minor Changes
+
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`dcd6a79`](https://github.com/backstage/backstage/commit/dcd6a79): Added OpenTelemetry support to Scaffolder metrics
+
+##### Patch Changes
+
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`c544f81`](https://github.com/backstage/backstage/commit/c544f81): Add support for status filtering in scaffolder tasks endpoint
+- [`b63d378`](https://github.com/backstage/backstage/commit/b63d378): Update internal imports
+- [`ef87e06`](https://github.com/backstage/backstage/commit/ef87e06): Fix scaffolder action `catalog:write` to write to directories that don't already exist
+
+### `@backstage/plugin-scaffolder-react` (1.10.0 → [1.11.0](../../changelogs/@backstage/plugin-scaffolder-react.md#1110))
 
 #### 1.11.0
 
 ##### Minor Changes
 
-- 8839381: Add scaffolder option to display object items in separate rows on review page
+- [`8839381`](https://github.com/backstage/backstage/commit/8839381): Add scaffolder option to display object items in separate rows on review page
 
 ##### Patch Changes
 
-- 072c00c: Fixed a bug in `DefaultTableOutputs` where output elements overlapped on smaller screen sizes
-- 46e5e55: Change scaffolder widgets to use `TextField` component for more flexibility in theme overrides.
-- d0e95a7: Add ability to customise form fields in the UI by exposing `uiSchema` and `formContext` in `FormProps`
-- 4670f06: support `ajv-errors` for scaffolder validation to allow for customizing the error messages
-- 04759f2: Fix null check in `isJsonObject` utility function for scaffolder review state component
+- [`072c00c`](https://github.com/backstage/backstage/commit/072c00c): Fixed a bug in `DefaultTableOutputs` where output elements overlapped on smaller screen sizes
+- [`46e5e55`](https://github.com/backstage/backstage/commit/46e5e55): Change scaffolder widgets to use `TextField` component for more flexibility in theme overrides.
+- [`d0e95a7`](https://github.com/backstage/backstage/commit/d0e95a7): Add ability to customise form fields in the UI by exposing `uiSchema` and `formContext` in `FormProps`
+- [`4670f06`](https://github.com/backstage/backstage/commit/4670f06): support `ajv-errors` for scaffolder validation to allow for customizing the error messages
+- [`04759f2`](https://github.com/backstage/backstage/commit/04759f2): Fix null check in `isJsonObject` utility function for scaffolder review state component
 
-### `@backstage/plugin-search-backend-node` (1.2.27 → 1.3.0)
+### `@backstage/plugin-search-backend-node` (1.2.27 → [1.3.0](../../changelogs/@backstage/plugin-search-backend-node.md#130))
 
 #### 1.3.0
 
 ##### Minor Changes
 
-- fc24d9e: Stop using `@backstage/backend-tasks` as it will be deleted in near future.
+- [`fc24d9e`](https://github.com/backstage/backstage/commit/fc24d9e): Stop using `@backstage/backend-tasks` as it will be deleted in near future.
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
-- 3123c16: Fix package metadata
-- 7c5f3b0: Explicit declare if the service ref accepts `single` or `multiple` implementations.
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`3123c16`](https://github.com/backstage/backstage/commit/3123c16): Fix package metadata
+- [`7c5f3b0`](https://github.com/backstage/backstage/commit/7c5f3b0): Explicit declare if the service ref accepts `single` or `multiple` implementations.
 
 ## Other patch version bumps
 
-### `@backstage/backend-defaults` (0.4.1 → 0.4.2)
+### `@backstage/backend-defaults` (0.4.1 → [0.4.2](../../changelogs/@backstage/backend-defaults.md#042))
 
 #### 0.4.2
 
 ##### Patch Changes
 
-- 0d16b52: Add access restrictions to the JWKS external access method config schema
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 3b429fb: Added deprecation warning to urge users to perform the auth service migration or implement their own token manager service.
+- [`0d16b52`](https://github.com/backstage/backstage/commit/0d16b52): Add access restrictions to the JWKS external access method config schema
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`3b429fb`](https://github.com/backstage/backstage/commit/3b429fb): Added deprecation warning to urge users to perform the auth service migration or implement their own token manager service.
   See https://backstage.io/docs/tutorials/auth-service-migration for more information.
-- 7681b17: update the `morgan` middleware to use a custom format to prevent PII from being logged
-- 4e79d19: The `createHealthRouter` utility that allows you to create a health check router is now exported via `@backstage/backend-defaults/rootHttpRouter`.
-- ba9abf4: The `SchedulerService` now allows tasks with `frequency: { trigger: 'manual' }`. This means that the task will not be scheduled, but rather run only when manually triggered with `SchedulerService.triggerTask`.
-- 78c1329: Updated `GitlabUrlReader.readUrl` and `GitlabUrlReader.readTree` to accept a user-provided token, supporting both bearer and private tokens.
-- 8e967da: Fixed the routing of the new health check service, the health endpoints should now properly be available at `/.backstage/health/v1/readiness` and `/.backstage/health/v1/liveness`.
-- 7c5f3b0: Update the `UrlReader` service to depends on multiple instances of `UrlReaderFactoryProvider` service.
-- 81f930a: use formatted query to prevent chance of SQL-injection
-- 1d5f298: Avoid excessive numbers of error listeners on cache clients
+- [`7681b17`](https://github.com/backstage/backstage/commit/7681b17): update the `morgan` middleware to use a custom format to prevent PII from being logged
+- [`4e79d19`](https://github.com/backstage/backstage/commit/4e79d19): The `createHealthRouter` utility that allows you to create a health check router is now exported via `@backstage/backend-defaults/rootHttpRouter`.
+- [`ba9abf4`](https://github.com/backstage/backstage/commit/ba9abf4): The `SchedulerService` now allows tasks with `frequency: { trigger: 'manual' }`. This means that the task will not be scheduled, but rather run only when manually triggered with `SchedulerService.triggerTask`.
+- [`78c1329`](https://github.com/backstage/backstage/commit/78c1329): Updated `GitlabUrlReader.readUrl` and `GitlabUrlReader.readTree` to accept a user-provided token, supporting both bearer and private tokens.
+- [`8e967da`](https://github.com/backstage/backstage/commit/8e967da): Fixed the routing of the new health check service, the health endpoints should now properly be available at `/.backstage/health/v1/readiness` and `/.backstage/health/v1/liveness`.
+- [`7c5f3b0`](https://github.com/backstage/backstage/commit/7c5f3b0): Update the `UrlReader` service to depends on multiple instances of `UrlReaderFactoryProvider` service.
+- [`81f930a`](https://github.com/backstage/backstage/commit/81f930a): use formatted query to prevent chance of SQL-injection
+- [`1d5f298`](https://github.com/backstage/backstage/commit/1d5f298): Avoid excessive numbers of error listeners on cache clients
 
-### `@backstage/backend-dev-utils` (0.1.4 → 0.1.5)
+### `@backstage/backend-dev-utils` (0.1.4 → [0.1.5](../../changelogs/@backstage/backend-dev-utils.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- 3a35172: Fix `EventEmitter` memory leak in the development utilities
+- [`3a35172`](https://github.com/backstage/backstage/commit/3a35172): Fix `EventEmitter` memory leak in the development utilities
 
-### `@backstage/core-app-api` (1.14.1 → 1.14.2)
+### `@backstage/core-app-api` (1.14.1 → [1.14.2](../../changelogs/@backstage/core-app-api.md#1142))
 
 #### 1.14.2
 
 ##### Patch Changes
 
-- 9a46a81: The request to delete the session cookie when running the app in protected mode is now done with a plain `fetch` rather than `FetchApi`. This fixes a bug where the app would immediately try to sign-in again when removing the cookie during logout.
+- [`9a46a81`](https://github.com/backstage/backstage/commit/9a46a81): The request to delete the session cookie when running the app in protected mode is now done with a plain `fetch` rather than `FetchApi`. This fixes a bug where the app would immediately try to sign-in again when removing the cookie during logout.
 
-### `@backstage/core-compat-api` (0.2.7 → 0.2.8)
+### `@backstage/core-compat-api` (0.2.7 → [0.2.8](../../changelogs/@backstage/core-compat-api.md#028))
 
 #### 0.2.8
 
 ##### Patch Changes
 
-- 72754db: Updated usage of `useRouteRef`, which can now always return `undefined`.
-- fe1fbb2: Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
-- 16cf96c: Both `compatWrapper` and `convertLegacyRouteRef` now support converting from the new system to the old.
-- 519b8e0: Added new utilities for converting legacy plugins and extensions to the new system. The `convertLegacyPlugin` option will convert an existing plugin to the new system, although you need to supply extensions for the plugin yourself. To help out with this, there is also a new `convertLegacyPageExtension` which converts an existing page extension to the new system.
-- 6349099: Added config input type to the extensions
+- [`72754db`](https://github.com/backstage/backstage/commit/72754db): Updated usage of `useRouteRef`, which can now always return `undefined`.
+- [`fe1fbb2`](https://github.com/backstage/backstage/commit/fe1fbb2): Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
+- [`16cf96c`](https://github.com/backstage/backstage/commit/16cf96c): Both `compatWrapper` and `convertLegacyRouteRef` now support converting from the new system to the old.
+- [`519b8e0`](https://github.com/backstage/backstage/commit/519b8e0): Added new utilities for converting legacy plugins and extensions to the new system. The `convertLegacyPlugin` option will convert an existing plugin to the new system, although you need to supply extensions for the plugin yourself. To help out with this, there is also a new `convertLegacyPageExtension` which converts an existing page extension to the new system.
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
-### `@backstage/core-components` (0.14.9 → 0.14.10)
+### `@backstage/core-components` (0.14.9 → [0.14.10](../../changelogs/@backstage/core-components.md#01410))
 
 #### 0.14.10
 
 ##### Patch Changes
 
-- 678971a: Move the `Link` component to the `RoutedTabs` instead of the `HeaderTabs` component
-- 13a9c63: Corrected the documentation for the GCP IAP auth module and updated the configuration to follow proxy configuration conventions by ignoring authEnv
+- [`678971a`](https://github.com/backstage/backstage/commit/678971a): Move the `Link` component to the `RoutedTabs` instead of the `HeaderTabs` component
+- [`13a9c63`](https://github.com/backstage/backstage/commit/13a9c63): Corrected the documentation for the GCP IAP auth module and updated the configuration to follow proxy configuration conventions by ignoring authEnv
 
-### `@backstage/create-app` (0.5.17 → 0.5.18)
+### `@backstage/create-app` (0.5.17 → [0.5.18](../../changelogs/@backstage/create-app.md#0518))
 
 #### 0.5.18
 
 ##### Patch Changes
 
-- c0a705d: Added the Kubernetes plugin to `create-app`
-- d7a0aa3: Bumped create-app version.
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 6c1081c: Updated dockerfile and `app-config.production.yaml` to make it easier to get started with example data
-- bfeba46: Included permission config and enabled it out of the box
+- [`c0a705d`](https://github.com/backstage/backstage/commit/c0a705d): Added the Kubernetes plugin to `create-app`
+- [`d7a0aa3`](https://github.com/backstage/backstage/commit/d7a0aa3): Bumped create-app version.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`6c1081c`](https://github.com/backstage/backstage/commit/6c1081c): Updated dockerfile and `app-config.production.yaml` to make it easier to get started with example data
+- [`bfeba46`](https://github.com/backstage/backstage/commit/bfeba46): Included permission config and enabled it out of the box
 
-### `@backstage/frontend-test-utils` (0.1.11 → 0.1.12)
+### `@backstage/frontend-test-utils` (0.1.11 → [0.1.12](../../changelogs/@backstage/frontend-test-utils.md#0112))
 
 #### 0.1.12
 
 ##### Patch Changes
 
-- 8209449: Added new APIs for testing extensions
-- 72754db: Updated usage of `useRouteRef`, which can now always return `undefined`.
-- 3be9aeb: Added support for v2 extensions, which declare their inputs and outputs without using a data map.
-- fe1fbb2: Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
-- 2d21599: Added support for being able to override extension definitions.
+- [`8209449`](https://github.com/backstage/backstage/commit/8209449): Added new APIs for testing extensions
+- [`72754db`](https://github.com/backstage/backstage/commit/72754db): Updated usage of `useRouteRef`, which can now always return `undefined`.
+- [`3be9aeb`](https://github.com/backstage/backstage/commit/3be9aeb): Added support for v2 extensions, which declare their inputs and outputs without using a data map.
+- [`fe1fbb2`](https://github.com/backstage/backstage/commit/fe1fbb2): Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
+- [`2d21599`](https://github.com/backstage/backstage/commit/2d21599): Added support for being able to override extension definitions.
 
   ```tsx
   const TestCard = EntityCardBlueprint.make({
@@ -1229,7 +1229,7 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
 
   ```
 
-- c00e1a0: Deprecate the `.render` method of the `createExtensionTester` in favour of using `renderInTestApp` directly.
+- [`c00e1a0`](https://github.com/backstage/backstage/commit/c00e1a0): Deprecate the `.render` method of the `createExtensionTester` in favour of using `renderInTestApp` directly.
 
   ```tsx
   import {
@@ -1245,71 +1245,71 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
   const { getByTestId } = renderInTestApp(tester.get(myComponentRef));
   ```
 
-- 264e10f: Deprecate existing `ExtensionCreators` in favour of their new Blueprint counterparts.
-- 264e10f: Refactor `.make` method on Blueprints into two different methods, `.make` and `.makeWithOverrides`.
+- [`264e10f`](https://github.com/backstage/backstage/commit/264e10f): Deprecate existing `ExtensionCreators` in favour of their new Blueprint counterparts.
+- [`264e10f`](https://github.com/backstage/backstage/commit/264e10f): Refactor `.make` method on Blueprints into two different methods, `.make` and `.makeWithOverrides`.
 
   When using `createExtensionBlueprint` you can define parameters for the factory function, if you wish to take advantage of these parameters you should use `.make` when creating an extension instance of a Blueprint. If you wish to override more things other than the standard `attachTo`, `name`, `namespace` then you should use `.makeWithOverrides` instead.
 
   `.make` is reserved for simple creation of extension instances from Blueprints using higher level parameters, whereas `.makeWithOverrides` is lower level and you have more control over the final extension.
 
-- 6349099: Added config input type to the extensions
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
-### `@backstage/plugin-api-docs` (0.11.7 → 0.11.8)
+### `@backstage/plugin-api-docs` (0.11.7 → [0.11.8](../../changelogs/@backstage/plugin-api-docs.md#0118))
 
 #### 0.11.8
 
 ##### Patch Changes
 
-- 770ba02: `ConsumingComponentsCard` and `ProvidingComponentsCard` will now optionally accept `columns` to override which table columns are displayed
-- fe1fbb2: Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
-- ebfeb40: Added `resolvers` prop to `AsyncApiDefinitionWidget`. This allows to override the default http/https resolvers, for example to add authentication to requests to internal schema registries.
-- 4b6d2cb: Updated dependency `@graphiql/react` to `^0.23.0`.
-- 6582799: Add `tableOptions` to all tables and additionally `title` to API tables.
+- [`770ba02`](https://github.com/backstage/backstage/commit/770ba02): `ConsumingComponentsCard` and `ProvidingComponentsCard` will now optionally accept `columns` to override which table columns are displayed
+- [`fe1fbb2`](https://github.com/backstage/backstage/commit/fe1fbb2): Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
+- [`ebfeb40`](https://github.com/backstage/backstage/commit/ebfeb40): Added `resolvers` prop to `AsyncApiDefinitionWidget`. This allows to override the default http/https resolvers, for example to add authentication to requests to internal schema registries.
+- [`4b6d2cb`](https://github.com/backstage/backstage/commit/4b6d2cb): Updated dependency `@graphiql/react` to `^0.23.0`.
+- [`6582799`](https://github.com/backstage/backstage/commit/6582799): Add `tableOptions` to all tables and additionally `title` to API tables.
 
-### `@backstage/plugin-app-backend` (0.3.71 → 0.3.72)
+### `@backstage/plugin-app-backend` (0.3.71 → [0.3.72](../../changelogs/@backstage/plugin-app-backend.md#0372))
 
 #### 0.3.72
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 6bd6fda: Deprecate `createRouter` and its options in favour of the new backend system.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`6bd6fda`](https://github.com/backstage/backstage/commit/6bd6fda): Deprecate `createRouter` and its options in favour of the new backend system.
 
-### `@backstage/plugin-app-visualizer` (0.1.8 → 0.1.9)
+### `@backstage/plugin-app-visualizer` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-app-visualizer.md#019))
 
 #### 0.1.9
 
 ##### Patch Changes
 
-- 72754db: Updated usage of `useRouteRef`, which can now always return `undefined`.
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
-- e493020: Fixing issue with the visualizer crashing when clicking on the detailed view because of `routeRef` parameters
+- [`72754db`](https://github.com/backstage/backstage/commit/72754db): Updated usage of `useRouteRef`, which can now always return `undefined`.
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`e493020`](https://github.com/backstage/backstage/commit/e493020): Fixing issue with the visualizer crashing when clicking on the detailed view because of `routeRef` parameters
 
-### `@backstage/plugin-auth-backend` (0.22.9 → 0.22.10)
+### `@backstage/plugin-auth-backend` (0.22.9 → [0.22.10](../../changelogs/@backstage/plugin-auth-backend.md#02210))
 
 #### 0.22.10
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- cc9a7a5: Deprecated `createRouter` and its router options in favour of the new backend system.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`cc9a7a5`](https://github.com/backstage/backstage/commit/cc9a7a5): Deprecated `createRouter` and its router options in favour of the new backend system.
 
-### `@backstage/plugin-auth-backend-module-atlassian-provider` (0.2.3 → 0.2.4)
+### `@backstage/plugin-auth-backend-module-atlassian-provider` (0.2.3 → [0.2.4](../../changelogs/@backstage/plugin-auth-backend-module-atlassian-provider.md#024))
 
 #### 0.2.4
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
 
-### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.14 → 0.1.15)
+### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.14 → [0.1.15](../../changelogs/@backstage/plugin-auth-backend-module-aws-alb-provider.md#0115))
 
 #### 0.1.15
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
-- 4ea354f: Added a `signer` configuration option to validate against the token claims. We strongly recommend that you set this value (typically on the format `arn:aws:elasticloadbalancing:us-east-2:123456789012:loadbalancer/app/my-load-balancer/1234567890123456`) to ensure that the auth provider can safely check the authenticity of any incoming tokens.
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
+- [`4ea354f`](https://github.com/backstage/backstage/commit/4ea354f): Added a `signer` configuration option to validate against the token claims. We strongly recommend that you set this value (typically on the format `arn:aws:elasticloadbalancing:us-east-2:123456789012:loadbalancer/app/my-load-balancer/1234567890123456`) to ensure that the auth provider can safely check the authenticity of any incoming tokens.
 
   Example:
 
@@ -1330,546 +1330,546 @@ Changes between 1.29.2 and 1.30.0 — 157 changed and 1 added packages.
              - resolver: emailLocalPartMatchingUserEntityName
   ```
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.1.5 → 0.1.6)
+### `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.1.5 → [0.1.6](../../changelogs/@backstage/plugin-auth-backend-module-bitbucket-provider.md#016))
 
 #### 0.1.6
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
 
-### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.17 → 0.2.18)
+### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.17 → [0.2.18](../../changelogs/@backstage/plugin-auth-backend-module-gcp-iap-provider.md#0218))
 
 #### 0.2.18
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
-- 13a9c63: Corrected the documentation for the GCP IAP auth module and updated the configuration to follow proxy configuration conventions by ignoring authEnv
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
+- [`13a9c63`](https://github.com/backstage/backstage/commit/13a9c63): Corrected the documentation for the GCP IAP auth module and updated the configuration to follow proxy configuration conventions by ignoring authEnv
 
-### `@backstage/plugin-auth-backend-module-github-provider` (0.1.19 → 0.1.20)
-
-#### 0.1.20
-
-##### Patch Changes
-
-- c8f1cae: Add `signIn` to authentication provider configuration schema
-
-### `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.19 → 0.1.20)
+### `@backstage/plugin-auth-backend-module-github-provider` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-auth-backend-module-github-provider.md#0120))
 
 #### 0.1.20
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
 
-### `@backstage/plugin-auth-backend-module-google-provider` (0.1.19 → 0.1.20)
+### `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-auth-backend-module-gitlab-provider.md#0120))
 
 #### 0.1.20
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
 
-### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.17 → 0.1.18)
+### `@backstage/plugin-auth-backend-module-google-provider` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-auth-backend-module-google-provider.md#0120))
+
+#### 0.1.20
+
+##### Patch Changes
+
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
+
+### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.17 → [0.1.18](../../changelogs/@backstage/plugin-auth-backend-module-microsoft-provider.md#0118))
 
 #### 0.1.18
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 39f36a9: Updated the Microsoft authenticator to accurately define required scopes, but to also omit the required and additional scopes when requesting resource scopes.
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`39f36a9`](https://github.com/backstage/backstage/commit/39f36a9): Updated the Microsoft authenticator to accurately define required scopes, but to also omit the required and additional scopes when requesting resource scopes.
 
-### `@backstage/plugin-auth-backend-module-oauth2-provider` (0.2.3 → 0.2.4)
-
-#### 0.2.4
-
-##### Patch Changes
-
-- c8f1cae: Add `signIn` to authentication provider configuration schema
-
-### `@backstage/plugin-auth-backend-module-oidc-provider` (0.2.3 → 0.2.4)
+### `@backstage/plugin-auth-backend-module-oauth2-provider` (0.2.3 → [0.2.4](../../changelogs/@backstage/plugin-auth-backend-module-oauth2-provider.md#024))
 
 #### 0.2.4
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
 
-### `@backstage/plugin-auth-backend-module-onelogin-provider` (0.1.3 → 0.1.4)
+### `@backstage/plugin-auth-backend-module-oidc-provider` (0.2.3 → [0.2.4](../../changelogs/@backstage/plugin-auth-backend-module-oidc-provider.md#024))
+
+#### 0.2.4
+
+##### Patch Changes
+
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
+
+### `@backstage/plugin-auth-backend-module-onelogin-provider` (0.1.3 → [0.1.4](../../changelogs/@backstage/plugin-auth-backend-module-onelogin-provider.md#014))
 
 #### 0.1.4
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
 
-### `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.2.3 → 0.2.4)
+### `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.2.3 → [0.2.4](../../changelogs/@backstage/plugin-auth-backend-module-vmware-cloud-provider.md#024))
 
 #### 0.2.4
 
 ##### Patch Changes
 
-- c8f1cae: Add `signIn` to authentication provider configuration schema
+- [`c8f1cae`](https://github.com/backstage/backstage/commit/c8f1cae): Add `signIn` to authentication provider configuration schema
 
-### `@backstage/plugin-auth-react` (0.1.4 → 0.1.5)
+### `@backstage/plugin-auth-react` (0.1.4 → [0.1.5](../../changelogs/@backstage/plugin-auth-react.md#015))
 
 #### 0.1.5
 
 ##### Patch Changes
 
-- aeac3e9: feat: Hide visibility of CookieAuthRedirect
+- [`aeac3e9`](https://github.com/backstage/backstage/commit/aeac3e9): feat: Hide visibility of CookieAuthRedirect
 
-### `@backstage/plugin-bitbucket-cloud-common` (0.2.21 → 0.2.22)
+### `@backstage/plugin-bitbucket-cloud-common` (0.2.21 → [0.2.22](../../changelogs/@backstage/plugin-bitbucket-cloud-common.md#0222))
 
 #### 0.2.22
 
 ##### Patch Changes
 
-- 3fca643: Added method `listBranchesByRepository` to `BitbucketCloudClient`
+- [`3fca643`](https://github.com/backstage/backstage/commit/3fca643): Added method `listBranchesByRepository` to `BitbucketCloudClient`
 
-### `@backstage/plugin-catalog-backend-module-openapi` (0.1.40 → 0.1.41)
+### `@backstage/plugin-catalog-backend-module-openapi` (0.1.40 → [0.1.41](../../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#0141))
 
 #### 0.1.41
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
 
-### `@backstage/plugin-catalog-graph` (0.4.7 → 0.4.8)
+### `@backstage/plugin-catalog-graph` (0.4.7 → [0.4.8](../../changelogs/@backstage/plugin-catalog-graph.md#048))
 
 #### 0.4.8
 
 ##### Patch Changes
 
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
-- fba7537: Memoize entity graph nodes when applying an `entityFilter` to prevent repeated redraws
-- 4a529c2: Use `entityPresentationApi` for the node title and the icon.
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`fba7537`](https://github.com/backstage/backstage/commit/fba7537): Memoize entity graph nodes when applying an `entityFilter` to prevent repeated redraws
+- [`4a529c2`](https://github.com/backstage/backstage/commit/4a529c2): Use `entityPresentationApi` for the node title and the icon.
 
-### `@backstage/plugin-catalog-import` (0.12.1 → 0.12.2)
+### `@backstage/plugin-catalog-import` (0.12.1 → [0.12.2](../../changelogs/@backstage/plugin-catalog-import.md#0122))
 
 #### 0.12.2
 
 ##### Patch Changes
 
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
 
-### `@backstage/plugin-catalog-node` (1.12.4 → 1.12.5)
+### `@backstage/plugin-catalog-node` (1.12.4 → [1.12.5](../../changelogs/@backstage/plugin-catalog-node.md#1125))
 
 #### 1.12.5
 
 ##### Patch Changes
 
-- a629fb2: Added setAllowedLocationTypes while introducing a new extension point called CatalogLocationsExtensionPoint
-- 7c5f3b0: Explicit declare if the service ref accepts `single` or `multiple` implementations.
+- [`a629fb2`](https://github.com/backstage/backstage/commit/a629fb2): Added setAllowedLocationTypes while introducing a new extension point called CatalogLocationsExtensionPoint
+- [`7c5f3b0`](https://github.com/backstage/backstage/commit/7c5f3b0): Explicit declare if the service ref accepts `single` or `multiple` implementations.
 
-### `@backstage/plugin-catalog-react` (1.12.2 → 1.12.3)
+### `@backstage/plugin-catalog-react` (1.12.2 → [1.12.3](../../changelogs/@backstage/plugin-catalog-react.md#1123))
 
 #### 1.12.3
 
 ##### Patch Changes
 
-- 7bd27e1: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead.
-- 31bfc44: Updated alpha definitions of extension data references.
-- 7ca331c: Correct `EntityDisplayName`'s icon alignment with the text.
-- 9b89b82: Internal refactor to remove unnecessary `routable` prop in the implementation of the `createEntityContentExtension` alpha export.
-- bebd569: Fix extra divider displayed on user list picker component
-- 519b8e0: Added utilities for converting existing entity card and content extensions to the new frontend system. This is in particular useful when used in combination with the new `convertLegacyPlugin` utility from `@backstage/core-compat-api`.
-- d001a42: Fix label related accessibility issues with `FavorityEntity`
-- 012e3eb: Entity page extensions created for the new frontend system via the `/alpha` exports will now be enabled by default.
-- 6349099: Added config input type to the extensions
+- [`7bd27e1`](https://github.com/backstage/backstage/commit/7bd27e1): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead.
+- [`31bfc44`](https://github.com/backstage/backstage/commit/31bfc44): Updated alpha definitions of extension data references.
+- [`7ca331c`](https://github.com/backstage/backstage/commit/7ca331c): Correct `EntityDisplayName`'s icon alignment with the text.
+- [`9b89b82`](https://github.com/backstage/backstage/commit/9b89b82): Internal refactor to remove unnecessary `routable` prop in the implementation of the `createEntityContentExtension` alpha export.
+- [`bebd569`](https://github.com/backstage/backstage/commit/bebd569): Fix extra divider displayed on user list picker component
+- [`519b8e0`](https://github.com/backstage/backstage/commit/519b8e0): Added utilities for converting existing entity card and content extensions to the new frontend system. This is in particular useful when used in combination with the new `convertLegacyPlugin` utility from `@backstage/core-compat-api`.
+- [`d001a42`](https://github.com/backstage/backstage/commit/d001a42): Fix label related accessibility issues with `FavorityEntity`
+- [`012e3eb`](https://github.com/backstage/backstage/commit/012e3eb): Entity page extensions created for the new frontend system via the `/alpha` exports will now be enabled by default.
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
-### `@backstage/plugin-devtools` (0.1.16 → 0.1.17)
+### `@backstage/plugin-devtools` (0.1.16 → [0.1.17](../../changelogs/@backstage/plugin-devtools.md#0117))
 
 #### 0.1.17
 
 ##### Patch Changes
 
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
 
-### `@backstage/plugin-devtools-backend` (0.3.8 → 0.3.9)
+### `@backstage/plugin-devtools-backend` (0.3.8 → [0.3.9](../../changelogs/@backstage/plugin-devtools-backend.md#039))
 
 #### 0.3.9
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 32a38e1: Removed unused code for lockfile analysis.
-- 2886ef7: Deprecated `createRouter` and its router options in favour of the new backend system.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`32a38e1`](https://github.com/backstage/backstage/commit/32a38e1): Removed unused code for lockfile analysis.
+- [`2886ef7`](https://github.com/backstage/backstage/commit/2886ef7): Deprecated `createRouter` and its router options in favour of the new backend system.
 
-### `@backstage/plugin-home` (0.7.8 → 0.7.9)
+### `@backstage/plugin-home` (0.7.8 → [0.7.9](../../changelogs/@backstage/plugin-home.md#079))
 
 #### 0.7.9
 
 ##### Patch Changes
 
-- 31bfc44: Updated alpha definitions of extension data references.
-- fe1fbb2: Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
-- fdcc059: Fixed a bug on the WelcomeTitle component where the welcome message wasn't correct when the language was set to Spanish
+- [`31bfc44`](https://github.com/backstage/backstage/commit/31bfc44): Updated alpha definitions of extension data references.
+- [`fe1fbb2`](https://github.com/backstage/backstage/commit/fe1fbb2): Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
+- [`fdcc059`](https://github.com/backstage/backstage/commit/fdcc059): Fixed a bug on the WelcomeTitle component where the welcome message wasn't correct when the language was set to Spanish
 
-### `@backstage/plugin-kubernetes` (0.11.12 → 0.11.13)
+### `@backstage/plugin-kubernetes` (0.11.12 → [0.11.13](../../changelogs/@backstage/plugin-kubernetes.md#01113))
 
 #### 0.11.13
 
 ##### Patch Changes
 
-- e6c15cc: Adds support for Backstage's new frontend system, available via the `/alpha` sub-path export.
-- fe1fbb2: Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
+- [`e6c15cc`](https://github.com/backstage/backstage/commit/e6c15cc): Adds support for Backstage's new frontend system, available via the `/alpha` sub-path export.
+- [`fe1fbb2`](https://github.com/backstage/backstage/commit/fe1fbb2): Migrating usages of the deprecated `createExtension` `v1` format to the newer `v2` format, and old `create*Extension` extension creators to blueprints.
 
-### `@backstage/plugin-kubernetes-backend` (0.18.3 → 0.18.4)
+### `@backstage/plugin-kubernetes-backend` (0.18.3 → [0.18.4](../../changelogs/@backstage/plugin-kubernetes-backend.md#0184))
 
 #### 0.18.4
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- b63d378: Update internal imports
-- 8c1aa06: Add `kubernetes.clusterLocatorMethods[].clusters[].customResources` to the configuration schema.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`b63d378`](https://github.com/backstage/backstage/commit/b63d378): Update internal imports
+- [`8c1aa06`](https://github.com/backstage/backstage/commit/8c1aa06): Add `kubernetes.clusterLocatorMethods[].clusters[].customResources` to the configuration schema.
   This was already documented and supported by the plugin.
 
-### `@backstage/plugin-kubernetes-node` (0.1.16 → 0.1.17)
+### `@backstage/plugin-kubernetes-node` (0.1.16 → [0.1.17](../../changelogs/@backstage/plugin-kubernetes-node.md#0117))
 
 #### 0.1.17
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- b63d378: Update internal imports
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`b63d378`](https://github.com/backstage/backstage/commit/b63d378): Update internal imports
 
-### `@backstage/plugin-kubernetes-react` (0.4.1 → 0.4.2)
+### `@backstage/plugin-kubernetes-react` (0.4.1 → [0.4.2](../../changelogs/@backstage/plugin-kubernetes-react.md#042))
 
 #### 0.4.2
 
 ##### Patch Changes
 
-- 954a593: `Liveness Probe` added in ContainerCard Component of PodDrawer
+- [`954a593`](https://github.com/backstage/backstage/commit/954a593): `Liveness Probe` added in ContainerCard Component of PodDrawer
 
-### `@backstage/plugin-notifications-backend` (0.3.3 → 0.3.4)
+### `@backstage/plugin-notifications-backend` (0.3.3 → [0.3.4](../../changelogs/@backstage/plugin-notifications-backend.md#034))
 
 #### 0.3.4
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- d55b8e3: Avoid sending broadcast emails as a fallback in case the entity-typed notification user can not be resolved.
-- 8013044: fix: consider broadcast union with user
-- 7a05f50: Allow using notifications without users in the catalog
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`d55b8e3`](https://github.com/backstage/backstage/commit/d55b8e3): Avoid sending broadcast emails as a fallback in case the entity-typed notification user can not be resolved.
+- [`8013044`](https://github.com/backstage/backstage/commit/8013044): fix: consider broadcast union with user
+- [`7a05f50`](https://github.com/backstage/backstage/commit/7a05f50): Allow using notifications without users in the catalog
 
-### `@backstage/plugin-notifications-node` (0.2.3 → 0.2.4)
+### `@backstage/plugin-notifications-node` (0.2.3 → [0.2.4](../../changelogs/@backstage/plugin-notifications-node.md#024))
 
 #### 0.2.4
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-org` (0.6.27 → 0.6.28)
+### `@backstage/plugin-org` (0.6.27 → [0.6.28](../../changelogs/@backstage/plugin-org.md#0628))
 
 #### 0.6.28
 
 ##### Patch Changes
 
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
 
-### `@backstage/plugin-permission-backend` (0.5.46 → 0.5.47)
+### `@backstage/plugin-permission-backend` (0.5.46 → [0.5.47](../../changelogs/@backstage/plugin-permission-backend.md#0547))
 
 #### 0.5.47
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-permission-common` (0.8.0 → 0.8.1)
+### `@backstage/plugin-permission-common` (0.8.0 → [0.8.1](../../changelogs/@backstage/plugin-permission-common.md#081))
 
 #### 0.8.1
 
 ##### Patch Changes
 
-- df784fe: Add the MetadataResponse type from @backstage/plugin-permission-node, since this
+- [`df784fe`](https://github.com/backstage/backstage/commit/df784fe): Add the MetadataResponse type from @backstage/plugin-permission-node, since this
   type might be used in frontend code.
-- 137fa34: Add the MetadataResponseSerializedRule type from @backstage/plugin-permission-node, since this type might be used in frontend code.
+- [`137fa34`](https://github.com/backstage/backstage/commit/137fa34): Add the MetadataResponseSerializedRule type from @backstage/plugin-permission-node, since this type might be used in frontend code.
 
-### `@backstage/plugin-proxy-backend` (0.5.3 → 0.5.4)
+### `@backstage/plugin-proxy-backend` (0.5.3 → [0.5.4](../../changelogs/@backstage/plugin-proxy-backend.md#054))
 
 #### 0.5.4
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- b63d378: Update internal imports
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`b63d378`](https://github.com/backstage/backstage/commit/b63d378): Update internal imports
 
-### `@backstage/plugin-scaffolder-backend-module-azure` (0.1.14 → 0.1.15)
+### `@backstage/plugin-scaffolder-backend-module-azure` (0.1.14 → [0.1.15](../../changelogs/@backstage/plugin-scaffolder-backend-module-azure.md#0115))
 
 #### 0.1.15
 
 ##### Patch Changes
 
-- 187f583: Added examples for publish:azure action and updated its test cases
+- [`187f583`](https://github.com/backstage/backstage/commit/187f583): Added examples for publish:azure action and updated its test cases
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.12 → 0.2.13)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.12 → [0.2.13](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket.md#0213))
 
 #### 0.2.13
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.12 → 0.1.13)
-
-#### 0.1.13
-
-##### Patch Changes
-
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 3fca643: Added autocompletion support for resource `branches`
-- d57967c: Add ability to set the initial commit message when initializing a repository using the scaffolder action.
-
-### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.12 → 0.1.13)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.12 → [0.1.13](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket-cloud.md#0113))
 
 #### 0.1.13
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- e3b64be: Added examples for publish:bitbucketServer action and improve its test cases
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`3fca643`](https://github.com/backstage/backstage/commit/3fca643): Added autocompletion support for resource `branches`
+- [`d57967c`](https://github.com/backstage/backstage/commit/d57967c): Add ability to set the initial commit message when initializing a repository using the scaffolder action.
 
-### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.23 → 0.2.24)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.12 → [0.1.13](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket-server.md#0113))
+
+#### 0.1.13
+
+##### Patch Changes
+
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`e3b64be`](https://github.com/backstage/backstage/commit/e3b64be): Added examples for publish:bitbucketServer action and improve its test cases
+
+### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.23 → [0.2.24](../../changelogs/@backstage/plugin-scaffolder-backend-module-confluence-to-markdown.md#0224))
 
 #### 0.2.24
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.46 → 0.2.47)
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.46 → [0.2.47](../../changelogs/@backstage/plugin-scaffolder-backend-module-cookiecutter.md#0247))
 
 #### 0.2.47
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
-- dae85df: Add examples for `fetch:cookiecutter` scaffolder action & improve related tests
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`dae85df`](https://github.com/backstage/backstage/commit/dae85df): Add examples for `fetch:cookiecutter` scaffolder action & improve related tests
 
-### `@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.14 → 0.1.15)
+### `@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.14 → [0.1.15](../../changelogs/@backstage/plugin-scaffolder-backend-module-gerrit.md#0115))
 
 #### 0.1.15
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-scaffolder-backend-module-gitea` (0.1.12 → 0.1.13)
+### `@backstage/plugin-scaffolder-backend-module-gitea` (0.1.12 → [0.1.13](../../changelogs/@backstage/plugin-scaffolder-backend-module-gitea.md#0113))
 
 #### 0.1.13
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 24de005: Added test cases for publish:gitea examples
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`24de005`](https://github.com/backstage/backstage/commit/24de005): Added test cases for publish:gitea examples
 
-### `@backstage/plugin-scaffolder-backend-module-github` (0.4.0 → 0.4.1)
+### `@backstage/plugin-scaffolder-backend-module-github` (0.4.0 → [0.4.1](../../changelogs/@backstage/plugin-scaffolder-backend-module-github.md#041))
 
 #### 0.4.1
 
 ##### Patch Changes
 
-- d21d307: Added examples for github:environment:create action and improve its test cases
-- 6d4cb97: Added examples for github:repo:create action and improved test cases
-- cd203f1: Added examples for action github:pages and improved its test cases
+- [`d21d307`](https://github.com/backstage/backstage/commit/d21d307): Added examples for github:environment:create action and improve its test cases
+- [`6d4cb97`](https://github.com/backstage/backstage/commit/6d4cb97): Added examples for github:repo:create action and improved test cases
+- [`cd203f1`](https://github.com/backstage/backstage/commit/cd203f1): Added examples for action github:pages and improved its test cases
 
-### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.4 → 0.4.5)
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.4 → [0.4.5](../../changelogs/@backstage/plugin-scaffolder-backend-module-gitlab.md#045))
 
 #### 0.4.5
 
 ##### Patch Changes
 
-- da97131: Added test cases for gitlab:issues:create examples
-- fad1b90: Allow the `createGitlabProjectVariableAction` to use oauth tokens
-- aab708e: Added test cases for gitlab:issue:edit examples
-- ef742dc: Added test cases for gitlab:projectAccessToken:create example
-- 1ba4c2f: Added test cases for gitlab:pipeline:trigger examples
-- a6603e4: Add custom action for merge request: **auto**
+- [`da97131`](https://github.com/backstage/backstage/commit/da97131): Added test cases for gitlab:issues:create examples
+- [`fad1b90`](https://github.com/backstage/backstage/commit/fad1b90): Allow the `createGitlabProjectVariableAction` to use oauth tokens
+- [`aab708e`](https://github.com/backstage/backstage/commit/aab708e): Added test cases for gitlab:issue:edit examples
+- [`ef742dc`](https://github.com/backstage/backstage/commit/ef742dc): Added test cases for gitlab:projectAccessToken:create example
+- [`1ba4c2f`](https://github.com/backstage/backstage/commit/1ba4c2f): Added test cases for gitlab:pipeline:trigger examples
+- [`a6603e4`](https://github.com/backstage/backstage/commit/a6603e4): Add custom action for merge request: **auto**
 
   The **Auto** action selects the committed action between _create_ and _update_.
 
   The **Auto** action fetches files using the **/projects/repository/tree endpoint**.
   After fetching, it checks if the file exists locally and in the repository. If it does, it chooses **update**; otherwise, it chooses **create**.
 
-### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.39 → 0.4.40)
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.39 → [0.4.40](../../changelogs/@backstage/plugin-scaffolder-backend-module-rails.md#0440))
 
 #### 0.4.40
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
-- 449def7: Add examples for fetch:rails scaffolder action & improve related tests
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`449def7`](https://github.com/backstage/backstage/commit/449def7): Add examples for fetch:rails scaffolder action & improve related tests
 
-### `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.30 → 0.1.31)
+### `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.30 → [0.1.31](../../changelogs/@backstage/plugin-scaffolder-backend-module-sentry.md#0131))
 
 #### 0.1.31
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- 382e868: Added test cases for sentry:project:create examples
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`382e868`](https://github.com/backstage/backstage/commit/382e868): Added test cases for sentry:project:create examples
 
-### `@backstage/plugin-scaffolder-node` (0.4.8 → 0.4.9)
+### `@backstage/plugin-scaffolder-node` (0.4.8 → [0.4.9](../../changelogs/@backstage/plugin-scaffolder-node.md#049))
 
 #### 0.4.9
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
-- c544f81: Add support for status filtering in scaffolder tasks endpoint
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`c544f81`](https://github.com/backstage/backstage/commit/c544f81): Add support for status filtering in scaffolder tasks endpoint
 
-### `@backstage/plugin-search` (1.4.14 → 1.4.15)
+### `@backstage/plugin-search` (1.4.14 → [1.4.15](../../changelogs/@backstage/plugin-search.md#1415))
 
 #### 1.4.15
 
 ##### Patch Changes
 
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
-- 3123c16: Fix package metadata
-- 6349099: Added config input type to the extensions
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`3123c16`](https://github.com/backstage/backstage/commit/3123c16): Fix package metadata
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
-### `@backstage/plugin-search-backend` (1.5.14 → 1.5.15)
+### `@backstage/plugin-search-backend` (1.5.14 → [1.5.15](../../changelogs/@backstage/plugin-search-backend.md#1515))
 
 #### 1.5.15
 
 ##### Patch Changes
 
-- 3123c16: Fix package metadata
+- [`3123c16`](https://github.com/backstage/backstage/commit/3123c16): Fix package metadata
 
-### `@backstage/plugin-search-backend-module-pg` (0.5.32 → 0.5.33)
+### `@backstage/plugin-search-backend-module-pg` (0.5.32 → [0.5.33](../../changelogs/@backstage/plugin-search-backend-module-pg.md#0533))
 
 #### 0.5.33
 
 ##### Patch Changes
 
-- 7251567: Removing `@backstage/backend-app-api` dependency
+- [`7251567`](https://github.com/backstage/backstage/commit/7251567): Removing `@backstage/backend-app-api` dependency
 
-### `@backstage/plugin-search-common` (1.2.13 → 1.2.14)
+### `@backstage/plugin-search-common` (1.2.13 → [1.2.14](../../changelogs/@backstage/plugin-search-common.md#1214))
 
 #### 1.2.14
 
 ##### Patch Changes
 
-- 3123c16: Fix package metadata
+- [`3123c16`](https://github.com/backstage/backstage/commit/3123c16): Fix package metadata
 
-### `@backstage/plugin-search-react` (1.7.13 → 1.7.14)
+### `@backstage/plugin-search-react` (1.7.13 → [1.7.14](../../changelogs/@backstage/plugin-search-react.md#1714))
 
 #### 1.7.14
 
 ##### Patch Changes
 
-- 7bd27e1: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead.
-- 31bfc44: Updated alpha definitions of extension data references.
-- 3123c16: Fix package metadata
-- 6349099: Added config input type to the extensions
+- [`7bd27e1`](https://github.com/backstage/backstage/commit/7bd27e1): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead.
+- [`31bfc44`](https://github.com/backstage/backstage/commit/31bfc44): Updated alpha definitions of extension data references.
+- [`3123c16`](https://github.com/backstage/backstage/commit/3123c16): Fix package metadata
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
-### `@backstage/plugin-signals-backend` (0.1.8 → 0.1.9)
+### `@backstage/plugin-signals-backend` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-signals-backend.md#019))
 
 #### 0.1.9
 
 ##### Patch Changes
 
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
 
-### `@backstage/plugin-techdocs` (1.10.7 → 1.10.8)
+### `@backstage/plugin-techdocs` (1.10.7 → [1.10.8](../../changelogs/@backstage/plugin-techdocs.md#1108))
 
 #### 1.10.8
 
 ##### Patch Changes
 
-- 69bd940: Use annotation constants from new techdocs-common package.
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
-- 27794d1: Allow for more granular control of TechDocsReaderPage styling. Theme overrides can now be provided to TechDocs without affecting the theme in other areas of Backstage.
-- 4490d73: Refactor TechDocs' mkdocs-redirects support.
-- 8543e72: TechDocs redirect feature now includes a notification to the user before they are redirected.
-- 67e76f2: TechDocs now supports the `mkdocs-redirects` plugin. Redirects defined using the `mkdocs-redirect` plugin will be handled automatically in TechDocs. Redirecting to external urls is not supported. In the case that an external redirect url is provided, TechDocs will redirect to the current documentation site home.
-- bdc5471: Fixed issue where header styles were incorrectly generated when themes used CSS variables to define font size.
-- 6349099: Added config input type to the extensions
+- [`69bd940`](https://github.com/backstage/backstage/commit/69bd940): Use annotation constants from new techdocs-common package.
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`27794d1`](https://github.com/backstage/backstage/commit/27794d1): Allow for more granular control of TechDocsReaderPage styling. Theme overrides can now be provided to TechDocs without affecting the theme in other areas of Backstage.
+- [`4490d73`](https://github.com/backstage/backstage/commit/4490d73): Refactor TechDocs' mkdocs-redirects support.
+- [`8543e72`](https://github.com/backstage/backstage/commit/8543e72): TechDocs redirect feature now includes a notification to the user before they are redirected.
+- [`67e76f2`](https://github.com/backstage/backstage/commit/67e76f2): TechDocs now supports the `mkdocs-redirects` plugin. Redirects defined using the `mkdocs-redirect` plugin will be handled automatically in TechDocs. Redirecting to external urls is not supported. In the case that an external redirect url is provided, TechDocs will redirect to the current documentation site home.
+- [`bdc5471`](https://github.com/backstage/backstage/commit/bdc5471): Fixed issue where header styles were incorrectly generated when themes used CSS variables to define font size.
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
-### `@backstage/plugin-techdocs-backend` (1.10.9 → 1.10.10)
+### `@backstage/plugin-techdocs-backend` (1.10.9 → [1.10.10](../../changelogs/@backstage/plugin-techdocs-backend.md#11010))
 
 #### 1.10.10
 
 ##### Patch Changes
 
-- 69bd940: Use annotation constants from new techdocs-common package.
-- 93095ee: Make sure node-fetch is version 2.7.0 or greater
-- b77fbf4: Added back `type: 'local'` to TechDocs config schema for `publisher`
-- a16632c: Update configuration schema to match actual behavior
+- [`69bd940`](https://github.com/backstage/backstage/commit/69bd940): Use annotation constants from new techdocs-common package.
+- [`93095ee`](https://github.com/backstage/backstage/commit/93095ee): Make sure node-fetch is version 2.7.0 or greater
+- [`b77fbf4`](https://github.com/backstage/backstage/commit/b77fbf4): Added back `type: 'local'` to TechDocs config schema for `publisher`
+- [`a16632c`](https://github.com/backstage/backstage/commit/a16632c): Update configuration schema to match actual behavior
 
-### `@backstage/plugin-techdocs-node` (1.12.8 → 1.12.9)
+### `@backstage/plugin-techdocs-node` (1.12.8 → [1.12.9](../../changelogs/@backstage/plugin-techdocs-node.md#1129))
 
 #### 1.12.9
 
 ##### Patch Changes
 
-- 389f5a4: Update deprecated url-reader-related imports.
-- 69bd940: Use annotation constants from new techdocs-common package.
-- 949083d: Update `patchMkdocsYmlPrebuild` to modify `repo_url` and `edit_uri` independently.
-- 5cedd9f: Fix TechDocs Edit URL for nested docs
+- [`389f5a4`](https://github.com/backstage/backstage/commit/389f5a4): Update deprecated url-reader-related imports.
+- [`69bd940`](https://github.com/backstage/backstage/commit/69bd940): Use annotation constants from new techdocs-common package.
+- [`949083d`](https://github.com/backstage/backstage/commit/949083d): Update `patchMkdocsYmlPrebuild` to modify `repo_url` and `edit_uri` independently.
+- [`5cedd9f`](https://github.com/backstage/backstage/commit/5cedd9f): Fix TechDocs Edit URL for nested docs
 
-### `@backstage/plugin-user-settings` (0.8.10 → 0.8.11)
+### `@backstage/plugin-user-settings` (0.8.10 → [0.8.11](../../changelogs/@backstage/plugin-user-settings.md#0811))
 
 #### 0.8.11
 
 ##### Patch Changes
 
-- c7603e8: Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
-- 6349099: Added config input type to the extensions
+- [`c7603e8`](https://github.com/backstage/backstage/commit/c7603e8): Deprecate the old pattern of `create*Extension`, and replace it with the equivalent Blueprint implementation instead
+- [`6349099`](https://github.com/backstage/backstage/commit/6349099): Added config input type to the extensions
 
 ## Excluded dependency updates
 
-- `@backstage/app-defaults` (1.5.9 → 1.5.10)
-- `@backstage/backend-openapi-utils` (0.1.15 → 0.1.16)
-- `@backstage/catalog-client` (1.6.5 → 1.6.6)
-- `@backstage/dev-utils` (1.0.36 → 1.0.37)
-- `@backstage/integration-react` (1.1.29 → 1.1.30)
-- `@backstage/plugin-app-node` (0.1.22 → 0.1.23)
-- `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.1.5 → 0.1.6)
-- `@backstage/plugin-auth-backend-module-guest-provider` (0.1.8 → 0.1.9)
-- `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.15 → 0.1.16)
-- `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.16 → 0.1.17)
-- `@backstage/plugin-catalog-backend-module-logs` (0.0.1 → 0.0.2)
-- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.20 → 0.1.21)
-- `@backstage/plugin-catalog-backend-module-unprocessed` (0.4.9 → 0.4.10)
-- `@backstage/plugin-catalog-common` (1.0.25 → 1.0.26)
-- `@backstage/plugin-catalog-unprocessed-entities` (0.2.6 → 0.2.7)
-- `@backstage/plugin-catalog-unprocessed-entities-common` (0.0.3 → 0.0.4)
-- `@backstage/plugin-config-schema` (0.1.57 → 0.1.58)
-- `@backstage/plugin-devtools-common` (0.1.11 → 0.1.12)
-- `@backstage/plugin-events-backend` (0.3.9 → 0.3.10)
-- `@backstage/plugin-events-backend-module-azure` (0.2.8 → 0.2.9)
-- `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.8 → 0.2.9)
-- `@backstage/plugin-events-backend-module-gerrit` (0.2.8 → 0.2.9)
-- `@backstage/plugin-events-backend-module-github` (0.2.8 → 0.2.9)
-- `@backstage/plugin-events-backend-module-gitlab` (0.2.8 → 0.2.9)
-- `@backstage/plugin-events-backend-test-utils` (0.1.32 → 0.1.33)
-- `@backstage/plugin-events-node` (0.3.8 → 0.3.9)
-- `@backstage/plugin-home-react` (0.1.15 → 0.1.16)
-- `@backstage/plugin-kubernetes-cluster` (0.0.13 → 0.0.14)
-- `@backstage/plugin-kubernetes-common` (0.8.1 → 0.8.2)
-- `@backstage/plugin-org-react` (0.1.26 → 0.1.27)
-- `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.19 → 0.1.20)
-- `@backstage/plugin-permission-react` (0.4.24 → 0.4.25)
-- `@backstage/plugin-scaffolder-backend-module-gcp` (0.1.0 → 0.1.1)
-- `@backstage/plugin-scaffolder-backend-module-yeoman` (0.3.6 → 0.3.7)
-- `@backstage/plugin-scaffolder-common` (1.5.4 → 1.5.5)
-- `@backstage/plugin-scaffolder-node-test-utils` (0.1.9 → 0.1.10)
-- `@backstage/plugin-search-backend-module-elasticsearch` (1.5.3 → 1.5.4)
-- `@backstage/plugin-signals` (0.0.8 → 0.0.9)
-- `@backstage/plugin-signals-node` (0.1.8 → 0.1.9)
-- `@backstage/plugin-techdocs-addons-test-utils` (1.0.36 → 1.0.37)
-- `@backstage/plugin-techdocs-module-addons-contrib` (1.1.12 → 1.1.13)
-- `@backstage/plugin-techdocs-react` (1.2.6 → 1.2.7)
-- `@backstage/plugin-user-settings-backend` (0.2.21 → 0.2.22)
-- `@backstage/repo-tools` (0.9.4 → 0.9.5)
-- `@backstage/test-utils` (1.5.9 → 1.5.10)
-- `@techdocs/cli` (1.8.16 → 1.8.17)
+- `@backstage/app-defaults` (1.5.9 → [1.5.10](../../changelogs/@backstage/app-defaults.md#1510))
+- `@backstage/backend-openapi-utils` (0.1.15 → [0.1.16](../../changelogs/@backstage/backend-openapi-utils.md#0116))
+- `@backstage/catalog-client` (1.6.5 → [1.6.6](../../changelogs/@backstage/catalog-client.md#166))
+- `@backstage/dev-utils` (1.0.36 → [1.0.37](../../changelogs/@backstage/dev-utils.md#1037))
+- `@backstage/integration-react` (1.1.29 → [1.1.30](../../changelogs/@backstage/integration-react.md#1130))
+- `@backstage/plugin-app-node` (0.1.22 → [0.1.23](../../changelogs/@backstage/plugin-app-node.md#0123))
+- `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.1.5 → [0.1.6](../../changelogs/@backstage/plugin-auth-backend-module-azure-easyauth-provider.md#016))
+- `@backstage/plugin-auth-backend-module-guest-provider` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-auth-backend-module-guest-provider.md#019))
+- `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.15 → [0.1.16](../../changelogs/@backstage/plugin-auth-backend-module-oauth2-proxy-provider.md#0116))
+- `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.16 → [0.1.17](../../changelogs/@backstage/plugin-auth-backend-module-pinniped-provider.md#0117))
+- `@backstage/plugin-catalog-backend-module-logs` (0.0.1 → [0.0.2](../../changelogs/@backstage/plugin-catalog-backend-module-logs.md#002))
+- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.20 → [0.1.21](../../changelogs/@backstage/plugin-catalog-backend-module-scaffolder-entity-model.md#0121))
+- `@backstage/plugin-catalog-backend-module-unprocessed` (0.4.9 → [0.4.10](../../changelogs/@backstage/plugin-catalog-backend-module-unprocessed.md#0410))
+- `@backstage/plugin-catalog-common` (1.0.25 → [1.0.26](../../changelogs/@backstage/plugin-catalog-common.md#1026))
+- `@backstage/plugin-catalog-unprocessed-entities` (0.2.6 → [0.2.7](../../changelogs/@backstage/plugin-catalog-unprocessed-entities.md#027))
+- `@backstage/plugin-catalog-unprocessed-entities-common` (0.0.3 → [0.0.4](../../changelogs/@backstage/plugin-catalog-unprocessed-entities-common.md#004))
+- `@backstage/plugin-config-schema` (0.1.57 → [0.1.58](../../changelogs/@backstage/plugin-config-schema.md#0158))
+- `@backstage/plugin-devtools-common` (0.1.11 → [0.1.12](../../changelogs/@backstage/plugin-devtools-common.md#0112))
+- `@backstage/plugin-events-backend` (0.3.9 → [0.3.10](../../changelogs/@backstage/plugin-events-backend.md#0310))
+- `@backstage/plugin-events-backend-module-azure` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-events-backend-module-azure.md#029))
+- `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-events-backend-module-bitbucket-cloud.md#029))
+- `@backstage/plugin-events-backend-module-gerrit` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-events-backend-module-gerrit.md#029))
+- `@backstage/plugin-events-backend-module-github` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-events-backend-module-github.md#029))
+- `@backstage/plugin-events-backend-module-gitlab` (0.2.8 → [0.2.9](../../changelogs/@backstage/plugin-events-backend-module-gitlab.md#029))
+- `@backstage/plugin-events-backend-test-utils` (0.1.32 → [0.1.33](../../changelogs/@backstage/plugin-events-backend-test-utils.md#0133))
+- `@backstage/plugin-events-node` (0.3.8 → [0.3.9](../../changelogs/@backstage/plugin-events-node.md#039))
+- `@backstage/plugin-home-react` (0.1.15 → [0.1.16](../../changelogs/@backstage/plugin-home-react.md#0116))
+- `@backstage/plugin-kubernetes-cluster` (0.0.13 → [0.0.14](../../changelogs/@backstage/plugin-kubernetes-cluster.md#0014))
+- `@backstage/plugin-kubernetes-common` (0.8.1 → [0.8.2](../../changelogs/@backstage/plugin-kubernetes-common.md#082))
+- `@backstage/plugin-org-react` (0.1.26 → [0.1.27](../../changelogs/@backstage/plugin-org-react.md#0127))
+- `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.19 → [0.1.20](../../changelogs/@backstage/plugin-permission-backend-module-allow-all-policy.md#0120))
+- `@backstage/plugin-permission-react` (0.4.24 → [0.4.25](../../changelogs/@backstage/plugin-permission-react.md#0425))
+- `@backstage/plugin-scaffolder-backend-module-gcp` (0.1.0 → [0.1.1](../../changelogs/@backstage/plugin-scaffolder-backend-module-gcp.md#011))
+- `@backstage/plugin-scaffolder-backend-module-yeoman` (0.3.6 → [0.3.7](../../changelogs/@backstage/plugin-scaffolder-backend-module-yeoman.md#037))
+- `@backstage/plugin-scaffolder-common` (1.5.4 → [1.5.5](../../changelogs/@backstage/plugin-scaffolder-common.md#155))
+- `@backstage/plugin-scaffolder-node-test-utils` (0.1.9 → [0.1.10](../../changelogs/@backstage/plugin-scaffolder-node-test-utils.md#0110))
+- `@backstage/plugin-search-backend-module-elasticsearch` (1.5.3 → [1.5.4](../../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#154))
+- `@backstage/plugin-signals` (0.0.8 → [0.0.9](../../changelogs/@backstage/plugin-signals.md#009))
+- `@backstage/plugin-signals-node` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-signals-node.md#019))
+- `@backstage/plugin-techdocs-addons-test-utils` (1.0.36 → [1.0.37](../../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#1037))
+- `@backstage/plugin-techdocs-module-addons-contrib` (1.1.12 → [1.1.13](../../changelogs/@backstage/plugin-techdocs-module-addons-contrib.md#1113))
+- `@backstage/plugin-techdocs-react` (1.2.6 → [1.2.7](../../changelogs/@backstage/plugin-techdocs-react.md#127))
+- `@backstage/plugin-user-settings-backend` (0.2.21 → [0.2.22](../../changelogs/@backstage/plugin-user-settings-backend.md#0222))
+- `@backstage/repo-tools` (0.9.4 → [0.9.5](../../changelogs/@backstage/repo-tools.md#095))
+- `@backstage/test-utils` (1.5.9 → [1.5.10](../../changelogs/@backstage/test-utils.md#1510))
+- `@techdocs/cli` (1.8.16 → [1.8.17](../../changelogs/@techdocs/cli.md#1817))

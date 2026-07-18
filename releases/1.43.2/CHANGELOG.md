@@ -15,14 +15,14 @@ Changes between 1.43.1 and 1.43.2 — 3 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/core-components` (0.18.0 → 0.18.1)
+### `@backstage/core-components` (0.18.0 → [0.18.1](../../changelogs/@backstage/core-components.md#0181))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-graph` (0.5.0 → 0.5.1)
+### `@backstage/plugin-catalog-graph` (0.5.0 → [0.5.1](../../changelogs/@backstage/plugin-catalog-graph.md#051))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-react` (1.21.0 → 1.21.1)
+### `@backstage/plugin-catalog-react` (1.21.0 → [1.21.1](../../changelogs/@backstage/plugin-catalog-react.md#1211))
 
 _No changelog entries found._

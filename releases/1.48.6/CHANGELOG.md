@@ -13,6 +13,6 @@ Changes between 1.48.5 and 1.48.6 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/ui` (0.12.0 → 0.12.1)
+### `@backstage/ui` (0.12.0 → [0.12.1](../../changelogs/@backstage/ui.md#0121))
 
 _No changelog entries found._

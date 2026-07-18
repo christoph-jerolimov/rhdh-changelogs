@@ -13,6 +13,6 @@ Changes between 1.25.0 and 1.25.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-kubernetes-backend` (0.16.3 → 0.16.4)
+### `@backstage/plugin-kubernetes-backend` (0.16.3 → [0.16.4](../../changelogs/@backstage/plugin-kubernetes-backend.md#0164))
 
 _No changelog entries found._

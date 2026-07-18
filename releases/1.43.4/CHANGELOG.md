@@ -15,14 +15,14 @@ Changes between 1.43.3 and 1.43.4 — 3 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/backend-defaults` (0.12.1 → 0.12.2)
+### `@backstage/backend-defaults` (0.12.1 → [0.12.2](../../changelogs/@backstage/backend-defaults.md#0122))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-backend` (2.2.1 → 2.2.2)
+### `@backstage/plugin-scaffolder-backend` (2.2.1 → [2.2.2](../../changelogs/@backstage/plugin-scaffolder-backend.md#222))
 
 _No changelog entries found._
 
-### `@backstage/plugin-scaffolder-node` (0.11.1 → 0.11.2)
+### `@backstage/plugin-scaffolder-node` (0.11.1 → [0.11.2](../../changelogs/@backstage/plugin-scaffolder-node.md#0112))
 
 _No changelog entries found._

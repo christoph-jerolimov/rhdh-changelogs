@@ -14,14 +14,14 @@ Changes between 1.27.3 and 1.27.4 — 2 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli` (0.26.5 → 0.26.6)
+### `@backstage/cli` (0.26.5 → [0.26.6](../../changelogs/@backstage/cli.md#0266))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.15 → 0.3.16)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.15 → [0.3.16](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#0316))
 
 #### 0.3.16
 
 ##### Patch Changes
 
-- a70377d: Added events support for `GitlabDiscoveryEntityProvider` and `GitlabOrgDiscoveryEntityProvider`.
+- [`a70377d`](https://github.com/backstage/backstage/commit/a70377d): Added events support for `GitlabDiscoveryEntityProvider` and `GitlabOrgDiscoveryEntityProvider`.

@@ -14,10 +14,10 @@ Changes between 1.42.0 and 1.42.1 — 2 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/create-app` (0.7.2 → 0.7.3)
+### `@backstage/create-app` (0.7.2 → [0.7.3](../../changelogs/@backstage/create-app.md#073))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-react` (1.20.0 → 1.20.1)
+### `@backstage/plugin-catalog-react` (1.20.0 → [1.20.1](../../changelogs/@backstage/plugin-catalog-react.md#1201))
 
 _No changelog entries found._

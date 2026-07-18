@@ -15,10 +15,10 @@ Changes between 1.46.6 and 1.46.7 — 2 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/ui` (0.10.0 → 0.10.1)
+### `@backstage/ui` (0.10.0 → [0.10.1](../../changelogs/@backstage/ui.md#0101))
 
 _No changelog entries found._
 
 ## Excluded dependency updates
 
-- `@backstage/plugin-app-visualizer` (0.1.26 → 0.1.27)
+- `@backstage/plugin-app-visualizer` (0.1.26 → [0.1.27](../../changelogs/@backstage/plugin-app-visualizer.md#0127))

@@ -13,6 +13,6 @@ Changes between 1.19.3 and 1.19.4 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli` (0.23.0 → 0.23.1)
+### `@backstage/cli` (0.23.0 → [0.23.1](../../changelogs/@backstage/cli.md#0231))
 
 _No changelog entries found._

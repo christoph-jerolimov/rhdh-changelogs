@@ -15,14 +15,14 @@ Changes between 1.21.0 and 1.21.1 — 3 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/catalog-client` (1.5.0 → 1.5.1)
+### `@backstage/catalog-client` (1.5.0 → [1.5.1](../../changelogs/@backstage/catalog-client.md#151))
 
 _No changelog entries found._
 
-### `@backstage/plugin-auth-backend` (0.20.1 → 0.20.2)
+### `@backstage/plugin-auth-backend` (0.20.1 → [0.20.2](../../changelogs/@backstage/plugin-auth-backend.md#0202))
 
 _No changelog entries found._
 
-### `@backstage/repo-tools` (0.5.0 → 0.5.1)
+### `@backstage/repo-tools` (0.5.0 → [0.5.1](../../changelogs/@backstage/repo-tools.md#051))
 
 _No changelog entries found._

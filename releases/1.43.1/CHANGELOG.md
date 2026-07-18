@@ -13,6 +13,6 @@ Changes between 1.43.0 and 1.43.1 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli` (0.34.2 → 0.34.3)
+### `@backstage/cli` (0.34.2 → [0.34.3](../../changelogs/@backstage/cli.md#0343))
 
 _No changelog entries found._

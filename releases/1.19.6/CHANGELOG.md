@@ -13,6 +13,6 @@ Changes between 1.19.5 and 1.19.6 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/core-components` (0.13.6 → 0.13.7)
+### `@backstage/core-components` (0.13.6 → [0.13.7](../../changelogs/@backstage/core-components.md#0137))
 
 _No changelog entries found._

@@ -14,10 +14,10 @@ Changes between 1.42.3 and 1.42.4 — 2 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli` (0.34.0 → 0.34.1)
+### `@backstage/cli` (0.34.0 → [0.34.1](../../changelogs/@backstage/cli.md#0341))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-backend-module-explore` (0.3.5 → 0.3.6)
+### `@backstage/plugin-search-backend-module-explore` (0.3.5 → [0.3.6](../../changelogs/@backstage/plugin-search-backend-module-explore.md#036))
 
 _No changelog entries found._

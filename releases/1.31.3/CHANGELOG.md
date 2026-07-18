@@ -13,6 +13,6 @@ Changes between 1.31.2 and 1.31.3 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-app-backend` (0.3.74 → 0.3.75)
+### `@backstage/plugin-app-backend` (0.3.74 → [0.3.75](../../changelogs/@backstage/plugin-app-backend.md#0375))
 
 _No changelog entries found._

@@ -13,6 +13,6 @@ Changes between 1.19.4 and 1.19.5 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/config-loader` (1.5.1 → 1.5.2)
+### `@backstage/config-loader` (1.5.1 → [1.5.2](../../changelogs/@backstage/config-loader.md#152))
 
 _No changelog entries found._

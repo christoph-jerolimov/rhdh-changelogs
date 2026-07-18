@@ -13,6 +13,6 @@ Changes between 1.44.2 and 1.44.3 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/repo-tools` (0.15.3 → 0.15.4)
+### `@backstage/repo-tools` (0.15.3 → [0.15.4](../../changelogs/@backstage/repo-tools.md#0154))
 
 _No changelog entries found._

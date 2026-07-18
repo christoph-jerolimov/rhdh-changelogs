@@ -23,46 +23,46 @@ Changes between 1.50.0 and 1.50.1 — 11 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/cli-module-build` (0.1.1 → 0.1.2)
+### `@backstage/cli-module-build` (0.1.1 → [0.1.2](../../changelogs/@backstage/cli-module-build.md#012))
 
 _No changelog entries found._
 
-### `@backstage/frontend-plugin-api` (0.16.0 → 0.16.1)
+### `@backstage/frontend-plugin-api` (0.16.0 → [0.16.1](../../changelogs/@backstage/frontend-plugin-api.md#0161))
 
 _No changelog entries found._
 
-### `@backstage/plugin-app` (0.4.3 → 0.4.4)
+### `@backstage/plugin-app` (0.4.3 → [0.4.4](../../changelogs/@backstage/plugin-app.md#044))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog` (2.0.2 → 2.0.3)
+### `@backstage/plugin-catalog` (2.0.2 → [2.0.3](../../changelogs/@backstage/plugin-catalog.md#203))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-graph` (0.6.1 → 0.6.2)
+### `@backstage/plugin-catalog-graph` (0.6.1 → [0.6.2](../../changelogs/@backstage/plugin-catalog-graph.md#062))
 
 _No changelog entries found._
 
-### `@backstage/plugin-catalog-react` (2.1.2 → 2.1.3)
+### `@backstage/plugin-catalog-react` (2.1.2 → [2.1.3](../../changelogs/@backstage/plugin-catalog-react.md#213))
 
 _No changelog entries found._
 
-### `@backstage/plugin-org` (0.7.1 → 0.7.2)
+### `@backstage/plugin-org` (0.7.1 → [0.7.2](../../changelogs/@backstage/plugin-org.md#072))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search` (1.7.1 → 1.7.2)
+### `@backstage/plugin-search` (1.7.1 → [1.7.2](../../changelogs/@backstage/plugin-search.md#172))
 
 _No changelog entries found._
 
-### `@backstage/plugin-search-react` (1.11.1 → 1.11.2)
+### `@backstage/plugin-search-react` (1.11.1 → [1.11.2](../../changelogs/@backstage/plugin-search-react.md#1112))
 
 _No changelog entries found._
 
-### `@backstage/plugin-techdocs` (1.17.3 → 1.17.4)
+### `@backstage/plugin-techdocs` (1.17.3 → [1.17.4](../../changelogs/@backstage/plugin-techdocs.md#1174))
 
 _No changelog entries found._
 
-### `@backstage/ui` (0.14.0 → 0.14.1)
+### `@backstage/ui` (0.14.0 → [0.14.1](../../changelogs/@backstage/ui.md#0141))
 
 _No changelog entries found._

@@ -13,6 +13,6 @@ Changes between 1.28.3 and 1.28.4 — 1 changed and 0 added packages.
 
 ## Patch version bumps
 
-### `@backstage/plugin-search` (1.4.12 → 1.4.13)
+### `@backstage/plugin-search` (1.4.12 → [1.4.13](../../changelogs/@backstage/plugin-search.md#1413))
 
 _No changelog entries found._
