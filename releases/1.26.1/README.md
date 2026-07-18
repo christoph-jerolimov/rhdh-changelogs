@@ -2,7 +2,7 @@
 
 ## Compared to 1.26.0 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 2 upgraded, 268 unchanged.
+0 added, 0 removed, 2 upgraded, 268 unchanged.
 
 ### Version bumps
 
@@ -13,7 +13,7 @@
 
 ## Compared to 1.25.2 (previous minor release)
 
-0 major bumps, 3 added, 0 removed, 240 upgraded (20 ⚠️ need extra attention), 27 unchanged.
+3 added, 0 removed, 240 upgraded (⚠️ need extra attention: 13 0.x minor, 7 0.0.x patch), 27 unchanged.
 
 ### 🆕 Added packages
 

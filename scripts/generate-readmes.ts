@@ -52,7 +52,7 @@ const pkg = (name: string): string => `\`${cell(name)}\``;
  * Major/Minor/Patch level of a bump; breaking marks bumps that need extra
  * attention (major, 0.x minor, and 0.0.x patch changes per semver-0 conventions).
  */
-function bumpLevel(from: string, to: string): { level: string; breaking: boolean } | undefined {
+function bumpLevel(from: string, to: string): { level: "Major" | "Minor" | "Patch"; breaking: boolean } | undefined {
   if (!semver.valid(from) || !semver.valid(to)) return undefined;
   const diff = semver.diff(from, to);
   const level =
@@ -81,12 +81,21 @@ function renderSection(baseline: Baseline, current: string, diff: Diff): string 
     ...diff.majorBumps.map((bump) => ({ ...bump, major: true })),
     ...diff.otherBumps.map((bump) => ({ ...bump, major: false })),
   ].sort((a, b) => byCodepoint(a.name, b.name));
-  const needAttention = bumps.filter(({ from, to }) => bumpLevel(from, to)?.breaking).length;
+  const attention = { Major: 0, Minor: 0, Patch: 0 };
+  for (const { from, to } of bumps) {
+    const bump = bumpLevel(from, to);
+    if (bump?.breaking) attention[bump.level] += 1;
+  }
+  const attentionParts = [
+    ...(attention.Major > 0 ? [`${attention.Major} major`] : []),
+    ...(attention.Minor > 0 ? [`${attention.Minor} 0.x minor`] : []),
+    ...(attention.Patch > 0 ? [`${attention.Patch} 0.0.x patch`] : []),
+  ];
   const summary = [
-    `${diff.majorBumps.length} major bumps`,
     `${diff.added.length} added`,
     `${diff.removed.length} removed`,
-    `${bumps.length} upgraded` + (needAttention > 0 ? ` (${needAttention} ⚠️ need extra attention)` : ""),
+    `${bumps.length} upgraded` +
+      (attentionParts.length > 0 ? ` (⚠️ need extra attention: ${attentionParts.join(", ")})` : ""),
     `${diff.unchanged} unchanged`,
   ];
   lines.push(summary.join(", ") + ".", "");

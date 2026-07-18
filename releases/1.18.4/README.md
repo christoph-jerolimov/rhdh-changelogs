@@ -2,7 +2,7 @@
 
 ## Compared to 1.18.3 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 92 upgraded (1 ⚠️ need extra attention), 139 unchanged.
+0 added, 0 removed, 92 upgraded (⚠️ need extra attention: 1 0.0.x patch), 139 unchanged.
 
 ### Version bumps
 
@@ -103,7 +103,7 @@
 
 ## Compared to 1.17.5 (previous minor release)
 
-0 major bumps, 10 added, 0 removed, 217 upgraded (27 ⚠️ need extra attention), 4 unchanged.
+10 added, 0 removed, 217 upgraded (⚠️ need extra attention: 21 0.x minor, 6 0.0.x patch), 4 unchanged.
 
 ### 🆕 Added packages
 

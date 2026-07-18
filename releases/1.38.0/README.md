@@ -2,7 +2,7 @@
 
 ## Compared to 1.37.1 (previous minor release)
 
-0 major bumps, 4 added, 0 removed, 154 upgraded (13 ⚠️ need extra attention), 25 unchanged.
+4 added, 0 removed, 154 upgraded (⚠️ need extra attention: 10 0.x minor, 3 0.0.x patch), 25 unchanged.
 
 ### 🆕 Added packages
 

@@ -2,7 +2,7 @@
 
 ## Compared to 1.50.1 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 11 upgraded, 196 unchanged.
+0 added, 0 removed, 11 upgraded, 196 unchanged.
 
 ### Version bumps
 
@@ -22,7 +22,7 @@
 
 ## Compared to 1.49.5 (previous minor release)
 
-0 major bumps, 0 added, 0 removed, 199 upgraded (14 ⚠️ need extra attention), 8 unchanged.
+0 added, 0 removed, 199 upgraded (⚠️ need extra attention: 10 0.x minor, 4 0.0.x patch), 8 unchanged.
 
 ### Version bumps
 

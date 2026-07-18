@@ -2,7 +2,7 @@
 
 ## Compared to 1.23.3 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 117 upgraded (6 ⚠️ need extra attention), 146 unchanged.
+0 added, 0 removed, 117 upgraded (⚠️ need extra attention: 6 0.0.x patch), 146 unchanged.
 
 ### Version bumps
 
@@ -128,7 +128,7 @@
 
 ## Compared to 1.22.3 (previous minor release)
 
-1 major bumps, 13 added, 1 removed, 233 upgraded (27 ⚠️ need extra attention), 17 unchanged.
+13 added, 1 removed, 233 upgraded (⚠️ need extra attention: 1 major, 22 0.x minor, 4 0.0.x patch), 17 unchanged.
 
 ### ⚠️ Major version bumps
 

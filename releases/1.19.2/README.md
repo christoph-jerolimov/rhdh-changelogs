@@ -2,7 +2,7 @@
 
 ## Compared to 1.19.1 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 10 upgraded, 228 unchanged.
+0 added, 0 removed, 10 upgraded, 228 unchanged.
 
 ### Version bumps
 
@@ -21,7 +21,7 @@
 
 ## Compared to 1.18.5 (previous minor release)
 
-0 major bumps, 7 added, 0 removed, 221 upgraded (18 ⚠️ need extra attention), 10 unchanged.
+7 added, 0 removed, 221 upgraded (⚠️ need extra attention: 14 0.x minor, 4 0.0.x patch), 10 unchanged.
 
 ### 🆕 Added packages
 

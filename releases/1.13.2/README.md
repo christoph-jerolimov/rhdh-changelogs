@@ -2,7 +2,7 @@
 
 ## Compared to 1.13.1 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 2 upgraded, 207 unchanged.
+0 added, 0 removed, 2 upgraded, 207 unchanged.
 
 ### Version bumps
 
@@ -13,7 +13,7 @@
 
 ## Compared to 1.12.1 (previous minor release)
 
-1 major bumps, 8 added, 0 removed, 186 upgraded (16 ⚠️ need extra attention), 15 unchanged.
+8 added, 0 removed, 186 upgraded (⚠️ need extra attention: 1 major, 13 0.x minor, 2 0.0.x patch), 15 unchanged.
 
 ### ⚠️ Major version bumps
 

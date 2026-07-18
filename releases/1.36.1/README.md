@@ -2,7 +2,7 @@
 
 ## Compared to 1.36.0 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 3 upgraded, 176 unchanged.
+0 added, 0 removed, 3 upgraded, 176 unchanged.
 
 ### Version bumps
 
@@ -14,7 +14,7 @@
 
 ## Compared to 1.35.1 (previous minor release)
 
-0 major bumps, 1 added, 0 removed, 155 upgraded (29 ⚠️ need extra attention), 23 unchanged.
+1 added, 0 removed, 155 upgraded (⚠️ need extra attention: 26 0.x minor, 3 0.0.x patch), 23 unchanged.
 
 ### 🆕 Added packages
 

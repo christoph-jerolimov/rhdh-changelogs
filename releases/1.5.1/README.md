@@ -2,7 +2,7 @@
 
 ## Compared to 1.5.0 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 1 upgraded, 158 unchanged.
+0 added, 0 removed, 1 upgraded, 158 unchanged.
 
 ### Version bumps
 
@@ -12,7 +12,7 @@
 
 ## Compared to 1.4.0 (previous minor release)
 
-0 major bumps, 4 added, 0 removed, 139 upgraded (9 ⚠️ need extra attention), 16 unchanged.
+4 added, 0 removed, 139 upgraded (⚠️ need extra attention: 8 0.x minor, 1 0.0.x patch), 16 unchanged.
 
 ### 🆕 Added packages
 

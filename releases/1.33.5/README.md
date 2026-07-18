@@ -2,7 +2,7 @@
 
 ## Compared to 1.33.4 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 19 upgraded, 158 unchanged.
+0 added, 0 removed, 19 upgraded, 158 unchanged.
 
 ### Version bumps
 
@@ -30,7 +30,7 @@
 
 ## Compared to 1.32.6 (previous minor release)
 
-0 major bumps, 0 added, 0 removed, 169 upgraded (24 ⚠️ need extra attention), 8 unchanged.
+0 added, 0 removed, 169 upgraded (⚠️ need extra attention: 19 0.x minor, 5 0.0.x patch), 8 unchanged.
 
 ### Version bumps
 

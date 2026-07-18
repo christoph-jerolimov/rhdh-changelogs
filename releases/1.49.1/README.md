@@ -2,7 +2,7 @@
 
 ## Compared to 1.49.0 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 9 upgraded, 198 unchanged.
+0 added, 0 removed, 9 upgraded, 198 unchanged.
 
 ### Version bumps
 
@@ -20,7 +20,7 @@
 
 ## Compared to 1.48.6 (previous minor release)
 
-3 major bumps, 14 added, 1 removed, 176 upgraded (24 ⚠️ need extra attention), 17 unchanged.
+14 added, 1 removed, 176 upgraded (⚠️ need extra attention: 3 major, 18 0.x minor, 3 0.0.x patch), 17 unchanged.
 
 ### ⚠️ Major version bumps
 

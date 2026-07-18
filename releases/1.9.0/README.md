@@ -2,7 +2,7 @@
 
 ## Compared to 1.8.3 (previous minor release)
 
-0 major bumps, 6 added, 0 removed, 171 upgraded (13 ⚠️ need extra attention), 5 unchanged.
+6 added, 0 removed, 171 upgraded (⚠️ need extra attention: 11 0.x minor, 2 0.0.x patch), 5 unchanged.
 
 ### 🆕 Added packages
 

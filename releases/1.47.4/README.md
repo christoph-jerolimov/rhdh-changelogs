@@ -2,7 +2,7 @@
 
 ## Compared to 1.47.3 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 2 upgraded, 190 unchanged.
+0 added, 0 removed, 2 upgraded, 190 unchanged.
 
 ### Version bumps
 
@@ -13,7 +13,7 @@
 
 ## Compared to 1.46.7 (previous minor release)
 
-0 major bumps, 2 added, 0 removed, 128 upgraded (9 ⚠️ need extra attention), 62 unchanged.
+2 added, 0 removed, 128 upgraded (⚠️ need extra attention: 7 0.x minor, 2 0.0.x patch), 62 unchanged.
 
 ### 🆕 Added packages
 

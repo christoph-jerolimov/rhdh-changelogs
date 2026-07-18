@@ -2,7 +2,7 @@
 
 ## Compared to 1.35.0 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 4 upgraded, 174 unchanged.
+0 added, 0 removed, 4 upgraded, 174 unchanged.
 
 ### Version bumps
 
@@ -15,7 +15,7 @@
 
 ## Compared to 1.34.2 (previous minor release)
 
-0 major bumps, 1 added, 0 removed, 166 upgraded (8 ⚠️ need extra attention), 11 unchanged.
+1 added, 0 removed, 166 upgraded (⚠️ need extra attention: 3 0.x minor, 5 0.0.x patch), 11 unchanged.
 
 ### 🆕 Added packages
 

@@ -2,7 +2,7 @@
 
 ## Compared to 1.40.2 (previous minor release)
 
-1 major bumps, 1 added, 0 removed, 174 upgraded (9 ⚠️ need extra attention), 13 unchanged.
+1 added, 0 removed, 174 upgraded (⚠️ need extra attention: 1 major, 3 0.x minor, 5 0.0.x patch), 13 unchanged.
 
 ### ⚠️ Major version bumps
 

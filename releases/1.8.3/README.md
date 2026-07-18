@@ -2,7 +2,7 @@
 
 ## Compared to 1.8.2 (previous patch release)
 
-0 major bumps, 0 added, 0 removed, 1 upgraded, 175 unchanged.
+0 added, 0 removed, 1 upgraded, 175 unchanged.
 
 ### Version bumps
 
@@ -12,7 +12,7 @@
 
 ## Compared to 1.7.2 (previous minor release)
 
-0 major bumps, 13 added, 0 removed, 158 upgraded (14 ⚠️ need extra attention), 5 unchanged.
+13 added, 0 removed, 158 upgraded (⚠️ need extra attention: 12 0.x minor, 2 0.0.x patch), 5 unchanged.
 
 ### 🆕 Added packages
 

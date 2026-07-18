@@ -2,7 +2,7 @@
 
 ## Compared to 1.19.6 (previous minor release)
 
-1 major bumps, 3 added, 0 removed, 221 upgraded (18 ⚠️ need extra attention), 17 unchanged.
+3 added, 0 removed, 221 upgraded (⚠️ need extra attention: 1 major, 12 0.x minor, 5 0.0.x patch), 17 unchanged.
 
 ### ⚠️ Major version bumps
 

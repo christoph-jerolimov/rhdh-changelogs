@@ -2,7 +2,7 @@
 
 ## Compared to 1.47.4 (previous minor release)
 
-2 major bumps, 2 added, 0 removed, 186 upgraded (24 ⚠️ need extra attention), 6 unchanged.
+2 added, 0 removed, 186 upgraded (⚠️ need extra attention: 2 major, 18 0.x minor, 4 0.0.x patch), 6 unchanged.
 
 ### ⚠️ Major version bumps
 
