@@ -1,4 +1,4 @@
-# Number of changed packages — minor releases
+# Number of changed packages — all minor releases
 
 **54 releases**, newest to oldest — each row compares a release with the direct previous minor release. Each minor release is represented by the latest patch of its minor line.
 

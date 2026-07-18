@@ -1,4 +1,4 @@
-# Package versions — minor releases
+# Package versions — all minor releases
 
 Versions of **323 packages** across **54 releases** — columns ordered newest to oldest. Each minor release is represented by the latest patch of its minor line.
 

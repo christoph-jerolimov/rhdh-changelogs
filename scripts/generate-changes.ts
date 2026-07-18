@@ -45,8 +45,8 @@ const variants: Variant[] = [
     releases: stableDescending,
   },
   {
-    name: "number-of-changed-packages-minor-releases",
-    title: "Number of changed packages — minor releases",
+    name: "number-of-changed-packages-all-minor-releases",
+    title: "Number of changed packages — all minor releases",
     releases: minorDescending,
     minorNote: true,
   },
