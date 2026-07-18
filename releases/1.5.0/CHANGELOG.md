@@ -2,22 +2,98 @@
 
 Changes between 1.4.0 and 1.5.0 — 139 changed and 4 added packages.
 
-Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-github-issues`, `@backstage/plugin-sonarqube-backend`.
+## Summary
 
-## `@backstage/backend-defaults` (new, 0.1.0)
+- [Newly added packages](#newly-added-packages): 4 packages
+- [Breaking changes](#breaking-changes): 5 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 4 packages
+- [Other minor version bumps](#other-minor-version-bumps): 6 packages
+- [Patch version bumps](#patch-version-bumps): 41 packages
 
-### 0.1.0
+## Table of contents
 
-#### Minor Changes
+- [Newly added packages](#newly-added-packages)
+  - [`@backstage/backend-defaults` (new, 0.1.0)](#backstagebackend-defaults-new-010)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-server` (new, 0.1.0)](#backstageplugin-catalog-backend-module-bitbucket-server-new-010)
+  - [`@backstage/plugin-github-issues` (new, 0.1.0)](#backstageplugin-github-issues-new-010)
+  - [`@backstage/plugin-sonarqube-backend` (new, 0.1.0)](#backstageplugin-sonarqube-backend-new-010)
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/core-plugin-api` (1.0.4 → 1.0.5)](#backstagecore-plugin-api-104--105)
+  - [`@backstage/plugin-adr` (0.1.2 → 0.2.0)](#backstageplugin-adr-012--020)
+  - [`@backstage/plugin-adr-backend` (0.1.2 → 0.2.0)](#backstageplugin-adr-backend-012--020)
+  - [`@backstage/plugin-adr-common` (0.1.2 → 0.2.0)](#backstageplugin-adr-common-012--020)
+  - [`@backstage/plugin-sonarqube` (0.3.7 → 0.4.0)](#backstageplugin-sonarqube-037--040)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/backend-app-api` (0.1.0 → 0.2.0)](#backstagebackend-app-api-010--020)
+  - [`@backstage/backend-common` (0.14.1 → 0.15.0)](#backstagebackend-common-0141--0150)
+  - [`@backstage/core-components` (0.10.0 → 0.11.0)](#backstagecore-components-0100--0110)
+  - [`@backstage/plugin-shortcuts` (0.2.8 → 0.3.0)](#backstageplugin-shortcuts-028--030)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/integration` (1.2.2 → 1.3.0)](#backstageintegration-122--130)
+  - [`@backstage/plugin-catalog` (1.4.0 → 1.5.0)](#backstageplugin-catalog-140--150)
+  - [`@backstage/plugin-scaffolder` (1.4.0 → 1.5.0)](#backstageplugin-scaffolder-140--150)
+  - [`@backstage/plugin-scaffolder-backend` (1.4.0 → 1.5.0)](#backstageplugin-scaffolder-backend-140--150)
+  - [`@backstage/plugin-techdocs-node` (1.2.0 → 1.3.0)](#backstageplugin-techdocs-node-120--130)
+  - [`@techdocs/cli` (1.1.3 → 1.2.0)](#techdocscli-113--120)
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/backend-plugin-api` (0.1.0 → 0.1.1)](#backstagebackend-plugin-api-010--011)
+  - [`@backstage/backend-tasks` (0.3.3 → 0.3.4)](#backstagebackend-tasks-033--034)
+  - [`@backstage/backend-test-utils` (0.1.26 → 0.1.27)](#backstagebackend-test-utils-0126--0127)
+  - [`@backstage/cli` (0.18.0 → 0.18.1)](#backstagecli-0180--0181)
+  - [`@backstage/create-app` (0.4.29 → 0.4.30)](#backstagecreate-app-0429--0430)
+  - [`@backstage/plugin-api-docs` (0.8.7 → 0.8.8)](#backstageplugin-api-docs-087--088)
+  - [`@backstage/plugin-auth-backend` (0.15.0 → 0.15.1)](#backstageplugin-auth-backend-0150--0151)
+  - [`@backstage/plugin-catalog-backend` (1.3.0 → 1.3.1)](#backstageplugin-catalog-backend-130--131)
+  - [`@backstage/plugin-catalog-backend-module-aws` (0.1.7 → 0.1.8)](#backstageplugin-catalog-backend-module-aws-017--018)
+  - [`@backstage/plugin-catalog-backend-module-github` (0.1.5 → 0.1.6)](#backstageplugin-catalog-backend-module-github-015--016)
+  - [`@backstage/plugin-catalog-backend-module-gitlab` (0.1.5 → 0.1.6)](#backstageplugin-catalog-backend-module-gitlab-015--016)
+  - [`@backstage/plugin-catalog-backend-module-msgraph` (0.4.0 → 0.4.1)](#backstageplugin-catalog-backend-module-msgraph-040--041)
+  - [`@backstage/plugin-catalog-backend-module-openapi` (0.1.0 → 0.1.1)](#backstageplugin-catalog-backend-module-openapi-010--011)
+  - [`@backstage/plugin-catalog-common` (1.0.4 → 1.0.5)](#backstageplugin-catalog-common-104--105)
+  - [`@backstage/plugin-catalog-graphql` (0.3.11 → 0.3.12)](#backstageplugin-catalog-graphql-0311--0312)
+  - [`@backstage/plugin-catalog-node` (1.0.0 → 1.0.1)](#backstageplugin-catalog-node-100--101)
+  - [`@backstage/plugin-catalog-react` (1.1.2 → 1.1.3)](#backstageplugin-catalog-react-112--113)
+  - [`@backstage/plugin-cicd-statistics` (0.1.9 → 0.1.10)](#backstageplugin-cicd-statistics-019--0110)
+  - [`@backstage/plugin-code-climate` (0.1.7 → 0.1.8)](#backstageplugin-code-climate-017--018)
+  - [`@backstage/plugin-cost-insights` (0.11.29 → 0.11.30)](#backstageplugin-cost-insights-01129--01130)
+  - [`@backstage/plugin-cost-insights-common` (0.1.0 → 0.1.1)](#backstageplugin-cost-insights-common-010--011)
+  - [`@backstage/plugin-github-pull-requests-board` (0.1.1 → 0.1.2)](#backstageplugin-github-pull-requests-board-011--012)
+  - [`@backstage/plugin-gocd` (0.1.13 → 0.1.14)](#backstageplugin-gocd-0113--0114)
+  - [`@backstage/plugin-graphiql` (0.2.39 → 0.2.40)](#backstageplugin-graphiql-0239--0240)
+  - [`@backstage/plugin-graphql-backend` (0.1.24 → 0.1.25)](#backstageplugin-graphql-backend-0124--0125)
+  - [`@backstage/plugin-home` (0.4.23 → 0.4.24)](#backstageplugin-home-0423--0424)
+  - [`@backstage/plugin-kafka` (0.3.7 → 0.3.8)](#backstageplugin-kafka-037--038)
+  - [`@backstage/plugin-kubernetes` (0.7.0 → 0.7.1)](#backstageplugin-kubernetes-070--071)
+  - [`@backstage/plugin-kubernetes-backend` (0.7.0 → 0.7.1)](#backstageplugin-kubernetes-backend-070--071)
+  - [`@backstage/plugin-kubernetes-common` (0.4.0 → 0.4.1)](#backstageplugin-kubernetes-common-040--041)
+  - [`@backstage/plugin-periskop` (0.1.5 → 0.1.6)](#backstageplugin-periskop-015--016)
+  - [`@backstage/plugin-sentry` (0.4.0 → 0.4.1)](#backstageplugin-sentry-040--041)
+  - [`@backstage/plugin-splunk-on-call` (0.3.31 → 0.3.32)](#backstageplugin-splunk-on-call-0331--0332)
+  - [`@backstage/plugin-stack-overflow-backend` (0.1.3 → 0.1.4)](#backstageplugin-stack-overflow-backend-013--014)
+  - [`@backstage/plugin-tech-insights-common` (0.2.5 → 0.2.6)](#backstageplugin-tech-insights-common-025--026)
+  - [`@backstage/plugin-tech-insights-node` (0.3.2 → 0.3.3)](#backstageplugin-tech-insights-node-032--033)
+  - [`@backstage/plugin-tech-radar` (0.5.14 → 0.5.15)](#backstageplugin-tech-radar-0514--0515)
+  - [`@backstage/plugin-techdocs` (1.3.0 → 1.3.1)](#backstageplugin-techdocs-130--131)
+  - [`@backstage/plugin-techdocs-module-addons-contrib` (1.0.2 → 1.0.3)](#backstageplugin-techdocs-module-addons-contrib-102--103)
+  - [`@backstage/plugin-techdocs-react` (1.0.2 → 1.0.3)](#backstageplugin-techdocs-react-102--103)
+  - [`@backstage/plugin-xcmetrics` (0.2.27 → 0.2.28)](#backstageplugin-xcmetrics-0227--0228)
+
+## Newly added packages
+
+### `@backstage/backend-defaults` (new, 0.1.0)
+
+#### 0.1.0
+
+##### Minor Changes
 
 - 5df230d48c: Introduced a new `backend-defaults` package carrying `createBackend` which was previously exported from `backend-app-api`.
   The `backend-app-api` package now exports the `createSpecializedBacked` that does not add any service factories by default.
 
-## `@backstage/plugin-catalog-backend-module-bitbucket-server` (new, 0.1.0)
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - f7607f9d85: Add new plugin catalog-backend-module-bitbucket-server which adds the `BitbucketServerEntityProvider`.
 
@@ -67,52 +143,115 @@ Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-m
             repoSlug: '.*' # optional; RegExp
   ```
 
-## `@backstage/plugin-github-issues` (new, 0.1.0)
+### `@backstage/plugin-github-issues` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - ffd5e47fb5: New plugin for displaying GitHub Issues added
 
-#### Patch Changes
+##### Patch Changes
 
 - 347ea327c2: Moved communication with GitHub graphql API to the dedicated plugin API.
   Fixes issue when no GitHub Issues are rendered when partial failure is returned from GitHub API.
 - b522f49403: Updated dependency `@spotify/prettier-config` to `^14.0.0`.
 
-## `@backstage/plugin-sonarqube-backend` (new, 0.1.0)
+### `@backstage/plugin-sonarqube-backend` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - e2be9ab3a4: Initial creation of the plugin
 
-## `@backstage/backend-app-api` (0.1.0 → 0.2.0)
+## Breaking changes
 
-### 0.2.0
+### `@backstage/core-plugin-api` (1.0.4 → 1.0.5)
 
-#### Minor Changes
+#### 1.0.5
+
+##### Patch Changes
+
+- 80da5162c7: Introduced a new experimental feature that allows you to declare plugin-wide options for your plugin by defining
+  `__experimentalConfigure` in your `createPlugin` options. See https://backstage.io/docs/plugins/customization.md for more information.
+
+  This is an experimental feature and it will have breaking changes in the future.
+
+- 87649a06bf: Add a note that the `fetchApi` utility should not be used on sign-in page implementations and similar.
+
+### `@backstage/plugin-adr` (0.1.2 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- bfc7c50a09: Display associated entity as a chip in `AdrSearchResultListItem`
+
+  BREAKING: `AdrDocument` now includes a `entityRef` property, if you have a custom `AdrParser` you will have to supply this property in your returned documents
+
+### `@backstage/plugin-adr-backend` (0.1.2 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- bfc7c50a09: Display associated entity as a chip in `AdrSearchResultListItem`
+
+  BREAKING: `AdrDocument` now includes a `entityRef` property, if you have a custom `AdrParser` you will have to supply this property in your returned documents
+
+### `@backstage/plugin-adr-common` (0.1.2 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- bfc7c50a09: Display associated entity as a chip in `AdrSearchResultListItem`
+
+  BREAKING: `AdrDocument` now includes a `entityRef` property, if you have a custom `AdrParser` you will have to supply this property in your returned documents
+
+### `@backstage/plugin-sonarqube` (0.3.7 → 0.4.0)
+
+#### 0.4.0
+
+##### Minor Changes
+
+- 619b515172: **BREAKING** This plugin now call the `sonarqube-backend` plugin instead of relying on the proxy plugin
+
+  The whole proxy's `'/sonarqube':` key can be removed from your configuration files.
+
+  Then head to the [README in sonarqube-backend plugin page](https://github.com/backstage/backstage/tree/master/plugins/sonarqube-backend/README.md) to learn how to set-up the link to your Sonarqube instances.
+
+##### Patch Changes
+
+- f9c310a439: Add ability to provide an optional Sonarqube instance into the annotation in the `catalog-info.yaml` file
+
+## 0.x minor version bumps
+
+### `@backstage/backend-app-api` (0.1.0 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
 
 - 5df230d48c: Introduced a new `backend-defaults` package carrying `createBackend` which was previously exported from `backend-app-api`.
   The `backend-app-api` package now exports the `createSpecializedBacked` that does not add any service factories by default.
 
-#### Patch Changes
+##### Patch Changes
 
 - 0599732ec0: Refactored experimental backend system with new type names.
 
-## `@backstage/backend-common` (0.14.1 → 0.15.0)
+### `@backstage/backend-common` (0.14.1 → 0.15.0)
 
-### 0.15.0
+#### 0.15.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 12e9b54f0e: Added back support for when no branch is provided to the `UrlReader` for Bitbucket Server
 - 30012e7d8c: - Added `force` and `remoteRef` option to `push` method in `git` actions
   - Added `addRemote` and `deleteRemote` methods to `git` actions
 
-#### Patch Changes
+##### Patch Changes
 
 - fc8a5f797b: Improve `scm/git` wrapper around `isomorphic-git` library :
 
@@ -131,37 +270,162 @@ Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-m
 - 770d3f92c4: The config prop `ensureExists` now applies to schema creation when `pluginDivisionMode` is set to `schema`. This means schemas will no longer accidentally be automatically created when `ensureExists` is set to `false`.
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
 
-## `@backstage/backend-plugin-api` (0.1.0 → 0.1.1)
+### `@backstage/core-components` (0.10.0 → 0.11.0)
 
-### 0.1.1
+#### 0.11.0
 
-#### Patch Changes
+##### Minor Changes
+
+- d0eefc499a: Made the `to` prop of `Button` and `Link` more strict, only supporting plain strings. It used to be the case that this prop was unexpectedly too liberal, making it look like we supported the complex `react-router-dom` object form of the parameter as well, which led to unexpected results at runtime.
+
+##### Patch Changes
+
+- a22af3edc8: Adding a `className` prop to the `MarkdownContent` component
+
+### `@backstage/plugin-shortcuts` (0.2.8 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- 5b769fddb5: Internal observable replaced with a mapping from the storage API. This fixes shortcuts initialization when using firestore.
+
+  `ShortcutApi.get` method, that returns an immediate snapshot of shortcuts, made public.
+
+  Example of how to get and observe `shortcuts`:
+
+  ```typescript
+  const shortcutApi = useApi(shortcutsApiRef);
+  const shortcuts = useObservable(shortcutApi.shortcut$(), shortcutApi.get());
+  ```
+
+## Other minor version bumps
+
+### `@backstage/integration` (1.2.2 → 1.3.0)
+
+#### 1.3.0
+
+##### Minor Changes
+
+- 593dea6710: Add support for Basic Auth for Bitbucket Server.
+- ad35364e97: feat(techdocs): add edit button support for bitbucketServer
+
+##### Patch Changes
+
+- 163243a4d1: Handle incorrect return type from Octokit paginate plugin to resolve reading URLs from GitHub
+- c4b460a47d: Avoid double encoding of the file path in `getBitbucketDownloadUrl`
+- 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
+- 1f27d83933: Fixed bug in getGitLabFileFetchUrl where a target whose path did not contain the
+  `/-/` scope would result in a fetch URL that did not support
+  private-token-based authentication.
+
+### `@backstage/plugin-catalog` (1.4.0 → 1.5.0)
+
+#### 1.5.0
+
+##### Minor Changes
+
+- 80da5162c7: Plugin catalog has been modified to use an experimental feature where you can customize the title of the create button.
+
+  You can modify it by doing:
+
+  ```typescript jsx
+  import { catalogPlugin } from '@backstage/plugin-catalog';
+
+  catalogPlugin.__experimentalReconfigure({
+    createButtonTitle: 'New',
+  });
+  ```
+
+- fe94398418: Allow changing the subtitle of the `CatalogTable` component
+
+### `@backstage/plugin-scaffolder` (1.4.0 → 1.5.0)
+
+#### 1.5.0
+
+##### Minor Changes
+
+- c4b452e16a: Starting the implementation of the Wizard page for the `next` scaffolder plugin
+
+### `@backstage/plugin-scaffolder-backend` (1.4.0 → 1.5.0)
+
+#### 1.5.0
+
+##### Minor Changes
+
+- c4b452e16a: Starting the implementation of the Wizard page for the `next` scaffolder plugin
+- 593dea6710: Add support for Basic Auth for Bitbucket Server.
+- 3b7930b3e5: Add support for Bearer Authorization header / token-based auth at Git commands.
+- 3f1316f1c5: User Bearer Authorization header at Git commands with token-based auth at Bitbucket Server.
+- eeff5046ae: Updated `publish:gitlab:merge-request` action to allow commit updates and deletes
+- 692d5d3405: Added `reviewers` and `teamReviewers` parameters to `publish:github:pull-request` action to add reviewers on the pull request created by the action
+
+##### Patch Changes
+
+- fc8a5f797b: Add a `publish:gerrit:review` scaffolder action
+- c971afbf21: The `publish:file` action has been deprecated in favor of testing templates using the template editor instead. Note that this action is not and was never been installed by default.
+- b10b6c4aa4: Fix issue on Windows where templated files where not properly skipped as intended.
+- 56e1b4b89c: Fixed typos in alpha types.
+- dad0f65494: Fail gracefully if an invalid `Authorization` header is passed to `POST /v2/tasks`
+- 014b3b7776: Add missing `res.end()` in scaffolder backend `EventStream` usage
+
+### `@backstage/plugin-techdocs-node` (1.2.0 → 1.3.0)
+
+#### 1.3.0
+
+##### Minor Changes
+
+- ad35364e97: feat(techdocs): add edit button support for bitbucketServer
+
+##### Patch Changes
+
+- c8196bd37d: Fix AWS S3 404 NotFound error
+
+  When reading an object from the S3 bucket through a stream, the aws-sdk getObject() API may throw a 404 NotFound Error with no error message or, in fact, any sort of HTTP-layer error responses. These fail the @backstage/error's assertError() checks, so they must be wrapped. The test for this case was also updated to match the wrapped error message.
+
+- f833344611: Bump default `TechDocs` image to `v1.1.0`, see the release [here](https://github.com/backstage/techdocs-container/releases/tag/v1.1.0).
+
+### `@techdocs/cli` (1.1.3 → 1.2.0)
+
+#### 1.2.0
+
+##### Minor Changes
+
+- 855952db53: Added CLI option `--docker-option` to allow passing additional options to the `docker run` command executed my `serve` and `serve:mkdocs`.
+
+## Patch version bumps
+
+### `@backstage/backend-plugin-api` (0.1.0 → 0.1.1)
+
+#### 0.1.1
+
+##### Patch Changes
 
 - 0599732ec0: Refactored experimental backend system with new type names.
 - 34c2f5aca1: The factory returned by `createBackendPlugin` and `createBackendModule` no longer require a parameter to be passed if the options are optional.
 
-## `@backstage/backend-tasks` (0.3.3 → 0.3.4)
+### `@backstage/backend-tasks` (0.3.3 → 0.3.4)
 
-### 0.3.4
+#### 0.3.4
 
-#### Patch Changes
+##### Patch Changes
 
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
 
-## `@backstage/backend-test-utils` (0.1.26 → 0.1.27)
+### `@backstage/backend-test-utils` (0.1.26 → 0.1.27)
 
-### 0.1.27
+#### 0.1.27
 
-#### Patch Changes
+##### Patch Changes
 
 - 0599732ec0: Refactored experimental backend system with new type names.
 - 56e1b4b89c: Added alpha test helpers for the new experimental backend system.
 
-## `@backstage/cli` (0.18.0 → 0.18.1)
+### `@backstage/cli` (0.18.0 → 0.18.1)
 
-### 0.18.1
+#### 0.18.1
 
-#### Patch Changes
+##### Patch Changes
 
 - d45bbfeb69: Linting is now ignored for any `.eslintrc.*` files, not just `.eslintrc.js`.
 - 72c228fdb8: Fixed a bug where `NODE_ENV` was not set in the environment when starting the backend in development mode. It has always been the case that Webpack transformed `NODE_ENV` when running in development mode, but this did not affect dependencies in `node_modules` as they are treated as external.
@@ -169,36 +433,11 @@ Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-m
 - fd68d6f138: Added resolution of `.json` and `.wasm` files to the Webpack configuration in order to match defaults.
 - 94155a41e0: Updated dependencies `@svgr/*` to `6.3.x`.
 
-## `@backstage/core-components` (0.10.0 → 0.11.0)
+### `@backstage/create-app` (0.4.29 → 0.4.30)
 
-### 0.11.0
+#### 0.4.30
 
-#### Minor Changes
-
-- d0eefc499a: Made the `to` prop of `Button` and `Link` more strict, only supporting plain strings. It used to be the case that this prop was unexpectedly too liberal, making it look like we supported the complex `react-router-dom` object form of the parameter as well, which led to unexpected results at runtime.
-
-#### Patch Changes
-
-- a22af3edc8: Adding a `className` prop to the `MarkdownContent` component
-
-## `@backstage/core-plugin-api` (1.0.4 → 1.0.5)
-
-### 1.0.5
-
-#### Patch Changes
-
-- 80da5162c7: Introduced a new experimental feature that allows you to declare plugin-wide options for your plugin by defining
-  `__experimentalConfigure` in your `createPlugin` options. See https://backstage.io/docs/plugins/customization.md for more information.
-
-  This is an experimental feature and it will have breaking changes in the future.
-
-- 87649a06bf: Add a note that the `fetchApi` utility should not be used on sign-in page implementations and similar.
-
-## `@backstage/create-app` (0.4.29 → 0.4.30)
-
-### 0.4.30
-
-#### Patch Changes
+##### Patch Changes
 
 - 73cee58fc2: Bumped create-app version.
 - f762386d48: Bumped create-app version.
@@ -226,96 +465,28 @@ Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-m
   +    methods: [GET, POST, PUT, DELETE, PATCH, HEAD]
   ```
 
-## `@backstage/integration` (1.2.2 → 1.3.0)
+### `@backstage/plugin-api-docs` (0.8.7 → 0.8.8)
 
-### 1.3.0
+#### 0.8.8
 
-#### Minor Changes
-
-- 593dea6710: Add support for Basic Auth for Bitbucket Server.
-- ad35364e97: feat(techdocs): add edit button support for bitbucketServer
-
-#### Patch Changes
-
-- 163243a4d1: Handle incorrect return type from Octokit paginate plugin to resolve reading URLs from GitHub
-- c4b460a47d: Avoid double encoding of the file path in `getBitbucketDownloadUrl`
-- 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
-- 1f27d83933: Fixed bug in getGitLabFileFetchUrl where a target whose path did not contain the
-  `/-/` scope would result in a fetch URL that did not support
-  private-token-based authentication.
-
-## `@backstage/plugin-adr` (0.1.2 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- bfc7c50a09: Display associated entity as a chip in `AdrSearchResultListItem`
-
-  BREAKING: `AdrDocument` now includes a `entityRef` property, if you have a custom `AdrParser` you will have to supply this property in your returned documents
-
-## `@backstage/plugin-adr-backend` (0.1.2 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- bfc7c50a09: Display associated entity as a chip in `AdrSearchResultListItem`
-
-  BREAKING: `AdrDocument` now includes a `entityRef` property, if you have a custom `AdrParser` you will have to supply this property in your returned documents
-
-## `@backstage/plugin-adr-common` (0.1.2 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- bfc7c50a09: Display associated entity as a chip in `AdrSearchResultListItem`
-
-  BREAKING: `AdrDocument` now includes a `entityRef` property, if you have a custom `AdrParser` you will have to supply this property in your returned documents
-
-## `@backstage/plugin-api-docs` (0.8.7 → 0.8.8)
-
-### 0.8.8
-
-#### Patch Changes
+##### Patch Changes
 
 - dae12c71cf: Updated dependency `@asyncapi/react-component` to `1.0.0-next.40`.
 
-## `@backstage/plugin-auth-backend` (0.15.0 → 0.15.1)
+### `@backstage/plugin-auth-backend` (0.15.0 → 0.15.1)
 
-### 0.15.1
+#### 0.15.1
 
-#### Patch Changes
+##### Patch Changes
 
 - c676a9e07b: Fixed a bug in auth plugin on the backend where it ignores the skip migration database options when using the database provider.
 - 2d7d6028e1: Updated dependency `@google-cloud/firestore` to `^6.0.0`.
 
-## `@backstage/plugin-catalog` (1.4.0 → 1.5.0)
+### `@backstage/plugin-catalog-backend` (1.3.0 → 1.3.1)
 
-### 1.5.0
+#### 1.3.1
 
-#### Minor Changes
-
-- 80da5162c7: Plugin catalog has been modified to use an experimental feature where you can customize the title of the create button.
-
-  You can modify it by doing:
-
-  ```typescript jsx
-  import { catalogPlugin } from '@backstage/plugin-catalog';
-
-  catalogPlugin.__experimentalReconfigure({
-    createButtonTitle: 'New',
-  });
-  ```
-
-- fe94398418: Allow changing the subtitle of the `CatalogTable` component
-
-## `@backstage/plugin-catalog-backend` (1.3.0 → 1.3.1)
-
-### 1.3.1
-
-#### Patch Changes
+##### Patch Changes
 
 - 56e1b4b89c: Fixed typos in alpha types.
 - e3d3018531: Fix issue for conditional decisions based on properties stored as arrays, like tags.
@@ -324,22 +495,22 @@ Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-m
 
 - 059ae348b4: Use the non-deprecated form of table.unique in knex
 
-## `@backstage/plugin-catalog-backend-module-aws` (0.1.7 → 0.1.8)
+### `@backstage/plugin-catalog-backend-module-aws` (0.1.7 → 0.1.8)
 
-### 0.1.8
+#### 0.1.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 17d45dbf10: Deprecate `AwsS3DiscoveryProcessor` in favor of `AwsS3EntityProvider` (since v0.1.4).
 
   You can find a migration guide at
   [the release notes for v0.1.4](https://github.com/backstage/backstage/blob/master/plugins/catalog-backend-module-aws/CHANGELOG.md#014).
 
-## `@backstage/plugin-catalog-backend-module-github` (0.1.5 → 0.1.6)
+### `@backstage/plugin-catalog-backend-module-github` (0.1.5 → 0.1.6)
 
-### 0.1.6
+#### 0.1.6
 
-#### Patch Changes
+##### Patch Changes
 
 - f48950e34b: Github Entity Provider functionality for adding entities to the catalog.
 
@@ -350,11 +521,11 @@ Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-m
 - c59d1ce487: Fixed bug where repository filter was including all archived repositories
 - 97f0a37378: Improved support for wildcards in `catalogPath`
 
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.1.5 → 0.1.6)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.1.5 → 0.1.6)
 
-### 0.1.6
+#### 0.1.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 24979413a4: Enhancing GitLab provider with filtering projects by pattern RegExp
 
@@ -370,19 +541,19 @@ Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-m
 
   With the aforementioned parameter you can filter projects, and keep only who belongs to the namespace "john".
 
-## `@backstage/plugin-catalog-backend-module-msgraph` (0.4.0 → 0.4.1)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.4.0 → 0.4.1)
 
-### 0.4.1
+#### 0.4.1
 
-#### Patch Changes
+##### Patch Changes
 
 - b1995df9f3: Adjust references in deprecation warnings to point to stable URL/document.
 
-## `@backstage/plugin-catalog-backend-module-openapi` (0.1.0 → 0.1.1)
+### `@backstage/plugin-catalog-backend-module-openapi` (0.1.0 → 0.1.1)
 
-### 0.1.1
+#### 0.1.1
 
-#### Patch Changes
+##### Patch Changes
 
 - b50e8e533b: Add an `$openapi` placeholder resolver that supports more use cases for resolving `$ref` instances. This means that the quite recently added `OpenApiRefProcessor` has been deprecated in favor of the `openApiPlaceholderResolver`.
 
@@ -402,326 +573,239 @@ Newly added: `@backstage/backend-defaults`, `@backstage/plugin-catalog-backend-m
       $openapi: ./spec/openapi.yaml # by using $openapi Backstage will now resolve all $ref instances
   ```
 
-## `@backstage/plugin-catalog-common` (1.0.4 → 1.0.5)
+### `@backstage/plugin-catalog-common` (1.0.4 → 1.0.5)
 
-### 1.0.5
+#### 1.0.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 92103db537: Export aggregated list of all catalog permissions
 
-## `@backstage/plugin-catalog-graphql` (0.3.11 → 0.3.12)
+### `@backstage/plugin-catalog-graphql` (0.3.11 → 0.3.12)
 
-### 0.3.12
+#### 0.3.12
 
-#### Patch Changes
+##### Patch Changes
 
 - fa3eeee92d: Updated dependency `@graphql-tools/schema` to `^9.0.0`.
 
-## `@backstage/plugin-catalog-node` (1.0.0 → 1.0.1)
+### `@backstage/plugin-catalog-node` (1.0.0 → 1.0.1)
 
-### 1.0.1
+#### 1.0.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 0599732ec0: Refactored experimental backend system with new type names.
 - 56e1b4b89c: Fixed typos in alpha types.
 
-## `@backstage/plugin-catalog-react` (1.1.2 → 1.1.3)
+### `@backstage/plugin-catalog-react` (1.1.2 → 1.1.3)
 
-### 1.1.3
+#### 1.1.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 44e691a7f9: Modify description column to not use auto width.
 
-## `@backstage/plugin-cicd-statistics` (0.1.9 → 0.1.10)
+### `@backstage/plugin-cicd-statistics` (0.1.9 → 0.1.10)
 
-### 0.1.10
+#### 0.1.10
 
-#### Patch Changes
+##### Patch Changes
 
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
 
-## `@backstage/plugin-code-climate` (0.1.7 → 0.1.8)
+### `@backstage/plugin-code-climate` (0.1.7 → 0.1.8)
 
-### 0.1.8
+#### 0.1.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
 - 831a8fee86: Send Authorization headers in fetch requests using FetchApi in Code Climate plugin to fix unauthorized requests to Backstage backends with authentication enabled.
 
-## `@backstage/plugin-cost-insights` (0.11.29 → 0.11.30)
+### `@backstage/plugin-cost-insights` (0.11.29 → 0.11.30)
 
-### 0.11.30
+#### 0.11.30
 
-#### Patch Changes
+##### Patch Changes
 
 - b746eca638: Make `products` field optional in the config
 - daf4b33e34: Add name property to Group
 - 08562ebe11: Display minus sign in trends in `CostOverviewCard`
 
-## `@backstage/plugin-cost-insights-common` (0.1.0 → 0.1.1)
+### `@backstage/plugin-cost-insights-common` (0.1.0 → 0.1.1)
 
-### 0.1.1
+#### 0.1.1
 
-#### Patch Changes
+##### Patch Changes
 
 - daf4b33e34: Add name property to Group
 
-## `@backstage/plugin-github-pull-requests-board` (0.1.1 → 0.1.2)
+### `@backstage/plugin-github-pull-requests-board` (0.1.1 → 0.1.2)
 
-### 0.1.2
+#### 0.1.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 73268a67ff: Fixed rendering when PR contains references to deleted Github accounts
 
-## `@backstage/plugin-gocd` (0.1.13 → 0.1.14)
+### `@backstage/plugin-gocd` (0.1.13 → 0.1.14)
 
-### 0.1.14
+#### 0.1.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
 
-## `@backstage/plugin-graphiql` (0.2.39 → 0.2.40)
+### `@backstage/plugin-graphiql` (0.2.39 → 0.2.40)
 
-### 0.2.40
+#### 0.2.40
 
-#### Patch Changes
+##### Patch Changes
 
 - 3a8ab72248: Minor internal tweak to lazy loading in order to improve module compatibility.
 
-## `@backstage/plugin-graphql-backend` (0.1.24 → 0.1.25)
+### `@backstage/plugin-graphql-backend` (0.1.24 → 0.1.25)
 
-### 0.1.25
+#### 0.1.25
 
-#### Patch Changes
+##### Patch Changes
 
 - fa3eeee92d: Updated dependency `@graphql-tools/schema` to `^9.0.0`.
 
-## `@backstage/plugin-home` (0.4.23 → 0.4.24)
+### `@backstage/plugin-home` (0.4.23 → 0.4.24)
 
-### 0.4.24
+#### 0.4.24
 
-#### Patch Changes
+##### Patch Changes
 
 - df7b9158b8: Add wrap-around for the listing of tools to prevent increasing width with name length.
 
-## `@backstage/plugin-kafka` (0.3.7 → 0.3.8)
+### `@backstage/plugin-kafka` (0.3.7 → 0.3.8)
 
-### 0.3.8
+#### 0.3.8
 
-#### Patch Changes
+##### Patch Changes
 
 - bde245f0bf: Add dashboard URL feature and fix minor styling issues.
 
-## `@backstage/plugin-kubernetes` (0.7.0 → 0.7.1)
+### `@backstage/plugin-kubernetes` (0.7.0 → 0.7.1)
 
-### 0.7.1
+#### 0.7.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 860ed68343: Fixed bug in CronJobsAccordions component that causes an error when cronjobs use a kubernetes alias, such as `@hourly` or `@daily` instead of standard cron syntax.
 - f563b86a5b: Adds namespace column to Kubernetes error reporting table
 
-## `@backstage/plugin-kubernetes-backend` (0.7.0 → 0.7.1)
+### `@backstage/plugin-kubernetes-backend` (0.7.0 → 0.7.1)
 
-### 0.7.1
+#### 0.7.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 0297da83c0: Added `DaemonSets` to the default kubernetes resources.
 - 0cd87cf30d: Added a new `customResources` field to the ClusterDetails interface, in order to specify (override) custom resources per cluster
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
 
-## `@backstage/plugin-kubernetes-common` (0.4.0 → 0.4.1)
+### `@backstage/plugin-kubernetes-common` (0.4.0 → 0.4.1)
 
-### 0.4.1
+#### 0.4.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 0297da83c0: Added `DaemonSets` to the default kubernetes resources.
 
-## `@backstage/plugin-periskop` (0.1.5 → 0.1.6)
+### `@backstage/plugin-periskop` (0.1.5 → 0.1.6)
 
-### 0.1.6
+#### 0.1.6
 
-#### Patch Changes
-
-- 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
-
-## `@backstage/plugin-scaffolder` (1.4.0 → 1.5.0)
-
-### 1.5.0
-
-#### Minor Changes
-
-- c4b452e16a: Starting the implementation of the Wizard page for the `next` scaffolder plugin
-
-## `@backstage/plugin-scaffolder-backend` (1.4.0 → 1.5.0)
-
-### 1.5.0
-
-#### Minor Changes
-
-- c4b452e16a: Starting the implementation of the Wizard page for the `next` scaffolder plugin
-- 593dea6710: Add support for Basic Auth for Bitbucket Server.
-- 3b7930b3e5: Add support for Bearer Authorization header / token-based auth at Git commands.
-- 3f1316f1c5: User Bearer Authorization header at Git commands with token-based auth at Bitbucket Server.
-- eeff5046ae: Updated `publish:gitlab:merge-request` action to allow commit updates and deletes
-- 692d5d3405: Added `reviewers` and `teamReviewers` parameters to `publish:github:pull-request` action to add reviewers on the pull request created by the action
-
-#### Patch Changes
-
-- fc8a5f797b: Add a `publish:gerrit:review` scaffolder action
-- c971afbf21: The `publish:file` action has been deprecated in favor of testing templates using the template editor instead. Note that this action is not and was never been installed by default.
-- b10b6c4aa4: Fix issue on Windows where templated files where not properly skipped as intended.
-- 56e1b4b89c: Fixed typos in alpha types.
-- dad0f65494: Fail gracefully if an invalid `Authorization` header is passed to `POST /v2/tasks`
-- 014b3b7776: Add missing `res.end()` in scaffolder backend `EventStream` usage
-
-## `@backstage/plugin-sentry` (0.4.0 → 0.4.1)
-
-### 0.4.1
-
-#### Patch Changes
+##### Patch Changes
 
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
 
-## `@backstage/plugin-shortcuts` (0.2.8 → 0.3.0)
+### `@backstage/plugin-sentry` (0.4.0 → 0.4.1)
 
-### 0.3.0
+#### 0.4.1
 
-#### Minor Changes
-
-- 5b769fddb5: Internal observable replaced with a mapping from the storage API. This fixes shortcuts initialization when using firestore.
-
-  `ShortcutApi.get` method, that returns an immediate snapshot of shortcuts, made public.
-
-  Example of how to get and observe `shortcuts`:
-
-  ```typescript
-  const shortcutApi = useApi(shortcutsApiRef);
-  const shortcuts = useObservable(shortcutApi.shortcut$(), shortcutApi.get());
-  ```
-
-## `@backstage/plugin-sonarqube` (0.3.7 → 0.4.0)
-
-### 0.4.0
-
-#### Minor Changes
-
-- 619b515172: **BREAKING** This plugin now call the `sonarqube-backend` plugin instead of relying on the proxy plugin
-
-  The whole proxy's `'/sonarqube':` key can be removed from your configuration files.
-
-  Then head to the [README in sonarqube-backend plugin page](https://github.com/backstage/backstage/tree/master/plugins/sonarqube-backend/README.md) to learn how to set-up the link to your Sonarqube instances.
-
-#### Patch Changes
-
-- f9c310a439: Add ability to provide an optional Sonarqube instance into the annotation in the `catalog-info.yaml` file
-
-## `@backstage/plugin-splunk-on-call` (0.3.31 → 0.3.32)
-
-### 0.3.32
-
-#### Patch Changes
+##### Patch Changes
 
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
 
-## `@backstage/plugin-stack-overflow-backend` (0.1.3 → 0.1.4)
+### `@backstage/plugin-splunk-on-call` (0.3.31 → 0.3.32)
 
-### 0.1.4
+#### 0.3.32
 
-#### Patch Changes
+##### Patch Changes
+
+- 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
+
+### `@backstage/plugin-stack-overflow-backend` (0.1.3 → 0.1.4)
+
+#### 0.1.4
+
+##### Patch Changes
 
 - ea5631a8b2: Added API key as separate configuration
 
-## `@backstage/plugin-tech-insights-common` (0.2.5 → 0.2.6)
+### `@backstage/plugin-tech-insights-common` (0.2.5 → 0.2.6)
 
-### 0.2.6
+#### 0.2.6
 
-#### Patch Changes
-
-- 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
-
-## `@backstage/plugin-tech-insights-node` (0.3.2 → 0.3.3)
-
-### 0.3.3
-
-#### Patch Changes
+##### Patch Changes
 
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
 
-## `@backstage/plugin-tech-radar` (0.5.14 → 0.5.15)
+### `@backstage/plugin-tech-insights-node` (0.3.2 → 0.3.3)
 
-### 0.5.15
+#### 0.3.3
 
-#### Patch Changes
+##### Patch Changes
+
+- 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
+
+### `@backstage/plugin-tech-radar` (0.5.14 → 0.5.15)
+
+#### 0.5.15
+
+##### Patch Changes
 
 - a641f79dcb: Move CSS overflow property to quadrant block element (i.e. to a div element) in RadarLegend component.
 
-## `@backstage/plugin-techdocs` (1.3.0 → 1.3.1)
+### `@backstage/plugin-techdocs` (1.3.0 → 1.3.1)
 
-### 1.3.1
+#### 1.3.1
 
-#### Patch Changes
+##### Patch Changes
 
 - e924d2d013: Added back reduction in size, this fixes the extremely large TeachDocs headings
 - b86ed4d990: Add highlight to active navigation item and navigation parents.
 - 7a98c73dc8: Fixed techdocs sidebar layout bug for medium devices.
 - 8acb22205c: Scroll techdocs navigation into focus and expand any nested navigation items.
 
-## `@backstage/plugin-techdocs-module-addons-contrib` (1.0.2 → 1.0.3)
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.0.2 → 1.0.3)
 
-### 1.0.3
+#### 1.0.3
 
-#### Patch Changes
-
-- ad35364e97: feat(techdocs): add edit button support for bitbucketServer
-
-## `@backstage/plugin-techdocs-node` (1.2.0 → 1.3.0)
-
-### 1.3.0
-
-#### Minor Changes
+##### Patch Changes
 
 - ad35364e97: feat(techdocs): add edit button support for bitbucketServer
 
-#### Patch Changes
+### `@backstage/plugin-techdocs-react` (1.0.2 → 1.0.3)
 
-- c8196bd37d: Fix AWS S3 404 NotFound error
+#### 1.0.3
 
-  When reading an object from the S3 bucket through a stream, the aws-sdk getObject() API may throw a 404 NotFound Error with no error message or, in fact, any sort of HTTP-layer error responses. These fail the @backstage/error's assertError() checks, so they must be wrapped. The test for this case was also updated to match the wrapped error message.
-
-- f833344611: Bump default `TechDocs` image to `v1.1.0`, see the release [here](https://github.com/backstage/techdocs-container/releases/tag/v1.1.0).
-
-## `@backstage/plugin-techdocs-react` (1.0.2 → 1.0.3)
-
-### 1.0.3
-
-#### Patch Changes
+##### Patch Changes
 
 - 29d6cf0147: Add `toLowerEntityRefMaybe()` helper function for handling `techdocs.legacyUseCaseSensitiveTripletPaths` flag.
   Pass modified `entityRef` to `TechDocsReaderPageContext` to handle the `techdocs.legacyUseCaseSensitiveTripletPaths` flag.
 
-## `@backstage/plugin-xcmetrics` (0.2.27 → 0.2.28)
+### `@backstage/plugin-xcmetrics` (0.2.27 → 0.2.28)
 
-### 0.2.28
+#### 0.2.28
 
-#### Patch Changes
+##### Patch Changes
 
 - 29f782eb37: Updated dependency `@types/luxon` to `^3.0.0`.
-
-## `@techdocs/cli` (1.1.3 → 1.2.0)
-
-### 1.2.0
-
-#### Minor Changes
-
-- 855952db53: Added CLI option `--docker-option` to allow passing additional options to the `docker run` command executed my `serve` and `serve:mkdocs`.
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/core-app-api`, `@backstage/dev-utils`, `@backstage/integration-react`, `@backstage/plugin-airbrake`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apache-airflow`, `@backstage/plugin-apollo-explorer`, `@backstage/plugin-app-backend`, `@backstage/plugin-auth-node`, `@backstage/plugin-azure-devops`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-badges`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-bitrise`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-catalog-import`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-circleci`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-code-coverage`, `@backstage/plugin-code-coverage-backend`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-dynatrace`, `@backstage/plugin-explore`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcalendar`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-git-release-manager`, `@backstage/plugin-github-actions`, `@backstage/plugin-github-deployments`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-ilert`, `@backstage/plugin-jenkins`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-lighthouse`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-org`, `@backstage/plugin-pagerduty`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-search`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-react`, `@backstage/plugin-stack-overflow`, `@backstage/plugin-tech-insights`, `@backstage/plugin-tech-insights-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/plugin-user-settings`, `@backstage/plugin-vault`, `@backstage/plugin-vault-backend`, `@backstage/test-utils`._

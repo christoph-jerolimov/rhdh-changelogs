@@ -1,7 +1,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import semver from "semver";
-import { byCodepoint, diffManifests, manifestToMap, readManifest, repoRoot } from "./lib.ts";
+import { bumpLevel, byCodepoint, diffManifests, manifestToMap, readManifest, repoRoot } from "./lib.ts";
 
 const changelogsDir = path.join(repoRoot, "changelogs");
 
@@ -30,9 +30,13 @@ function parseChangelog(name: string): Map<string, string[]> | undefined {
   return sections;
 }
 
-/** Demote every markdown heading by one level so sections nest under a package H2. */
-const demoteHeadings = (lines: string[]): string[] =>
-  lines.map((line) => (/^#{1,5} /.test(line) ? `#${line}` : line));
+/** Demote every markdown heading so sections nest under the package headings. */
+const demoteHeadings = (lines: string[], levels: number): string[] =>
+  lines.map((line) => (/^#{1,4} /.test(line) ? "#".repeat(levels) + line : line));
+
+/** GitHub-compatible heading anchor: lowercase, strip punctuation, spaces to dashes. */
+const slug = (heading: string): string =>
+  heading.toLowerCase().replaceAll(/[^\p{L}\p{N} _-]/gu, "").replaceAll(" ", "-");
 
 const trimBlankEdges = (lines: string[]): string[] => {
   const result = [...lines];
@@ -130,7 +134,7 @@ function sectionsInRange(
       if (filtered.removedSomething) sectionsFiltered += 1;
       continue;
     }
-    lines.push(`### ${version}`, "", ...trimBlankEdges(demoteHeadings(content)), "");
+    lines.push(`#### ${version}`, "", ...trimBlankEdges(demoteHeadings(content, 2)), "");
   }
   if (lines.length === 0) {
     if (sectionsFiltered > 0) return { kind: "filtered", lines: [] };
@@ -157,7 +161,53 @@ export function buildChangelog(
   const changed = [...diff.majorBumps, ...diff.otherBumps].sort((a, b) => byCodepoint(a.name, b.name));
   const added = [...diff.added].sort((a, b) => byCodepoint(a.name, b.name));
 
+  const candidates = [
+    ...added.map(({ name, version }) => ({ name, from: undefined as string | undefined, to: version, label: `new, ${version}` })),
+    ...changed.map(({ name, from, to }) => ({ name, from: from as string | undefined, to, label: `${from} → ${to}` })),
+  ];
+
+  // Assign every package to its first matching group (newly added packages
+  // stay a dedicated first group so they never drown in a large document).
+  const NEWLY_ADDED = 0, BREAKING = 1, MAJOR = 2, ZERO_MINOR = 3, ZERO_PATCH = 4, MINOR = 5, PATCH = 6;
+  const groups: { name: string; label: string; content: string[] }[][] = Array.from({ length: 7 }, () => []);
   const excluded: string[] = [];
+  for (const { name, from, to, label } of candidates) {
+    const sections = sectionsInRange(name, from, to, mode);
+    if (sections.kind === "filtered") {
+      excluded.push(name);
+      continue;
+    }
+    const entry = { name, label, content: sections.lines };
+    if (from === undefined) {
+      groups[NEWLY_ADDED]!.push(entry);
+    } else if (sections.lines.some((line) => /breaking/i.test(line))) {
+      groups[BREAKING]!.push(entry);
+    } else {
+      const bump = bumpLevel(from, to);
+      const group =
+        bump?.level === "Major"
+          ? MAJOR
+          : bump?.level === "Minor"
+            ? (bump.breaking ? ZERO_MINOR : MINOR)
+            : bump?.breaking
+              ? ZERO_PATCH
+              : PATCH;
+      groups[group]!.push(entry);
+    }
+  }
+  for (const group of groups) group.sort((a, b) => byCodepoint(a.name, b.name));
+
+  const titles = [
+    "Newly added packages",
+    "Breaking changes",
+    "Major version bumps",
+    "0.x minor version bumps",
+    "0.0.x patch version bumps",
+    groups[ZERO_MINOR]!.length > 0 ? "Other minor version bumps" : "Minor version bumps",
+    groups[ZERO_PATCH]!.length > 0 ? "Other patch version bumps" : "Patch version bumps",
+  ];
+  const packageHeading = (entry: { name: string; label: string }): string => `\`${entry.name}\` (${entry.label})`;
+
   const lines: string[] = [];
   lines.push(`# Backstage Release ${toManifest.releaseVersion} changelog`, "");
   lines.push(
@@ -165,24 +215,32 @@ export function buildChangelog(
       `${changed.length} changed and ${added.length} added packages.`,
     "",
   );
-  if (added.length > 0) {
-    lines.push(`Newly added: ${added.map(({ name }) => `\`${name}\``).join(", ")}.`, "");
-  }
-  // Added packages come first — they are the most notable and must not drown
-  // at the bottom of a large document that GitHub may render truncated.
-  const entries = [
-    ...added.map(({ name, version }) => ({ name, from: undefined as string | undefined, to: version, label: `new, ${version}` })),
-    ...changed.map(({ name, from, to }) => ({ name, from: from as string | undefined, to, label: `${from} → ${to}` })),
-  ];
-  for (const { name, from, to, label } of entries) {
-    const sections = sectionsInRange(name, from, to, mode);
-    if (sections.kind === "filtered") {
-      excluded.push(name);
-      continue;
+
+  const nonEmpty = groups.map((entries, index) => ({ entries, title: titles[index]! })).filter(({ entries }) => entries.length > 0);
+  if (nonEmpty.length > 0) {
+    lines.push("## Summary", "");
+    for (const { entries, title } of nonEmpty) {
+      lines.push(`- [${title}](#${slug(title)}): ${entries.length} ${entries.length === 1 ? "package" : "packages"}`);
     }
-    lines.push(`## \`${name}\` (${label})`, "");
-    lines.push(...sections.lines, "");
+    lines.push("", "## Table of contents", "");
+    for (const { entries, title } of nonEmpty) {
+      lines.push(`- [${title}](#${slug(title)})`);
+      for (const entry of entries) {
+        const heading = packageHeading(entry);
+        lines.push(`  - [${heading}](#${slug(heading)})`);
+      }
+    }
+    lines.push("");
   }
+
+  for (const { entries, title } of nonEmpty) {
+    lines.push(`## ${title}`, "");
+    for (const entry of entries) {
+      lines.push(`### ${packageHeading(entry)}`, "");
+      lines.push(...entry.content, "");
+    }
+  }
+
   if (excluded.length > 0) {
     lines.push(
       `_Excluded dependency updates for packages: ${excluded.map((name) => `\`${name}\``).join(", ")}._`,

@@ -2,11 +2,24 @@
 
 Changes between 1.49.4 and 1.49.5 — 3 changed and 0 added packages.
 
-## `@backstage/plugin-app` (0.4.2 → 0.4.3)
+## Summary
 
-### 0.4.3
+- [Patch version bumps](#patch-version-bumps): 3 packages
 
-#### Patch Changes
+## Table of contents
+
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/plugin-app` (0.4.2 → 0.4.3)](#backstageplugin-app-042--043)
+  - [`@backstage/plugin-app-visualizer` (0.2.1 → 0.2.2)](#backstageplugin-app-visualizer-021--022)
+  - [`@backstage/ui` (0.13.2 → 0.13.3)](#backstageui-0132--0133)
+
+## Patch version bumps
+
+### `@backstage/plugin-app` (0.4.2 → 0.4.3)
+
+#### 0.4.3
+
+##### Patch Changes
 
 - effa7bf: Migrated `AppLanguageApi` extension to use the new `configSchema` option.
 - e5baa20: Added support for configuring URL redirects on the `app/routes` extension. Redirects can be configured through `app-config` as an array of `{from, to}` path pairs, which will cause navigation to the `from` path to be redirected to the `to` path.
@@ -27,14 +40,14 @@ Changes between 1.49.4 and 1.49.5 — 3 changed and 0 added packages.
 - e4804ab: Updated the default `DialogApi` implementation to support the new `open` method. The dialog display layer no longer renders any dialog chrome — callers provide their own dialog component. The deprecated `show` and `showModal` methods now use `open` internally with a Material UI dialog wrapper for backward compatibility.
 - d66a3ec: Updated the `PageLayout` swap to pass a clickable `titleLink` on the `PluginHeader`, resolved from the plugin's root route ref.
 
-## `@backstage/plugin-app-visualizer` (0.2.1 → 0.2.2)
+### `@backstage/plugin-app-visualizer` (0.2.1 → 0.2.2)
 
-### 0.2.2
+#### 0.2.2
 
-#### Patch Changes
+##### Patch Changes
 
 - e220589: Updated `PluginHeaderActionBlueprint` usage to pass params as a plain object.
 
-## `@backstage/ui` (0.13.2 → 0.13.3)
+### `@backstage/ui` (0.13.2 → 0.13.3)
 
 _No changelog entries found._

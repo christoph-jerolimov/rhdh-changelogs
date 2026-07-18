@@ -2,81 +2,95 @@
 
 Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
 
-## `@backstage/backend-app-api` (0.2.1 → 0.2.2)
+## Summary
 
-### 0.2.2
+- [Breaking changes](#breaking-changes): 11 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 1 package
+- [Other minor version bumps](#other-minor-version-bumps): 9 packages
+- [Patch version bumps](#patch-version-bumps): 47 packages
 
-#### Patch Changes
+## Table of contents
 
-- 0027a749cd: Added possibility to configure index plugin of the HTTP router service.
-- 45857bffae: Properly export `rootLoggerFactory`.
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/cli` (0.19.0 → 0.20.0)](#backstagecli-0190--0200)
+  - [`@backstage/plugin-bazaar-backend` (0.1.20 → 0.2.0)](#backstageplugin-bazaar-backend-0120--020)
+  - [`@backstage/plugin-bitbucket-cloud-common` (0.1.3 → 0.2.0)](#backstageplugin-bitbucket-cloud-common-013--020)
+  - [`@backstage/plugin-catalog-backend` (1.4.0 → 1.5.0)](#backstageplugin-catalog-backend-140--150)
+  - [`@backstage/plugin-catalog-import` (0.8.12 → 0.9.0)](#backstageplugin-catalog-import-0812--090)
+  - [`@backstage/plugin-permission-common` (0.6.4 → 0.7.0)](#backstageplugin-permission-common-064--070)
+  - [`@backstage/plugin-permission-node` (0.6.5 → 0.7.0)](#backstageplugin-permission-node-065--070)
+  - [`@backstage/plugin-playlist-backend` (0.1.0 → 0.2.0)](#backstageplugin-playlist-backend-010--020)
+  - [`@backstage/plugin-techdocs-node` (1.4.0 → 1.4.1)](#backstageplugin-techdocs-node-140--141)
+  - [`@backstage/plugin-user-settings` (0.4.8 → 0.5.0)](#backstageplugin-user-settings-048--050)
+  - [`@techdocs/cli` (1.2.1 → 1.2.2)](#techdocscli-121--122)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/plugin-auth-backend` (0.16.0 → 0.17.0)](#backstageplugin-auth-backend-0160--0170)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/plugin-catalog` (1.5.1 → 1.6.0)](#backstageplugin-catalog-151--160)
+  - [`@backstage/plugin-catalog-node` (1.1.0 → 1.2.0)](#backstageplugin-catalog-node-110--120)
+  - [`@backstage/plugin-catalog-react` (1.1.4 → 1.2.0)](#backstageplugin-catalog-react-114--120)
+  - [`@backstage/plugin-scaffolder` (1.6.0 → 1.7.0)](#backstageplugin-scaffolder-160--170)
+  - [`@backstage/plugin-scaffolder-backend` (1.6.0 → 1.7.0)](#backstageplugin-scaffolder-backend-160--170)
+  - [`@backstage/plugin-search-backend` (1.0.2 → 1.1.0)](#backstageplugin-search-backend-102--110)
+  - [`@backstage/plugin-search-common` (1.0.1 → 1.1.0)](#backstageplugin-search-common-101--110)
+  - [`@backstage/plugin-search-react` (1.1.0 → 1.2.0)](#backstageplugin-search-react-110--120)
+  - [`@backstage/plugin-techdocs-backend` (1.3.0 → 1.4.0)](#backstageplugin-techdocs-backend-130--140)
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/backend-app-api` (0.2.1 → 0.2.2)](#backstagebackend-app-api-021--022)
+  - [`@backstage/backend-common` (0.15.1 → 0.15.2)](#backstagebackend-common-0151--0152)
+  - [`@backstage/backend-defaults` (0.1.1 → 0.1.2)](#backstagebackend-defaults-011--012)
+  - [`@backstage/backend-plugin-api` (0.1.2 → 0.1.3)](#backstagebackend-plugin-api-012--013)
+  - [`@backstage/backend-tasks` (0.3.5 → 0.3.6)](#backstagebackend-tasks-035--036)
+  - [`@backstage/backend-test-utils` (0.1.28 → 0.1.29)](#backstagebackend-test-utils-0128--0129)
+  - [`@backstage/catalog-client` (1.1.0 → 1.1.1)](#backstagecatalog-client-110--111)
+  - [`@backstage/catalog-model` (1.1.1 → 1.1.2)](#backstagecatalog-model-111--112)
+  - [`@backstage/core-app-api` (1.1.0 → 1.1.1)](#backstagecore-app-api-110--111)
+  - [`@backstage/core-components` (0.11.1 → 0.11.2)](#backstagecore-components-0111--0112)
+  - [`@backstage/create-app` (0.4.31 → 0.4.32)](#backstagecreate-app-0431--0432)
+  - [`@backstage/plugin-adr-backend` (0.2.1 → 0.2.2)](#backstageplugin-adr-backend-021--022)
+  - [`@backstage/plugin-airbrake-backend` (0.2.9 → 0.2.10)](#backstageplugin-airbrake-backend-029--0210)
+  - [`@backstage/plugin-api-docs` (0.8.9 → 0.8.10)](#backstageplugin-api-docs-089--0810)
+  - [`@backstage/plugin-app-backend` (0.3.36 → 0.3.37)](#backstageplugin-app-backend-0336--0337)
+  - [`@backstage/plugin-auth-node` (0.2.5 → 0.2.6)](#backstageplugin-auth-node-025--026)
+  - [`@backstage/plugin-badges-backend` (0.1.30 → 0.1.31)](#backstageplugin-badges-backend-0130--0131)
+  - [`@backstage/plugin-bazaar` (0.1.24 → 0.1.25)](#backstageplugin-bazaar-0124--0125)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket` (0.2.3 → 0.2.4)](#backstageplugin-catalog-backend-module-bitbucket-023--024)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.3 → 0.1.4)](#backstageplugin-catalog-backend-module-bitbucket-cloud-013--014)
+  - [`@backstage/plugin-catalog-backend-module-github` (0.1.7 → 0.1.8)](#backstageplugin-catalog-backend-module-github-017--018)
+  - [`@backstage/plugin-catalog-common` (1.0.6 → 1.0.7)](#backstageplugin-catalog-common-106--107)
+  - [`@backstage/plugin-catalog-graph` (0.2.21 → 0.2.22)](#backstageplugin-catalog-graph-0221--0222)
+  - [`@backstage/plugin-cicd-statistics` (0.1.11 → 0.1.12)](#backstageplugin-cicd-statistics-0111--0112)
+  - [`@backstage/plugin-cost-insights` (0.11.31 → 0.11.32)](#backstageplugin-cost-insights-01131--01132)
+  - [`@backstage/plugin-gcalendar` (0.3.5 → 0.3.6)](#backstageplugin-gcalendar-035--036)
+  - [`@backstage/plugin-github-issues` (0.1.1 → 0.1.2)](#backstageplugin-github-issues-011--012)
+  - [`@backstage/plugin-github-pull-requests-board` (0.1.3 → 0.1.4)](#backstageplugin-github-pull-requests-board-013--014)
+  - [`@backstage/plugin-graphql-backend` (0.1.26 → 0.1.27)](#backstageplugin-graphql-backend-0126--0127)
+  - [`@backstage/plugin-jenkins-backend` (0.1.26 → 0.1.27)](#backstageplugin-jenkins-backend-0126--0127)
+  - [`@backstage/plugin-kubernetes` (0.7.2 → 0.7.3)](#backstageplugin-kubernetes-072--073)
+  - [`@backstage/plugin-kubernetes-backend` (0.7.2 → 0.7.3)](#backstageplugin-kubernetes-backend-072--073)
+  - [`@backstage/plugin-org` (0.5.9 → 0.5.10)](#backstageplugin-org-059--0510)
+  - [`@backstage/plugin-periskop-backend` (0.1.7 → 0.1.8)](#backstageplugin-periskop-backend-017--018)
+  - [`@backstage/plugin-permission-backend` (0.5.11 → 0.5.12)](#backstageplugin-permission-backend-0511--0512)
+  - [`@backstage/plugin-rollbar-backend` (0.1.33 → 0.1.34)](#backstageplugin-rollbar-backend-0133--0134)
+  - [`@backstage/plugin-search-backend-module-elasticsearch` (1.0.2 → 1.0.3)](#backstageplugin-search-backend-module-elasticsearch-102--103)
+  - [`@backstage/plugin-search-backend-module-pg` (0.4.0 → 0.4.1)](#backstageplugin-search-backend-module-pg-040--041)
+  - [`@backstage/plugin-search-backend-node` (1.0.2 → 1.0.3)](#backstageplugin-search-backend-node-102--103)
+  - [`@backstage/plugin-sonarqube-backend` (0.1.1 → 0.1.2)](#backstageplugin-sonarqube-backend-011--012)
+  - [`@backstage/plugin-stack-overflow-backend` (0.1.5 → 0.1.6)](#backstageplugin-stack-overflow-backend-015--016)
+  - [`@backstage/plugin-tech-insights` (0.3.0 → 0.3.1)](#backstageplugin-tech-insights-030--031)
+  - [`@backstage/plugin-tech-insights-backend` (0.5.2 → 0.5.3)](#backstageplugin-tech-insights-backend-052--053)
+  - [`@backstage/plugin-tech-insights-node` (0.3.4 → 0.3.5)](#backstageplugin-tech-insights-node-034--035)
+  - [`@backstage/plugin-user-settings-backend` (0.1.0 → 0.1.1)](#backstageplugin-user-settings-backend-010--011)
+  - [`@backstage/plugin-vault-backend` (0.2.2 → 0.2.3)](#backstageplugin-vault-backend-022--023)
+  - [`@backstage/test-utils` (1.2.0 → 1.2.1)](#backstagetest-utils-120--121)
 
-## `@backstage/backend-common` (0.15.1 → 0.15.2)
+## Breaking changes
 
-### 0.15.2
+### `@backstage/cli` (0.19.0 → 0.20.0)
 
-#### Patch Changes
+#### 0.20.0
 
-- e8d7976413: Added back support for when no branch is provided for the Bitbucket Server `UrlReader`
-- c44cf412de: Fix BitBucket server integration
-- c31f7cdfbc: Fixed an issue where `getClient()` for a `pluginId` would return different clients and not share them
-- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
-
-## `@backstage/backend-defaults` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- 96d288a02d: Added root logger service to the set of default services.
-
-## `@backstage/backend-plugin-api` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 28377dc89f: Allow interfaces to be used for inferred option types.
-- a35a27df70: Added documentation for `createBackendModule`, with guidelines for choosing a module ID.
-
-## `@backstage/backend-tasks` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
-
-- d4fea86ea3: Added new function `readTaskScheduleDefinitionFromConfig` to read `TaskScheduleDefinition` (aka. schedule) from the `Config`.
-
-## `@backstage/backend-test-utils` (0.1.28 → 0.1.29)
-
-### 0.1.29
-
-#### Patch Changes
-
-- 72549952d1: Fixed handling of root scoped services in `startTestBackend`.
-- e91e8e9c55: Increased test database max connection pool size to reduce the risk of resource exhaustion.
-
-## `@backstage/catalog-client` (1.1.0 → 1.1.1)
-
-### 1.1.1
-
-#### Patch Changes
-
-- 4f2ac624b4: Renamed argument in `validateEntity` from `location` to `locationRef`
-
-## `@backstage/catalog-model` (1.1.1 → 1.1.2)
-
-### 1.1.2
-
-#### Patch Changes
-
-- 6f3b8d0962: Defer `ajv` compilation of schema validators to improve module-import performance
-
-## `@backstage/cli` (0.19.0 → 0.20.0)
-
-### 0.20.0
-
-#### Minor Changes
+##### Minor Changes
 
 - f368ad7279: **BREAKING**: Bumped `jest`, `jest-runtime`, and `jest-environment-jsdom` to v29. This is up from v27, so check out both the [v28](https://jestjs.io/docs/28.x/upgrading-to-jest28) and [v29](https://jestjs.io/docs/upgrading-to-jest29) (later [here](https://jestjs.io/docs/29.x/upgrading-to-jest29)) migration guides.
 
@@ -86,7 +100,7 @@ Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
   - `jest.useFakeTimers('legacy')` is now `jest.useFakeTimers({ legacyFakeTimers: true })`.
   - Error objects collected by `withLogCollector` from `@backstage/test-utils` are now objects with a `detail` property rather than a string.
 
-#### Patch Changes
+##### Patch Changes
 
 - 78d5eb299e: Tweak the Jest Caching loader to only operate when in `watch` mode
 - 9c595302cb: Normalize on winston version ^3.2.1
@@ -118,136 +132,11 @@ Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
   The fix is to rename any `.tsx` files in your backend packages to `.ts` instead,
   or `.jsx` to `.js`.
 
-## `@backstage/core-app-api` (1.1.0 → 1.1.1)
+### `@backstage/plugin-bazaar-backend` (0.1.20 → 0.2.0)
 
-### 1.1.1
+#### 0.2.0
 
-#### Patch Changes
-
-- 27e6404aba: Fixed a bug where gathered index routes would fail to bind routable extensions. This would typically show up when placing a routable extension in the entity page overview tab.
-
-## `@backstage/core-components` (0.11.1 → 0.11.2)
-
-### 0.11.2
-
-#### Patch Changes
-
-- bde1e8c8e2: Added `curve` prop to the `DependencyGraph` component to select the type of layout
-- 882101cd9b: Deep-import LightAsync component to improve module-import speed
-- 0d0f30d87e: Fixed layout for core-components docs where table was broken by splitting with code sample
-
-## `@backstage/create-app` (0.4.31 → 0.4.32)
-
-### 0.4.32
-
-#### Patch Changes
-
-- 58c2264325: Newly created Backstage repositories now use the stable version 6 of
-  `react-router`, just like the main repo does. Please let us know if you find any
-  issues with this.
-
-  Migrating to the stable version of `react-router` is optional for the time
-  being. But if you want to do the same for your existing repository, please
-  follow [this guide](https://backstage.io/docs/tutorials/react-router-stable-migration).
-
-- e05e0f021b: Update versions of packages used in the create-app template, to match those in the main repo
-- 01dff06be4: Leverage cache mounts in Dockerfile during `yarn install ...` and `apt-get ...` commands to speed up repeated builds.
-- 90616bcaa6: Add the new search pagination component to the search page template.
-- 7c6306fc8a: Initializes a git repository when creating an app using @packages/create-app
-- 52f25858a8: Added `*.session.sql` Visual Studio Code database functionality files to `.gitignore` in the default template. This is optional but potentially helpful if your developers use Visual Studio Code; you can add a line with that exact value to your own root `.gitignore` if you want the same.
-- 6d00e80146: Updated the root `test` scripts to use `backstage-cli repo test`.
-
-  To apply this change to an existing app, make the following change to the root `package.json`:
-
-  ```diff
-  -    "test": "backstage-cli test",
-  -    "test:all": "lerna run test -- --coverage",
-  +    "test": "backstage-cli repo test",
-  +    "test:all": "backstage-cli repo test --coverage",
-  ```
-
-## `@backstage/plugin-adr-backend` (0.2.1 → 0.2.2)
-
-### 0.2.2
-
-#### Patch Changes
-
-- 8006f8a602: In order to improve the debuggability of the search indexing process, messages logged during indexing are now tagged with a `documentType` whose value corresponds to the `type` being indexed.
-
-## `@backstage/plugin-airbrake-backend` (0.2.9 → 0.2.10)
-
-### 0.2.10
-
-#### Patch Changes
-
-- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
-
-## `@backstage/plugin-api-docs` (0.8.9 → 0.8.10)
-
-### 0.8.10
-
-#### Patch Changes
-
-- 50c6e14aee: Updated dependency `@asyncapi/react-component` to `1.0.0-next.43`.
-- 3d5bb521ee: Updated dependency `@asyncapi/react-component` to `1.0.0-next.42`.
-
-## `@backstage/plugin-app-backend` (0.3.36 → 0.3.37)
-
-### 0.3.37
-
-#### Patch Changes
-
-- 11c9e0ad33: Added alpha plugin implementation for the new backend system. Available at `@backstage/plugin-app-backend/alpha`.
-
-## `@backstage/plugin-auth-backend` (0.16.0 → 0.17.0)
-
-### 0.17.0
-
-#### Minor Changes
-
-- e2dc42e9f0: Google OAuth refresh tokens will now be revoked on logout by calling Google's API
-- 5fa831ce55: CookieConfigurer can optionally return the `SameSite` cookie attribute.
-  CookieConfigurer now requires an additional argument `appOrigin` - the origin URL of the app - which is used to calculate the `SameSite` attribute.
-  defaultCookieConfigurer returns the `SameSite` attribute which defaults to `Lax`. In cases where an auth-backend is running on a different domain than the App, `SameSite=None` is used - but only for secure contexts. This is so that cookies can be included in third-party requests.
-
-  OAuthAdapterOptions has been modified to require additional arguments, `baseUrl`, and `cookieConfigurer`.
-  OAuthAdapter now resolves cookie configuration using its supplied CookieConfigurer for each request to make sure that the proper attributes always are set.
-
-#### Patch Changes
-
-- b5c126010c: Auth0 provider now supports optional `connection` and `connectionScope` parameters to configure social identity providers.
-- 8c6ec175bf: Fix GitLab provider setup so that it supports GitLab installations with a path in the URL.
-
-## `@backstage/plugin-auth-node` (0.2.5 → 0.2.6)
-
-### 0.2.6
-
-#### Patch Changes
-
-- f3a3fefb96: Ensure `getIdentity` throws an `AuthenticationError` instead of a `NotAllowed` error when authentication fails
-
-## `@backstage/plugin-badges-backend` (0.1.30 → 0.1.31)
-
-### 0.1.31
-
-#### Patch Changes
-
-- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
-
-## `@backstage/plugin-bazaar` (0.1.24 → 0.1.25)
-
-### 0.1.25
-
-#### Patch Changes
-
-- f7c2855d76: Added a `Overview Card` for either latest or random projects. Changed `ProjectPreview.tsx` so it take `gridSize` and `useTablePagination` as props.
-- c0352bbc69: Link to the user catalog entity of a member
-
-## `@backstage/plugin-bazaar-backend` (0.1.20 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 8554533546: **BREAKING** The bazaar-backend `createRouter` now requires that the `identityApi` is passed to the router.
 
@@ -272,15 +161,15 @@ Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
   }
   ```
 
-#### Patch Changes
+##### Patch Changes
 
 - f7c2855d76: Router now also has endpoint `getLatestProjects` that takes a limit of projects as prop.
 
-## `@backstage/plugin-bitbucket-cloud-common` (0.1.3 → 0.2.0)
+### `@backstage/plugin-bitbucket-cloud-common` (0.1.3 → 0.2.0)
 
-### 0.2.0
+#### 0.2.0
 
-#### Minor Changes
+##### Minor Changes
 
 - ad74723fbf: Update Bitbucket Cloud models to latest OAS version.
 
@@ -290,11 +179,225 @@ Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
   All of these fields are not used at other plugins, though.
   Therefore, this change has no impact on other modules here.
 
-## `@backstage/plugin-catalog` (1.5.1 → 1.6.0)
+### `@backstage/plugin-catalog-backend` (1.4.0 → 1.5.0)
 
-### 1.6.0
+#### 1.5.0
 
-#### Minor Changes
+##### Minor Changes
+
+- b2e6cb6acf: Added a new method `addLocationAnalyzers` to the `CatalogBuilder`. With this you can add location analyzers to your catalog. These analyzers will be used by the /analyze-location endpoint to decide if the provided URL contains any catalog-info.yaml files already or not.
+
+  Moved the following types from this package to `@backstage/plugin-catalog-backend`.
+
+  - AnalyzeLocationResponse
+  - AnalyzeLocationRequest
+  - AnalyzeLocationExistingEntity
+  - AnalyzeLocationGenerateEntity
+  - AnalyzeLocationEntityField
+
+- eb25f7e12d: The exported permission rules and the API of `createCatalogConditionalDecision` have changed to reflect the breaking changes made to the `PermissionRule` type. Note that all involved types are exported from `@backstage/plugin-catalog-backend/alpha`
+
+##### Patch Changes
+
+- 8cb6e10105: Fixed a bug where entities provided without a location key would always replace existing entities, rather than updating them.
+- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
+- 63296ebcd4: Allow Placeholder value to be any value, not only string.
+- 74022e0163: Make sure to stitch entities correctly after deletion, to ensure that their relations are updated.
+
+### `@backstage/plugin-catalog-import` (0.8.12 → 0.9.0)
+
+#### 0.9.0
+
+##### Minor Changes
+
+- b2e6cb6acf: **Breaking**
+  Moved the code search for the existing catalog-info.yaml files to the backend from the frontend. It means it will use the configured GitHub integration's credentials.
+
+  Add the following to your `CatalogBuilder` to have the repo URL ingestion working again.
+
+  ```ts
+  // catalog.ts
+  import { GithubLocationAnalyzer } from '@backstage/plugin-catalog-backend-module-github';
+  ...
+    builder.addLocationAnalyzers(
+      new GithubLocationAnalyzer({
+        discovery: env.discovery,
+        config: env.config,
+      }),
+    );
+  ...
+  ```
+
+### `@backstage/plugin-permission-common` (0.6.4 → 0.7.0)
+
+#### 0.7.0
+
+##### Minor Changes
+
+- 46b4a72cee: **BREAKING**: When defining permission rules, it's now necessary to provide a [ZodSchema](https://github.com/colinhacks/zod) that specifies the parameters the rule expects. This has been added to help better describe the parameters in the response of the metadata endpoint and to validate the parameters before a rule is executed.
+
+  To help with this, we have also made a change to the API of permission rules. Before, the permission rules `toQuery` and `apply` signature expected parameters to be separate arguments, like so...
+
+  ```ts
+  createPermissionRule({
+    apply: (resource, foo, bar) => true,
+    toQuery: (foo, bar) => {},
+  });
+  ```
+
+  The API has now changed to expect the parameters as a single object
+
+  ```ts
+  createPermissionRule({
+    paramSchema: z.object({
+      foo: z.string().describe('Foo value to match'),
+      bar: z.string().describe('Bar value to match'),
+    }),
+    apply: (resource, { foo, bar }) => true,
+    toQuery: ({ foo, bar }) => {},
+  });
+  ```
+
+  One final change made is to limit the possible values for a parameter to primitives and arrays of primitives.
+
+### `@backstage/plugin-permission-node` (0.6.5 → 0.7.0)
+
+#### 0.7.0
+
+##### Minor Changes
+
+- 46b4a72cee: **BREAKING**: When defining permission rules, it's now necessary to provide a [ZodSchema](https://github.com/colinhacks/zod) that specifies the parameters the rule expects. This has been added to help better describe the parameters in the response of the metadata endpoint and to validate the parameters before a rule is executed.
+
+  To help with this, we have also made a change to the API of permission rules. Before, the permission rules `toQuery` and `apply` signature expected parameters to be separate arguments, like so...
+
+  ```ts
+  createPermissionRule({
+    apply: (resource, foo, bar) => true,
+    toQuery: (foo, bar) => {},
+  });
+  ```
+
+  The API has now changed to expect the parameters as a single object
+
+  ```ts
+  createPermissionRule({
+    paramSchema: z.object({
+      foo: z.string().describe('Foo value to match'),
+      bar: z.string().describe('Bar value to match'),
+    }),
+    apply: (resource, { foo, bar }) => true,
+    toQuery: ({ foo, bar }) => {},
+  });
+  ```
+
+  One final change made is to limit the possible values for a parameter to primitives and arrays of primitives.
+
+##### Patch Changes
+
+- 9335ad115e: Exported types for the .metadata endpoint of the permission router
+
+### `@backstage/plugin-playlist-backend` (0.1.0 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- eb25f7e12d: **BREAKING** The exported permission rules have changed to reflect the breaking changes made to the PermissionRule type.
+
+  For example, the `playlistConditions.isOwner` API has changed from:
+
+  ```ts
+  playlistConditions.isOwner(['user:default/me', 'group:default/owner']);
+  ```
+
+  to:
+
+  ```ts
+  playlistConditions.isOwner({
+    owners: ['user:default/me', 'group:default/owner'],
+  });
+  ```
+
+### `@backstage/plugin-techdocs-node` (1.4.0 → 1.4.1)
+
+#### 1.4.1
+
+##### Patch Changes
+
+- 0b2a30dead: fixing techdocs-cli Docker client creation
+
+  Docker client does not need to be created when --no-docker
+  option is provided.
+
+  If you had DOCKER_CERT_PATH environment variable defined
+  the Docker client was looking for certificates
+  and breaking techdocs-cli generate command even with --no-docker
+  option.
+
+### `@backstage/plugin-user-settings` (0.4.8 → 0.5.0)
+
+#### 0.5.0
+
+##### Minor Changes
+
+- 5543e86660: **BREAKING**: The `apiRef` passed to `ProviderSettingsItem` now needs to
+  implement `ProfileInfoApi & SessionApi`, rather than just the latter. This is
+  unlikely to have an effect on most users though, since the builtin auth
+  providers generally implement both.
+
+  Fixed settings page showing providers as logged out when the user is using more
+  than one provider, and displayed some additional login information.
+
+##### Patch Changes
+
+- 06d61d1266: Handle errors that may occur when the user logs out
+- 44c9a95dcf: Prevent `.set()` to execute a request to the StorageClient if the user is `guest`
+- 174f02a00a: Update installation instructions
+
+### `@techdocs/cli` (1.2.1 → 1.2.2)
+
+#### 1.2.2
+
+##### Patch Changes
+
+- 0b2a30dead: fixing techdocs-cli Docker client creation
+
+  Docker client does not need to be created when --no-docker
+  option is provided.
+
+  If you had DOCKER_CERT_PATH environment variable defined
+  the Docker client was looking for certificates
+  and breaking techdocs-cli generate command even with --no-docker
+  option.
+
+## 0.x minor version bumps
+
+### `@backstage/plugin-auth-backend` (0.16.0 → 0.17.0)
+
+#### 0.17.0
+
+##### Minor Changes
+
+- e2dc42e9f0: Google OAuth refresh tokens will now be revoked on logout by calling Google's API
+- 5fa831ce55: CookieConfigurer can optionally return the `SameSite` cookie attribute.
+  CookieConfigurer now requires an additional argument `appOrigin` - the origin URL of the app - which is used to calculate the `SameSite` attribute.
+  defaultCookieConfigurer returns the `SameSite` attribute which defaults to `Lax`. In cases where an auth-backend is running on a different domain than the App, `SameSite=None` is used - but only for secure contexts. This is so that cookies can be included in third-party requests.
+
+  OAuthAdapterOptions has been modified to require additional arguments, `baseUrl`, and `cookieConfigurer`.
+  OAuthAdapter now resolves cookie configuration using its supplied CookieConfigurer for each request to make sure that the proper attributes always are set.
+
+##### Patch Changes
+
+- b5c126010c: Auth0 provider now supports optional `connection` and `connectionScope` parameters to configure social identity providers.
+- 8c6ec175bf: Fix GitLab provider setup so that it supports GitLab installations with a path in the URL.
+
+## Other minor version bumps
+
+### `@backstage/plugin-catalog` (1.5.1 → 1.6.0)
+
+#### 1.6.0
+
+##### Minor Changes
 
 - d558f41d3a: Added new column `Label` to `CatalogTable.columns`, this new column allows you make use of labels from metadata.
   For example: category and visibility are type of labels associated with API entity illustrated below.
@@ -330,374 +433,44 @@ Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
   ];
   ```
 
-#### Patch Changes
+##### Patch Changes
 
 - 4efadb6968: Implemented the visual parts of `EntityKindPicker` so that it can be shown alongside the other filters on the left side of your catalog pages.
 - 182000c663: Added `emptyContent` property to CatalogTable and DefaultCatalogPage to support customization of the Catalog Table.
 - e89e1f614d: Added support for copy entity URL in entity page context menu
 
-## `@backstage/plugin-catalog-backend` (1.4.0 → 1.5.0)
+### `@backstage/plugin-catalog-node` (1.1.0 → 1.2.0)
 
-### 1.5.0
+#### 1.2.0
 
-#### Minor Changes
-
-- b2e6cb6acf: Added a new method `addLocationAnalyzers` to the `CatalogBuilder`. With this you can add location analyzers to your catalog. These analyzers will be used by the /analyze-location endpoint to decide if the provided URL contains any catalog-info.yaml files already or not.
-
-  Moved the following types from this package to `@backstage/plugin-catalog-backend`.
-
-  - AnalyzeLocationResponse
-  - AnalyzeLocationRequest
-  - AnalyzeLocationExistingEntity
-  - AnalyzeLocationGenerateEntity
-  - AnalyzeLocationEntityField
-
-- eb25f7e12d: The exported permission rules and the API of `createCatalogConditionalDecision` have changed to reflect the breaking changes made to the `PermissionRule` type. Note that all involved types are exported from `@backstage/plugin-catalog-backend/alpha`
-
-#### Patch Changes
-
-- 8cb6e10105: Fixed a bug where entities provided without a location key would always replace existing entities, rather than updating them.
-- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
-- 63296ebcd4: Allow Placeholder value to be any value, not only string.
-- 74022e0163: Make sure to stitch entities correctly after deletion, to ensure that their relations are updated.
-
-## `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.3 → 0.2.4)
-
-### 0.2.4
-
-#### Patch Changes
-
-- 23f9199a0f: Deprecate `@backstage/plugin-catalog-backend-module-bitbucket`.
-
-  Please migrate to `@backstage/plugin-catalog-backend-module-bitbucket-cloud`
-  or `@backstage/plugin-catalog-backend-module-bitbucket-server` instead.
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- f66e696e7b: Bitbucket Cloud provider: Add option to configure schedule via `app-config.yaml` instead of in code.
-
-  Please find how to configure the schedule at the config at
-  https://backstage.io/docs/integrations/bitbucketCloud/discovery
-
-- a9b91d39bb: Add `bitbucketCloudCatalogModule` (new backend-plugin-api, alpha).
-
-## `@backstage/plugin-catalog-backend-module-github` (0.1.7 → 0.1.8)
-
-### 0.1.8
-
-#### Patch Changes
-
-- 8749df3d02: `GitHubEntityProvider`: Add option to configure schedule via `app-config.yaml` instead of in code.
-
-  Please find how to configure the schedule at the config at
-  https://backstage.io/docs/integrations/github/discovery
-
-- 7022aebf35: Added `GithubLocationAnalyzer`. This can be used to add to the `CatalogBuilder`. When added this will be used by `RepoLocationAnalyzer` to figure out if the given URL that you are trying to import from the /catalog-import page already contains catalog-info.yaml files.
-- 51046b58b0: Use schedule from config at backend module.
-
-  Also, it removes `GithubEntityProviderCatalogModuleOptions`
-  in favor of config-only for the backend module setup
-  like at other similar modules.
-
-- 7edb5909e8: Add missing config schema for the `GitHubEntityProvider`.
-- be9474b103: Replaces in-code uses of `GitHub` by `Github` and deprecates old versions.
-
-  Deprecates
-
-  - `GitHubEntityProvider` replaced by `GithubEntityProvider`
-  - `GitHubLocationAnalyzer` replaced by `GithubLocationAnalyzer`
-  - `GitHubLocationAnalyzerOptions` replaced by `GithubLocationAnalyzerOptions`
-  - `GitHubOrgEntityProvider` replaced by `GithubOrgEntityProvider`
-  - `GitHubOrgEntityProviderOptions` replaced by `GithubOrgEntityProviderOptions`
-
-  Renames
-
-  - `GitHubLocationAnalyzer` to `GithubLocationAnalyzer`
-  - `GitHubLocationAnalyzerOptions` to `GithubLocationAnalyzerOptions`
-
-- a35a27df70: Updated the `moduleId` of the experimental module export.
-
-## `@backstage/plugin-catalog-common` (1.0.6 → 1.0.7)
-
-### 1.0.7
-
-#### Patch Changes
-
-- 823acaa88b: Moved the following types from `@backstage/plugin-catalog-backend` to this package.
-
-  - AnalyzeLocationResponse
-  - AnalyzeLocationRequest
-  - AnalyzeLocationExistingEntity
-  - AnalyzeLocationGenerateEntity
-  - AnalyzeLocationEntityField
-
-## `@backstage/plugin-catalog-graph` (0.2.21 → 0.2.22)
-
-### 0.2.22
-
-#### Patch Changes
-
-- bde1e8c8e2: Added `curve` prop to the `DependencyGraph` component to select the type of layout
-
-## `@backstage/plugin-catalog-import` (0.8.12 → 0.9.0)
-
-### 0.9.0
-
-#### Minor Changes
-
-- b2e6cb6acf: **Breaking**
-  Moved the code search for the existing catalog-info.yaml files to the backend from the frontend. It means it will use the configured GitHub integration's credentials.
-
-  Add the following to your `CatalogBuilder` to have the repo URL ingestion working again.
-
-  ```ts
-  // catalog.ts
-  import { GithubLocationAnalyzer } from '@backstage/plugin-catalog-backend-module-github';
-  ...
-    builder.addLocationAnalyzers(
-      new GithubLocationAnalyzer({
-        discovery: env.discovery,
-        config: env.config,
-      }),
-    );
-  ...
-  ```
-
-## `@backstage/plugin-catalog-node` (1.1.0 → 1.2.0)
-
-### 1.2.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 404366c853: Deprecated the `LocationSpec` type. It got moved from this package to the `@backstage/plugin-catalog-common` so make sure imports are updated.
 
-## `@backstage/plugin-catalog-react` (1.1.4 → 1.2.0)
+### `@backstage/plugin-catalog-react` (1.1.4 → 1.2.0)
 
-### 1.2.0
+#### 1.2.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 4efadb6968: Implemented the visual parts of `EntityKindPicker` so that it can be shown alongside the other filters on the left side of your catalog pages.
 
-#### Patch Changes
+##### Patch Changes
 
 - 7939e743f5: Added two new `EntityRefLinks` props, the first being `getTitle` that allows for customization of the title used for each link. The second one is `fetchEntities`, which triggers a fetching of all entities so that the full entity definition is available in the `getTitle` callback.
 - e9e532ebd8: Fixed issue where the query kind parameter is not honored
 
-## `@backstage/plugin-cicd-statistics` (0.1.11 → 0.1.12)
+### `@backstage/plugin-scaffolder` (1.6.0 → 1.7.0)
 
-### 0.1.12
+#### 1.7.0
 
-#### Patch Changes
-
-- e05e0f021b: Align on the version of `@material-ui/icons` used, to `^4.9.1` like other packages in the main repo
-
-## `@backstage/plugin-cost-insights` (0.11.31 → 0.11.32)
-
-### 0.11.32
-
-#### Patch Changes
-
-- a94c2ed1b7: Fixed bug in `CostOverviewBreakdownChart` component where some datasets caused the cost overview breakdown chart to tear.
-
-## `@backstage/plugin-gcalendar` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
-
-- 4c2ed7ecf1: Fixed loader showing when user not signed in
-
-## `@backstage/plugin-github-issues` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- 8c7bff2bb4: Updated the `luxon` dependency to 3.x
-- 719ccbb963: Properly filter on relations instead of the spec, when finding by owner
-- df226e124c: Add filtering and ordering to the graphql query
-
-## `@backstage/plugin-github-pull-requests-board` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- 80d75adf3a: Replace the momentjs dependency with luxon.
-- 719ccbb963: Properly filter on relations instead of the spec, when finding by owner
-
-## `@backstage/plugin-graphql-backend` (0.1.26 → 0.1.27)
-
-### 0.1.27
-
-#### Patch Changes
-
-- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
-
-## `@backstage/plugin-jenkins-backend` (0.1.26 → 0.1.27)
-
-### 0.1.27
-
-#### Patch Changes
-
-- b19ea927af: Fixed a bug where `extraRequestHeaders` configuration was ignored.
-
-## `@backstage/plugin-kubernetes` (0.7.2 → 0.7.3)
-
-### 0.7.3
-
-#### Patch Changes
-
-- 51af8361de: Add useCustomResources react hook for fetching Kubernetes Custom Resources
-- 35a6cfe257: Fix infinite call bug in `useCustomResources` hook
-
-## `@backstage/plugin-kubernetes-backend` (0.7.2 → 0.7.3)
-
-### 0.7.3
-
-#### Patch Changes
-
-- de676888bc: Added missing cluster locator configuration schema entries, for the catalog and local proxy types
-- d4a8c683be: kubernetes service locator now take request context parameters
-
-## `@backstage/plugin-org` (0.5.9 → 0.5.10)
-
-### 0.5.10
-
-#### Patch Changes
-
-- f2b4b55636: consistently show parent and child relations in group profile card
-
-## `@backstage/plugin-periskop-backend` (0.1.7 → 0.1.8)
-
-### 0.1.8
-
-#### Patch Changes
-
-- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
-
-## `@backstage/plugin-permission-backend` (0.5.11 → 0.5.12)
-
-### 0.5.12
-
-#### Patch Changes
-
-- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
-
-## `@backstage/plugin-permission-common` (0.6.4 → 0.7.0)
-
-### 0.7.0
-
-#### Minor Changes
-
-- 46b4a72cee: **BREAKING**: When defining permission rules, it's now necessary to provide a [ZodSchema](https://github.com/colinhacks/zod) that specifies the parameters the rule expects. This has been added to help better describe the parameters in the response of the metadata endpoint and to validate the parameters before a rule is executed.
-
-  To help with this, we have also made a change to the API of permission rules. Before, the permission rules `toQuery` and `apply` signature expected parameters to be separate arguments, like so...
-
-  ```ts
-  createPermissionRule({
-    apply: (resource, foo, bar) => true,
-    toQuery: (foo, bar) => {},
-  });
-  ```
-
-  The API has now changed to expect the parameters as a single object
-
-  ```ts
-  createPermissionRule({
-    paramSchema: z.object({
-      foo: z.string().describe('Foo value to match'),
-      bar: z.string().describe('Bar value to match'),
-    }),
-    apply: (resource, { foo, bar }) => true,
-    toQuery: ({ foo, bar }) => {},
-  });
-  ```
-
-  One final change made is to limit the possible values for a parameter to primitives and arrays of primitives.
-
-## `@backstage/plugin-permission-node` (0.6.5 → 0.7.0)
-
-### 0.7.0
-
-#### Minor Changes
-
-- 46b4a72cee: **BREAKING**: When defining permission rules, it's now necessary to provide a [ZodSchema](https://github.com/colinhacks/zod) that specifies the parameters the rule expects. This has been added to help better describe the parameters in the response of the metadata endpoint and to validate the parameters before a rule is executed.
-
-  To help with this, we have also made a change to the API of permission rules. Before, the permission rules `toQuery` and `apply` signature expected parameters to be separate arguments, like so...
-
-  ```ts
-  createPermissionRule({
-    apply: (resource, foo, bar) => true,
-    toQuery: (foo, bar) => {},
-  });
-  ```
-
-  The API has now changed to expect the parameters as a single object
-
-  ```ts
-  createPermissionRule({
-    paramSchema: z.object({
-      foo: z.string().describe('Foo value to match'),
-      bar: z.string().describe('Bar value to match'),
-    }),
-    apply: (resource, { foo, bar }) => true,
-    toQuery: ({ foo, bar }) => {},
-  });
-  ```
-
-  One final change made is to limit the possible values for a parameter to primitives and arrays of primitives.
-
-#### Patch Changes
-
-- 9335ad115e: Exported types for the .metadata endpoint of the permission router
-
-## `@backstage/plugin-playlist-backend` (0.1.0 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- eb25f7e12d: **BREAKING** The exported permission rules have changed to reflect the breaking changes made to the PermissionRule type.
-
-  For example, the `playlistConditions.isOwner` API has changed from:
-
-  ```ts
-  playlistConditions.isOwner(['user:default/me', 'group:default/owner']);
-  ```
-
-  to:
-
-  ```ts
-  playlistConditions.isOwner({
-    owners: ['user:default/me', 'group:default/owner'],
-  });
-  ```
-
-## `@backstage/plugin-rollbar-backend` (0.1.33 → 0.1.34)
-
-### 0.1.34
-
-#### Patch Changes
-
-- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
-
-## `@backstage/plugin-scaffolder` (1.6.0 → 1.7.0)
-
-### 1.7.0
-
-#### Minor Changes
+##### Minor Changes
 
 - f13d5f3f06: Add support for link to TechDocs and other links defined in template entity specification metadata on TemplateCard
 - 05f22193c5: EntityPickers now support flags to control when to include default namespace
   in result
 
-#### Patch Changes
+##### Patch Changes
 
 - e4f0a96424: Making the description of the GitLab repoUrl owner field more clearer by focusing it refers to the GitLab namespace.
 - 92e490d6b4: Make the `/next` scaffolder work end to end with the old `TaskPage` view
@@ -707,11 +480,11 @@ Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
 - 8960d83013: Add support for `allowedOrganizations` and `allowedOwners` to the `AzureRepoPicker`.
 - b681275e69: Ignore .git directories in Template Editor, increase upload limit for dry-runs to 10MB.
 
-## `@backstage/plugin-scaffolder-backend` (1.6.0 → 1.7.0)
+### `@backstage/plugin-scaffolder-backend` (1.6.0 → 1.7.0)
 
-### 1.7.0
+#### 1.7.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 253453fa14: Added a new property called `additionalTemplateGlobals` which allows you to add global functions to the scaffolder nunjucks templates.
 - 17ff77154c: Update the `github:publish` action to allow passing whether pull
@@ -720,18 +493,18 @@ Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
 - 694bfe2d61: Add functionality to shutdown scaffolder tasks if they are stale
 - a8e9848479: Added optional `sourcePath` parameter to `publish:gitlab:merge-request` action, `targetPath` is now optional and falls back to current workspace path.
 
-#### Patch Changes
+##### Patch Changes
 
 - 489621f613: Switching off duplicated timestamp in case of logging via task logger in a custom action
 - 4880d43e25: Fixed setting default branch for Bitbucket Server
 - b681275e69: Ignore .git directories in Template Editor, increase upload limit for dry-runs to 10MB.
 - a35a27df70: Updated the `moduleId` of the experimental module export.
 
-## `@backstage/plugin-search-backend` (1.0.2 → 1.1.0)
+### `@backstage/plugin-search-backend` (1.0.2 → 1.1.0)
 
-### 1.1.0
+#### 1.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 16c853a6ed: Be less restrictive with unknown keys on query endpoint
 - a799972bb1: The query received by search engines now contains a property called `pageLimit`, it specifies how many results to return per page when sending a query request to the search backend.
@@ -745,49 +518,23 @@ Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
 
   The search backend validates the page limit and this value must not exceed 100, but it doesn't set a default value for the page limit parameter, it leaves it up to each search engine to set this, so Lunr, Postgres and Elastic Search set 25 results per page as a default value.
 
-#### Patch Changes
+##### Patch Changes
 
 - 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
 
-## `@backstage/plugin-search-backend-module-elasticsearch` (1.0.2 → 1.0.3)
+### `@backstage/plugin-search-common` (1.0.1 → 1.1.0)
 
-### 1.0.3
+#### 1.1.0
 
-#### Patch Changes
-
-- a799972bb1: The search engine has been updated to take advantage of the `pageLimit` property on search queries. If none is provided, the search engine will continue to use its default value of 25 results per page.
-- 8006f8a602: In order to improve the debuggability of the search indexing process, messages logged during indexing are now tagged with a `documentType` whose value corresponds to the `type` being indexed.
-
-## `@backstage/plugin-search-backend-module-pg` (0.4.0 → 0.4.1)
-
-### 0.4.1
-
-#### Patch Changes
-
-- a799972bb1: The search engine has been updated to take advantage of the `pageLimit` property on search queries. If none is provided, the search engine will continue to use its default value of 25 results per page.
-
-## `@backstage/plugin-search-backend-node` (1.0.2 → 1.0.3)
-
-### 1.0.3
-
-#### Patch Changes
-
-- a799972bb1: The search engine has been updated to take advantage of the `pageLimit` property on search queries. If none is provided, the search engine will continue to use its default value of 25 results per page.
-- 8006f8a602: In order to improve the debuggability of the search indexing process, messages logged during indexing are now tagged with a `documentType` whose value corresponds to the `type` being indexed.
-
-## `@backstage/plugin-search-common` (1.0.1 → 1.1.0)
-
-### 1.1.0
-
-#### Minor Changes
+##### Minor Changes
 
 - a799972bb1: There is a new property called `pageLimit` on the `SearchQuery` interface that specifies how many results should be returned per page.
 
-## `@backstage/plugin-search-react` (1.1.0 → 1.2.0)
+### `@backstage/plugin-search-react` (1.1.0 → 1.2.0)
 
-### 1.2.0
+#### 1.2.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 4ed1fa2480: The search query state now has an optional `pageLimit` property that determines how many results will be requested per page, it defaults to 25.
 
@@ -957,138 +704,481 @@ Changes between 1.6.0 and 1.7.0 — 155 changed and 0 added packages.
   />
   ```
 
-## `@backstage/plugin-sonarqube-backend` (0.1.1 → 0.1.2)
+### `@backstage/plugin-techdocs-backend` (1.3.0 → 1.4.0)
 
-### 0.1.2
+#### 1.4.0
 
-#### Patch Changes
+##### Minor Changes
 
-- 9c595302cb: Normalize on winston version ^3.2.1
+- 7ced1b4076: Add optional `catalogClient` argument to `createRoute` parameters
 
-## `@backstage/plugin-stack-overflow-backend` (0.1.5 → 0.1.6)
-
-### 0.1.6
-
-#### Patch Changes
+##### Patch Changes
 
 - 8006f8a602: In order to improve the debuggability of the search indexing process, messages logged during indexing are now tagged with a `documentType` whose value corresponds to the `type` being indexed.
 
-## `@backstage/plugin-tech-insights` (0.3.0 → 0.3.1)
+## Patch version bumps
 
-### 0.3.1
+### `@backstage/backend-app-api` (0.2.1 → 0.2.2)
 
-#### Patch Changes
+#### 0.2.2
+
+##### Patch Changes
+
+- 0027a749cd: Added possibility to configure index plugin of the HTTP router service.
+- 45857bffae: Properly export `rootLoggerFactory`.
+
+### `@backstage/backend-common` (0.15.1 → 0.15.2)
+
+#### 0.15.2
+
+##### Patch Changes
+
+- e8d7976413: Added back support for when no branch is provided for the Bitbucket Server `UrlReader`
+- c44cf412de: Fix BitBucket server integration
+- c31f7cdfbc: Fixed an issue where `getClient()` for a `pluginId` would return different clients and not share them
+- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
+
+### `@backstage/backend-defaults` (0.1.1 → 0.1.2)
+
+#### 0.1.2
+
+##### Patch Changes
+
+- 96d288a02d: Added root logger service to the set of default services.
+
+### `@backstage/backend-plugin-api` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 28377dc89f: Allow interfaces to be used for inferred option types.
+- a35a27df70: Added documentation for `createBackendModule`, with guidelines for choosing a module ID.
+
+### `@backstage/backend-tasks` (0.3.5 → 0.3.6)
+
+#### 0.3.6
+
+##### Patch Changes
+
+- d4fea86ea3: Added new function `readTaskScheduleDefinitionFromConfig` to read `TaskScheduleDefinition` (aka. schedule) from the `Config`.
+
+### `@backstage/backend-test-utils` (0.1.28 → 0.1.29)
+
+#### 0.1.29
+
+##### Patch Changes
+
+- 72549952d1: Fixed handling of root scoped services in `startTestBackend`.
+- e91e8e9c55: Increased test database max connection pool size to reduce the risk of resource exhaustion.
+
+### `@backstage/catalog-client` (1.1.0 → 1.1.1)
+
+#### 1.1.1
+
+##### Patch Changes
+
+- 4f2ac624b4: Renamed argument in `validateEntity` from `location` to `locationRef`
+
+### `@backstage/catalog-model` (1.1.1 → 1.1.2)
+
+#### 1.1.2
+
+##### Patch Changes
+
+- 6f3b8d0962: Defer `ajv` compilation of schema validators to improve module-import performance
+
+### `@backstage/core-app-api` (1.1.0 → 1.1.1)
+
+#### 1.1.1
+
+##### Patch Changes
+
+- 27e6404aba: Fixed a bug where gathered index routes would fail to bind routable extensions. This would typically show up when placing a routable extension in the entity page overview tab.
+
+### `@backstage/core-components` (0.11.1 → 0.11.2)
+
+#### 0.11.2
+
+##### Patch Changes
+
+- bde1e8c8e2: Added `curve` prop to the `DependencyGraph` component to select the type of layout
+- 882101cd9b: Deep-import LightAsync component to improve module-import speed
+- 0d0f30d87e: Fixed layout for core-components docs where table was broken by splitting with code sample
+
+### `@backstage/create-app` (0.4.31 → 0.4.32)
+
+#### 0.4.32
+
+##### Patch Changes
+
+- 58c2264325: Newly created Backstage repositories now use the stable version 6 of
+  `react-router`, just like the main repo does. Please let us know if you find any
+  issues with this.
+
+  Migrating to the stable version of `react-router` is optional for the time
+  being. But if you want to do the same for your existing repository, please
+  follow [this guide](https://backstage.io/docs/tutorials/react-router-stable-migration).
+
+- e05e0f021b: Update versions of packages used in the create-app template, to match those in the main repo
+- 01dff06be4: Leverage cache mounts in Dockerfile during `yarn install ...` and `apt-get ...` commands to speed up repeated builds.
+- 90616bcaa6: Add the new search pagination component to the search page template.
+- 7c6306fc8a: Initializes a git repository when creating an app using @packages/create-app
+- 52f25858a8: Added `*.session.sql` Visual Studio Code database functionality files to `.gitignore` in the default template. This is optional but potentially helpful if your developers use Visual Studio Code; you can add a line with that exact value to your own root `.gitignore` if you want the same.
+- 6d00e80146: Updated the root `test` scripts to use `backstage-cli repo test`.
+
+  To apply this change to an existing app, make the following change to the root `package.json`:
+
+  ```diff
+  -    "test": "backstage-cli test",
+  -    "test:all": "lerna run test -- --coverage",
+  +    "test": "backstage-cli repo test",
+  +    "test:all": "backstage-cli repo test --coverage",
+  ```
+
+### `@backstage/plugin-adr-backend` (0.2.1 → 0.2.2)
+
+#### 0.2.2
+
+##### Patch Changes
+
+- 8006f8a602: In order to improve the debuggability of the search indexing process, messages logged during indexing are now tagged with a `documentType` whose value corresponds to the `type` being indexed.
+
+### `@backstage/plugin-airbrake-backend` (0.2.9 → 0.2.10)
+
+#### 0.2.10
+
+##### Patch Changes
+
+- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
+
+### `@backstage/plugin-api-docs` (0.8.9 → 0.8.10)
+
+#### 0.8.10
+
+##### Patch Changes
+
+- 50c6e14aee: Updated dependency `@asyncapi/react-component` to `1.0.0-next.43`.
+- 3d5bb521ee: Updated dependency `@asyncapi/react-component` to `1.0.0-next.42`.
+
+### `@backstage/plugin-app-backend` (0.3.36 → 0.3.37)
+
+#### 0.3.37
+
+##### Patch Changes
+
+- 11c9e0ad33: Added alpha plugin implementation for the new backend system. Available at `@backstage/plugin-app-backend/alpha`.
+
+### `@backstage/plugin-auth-node` (0.2.5 → 0.2.6)
+
+#### 0.2.6
+
+##### Patch Changes
+
+- f3a3fefb96: Ensure `getIdentity` throws an `AuthenticationError` instead of a `NotAllowed` error when authentication fails
+
+### `@backstage/plugin-badges-backend` (0.1.30 → 0.1.31)
+
+#### 0.1.31
+
+##### Patch Changes
+
+- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
+
+### `@backstage/plugin-bazaar` (0.1.24 → 0.1.25)
+
+#### 0.1.25
+
+##### Patch Changes
+
+- f7c2855d76: Added a `Overview Card` for either latest or random projects. Changed `ProjectPreview.tsx` so it take `gridSize` and `useTablePagination` as props.
+- c0352bbc69: Link to the user catalog entity of a member
+
+### `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.3 → 0.2.4)
+
+#### 0.2.4
+
+##### Patch Changes
+
+- 23f9199a0f: Deprecate `@backstage/plugin-catalog-backend-module-bitbucket`.
+
+  Please migrate to `@backstage/plugin-catalog-backend-module-bitbucket-cloud`
+  or `@backstage/plugin-catalog-backend-module-bitbucket-server` instead.
+
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.3 → 0.1.4)
+
+#### 0.1.4
+
+##### Patch Changes
+
+- f66e696e7b: Bitbucket Cloud provider: Add option to configure schedule via `app-config.yaml` instead of in code.
+
+  Please find how to configure the schedule at the config at
+  https://backstage.io/docs/integrations/bitbucketCloud/discovery
+
+- a9b91d39bb: Add `bitbucketCloudCatalogModule` (new backend-plugin-api, alpha).
+
+### `@backstage/plugin-catalog-backend-module-github` (0.1.7 → 0.1.8)
+
+#### 0.1.8
+
+##### Patch Changes
+
+- 8749df3d02: `GitHubEntityProvider`: Add option to configure schedule via `app-config.yaml` instead of in code.
+
+  Please find how to configure the schedule at the config at
+  https://backstage.io/docs/integrations/github/discovery
+
+- 7022aebf35: Added `GithubLocationAnalyzer`. This can be used to add to the `CatalogBuilder`. When added this will be used by `RepoLocationAnalyzer` to figure out if the given URL that you are trying to import from the /catalog-import page already contains catalog-info.yaml files.
+- 51046b58b0: Use schedule from config at backend module.
+
+  Also, it removes `GithubEntityProviderCatalogModuleOptions`
+  in favor of config-only for the backend module setup
+  like at other similar modules.
+
+- 7edb5909e8: Add missing config schema for the `GitHubEntityProvider`.
+- be9474b103: Replaces in-code uses of `GitHub` by `Github` and deprecates old versions.
+
+  Deprecates
+
+  - `GitHubEntityProvider` replaced by `GithubEntityProvider`
+  - `GitHubLocationAnalyzer` replaced by `GithubLocationAnalyzer`
+  - `GitHubLocationAnalyzerOptions` replaced by `GithubLocationAnalyzerOptions`
+  - `GitHubOrgEntityProvider` replaced by `GithubOrgEntityProvider`
+  - `GitHubOrgEntityProviderOptions` replaced by `GithubOrgEntityProviderOptions`
+
+  Renames
+
+  - `GitHubLocationAnalyzer` to `GithubLocationAnalyzer`
+  - `GitHubLocationAnalyzerOptions` to `GithubLocationAnalyzerOptions`
+
+- a35a27df70: Updated the `moduleId` of the experimental module export.
+
+### `@backstage/plugin-catalog-common` (1.0.6 → 1.0.7)
+
+#### 1.0.7
+
+##### Patch Changes
+
+- 823acaa88b: Moved the following types from `@backstage/plugin-catalog-backend` to this package.
+
+  - AnalyzeLocationResponse
+  - AnalyzeLocationRequest
+  - AnalyzeLocationExistingEntity
+  - AnalyzeLocationGenerateEntity
+  - AnalyzeLocationEntityField
+
+### `@backstage/plugin-catalog-graph` (0.2.21 → 0.2.22)
+
+#### 0.2.22
+
+##### Patch Changes
+
+- bde1e8c8e2: Added `curve` prop to the `DependencyGraph` component to select the type of layout
+
+### `@backstage/plugin-cicd-statistics` (0.1.11 → 0.1.12)
+
+#### 0.1.12
+
+##### Patch Changes
+
+- e05e0f021b: Align on the version of `@material-ui/icons` used, to `^4.9.1` like other packages in the main repo
+
+### `@backstage/plugin-cost-insights` (0.11.31 → 0.11.32)
+
+#### 0.11.32
+
+##### Patch Changes
+
+- a94c2ed1b7: Fixed bug in `CostOverviewBreakdownChart` component where some datasets caused the cost overview breakdown chart to tear.
+
+### `@backstage/plugin-gcalendar` (0.3.5 → 0.3.6)
+
+#### 0.3.6
+
+##### Patch Changes
+
+- 4c2ed7ecf1: Fixed loader showing when user not signed in
+
+### `@backstage/plugin-github-issues` (0.1.1 → 0.1.2)
+
+#### 0.1.2
+
+##### Patch Changes
+
+- 8c7bff2bb4: Updated the `luxon` dependency to 3.x
+- 719ccbb963: Properly filter on relations instead of the spec, when finding by owner
+- df226e124c: Add filtering and ordering to the graphql query
+
+### `@backstage/plugin-github-pull-requests-board` (0.1.3 → 0.1.4)
+
+#### 0.1.4
+
+##### Patch Changes
+
+- 80d75adf3a: Replace the momentjs dependency with luxon.
+- 719ccbb963: Properly filter on relations instead of the spec, when finding by owner
+
+### `@backstage/plugin-graphql-backend` (0.1.26 → 0.1.27)
+
+#### 0.1.27
+
+##### Patch Changes
+
+- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
+
+### `@backstage/plugin-jenkins-backend` (0.1.26 → 0.1.27)
+
+#### 0.1.27
+
+##### Patch Changes
+
+- b19ea927af: Fixed a bug where `extraRequestHeaders` configuration was ignored.
+
+### `@backstage/plugin-kubernetes` (0.7.2 → 0.7.3)
+
+#### 0.7.3
+
+##### Patch Changes
+
+- 51af8361de: Add useCustomResources react hook for fetching Kubernetes Custom Resources
+- 35a6cfe257: Fix infinite call bug in `useCustomResources` hook
+
+### `@backstage/plugin-kubernetes-backend` (0.7.2 → 0.7.3)
+
+#### 0.7.3
+
+##### Patch Changes
+
+- de676888bc: Added missing cluster locator configuration schema entries, for the catalog and local proxy types
+- d4a8c683be: kubernetes service locator now take request context parameters
+
+### `@backstage/plugin-org` (0.5.9 → 0.5.10)
+
+#### 0.5.10
+
+##### Patch Changes
+
+- f2b4b55636: consistently show parent and child relations in group profile card
+
+### `@backstage/plugin-periskop-backend` (0.1.7 → 0.1.8)
+
+#### 0.1.8
+
+##### Patch Changes
+
+- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
+
+### `@backstage/plugin-permission-backend` (0.5.11 → 0.5.12)
+
+#### 0.5.12
+
+##### Patch Changes
+
+- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
+
+### `@backstage/plugin-rollbar-backend` (0.1.33 → 0.1.34)
+
+#### 0.1.34
+
+##### Patch Changes
+
+- 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
+
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.0.2 → 1.0.3)
+
+#### 1.0.3
+
+##### Patch Changes
+
+- a799972bb1: The search engine has been updated to take advantage of the `pageLimit` property on search queries. If none is provided, the search engine will continue to use its default value of 25 results per page.
+- 8006f8a602: In order to improve the debuggability of the search indexing process, messages logged during indexing are now tagged with a `documentType` whose value corresponds to the `type` being indexed.
+
+### `@backstage/plugin-search-backend-module-pg` (0.4.0 → 0.4.1)
+
+#### 0.4.1
+
+##### Patch Changes
+
+- a799972bb1: The search engine has been updated to take advantage of the `pageLimit` property on search queries. If none is provided, the search engine will continue to use its default value of 25 results per page.
+
+### `@backstage/plugin-search-backend-node` (1.0.2 → 1.0.3)
+
+#### 1.0.3
+
+##### Patch Changes
+
+- a799972bb1: The search engine has been updated to take advantage of the `pageLimit` property on search queries. If none is provided, the search engine will continue to use its default value of 25 results per page.
+- 8006f8a602: In order to improve the debuggability of the search indexing process, messages logged during indexing are now tagged with a `documentType` whose value corresponds to the `type` being indexed.
+
+### `@backstage/plugin-sonarqube-backend` (0.1.1 → 0.1.2)
+
+#### 0.1.2
+
+##### Patch Changes
+
+- 9c595302cb: Normalize on winston version ^3.2.1
+
+### `@backstage/plugin-stack-overflow-backend` (0.1.5 → 0.1.6)
+
+#### 0.1.6
+
+##### Patch Changes
+
+- 8006f8a602: In order to improve the debuggability of the search indexing process, messages logged during indexing are now tagged with a `documentType` whose value corresponds to the `type` being indexed.
+
+### `@backstage/plugin-tech-insights` (0.3.0 → 0.3.1)
+
+#### 0.3.1
+
+##### Patch Changes
 
 - f3d272cf57: Make sure to reload score card contents when props change
 - a60a6807bd: making available the search for the last FACTS executed
 
-## `@backstage/plugin-tech-insights-backend` (0.5.2 → 0.5.3)
+### `@backstage/plugin-tech-insights-backend` (0.5.2 → 0.5.3)
 
-### 0.5.3
+#### 0.5.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 296aea34da: The Tech Insights plugin supports running fact retrievers across multiple instances. Update the README to remove the stale instructions.
 - 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
 - f7cbfb97ed: Modify router endpoint to handle singular and collections of request parameters similarly.
 
-## `@backstage/plugin-tech-insights-node` (0.3.4 → 0.3.5)
+### `@backstage/plugin-tech-insights-node` (0.3.4 → 0.3.5)
 
-### 0.3.5
+#### 0.3.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 0963b4d5fb: Updated package role to be `node-library`.
 
-## `@backstage/plugin-techdocs-backend` (1.3.0 → 1.4.0)
+### `@backstage/plugin-user-settings-backend` (0.1.0 → 0.1.1)
 
-### 1.4.0
+#### 0.1.1
 
-#### Minor Changes
-
-- 7ced1b4076: Add optional `catalogClient` argument to `createRoute` parameters
-
-#### Patch Changes
-
-- 8006f8a602: In order to improve the debuggability of the search indexing process, messages logged during indexing are now tagged with a `documentType` whose value corresponds to the `type` being indexed.
-
-## `@backstage/plugin-techdocs-node` (1.4.0 → 1.4.1)
-
-### 1.4.1
-
-#### Patch Changes
-
-- 0b2a30dead: fixing techdocs-cli Docker client creation
-
-  Docker client does not need to be created when --no-docker
-  option is provided.
-
-  If you had DOCKER_CERT_PATH environment variable defined
-  the Docker client was looking for certificates
-  and breaking techdocs-cli generate command even with --no-docker
-  option.
-
-## `@backstage/plugin-user-settings` (0.4.8 → 0.5.0)
-
-### 0.5.0
-
-#### Minor Changes
-
-- 5543e86660: **BREAKING**: The `apiRef` passed to `ProviderSettingsItem` now needs to
-  implement `ProfileInfoApi & SessionApi`, rather than just the latter. This is
-  unlikely to have an effect on most users though, since the builtin auth
-  providers generally implement both.
-
-  Fixed settings page showing providers as logged out when the user is using more
-  than one provider, and displayed some additional login information.
-
-#### Patch Changes
-
-- 06d61d1266: Handle errors that may occur when the user logs out
-- 44c9a95dcf: Prevent `.set()` to execute a request to the StorageClient if the user is `guest`
-- 174f02a00a: Update installation instructions
-
-## `@backstage/plugin-user-settings-backend` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
+##### Patch Changes
 
 - f3463b176b: Use `Response.status` instead of `.send(number)`
 - 2d3a5f09ab: Use `response.json` rather than `response.send` where appropriate, as outlined in `SECURITY.md`
 - 82ac9bcfe5: Fix wrong import statement in `README.md`.
 
-## `@backstage/plugin-vault-backend` (0.2.2 → 0.2.3)
+### `@backstage/plugin-vault-backend` (0.2.2 → 0.2.3)
 
-### 0.2.3
+#### 0.2.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 9c595302cb: Normalize on winston version ^3.2.1
 - dae0bbe522: VaultBuilder.tsx renamed to VaultBuilder in order for module to be correctly loaded.
 
-## `@backstage/test-utils` (1.2.0 → 1.2.1)
+### `@backstage/test-utils` (1.2.0 → 1.2.1)
 
-### 1.2.1
+#### 1.2.1
 
-#### Patch Changes
+##### Patch Changes
 
 - e05e0f021b: Align on the version of `@material-ui/icons` used, to `^4.9.1` like other packages in the main repo
-
-## `@techdocs/cli` (1.2.1 → 1.2.2)
-
-### 1.2.2
-
-#### Patch Changes
-
-- 0b2a30dead: fixing techdocs-cli Docker client creation
-
-  Docker client does not need to be created when --no-docker
-  option is provided.
-
-  If you had DOCKER_CERT_PATH environment variable defined
-  the Docker client was looking for certificates
-  and breaking techdocs-cli generate command even with --no-docker
-  option.
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/codemods`, `@backstage/config`, `@backstage/config-loader`, `@backstage/core-plugin-api`, `@backstage/dev-utils`, `@backstage/errors`, `@backstage/integration`, `@backstage/integration-react`, `@backstage/plugin-adr`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apache-airflow`, `@backstage/plugin-apollo-explorer`, `@backstage/plugin-azure-devops`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-badges`, `@backstage/plugin-bitrise`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-msgraph`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-circleci`, `@backstage/plugin-cloudbuild`, `@backstage/plugin-code-climate`, `@backstage/plugin-code-coverage`, `@backstage/plugin-code-coverage-backend`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-dynatrace`, `@backstage/plugin-explore`, `@backstage/plugin-explore-react`, `@backstage/plugin-firehydrant`, `@backstage/plugin-fossa`, `@backstage/plugin-gcp-projects`, `@backstage/plugin-git-release-manager`, `@backstage/plugin-github-actions`, `@backstage/plugin-github-deployments`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-home`, `@backstage/plugin-ilert`, `@backstage/plugin-jenkins`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-lighthouse`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-pagerduty`, `@backstage/plugin-periskop`, `@backstage/plugin-permission-react`, `@backstage/plugin-playlist`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-search`, `@backstage/plugin-sentry`, `@backstage/plugin-shortcuts`, `@backstage/plugin-sonarqube`, `@backstage/plugin-splunk-on-call`, `@backstage/plugin-stack-overflow`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-common`, `@backstage/plugin-tech-radar`, `@backstage/plugin-techdocs`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/plugin-vault`, `@backstage/plugin-xcmetrics`._

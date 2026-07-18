@@ -2,6 +2,17 @@
 
 Changes between 1.31.0 and 1.31.1 — 1 changed and 0 added packages.
 
-## `@backstage/create-app` (0.5.19 → 0.5.20)
+## Summary
+
+- [Patch version bumps](#patch-version-bumps): 1 package
+
+## Table of contents
+
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/create-app` (0.5.19 → 0.5.20)](#backstagecreate-app-0519--0520)
+
+## Patch version bumps
+
+### `@backstage/create-app` (0.5.19 → 0.5.20)
 
 _No changelog entries found._

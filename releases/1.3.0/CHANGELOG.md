@@ -2,13 +2,151 @@
 
 Changes between 1.2.2 and 1.3.0 — 133 changed and 6 added packages.
 
-Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-dynatrace`, `@backstage/plugin-github-pull-requests-board`, `@backstage/plugin-vault`, `@backstage/plugin-vault-backend`.
+## Summary
 
-## `@backstage/plugin-bitbucket-cloud-common` (new, 0.1.0)
+- [Newly added packages](#newly-added-packages): 6 packages
+- [Breaking changes](#breaking-changes): 3 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 5 packages
+- [0.0.x patch version bumps](#00x-patch-version-bumps): 2 packages
+- [Other minor version bumps](#other-minor-version-bumps): 5 packages
+- [Other patch version bumps](#other-patch-version-bumps): 99 packages
 
-### 0.1.0
+## Table of contents
 
-#### Minor Changes
+- [Newly added packages](#newly-added-packages)
+  - [`@backstage/plugin-bitbucket-cloud-common` (new, 0.1.0)](#backstageplugin-bitbucket-cloud-common-new-010)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-cloud` (new, 0.1.0)](#backstageplugin-catalog-backend-module-bitbucket-cloud-new-010)
+  - [`@backstage/plugin-dynatrace` (new, 0.1.0)](#backstageplugin-dynatrace-new-010)
+  - [`@backstage/plugin-github-pull-requests-board` (new, 0.1.0)](#backstageplugin-github-pull-requests-board-new-010)
+  - [`@backstage/plugin-vault` (new, 0.1.0)](#backstageplugin-vault-new-010)
+  - [`@backstage/plugin-vault-backend` (new, 0.1.0)](#backstageplugin-vault-backend-new-010)
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/backend-common` (0.13.5 → 0.14.0)](#backstagebackend-common-0135--0140)
+  - [`@backstage/plugin-pagerduty` (0.3.32 → 0.4.0)](#backstageplugin-pagerduty-0332--040)
+  - [`@backstage/plugin-permission-node` (0.6.1 → 0.6.2)](#backstageplugin-permission-node-061--062)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket` (0.1.3 → 0.2.0)](#backstageplugin-catalog-backend-module-bitbucket-013--020)
+  - [`@backstage/plugin-catalog-backend-module-ldap` (0.4.3 → 0.5.0)](#backstageplugin-catalog-backend-module-ldap-043--050)
+  - [`@backstage/plugin-kubernetes-backend` (0.5.1 → 0.6.0)](#backstageplugin-kubernetes-backend-051--060)
+  - [`@backstage/plugin-kubernetes-common` (0.2.10 → 0.3.0)](#backstageplugin-kubernetes-common-0210--030)
+  - [`@backstage/plugin-search` (0.8.1 → 0.9.0)](#backstageplugin-search-081--090)
+- [0.0.x patch version bumps](#00x-patch-version-bumps)
+  - [`@backstage/plugin-explore-react` (0.0.17 → 0.0.18)](#backstageplugin-explore-react-0017--0018)
+  - [`@backstage/release-manifests` (0.0.3 → 0.0.4)](#backstagerelease-manifests-003--004)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/plugin-catalog` (1.2.0 → 1.3.0)](#backstageplugin-catalog-120--130)
+  - [`@backstage/plugin-catalog-backend` (1.1.2 → 1.2.0)](#backstageplugin-catalog-backend-112--120)
+  - [`@backstage/plugin-scaffolder` (1.2.0 → 1.3.0)](#backstageplugin-scaffolder-120--130)
+  - [`@backstage/plugin-scaffolder-backend` (1.2.0 → 1.3.0)](#backstageplugin-scaffolder-backend-120--130)
+  - [`@backstage/plugin-techdocs` (1.1.1 → 1.2.0)](#backstageplugin-techdocs-111--120)
+- [Other patch version bumps](#other-patch-version-bumps)
+  - [`@backstage/backend-tasks` (0.3.1 → 0.3.2)](#backstagebackend-tasks-031--032)
+  - [`@backstage/backend-test-utils` (0.1.24 → 0.1.25)](#backstagebackend-test-utils-0124--0125)
+  - [`@backstage/catalog-client` (1.0.2 → 1.0.3)](#backstagecatalog-client-102--103)
+  - [`@backstage/catalog-model` (1.0.2 → 1.0.3)](#backstagecatalog-model-102--103)
+  - [`@backstage/cli` (0.17.1 → 0.17.2)](#backstagecli-0171--0172)
+  - [`@backstage/config-loader` (1.1.1 → 1.1.2)](#backstageconfig-loader-111--112)
+  - [`@backstage/core-app-api` (1.0.2 → 1.0.3)](#backstagecore-app-api-102--103)
+  - [`@backstage/core-components` (0.9.4 → 0.9.5)](#backstagecore-components-094--095)
+  - [`@backstage/core-plugin-api` (1.0.2 → 1.0.3)](#backstagecore-plugin-api-102--103)
+  - [`@backstage/create-app` (0.4.27 → 0.4.28)](#backstagecreate-app-0427--0428)
+  - [`@backstage/integration` (1.2.0 → 1.2.1)](#backstageintegration-120--121)
+  - [`@backstage/integration-react` (1.1.0 → 1.1.1)](#backstageintegration-react-110--111)
+  - [`@backstage/plugin-adr` (0.1.0 → 0.1.1)](#backstageplugin-adr-010--011)
+  - [`@backstage/plugin-adr-backend` (0.1.0 → 0.1.1)](#backstageplugin-adr-backend-010--011)
+  - [`@backstage/plugin-airbrake` (0.3.5 → 0.3.6)](#backstageplugin-airbrake-035--036)
+  - [`@backstage/plugin-airbrake-backend` (0.2.5 → 0.2.6)](#backstageplugin-airbrake-backend-025--026)
+  - [`@backstage/plugin-allure` (0.1.21 → 0.1.22)](#backstageplugin-allure-0121--0122)
+  - [`@backstage/plugin-analytics-module-ga` (0.1.16 → 0.1.17)](#backstageplugin-analytics-module-ga-0116--0117)
+  - [`@backstage/plugin-apache-airflow` (0.1.13 → 0.1.14)](#backstageplugin-apache-airflow-0113--0114)
+  - [`@backstage/plugin-api-docs` (0.8.5 → 0.8.6)](#backstageplugin-api-docs-085--086)
+  - [`@backstage/plugin-app-backend` (0.3.32 → 0.3.33)](#backstageplugin-app-backend-0332--0333)
+  - [`@backstage/plugin-auth-backend` (0.14.0 → 0.14.1)](#backstageplugin-auth-backend-0140--0141)
+  - [`@backstage/plugin-auth-node` (0.2.1 → 0.2.2)](#backstageplugin-auth-node-021--022)
+  - [`@backstage/plugin-azure-devops` (0.1.21 → 0.1.22)](#backstageplugin-azure-devops-0121--0122)
+  - [`@backstage/plugin-azure-devops-backend` (0.3.11 → 0.3.12)](#backstageplugin-azure-devops-backend-0311--0312)
+  - [`@backstage/plugin-badges` (0.2.29 → 0.2.30)](#backstageplugin-badges-0229--0230)
+  - [`@backstage/plugin-bitrise` (0.1.32 → 0.1.33)](#backstageplugin-bitrise-0132--0133)
+  - [`@backstage/plugin-catalog-backend-module-aws` (0.1.5 → 0.1.6)](#backstageplugin-catalog-backend-module-aws-015--016)
+  - [`@backstage/plugin-catalog-backend-module-azure` (0.1.3 → 0.1.4)](#backstageplugin-catalog-backend-module-azure-013--014)
+  - [`@backstage/plugin-catalog-backend-module-gerrit` (0.1.0 → 0.1.1)](#backstageplugin-catalog-backend-module-gerrit-010--011)
+  - [`@backstage/plugin-catalog-backend-module-github` (0.1.3 → 0.1.4)](#backstageplugin-catalog-backend-module-github-013--014)
+  - [`@backstage/plugin-catalog-backend-module-gitlab` (0.1.3 → 0.1.4)](#backstageplugin-catalog-backend-module-gitlab-013--014)
+  - [`@backstage/plugin-catalog-backend-module-msgraph` (0.3.2 → 0.3.3)](#backstageplugin-catalog-backend-module-msgraph-032--033)
+  - [`@backstage/plugin-catalog-common` (1.0.2 → 1.0.3)](#backstageplugin-catalog-common-102--103)
+  - [`@backstage/plugin-catalog-graphql` (0.3.9 → 0.3.10)](#backstageplugin-catalog-graphql-039--0310)
+  - [`@backstage/plugin-catalog-import` (0.8.8 → 0.8.9)](#backstageplugin-catalog-import-088--089)
+  - [`@backstage/plugin-catalog-react` (1.1.0 → 1.1.1)](#backstageplugin-catalog-react-110--111)
+  - [`@backstage/plugin-circleci` (0.3.5 → 0.3.6)](#backstageplugin-circleci-035--036)
+  - [`@backstage/plugin-cloudbuild` (0.3.5 → 0.3.6)](#backstageplugin-cloudbuild-035--036)
+  - [`@backstage/plugin-code-climate` (0.1.5 → 0.1.6)](#backstageplugin-code-climate-015--016)
+  - [`@backstage/plugin-code-coverage` (0.1.32 → 0.1.33)](#backstageplugin-code-coverage-0132--0133)
+  - [`@backstage/plugin-code-coverage-backend` (0.1.30 → 0.1.31)](#backstageplugin-code-coverage-backend-0130--0131)
+  - [`@backstage/plugin-codescene` (0.1.0 → 0.1.1)](#backstageplugin-codescene-010--011)
+  - [`@backstage/plugin-config-schema` (0.1.28 → 0.1.29)](#backstageplugin-config-schema-0128--0129)
+  - [`@backstage/plugin-cost-insights` (0.11.27 → 0.11.28)](#backstageplugin-cost-insights-01127--01128)
+  - [`@backstage/plugin-explore` (0.3.36 → 0.3.37)](#backstageplugin-explore-0336--0337)
+  - [`@backstage/plugin-firehydrant` (0.1.22 → 0.1.23)](#backstageplugin-firehydrant-0122--0123)
+  - [`@backstage/plugin-fossa` (0.2.37 → 0.2.38)](#backstageplugin-fossa-0237--0238)
+  - [`@backstage/plugin-gcalendar` (0.3.1 → 0.3.2)](#backstageplugin-gcalendar-031--032)
+  - [`@backstage/plugin-gcp-projects` (0.3.24 → 0.3.25)](#backstageplugin-gcp-projects-0324--0325)
+  - [`@backstage/plugin-git-release-manager` (0.3.18 → 0.3.19)](#backstageplugin-git-release-manager-0318--0319)
+  - [`@backstage/plugin-github-actions` (0.5.5 → 0.5.6)](#backstageplugin-github-actions-055--056)
+  - [`@backstage/plugin-github-deployments` (0.1.36 → 0.1.37)](#backstageplugin-github-deployments-0136--0137)
+  - [`@backstage/plugin-gitops-profiles` (0.3.23 → 0.3.24)](#backstageplugin-gitops-profiles-0323--0324)
+  - [`@backstage/plugin-gocd` (0.1.11 → 0.1.12)](#backstageplugin-gocd-0111--0112)
+  - [`@backstage/plugin-graphiql` (0.2.37 → 0.2.38)](#backstageplugin-graphiql-0237--0238)
+  - [`@backstage/plugin-graphql-backend` (0.1.22 → 0.1.23)](#backstageplugin-graphql-backend-0122--0123)
+  - [`@backstage/plugin-home` (0.4.21 → 0.4.22)](#backstageplugin-home-0421--0422)
+  - [`@backstage/plugin-ilert` (0.1.31 → 0.1.32)](#backstageplugin-ilert-0131--0132)
+  - [`@backstage/plugin-jenkins` (0.7.4 → 0.7.5)](#backstageplugin-jenkins-074--075)
+  - [`@backstage/plugin-jenkins-backend` (0.1.22 → 0.1.23)](#backstageplugin-jenkins-backend-0122--0123)
+  - [`@backstage/plugin-kafka` (0.3.5 → 0.3.6)](#backstageplugin-kafka-035--036)
+  - [`@backstage/plugin-kubernetes` (0.6.5 → 0.6.6)](#backstageplugin-kubernetes-065--066)
+  - [`@backstage/plugin-lighthouse` (0.3.5 → 0.3.6)](#backstageplugin-lighthouse-035--036)
+  - [`@backstage/plugin-newrelic` (0.3.23 → 0.3.24)](#backstageplugin-newrelic-0323--0324)
+  - [`@backstage/plugin-org` (0.5.5 → 0.5.6)](#backstageplugin-org-055--056)
+  - [`@backstage/plugin-periskop` (0.1.3 → 0.1.4)](#backstageplugin-periskop-013--014)
+  - [`@backstage/plugin-periskop-backend` (0.1.3 → 0.1.4)](#backstageplugin-periskop-backend-013--014)
+  - [`@backstage/plugin-permission-backend` (0.5.7 → 0.5.8)](#backstageplugin-permission-backend-057--058)
+  - [`@backstage/plugin-permission-common` (0.6.1 → 0.6.2)](#backstageplugin-permission-common-061--062)
+  - [`@backstage/plugin-rollbar` (0.4.5 → 0.4.6)](#backstageplugin-rollbar-045--046)
+  - [`@backstage/plugin-rollbar-backend` (0.1.29 → 0.1.30)](#backstageplugin-rollbar-backend-0129--0130)
+  - [`@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.7 → 0.2.8)](#backstageplugin-scaffolder-backend-module-cookiecutter-027--028)
+  - [`@backstage/plugin-search-backend` (0.5.2 → 0.5.3)](#backstageplugin-search-backend-052--053)
+  - [`@backstage/plugin-search-backend-module-elasticsearch` (0.1.4 → 0.1.5)](#backstageplugin-search-backend-module-elasticsearch-014--015)
+  - [`@backstage/plugin-search-backend-module-pg` (0.3.3 → 0.3.4)](#backstageplugin-search-backend-module-pg-033--034)
+  - [`@backstage/plugin-search-backend-node` (0.6.1 → 0.6.2)](#backstageplugin-search-backend-node-061--062)
+  - [`@backstage/plugin-search-common` (0.3.4 → 0.3.5)](#backstageplugin-search-common-034--035)
+  - [`@backstage/plugin-search-react` (0.2.0 → 0.2.1)](#backstageplugin-search-react-020--021)
+  - [`@backstage/plugin-sentry` (0.3.43 → 0.3.44)](#backstageplugin-sentry-0343--0344)
+  - [`@backstage/plugin-shortcuts` (0.2.6 → 0.2.7)](#backstageplugin-shortcuts-026--027)
+  - [`@backstage/plugin-sonarqube` (0.3.5 → 0.3.6)](#backstageplugin-sonarqube-035--036)
+  - [`@backstage/plugin-splunk-on-call` (0.3.29 → 0.3.30)](#backstageplugin-splunk-on-call-0329--0330)
+  - [`@backstage/plugin-stack-overflow` (0.1.1 → 0.1.2)](#backstageplugin-stack-overflow-011--012)
+  - [`@backstage/plugin-tech-insights` (0.2.1 → 0.2.2)](#backstageplugin-tech-insights-021--022)
+  - [`@backstage/plugin-tech-insights-backend` (0.4.0 → 0.4.1)](#backstageplugin-tech-insights-backend-040--041)
+  - [`@backstage/plugin-tech-insights-node` (0.3.0 → 0.3.1)](#backstageplugin-tech-insights-node-030--031)
+  - [`@backstage/plugin-tech-radar` (0.5.12 → 0.5.13)](#backstageplugin-tech-radar-0512--0513)
+  - [`@backstage/plugin-techdocs-addons-test-utils` (1.0.0 → 1.0.1)](#backstageplugin-techdocs-addons-test-utils-100--101)
+  - [`@backstage/plugin-techdocs-backend` (1.1.1 → 1.1.2)](#backstageplugin-techdocs-backend-111--112)
+  - [`@backstage/plugin-techdocs-module-addons-contrib` (1.0.0 → 1.0.1)](#backstageplugin-techdocs-module-addons-contrib-100--101)
+  - [`@backstage/plugin-techdocs-node` (1.1.1 → 1.1.2)](#backstageplugin-techdocs-node-111--112)
+  - [`@backstage/plugin-techdocs-react` (1.0.0 → 1.0.1)](#backstageplugin-techdocs-react-100--101)
+  - [`@backstage/plugin-todo` (0.2.7 → 0.2.8)](#backstageplugin-todo-027--028)
+  - [`@backstage/plugin-todo-backend` (0.1.29 → 0.1.30)](#backstageplugin-todo-backend-0129--0130)
+  - [`@backstage/plugin-user-settings` (0.4.4 → 0.4.5)](#backstageplugin-user-settings-044--045)
+  - [`@backstage/plugin-xcmetrics` (0.2.25 → 0.2.26)](#backstageplugin-xcmetrics-0225--0226)
+  - [`@backstage/test-utils` (1.1.0 → 1.1.1)](#backstagetest-utils-110--111)
+  - [`@techdocs/cli` (1.1.1 → 1.1.2)](#techdocscli-111--112)
+
+## Newly added packages
+
+### `@backstage/plugin-bitbucket-cloud-common` (new, 0.1.0)
+
+#### 0.1.0
+
+##### Minor Changes
 
 - 1dffa7dd4d: Add new common library `bitbucket-cloud-common` with a client for Bitbucket Cloud.
 
@@ -17,15 +155,15 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 
   The client itself was generated in parts using the `@openapitools/openapi-generator-cli`.
 
-#### Patch Changes
+##### Patch Changes
 
 - 9122060776: Updated dependency `msw` to `^0.42.0`.
 
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (new, 0.1.0)
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - dfc4efcbf0: Add new plugin `catalog-backend-module-bitbucket-cloud` with `BitbucketCloudEntityProvider`.
 
@@ -80,98 +218,356 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
             projectKey: '^apis-.*
   ```
 
-## `@backstage/plugin-dynatrace` (new, 0.1.0)
+### `@backstage/plugin-dynatrace` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 70027d09aa: Adds Dynatrace plugin
 
-## `@backstage/plugin-github-pull-requests-board` (new, 0.1.0)
+### `@backstage/plugin-github-pull-requests-board` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - fc9927c81d: Add Github Pull Requests board plugin
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-vault` (new, 0.1.0)
+### `@backstage/plugin-vault` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 7c310a5bc2: First implementation of the frontend vault plugin. For more information refer to its `README.md`.
 
-## `@backstage/plugin-vault-backend` (new, 0.1.0)
+### `@backstage/plugin-vault-backend` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 7c310a5bc2: First implementation for the backend vault plugin. For more information refer to its `README.md`.
 
-## `@backstage/backend-common` (0.13.5 → 0.14.0)
+## Breaking changes
 
-### 0.14.0
+### `@backstage/backend-common` (0.13.5 → 0.14.0)
 
-#### Minor Changes
+#### 0.14.0
+
+##### Minor Changes
 
 - 55647ec7df: **BREAKING**: Server-to-server tokens that are authenticated by the `ServerTokenManager` now must have an `exp` claim that has not expired. Tokens where the `exp` claim is in the past or missing are considered invalid and will throw an error. This is a followup to the deprecation from the `1.2` release of Backstage where perpetual tokens were deprecated. Be sure to update any usage of the `getToken()` method to have it be called every time a token is needed. Do not store tokens for later use.
 
-#### Patch Changes
+##### Patch Changes
 
 - f72a6b8c62: Applied the `luxon` dependency fix from the `0.13.4` patch release.
 - 5b22a8c97f: Applied the AWS S3 reading patch from the `0.13.5` patch release.
 - f5283a42e2: Updated dependency `@google-cloud/storage` to `^6.0.0`.
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/backend-tasks` (0.3.1 → 0.3.2)
+### `@backstage/plugin-pagerduty` (0.3.32 → 0.4.0)
 
-### 0.3.2
+#### 0.4.0
 
-#### Patch Changes
+##### Minor Changes
+
+- b157c2eb1c: **Breaking**: Use identityApi to provide auth token for pagerduty API calls.
+
+##### Patch Changes
+
+- 76bf6400fe: Fix alert that was not showing after creating an incident.
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-permission-node` (0.6.1 → 0.6.2)
+
+#### 0.6.2
+
+##### Patch Changes
+
+- 58426f9c0f: Added a new endpoint for aggregating permission metadata from a plugin backend: `/.well-known/backstage/permissions/metadata`
+
+  By default, the metadata endpoint will return information about the permission rules supported by the plugin. Plugin authors can also provide an optional `permissions` parameter to `createPermissionIntegrationRouter`. If provided, these `Permission` objects will be included in the metadata returned by this endpoint. The `permissions` parameter will eventually be required in a future breaking change.
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+## 0.x minor version bumps
+
+### `@backstage/plugin-catalog-backend-module-bitbucket` (0.1.3 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 1c01c0fd14: Integrate `@backstage/plugin-bitbucket-cloud-common` as replacement for the `BitbucketCloudClient`.
+
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-catalog-backend-module-ldap` (0.4.3 → 0.5.0)
+
+#### 0.5.0
+
+##### Minor Changes
+
+- 1f83f0bc84: Added the possibility to pass TLS configuration to ldap connection
+
+### `@backstage/plugin-kubernetes-backend` (0.5.1 → 0.6.0)
+
+#### 0.6.0
+
+##### Minor Changes
+
+- 4328737af6: Add support to fetch data for Stateful Sets from Kubernetes
+
+##### Patch Changes
+
+- 0c70cd8e1d: cache and refresh Azure tokens to avoid excessive calls to Azure Identity
+- 2aedf64ad3: Updated dependency `@google-cloud/container` to `^4.0.0`.
+
+### `@backstage/plugin-kubernetes-common` (0.2.10 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- 4328737af6: Add support to fetch data for Stateful Sets
+
+### `@backstage/plugin-search` (0.8.1 → 0.9.0)
+
+#### 0.9.0
+
+##### Minor Changes
+
+- 2dc4818541: The pre-alpha `<SearchPageNext>`, `<SearchBarNext>`, `etc...` components have been removed. In the unlikely event you were still using/referencing them, please update to using their non-`*Next` equivalents from either `@backstage/plugin-search-react` or `@backstage/plugin-search`.
+
+##### Patch Changes
+
+- 8809159148: Components `<DefaultResultListItem>`, `<SearchBar>` (including `<SearchBarBase>`), `<SearchFilter>` (including `.Checkbox`, `.Select`, and `.Autocomplete` static prop components), `<SearchResult>`, and `<SearchResultPager>` are now exported from `@backstage/plugin-search-react`. They are now deprecated in `@backstage/plugin-search` and will be removed in a future release.
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+- 5388e6bdc5: Fixed a bug that could cause analytics events in other parts of Backstage to capture nonsensical values resembling search modal state under some circumstances.
+- 915700f64f: In order to simplify analytics on top of the search experience in Backstage, the provided `<*ResultListItem />` component now captures a `discover` analytics event instead of a `click` event. This event includes the result rank as its `value` and, like a click, the URL/path clicked to as its `to` attribute.
+
+## 0.0.x patch version bumps
+
+### `@backstage/plugin-explore-react` (0.0.17 → 0.0.18)
+
+#### 0.0.18
+
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/release-manifests` (0.0.3 → 0.0.4)
+
+#### 0.0.4
+
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+## Other minor version bumps
+
+### `@backstage/plugin-catalog` (1.2.0 → 1.3.0)
+
+#### 1.3.0
+
+##### Minor Changes
+
+- fe7614ea54: Add an optional icon to the Catalog and TechDocs search results
+
+##### Patch Changes
+
+- 449dcef98e: Updates the `isKind`, `ìsComponentType`, and `isNamespace` to allow an array of possible values
+- 1f70704580: Accessibility updates:
+
+  - Added screen reader elements to describe default table `Action` buttons
+
+- 915700f64f: In order to simplify analytics on top of the search experience in Backstage, the provided `<*ResultListItem />` component now captures a `discover` analytics event instead of a `click` event. This event includes the result rank as its `value` and, like a click, the URL/path clicked to as its `to` attribute.
+
+### `@backstage/plugin-catalog-backend` (1.1.2 → 1.2.0)
+
+#### 1.2.0
+
+##### Minor Changes
+
+- b594679ae3: Allow array as non-spread arguments at the `CatalogBuilder`.
+
+  ```typescript
+  builder.addEntityProvider(...getArrayOfProviders());
+  ```
+
+  can be simplified to
+
+  ```typescript
+  builder.addEntityProvider(getArrayOfProviders());
+  ```
+
+##### Patch Changes
+
+- 8838b13038: Disallow anything but `'url'` locations from being registered via the location service.
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-scaffolder` (1.2.0 → 1.3.0)
+
+#### 1.3.0
+
+##### Minor Changes
+
+- dc39366bdb: - Added a new page under `/create/tasks` to show tasks that have been run by the Scaffolder.
+  - Ability to filter these tasks by the signed in user, and all tasks.
+  - Added optional method to the `ScaffolderApi` interface called `listTasks` to get tasks with an required `filterByOwnership` parameter.
+- 86a4a0f72d: Get data of other fields in Form from a custom field in template Scaffolder.
+  following:
+
+  ```tsx
+  const CustomFieldExtensionComponent = (props: FieldExtensionComponentProps<string[]>) => {
+    const { formData } = props.formContext;
+    ...
+  };
+
+  const CustomFieldExtension = scaffolderPlugin.provide(
+    createScaffolderFieldExtension({
+      name: ...,
+      component: CustomFieldExtensionComponent,
+      validation: ...
+    })
+  );
+  ```
+
+- 72dfcbc8bf: Gerrit Integration: Implemented a `RepoUrlPicker` for Gerrit.
+- f93af969cd: Added the ability to support running of templates that are not in the `default` namespace
+- 3500c13a33: A new template editor has been added which is accessible via the context menu on the top right hand corner of the Create page. It allows you to load a template from a local directory, edit it with a preview, execute it in dry-run mode, and view the results. Note that the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API) must be supported by your browser for this to be available.
+
+  To support the new template editor the `ScaffolderApi` now has an optional `dryRun` method, which is implemented by the default `ScaffolderClient`.
+
+##### Patch Changes
+
+- ac0c7e45ee: Fixes review mask in `MultistepJsonForm` to work as documented. `show: true` no longer needed when mask is set.
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+- fd505f40c0: Handle binary files and files that are too large during dry-run content upload.
+
+### `@backstage/plugin-scaffolder-backend` (1.2.0 → 1.3.0)
+
+#### 1.3.0
+
+##### Minor Changes
+
+- 35a26131b3: **DEPRECATION**: The `projectid` input parameters to the `publish:gitlab:merge-request`, it's no longer required as it can be decoded from the `repoUrl` input parameter.
+  **DEPRECATION**: The `projectid` output of the action in favour of `projectPath`
+- 72dfcbc8bf: A new scaffolder action has been added: `gerrit:publish`
+- ce0d8d7eb1: Fixed a bug in `publish:github` action that didn't permit to add users as collaborators.
+  This fix required changing the way parameters are passed to the action.
+  In order to add a team as collaborator, now you must use the `team` field instead of `username`.
+  In order to add a user as collaborator, you must use the `user` field.
+
+  It's still possible to use the field `username` but is deprecated in favor of `team`.
+
+  ```yaml
+  - id: publish
+    name: Publish
+    action: publish:github
+    input:
+      repoUrl: ...
+      collaborators:
+        - access: ...
+          team: my_team
+        - access: ...
+          user: my_username
+  ```
+
+- 582003a059: - Added an optional `list` method on the `TaskBroker` and `TaskStore` interface to list tasks by an optional `userEntityRef`
+  - Implemented a `list` method on the `DatabaseTaskStore` class to list tasks by an optional `userEntityRef`
+  - Added a route under `/v2/tasks` to list tasks by a `userEntityRef` using the `createdBy` query parameter
+- c042c5eaff: Add an option to not protect the default branch.
+- f93af969cd: Added the ability to support running of templates that are not in the `default` namespace
+- 3500c13a33: Added a new `/v2/dry-run` endpoint that allows for a synchronous dry run of a provided template. A `supportsDryRun` option has been added to `createTemplateAction`, which signals whether the action should be executed during dry runs. When enabled, the action context will have the new `isDryRun` property set to signal if the action is being executed during a dry run.
+
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+- 6901f6be4a: Adds more of an explanation when the `publish:github` scaffolder action fails to create a repository.
+
+### `@backstage/plugin-techdocs` (1.1.1 → 1.2.0)
+
+#### 1.2.0
+
+##### Minor Changes
+
+- fe7614ea54: Add an optional icon to the Catalog and TechDocs search results
+
+##### Patch Changes
+
+- d047d81295: Use entity title as label in `TechDocsReaderPageHeader` if available
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+- bff65e6958: Updated sidebar-related logic to use `<SidebarPinStateProvider>` + `useSidebarPinState()` and/or `<SidebarOpenStateProvider>` + `useSidebarOpenState()` from `@backstage/core-components`.
+- 915700f64f: In order to simplify analytics on top of the search experience in Backstage, the provided `<*ResultListItem />` component now captures a `discover` analytics event instead of a `click` event. This event includes the result rank as its `value` and, like a click, the URL/path clicked to as its `to` attribute.
+- 881fbd7e8d: Fix `EntityTechdocsContent` component to use objects instead of `<Route>` elements, otherwise "outlet" will be null on sub-pages and add-ons won't render.
+- 17c059dfd0: Restructures reader style transformations to improve code readability:
+
+  - Extracts the style rules to separate files;
+  - Creates a hook that processes each rule;
+  - And creates another hook that returns a transformer responsible for injecting them into the head tag of a given element.
+
+- 3b45ad701f: Packages a set of tweaks to the TechDocs addons rendering process:
+
+  - Prevents displaying sidebars until page styles are loaded and the sidebar position is updated;
+  - Prevents new sidebar locations from being created every time the reader page is rendered if these locations already exist;
+  - Centers the styles loaded event to avoid having multiple locations setting the opacity style in Shadow Dom causing the screen to flash multiple times.
+
+- 9b94ade898: Use entity title in `TechDocsSearch` placeholder if available.
+- 816f7475ec: Convert `sanitizeDOM` transformer to hook as part of code readability improvements in dom file.
+- 50ff56a80f: Change the `EntityDocsPage` path to be more specific and also add integration tests for `sub-routes` on this page.
+
+## Other patch version bumps
+
+### `@backstage/backend-tasks` (0.3.1 → 0.3.2)
+
+#### 0.3.2
+
+##### Patch Changes
 
 - fde10d24f6: Allow tasks that fail to retry on a loop emitting a warning log every time it fails with the amount of attempts it has
 - f7146b516f: Updated dependency `cron` to `^2.0.0`.
   Updated dependency `@types/cron` to `^2.0.0`.
 - 7f108513b8: Add error logging when a background task throws an error rather than silently swallowing it.
 
-## `@backstage/backend-test-utils` (0.1.24 → 0.1.25)
+### `@backstage/backend-test-utils` (0.1.24 → 0.1.25)
 
-### 0.1.25
+#### 0.1.25
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/catalog-client` (1.0.2 → 1.0.3)
+### `@backstage/catalog-client` (1.0.2 → 1.0.3)
 
-### 1.0.3
+#### 1.0.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 35bc0a7c27: Update README to point to catalog-react for frontend usage
 
-## `@backstage/catalog-model` (1.0.2 → 1.0.3)
+### `@backstage/catalog-model` (1.0.2 → 1.0.3)
 
-### 1.0.3
+#### 1.0.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 131a99e909: Added targetRef to common.schema.json to match the Typescript type
 
-## `@backstage/cli` (0.17.1 → 0.17.2)
+### `@backstage/cli` (0.17.1 → 0.17.2)
 
-### 0.17.2
+#### 0.17.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 026cfe525a: Fix the public path configuration of the frontend app build so that a trailing `/` is always appended when needed.
 - 4f73352608: Updated Lockfile to support new versions of yarn as well as the legacy 1 version
@@ -182,28 +578,28 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 - 1a33e8b287: Updated dependency `minimatch` to `5.1.0`.
 - 6de866ea74: Added console warning to frontend start when the `app.baseUrl` and `backend.baseUrl` are identical
 
-## `@backstage/config-loader` (1.1.1 → 1.1.2)
+### `@backstage/config-loader` (1.1.1 → 1.1.2)
 
-### 1.1.2
+#### 1.1.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/core-app-api` (1.0.2 → 1.0.3)
+### `@backstage/core-app-api` (1.0.2 → 1.0.3)
 
-### 1.0.3
+#### 1.0.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 19781483a2: Handle URLs as the first argument to `fetchApi`, when using the `plugin:` protocol
 
-## `@backstage/core-components` (0.9.4 → 0.9.5)
+### `@backstage/core-components` (0.9.4 → 0.9.5)
 
-### 0.9.5
+#### 0.9.5
 
-#### Patch Changes
+##### Patch Changes
 
 - feb4e8de07: Fix EntityPage tab scrolling overflow bug on Firefox
 - 65840b17be: Fix issue where right arrow icon was incorrectly added to side bar items without a sub-menu
@@ -222,19 +618,19 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 
   This was done to ensure that sidebar state can be shared successfully across components exported by different packages, regardless of what version of this package is resolved and installed for each individual package.
 
-## `@backstage/core-plugin-api` (1.0.2 → 1.0.3)
+### `@backstage/core-plugin-api` (1.0.2 → 1.0.3)
 
-### 1.0.3
+#### 1.0.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/create-app` (0.4.27 → 0.4.28)
+### `@backstage/create-app` (0.4.27 → 0.4.28)
 
-### 0.4.28
+#### 0.4.28
 
-#### Patch Changes
+##### Patch Changes
 
 - 881fbd7e8d: Register `TechDocs` addons on catalog entity pages, follow the steps below to add them manually:
 
@@ -405,104 +801,104 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 
 - 141a1caebe: Updated the auth backend setup in the template to include a guest sign-in resolver in order to make it quicker to get up and running with a basic sign-in setup. There is no need to update existing apps to match this change, but in case you want to use the guest sign-in resolver you can find it at https://backstage.io/docs/auth/identity-resolver#guest-sign-in-resolver
 
-## `@backstage/integration` (1.2.0 → 1.2.1)
+### `@backstage/integration` (1.2.0 → 1.2.1)
 
-### 1.2.1
+#### 1.2.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 72dfcbc8bf: Gerrit Integration: Handle absolute paths in `resolveUrl` properly.
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - e37c71b5a4: Updated to support deployments of Azure DevOps Server under TFS or similar sub path
 
-## `@backstage/integration-react` (1.1.0 → 1.1.1)
+### `@backstage/integration-react` (1.1.0 → 1.1.1)
 
-### 1.1.1
+#### 1.1.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-adr` (0.1.0 → 0.1.1)
+### `@backstage/plugin-adr` (0.1.0 → 0.1.1)
 
-### 0.1.1
+#### 0.1.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - a6458a120b: Adding term highlighting support to `AdrSearchResultListItem`
 
-## `@backstage/plugin-adr-backend` (0.1.0 → 0.1.1)
+### `@backstage/plugin-adr-backend` (0.1.0 → 0.1.1)
 
-### 0.1.1
+#### 0.1.1
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-airbrake` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-airbrake-backend` (0.2.5 → 0.2.6)
+### `@backstage/plugin-airbrake` (0.3.5 → 0.3.6)
 
-### 0.2.6
+#### 0.3.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-allure` (0.1.21 → 0.1.22)
+### `@backstage/plugin-airbrake-backend` (0.2.5 → 0.2.6)
 
-### 0.1.22
+#### 0.2.6
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-allure` (0.1.21 → 0.1.22)
+
+#### 0.1.22
+
+##### Patch Changes
 
 - 6387b7a98a: Add export for `isAllureReportAvailable` and `ALLURE_PROJECT_ID_ANNOTATION` so it can be used outside of plugin
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-analytics-module-ga` (0.1.16 → 0.1.17)
+### `@backstage/plugin-analytics-module-ga` (0.1.16 → 0.1.17)
 
-### 0.1.17
+#### 0.1.17
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-apache-airflow` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-api-docs` (0.8.5 → 0.8.6)
+### `@backstage/plugin-apache-airflow` (0.1.13 → 0.1.14)
 
-### 0.8.6
+#### 0.1.14
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-api-docs` (0.8.5 → 0.8.6)
+
+#### 0.8.6
+
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 811ff4bcf4: Updated `swagger-ui-react` to 4.11.1 in order to address a [XSS vulnerability](https://github.com/advisories/GHSA-hqq7-2q2v-82xq) in `@braintree/sanitize-url`
 
-## `@backstage/plugin-app-backend` (0.3.32 → 0.3.33)
+### `@backstage/plugin-app-backend` (0.3.32 → 0.3.33)
 
-### 0.3.33
+#### 0.3.33
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-auth-backend` (0.14.0 → 0.14.1)
+### `@backstage/plugin-auth-backend` (0.14.0 → 0.14.1)
 
-### 0.14.1
+#### 0.14.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 5e055079f0: Increased key field size for signing_keys table to account for larger signature keys
 - f6aae90e4e: Added configurable algorithm field for TokenFactory
@@ -510,101 +906,61 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 - bc6fb57094: Updated dependency `passport` to `^0.6.0`.
 - 467facc6ea: Fix improper binding of 'this' in ALB Auth provider
 
-## `@backstage/plugin-auth-node` (0.2.1 → 0.2.2)
+### `@backstage/plugin-auth-node` (0.2.1 → 0.2.2)
 
-### 0.2.2
+#### 0.2.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 5ca0b86b88: Address corner cases where the key store was not being created at startup
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 9079a78078: Added configurable algorithms array for IdentityClient
 
-## `@backstage/plugin-azure-devops` (0.1.21 → 0.1.22)
+### `@backstage/plugin-azure-devops` (0.1.21 → 0.1.22)
 
-### 0.1.22
+#### 0.1.22
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-azure-devops-backend` (0.3.11 → 0.3.12)
-
-### 0.3.12
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-badges` (0.2.29 → 0.2.30)
+### `@backstage/plugin-azure-devops-backend` (0.3.11 → 0.3.12)
 
-### 0.2.30
+#### 0.3.12
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-bitrise` (0.1.32 → 0.1.33)
-
-### 0.1.33
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-catalog` (1.2.0 → 1.3.0)
+### `@backstage/plugin-badges` (0.2.29 → 0.2.30)
 
-### 1.3.0
+#### 0.2.30
 
-#### Minor Changes
+##### Patch Changes
 
-- fe7614ea54: Add an optional icon to the Catalog and TechDocs search results
-
-#### Patch Changes
-
-- 449dcef98e: Updates the `isKind`, `ìsComponentType`, and `isNamespace` to allow an array of possible values
-- 1f70704580: Accessibility updates:
-
-  - Added screen reader elements to describe default table `Action` buttons
-
-- 915700f64f: In order to simplify analytics on top of the search experience in Backstage, the provided `<*ResultListItem />` component now captures a `discover` analytics event instead of a `click` event. This event includes the result rank as its `value` and, like a click, the URL/path clicked to as its `to` attribute.
-
-## `@backstage/plugin-catalog-backend` (1.1.2 → 1.2.0)
-
-### 1.2.0
-
-#### Minor Changes
-
-- b594679ae3: Allow array as non-spread arguments at the `CatalogBuilder`.
-
-  ```typescript
-  builder.addEntityProvider(...getArrayOfProviders());
-  ```
-
-  can be simplified to
-
-  ```typescript
-  builder.addEntityProvider(getArrayOfProviders());
-  ```
-
-#### Patch Changes
-
-- 8838b13038: Disallow anything but `'url'` locations from being registered via the location service.
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-catalog-backend-module-aws` (0.1.5 → 0.1.6)
+### `@backstage/plugin-bitrise` (0.1.32 → 0.1.33)
 
-### 0.1.6
+#### 0.1.33
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-catalog-backend-module-aws` (0.1.5 → 0.1.6)
+
+#### 0.1.6
+
+##### Patch Changes
 
 - eb2544b21b: Inline config interfaces
 
-## `@backstage/plugin-catalog-backend-module-azure` (0.1.3 → 0.1.4)
+### `@backstage/plugin-catalog-backend-module-azure` (0.1.3 → 0.1.4)
 
-### 0.1.4
+#### 0.1.4
 
-#### Patch Changes
+##### Patch Changes
 
 - b8884fd579: Add a new provider `AzureDevOpsEntityProvider` as replacement for `AzureDevOpsDiscoveryProcessor`.
 
@@ -670,41 +1026,29 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-catalog-backend-module-bitbucket` (0.1.3 → 0.2.0)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.0 → 0.1.1)
 
-### 0.2.0
+#### 0.1.1
 
-#### Minor Changes
-
-- 1c01c0fd14: Integrate `@backstage/plugin-bitbucket-cloud-common` as replacement for the `BitbucketCloudClient`.
-
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-catalog-backend-module-gerrit` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
+##### Patch Changes
 
 - eb2544b21b: Inline config interfaces
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-catalog-backend-module-github` (0.1.3 → 0.1.4)
+### `@backstage/plugin-catalog-backend-module-github` (0.1.3 → 0.1.4)
 
-### 0.1.4
+#### 0.1.4
 
-#### Patch Changes
+##### Patch Changes
 
 - 8335a6f6f3: Adds an edit URL to the GitHub Teams Group entities.
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.1.3 → 0.1.4)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.1.3 → 0.1.4)
 
-### 0.1.4
+#### 0.1.4
 
-#### Patch Changes
+##### Patch Changes
 
 - eea8126171: Add a new provider `GitlabDiscoveryEntityProvider` as replacement for `GitlabDiscoveryProcessor`
 
@@ -781,52 +1125,44 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-catalog-backend-module-ldap` (0.4.3 → 0.5.0)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.3.2 → 0.3.3)
 
-### 0.5.0
+#### 0.3.3
 
-#### Minor Changes
-
-- 1f83f0bc84: Added the possibility to pass TLS configuration to ldap connection
-
-## `@backstage/plugin-catalog-backend-module-msgraph` (0.3.2 → 0.3.3)
-
-### 0.3.3
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-catalog-common` (1.0.2 → 1.0.3)
+### `@backstage/plugin-catalog-common` (1.0.2 → 1.0.3)
 
-### 1.0.3
+#### 1.0.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 7d8acfc32e: Replaced all usages of `@backstage/search-common` with `@backstage/plugin-search-common`
 
-## `@backstage/plugin-catalog-graphql` (0.3.9 → 0.3.10)
+### `@backstage/plugin-catalog-graphql` (0.3.9 → 0.3.10)
 
-### 0.3.10
+#### 0.3.10
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-catalog-import` (0.8.8 → 0.8.9)
+### `@backstage/plugin-catalog-import` (0.8.8 → 0.8.9)
 
-### 0.8.9
+#### 0.8.9
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 05be420971: Updated catalog import page text so they go in the correct hierarchy order
 
-## `@backstage/plugin-catalog-react` (1.1.0 → 1.1.1)
+### `@backstage/plugin-catalog-react` (1.1.0 → 1.1.1)
 
-### 1.1.1
+#### 1.1.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 1f70704580: Accessibility updates:
 
@@ -835,68 +1171,68 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 
 - 568f2d1e75: Table component no longer has drag and drop columns by default
 
-## `@backstage/plugin-circleci` (0.3.5 → 0.3.6)
+### `@backstage/plugin-circleci` (0.3.5 → 0.3.6)
 
-### 0.3.6
+#### 0.3.6
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-cloudbuild` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-code-climate` (0.1.5 → 0.1.6)
+### `@backstage/plugin-cloudbuild` (0.3.5 → 0.3.6)
 
-### 0.1.6
+#### 0.3.6
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-code-coverage` (0.1.32 → 0.1.33)
-
-### 0.1.33
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-code-coverage-backend` (0.1.30 → 0.1.31)
+### `@backstage/plugin-code-climate` (0.1.5 → 0.1.6)
 
-### 0.1.31
+#### 0.1.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-codescene` (0.1.0 → 0.1.1)
+### `@backstage/plugin-code-coverage` (0.1.32 → 0.1.33)
 
-### 0.1.1
+#### 0.1.33
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-code-coverage-backend` (0.1.30 → 0.1.31)
+
+#### 0.1.31
+
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-codescene` (0.1.0 → 0.1.1)
+
+#### 0.1.1
+
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - ee2cd642c5: Updated dependency `rc-progress` to `3.3.3`.
 
-## `@backstage/plugin-config-schema` (0.1.28 → 0.1.29)
+### `@backstage/plugin-config-schema` (0.1.28 → 0.1.29)
 
-### 0.1.29
+#### 0.1.29
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-cost-insights` (0.11.27 → 0.11.28)
+### `@backstage/plugin-cost-insights` (0.11.27 → 0.11.28)
 
-### 0.11.28
+#### 0.11.28
 
-#### Patch Changes
+##### Patch Changes
 
 - dea1f32f44: In the README, a old path of the `sidebar` was updated to the current path.
 - eb2544b21b: Add missing `export` in configuration schema.
@@ -904,158 +1240,150 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 - 2297510941: Fixed css to show large tooltips on cost overview graph
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-explore` (0.3.36 → 0.3.37)
+### `@backstage/plugin-explore` (0.3.36 → 0.3.37)
 
-### 0.3.37
+#### 0.3.37
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-explore-react` (0.0.17 → 0.0.18)
-
-### 0.0.18
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-firehydrant` (0.1.22 → 0.1.23)
+### `@backstage/plugin-firehydrant` (0.1.22 → 0.1.23)
 
-### 0.1.23
+#### 0.1.23
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-fossa` (0.2.37 → 0.2.38)
-
-### 0.2.38
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-gcalendar` (0.3.1 → 0.3.2)
+### `@backstage/plugin-fossa` (0.2.37 → 0.2.38)
 
-### 0.3.2
+#### 0.2.38
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-gcp-projects` (0.3.24 → 0.3.25)
+### `@backstage/plugin-gcalendar` (0.3.1 → 0.3.2)
 
-### 0.3.25
+#### 0.3.2
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-gcp-projects` (0.3.24 → 0.3.25)
+
+#### 0.3.25
+
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 6968b65ba1: Updated dependency `@react-hookz/web` to `^14.0.0`.
 
-## `@backstage/plugin-git-release-manager` (0.3.18 → 0.3.19)
+### `@backstage/plugin-git-release-manager` (0.3.18 → 0.3.19)
 
-### 0.3.19
+#### 0.3.19
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-github-actions` (0.5.5 → 0.5.6)
-
-### 0.5.6
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-github-deployments` (0.1.36 → 0.1.37)
+### `@backstage/plugin-github-actions` (0.5.5 → 0.5.6)
 
-### 0.1.37
+#### 0.5.6
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-gitops-profiles` (0.3.23 → 0.3.24)
-
-### 0.3.24
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-gocd` (0.1.11 → 0.1.12)
+### `@backstage/plugin-github-deployments` (0.1.36 → 0.1.37)
 
-### 0.1.12
+#### 0.1.37
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-graphiql` (0.2.37 → 0.2.38)
+### `@backstage/plugin-gitops-profiles` (0.3.23 → 0.3.24)
 
-### 0.2.38
+#### 0.3.24
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-gocd` (0.1.11 → 0.1.12)
+
+#### 0.1.12
+
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-graphiql` (0.2.37 → 0.2.38)
+
+#### 0.2.38
+
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 464c33f932: Fix for custom headers not being included in requests.
 
-## `@backstage/plugin-graphql-backend` (0.1.22 → 0.1.23)
+### `@backstage/plugin-graphql-backend` (0.1.22 → 0.1.23)
 
-### 0.1.23
+#### 0.1.23
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-home` (0.4.21 → 0.4.22)
-
-### 0.4.22
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-ilert` (0.1.31 → 0.1.32)
+### `@backstage/plugin-home` (0.4.21 → 0.4.22)
 
-### 0.1.32
+#### 0.4.22
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-jenkins` (0.7.4 → 0.7.5)
-
-### 0.7.5
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-jenkins-backend` (0.1.22 → 0.1.23)
+### `@backstage/plugin-ilert` (0.1.31 → 0.1.32)
 
-### 0.1.23
+#### 0.1.32
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-jenkins` (0.7.4 → 0.7.5)
+
+#### 0.7.5
+
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-jenkins-backend` (0.1.22 → 0.1.23)
+
+#### 0.1.23
+
+##### Patch Changes
 
 - 83f6a64d2c: bug fix: provide backstage token for rebuild api call
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-kafka` (0.3.5 → 0.3.6)
+### `@backstage/plugin-kafka` (0.3.5 → 0.3.6)
 
-### 0.3.6
+#### 0.3.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-kubernetes` (0.6.5 → 0.6.6)
+### `@backstage/plugin-kubernetes` (0.6.5 → 0.6.6)
 
-### 0.6.6
+#### 0.6.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 4328737af6: Add support to fetch data for Stateful Sets and display an accordion in the same way as with Deployments
 - b9b8bbc7d9: show request/limit CPU and Memory on the UI
@@ -1063,48 +1391,27 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 81304e3e91: Fix for HPA matching when deploying same HPA in multiple namespaces
 
-## `@backstage/plugin-kubernetes-backend` (0.5.1 → 0.6.0)
+### `@backstage/plugin-lighthouse` (0.3.5 → 0.3.6)
 
-### 0.6.0
+#### 0.3.6
 
-#### Minor Changes
-
-- 4328737af6: Add support to fetch data for Stateful Sets from Kubernetes
-
-#### Patch Changes
-
-- 0c70cd8e1d: cache and refresh Azure tokens to avoid excessive calls to Azure Identity
-- 2aedf64ad3: Updated dependency `@google-cloud/container` to `^4.0.0`.
-
-## `@backstage/plugin-kubernetes-common` (0.2.10 → 0.3.0)
-
-### 0.3.0
-
-#### Minor Changes
-
-- 4328737af6: Add support to fetch data for Stateful Sets
-
-## `@backstage/plugin-lighthouse` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-newrelic` (0.3.23 → 0.3.24)
+### `@backstage/plugin-newrelic` (0.3.23 → 0.3.24)
 
-### 0.3.24
+#### 0.3.24
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-org` (0.5.5 → 0.5.6)
+### `@backstage/plugin-org` (0.5.5 → 0.5.6)
 
-### 0.5.6
+#### 0.5.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 306d0b4fdd: Added the ability to use an additional `filter` when fetching groups in `MyGroupsSidebarItem` component. Example:
@@ -1130,196 +1437,76 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
   </SidebarPage>
   ```
 
-## `@backstage/plugin-pagerduty` (0.3.32 → 0.4.0)
+### `@backstage/plugin-periskop` (0.1.3 → 0.1.4)
 
-### 0.4.0
+#### 0.1.4
 
-#### Minor Changes
-
-- b157c2eb1c: **Breaking**: Use identityApi to provide auth token for pagerduty API calls.
-
-#### Patch Changes
-
-- 76bf6400fe: Fix alert that was not showing after creating an incident.
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-periskop` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-periskop-backend` (0.1.3 → 0.1.4)
+### `@backstage/plugin-periskop-backend` (0.1.3 → 0.1.4)
 
-### 0.1.4
+#### 0.1.4
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-permission-backend` (0.5.7 → 0.5.8)
-
-### 0.5.8
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-permission-common` (0.6.1 → 0.6.2)
+### `@backstage/plugin-permission-backend` (0.5.7 → 0.5.8)
 
-### 0.6.2
+#### 0.5.8
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-permission-node` (0.6.1 → 0.6.2)
-
-### 0.6.2
-
-#### Patch Changes
-
-- 58426f9c0f: Added a new endpoint for aggregating permission metadata from a plugin backend: `/.well-known/backstage/permissions/metadata`
-
-  By default, the metadata endpoint will return information about the permission rules supported by the plugin. Plugin authors can also provide an optional `permissions` parameter to `createPermissionIntegrationRouter`. If provided, these `Permission` objects will be included in the metadata returned by this endpoint. The `permissions` parameter will eventually be required in a future breaking change.
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-rollbar` (0.4.5 → 0.4.6)
+### `@backstage/plugin-permission-common` (0.6.1 → 0.6.2)
 
-### 0.4.6
+#### 0.6.2
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-rollbar-backend` (0.1.29 → 0.1.30)
-
-### 0.1.30
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-scaffolder` (1.2.0 → 1.3.0)
+### `@backstage/plugin-rollbar` (0.4.5 → 0.4.6)
 
-### 1.3.0
+#### 0.4.6
 
-#### Minor Changes
-
-- dc39366bdb: - Added a new page under `/create/tasks` to show tasks that have been run by the Scaffolder.
-  - Ability to filter these tasks by the signed in user, and all tasks.
-  - Added optional method to the `ScaffolderApi` interface called `listTasks` to get tasks with an required `filterByOwnership` parameter.
-- 86a4a0f72d: Get data of other fields in Form from a custom field in template Scaffolder.
-  following:
-
-  ```tsx
-  const CustomFieldExtensionComponent = (props: FieldExtensionComponentProps<string[]>) => {
-    const { formData } = props.formContext;
-    ...
-  };
-
-  const CustomFieldExtension = scaffolderPlugin.provide(
-    createScaffolderFieldExtension({
-      name: ...,
-      component: CustomFieldExtensionComponent,
-      validation: ...
-    })
-  );
-  ```
-
-- 72dfcbc8bf: Gerrit Integration: Implemented a `RepoUrlPicker` for Gerrit.
-- f93af969cd: Added the ability to support running of templates that are not in the `default` namespace
-- 3500c13a33: A new template editor has been added which is accessible via the context menu on the top right hand corner of the Create page. It allows you to load a template from a local directory, edit it with a preview, execute it in dry-run mode, and view the results. Note that the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API) must be supported by your browser for this to be available.
-
-  To support the new template editor the `ScaffolderApi` now has an optional `dryRun` method, which is implemented by the default `ScaffolderClient`.
-
-#### Patch Changes
-
-- ac0c7e45ee: Fixes review mask in `MultistepJsonForm` to work as documented. `show: true` no longer needed when mask is set.
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-- fd505f40c0: Handle binary files and files that are too large during dry-run content upload.
-
-## `@backstage/plugin-scaffolder-backend` (1.2.0 → 1.3.0)
-
-### 1.3.0
-
-#### Minor Changes
-
-- 35a26131b3: **DEPRECATION**: The `projectid` input parameters to the `publish:gitlab:merge-request`, it's no longer required as it can be decoded from the `repoUrl` input parameter.
-  **DEPRECATION**: The `projectid` output of the action in favour of `projectPath`
-- 72dfcbc8bf: A new scaffolder action has been added: `gerrit:publish`
-- ce0d8d7eb1: Fixed a bug in `publish:github` action that didn't permit to add users as collaborators.
-  This fix required changing the way parameters are passed to the action.
-  In order to add a team as collaborator, now you must use the `team` field instead of `username`.
-  In order to add a user as collaborator, you must use the `user` field.
-
-  It's still possible to use the field `username` but is deprecated in favor of `team`.
-
-  ```yaml
-  - id: publish
-    name: Publish
-    action: publish:github
-    input:
-      repoUrl: ...
-      collaborators:
-        - access: ...
-          team: my_team
-        - access: ...
-          user: my_username
-  ```
-
-- 582003a059: - Added an optional `list` method on the `TaskBroker` and `TaskStore` interface to list tasks by an optional `userEntityRef`
-  - Implemented a `list` method on the `DatabaseTaskStore` class to list tasks by an optional `userEntityRef`
-  - Added a route under `/v2/tasks` to list tasks by a `userEntityRef` using the `createdBy` query parameter
-- c042c5eaff: Add an option to not protect the default branch.
-- f93af969cd: Added the ability to support running of templates that are not in the `default` namespace
-- 3500c13a33: Added a new `/v2/dry-run` endpoint that allows for a synchronous dry run of a provided template. A `supportsDryRun` option has been added to `createTemplateAction`, which signals whether the action should be executed during dry runs. When enabled, the action context will have the new `isDryRun` property set to signal if the action is being executed during a dry run.
-
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-- 6901f6be4a: Adds more of an explanation when the `publish:github` scaffolder action fails to create a repository.
-
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.7 → 0.2.8)
-
-### 0.2.8
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-search` (0.8.1 → 0.9.0)
+### `@backstage/plugin-rollbar-backend` (0.1.29 → 0.1.30)
 
-### 0.9.0
+#### 0.1.30
 
-#### Minor Changes
+##### Patch Changes
 
-- 2dc4818541: The pre-alpha `<SearchPageNext>`, `<SearchBarNext>`, `etc...` components have been removed. In the unlikely event you were still using/referencing them, please update to using their non-`*Next` equivalents from either `@backstage/plugin-search-react` or `@backstage/plugin-search`.
-
-#### Patch Changes
-
-- 8809159148: Components `<DefaultResultListItem>`, `<SearchBar>` (including `<SearchBarBase>`), `<SearchFilter>` (including `.Checkbox`, `.Select`, and `.Autocomplete` static prop components), `<SearchResult>`, and `<SearchResultPager>` are now exported from `@backstage/plugin-search-react`. They are now deprecated in `@backstage/plugin-search` and will be removed in a future release.
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-- 5388e6bdc5: Fixed a bug that could cause analytics events in other parts of Backstage to capture nonsensical values resembling search modal state under some circumstances.
-- 915700f64f: In order to simplify analytics on top of the search experience in Backstage, the provided `<*ResultListItem />` component now captures a `discover` analytics event instead of a `click` event. This event includes the result rank as its `value` and, like a click, the URL/path clicked to as its `to` attribute.
 
-## `@backstage/plugin-search-backend` (0.5.2 → 0.5.3)
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.7 → 0.2.8)
 
-### 0.5.3
+#### 0.2.8
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-search-backend` (0.5.2 → 0.5.3)
+
+#### 0.5.3
+
+##### Patch Changes
 
 - 7d8acfc32e: `RouterOptions` and `createRouter` now marked as public exports
 - 915700f64f: The provided search engine now adds a pagination-aware `rank` value to all results.
 
-## `@backstage/plugin-search-backend-module-elasticsearch` (0.1.4 → 0.1.5)
+### `@backstage/plugin-search-backend-module-elasticsearch` (0.1.4 → 0.1.5)
 
-### 0.1.5
+#### 0.1.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 281cec1b61: Use more precise matching for query filters
 - 915700f64f: The provided search engine now adds a pagination-aware `rank` value to all results.
@@ -1335,19 +1522,19 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
   - ElasticSearchOptions,
   - ElasticSearchAuth,
 
-## `@backstage/plugin-search-backend-module-pg` (0.3.3 → 0.3.4)
+### `@backstage/plugin-search-backend-module-pg` (0.3.3 → 0.3.4)
 
-### 0.3.4
+#### 0.3.4
 
-#### Patch Changes
+##### Patch Changes
 
 - 915700f64f: The provided search engine now adds a pagination-aware `rank` value to all results.
 
-## `@backstage/plugin-search-backend-node` (0.6.1 → 0.6.2)
+### `@backstage/plugin-search-backend-node` (0.6.1 → 0.6.2)
 
-### 0.6.2
+#### 0.6.2
 
-#### Patch Changes
+##### Patch Changes
 
 - e7794a0aaa: propagate indexing errors so they don't appear successful to the task scheduler
 - 3bb25a9acc: Introducing a `NewlineDelimitedJsonCollatorFactory`, which can be used to create search indices from newline delimited JSON files stored in external storage readable via a configured `UrlReader` instance.
@@ -1358,150 +1545,119 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
 - 915700f64f: The provided search engine now adds a pagination-aware `rank` value to all results.
 - 7d8acfc32e: Replaced all `@beta` exports with `@public` exports
 
-## `@backstage/plugin-search-common` (0.3.4 → 0.3.5)
+### `@backstage/plugin-search-common` (0.3.4 → 0.3.5)
 
-### 0.3.5
+#### 0.3.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 7d8acfc32e: `@beta` exports now replaced with `@public` exports
 - 484afdf1dc: Added an optional `rank` attribute to the `Result` type. This represents the result rank (starting at 1) for a given result in a result set for a given search.
 
-## `@backstage/plugin-search-react` (0.2.0 → 0.2.1)
+### `@backstage/plugin-search-react` (0.2.0 → 0.2.1)
 
-### 0.2.1
+#### 0.2.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 8809159148: Components `<DefaultResultListItem>`, `<SearchBar>` (including `<SearchBarBase>`), `<SearchFilter>` (including `.Checkbox`, `.Select`, and `.Autocomplete` static prop components), `<SearchResult>`, and `<SearchResultPager>` are now exported from `@backstage/plugin-search-react`. They are now deprecated in `@backstage/plugin-search` and will be removed in a future release.
 
-## `@backstage/plugin-sentry` (0.3.43 → 0.3.44)
+### `@backstage/plugin-sentry` (0.3.43 → 0.3.44)
 
-### 0.3.44
+#### 0.3.44
 
-#### Patch Changes
+##### Patch Changes
 
 - c55f6cb22d: Exported `isSentryAvailable` which can be used to determine if sentry is available.
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-shortcuts` (0.2.6 → 0.2.7)
+### `@backstage/plugin-shortcuts` (0.2.6 → 0.2.7)
 
-### 0.2.7
+#### 0.2.7
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-sonarqube` (0.3.5 → 0.3.6)
+### `@backstage/plugin-sonarqube` (0.3.5 → 0.3.6)
 
-### 0.3.6
+#### 0.3.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - ee2cd642c5: Updated dependency `rc-progress` to `3.3.3`.
 
-## `@backstage/plugin-splunk-on-call` (0.3.29 → 0.3.30)
+### `@backstage/plugin-splunk-on-call` (0.3.29 → 0.3.30)
 
-### 0.3.30
+#### 0.3.30
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-stack-overflow` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-tech-insights` (0.2.1 → 0.2.2)
+### `@backstage/plugin-stack-overflow` (0.1.1 → 0.1.2)
 
-### 0.2.2
+#### 0.1.2
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-tech-insights` (0.2.1 → 0.2.2)
+
+#### 0.2.2
+
+##### Patch Changes
 
 - 09d2f4d179: Export TechInsightsClient so it may be extended by custom implementations
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-tech-insights-backend` (0.4.0 → 0.4.1)
+### `@backstage/plugin-tech-insights-backend` (0.4.0 → 0.4.1)
 
-### 0.4.1
+#### 0.4.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 4fee8f59e3: Updated tech-insights fetch/latest endpoint to return the actual latest row based on the timestamp
 - aa15229ec3: Introduce additional JsonValue types to be storable as facts. This enables the possibility to store more complex objects for fact checking purposes. The rules engine supports walking keyed object values directly to create rules and checks
 
   Modify facts database table to have a more restricted timestamp precision for cases where the postgres server isn't configured to contain such value. This fixes the issue where in some cases `maxItems` lifecycle condition didn't work as expected.
 
-## `@backstage/plugin-tech-insights-node` (0.3.0 → 0.3.1)
+### `@backstage/plugin-tech-insights-node` (0.3.0 → 0.3.1)
 
-### 0.3.1
+#### 0.3.1
 
-#### Patch Changes
+##### Patch Changes
 
 - aa15229ec3: Introduce additional JsonValue types to be storable as facts. This enables the possibility to store more complex objects for fact checking purposes. The rules engine supports walking keyed object values directly to create rules and checks
 
   Modify facts database table to have a more restricted timestamp precision for cases where the postgres server isn't configured to contain such value. This fixes the issue where in some cases `maxItems` lifecycle condition didn't work as expected.
 
-## `@backstage/plugin-tech-radar` (0.5.12 → 0.5.13)
+### `@backstage/plugin-tech-radar` (0.5.12 → 0.5.13)
 
-### 0.5.13
+#### 0.5.13
 
-#### Patch Changes
+##### Patch Changes
 
 - bb31e5489c: Updated dependency `d3-force` to `^3.0.0`.
   Updated dependency `@types/d3-force` to `^3.0.0`.
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-techdocs` (1.1.1 → 1.2.0)
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.0 → 1.0.1)
 
-### 1.2.0
+#### 1.0.1
 
-#### Minor Changes
-
-- fe7614ea54: Add an optional icon to the Catalog and TechDocs search results
-
-#### Patch Changes
-
-- d047d81295: Use entity title as label in `TechDocsReaderPageHeader` if available
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-- bff65e6958: Updated sidebar-related logic to use `<SidebarPinStateProvider>` + `useSidebarPinState()` and/or `<SidebarOpenStateProvider>` + `useSidebarOpenState()` from `@backstage/core-components`.
-- 915700f64f: In order to simplify analytics on top of the search experience in Backstage, the provided `<*ResultListItem />` component now captures a `discover` analytics event instead of a `click` event. This event includes the result rank as its `value` and, like a click, the URL/path clicked to as its `to` attribute.
-- 881fbd7e8d: Fix `EntityTechdocsContent` component to use objects instead of `<Route>` elements, otherwise "outlet" will be null on sub-pages and add-ons won't render.
-- 17c059dfd0: Restructures reader style transformations to improve code readability:
-
-  - Extracts the style rules to separate files;
-  - Creates a hook that processes each rule;
-  - And creates another hook that returns a transformer responsible for injecting them into the head tag of a given element.
-
-- 3b45ad701f: Packages a set of tweaks to the TechDocs addons rendering process:
-
-  - Prevents displaying sidebars until page styles are loaded and the sidebar position is updated;
-  - Prevents new sidebar locations from being created every time the reader page is rendered if these locations already exist;
-  - Centers the styles loaded event to avoid having multiple locations setting the opacity style in Shadow Dom causing the screen to flash multiple times.
-
-- 9b94ade898: Use entity title in `TechDocsSearch` placeholder if available.
-- 816f7475ec: Convert `sanitizeDOM` transformer to hook as part of code readability improvements in dom file.
-- 50ff56a80f: Change the `EntityDocsPage` path to be more specific and also add integration tests for `sub-routes` on this page.
-
-## `@backstage/plugin-techdocs-addons-test-utils` (1.0.0 → 1.0.1)
-
-### 1.0.1
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - d047d81295: Update default mock
 
-## `@backstage/plugin-techdocs-backend` (1.1.1 → 1.1.2)
+### `@backstage/plugin-techdocs-backend` (1.1.1 → 1.1.2)
 
-### 1.1.2
+#### 1.1.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 61fba6e50b: In order to ensure a good, stable TechDocs user experience when running TechDocs with `techdocs.builder` set to `local`, the number of concurrent builds has been limited to 10. Any additional builds requested concurrently will be queued and handled as prior builds complete. In the unlikely event that you need to handle more concurrent builds, consider scaling out your TechDocs backend deployment or using the `external` option for `techdocs.builder`.
@@ -1566,90 +1722,82 @@ Newly added: `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-cata
   }
   ```
 
-## `@backstage/plugin-techdocs-module-addons-contrib` (1.0.0 → 1.0.1)
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.0.0 → 1.0.1)
 
-### 1.0.1
+#### 1.0.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - 6968b65ba1: Updated dependency `@react-hookz/web` to `^14.0.0`.
 
-## `@backstage/plugin-techdocs-node` (1.1.1 → 1.1.2)
+### `@backstage/plugin-techdocs-node` (1.1.1 → 1.1.2)
 
-### 1.1.2
+#### 1.1.2
 
-#### Patch Changes
+##### Patch Changes
 
 - f5283a42e2: Updated dependency `@google-cloud/storage` to `^6.0.0`.
 - 2c048f8b90: Updated deprecated use of `express`' `res.redirect()` method when handling legacy path casing.
 
-## `@backstage/plugin-techdocs-react` (1.0.0 → 1.0.1)
+### `@backstage/plugin-techdocs-react` (1.0.0 → 1.0.1)
 
-### 1.0.1
+#### 1.0.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 3b45ad701f: Creates a `TechDocsShadowDom` component that takes a tree of elements and an `onAppend` handler:
 
   - Calls the `onAppend` handler when appending the element tree to the shadow root;
   - Also dispatches an event when styles are loaded to let transformers know that the computed styles are ready to be consumed.
 
-## `@backstage/plugin-todo` (0.2.7 → 0.2.8)
+### `@backstage/plugin-todo` (0.2.7 → 0.2.8)
 
-### 0.2.8
+#### 0.2.8
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/plugin-todo-backend` (0.1.29 → 0.1.30)
-
-### 0.1.30
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/plugin-user-settings` (0.4.4 → 0.4.5)
+### `@backstage/plugin-todo-backend` (0.1.29 → 0.1.30)
 
-### 0.4.5
+#### 0.1.30
 
-#### Patch Changes
+##### Patch Changes
+
+- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
+
+### `@backstage/plugin-user-settings` (0.4.4 → 0.4.5)
+
+#### 0.4.5
+
+##### Patch Changes
 
 - 9d2d6a0cea: Added new `<UserSettingsIdentityCard />` to show the result of the `identityApi.getBackstageIdentity()` call to help debug ownership issues. The new card has been added to the user settings page.
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 - bff65e6958: Updated sidebar-related logic to use `<SidebarPinStateProvider>` + `useSidebarPinState()` and/or `<SidebarOpenStateProvider>` + `useSidebarOpenState()` from `@backstage/core-components`.
 
-## `@backstage/plugin-xcmetrics` (0.2.25 → 0.2.26)
+### `@backstage/plugin-xcmetrics` (0.2.25 → 0.2.26)
 
-### 0.2.26
+#### 0.2.26
 
-#### Patch Changes
-
-- 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
-
-## `@backstage/release-manifests` (0.0.3 → 0.0.4)
-
-### 0.0.4
-
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@backstage/test-utils` (1.1.0 → 1.1.1)
+### `@backstage/test-utils` (1.1.0 → 1.1.1)
 
-### 1.1.1
+#### 1.1.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 8f7b1835df: Updated dependency `msw` to `^0.41.0`.
 
-## `@techdocs/cli` (1.1.1 → 1.1.2)
+### `@techdocs/cli` (1.1.1 → 1.1.2)
 
-### 1.1.2
+#### 1.1.2
 
-#### Patch Changes
+##### Patch Changes
 
 - f96e98f4cd: Updated dependency `cypress` to `^10.0.0`.
 - bff65e6958: Updated sidebar-related logic to use `<SidebarPinStateProvider>` + `useSidebarPinState()` and/or `<SidebarOpenStateProvider>` + `useSidebarOpenState()` from `@backstage/core-components`.

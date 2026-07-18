@@ -2,155 +2,129 @@
 
 Changes between 1.39.1 and 1.40.0 — 160 changed and 2 added packages.
 
-Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin-mcp-actions-backend`.
+## Summary
 
-## `@backstage/plugin-events-backend-module-kafka` (new, 0.1.0)
+- [Newly added packages](#newly-added-packages): 2 packages
+- [Breaking changes](#breaking-changes): 9 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 5 packages
+- [0.0.x patch version bumps](#00x-patch-version-bumps): 2 packages
+- [Other minor version bumps](#other-minor-version-bumps): 8 packages
+- [Other patch version bumps](#other-patch-version-bumps): 52 packages
 
-### 0.1.0
+## Table of contents
 
-#### Minor Changes
+- [Newly added packages](#newly-added-packages)
+  - [`@backstage/plugin-events-backend-module-kafka` (new, 0.1.0)](#backstageplugin-events-backend-module-kafka-new-010)
+  - [`@backstage/plugin-mcp-actions-backend` (new, 0.1.0)](#backstageplugin-mcp-actions-backend-new-010)
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/canon` (0.4.0 → 0.5.0)](#backstagecanon-040--050)
+  - [`@backstage/cli` (0.32.1 → 0.33.0)](#backstagecli-0321--0330)
+  - [`@backstage/plugin-catalog` (1.30.0 → 1.31.0)](#backstageplugin-catalog-1300--1310)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.4.8 → 0.5.0)](#backstageplugin-catalog-backend-module-bitbucket-cloud-048--050)
+  - [`@backstage/plugin-catalog-backend-module-gitlab` (0.6.6 → 0.7.0)](#backstageplugin-catalog-backend-module-gitlab-066--070)
+  - [`@backstage/plugin-scaffolder-backend` (1.33.0 → 2.0.0)](#backstageplugin-scaffolder-backend-1330--200)
+  - [`@backstage/plugin-scaffolder-backend-module-github` (0.7.1 → 0.8.0)](#backstageplugin-scaffolder-backend-module-github-071--080)
+  - [`@backstage/plugin-scaffolder-node` (0.8.2 → 0.9.0)](#backstageplugin-scaffolder-node-082--090)
+  - [`@backstage/plugin-scaffolder-node-test-utils` (0.2.2 → 0.3.0)](#backstageplugin-scaffolder-node-test-utils-022--030)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/backend-defaults` (0.10.0 → 0.11.0)](#backstagebackend-defaults-0100--0110)
+  - [`@backstage/create-app` (0.6.2 → 0.7.0)](#backstagecreate-app-062--070)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-server` (0.4.1 → 0.5.0)](#backstageplugin-catalog-backend-module-bitbucket-server-041--050)
+  - [`@backstage/plugin-catalog-backend-module-github` (0.9.0 → 0.10.0)](#backstageplugin-catalog-backend-module-github-090--0100)
+  - [`@backstage/repo-tools` (0.13.4 → 0.14.0)](#backstagerepo-tools-0134--0140)
+- [0.0.x patch version bumps](#00x-patch-version-bumps)
+  - [`@backstage/plugin-notifications-common` (0.0.8 → 0.0.9)](#backstageplugin-notifications-common-008--009)
+  - [`@backstage/plugin-signals` (0.0.19 → 0.0.20)](#backstageplugin-signals-0019--0020)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/backend-plugin-api` (1.3.1 → 1.4.0)](#backstagebackend-plugin-api-131--140)
+  - [`@backstage/backend-test-utils` (1.5.0 → 1.6.0)](#backstagebackend-test-utils-150--160)
+  - [`@backstage/plugin-catalog-backend` (2.0.0 → 2.1.0)](#backstageplugin-catalog-backend-200--210)
+  - [`@backstage/plugin-catalog-react` (1.18.0 → 1.19.0)](#backstageplugin-catalog-react-1180--1190)
+  - [`@backstage/plugin-scaffolder` (1.31.0 → 1.32.0)](#backstageplugin-scaffolder-1310--1320)
+  - [`@backstage/plugin-scaffolder-react` (1.16.0 → 1.17.0)](#backstageplugin-scaffolder-react-1160--1170)
+  - [`@backstage/plugin-techdocs` (1.12.6 → 1.13.0)](#backstageplugin-techdocs-1126--1130)
+  - [`@backstage/plugin-techdocs-react` (1.2.17 → 1.3.0)](#backstageplugin-techdocs-react-1217--130)
+- [Other patch version bumps](#other-patch-version-bumps)
+  - [`@backstage/backend-app-api` (1.2.3 → 1.2.4)](#backstagebackend-app-api-123--124)
+  - [`@backstage/backend-dynamic-feature-service` (0.7.0 → 0.7.1)](#backstagebackend-dynamic-feature-service-070--071)
+  - [`@backstage/catalog-client` (1.10.0 → 1.10.1)](#backstagecatalog-client-1100--1101)
+  - [`@backstage/core-components` (0.17.2 → 0.17.3)](#backstagecore-components-0172--0173)
+  - [`@backstage/core-plugin-api` (1.10.7 → 1.10.8)](#backstagecore-plugin-api-1107--1108)
+  - [`@backstage/eslint-plugin` (0.1.10 → 0.1.11)](#backstageeslint-plugin-0110--0111)
+  - [`@backstage/frontend-app-api` (0.11.2 → 0.11.3)](#backstagefrontend-app-api-0112--0113)
+  - [`@backstage/frontend-defaults` (0.2.2 → 0.2.3)](#backstagefrontend-defaults-022--023)
+  - [`@backstage/frontend-plugin-api` (0.10.2 → 0.10.3)](#backstagefrontend-plugin-api-0102--0103)
+  - [`@backstage/plugin-api-docs` (0.12.7 → 0.12.8)](#backstageplugin-api-docs-0127--0128)
+  - [`@backstage/plugin-app` (0.1.9 → 0.1.10)](#backstageplugin-app-019--0110)
+  - [`@backstage/plugin-app-visualizer` (0.1.19 → 0.1.20)](#backstageplugin-app-visualizer-0119--0120)
+  - [`@backstage/plugin-auth-backend-module-aws-alb-provider` (0.4.3 → 0.4.4)](#backstageplugin-auth-backend-module-aws-alb-provider-043--044)
+  - [`@backstage/plugin-auth-backend-module-okta-provider` (0.2.3 → 0.2.4)](#backstageplugin-auth-backend-module-okta-provider-023--024)
+  - [`@backstage/plugin-auth-node` (0.6.3 → 0.6.4)](#backstageplugin-auth-node-063--064)
+  - [`@backstage/plugin-catalog-backend-module-ldap` (0.11.5 → 0.11.6)](#backstageplugin-catalog-backend-module-ldap-0115--0116)
+  - [`@backstage/plugin-catalog-graph` (0.4.19 → 0.4.20)](#backstageplugin-catalog-graph-0419--0420)
+  - [`@backstage/plugin-catalog-import` (0.13.0 → 0.13.1)](#backstageplugin-catalog-import-0130--0131)
+  - [`@backstage/plugin-catalog-node` (1.17.0 → 1.17.1)](#backstageplugin-catalog-node-1170--1171)
+  - [`@backstage/plugin-catalog-unprocessed-entities` (0.2.17 → 0.2.18)](#backstageplugin-catalog-unprocessed-entities-0217--0218)
+  - [`@backstage/plugin-devtools` (0.1.27 → 0.1.28)](#backstageplugin-devtools-0127--0128)
+  - [`@backstage/plugin-devtools-backend` (0.5.5 → 0.5.6)](#backstageplugin-devtools-backend-055--056)
+  - [`@backstage/plugin-events-backend` (0.5.2 → 0.5.3)](#backstageplugin-events-backend-052--053)
+  - [`@backstage/plugin-events-backend-module-google-pubsub` (0.1.0 → 0.1.1)](#backstageplugin-events-backend-module-google-pubsub-010--011)
+  - [`@backstage/plugin-home` (0.8.8 → 0.8.9)](#backstageplugin-home-088--089)
+  - [`@backstage/plugin-home-react` (0.1.26 → 0.1.27)](#backstageplugin-home-react-0126--0127)
+  - [`@backstage/plugin-kubernetes` (0.12.7 → 0.12.8)](#backstageplugin-kubernetes-0127--0128)
+  - [`@backstage/plugin-kubernetes-react` (0.5.7 → 0.5.8)](#backstageplugin-kubernetes-react-057--058)
+  - [`@backstage/plugin-notifications` (0.5.5 → 0.5.6)](#backstageplugin-notifications-055--056)
+  - [`@backstage/plugin-notifications-backend` (0.5.6 → 0.5.7)](#backstageplugin-notifications-backend-056--057)
+  - [`@backstage/plugin-notifications-backend-module-email` (0.3.9 → 0.3.10)](#backstageplugin-notifications-backend-module-email-039--0310)
+  - [`@backstage/plugin-org` (0.6.39 → 0.6.40)](#backstageplugin-org-0639--0640)
+  - [`@backstage/plugin-scaffolder-backend-module-azure` (0.2.9 → 0.2.10)](#backstageplugin-scaffolder-backend-module-azure-029--0210)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.10 → 0.3.11)](#backstageplugin-scaffolder-backend-module-bitbucket-0310--0311)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.2.9 → 0.2.10)](#backstageplugin-scaffolder-backend-module-bitbucket-cloud-029--0210)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.9 → 0.2.10)](#backstageplugin-scaffolder-backend-module-bitbucket-server-029--0210)
+  - [`@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.9 → 0.3.10)](#backstageplugin-scaffolder-backend-module-confluence-to-markdown-039--0310)
+  - [`@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.10 → 0.3.11)](#backstageplugin-scaffolder-backend-module-cookiecutter-0310--0311)
+  - [`@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.9 → 0.2.10)](#backstageplugin-scaffolder-backend-module-gerrit-029--0210)
+  - [`@backstage/plugin-scaffolder-backend-module-gitea` (0.2.9 → 0.2.10)](#backstageplugin-scaffolder-backend-module-gitea-029--0210)
+  - [`@backstage/plugin-scaffolder-backend-module-gitlab` (0.9.1 → 0.9.2)](#backstageplugin-scaffolder-backend-module-gitlab-091--092)
+  - [`@backstage/plugin-scaffolder-backend-module-notifications` (0.1.10 → 0.1.11)](#backstageplugin-scaffolder-backend-module-notifications-0110--0111)
+  - [`@backstage/plugin-scaffolder-backend-module-rails` (0.5.9 → 0.5.10)](#backstageplugin-scaffolder-backend-module-rails-059--0510)
+  - [`@backstage/plugin-scaffolder-backend-module-sentry` (0.2.9 → 0.2.10)](#backstageplugin-scaffolder-backend-module-sentry-029--0210)
+  - [`@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.10 → 0.4.11)](#backstageplugin-scaffolder-backend-module-yeoman-0410--0411)
+  - [`@backstage/plugin-search` (1.4.26 → 1.4.27)](#backstageplugin-search-1426--1427)
+  - [`@backstage/plugin-search-backend` (2.0.2 → 2.0.3)](#backstageplugin-search-backend-202--203)
+  - [`@backstage/plugin-search-backend-module-techdocs` (0.4.2 → 0.4.3)](#backstageplugin-search-backend-module-techdocs-042--043)
+  - [`@backstage/plugin-search-react` (1.9.0 → 1.9.1)](#backstageplugin-search-react-190--191)
+  - [`@backstage/plugin-techdocs-common` (0.1.0 → 0.1.1)](#backstageplugin-techdocs-common-010--011)
+  - [`@backstage/plugin-techdocs-module-addons-contrib` (1.1.24 → 1.1.25)](#backstageplugin-techdocs-module-addons-contrib-1124--1125)
+  - [`@backstage/plugin-user-settings` (0.8.22 → 0.8.23)](#backstageplugin-user-settings-0822--0823)
+
+## Newly added packages
+
+### `@backstage/plugin-events-backend-module-kafka` (new, 0.1.0)
+
+#### 0.1.0
+
+##### Minor Changes
 
 - b034b9d: Adds a new module `kafka` for plugin-events-backend
 
   The module introduces the `KafkaConsumerClient` which creates a Kafka client used to establish consumer connections. It also provides the `KafkaConsumingEventPublisher`, a consumer that subscribes to configured Kafka topics and publishes received messages to the Event Service.
 
-## `@backstage/plugin-mcp-actions-backend` (new, 0.1.0)
+### `@backstage/plugin-mcp-actions-backend` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 4ed0fb6: Initial implementation of an `mcp-actions` backend
 
-## `@backstage/backend-app-api` (1.2.3 → 1.2.4)
+## Breaking changes
 
-### 1.2.4
+### `@backstage/canon` (0.4.0 → 0.5.0)
 
-#### Patch Changes
+#### 0.5.0
 
-- bb9a501: Fixed a bug where occasionally the initialization order of multiple modules consuming a single extension point could happen in the wrong order.
-
-## `@backstage/backend-defaults` (0.10.0 → 0.11.0)
-
-### 0.11.0
-
-#### Minor Changes
-
-- 3ccb7fc: Enhanced error handling in the auditor service factory to pass errors as objects. Aligned WinstonRootAuditorService with the default service factory's error handling.
-
-#### Patch Changes
-
-- 1220cf8: Added new rate limit middleware to allow rate limiting requests to the backend
-
-  If you are using the `configure` callback of the root HTTP router service and do NOT call `applyDefaults()` inside it, please see [the relevant changes](https://github.com/backstage/backstage/pull/28708/files#diff-86ad1b6a694dd250823aee39d410428dd837c9d9a04ca8c33bd1081fbe3f22af) that were made, to see if you want to apply them as well to your custom configuration.
-  Rate limiting can be turned on by adding the following configuration to `app-config.yaml`:
-
-  ```yaml
-  backend:
-    rateLimit:
-      window: 6s
-      incomingRequestLimit: 100
-  ```
-
-  Plugin specific rate limiting can be configured by adding the following configuration to `app-config.yaml`:
-
-  ```yaml
-  backend:
-    rateLimit:
-      global: false # This will disable the global rate limiting
-      plugin:
-        catalog:
-          window: 6s
-          incomingRequestLimit: 100
-  ```
-
-- c999c25: Added some default implementations for the experimental `ActionsService` and `ActionsRegistryService` under `/alpha` that allow registration of actions for a particular plugin.
-
-## `@backstage/backend-dynamic-feature-service` (0.7.0 → 0.7.1)
-
-### 0.7.1
-
-#### Patch Changes
-
-- c83cd8b: Fixed some circular or otherwise unclear imports
-
-## `@backstage/backend-plugin-api` (1.3.1 → 1.4.0)
-
-### 1.4.0
-
-#### Minor Changes
-
-- 664c07a: Added `actionsRegistry` and `actions` experimental services to `/alpha` to allow registration of distributed actions from plugins, and the ability to invoke these actions. You can use these services by including them like the following:
-
-  ```ts
-  import {
-    actionsRegistryServiceRef,
-    actionsServiceRef,
-  } from '@backstage/backend-plugin-api/alpha';
-
-  createBackendPlugin({
-    pluginId: 'test-plugin',
-    register({ registerInit }) {
-      registerInit({
-        deps: {
-          actions: actionsServiceRef,
-          actionsRegistry: actionsRegistryServiceRef,
-        },
-        async init({ actions, actionsRegistry }) {
-          actionsRegistry.register({
-            ...,
-          });
-
-          await actions.invoke(...);
-        },
-      });
-    },
-  });
-  ```
-
-## `@backstage/backend-test-utils` (1.5.0 → 1.6.0)
-
-### 1.6.0
-
-#### Minor Changes
-
-- 6dfb7be: Added `mockServices.permissions()` that can return actual results.
-- c999c25: Added an `actionsRegistryServiceMock` and `actionsServiceMock` to `/alpha` export for the experimental services.
-
-  This allows you to write tests for your actions by doing something similar to the following:
-
-  ```ts
-  import { actionsRegistryServiceMock } from '@backstage/backend-test-utils/alpha';
-
-  const mockActionsRegistry = actionsRegistryServiceMock();
-  const mockCatalog = catalogServiceMock({
-    entities: [
-     ...
-    ],
-  });
-
-  createGetCatalogEntityAction({
-    catalog: mockCatalog,
-    actionsRegistry: mockActionsRegistry,
-  });
-
-  await expect(
-    mockActionsRegistry.invoke({
-      id: 'test:get-catalog-entity',
-      input: { name: 'test' },
-    }),
-  ).resolves.toEqual(...)
-  ```
-
-#### Patch Changes
-
-- 12c1fd4: Make the `user` credentials mock behave more like production
-
-## `@backstage/canon` (0.4.0 → 0.5.0)
-
-### 0.5.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 621fac9: We are updating the default size of the Button component in Canon to be small instead of medium.
 - a842554: We set the default size for IconButton in Canon to be small instead of medium.
@@ -159,7 +133,7 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
 - c49e335: TextField in Canon now has multiple label sizes as well as the capacity to hide label and description but still make them available for screen readers.
 - 24b45ef: Fixes spacing props on layout components and aligned on naming for the Grid component. You should now call the Grid root component using <Grid.Root /> instead of just <Grid />.
 
-#### Patch Changes
+##### Patch Changes
 
 - 44df879: Add min-width: 0; by default on every Flex components in Canon to help support truncated texts inside flex elements.
 - ee6ffe6: Fix styling for the title4 prop on the Heading component in Canon.
@@ -168,23 +142,15 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
 - c94f8e0: The filter input in menu comboboxes should now always use the full width of the menu it's in.
 - 269316d: Remove leftover console.log from Container component.
 
-## `@backstage/catalog-client` (1.10.0 → 1.10.1)
+### `@backstage/cli` (0.32.1 → 0.33.0)
 
-### 1.10.1
+#### 0.33.0
 
-#### Patch Changes
-
-- 22fad0d: Fixed `CatalogClient` error responses for `refreshEntity` and `addLocation`.
-
-## `@backstage/cli` (0.32.1 → 0.33.0)
-
-### 0.33.0
-
-#### Minor Changes
+##### Minor Changes
 
 - eef0e83: Internal update to promote the modular CLI entrypoint to stable.
 
-#### Patch Changes
+##### Patch Changes
 
 - d07fe35: Added user feedback when opening config docs in browser. The command now clearly indicates what it's doing and provides fallback instructions if the browser fails to open.
 - ce70439: The `BACKSTAGE_CLI_EXPERIMENTAL_BUILD_CACHE` flag has been removed. Existing users are encouraged to switch to `EXPERIMENTAL_RSPACK` instead.
@@ -197,161 +163,11 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
 - 713e957: fix: merge eslint reports when using json format
 - 8a0164c: Fix an issue where some commands were not usable because of missing dist files
 
-## `@backstage/core-components` (0.17.2 → 0.17.3)
+### `@backstage/plugin-catalog` (1.30.0 → 1.31.0)
 
-### 0.17.3
+#### 1.31.0
 
-#### Patch Changes
-
-- 6232160: table actions header support i18n
-
-## `@backstage/core-plugin-api` (1.10.7 → 1.10.8)
-
-### 1.10.8
-
-#### Patch Changes
-
-- c83cd8b: Fixed some circular or otherwise unclear imports
-- 0169b23: Internal tweak to avoid circular dependencies
-
-## `@backstage/create-app` (0.6.2 → 0.7.0)
-
-### 0.7.0
-
-#### Minor Changes
-
-- 30474c4: Add .cache directory to shipped gitignore.
-
-#### Patch Changes
-
-- d57a6f7: Bumped create-app version.
-- f628f44: Bumped create-app version.
-- 9c9faf2: Bumped create-app version.
-
-## `@backstage/eslint-plugin` (0.1.10 → 0.1.11)
-
-### 0.1.11
-
-#### Patch Changes
-
-- 098ef95: Fix custom rules package scanning performance.
-- 063b2d3: Added new eslint rule to restrict mixed plugin imports.
-
-  New rule `@backstage/no-mixed-plugin-imports` disallows mixed imports between plugins that are mixing
-  the backstage architecture. This rule forces that:
-
-  - No imports from frontend plugins to backend plugins or other frontend plugins.
-  - No imports from backend plugins to frontend plugins or other backend plugins.
-  - No imports from common plugins to frontend or backend plugins.
-
-  The current recommended configuration is giving a warning for mixed imports. This is to be changed in
-  the future to an error so please adjust your workspace accordingly.
-
-## `@backstage/frontend-app-api` (0.11.2 → 0.11.3)
-
-### 0.11.3
-
-#### Patch Changes
-
-- 0169b23: Internal tweak to avoid circular dependencies
-- c38c9e8: Implemented support for the `plugin.info()` method in specialized apps with a default resolved for `package.json` and `catalog-info.yaml`. The default resolution logic can be overridden via the `pluginInfoResolver` option to `createSpecializedApp`, and plugin-specific overrides can be applied via the new `app.pluginOverrides` key in static configuration.
-
-## `@backstage/frontend-defaults` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- fa5650c: Forwarded the new `pluginInfoResolver` option for `createApp`.
-
-## `@backstage/frontend-plugin-api` (0.10.2 → 0.10.3)
-
-### 0.10.3
-
-#### Patch Changes
-
-- 0169b23: Internal tweak to avoid circular dependencies
-- 9e3868f: Added a new optional `info` option to `createFrontendPlugin` that lets you provide a loaders for different sources of metadata information about the plugin.
-
-  There are two available loaders. The first one is `info.packageJson`, which can be used to point to a `package.json` file for the plugin. This is recommended for any plugin that is defined within its own package, especially all plugins that are published to a package registry. Typical usage looks like this:
-
-  ```ts
-  export default createFrontendPlugin({
-    pluginId: '...',
-    info: {
-      packageJson: () => import('../package.json'),
-    },
-  });
-  ```
-
-  The second loader is `info.manifest`, which can be used to point to an opaque plugin manifest. This **MUST ONLY** be used by plugins that are intended for use within a single organization. Plugins that are published to an open package registry should **NOT** use this loader. The loader is useful for adding additional internal metadata associated with the plugin, and it is up to the Backstage app to decide how these manifests are parsed and used. The default manifest parser in an app created with `createApp` from `@backstage/frontend-defaults` is able to parse the default `catalog-info.yaml` format and built-in fields such as `spec.owner`.
-
-  Typical usage looks like this:
-
-  ```ts
-  export default createFrontendPlugin({
-    pluginId: '...',
-    info: {
-      manifest: () => import('../catalog-info.yaml'),
-    },
-  });
-  ```
-
-- 6f48f71: Added a new `useAppNode` hook, which can be used to get a reference to the `AppNode` from by the closest `ExtensionBoundary`.
-
-## `@backstage/plugin-api-docs` (0.12.7 → 0.12.8)
-
-### 0.12.8
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-
-## `@backstage/plugin-app` (0.1.9 → 0.1.10)
-
-### 0.1.10
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-
-## `@backstage/plugin-app-visualizer` (0.1.19 → 0.1.20)
-
-### 0.1.20
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-
-## `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.4.3 → 0.4.4)
-
-### 0.4.4
-
-#### Patch Changes
-
-- c83cd8b: Fixed some circular or otherwise unclear imports
-
-## `@backstage/plugin-auth-backend-module-okta-provider` (0.2.3 → 0.2.4)
-
-### 0.2.4
-
-#### Patch Changes
-
-- b25977f: Updated dependency `@davidzemon/passport-okta-oauth` to `^0.0.6`.
-
-## `@backstage/plugin-auth-node` (0.6.3 → 0.6.4)
-
-### 0.6.4
-
-#### Patch Changes
-
-- 0169b23: Internal tweak to avoid circular dependencies
-
-## `@backstage/plugin-catalog` (1.30.0 → 1.31.0)
-
-### 1.31.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 406acb6: Add support to customize the about card icon links via `EntityIconLinkBlueprint` and provide a default catalog view catalog source, launch scaffolder template and read techdocs docs icon links extensions.
 
@@ -361,334 +177,35 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
 
 - ec7b35d: Introduced `backstage.io/techdocs-entity-path` annotation which allows deep linking into another entities TechDocs in conjunction with `backstage.io/techdocs-entity`.
 
-#### Patch Changes
+##### Patch Changes
 
 - 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
 
-## `@backstage/plugin-catalog-backend` (2.0.0 → 2.1.0)
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.4.8 → 0.5.0)
 
-### 2.1.0
+#### 0.5.0
 
-#### Minor Changes
-
-- 2e7adf0: Implement the action `get-catalog-entity` with the `ActionsRegistry`
-
-#### Patch Changes
-
-- 2cac8b0: You can now specify an optional value when applying the `HAS_LABEL` permission rule, similar to the `HAS_ANNOTATION` permission rule.
-- c83cd8b: Fixed some circular or otherwise unclear imports
-- 4654a78: Update `refresh_state_references.id` to be a big int
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.4.8 → 0.5.0)
-
-### 0.5.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 8a150bf: **BREAKING**: `BitbucketCloudEntityProvider` now accepts a `CatalogService` instead of a `CatalogApi`.
 
-## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.4.1 → 0.5.0)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.6.6 → 0.7.0)
 
-### 0.5.0
+#### 0.7.0
 
-#### Minor Changes
-
-- eb8b3aa: Add validateLocationsExist option to avoid generating locations for catalog-info.yaml files that do not exist in the source repository.
-
-## `@backstage/plugin-catalog-backend-module-github` (0.9.0 → 0.10.0)
-
-### 0.10.0
-
-#### Minor Changes
-
-- 7c0dfb0: GitHub organization now matches in a case-insensitive manner when processing events.
-
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.6.6 → 0.7.0)
-
-### 0.7.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 42bb3b8: **BREAKING CHANGE**: User and Group discovery will default to ingesting all users in sub groups that belong to the specified root group in config. Disable by setting `restrictUsersToGroup: true` in app-config under your module settings.
 
-#### Patch Changes
+##### Patch Changes
 
 - 57a0bad: Implement retry for GitLab API calls to handle rate limiting
 
-## `@backstage/plugin-catalog-backend-module-ldap` (0.11.5 → 0.11.6)
+### `@backstage/plugin-scaffolder-backend` (1.33.0 → 2.0.0)
 
-### 0.11.6
+#### 2.0.0
 
-#### Patch Changes
-
-- 087d51d: Export LDAP vendor types and instances for testing custom transformers
-- f07b0ad: Added the ability to configure disabling one side of the relations tree with LDAP.
-
-  Groups have a `member` attribute and users have a `memberOf` attribute, however these can drift out of sync in some LDAP installations, leaving weird states in the Catalog as we collate these results together and deduplicate them.
-
-  You can chose to optionally disable one side of these relationships, or even both by setting the respective mapping to `null` in your `app-config.yaml` for your groups and/or users:
-
-  ```yaml
-  catalog:
-    providers:
-      ldapOrg:
-        default:
-          target: ldaps://ds.example.net
-          bind:
-            dn: uid=ldap-reader-user,ou=people,ou=example,dc=example,dc=net
-            secret: ${LDAP_SECRET}
-          users:
-            - dn: ou=people,ou=example,dc=example,dc=net
-              options:
-                filter: (uid=*)
-              map:
-                # this ensures that outgoing memberships from users is ignored
-                memberOf: null
-          groups:
-            - dn: ou=access,ou=groups,ou=example,dc=example,dc=net
-              options:
-                filter: (&(objectClass=some-group-class)(!(groupType=email)))
-              map:
-                description: l
-              set:
-                metadata.customField: 'hello'
-              map:
-                # this ensures that outgoing memberships from groups is ignored
-                members: null
-  ```
-
-## `@backstage/plugin-catalog-graph` (0.4.19 → 0.4.20)
-
-### 0.4.20
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-
-## `@backstage/plugin-catalog-import` (0.13.0 → 0.13.1)
-
-### 0.13.1
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-- 5d7c539: Catalog import plugin full support i18n
-
-## `@backstage/plugin-catalog-node` (1.17.0 → 1.17.1)
-
-### 1.17.1
-
-#### Patch Changes
-
-- 0169b23: Internal tweak to avoid circular dependencies
-
-## `@backstage/plugin-catalog-react` (1.18.0 → 1.19.0)
-
-### 1.19.0
-
-#### Minor Changes
-
-- 406acb6: Introduces a new `EntityIconLinkBlueprint` that customizes the `About` card icon links on the `Catalog` entity page.
-
-  The blueprint currently accepts a `useProps` hook as `param` and this function returns the following props that will be passed to the icon link component:
-
-  | Name       | Description                                         | Type          | Default Value |
-  | ---------- | --------------------------------------------------- | ------------- | ------------- |
-  | `icon`     | The icon to display.                                | `JSX.Element` | N/A           |
-  | `label`    | The label for the element.                          | `string`      | N/A           |
-  | `title`    | The title for the element.                          | `string`      | N/A           |
-  | `disabled` | Whether the element is disabled.                    | `boolean`     | `false`       |
-  | `href`     | The URL to navigate to when the element is clicked. | `string`      | N/A           |
-  | `onClick`  | A function to call when the element is clicked.     | `() => void`  | N/A           |
-
-  Here is an usage example:
-
-  ```tsx
-  import { EntityIconLinkBlueprint } from '@backstage/plugin-catalog-react/alpha';
-  //...
-
-  EntityIconLinkBlueprint.make({
-    name: 'my-icon-link',
-    params: {
-      useProps() {
-        const { t } = useTranslationRef(myIconLinkTranslationRef);
-        return {
-          label: t('myIconLink.label'),
-          icon: <MyIconLinkIcon />,
-          href: '/my-plugin',
-        };
-      },
-    },
-  });
-  ```
-
-  Additionally, the `app-config.yaml` file allows you to override some of the default icon link parameters, including `label` and `title` values. Here's how to set them:
-
-  ```yaml
-  app:
-    extensions:
-      - entity-icon-link:my-plugin/my-icon-link:
-          config:
-            label: 'My Custom Icon Link label'
-  ```
-
-  Finally, you can disable all links if you want to hide the About card header completely (useful, for example, when links are displayed on separate cards). The header is hidden when no icon links extensions are enabled.
-
-## `@backstage/plugin-catalog-unprocessed-entities` (0.2.17 → 0.2.18)
-
-### 0.2.18
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-
-## `@backstage/plugin-devtools` (0.1.27 → 0.1.28)
-
-### 0.1.28
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-
-## `@backstage/plugin-devtools-backend` (0.5.5 → 0.5.6)
-
-### 0.5.6
-
-#### Patch Changes
-
-- 9a99735: Removed the usage of `permissionIntegrationRouter` in favor of using the new `coreServices.permissionsRegistry`
-
-## `@backstage/plugin-events-backend` (0.5.2 → 0.5.3)
-
-### 0.5.3
-
-#### Patch Changes
-
-- c83cd8b: Fixed some circular or otherwise unclear imports
-
-## `@backstage/plugin-events-backend-module-google-pubsub` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- f983e99: Add an `EventConsumingGooglePubSubPublisher`, for pushing Backstage events to pubsub
-
-## `@backstage/plugin-home` (0.8.8 → 0.8.9)
-
-### 0.8.9
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-- 0ebad54: Fixed the `WelcomeTitle` to properly default to the previous value of `inherit`
-- cef60db: Home plugin support i18n
-
-## `@backstage/plugin-home-react` (0.1.26 → 0.1.27)
-
-### 0.1.27
-
-#### Patch Changes
-
-- c83cd8b: Fixed some circular or otherwise unclear imports
-- cef60db: Home plugin support i18n
-
-## `@backstage/plugin-kubernetes` (0.12.7 → 0.12.8)
-
-### 0.12.8
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-- 3ea5d1b: chore(deps): Update deprecated xterm to new package under @xterm
-
-## `@backstage/plugin-kubernetes-react` (0.5.7 → 0.5.8)
-
-### 0.5.8
-
-#### Patch Changes
-
-- 3ea5d1b: chore(deps): Update deprecated xterm to new package under @xterm
-
-## `@backstage/plugin-notifications` (0.5.5 → 0.5.6)
-
-### 0.5.6
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-- b00c160: Remove React import form notification and scaffolder plugin
-- 1fb5f06: Adds ability for user to turn on/off notifications for specific topics within an origin.
-
-## `@backstage/plugin-notifications-backend` (0.5.6 → 0.5.7)
-
-### 0.5.7
-
-#### Patch Changes
-
-- 41d4d6e: Notifications are now automatically deleted after 1 year by default.
-
-  There is a new scheduled task that runs every 24 hours to delete notifications older than 1 year.
-  This can be configured by setting the `notifications.retention` in the `app-config.yaml` file.
-
-  ```yaml
-  notifications:
-    retention: 1y
-  ```
-
-  If the retention is set to false, notifications will not be automatically deleted.
-
-- 8a150bf: Internal changes to switch to the non-alpha `catalogServiceRef`
-- 1fb5f06: Adds ability for user to turn on/off notifications for specific topics within an origin.
-- ef9ab82: Notifications API will now return user as null always for broadcast notifications
-
-## `@backstage/plugin-notifications-backend-module-email` (0.3.9 → 0.3.10)
-
-### 0.3.10
-
-#### Patch Changes
-
-- 8a150bf: Internal changes to switch to the non-alpha `catalogServiceRef`
-
-## `@backstage/plugin-notifications-common` (0.0.8 → 0.0.9)
-
-### 0.0.9
-
-#### Patch Changes
-
-- 1fb5f06: Adds ability for user to turn on/off notifications for specific topics within an origin.
-
-## `@backstage/plugin-org` (0.6.39 → 0.6.40)
-
-### 0.6.40
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-- 4fe364f: Org plugin support i18n
-
-## `@backstage/plugin-scaffolder` (1.31.0 → 1.32.0)
-
-### 1.32.0
-
-#### Minor Changes
-
-- 6c972fe: Added information about the `entityRef` and `taskId` to the analytics events whenever is possible.
-- 3c59ece: **New Frontend System Only:**
-  The `Scaffolder` plugin is now responsible for providing an entity icon link extension to launch templates from the catalog entity page.
-
-#### Patch Changes
-
-- d781b33: render details for composite property schemas
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-- b00c160: Remove React import form notification and scaffolder plugin
-- 95a1d72: Added appropriate message when global templating function metadata is absent.
-
-## `@backstage/plugin-scaffolder-backend` (1.33.0 → 2.0.0)
-
-### 2.0.0
-
-#### Major Changes
+##### Major Changes
 
 - 33394db: **BREAKING CHANGES**
 
@@ -765,7 +282,7 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
   });
   ```
 
-#### Minor Changes
+##### Minor Changes
 
 - 73b94d7: **DEPRECATIONS**
 
@@ -784,7 +301,7 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
 
   There is no current path off deprecation, these types are going to be removed and rethought with a better way to define workers in the new backend system.
 
-#### Patch Changes
+##### Patch Changes
 
 - 89a941d: Migrating to latest action format
 - 023629e: Enable usage of secrets within 'each' step of software templates. For example, you can now structure your `each` step like this:
@@ -799,78 +316,11 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
 
 - e92e481: Add tests for Scaffolder
 
-## `@backstage/plugin-scaffolder-backend-module-azure` (0.2.9 → 0.2.10)
+### `@backstage/plugin-scaffolder-backend-module-github` (0.7.1 → 0.8.0)
 
-### 0.2.10
+#### 0.8.0
 
-#### Patch Changes
-
-- e89d7b6: Migrating `azure` actions to using the new `zod` schema format
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.10 → 0.3.11)
-
-### 0.3.11
-
-#### Patch Changes
-
-- 7f710d2: Migrating `bitbucket` actions to use the new `zod` format
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.2.9 → 0.2.10)
-
-### 0.2.10
-
-#### Patch Changes
-
-- ca9fdc0: Migrate `bitbucket-cloud` to new actions format
-- 9c8ff0c: Update pull request creation filter to include .gitignore files in the created pull request
-- 280611d: Fix `bitbucketCloudBranchRestrictions` API calls to accept null to prevent 400 errors for some branch restriction kinds defined.
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.9 → 0.2.10)
-
-### 0.2.10
-
-#### Patch Changes
-
-- d8169fc: Migrate the actions to the new format
-- 9c8ff0c: Update pull request creation filter to include .gitignore files in the created pull request
-
-## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.9 → 0.3.10)
-
-### 0.3.10
-
-#### Patch Changes
-
-- 4a86bca: Migrate actions to new format
-
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.10 → 0.3.11)
-
-### 0.3.11
-
-#### Patch Changes
-
-- 0b2bbf1: Migrate using new actions format
-
-## `@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.9 → 0.2.10)
-
-### 0.2.10
-
-#### Patch Changes
-
-- e24b29b: Migrating to use new format for actions
-
-## `@backstage/plugin-scaffolder-backend-module-gitea` (0.2.9 → 0.2.10)
-
-### 0.2.10
-
-#### Patch Changes
-
-- ed41017: Migrate to new actions format
-
-## `@backstage/plugin-scaffolder-backend-module-github` (0.7.1 → 0.8.0)
-
-### 0.8.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 5863b04: **BREAKING CHANGES**
 
@@ -905,58 +355,15 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
   });
   ```
 
-#### Patch Changes
+##### Patch Changes
 
 - 575c76b: Migrate to using new actions
 
-## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.9.1 → 0.9.2)
+### `@backstage/plugin-scaffolder-node` (0.8.2 → 0.9.0)
 
-### 0.9.2
+#### 0.9.0
 
-#### Patch Changes
-
-- 063b2d3: Fixed dependency to frontend package from tests
-- a296637: Migrate to new action format
-- 3d6493a: Support merge request labels in publish:gitlab:merge-request
-
-## `@backstage/plugin-scaffolder-backend-module-notifications` (0.1.10 → 0.1.11)
-
-### 0.1.11
-
-#### Patch Changes
-
-- 1fb5f06: Adds ability for user to turn on/off notifications for specific topics within an origin.
-- 3f56115: Removed `octokit` dependency as it was not being used
-
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.5.9 → 0.5.10)
-
-### 0.5.10
-
-#### Patch Changes
-
-- a579693: Migrate to new actions format
-
-## `@backstage/plugin-scaffolder-backend-module-sentry` (0.2.9 → 0.2.10)
-
-### 0.2.10
-
-#### Patch Changes
-
-- 6c6fb4a: Migrate to new actions format
-
-## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.10 → 0.4.11)
-
-### 0.4.11
-
-#### Patch Changes
-
-- b392a34: Migrate to new actions format
-
-## `@backstage/plugin-scaffolder-node` (0.8.2 → 0.9.0)
-
-### 0.9.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 5863b04: **BREAKING CHANGES**
 
@@ -1015,16 +422,16 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
 
   This breaking change also means that `logStream` has been removed entirely from `ActionsContext`, and that the `logger` is now just a `LoggerService` implementation instead. There is no replacement for the `logStream`, if you wish to still keep using a `logStream` we recommend that you create your own stream that writes to `ctx.logger` instead.
 
-#### Patch Changes
+##### Patch Changes
 
 - e89d7b6: Use `LoggerService` instead of `Logger`. This is a non-breaking change, as the `LoggerService` is a subset of the `Logger` interface.
 - 9c8ff0c: Update pull request creation filter to include .gitignore files in the created pull request
 
-## `@backstage/plugin-scaffolder-node-test-utils` (0.2.2 → 0.3.0)
+### `@backstage/plugin-scaffolder-node-test-utils` (0.2.2 → 0.3.0)
 
-### 0.3.0
+#### 0.3.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 3cea7ee: **BREAKING CHANGES**
 
@@ -1032,117 +439,816 @@ Newly added: `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin
 
   You can remove this as it's no longer supported in the scaffolder actions.
 
-## `@backstage/plugin-scaffolder-react` (1.16.0 → 1.17.0)
+## 0.x minor version bumps
 
-### 1.17.0
+### `@backstage/backend-defaults` (0.10.0 → 0.11.0)
 
-#### Minor Changes
+#### 0.11.0
 
-- 6c972fe: Added information about the `entityRef` and `taskId` to the analytics events whenever is possible.
+##### Minor Changes
 
-## `@backstage/plugin-search` (1.4.26 → 1.4.27)
+- 3ccb7fc: Enhanced error handling in the auditor service factory to pass errors as objects. Aligned WinstonRootAuditorService with the default service factory's error handling.
 
-### 1.4.27
+##### Patch Changes
 
-#### Patch Changes
+- 1220cf8: Added new rate limit middleware to allow rate limiting requests to the backend
 
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+  If you are using the `configure` callback of the root HTTP router service and do NOT call `applyDefaults()` inside it, please see [the relevant changes](https://github.com/backstage/backstage/pull/28708/files#diff-86ad1b6a694dd250823aee39d410428dd837c9d9a04ca8c33bd1081fbe3f22af) that were made, to see if you want to apply them as well to your custom configuration.
+  Rate limiting can be turned on by adding the following configuration to `app-config.yaml`:
 
-## `@backstage/plugin-search-backend` (2.0.2 → 2.0.3)
+  ```yaml
+  backend:
+    rateLimit:
+      window: 6s
+      incomingRequestLimit: 100
+  ```
 
-### 2.0.3
+  Plugin specific rate limiting can be configured by adding the following configuration to `app-config.yaml`:
 
-#### Patch Changes
+  ```yaml
+  backend:
+    rateLimit:
+      global: false # This will disable the global rate limiting
+      plugin:
+        catalog:
+          window: 6s
+          incomingRequestLimit: 100
+  ```
 
-- c83cd8b: Fixed some circular or otherwise unclear imports
+- c999c25: Added some default implementations for the experimental `ActionsService` and `ActionsRegistryService` under `/alpha` that allow registration of actions for a particular plugin.
 
-## `@backstage/plugin-search-backend-module-techdocs` (0.4.2 → 0.4.3)
+### `@backstage/create-app` (0.6.2 → 0.7.0)
 
-### 0.4.3
+#### 0.7.0
 
-#### Patch Changes
+##### Minor Changes
 
-- b47ec38: Exports the default document collator for use in document transformation during search indexing.
+- 30474c4: Add .cache directory to shipped gitignore.
 
-## `@backstage/plugin-search-react` (1.9.0 → 1.9.1)
+##### Patch Changes
 
-### 1.9.1
+- d57a6f7: Bumped create-app version.
+- f628f44: Bumped create-app version.
+- 9c9faf2: Bumped create-app version.
 
-#### Patch Changes
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.4.1 → 0.5.0)
 
-- 869fa46: SearchBar clear button support i18n
+#### 0.5.0
 
-## `@backstage/plugin-signals` (0.0.19 → 0.0.20)
+##### Minor Changes
 
-### 0.0.20
+- eb8b3aa: Add validateLocationsExist option to avoid generating locations for catalog-info.yaml files that do not exist in the source repository.
 
-#### Patch Changes
+### `@backstage/plugin-catalog-backend-module-github` (0.9.0 → 0.10.0)
 
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+#### 0.10.0
 
-## `@backstage/plugin-techdocs` (1.12.6 → 1.13.0)
+##### Minor Changes
 
-### 1.13.0
+- 7c0dfb0: GitHub organization now matches in a case-insensitive manner when processing events.
 
-#### Minor Changes
+### `@backstage/repo-tools` (0.13.4 → 0.14.0)
 
-- 3c59ece: **New Frontend System Only:**
-  The `TechDocs` plugin is now responsible for providing an entity icon link extension to read documentation from the catalog entity page.
-- ec7b35d: Introduced `backstage.io/techdocs-entity-path` annotation which allows deep linking into another entities TechDocs in conjunction with `backstage.io/techdocs-entity`.
+#### 0.14.0
 
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-- 9dde3ba: Improved Keyboard accessibility in techdocs.
-
-## `@backstage/plugin-techdocs-common` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- ec7b35d: Introduced `backstage.io/techdocs-entity-path` annotation which allows deep linking into another entities TechDocs in conjunction with `backstage.io/techdocs-entity`.
-
-## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.24 → 1.1.25)
-
-### 1.1.25
-
-#### Patch Changes
-
-- 9dde3ba: Improved Keyboard accessibility in techdocs.
-
-## `@backstage/plugin-techdocs-react` (1.2.17 → 1.3.0)
-
-### 1.3.0
-
-#### Minor Changes
-
-- ec7b35d: Introduced `backstage.io/techdocs-entity-path` annotation which allows deep linking into another entities TechDocs in conjunction with `backstage.io/techdocs-entity`.
-
-## `@backstage/plugin-user-settings` (0.8.22 → 0.8.23)
-
-### 0.8.23
-
-#### Patch Changes
-
-- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
-- ab6d3dd: Add some translation to user-setting plugin
-- c83cd8b: Fixed some circular or otherwise unclear imports
-
-## `@backstage/repo-tools` (0.13.4 → 0.14.0)
-
-### 0.14.0
-
-#### Minor Changes
+##### Minor Changes
 
 - bf9a173: Add support for caching the per-package output from the `package-docs` command.
 
-#### Patch Changes
+##### Patch Changes
 
 - 4bff5d0: Fixed a bug where linting would fail with the generated clients when defining top-level `enum` schema values.
 - 2d20024: Fix an issue where errors were not printed to console when running `backstage-repo-tools schema openapi generate` without the `--watch` flag.
 - e643ee4: Add missing highlight language for the `package-docs` command.
 - c83cd8b: Fixed some circular or otherwise unclear imports
 - a372bf1: Updated dependency `@electric-sql/pglite` to `^0.3.0`.
+
+## 0.0.x patch version bumps
+
+### `@backstage/plugin-notifications-common` (0.0.8 → 0.0.9)
+
+#### 0.0.9
+
+##### Patch Changes
+
+- 1fb5f06: Adds ability for user to turn on/off notifications for specific topics within an origin.
+
+### `@backstage/plugin-signals` (0.0.19 → 0.0.20)
+
+#### 0.0.20
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+
+## Other minor version bumps
+
+### `@backstage/backend-plugin-api` (1.3.1 → 1.4.0)
+
+#### 1.4.0
+
+##### Minor Changes
+
+- 664c07a: Added `actionsRegistry` and `actions` experimental services to `/alpha` to allow registration of distributed actions from plugins, and the ability to invoke these actions. You can use these services by including them like the following:
+
+  ```ts
+  import {
+    actionsRegistryServiceRef,
+    actionsServiceRef,
+  } from '@backstage/backend-plugin-api/alpha';
+
+  createBackendPlugin({
+    pluginId: 'test-plugin',
+    register({ registerInit }) {
+      registerInit({
+        deps: {
+          actions: actionsServiceRef,
+          actionsRegistry: actionsRegistryServiceRef,
+        },
+        async init({ actions, actionsRegistry }) {
+          actionsRegistry.register({
+            ...,
+          });
+
+          await actions.invoke(...);
+        },
+      });
+    },
+  });
+  ```
+
+### `@backstage/backend-test-utils` (1.5.0 → 1.6.0)
+
+#### 1.6.0
+
+##### Minor Changes
+
+- 6dfb7be: Added `mockServices.permissions()` that can return actual results.
+- c999c25: Added an `actionsRegistryServiceMock` and `actionsServiceMock` to `/alpha` export for the experimental services.
+
+  This allows you to write tests for your actions by doing something similar to the following:
+
+  ```ts
+  import { actionsRegistryServiceMock } from '@backstage/backend-test-utils/alpha';
+
+  const mockActionsRegistry = actionsRegistryServiceMock();
+  const mockCatalog = catalogServiceMock({
+    entities: [
+     ...
+    ],
+  });
+
+  createGetCatalogEntityAction({
+    catalog: mockCatalog,
+    actionsRegistry: mockActionsRegistry,
+  });
+
+  await expect(
+    mockActionsRegistry.invoke({
+      id: 'test:get-catalog-entity',
+      input: { name: 'test' },
+    }),
+  ).resolves.toEqual(...)
+  ```
+
+##### Patch Changes
+
+- 12c1fd4: Make the `user` credentials mock behave more like production
+
+### `@backstage/plugin-catalog-backend` (2.0.0 → 2.1.0)
+
+#### 2.1.0
+
+##### Minor Changes
+
+- 2e7adf0: Implement the action `get-catalog-entity` with the `ActionsRegistry`
+
+##### Patch Changes
+
+- 2cac8b0: You can now specify an optional value when applying the `HAS_LABEL` permission rule, similar to the `HAS_ANNOTATION` permission rule.
+- c83cd8b: Fixed some circular or otherwise unclear imports
+- 4654a78: Update `refresh_state_references.id` to be a big int
+
+### `@backstage/plugin-catalog-react` (1.18.0 → 1.19.0)
+
+#### 1.19.0
+
+##### Minor Changes
+
+- 406acb6: Introduces a new `EntityIconLinkBlueprint` that customizes the `About` card icon links on the `Catalog` entity page.
+
+  The blueprint currently accepts a `useProps` hook as `param` and this function returns the following props that will be passed to the icon link component:
+
+  | Name       | Description                                         | Type          | Default Value |
+  | ---------- | --------------------------------------------------- | ------------- | ------------- |
+  | `icon`     | The icon to display.                                | `JSX.Element` | N/A           |
+  | `label`    | The label for the element.                          | `string`      | N/A           |
+  | `title`    | The title for the element.                          | `string`      | N/A           |
+  | `disabled` | Whether the element is disabled.                    | `boolean`     | `false`       |
+  | `href`     | The URL to navigate to when the element is clicked. | `string`      | N/A           |
+  | `onClick`  | A function to call when the element is clicked.     | `() => void`  | N/A           |
+
+  Here is an usage example:
+
+  ```tsx
+  import { EntityIconLinkBlueprint } from '@backstage/plugin-catalog-react/alpha';
+  //...
+
+  EntityIconLinkBlueprint.make({
+    name: 'my-icon-link',
+    params: {
+      useProps() {
+        const { t } = useTranslationRef(myIconLinkTranslationRef);
+        return {
+          label: t('myIconLink.label'),
+          icon: <MyIconLinkIcon />,
+          href: '/my-plugin',
+        };
+      },
+    },
+  });
+  ```
+
+  Additionally, the `app-config.yaml` file allows you to override some of the default icon link parameters, including `label` and `title` values. Here's how to set them:
+
+  ```yaml
+  app:
+    extensions:
+      - entity-icon-link:my-plugin/my-icon-link:
+          config:
+            label: 'My Custom Icon Link label'
+  ```
+
+  Finally, you can disable all links if you want to hide the About card header completely (useful, for example, when links are displayed on separate cards). The header is hidden when no icon links extensions are enabled.
+
+### `@backstage/plugin-scaffolder` (1.31.0 → 1.32.0)
+
+#### 1.32.0
+
+##### Minor Changes
+
+- 6c972fe: Added information about the `entityRef` and `taskId` to the analytics events whenever is possible.
+- 3c59ece: **New Frontend System Only:**
+  The `Scaffolder` plugin is now responsible for providing an entity icon link extension to launch templates from the catalog entity page.
+
+##### Patch Changes
+
+- d781b33: render details for composite property schemas
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+- b00c160: Remove React import form notification and scaffolder plugin
+- 95a1d72: Added appropriate message when global templating function metadata is absent.
+
+### `@backstage/plugin-scaffolder-react` (1.16.0 → 1.17.0)
+
+#### 1.17.0
+
+##### Minor Changes
+
+- 6c972fe: Added information about the `entityRef` and `taskId` to the analytics events whenever is possible.
+
+### `@backstage/plugin-techdocs` (1.12.6 → 1.13.0)
+
+#### 1.13.0
+
+##### Minor Changes
+
+- 3c59ece: **New Frontend System Only:**
+  The `TechDocs` plugin is now responsible for providing an entity icon link extension to read documentation from the catalog entity page.
+- ec7b35d: Introduced `backstage.io/techdocs-entity-path` annotation which allows deep linking into another entities TechDocs in conjunction with `backstage.io/techdocs-entity`.
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+- 9dde3ba: Improved Keyboard accessibility in techdocs.
+
+### `@backstage/plugin-techdocs-react` (1.2.17 → 1.3.0)
+
+#### 1.3.0
+
+##### Minor Changes
+
+- ec7b35d: Introduced `backstage.io/techdocs-entity-path` annotation which allows deep linking into another entities TechDocs in conjunction with `backstage.io/techdocs-entity`.
+
+## Other patch version bumps
+
+### `@backstage/backend-app-api` (1.2.3 → 1.2.4)
+
+#### 1.2.4
+
+##### Patch Changes
+
+- bb9a501: Fixed a bug where occasionally the initialization order of multiple modules consuming a single extension point could happen in the wrong order.
+
+### `@backstage/backend-dynamic-feature-service` (0.7.0 → 0.7.1)
+
+#### 0.7.1
+
+##### Patch Changes
+
+- c83cd8b: Fixed some circular or otherwise unclear imports
+
+### `@backstage/catalog-client` (1.10.0 → 1.10.1)
+
+#### 1.10.1
+
+##### Patch Changes
+
+- 22fad0d: Fixed `CatalogClient` error responses for `refreshEntity` and `addLocation`.
+
+### `@backstage/core-components` (0.17.2 → 0.17.3)
+
+#### 0.17.3
+
+##### Patch Changes
+
+- 6232160: table actions header support i18n
+
+### `@backstage/core-plugin-api` (1.10.7 → 1.10.8)
+
+#### 1.10.8
+
+##### Patch Changes
+
+- c83cd8b: Fixed some circular or otherwise unclear imports
+- 0169b23: Internal tweak to avoid circular dependencies
+
+### `@backstage/eslint-plugin` (0.1.10 → 0.1.11)
+
+#### 0.1.11
+
+##### Patch Changes
+
+- 098ef95: Fix custom rules package scanning performance.
+- 063b2d3: Added new eslint rule to restrict mixed plugin imports.
+
+  New rule `@backstage/no-mixed-plugin-imports` disallows mixed imports between plugins that are mixing
+  the backstage architecture. This rule forces that:
+
+  - No imports from frontend plugins to backend plugins or other frontend plugins.
+  - No imports from backend plugins to frontend plugins or other backend plugins.
+  - No imports from common plugins to frontend or backend plugins.
+
+  The current recommended configuration is giving a warning for mixed imports. This is to be changed in
+  the future to an error so please adjust your workspace accordingly.
+
+### `@backstage/frontend-app-api` (0.11.2 → 0.11.3)
+
+#### 0.11.3
+
+##### Patch Changes
+
+- 0169b23: Internal tweak to avoid circular dependencies
+- c38c9e8: Implemented support for the `plugin.info()` method in specialized apps with a default resolved for `package.json` and `catalog-info.yaml`. The default resolution logic can be overridden via the `pluginInfoResolver` option to `createSpecializedApp`, and plugin-specific overrides can be applied via the new `app.pluginOverrides` key in static configuration.
+
+### `@backstage/frontend-defaults` (0.2.2 → 0.2.3)
+
+#### 0.2.3
+
+##### Patch Changes
+
+- fa5650c: Forwarded the new `pluginInfoResolver` option for `createApp`.
+
+### `@backstage/frontend-plugin-api` (0.10.2 → 0.10.3)
+
+#### 0.10.3
+
+##### Patch Changes
+
+- 0169b23: Internal tweak to avoid circular dependencies
+- 9e3868f: Added a new optional `info` option to `createFrontendPlugin` that lets you provide a loaders for different sources of metadata information about the plugin.
+
+  There are two available loaders. The first one is `info.packageJson`, which can be used to point to a `package.json` file for the plugin. This is recommended for any plugin that is defined within its own package, especially all plugins that are published to a package registry. Typical usage looks like this:
+
+  ```ts
+  export default createFrontendPlugin({
+    pluginId: '...',
+    info: {
+      packageJson: () => import('../package.json'),
+    },
+  });
+  ```
+
+  The second loader is `info.manifest`, which can be used to point to an opaque plugin manifest. This **MUST ONLY** be used by plugins that are intended for use within a single organization. Plugins that are published to an open package registry should **NOT** use this loader. The loader is useful for adding additional internal metadata associated with the plugin, and it is up to the Backstage app to decide how these manifests are parsed and used. The default manifest parser in an app created with `createApp` from `@backstage/frontend-defaults` is able to parse the default `catalog-info.yaml` format and built-in fields such as `spec.owner`.
+
+  Typical usage looks like this:
+
+  ```ts
+  export default createFrontendPlugin({
+    pluginId: '...',
+    info: {
+      manifest: () => import('../catalog-info.yaml'),
+    },
+  });
+  ```
+
+- 6f48f71: Added a new `useAppNode` hook, which can be used to get a reference to the `AppNode` from by the closest `ExtensionBoundary`.
+
+### `@backstage/plugin-api-docs` (0.12.7 → 0.12.8)
+
+#### 0.12.8
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+
+### `@backstage/plugin-app` (0.1.9 → 0.1.10)
+
+#### 0.1.10
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+
+### `@backstage/plugin-app-visualizer` (0.1.19 → 0.1.20)
+
+#### 0.1.20
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+
+### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.4.3 → 0.4.4)
+
+#### 0.4.4
+
+##### Patch Changes
+
+- c83cd8b: Fixed some circular or otherwise unclear imports
+
+### `@backstage/plugin-auth-backend-module-okta-provider` (0.2.3 → 0.2.4)
+
+#### 0.2.4
+
+##### Patch Changes
+
+- b25977f: Updated dependency `@davidzemon/passport-okta-oauth` to `^0.0.6`.
+
+### `@backstage/plugin-auth-node` (0.6.3 → 0.6.4)
+
+#### 0.6.4
+
+##### Patch Changes
+
+- 0169b23: Internal tweak to avoid circular dependencies
+
+### `@backstage/plugin-catalog-backend-module-ldap` (0.11.5 → 0.11.6)
+
+#### 0.11.6
+
+##### Patch Changes
+
+- 087d51d: Export LDAP vendor types and instances for testing custom transformers
+- f07b0ad: Added the ability to configure disabling one side of the relations tree with LDAP.
+
+  Groups have a `member` attribute and users have a `memberOf` attribute, however these can drift out of sync in some LDAP installations, leaving weird states in the Catalog as we collate these results together and deduplicate them.
+
+  You can chose to optionally disable one side of these relationships, or even both by setting the respective mapping to `null` in your `app-config.yaml` for your groups and/or users:
+
+  ```yaml
+  catalog:
+    providers:
+      ldapOrg:
+        default:
+          target: ldaps://ds.example.net
+          bind:
+            dn: uid=ldap-reader-user,ou=people,ou=example,dc=example,dc=net
+            secret: ${LDAP_SECRET}
+          users:
+            - dn: ou=people,ou=example,dc=example,dc=net
+              options:
+                filter: (uid=*)
+              map:
+                # this ensures that outgoing memberships from users is ignored
+                memberOf: null
+          groups:
+            - dn: ou=access,ou=groups,ou=example,dc=example,dc=net
+              options:
+                filter: (&(objectClass=some-group-class)(!(groupType=email)))
+              map:
+                description: l
+              set:
+                metadata.customField: 'hello'
+              map:
+                # this ensures that outgoing memberships from groups is ignored
+                members: null
+  ```
+
+### `@backstage/plugin-catalog-graph` (0.4.19 → 0.4.20)
+
+#### 0.4.20
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+
+### `@backstage/plugin-catalog-import` (0.13.0 → 0.13.1)
+
+#### 0.13.1
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+- 5d7c539: Catalog import plugin full support i18n
+
+### `@backstage/plugin-catalog-node` (1.17.0 → 1.17.1)
+
+#### 1.17.1
+
+##### Patch Changes
+
+- 0169b23: Internal tweak to avoid circular dependencies
+
+### `@backstage/plugin-catalog-unprocessed-entities` (0.2.17 → 0.2.18)
+
+#### 0.2.18
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+
+### `@backstage/plugin-devtools` (0.1.27 → 0.1.28)
+
+#### 0.1.28
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+
+### `@backstage/plugin-devtools-backend` (0.5.5 → 0.5.6)
+
+#### 0.5.6
+
+##### Patch Changes
+
+- 9a99735: Removed the usage of `permissionIntegrationRouter` in favor of using the new `coreServices.permissionsRegistry`
+
+### `@backstage/plugin-events-backend` (0.5.2 → 0.5.3)
+
+#### 0.5.3
+
+##### Patch Changes
+
+- c83cd8b: Fixed some circular or otherwise unclear imports
+
+### `@backstage/plugin-events-backend-module-google-pubsub` (0.1.0 → 0.1.1)
+
+#### 0.1.1
+
+##### Patch Changes
+
+- f983e99: Add an `EventConsumingGooglePubSubPublisher`, for pushing Backstage events to pubsub
+
+### `@backstage/plugin-home` (0.8.8 → 0.8.9)
+
+#### 0.8.9
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+- 0ebad54: Fixed the `WelcomeTitle` to properly default to the previous value of `inherit`
+- cef60db: Home plugin support i18n
+
+### `@backstage/plugin-home-react` (0.1.26 → 0.1.27)
+
+#### 0.1.27
+
+##### Patch Changes
+
+- c83cd8b: Fixed some circular or otherwise unclear imports
+- cef60db: Home plugin support i18n
+
+### `@backstage/plugin-kubernetes` (0.12.7 → 0.12.8)
+
+#### 0.12.8
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+- 3ea5d1b: chore(deps): Update deprecated xterm to new package under @xterm
+
+### `@backstage/plugin-kubernetes-react` (0.5.7 → 0.5.8)
+
+#### 0.5.8
+
+##### Patch Changes
+
+- 3ea5d1b: chore(deps): Update deprecated xterm to new package under @xterm
+
+### `@backstage/plugin-notifications` (0.5.5 → 0.5.6)
+
+#### 0.5.6
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+- b00c160: Remove React import form notification and scaffolder plugin
+- 1fb5f06: Adds ability for user to turn on/off notifications for specific topics within an origin.
+
+### `@backstage/plugin-notifications-backend` (0.5.6 → 0.5.7)
+
+#### 0.5.7
+
+##### Patch Changes
+
+- 41d4d6e: Notifications are now automatically deleted after 1 year by default.
+
+  There is a new scheduled task that runs every 24 hours to delete notifications older than 1 year.
+  This can be configured by setting the `notifications.retention` in the `app-config.yaml` file.
+
+  ```yaml
+  notifications:
+    retention: 1y
+  ```
+
+  If the retention is set to false, notifications will not be automatically deleted.
+
+- 8a150bf: Internal changes to switch to the non-alpha `catalogServiceRef`
+- 1fb5f06: Adds ability for user to turn on/off notifications for specific topics within an origin.
+- ef9ab82: Notifications API will now return user as null always for broadcast notifications
+
+### `@backstage/plugin-notifications-backend-module-email` (0.3.9 → 0.3.10)
+
+#### 0.3.10
+
+##### Patch Changes
+
+- 8a150bf: Internal changes to switch to the non-alpha `catalogServiceRef`
+
+### `@backstage/plugin-org` (0.6.39 → 0.6.40)
+
+#### 0.6.40
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+- 4fe364f: Org plugin support i18n
+
+### `@backstage/plugin-scaffolder-backend-module-azure` (0.2.9 → 0.2.10)
+
+#### 0.2.10
+
+##### Patch Changes
+
+- e89d7b6: Migrating `azure` actions to using the new `zod` schema format
+
+### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.10 → 0.3.11)
+
+#### 0.3.11
+
+##### Patch Changes
+
+- 7f710d2: Migrating `bitbucket` actions to use the new `zod` format
+
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.2.9 → 0.2.10)
+
+#### 0.2.10
+
+##### Patch Changes
+
+- ca9fdc0: Migrate `bitbucket-cloud` to new actions format
+- 9c8ff0c: Update pull request creation filter to include .gitignore files in the created pull request
+- 280611d: Fix `bitbucketCloudBranchRestrictions` API calls to accept null to prevent 400 errors for some branch restriction kinds defined.
+
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.9 → 0.2.10)
+
+#### 0.2.10
+
+##### Patch Changes
+
+- d8169fc: Migrate the actions to the new format
+- 9c8ff0c: Update pull request creation filter to include .gitignore files in the created pull request
+
+### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.9 → 0.3.10)
+
+#### 0.3.10
+
+##### Patch Changes
+
+- 4a86bca: Migrate actions to new format
+
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.10 → 0.3.11)
+
+#### 0.3.11
+
+##### Patch Changes
+
+- 0b2bbf1: Migrate using new actions format
+
+### `@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.9 → 0.2.10)
+
+#### 0.2.10
+
+##### Patch Changes
+
+- e24b29b: Migrating to use new format for actions
+
+### `@backstage/plugin-scaffolder-backend-module-gitea` (0.2.9 → 0.2.10)
+
+#### 0.2.10
+
+##### Patch Changes
+
+- ed41017: Migrate to new actions format
+
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.9.1 → 0.9.2)
+
+#### 0.9.2
+
+##### Patch Changes
+
+- 063b2d3: Fixed dependency to frontend package from tests
+- a296637: Migrate to new action format
+- 3d6493a: Support merge request labels in publish:gitlab:merge-request
+
+### `@backstage/plugin-scaffolder-backend-module-notifications` (0.1.10 → 0.1.11)
+
+#### 0.1.11
+
+##### Patch Changes
+
+- 1fb5f06: Adds ability for user to turn on/off notifications for specific topics within an origin.
+- 3f56115: Removed `octokit` dependency as it was not being used
+
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.5.9 → 0.5.10)
+
+#### 0.5.10
+
+##### Patch Changes
+
+- a579693: Migrate to new actions format
+
+### `@backstage/plugin-scaffolder-backend-module-sentry` (0.2.9 → 0.2.10)
+
+#### 0.2.10
+
+##### Patch Changes
+
+- 6c6fb4a: Migrate to new actions format
+
+### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.10 → 0.4.11)
+
+#### 0.4.11
+
+##### Patch Changes
+
+- b392a34: Migrate to new actions format
+
+### `@backstage/plugin-search` (1.4.26 → 1.4.27)
+
+#### 1.4.27
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+
+### `@backstage/plugin-search-backend` (2.0.2 → 2.0.3)
+
+#### 2.0.3
+
+##### Patch Changes
+
+- c83cd8b: Fixed some circular or otherwise unclear imports
+
+### `@backstage/plugin-search-backend-module-techdocs` (0.4.2 → 0.4.3)
+
+#### 0.4.3
+
+##### Patch Changes
+
+- b47ec38: Exports the default document collator for use in document transformation during search indexing.
+
+### `@backstage/plugin-search-react` (1.9.0 → 1.9.1)
+
+#### 1.9.1
+
+##### Patch Changes
+
+- 869fa46: SearchBar clear button support i18n
+
+### `@backstage/plugin-techdocs-common` (0.1.0 → 0.1.1)
+
+#### 0.1.1
+
+##### Patch Changes
+
+- ec7b35d: Introduced `backstage.io/techdocs-entity-path` annotation which allows deep linking into another entities TechDocs in conjunction with `backstage.io/techdocs-entity`.
+
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.24 → 1.1.25)
+
+#### 1.1.25
+
+##### Patch Changes
+
+- 9dde3ba: Improved Keyboard accessibility in techdocs.
+
+### `@backstage/plugin-user-settings` (0.8.22 → 0.8.23)
+
+#### 0.8.23
+
+##### Patch Changes
+
+- 18c64e9: Added the `info.packageJson` option to the plugin instance for the new frontend system.
+- ab6d3dd: Add some translation to user-setting plugin
+- c83cd8b: Fixed some circular or otherwise unclear imports
 
 _Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-openapi-utils`, `@backstage/core-app-api`, `@backstage/core-compat-api`, `@backstage/dev-utils`, `@backstage/frontend-dynamic-feature-loader`, `@backstage/frontend-test-utils`, `@backstage/integration-react`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend`, `@backstage/plugin-auth-backend-module-atlassian-provider`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-cloudflare-access-provider`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-oidc-provider`, `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-gitea`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-msgraph`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-config-schema`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-kubernetes-backend`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-notifications-backend-module-slack`, `@backstage/plugin-notifications-node`, `@backstage/plugin-org-react`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-signals-backend`, `@backstage/plugin-signals-node`, `@backstage/plugin-signals-react`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-techdocs-node`, `@backstage/plugin-user-settings-backend`, `@backstage/test-utils`, `@techdocs/cli`._

@@ -2,6 +2,17 @@
 
 Changes between 1.14.0 and 1.14.1 — 1 changed and 0 added packages.
 
-## `@backstage/plugin-kubernetes` (0.9.0 → 0.9.1)
+## Summary
+
+- [Patch version bumps](#patch-version-bumps): 1 package
+
+## Table of contents
+
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/plugin-kubernetes` (0.9.0 → 0.9.1)](#backstageplugin-kubernetes-090--091)
+
+## Patch version bumps
+
+### `@backstage/plugin-kubernetes` (0.9.0 → 0.9.1)
 
 _No changelog entries found._

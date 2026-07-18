@@ -2,18 +2,30 @@
 
 Changes between 1.0.1 and 1.0.2 — 2 changed and 0 added packages.
 
-## `@backstage/plugin-scaffolder` (1.0.0 → 1.0.1)
+## Summary
 
-### 1.0.1
+- [Patch version bumps](#patch-version-bumps): 2 packages
 
-#### Patch Changes
+## Table of contents
+
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/plugin-scaffolder` (1.0.0 → 1.0.1)](#backstageplugin-scaffolder-100--101)
+  - [`@backstage/plugin-techdocs` (1.0.0 → 1.0.1)](#backstageplugin-techdocs-100--101)
+
+## Patch version bumps
+
+### `@backstage/plugin-scaffolder` (1.0.0 → 1.0.1)
+
+#### 1.0.1
+
+##### Patch Changes
 
 - Pin the `event-source-polyfill` dependency to version 1.0.25
 
-## `@backstage/plugin-techdocs` (1.0.0 → 1.0.1)
+### `@backstage/plugin-techdocs` (1.0.0 → 1.0.1)
 
-### 1.0.1
+#### 1.0.1
 
-#### Patch Changes
+##### Patch Changes
 
 - Pin the `event-source-polyfill` dependency to version 1.0.25

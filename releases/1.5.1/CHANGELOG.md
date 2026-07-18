@@ -2,10 +2,21 @@
 
 Changes between 1.5.0 and 1.5.1 — 1 changed and 0 added packages.
 
-## `@backstage/plugin-scaffolder-backend` (1.5.0 → 1.5.1)
+## Summary
 
-### 1.5.1
+- [Patch version bumps](#patch-version-bumps): 1 package
 
-#### Patch Changes
+## Table of contents
+
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/plugin-scaffolder-backend` (1.5.0 → 1.5.1)](#backstageplugin-scaffolder-backend-150--151)
+
+## Patch version bumps
+
+### `@backstage/plugin-scaffolder-backend` (1.5.0 → 1.5.1)
+
+#### 1.5.1
+
+##### Patch Changes
 
 - Fix minimum required version for `vm2`

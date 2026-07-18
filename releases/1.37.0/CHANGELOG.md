@@ -2,11 +2,105 @@
 
 Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
 
-## `@backstage/app-defaults` (1.5.17 → 1.6.0)
+## Summary
 
-### 1.6.0
+- [Breaking changes](#breaking-changes): 17 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 6 packages
+- [0.0.x patch version bumps](#00x-patch-version-bumps): 1 package
+- [Other minor version bumps](#other-minor-version-bumps): 8 packages
+- [Other patch version bumps](#other-patch-version-bumps): 44 packages
 
-#### Minor Changes
+## Table of contents
+
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/app-defaults` (1.5.17 → 1.6.0)](#backstageapp-defaults-1517--160)
+  - [`@backstage/cli` (0.30.0 → 0.31.0)](#backstagecli-0300--0310)
+  - [`@backstage/core-compat-api` (0.3.6 → 0.4.0)](#backstagecore-compat-api-036--040)
+  - [`@backstage/frontend-app-api` (0.10.5 → 0.11.0)](#backstagefrontend-app-api-0105--0110)
+  - [`@backstage/frontend-defaults` (0.1.6 → 0.2.0)](#backstagefrontend-defaults-016--020)
+  - [`@backstage/frontend-plugin-api` (0.9.5 → 0.10.0)](#backstagefrontend-plugin-api-095--0100)
+  - [`@backstage/frontend-test-utils` (0.2.6 → 0.3.0)](#backstagefrontend-test-utils-026--030)
+  - [`@backstage/plugin-app-backend` (0.4.5 → 0.5.0)](#backstageplugin-app-backend-045--050)
+  - [`@backstage/plugin-catalog-backend-module-gerrit` (0.2.7 → 0.3.0)](#backstageplugin-catalog-backend-module-gerrit-027--030)
+  - [`@backstage/plugin-events-backend` (0.4.3 → 0.5.0)](#backstageplugin-events-backend-043--050)
+  - [`@backstage/plugin-permission-node` (0.8.8 → 0.9.0)](#backstageplugin-permission-node-088--090)
+  - [`@backstage/plugin-proxy-backend` (0.5.11 → 0.6.0)](#backstageplugin-proxy-backend-0511--060)
+  - [`@backstage/plugin-search-backend` (1.8.2 → 2.0.0)](#backstageplugin-search-backend-182--200)
+  - [`@backstage/plugin-search-backend-module-explore` (0.2.8 → 0.3.0)](#backstageplugin-search-backend-module-explore-028--030)
+  - [`@backstage/plugin-search-backend-module-techdocs` (0.3.6 → 0.4.0)](#backstageplugin-search-backend-module-techdocs-036--040)
+  - [`@backstage/plugin-techdocs-backend` (1.11.6 → 2.0.0)](#backstageplugin-techdocs-backend-1116--200)
+  - [`@backstage/plugin-user-settings-backend` (0.2.30 → 0.3.0)](#backstageplugin-user-settings-backend-0230--030)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/canon` (0.1.0 → 0.2.0)](#backstagecanon-010--020)
+  - [`@backstage/core-components` (0.16.4 → 0.17.0)](#backstagecore-components-0164--0170)
+  - [`@backstage/create-app` (0.5.25 → 0.6.0)](#backstagecreate-app-0525--060)
+  - [`@backstage/plugin-catalog-backend-module-backstage-openapi` (0.4.5 → 0.5.0)](#backstageplugin-catalog-backend-module-backstage-openapi-045--050)
+  - [`@backstage/plugin-scaffolder-node` (0.7.0 → 0.8.0)](#backstageplugin-scaffolder-node-070--080)
+  - [`@backstage/plugin-scaffolder-node-test-utils` (0.1.19 → 0.2.0)](#backstageplugin-scaffolder-node-test-utils-0119--020)
+- [0.0.x patch version bumps](#00x-patch-version-bumps)
+  - [`@backstage/plugin-signals` (0.0.16 → 0.0.17)](#backstageplugin-signals-0016--0017)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/config-loader` (1.9.6 → 1.10.0)](#backstageconfig-loader-196--1100)
+  - [`@backstage/core-app-api` (1.15.5 → 1.16.0)](#backstagecore-app-api-1155--1160)
+  - [`@backstage/plugin-catalog` (1.27.0 → 1.28.0)](#backstageplugin-catalog-1270--1280)
+  - [`@backstage/plugin-catalog-backend` (1.31.0 → 1.32.0)](#backstageplugin-catalog-backend-1310--1320)
+  - [`@backstage/plugin-catalog-react` (1.15.2 → 1.16.0)](#backstageplugin-catalog-react-1152--1160)
+  - [`@backstage/plugin-scaffolder` (1.28.0 → 1.29.0)](#backstageplugin-scaffolder-1280--1290)
+  - [`@backstage/plugin-scaffolder-backend` (1.30.0 → 1.31.0)](#backstageplugin-scaffolder-backend-1300--1310)
+  - [`@backstage/plugin-search-backend-module-elasticsearch` (1.6.5 → 1.7.0)](#backstageplugin-search-backend-module-elasticsearch-165--170)
+- [Other patch version bumps](#other-patch-version-bumps)
+  - [`@backstage/backend-app-api` (1.2.0 → 1.2.1)](#backstagebackend-app-api-120--121)
+  - [`@backstage/backend-defaults` (0.8.1 → 0.8.2)](#backstagebackend-defaults-081--082)
+  - [`@backstage/backend-test-utils` (1.3.0 → 1.3.1)](#backstagebackend-test-utils-130--131)
+  - [`@backstage/core-plugin-api` (1.10.4 → 1.10.5)](#backstagecore-plugin-api-1104--1105)
+  - [`@backstage/integration` (1.16.1 → 1.16.2)](#backstageintegration-1161--1162)
+  - [`@backstage/plugin-api-docs` (0.12.4 → 0.12.5)](#backstageplugin-api-docs-0124--0125)
+  - [`@backstage/plugin-app` (0.1.6 → 0.1.7)](#backstageplugin-app-016--017)
+  - [`@backstage/plugin-auth-backend` (0.24.3 → 0.24.4)](#backstageplugin-auth-backend-0243--0244)
+  - [`@backstage/plugin-auth-backend-module-microsoft-provider` (0.3.0 → 0.3.1)](#backstageplugin-auth-backend-module-microsoft-provider-030--031)
+  - [`@backstage/plugin-auth-backend-module-oauth2-provider` (0.4.0 → 0.4.1)](#backstageplugin-auth-backend-module-oauth2-provider-040--041)
+  - [`@backstage/plugin-auth-backend-module-oidc-provider` (0.4.0 → 0.4.1)](#backstageplugin-auth-backend-module-oidc-provider-040--041)
+  - [`@backstage/plugin-auth-backend-module-okta-provider` (0.2.0 → 0.2.1)](#backstageplugin-auth-backend-module-okta-provider-020--021)
+  - [`@backstage/plugin-auth-node` (0.6.0 → 0.6.1)](#backstageplugin-auth-node-060--061)
+  - [`@backstage/plugin-catalog-backend-module-ldap` (0.11.2 → 0.11.3)](#backstageplugin-catalog-backend-module-ldap-0112--0113)
+  - [`@backstage/plugin-catalog-backend-module-msgraph` (0.6.7 → 0.6.8)](#backstageplugin-catalog-backend-module-msgraph-067--068)
+  - [`@backstage/plugin-events-node` (0.4.8 → 0.4.9)](#backstageplugin-events-node-048--049)
+  - [`@backstage/plugin-home` (0.8.5 → 0.8.6)](#backstageplugin-home-085--086)
+  - [`@backstage/plugin-home-react` (0.1.23 → 0.1.24)](#backstageplugin-home-react-0123--0124)
+  - [`@backstage/plugin-kubernetes` (0.12.4 → 0.12.5)](#backstageplugin-kubernetes-0124--0125)
+  - [`@backstage/plugin-kubernetes-backend` (0.19.3 → 0.19.4)](#backstageplugin-kubernetes-backend-0193--0194)
+  - [`@backstage/plugin-kubernetes-common` (0.9.3 → 0.9.4)](#backstageplugin-kubernetes-common-093--094)
+  - [`@backstage/plugin-notifications-backend` (0.5.3 → 0.5.4)](#backstageplugin-notifications-backend-053--054)
+  - [`@backstage/plugin-scaffolder-backend-module-azure` (0.2.6 → 0.2.7)](#backstageplugin-scaffolder-backend-module-azure-026--027)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.7 → 0.3.8)](#backstageplugin-scaffolder-backend-module-bitbucket-037--038)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.2.6 → 0.2.7)](#backstageplugin-scaffolder-backend-module-bitbucket-cloud-026--027)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.6 → 0.2.7)](#backstageplugin-scaffolder-backend-module-bitbucket-server-026--027)
+  - [`@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.6 → 0.3.7)](#backstageplugin-scaffolder-backend-module-confluence-to-markdown-036--037)
+  - [`@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.7 → 0.3.8)](#backstageplugin-scaffolder-backend-module-cookiecutter-037--038)
+  - [`@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.6 → 0.2.7)](#backstageplugin-scaffolder-backend-module-gerrit-026--027)
+  - [`@backstage/plugin-scaffolder-backend-module-gitea` (0.2.6 → 0.2.7)](#backstageplugin-scaffolder-backend-module-gitea-026--027)
+  - [`@backstage/plugin-scaffolder-backend-module-github` (0.6.0 → 0.6.1)](#backstageplugin-scaffolder-backend-module-github-060--061)
+  - [`@backstage/plugin-scaffolder-backend-module-gitlab` (0.8.0 → 0.8.1)](#backstageplugin-scaffolder-backend-module-gitlab-080--081)
+  - [`@backstage/plugin-scaffolder-backend-module-rails` (0.5.6 → 0.5.7)](#backstageplugin-scaffolder-backend-module-rails-056--057)
+  - [`@backstage/plugin-scaffolder-common` (1.5.9 → 1.5.10)](#backstageplugin-scaffolder-common-159--1510)
+  - [`@backstage/plugin-scaffolder-react` (1.14.5 → 1.14.6)](#backstageplugin-scaffolder-react-1145--1146)
+  - [`@backstage/plugin-search` (1.4.23 → 1.4.24)](#backstageplugin-search-1423--1424)
+  - [`@backstage/plugin-search-backend-module-pg` (0.5.41 → 0.5.42)](#backstageplugin-search-backend-module-pg-0541--0542)
+  - [`@backstage/plugin-search-react` (1.8.6 → 1.8.7)](#backstageplugin-search-react-186--187)
+  - [`@backstage/plugin-techdocs` (1.12.3 → 1.12.4)](#backstageplugin-techdocs-1123--1124)
+  - [`@backstage/plugin-techdocs-module-addons-contrib` (1.1.21 → 1.1.22)](#backstageplugin-techdocs-module-addons-contrib-1121--1122)
+  - [`@backstage/plugin-techdocs-node` (1.13.0 → 1.13.1)](#backstageplugin-techdocs-node-1130--1131)
+  - [`@backstage/plugin-techdocs-react` (1.2.14 → 1.2.15)](#backstageplugin-techdocs-react-1214--1215)
+  - [`@backstage/repo-tools` (0.13.0 → 0.13.1)](#backstagerepo-tools-0130--0131)
+  - [`@backstage/test-utils` (1.7.5 → 1.7.6)](#backstagetest-utils-175--176)
+
+## Breaking changes
+
+### `@backstage/app-defaults` (1.5.17 → 1.6.0)
+
+#### 1.6.0
+
+##### Minor Changes
 
 - 12f8e01: **BREAKING**: The default `DiscoveryApi` implementation has been switched to use `FrontendHostDiscovery`, which adds support for the `discovery.endpoints` configuration.
 
@@ -37,69 +131,17 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
         plugins: [catalog]
   ```
 
-## `@backstage/backend-app-api` (1.2.0 → 1.2.1)
+### `@backstage/cli` (0.30.0 → 0.31.0)
 
-### 1.2.1
+#### 0.31.0
 
-#### Patch Changes
-
-- f422984: Remove unused dependencies
-
-## `@backstage/backend-defaults` (0.8.1 → 0.8.2)
-
-### 0.8.2
-
-#### Patch Changes
-
-- e293b66: The default auditor service implementation will now log low severity events with `debug` level instead of `info`.
-- f422984: Remove unused dependencies
-- ecb9bab: Explicitly stringify extra logger fields with `JSON.stringify` to prevent `[object Object]` errors.
-- 12f8e01: The `discovery.endpoints` configuration no longer requires both `internal` and `external` target when using the object form, instead falling back to the default.
-- 89db8b8: `GerritUrlReader` is now able to `search` files matching a given pattern URL (using `minimatch` glob patterns).
-
-  This allows the Gerrit Discovery to find all Backstage manifests inside a repository using the `**/catalog-info.yaml` pattern.
-
-## `@backstage/backend-test-utils` (1.3.0 → 1.3.1)
-
-### 1.3.1
-
-#### Patch Changes
-
-- c3a91d5: Added support for PostgreSQL version 17
-- 37c6510: Moved `@types/jest` to `devDependencies`.
-
-## `@backstage/canon` (0.1.0 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- 5a5db29: Fix CSS imports and move CSS outputs out of the dist folder.
-- 4557beb: Added a new Tooltip component to Canon.
-- 1e4dfdb: We added a new IconButton component with fixed sizes showcasing a single icon.
-- e8d12f9: Added about 40 new icons to Canon.
-- 8689010: We are renaming CanonProvider to IconProvider to improve clarity on how to override icons.
-- bf319b7: Added a new Menu component to Canon.
-- cb7e99d: Updating styles for Text and Link components as well as global surface tokens.
-- bd8520d: Added a new ScrollArea component for Canon.
-
-#### Patch Changes
-
-- 56850ca: Fix Button types that was preventing the use of native attributes like onClick.
-- 89e8686: To avoid conflicts with Backstage, we removed global styles and set font-family and font-weight for each components.
-- 05e9d41: Introducing Canon to Backstage. Canon styling system is based on pure CSS. We are adding our styles.css at the top of your Backstage instance.
-
-## `@backstage/cli` (0.30.0 → 0.31.0)
-
-### 0.31.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 5b70679: **BREAKING**: ESLint warnings no longer trigger system exit codes like errors do.
 
   Set the max number of warnings to `-1` during linting to enable the gradual adoption of new ESLint rules. To restore the previous behavior, include the `--max-warnings 0` flag in the `backstage-cli <repo|package> lint` command.
 
-#### Patch Changes
+##### Patch Changes
 
 - 0586d4c: Internal change to move the `migrate` and `version:*` commands into a new migrate module.
 - e0b226b: build(deps): bump `esbuild` from 0.24.2 to 0.25.0
@@ -110,36 +152,15 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
 - d0fc357: Internal update to move `info` commands to a separate module.
 - f8bd342: Fix a bug in the translation of the deprecated `--scope` option for the `new` command that could cause plugins to have `backstage-backstage-plugin` in their name.
 
-## `@backstage/config-loader` (1.9.6 → 1.10.0)
+### `@backstage/core-compat-api` (0.3.6 → 0.4.0)
 
-### 1.10.0
+#### 0.4.0
 
-#### Minor Changes
-
-- 2fd73aa: The include transforms applied during config loading will now only apply to the known keys `$file`, `$env`, and `$include`. Any other key that begins with a `# @backstage/config-loader will now be passed through as is.
-
-#### Patch Changes
-
-- f422984: Added `@types/minimist` to `devDependencies`
-
-## `@backstage/core-app-api` (1.15.5 → 1.16.0)
-
-### 1.16.0
-
-#### Minor Changes
-
-- 9262001: The default auth injection middleware for the `FetchApi` will now also take configuration under `discovery.endpoints` into consideration when deciding whether to include credentials or not.
-- 12f8e01: The `discovery.endpoints` configuration no longer requires both `internal` and `external` target when using the object form, instead falling back to the default.
-
-## `@backstage/core-compat-api` (0.3.6 → 0.4.0)
-
-### 0.4.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 8250ffe: **BREAKING**: Dropped support for the removed opaque `@backstage/ExtensionOverrides` and `@backstage/BackstagePlugin` types.
 
-#### Patch Changes
+##### Patch Changes
 
 - cbe6177: Improved route path normalization when converting existing route elements in `converLegacyApp`, for example handling trailing `/*` in paths.
 - d34e0e5: Added a new `convertLegacyAppOptions` helper that converts many of the options passed to `createApp` in the old frontend system to a module with app overrides for the new system. The supported options are `apis`, `icons`, `plugins`, `components`, and `themes`.
@@ -193,52 +214,11 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
   - The generate layout override extension is now properly attached to the `app/root` extension.
   - Converted root elements are now automatically wrapped with `compatWrapper`.
 
-## `@backstage/core-components` (0.16.4 → 0.17.0)
+### `@backstage/frontend-app-api` (0.10.5 → 0.11.0)
 
-### 0.17.0
+#### 0.11.0
 
-#### Minor Changes
-
-- 25300cb: `SimpleStepper` back button now works with `activeStep` property set higher than 0
-- 9545af2: Declared CancelIcon explicitly on Chip component inside Select.tsx to disable onMouseDown event by default that creates the flaw of re-opening select component when user tries to remove a selected filter.
-
-#### Patch Changes
-
-- fffe3c0: Added `classNames` prop to the `Page` component
-- df3b9f0: Fixed a bug in the SidebarSubmenuItem within the core-components package that caused the dropdown button to be misaligned in the sidebar and the button text to appear in uppercase due to the default <Button> behavior. Also added an example dropdown menu to the app for reference.
-- 48aab13: Add i18n support for scaffolder-react plugin
-- 0a0ced6: Avoid Layout Shift for `DismissableBanner` when using a `storageApi` with latency (e.g. `user-settings-backend`)
-
-  Properly handle the `unknown` state of the `storageApi`. There's a trade-off: this may lead to some Layout Shift if the banner has not been dismissed, but once it has been dismissed, you won't have any.
-
-## `@backstage/core-plugin-api` (1.10.4 → 1.10.5)
-
-### 1.10.5
-
-#### Patch Changes
-
-- 327d21e: Failure to lazy load an extension will now always result in an error being thrown to be forwarded to error boundaries, rather than being rendered using the `BootErrorPage` app component.
-
-## `@backstage/create-app` (0.5.25 → 0.6.0)
-
-### 0.6.0
-
-#### Minor Changes
-
-- 31731b0: Upgraded the TypeScript version in the template to `5.8`.
-
-#### Patch Changes
-
-- 7d083ce: Canon is now ready to be used in Alpha. We are adding a custom CSS file at the root of the app to make all styles available for Canon components.
-- aed536a: Bumped create-app version.
-- f9fb465: Bumped create-app version.
-- 19e5c3f: Added link to multi-stage Dockerfile documentation as alternative option
-
-## `@backstage/frontend-app-api` (0.10.5 → 0.11.0)
-
-### 0.11.0
-
-#### Minor Changes
+##### Minor Changes
 
 - abcdf44: **BREAKING**: The returned object from `createSpecializedApp` no longer contains a `createRoot()` method, and it instead now contains `apis` and `tree`.
 
@@ -250,170 +230,374 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
 
 - 8250ffe: **BREAKING**: Dropped support for the removed opaque `@backstage/ExtensionOverrides` and `@backstage/BackstagePlugin` types.
 
-#### Patch Changes
+##### Patch Changes
 
 - 4d18b55: It's now possible to provide a middleware that wraps all extension factories by passing an `extensionFactoryMiddleware` to either `createApp()` or `createSpecializedApp()`.
 - 4823831: Introduced a `createFrontendFeatureLoader()` function, as well as a `FrontendFeatureLoader` interface, to gather several frontend plugins, modules or feature loaders in a single exported entrypoint and load them, possibly asynchronously. This new feature, very similar to the `createBackendFeatureLoader()` already available on the backend, supersedes the previous `CreateAppFeatureLoader` type which has been deprecated.
 
-## `@backstage/frontend-defaults` (0.1.6 → 0.2.0)
+### `@backstage/frontend-defaults` (0.1.6 → 0.2.0)
 
-### 0.2.0
+#### 0.2.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 4823831: Introduced a `createFrontendFeatureLoader()` function, as well as a `FrontendFeatureLoader` interface, to gather several frontend plugins, modules or feature loaders in a single exported entrypoint and load them, possibly asynchronously. This new feature, very similar to the `createBackendFeatureLoader()` already available on the backend, supersedes the previous `CreateAppFeatureLoader` type which has been deprecated.
 - 8250ffe: **BREAKING**: Dropped support for the removed opaque `@backstage/ExtensionOverrides` and `@backstage/BackstagePlugin` types.
 
-#### Patch Changes
+##### Patch Changes
 
 - 4d18b55: It's now possible to provide a middleware that wraps all extension factories by passing an `extensionFactoryMiddleware` to either `createApp()` or `createSpecializedApp()`.
 - abcdf44: Internal refactor to match updated `createSpecializedApp`.
 - e3f19db: Feature discovery and resolution logic used in `createApp` is now exposed via the `discoverAvailableFeatures` and `resolveAsyncFeatures` functions respectively.
 
-## `@backstage/frontend-plugin-api` (0.9.5 → 0.10.0)
+### `@backstage/frontend-plugin-api` (0.9.5 → 0.10.0)
 
-### 0.10.0
+#### 0.10.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 4823831: Introduced a `createFrontendFeatureLoader()` function, as well as a `FrontendFeatureLoader` interface, to gather several frontend plugins, modules or feature loaders in a single exported entrypoint and load them, possibly asynchronously. This new feature, very similar to the `createBackendFeatureLoader()` already available on the backend, supersedes the previous `CreateAppFeatureLoader` type which has been deprecated.
 - 8250ffe: **BREAKING**: Removed the deprecated `ExtensionOverrides` and `FrontendFeature` types.
 - 0d1a397: **BREAKING**: Removed deprecated variant of `createExtensionDataRef` where the ID is passed directly.
 
-#### Patch Changes
+##### Patch Changes
 
 - 5aa7f2c: Added a new Utility API, `DialogApi`, which can be used to show dialogs in the React tree that can collect input from the user.
 - e23f5e0: Added new `ExtensionMiddlewareFactory` type.
 - a6cb67d: The extensions map for plugins created with `createFrontendPlugin` is now sorted alphabetically by ID in the TypeScript type.
 - de72253: Added a new `ExtensionBoundary.lazyComponent` helper in addition to the existing `ExtensionBoundary.lazy` helper.
 
-## `@backstage/frontend-test-utils` (0.2.6 → 0.3.0)
+### `@backstage/frontend-test-utils` (0.2.6 → 0.3.0)
 
-### 0.3.0
+#### 0.3.0
 
-#### Minor Changes
+##### Minor Changes
 
 - bba525b: **BREAKING**: Removed deprecated `setupRequestMockHandlers` which was replaced by `registerMswTestHooks`.
 
-#### Patch Changes
+##### Patch Changes
 
 - f861bfc: Added a `initialRouteEntries` option to `renderInTestApp`.
 - f861bfc: The `renderInTestApp` helper now provides a default mock config with mock values for both `app.baseUrl` and `backend.baseUrl`.
 - abcdf44: Internal refactor to match updated `createSpecializedApp`.
 
-## `@backstage/integration` (1.16.1 → 1.16.2)
+### `@backstage/plugin-app-backend` (0.4.5 → 0.5.0)
 
-### 1.16.2
+#### 0.5.0
 
-#### Patch Changes
-
-- 89db8b8: Gerrit integration now exports `getGitilesAuthenticationUrl`. This enables its usage by the `GerritUrlReader`.
-- 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
-
-## `@backstage/plugin-api-docs` (0.12.4 → 0.12.5)
-
-### 0.12.5
-
-#### Patch Changes
-
-- 74871cc: Use consistent Typography in Entity HasApisCard
-
-## `@backstage/plugin-app` (0.1.6 → 0.1.7)
-
-### 0.1.7
-
-#### Patch Changes
-
-- 583fc54: Fixed extra app elements not being rendered as part of apps without a sign-in page.
-- 0aa9d82: Added implementation of the new `DialogApi`.
-
-## `@backstage/plugin-app-backend` (0.4.5 → 0.5.0)
-
-### 0.5.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 32be48c: **BREAKING**: Removed support for the old backend system.
 
   As part of this change the plugin export from `/alpha` as been removed. If you are currently importing `@backstage/plugin-app-backend/alpha`, please update your import to `@backstage/plugin-app-backend`.
 
-## `@backstage/plugin-auth-backend` (0.24.3 → 0.24.4)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.2.7 → 0.3.0)
 
-### 0.24.4
+#### 0.3.0
 
-#### Patch Changes
+##### Minor Changes
 
-- 7956beb: Marked the remaining exports related to `createRouter` and the old backend system as deprecated.
+- 89db8b8: **BREAKING** The optional `branch` configuration parameter now defaults to the default branch of the project (where `HEAD` points to).
+  This parameter was previously using `master` as the default value. In most cases this change should be transparent as Gerrit defaults to using `master`.
 
-  For more information about migrating to the new backend system, see the [migration guide](https://backstage.io/docs/backend-system/building-backends/migrating#the-auth-plugin).
+  This change also allow to specify a custom `catalogPath` in the `catalog.providers.gerrit` configuration.
+  If not set, it defaults to `catalog-info.yaml` files at the root of repositories. This default was the value before this change.
 
-  Support for the old backend system will be removed in the next release of this plugin.
+  With the changes made in the `GerritUrlReader`, `catalogPath` allows to use `minimatch`'s glob-patterns.
 
-- b6702ea: Deprecated `getDefaultOwnershipEntityRefs` in favor of the new `.resolveOwnershipEntityRefs(...)` method in the `AuthResolverContext`.
-
-  The following code in a custom sign-in resolver:
-
-  ```ts
-  import { getDefaultOwnershipEntityRefs } from '@backstage/plugin-auth-backend';
-
-  // ...
-
-  const ent = getDefaultOwnershipEntityRefs(entity);
+  ```diff
+  catalog:
+    providers:
+      gerrit:
+        all: # identifies your dataset / provider independent of config changes
+          host: gerrit.company.com
+          query: 'state=ACTIVE&type=CODE'
+  +       # This will search for catalog manifests anywhere in the repositories
+  +       catalogPath: '**/catalog-info.{yml,yaml}'
   ```
 
-  Can be replaced with the following:
+### `@backstage/plugin-events-backend` (0.4.3 → 0.5.0)
+
+#### 0.5.0
+
+##### Minor Changes
+
+- ee519c5: **BREAKING** Removed deprecated events related code
+- bda96a7: **BREAKING** Removed support for the legacy backend, please migrate to the new backend system. Also removed deprecated code.
+
+##### Patch Changes
+
+- 2f4d3bc: Allow webhook content to be 5mb instead the default 100kb
+- b95aa77: add `addHttpPostBodyParser` to events extension to allow body parse customization. This feature will enhance flexibility in handling HTTP POST requests in event-related operations.
+
+### `@backstage/plugin-permission-node` (0.8.8 → 0.9.0)
+
+#### 0.9.0
+
+##### Minor Changes
+
+- 22ace13: **BREAKING** The `ServerPermissionClient` can no longer be instantiated with a `tokenManager` and must instead be instantiated with an `auth` service. If you are still on the legacy backend system, use `createLegacyAuthAdapters()` from `@backstage/backend-common` to create a compatible `auth` service.
+
+##### Patch Changes
+
+- 728e3e1: Improved type inference when passing a `PermissionResourceRef` to `createPermissionRule`.
+- 876f2e1: Deprecated `createPermissionIntegrationRouter` and related types, which has been replaced by `PermissionRegistryService`. For more information, including how to migrate existing plugins, see the [service docs](https://backstage.io/docs/backend-system/core-services/permissions-registry).
+
+### `@backstage/plugin-proxy-backend` (0.5.11 → 0.6.0)
+
+#### 0.6.0
+
+##### Minor Changes
+
+- 2d8b0e4: **BREAKING**: Removed support for the old backend system.
+
+  As part of this change the plugin export from `/alpha` as been removed. If you are currently importing `@backstage/plugin-proxy-backend/alpha`, please update your import to `@backstage/plugin-proxy-backend`.
+
+### `@backstage/plugin-search-backend` (1.8.2 → 2.0.0)
+
+#### 2.0.0
+
+##### Major Changes
+
+- d5c4a9d: **BREAKING** Removed support for the legacy backend system and references to `@backstage/backend-common`, please migrate to the new backend system.
+
+### `@backstage/plugin-search-backend-module-explore` (0.2.8 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- d5c4a9d: **BREAKING** Removed support for the legacy backend system and references to `@backstage/backend-common`, please migrate to the new backend system.
+
+### `@backstage/plugin-search-backend-module-techdocs` (0.3.6 → 0.4.0)
+
+#### 0.4.0
+
+##### Minor Changes
+
+- d5c4a9d: **BREAKING** Removed support for the legacy backend system and references to `@backstage/backend-common`, please migrate to the new backend system.
+
+##### Patch Changes
+
+- d32bdc4: Added an extension point that allows for custom entity filtering during document collation.
+
+### `@backstage/plugin-techdocs-backend` (1.11.6 → 2.0.0)
+
+#### 2.0.0
+
+##### Major Changes
+
+- d5c4a9d: **BREAKING** Removed support for the legacy backend, please migrate to the new backend system. Also removed deprecated `DefaultTechDocsCollatorFactory`. Use the `@backstage/plugin-search-backend-module-techdocs` for this instead. Finally, deprecated `DocsBuildStrategy` and `TechDocsDocument` were removed, use the versions in `@backstage/plugin-techdocs-node` instead.
+
+##### Patch Changes
+
+- 7828186: Minor type fix
+- 8f03776: Properly clean up temporary files on build failures
+
+### `@backstage/plugin-user-settings-backend` (0.2.30 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- e202017: **BREAKING**: Removed support for the old backend system.
+
+  As part of this change the plugin export from `/alpha` as been removed. If you are currently importing `@backstage/plugin-user-settings-backend/alpha`, please update your import to `@backstage/plugin-user-settings-backend`.
+
+## 0.x minor version bumps
+
+### `@backstage/canon` (0.1.0 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 5a5db29: Fix CSS imports and move CSS outputs out of the dist folder.
+- 4557beb: Added a new Tooltip component to Canon.
+- 1e4dfdb: We added a new IconButton component with fixed sizes showcasing a single icon.
+- e8d12f9: Added about 40 new icons to Canon.
+- 8689010: We are renaming CanonProvider to IconProvider to improve clarity on how to override icons.
+- bf319b7: Added a new Menu component to Canon.
+- cb7e99d: Updating styles for Text and Link components as well as global surface tokens.
+- bd8520d: Added a new ScrollArea component for Canon.
+
+##### Patch Changes
+
+- 56850ca: Fix Button types that was preventing the use of native attributes like onClick.
+- 89e8686: To avoid conflicts with Backstage, we removed global styles and set font-family and font-weight for each components.
+- 05e9d41: Introducing Canon to Backstage. Canon styling system is based on pure CSS. We are adding our styles.css at the top of your Backstage instance.
+
+### `@backstage/core-components` (0.16.4 → 0.17.0)
+
+#### 0.17.0
+
+##### Minor Changes
+
+- 25300cb: `SimpleStepper` back button now works with `activeStep` property set higher than 0
+- 9545af2: Declared CancelIcon explicitly on Chip component inside Select.tsx to disable onMouseDown event by default that creates the flaw of re-opening select component when user tries to remove a selected filter.
+
+##### Patch Changes
+
+- fffe3c0: Added `classNames` prop to the `Page` component
+- df3b9f0: Fixed a bug in the SidebarSubmenuItem within the core-components package that caused the dropdown button to be misaligned in the sidebar and the button text to appear in uppercase due to the default <Button> behavior. Also added an example dropdown menu to the app for reference.
+- 48aab13: Add i18n support for scaffolder-react plugin
+- 0a0ced6: Avoid Layout Shift for `DismissableBanner` when using a `storageApi` with latency (e.g. `user-settings-backend`)
+
+  Properly handle the `unknown` state of the `storageApi`. There's a trade-off: this may lead to some Layout Shift if the banner has not been dismissed, but once it has been dismissed, you won't have any.
+
+### `@backstage/create-app` (0.5.25 → 0.6.0)
+
+#### 0.6.0
+
+##### Minor Changes
+
+- 31731b0: Upgraded the TypeScript version in the template to `5.8`.
+
+##### Patch Changes
+
+- 7d083ce: Canon is now ready to be used in Alpha. We are adding a custom CSS file at the root of the app to make all styles available for Canon components.
+- aed536a: Bumped create-app version.
+- f9fb465: Bumped create-app version.
+- 19e5c3f: Added link to multi-stage Dockerfile documentation as alternative option
+
+### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.4.5 → 0.5.0)
+
+#### 0.5.0
+
+##### Minor Changes
+
+- 62842ee: feat: Improve JSON format of OpenAPI definition, allow YAML format
+
+### `@backstage/plugin-scaffolder-node` (0.7.0 → 0.8.0)
+
+#### 0.8.0
+
+##### Minor Changes
+
+- 1a58846: **DEPRECATION**: We've deprecated the old way of defining actions using `createTemplateAction` with raw `JSONSchema` and type parameters, as well as using `zod` through an import. You can now use the new format to define `createTemplateActions` with `zod` provided by the framework. This change also removes support for `logStream` in the `context` as well as moving the `logger` to an instance of `LoggerService`.
+
+  Before:
 
   ```ts
-  const { ownershipEntityRefs: ent } = await ctx.resolveOwnershipEntityRefs(
-    entity,
-  );
+  createTemplateAction<{ repoUrl: string }, { test: string }>({
+    id: 'test',
+    schema: {
+      input: {
+        type: 'object',
+        required: ['repoUrl'],
+        properties: {
+          repoUrl: { type: 'string' },
+        },
+      },
+      output: {
+        type: 'object',
+        required: ['test'],
+        properties: {
+          test: { type: 'string' },
+        },
+      },
+    },
+    handler: async ctx => {
+      ctx.logStream.write('blob');
+    },
+  });
+
+  // or
+
+  createTemplateAction({
+    id: 'test',
+    schema: {
+      input: z.object({
+        repoUrl: z.string(),
+      }),
+      output: z.object({
+        test: z.string(),
+      }),
+    },
+    handler: async ctx => {
+      ctx.logStream.write('something');
+    },
+  });
   ```
 
-## `@backstage/plugin-auth-backend-module-microsoft-provider` (0.3.0 → 0.3.1)
+  After:
 
-### 0.3.1
+  ```ts
+  createTemplateAction({
+    id: 'test',
+    schema: {
+      input: {
+        repoUrl: d => d.string(),
+      },
+      output: {
+        test: d => d.string(),
+      },
+    },
+    handler: async ctx => {
+      // you can just use ctx.logger.log('...'), or if you really need a log stream you can do this:
+      const logStream = new PassThrough();
+      logStream.on('data', chunk => {
+        ctx.logger.info(chunk.toString());
+      });
+    },
+  });
+  ```
 
-#### Patch Changes
+##### Patch Changes
 
-- fa15e80: Update `auth.microsoft.signIn.resolvers` config def to include the `userIdMatchingUserEntityAnnotation` resolver.
+- 09cf038: Got rid of most `@backstage/backend-common` usages
+- 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
 
-## `@backstage/plugin-auth-backend-module-oauth2-provider` (0.4.0 → 0.4.1)
+### `@backstage/plugin-scaffolder-node-test-utils` (0.1.19 → 0.2.0)
 
-### 0.4.1
+#### 0.2.0
 
-#### Patch Changes
+##### Minor Changes
 
-- ce15e30: Fixed repository url in `README.md`
+- 36677bb: Use update `createTemplateAction` kinds
 
-## `@backstage/plugin-auth-backend-module-oidc-provider` (0.4.0 → 0.4.1)
+##### Patch Changes
 
-### 0.4.1
+- 09cf038: Got rid of most `@backstage/backend-common` usages
 
-#### Patch Changes
+## 0.0.x patch version bumps
 
-- ce15e30: Fixed repository url in `README.md`
+### `@backstage/plugin-signals` (0.0.16 → 0.0.17)
 
-## `@backstage/plugin-auth-backend-module-okta-provider` (0.2.0 → 0.2.1)
+#### 0.0.17
 
-### 0.2.1
+##### Patch Changes
 
-#### Patch Changes
+- ac3e8c0: Fixed multiple signal connection attempts when there are multiple subscriptions at the same time
 
-- ce15e30: Fixed repository url in `README.md`
+## Other minor version bumps
 
-## `@backstage/plugin-auth-node` (0.6.0 → 0.6.1)
+### `@backstage/config-loader` (1.9.6 → 1.10.0)
 
-### 0.6.1
+#### 1.10.0
 
-#### Patch Changes
+##### Minor Changes
 
-- b6702ea: Added `AuthResolverContext.resolveOwnershipEntityRefs` as a way of accessing the default ownership resolution logic in sign-in resolvers, replacing `getDefaultOwnershipEntityRefs` from `@backstage/plugin-auth-backend`.
+- 2fd73aa: The include transforms applied during config loading will now only apply to the known keys `$file`, `$env`, and `$include`. Any other key that begins with a `# @backstage/config-loader will now be passed through as is.
 
-## `@backstage/plugin-catalog` (1.27.0 → 1.28.0)
+##### Patch Changes
 
-### 1.28.0
+- f422984: Added `@types/minimist` to `devDependencies`
 
-#### Minor Changes
+### `@backstage/core-app-api` (1.15.5 → 1.16.0)
+
+#### 1.16.0
+
+##### Minor Changes
+
+- 9262001: The default auth injection middleware for the `FetchApi` will now also take configuration under `discovery.endpoints` into consideration when deciding whether to include credentials or not.
+- 12f8e01: The `discovery.endpoints` configuration no longer requires both `internal` and `external` target when using the object form, instead falling back to the default.
+
+### `@backstage/plugin-catalog` (1.27.0 → 1.28.0)
+
+#### 1.28.0
+
+##### Minor Changes
 
 - 247a40b: Now a custom entity page header can be passed as input to the default entity page.
 - a3d93ca: The default layout of the entity page can now optionally be customized with 3 card types: info, peek and full.
@@ -480,7 +664,7 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
 
 - 06d1226: Allow providing `kind` parameters to replace the default `Component` kind for `SubComponents` card
 
-#### Patch Changes
+##### Patch Changes
 
 - 31731b0: Internal refactor to avoid `expiry-map` dependency.
 - ba9649a: Update the default entity page extension component to support grouping multiple entity content items in the same tab.
@@ -512,76 +696,26 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
   +               title: 'Custom'
   ```
 
-## `@backstage/plugin-catalog-backend` (1.31.0 → 1.32.0)
+### `@backstage/plugin-catalog-backend` (1.31.0 → 1.32.0)
 
-### 1.32.0
+#### 1.32.0
 
-#### Minor Changes
+##### Minor Changes
 
 - ca9c51b: Added opt-in ability to evict entities from the catalog whose provider is no longer configured. See [Catalog configuration documentation](https://backstage.io/docs/features/software-catalog/configuration#clean-up-entities-from-orphaned-entity-providers)
 
-#### Patch Changes
+##### Patch Changes
 
 - 4306303: Added a fix in `@backstage/plugin-catalog-backend` to prevent duplicate path keys in entity search if only casing is different.
 - 5243aa4: Fixed an issue occurred when authorizing permissions using custom rules passed via the `PermissionsRegistryService`.
 - fbc1666: Correctly use the `catalog.useUrlReadersSearch` config.
 - 75cadc1: Minor internal tweak to `refreshByRefreshKeys`
 
-## `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.4.5 → 0.5.0)
+### `@backstage/plugin-catalog-react` (1.15.2 → 1.16.0)
 
-### 0.5.0
+#### 1.16.0
 
-#### Minor Changes
-
-- 62842ee: feat: Improve JSON format of OpenAPI definition, allow YAML format
-
-## `@backstage/plugin-catalog-backend-module-gerrit` (0.2.7 → 0.3.0)
-
-### 0.3.0
-
-#### Minor Changes
-
-- 89db8b8: **BREAKING** The optional `branch` configuration parameter now defaults to the default branch of the project (where `HEAD` points to).
-  This parameter was previously using `master` as the default value. In most cases this change should be transparent as Gerrit defaults to using `master`.
-
-  This change also allow to specify a custom `catalogPath` in the `catalog.providers.gerrit` configuration.
-  If not set, it defaults to `catalog-info.yaml` files at the root of repositories. This default was the value before this change.
-
-  With the changes made in the `GerritUrlReader`, `catalogPath` allows to use `minimatch`'s glob-patterns.
-
-  ```diff
-  catalog:
-    providers:
-      gerrit:
-        all: # identifies your dataset / provider independent of config changes
-          host: gerrit.company.com
-          query: 'state=ACTIVE&type=CODE'
-  +       # This will search for catalog manifests anywhere in the repositories
-  +       catalogPath: '**/catalog-info.{yml,yaml}'
-  ```
-
-## `@backstage/plugin-catalog-backend-module-ldap` (0.11.2 → 0.11.3)
-
-### 0.11.3
-
-#### Patch Changes
-
-- e43f41b: Fix `config.d.ts` for `ldapOrg` being incorrect. The documentation says a single
-  object or an array are accepted, but the definition only allows an object.
-
-## `@backstage/plugin-catalog-backend-module-msgraph` (0.6.7 → 0.6.8)
-
-### 0.6.8
-
-#### Patch Changes
-
-- 612d1fd: Update `catalog.providers.microsoftGraphOrg.target` config def to be optional as this has a default value.
-
-## `@backstage/plugin-catalog-react` (1.15.2 → 1.16.0)
-
-### 1.16.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 7f57365: Add support for a new entity predicate syntax when defining `filter`s related to the blueprints exported via `/alpha` for the new frontend system. For more information, see the [entity filters documentation](https://backstage.io/docs/features/software-catalog/catalog-customization#advanced-customization#entity-filters).
 - ba9649a: Add a new `defaultGroup` parameter to the `EntityContentBlueprint`, here are usage examples:
@@ -776,208 +910,339 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
   +         type: info
   ```
 
-#### Patch Changes
+##### Patch Changes
 
 - bec1e15: update EntityAutocompletePicker selected options when filter value is changed externally
 - 75a3551: Export CatalogAutocomplete so it can be used externally
 
-## `@backstage/plugin-events-backend` (0.4.3 → 0.5.0)
+### `@backstage/plugin-scaffolder` (1.28.0 → 1.29.0)
 
-### 0.5.0
+#### 1.29.0
 
-#### Minor Changes
-
-- ee519c5: **BREAKING** Removed deprecated events related code
-- bda96a7: **BREAKING** Removed support for the legacy backend, please migrate to the new backend system. Also removed deprecated code.
-
-#### Patch Changes
-
-- 2f4d3bc: Allow webhook content to be 5mb instead the default 100kb
-- b95aa77: add `addHttpPostBodyParser` to events extension to allow body parse customization. This feature will enhance flexibility in handling HTTP POST requests in event-related operations.
-
-## `@backstage/plugin-events-node` (0.4.8 → 0.4.9)
-
-### 0.4.9
-
-#### Patch Changes
-
-- b95aa77: add `addHttpPostBodyParser` to events extension to allow body parse customization. This feature will enhance flexibility in handling HTTP POST requests in event-related operations.
-
-## `@backstage/plugin-home` (0.8.5 → 0.8.6)
-
-### 0.8.6
-
-#### Patch Changes
-
-- 2d11521: The starred entities component uses the entity title or display name if it exists
-
-## `@backstage/plugin-home-react` (0.1.23 → 0.1.24)
-
-### 0.1.24
-
-#### Patch Changes
-
-- c5a82fc: Don't render header divider on homepage cards if no title was specified.
-
-## `@backstage/plugin-kubernetes` (0.12.4 → 0.12.5)
-
-### 0.12.5
-
-#### Patch Changes
-
-- d517d13: refactor: use `KUBERNETES_ANNOTATION` and `KUBERNETES_LABEL_SELECTOR_QUERY_ANNOTATION` annotations from `kubernetes-common`
-- ba9649a: Set deployment as the default group of Kubernetes entity content. It is just an example and shouldn't cause any visual difference since entity page tabs with just one entity content appear as normal tabs.
-
-## `@backstage/plugin-kubernetes-backend` (0.19.3 → 0.19.4)
-
-### 0.19.4
-
-#### Patch Changes
-
-- d517d13: refactor: use `KUBERNETES_ANNOTATION` and `KUBERNETES_LABEL_SELECTOR_QUERY_ANNOTATION` annotations from `kubernetes-common`
-
-## `@backstage/plugin-kubernetes-common` (0.9.3 → 0.9.4)
-
-### 0.9.4
-
-#### Patch Changes
-
-- d517d13: Export `backstage.io/kubernetes-id` and `backstage.io/kubernetes-label-selector` annotations as constants
-
-## `@backstage/plugin-notifications-backend` (0.5.3 → 0.5.4)
-
-### 0.5.4
-
-#### Patch Changes
-
-- 20e8d12: Fix null topics being returned from notification API
-- 425a61d: Improved notifications router tests
-- d4c22b7: Make sure to post process broadcast notifications even without signals support
-
-## `@backstage/plugin-permission-node` (0.8.8 → 0.9.0)
-
-### 0.9.0
-
-#### Minor Changes
-
-- 22ace13: **BREAKING** The `ServerPermissionClient` can no longer be instantiated with a `tokenManager` and must instead be instantiated with an `auth` service. If you are still on the legacy backend system, use `createLegacyAuthAdapters()` from `@backstage/backend-common` to create a compatible `auth` service.
-
-#### Patch Changes
-
-- 728e3e1: Improved type inference when passing a `PermissionResourceRef` to `createPermissionRule`.
-- 876f2e1: Deprecated `createPermissionIntegrationRouter` and related types, which has been replaced by `PermissionRegistryService`. For more information, including how to migrate existing plugins, see the [service docs](https://backstage.io/docs/backend-system/core-services/permissions-registry).
-
-## `@backstage/plugin-proxy-backend` (0.5.11 → 0.6.0)
-
-### 0.6.0
-
-#### Minor Changes
-
-- 2d8b0e4: **BREAKING**: Removed support for the old backend system.
-
-  As part of this change the plugin export from `/alpha` as been removed. If you are currently importing `@backstage/plugin-proxy-backend/alpha`, please update your import to `@backstage/plugin-proxy-backend`.
-
-## `@backstage/plugin-scaffolder` (1.28.0 → 1.29.0)
-
-### 1.29.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 9d864ff: Allowed passing `ui:disabled` for disabling the input field of all the pickers.
 
-#### Patch Changes
+##### Patch Changes
 
 - 3db64ba: Disable the submit button on creating
 - 6a3fa48: Fixes DryRunContext not forwarding the correct Scaffolder Secrets to the DryRun API
 - b3b7c9c: Updated the alpha `page:scaffolder` extension to accept `formFields` input, matching the updated `FormFieldBlueprint`.
 
-## `@backstage/plugin-scaffolder-backend` (1.30.0 → 1.31.0)
+### `@backstage/plugin-scaffolder-backend` (1.30.0 → 1.31.0)
 
-### 1.31.0
+#### 1.31.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 36677bb: Support new `createTemplateAction` type, and convert `catalog:fetch` action to new way of defining actions.
 - 2b1e50d: use CreatedTemplate[Filter|Global*] as canonical template extensions in scaffolder plugin
 
-#### Patch Changes
+##### Patch Changes
 
 - e0b226b: build(deps): bump `esbuild` from 0.24.2 to 0.25.0
 - 09cf038: Got rid of most `@backstage/backend-common` usages
 - 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
 - 59dcf37: Fixed bug in fs:delete causing no files to be deleted on windows machines
 
-## `@backstage/plugin-scaffolder-backend-module-azure` (0.2.6 → 0.2.7)
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.6.5 → 1.7.0)
 
-### 0.2.7
+#### 1.7.0
 
-#### Patch Changes
+##### Minor Changes
+
+- 5f66007: Add the option to configure the fuzziness of the elasticsearch results by defining the fuzziness and `prefix_length` property.
+
+##### Patch Changes
+
+- 37e5386: Allow `indexPrefix` configuration through the `app-config.yaml`
+
+## Other patch version bumps
+
+### `@backstage/backend-app-api` (1.2.0 → 1.2.1)
+
+#### 1.2.1
+
+##### Patch Changes
+
+- f422984: Remove unused dependencies
+
+### `@backstage/backend-defaults` (0.8.1 → 0.8.2)
+
+#### 0.8.2
+
+##### Patch Changes
+
+- e293b66: The default auditor service implementation will now log low severity events with `debug` level instead of `info`.
+- f422984: Remove unused dependencies
+- ecb9bab: Explicitly stringify extra logger fields with `JSON.stringify` to prevent `[object Object]` errors.
+- 12f8e01: The `discovery.endpoints` configuration no longer requires both `internal` and `external` target when using the object form, instead falling back to the default.
+- 89db8b8: `GerritUrlReader` is now able to `search` files matching a given pattern URL (using `minimatch` glob patterns).
+
+  This allows the Gerrit Discovery to find all Backstage manifests inside a repository using the `**/catalog-info.yaml` pattern.
+
+### `@backstage/backend-test-utils` (1.3.0 → 1.3.1)
+
+#### 1.3.1
+
+##### Patch Changes
+
+- c3a91d5: Added support for PostgreSQL version 17
+- 37c6510: Moved `@types/jest` to `devDependencies`.
+
+### `@backstage/core-plugin-api` (1.10.4 → 1.10.5)
+
+#### 1.10.5
+
+##### Patch Changes
+
+- 327d21e: Failure to lazy load an extension will now always result in an error being thrown to be forwarded to error boundaries, rather than being rendered using the `BootErrorPage` app component.
+
+### `@backstage/integration` (1.16.1 → 1.16.2)
+
+#### 1.16.2
+
+##### Patch Changes
+
+- 89db8b8: Gerrit integration now exports `getGitilesAuthenticationUrl`. This enables its usage by the `GerritUrlReader`.
+- 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
+
+### `@backstage/plugin-api-docs` (0.12.4 → 0.12.5)
+
+#### 0.12.5
+
+##### Patch Changes
+
+- 74871cc: Use consistent Typography in Entity HasApisCard
+
+### `@backstage/plugin-app` (0.1.6 → 0.1.7)
+
+#### 0.1.7
+
+##### Patch Changes
+
+- 583fc54: Fixed extra app elements not being rendered as part of apps without a sign-in page.
+- 0aa9d82: Added implementation of the new `DialogApi`.
+
+### `@backstage/plugin-auth-backend` (0.24.3 → 0.24.4)
+
+#### 0.24.4
+
+##### Patch Changes
+
+- 7956beb: Marked the remaining exports related to `createRouter` and the old backend system as deprecated.
+
+  For more information about migrating to the new backend system, see the [migration guide](https://backstage.io/docs/backend-system/building-backends/migrating#the-auth-plugin).
+
+  Support for the old backend system will be removed in the next release of this plugin.
+
+- b6702ea: Deprecated `getDefaultOwnershipEntityRefs` in favor of the new `.resolveOwnershipEntityRefs(...)` method in the `AuthResolverContext`.
+
+  The following code in a custom sign-in resolver:
+
+  ```ts
+  import { getDefaultOwnershipEntityRefs } from '@backstage/plugin-auth-backend';
+
+  // ...
+
+  const ent = getDefaultOwnershipEntityRefs(entity);
+  ```
+
+  Can be replaced with the following:
+
+  ```ts
+  const { ownershipEntityRefs: ent } = await ctx.resolveOwnershipEntityRefs(
+    entity,
+  );
+  ```
+
+### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.3.0 → 0.3.1)
+
+#### 0.3.1
+
+##### Patch Changes
+
+- fa15e80: Update `auth.microsoft.signIn.resolvers` config def to include the `userIdMatchingUserEntityAnnotation` resolver.
+
+### `@backstage/plugin-auth-backend-module-oauth2-provider` (0.4.0 → 0.4.1)
+
+#### 0.4.1
+
+##### Patch Changes
+
+- ce15e30: Fixed repository url in `README.md`
+
+### `@backstage/plugin-auth-backend-module-oidc-provider` (0.4.0 → 0.4.1)
+
+#### 0.4.1
+
+##### Patch Changes
+
+- ce15e30: Fixed repository url in `README.md`
+
+### `@backstage/plugin-auth-backend-module-okta-provider` (0.2.0 → 0.2.1)
+
+#### 0.2.1
+
+##### Patch Changes
+
+- ce15e30: Fixed repository url in `README.md`
+
+### `@backstage/plugin-auth-node` (0.6.0 → 0.6.1)
+
+#### 0.6.1
+
+##### Patch Changes
+
+- b6702ea: Added `AuthResolverContext.resolveOwnershipEntityRefs` as a way of accessing the default ownership resolution logic in sign-in resolvers, replacing `getDefaultOwnershipEntityRefs` from `@backstage/plugin-auth-backend`.
+
+### `@backstage/plugin-catalog-backend-module-ldap` (0.11.2 → 0.11.3)
+
+#### 0.11.3
+
+##### Patch Changes
+
+- e43f41b: Fix `config.d.ts` for `ldapOrg` being incorrect. The documentation says a single
+  object or an array are accepted, but the definition only allows an object.
+
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.6.7 → 0.6.8)
+
+#### 0.6.8
+
+##### Patch Changes
+
+- 612d1fd: Update `catalog.providers.microsoftGraphOrg.target` config def to be optional as this has a default value.
+
+### `@backstage/plugin-events-node` (0.4.8 → 0.4.9)
+
+#### 0.4.9
+
+##### Patch Changes
+
+- b95aa77: add `addHttpPostBodyParser` to events extension to allow body parse customization. This feature will enhance flexibility in handling HTTP POST requests in event-related operations.
+
+### `@backstage/plugin-home` (0.8.5 → 0.8.6)
+
+#### 0.8.6
+
+##### Patch Changes
+
+- 2d11521: The starred entities component uses the entity title or display name if it exists
+
+### `@backstage/plugin-home-react` (0.1.23 → 0.1.24)
+
+#### 0.1.24
+
+##### Patch Changes
+
+- c5a82fc: Don't render header divider on homepage cards if no title was specified.
+
+### `@backstage/plugin-kubernetes` (0.12.4 → 0.12.5)
+
+#### 0.12.5
+
+##### Patch Changes
+
+- d517d13: refactor: use `KUBERNETES_ANNOTATION` and `KUBERNETES_LABEL_SELECTOR_QUERY_ANNOTATION` annotations from `kubernetes-common`
+- ba9649a: Set deployment as the default group of Kubernetes entity content. It is just an example and shouldn't cause any visual difference since entity page tabs with just one entity content appear as normal tabs.
+
+### `@backstage/plugin-kubernetes-backend` (0.19.3 → 0.19.4)
+
+#### 0.19.4
+
+##### Patch Changes
+
+- d517d13: refactor: use `KUBERNETES_ANNOTATION` and `KUBERNETES_LABEL_SELECTOR_QUERY_ANNOTATION` annotations from `kubernetes-common`
+
+### `@backstage/plugin-kubernetes-common` (0.9.3 → 0.9.4)
+
+#### 0.9.4
+
+##### Patch Changes
+
+- d517d13: Export `backstage.io/kubernetes-id` and `backstage.io/kubernetes-label-selector` annotations as constants
+
+### `@backstage/plugin-notifications-backend` (0.5.3 → 0.5.4)
+
+#### 0.5.4
+
+##### Patch Changes
+
+- 20e8d12: Fix null topics being returned from notification API
+- 425a61d: Improved notifications router tests
+- d4c22b7: Make sure to post process broadcast notifications even without signals support
+
+### `@backstage/plugin-scaffolder-backend-module-azure` (0.2.6 → 0.2.7)
+
+#### 0.2.7
+
+##### Patch Changes
 
 - 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
 
-## `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.7 → 0.3.8)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.7 → 0.3.8)
 
-### 0.3.8
+#### 0.3.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
 
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.2.6 → 0.2.7)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.2.6 → 0.2.7)
 
-### 0.2.7
+#### 0.2.7
 
-#### Patch Changes
+##### Patch Changes
 
 - c56a279: Added `bitbucketCloud:branchRestriction:create` to allow users to create bitbucket cloud branch restrictions in templates
 - 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
 - e279c30: Fixing spelling mistake in `jsonschema`
 
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.6 → 0.2.7)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.6 → 0.2.7)
 
-### 0.2.7
+#### 0.2.7
 
-#### Patch Changes
+##### Patch Changes
 
 - 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
 
-## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.6 → 0.3.7)
+### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.6 → 0.3.7)
 
-### 0.3.7
+#### 0.3.7
 
-#### Patch Changes
+##### Patch Changes
 
 - 09cf038: Got rid of most `@backstage/backend-common` usages
 
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.7 → 0.3.8)
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.7 → 0.3.8)
 
-### 0.3.8
+#### 0.3.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 09cf038: Got rid of most `@backstage/backend-common` usages
 
-## `@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.6 → 0.2.7)
+### `@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.6 → 0.2.7)
 
-### 0.2.7
+#### 0.2.7
 
-#### Patch Changes
-
-- 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
-
-## `@backstage/plugin-scaffolder-backend-module-gitea` (0.2.6 → 0.2.7)
-
-### 0.2.7
-
-#### Patch Changes
+##### Patch Changes
 
 - 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
 
-## `@backstage/plugin-scaffolder-backend-module-github` (0.6.0 → 0.6.1)
+### `@backstage/plugin-scaffolder-backend-module-gitea` (0.2.6 → 0.2.7)
 
-### 0.6.1
+#### 0.2.7
 
-#### Patch Changes
+##### Patch Changes
+
+- 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
+
+### `@backstage/plugin-scaffolder-backend-module-github` (0.6.0 → 0.6.1)
+
+#### 0.6.1
+
+##### Patch Changes
 
 - 11bc3e6: Made "github:pages:enable" action idempotent
 - 3f45e0f: Made "github:environment:create" action idempotent
@@ -989,11 +1254,11 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
 - 8f9c54c: Made "github:repo:create" action idempotent
 - 0ae0c77: Made "publish:github:pull-request" action idempotent
 
-## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.8.0 → 0.8.1)
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.8.0 → 0.8.1)
 
-### 0.8.1
+#### 0.8.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 0df33ea: fix: Creating a repository in a user namespace would always lead to an error
 - 984b283: Made "gitlab:pipeline:trigger" action idempotent
@@ -1007,120 +1272,28 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
 - 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
 - 83ae330: Made "gitlab:group:migrate" action idempotent
 
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.5.6 → 0.5.7)
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.5.6 → 0.5.7)
 
-### 0.5.7
+#### 0.5.7
 
-#### Patch Changes
+##### Patch Changes
 
 - 09cf038: Got rid of most `@backstage/backend-common` usages
 
-## `@backstage/plugin-scaffolder-common` (1.5.9 → 1.5.10)
+### `@backstage/plugin-scaffolder-common` (1.5.9 → 1.5.10)
 
-### 1.5.10
+#### 1.5.10
 
-#### Patch Changes
+##### Patch Changes
 
 - 09cf038: Got rid of most `@backstage/backend-common` usages
 - 321b93e: Add optional `lifecycle` property to the spec field of Template entities.
 
-## `@backstage/plugin-scaffolder-node` (0.7.0 → 0.8.0)
+### `@backstage/plugin-scaffolder-react` (1.14.5 → 1.14.6)
 
-### 0.8.0
+#### 1.14.6
 
-#### Minor Changes
-
-- 1a58846: **DEPRECATION**: We've deprecated the old way of defining actions using `createTemplateAction` with raw `JSONSchema` and type parameters, as well as using `zod` through an import. You can now use the new format to define `createTemplateActions` with `zod` provided by the framework. This change also removes support for `logStream` in the `context` as well as moving the `logger` to an instance of `LoggerService`.
-
-  Before:
-
-  ```ts
-  createTemplateAction<{ repoUrl: string }, { test: string }>({
-    id: 'test',
-    schema: {
-      input: {
-        type: 'object',
-        required: ['repoUrl'],
-        properties: {
-          repoUrl: { type: 'string' },
-        },
-      },
-      output: {
-        type: 'object',
-        required: ['test'],
-        properties: {
-          test: { type: 'string' },
-        },
-      },
-    },
-    handler: async ctx => {
-      ctx.logStream.write('blob');
-    },
-  });
-
-  // or
-
-  createTemplateAction({
-    id: 'test',
-    schema: {
-      input: z.object({
-        repoUrl: z.string(),
-      }),
-      output: z.object({
-        test: z.string(),
-      }),
-    },
-    handler: async ctx => {
-      ctx.logStream.write('something');
-    },
-  });
-  ```
-
-  After:
-
-  ```ts
-  createTemplateAction({
-    id: 'test',
-    schema: {
-      input: {
-        repoUrl: d => d.string(),
-      },
-      output: {
-        test: d => d.string(),
-      },
-    },
-    handler: async ctx => {
-      // you can just use ctx.logger.log('...'), or if you really need a log stream you can do this:
-      const logStream = new PassThrough();
-      logStream.on('data', chunk => {
-        ctx.logger.info(chunk.toString());
-      });
-    },
-  });
-  ```
-
-#### Patch Changes
-
-- 09cf038: Got rid of most `@backstage/backend-common` usages
-- 4f8b5b6: Allow signing git commits using configured private PGP key in scaffolder
-
-## `@backstage/plugin-scaffolder-node-test-utils` (0.1.19 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- 36677bb: Use update `createTemplateAction` kinds
-
-#### Patch Changes
-
-- 09cf038: Got rid of most `@backstage/backend-common` usages
-
-## `@backstage/plugin-scaffolder-react` (1.14.5 → 1.14.6)
-
-### 1.14.6
-
-#### Patch Changes
+##### Patch Changes
 
 - 4d26652: Fix field extension validation not working when field is in dependencies in an array field
 - b3b7c9c: Deprecated the alpha `ScaffolderFormFieldsApi` and `formFieldsApiRef` as these are being replaced with a different solution.
@@ -1128,83 +1301,35 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
 - 3db64ba: Disable the submit button on creating
 - 34ea3f5: Updated dependency `flatted` to `3.3.3`.
 
-## `@backstage/plugin-search` (1.4.23 → 1.4.24)
+### `@backstage/plugin-search` (1.4.23 → 1.4.24)
 
-### 1.4.24
+#### 1.4.24
 
-#### Patch Changes
+##### Patch Changes
 
 - 49684fe: Expand the default kind filter to include all kinds from the System Model.
 
-## `@backstage/plugin-search-backend` (1.8.2 → 2.0.0)
+### `@backstage/plugin-search-backend-module-pg` (0.5.41 → 0.5.42)
 
-### 2.0.0
+#### 0.5.42
 
-#### Major Changes
-
-- d5c4a9d: **BREAKING** Removed support for the legacy backend system and references to `@backstage/backend-common`, please migrate to the new backend system.
-
-## `@backstage/plugin-search-backend-module-elasticsearch` (1.6.5 → 1.7.0)
-
-### 1.7.0
-
-#### Minor Changes
-
-- 5f66007: Add the option to configure the fuzziness of the elasticsearch results by defining the fuzziness and `prefix_length` property.
-
-#### Patch Changes
-
-- 37e5386: Allow `indexPrefix` configuration through the `app-config.yaml`
-
-## `@backstage/plugin-search-backend-module-explore` (0.2.8 → 0.3.0)
-
-### 0.3.0
-
-#### Minor Changes
-
-- d5c4a9d: **BREAKING** Removed support for the legacy backend system and references to `@backstage/backend-common`, please migrate to the new backend system.
-
-## `@backstage/plugin-search-backend-module-pg` (0.5.41 → 0.5.42)
-
-### 0.5.42
-
-#### Patch Changes
+##### Patch Changes
 
 - 8155b04: Enable normalization in postgres query to change the behavior of the search.
 
-## `@backstage/plugin-search-backend-module-techdocs` (0.3.6 → 0.4.0)
+### `@backstage/plugin-search-react` (1.8.6 → 1.8.7)
 
-### 0.4.0
+#### 1.8.7
 
-#### Minor Changes
-
-- d5c4a9d: **BREAKING** Removed support for the legacy backend system and references to `@backstage/backend-common`, please migrate to the new backend system.
-
-#### Patch Changes
-
-- d32bdc4: Added an extension point that allows for custom entity filtering during document collation.
-
-## `@backstage/plugin-search-react` (1.8.6 → 1.8.7)
-
-### 1.8.7
-
-#### Patch Changes
+##### Patch Changes
 
 - c37e480: Capture the number of search results in the search analytics event that correspond to the term entered.
 
-## `@backstage/plugin-signals` (0.0.16 → 0.0.17)
+### `@backstage/plugin-techdocs` (1.12.3 → 1.12.4)
 
-### 0.0.17
+#### 1.12.4
 
-#### Patch Changes
-
-- ac3e8c0: Fixed multiple signal connection attempts when there are multiple subscriptions at the same time
-
-## `@backstage/plugin-techdocs` (1.12.3 → 1.12.4)
-
-### 1.12.4
-
-#### Patch Changes
+##### Patch Changes
 
 - fffe3c0: Fixed double scrollbar issue that would appear on the Entity TechDocs view page that would stop the page from full scrolling to the top when navigating to a new page
 - 065e6b9: Excludes SVG styling from sanitization
@@ -1212,66 +1337,43 @@ Changes between 1.36.1 and 1.37.0 — 155 changed and 0 added packages.
 - ed1cb3e: Adds the page name of techdocs to the document's title.
 - fe4abb8: Updates logic to check for SVG sources when inlining them.
 
-## `@backstage/plugin-techdocs-backend` (1.11.6 → 2.0.0)
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.21 → 1.1.22)
 
-### 2.0.0
+#### 1.1.22
 
-#### Major Changes
-
-- d5c4a9d: **BREAKING** Removed support for the legacy backend, please migrate to the new backend system. Also removed deprecated `DefaultTechDocsCollatorFactory`. Use the `@backstage/plugin-search-backend-module-techdocs` for this instead. Finally, deprecated `DocsBuildStrategy` and `TechDocsDocument` were removed, use the versions in `@backstage/plugin-techdocs-node` instead.
-
-#### Patch Changes
-
-- 7828186: Minor type fix
-- 8f03776: Properly clean up temporary files on build failures
-
-## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.21 → 1.1.22)
-
-### 1.1.22
-
-#### Patch Changes
+##### Patch Changes
 
 - b5a8208: Added `TechDocsAddonsBlueprint` extension to allow adding of techdocs addons.
 
-## `@backstage/plugin-techdocs-node` (1.13.0 → 1.13.1)
+### `@backstage/plugin-techdocs-node` (1.13.0 → 1.13.1)
 
-### 1.13.1
+#### 1.13.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 052a10a: Bumps the version of the techdocs generator container used.
 
-## `@backstage/plugin-techdocs-react` (1.2.14 → 1.2.15)
+### `@backstage/plugin-techdocs-react` (1.2.14 → 1.2.15)
 
-### 1.2.15
+#### 1.2.15
 
-#### Patch Changes
+##### Patch Changes
 
 - b5a8208: Added `TechDocsAddonsBlueprint` extension to allow adding of techdocs addons.
 
-## `@backstage/plugin-user-settings-backend` (0.2.30 → 0.3.0)
+### `@backstage/repo-tools` (0.13.0 → 0.13.1)
 
-### 0.3.0
+#### 0.13.1
 
-#### Minor Changes
-
-- e202017: **BREAKING**: Removed support for the old backend system.
-
-  As part of this change the plugin export from `/alpha` as been removed. If you are currently importing `@backstage/plugin-user-settings-backend/alpha`, please update your import to `@backstage/plugin-user-settings-backend`.
-
-## `@backstage/repo-tools` (0.13.0 → 0.13.1)
-
-### 0.13.1
-
-#### Patch Changes
+##### Patch Changes
 
 - c7a58b2: Fix issue where generate-patch incorrectly encodes the locator not aligning with result of yarn patch
 
-## `@backstage/test-utils` (1.7.5 → 1.7.6)
+### `@backstage/test-utils` (1.7.5 → 1.7.6)
 
-### 1.7.6
+#### 1.7.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 37c6510: Moved `@types/jest` to `devDependencies`.
 

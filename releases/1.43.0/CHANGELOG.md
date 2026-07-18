@@ -2,331 +2,106 @@
 
 Changes between 1.42.5 and 1.43.0 — 161 changed and 2 added packages.
 
-Newly added: `@backstage/plugin-auth`, `@backstage/plugin-auth-backend-module-openshift-provider`.
+## Summary
 
-## `@backstage/plugin-auth` (new, 0.1.0)
+- [Newly added packages](#newly-added-packages): 2 packages
+- [Breaking changes](#breaking-changes): 3 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 7 packages
+- [Other minor version bumps](#other-minor-version-bumps): 11 packages
+- [Patch version bumps](#patch-version-bumps): 36 packages
 
-### 0.1.0
+## Table of contents
 
-#### Minor Changes
+- [Newly added packages](#newly-added-packages)
+  - [`@backstage/plugin-auth` (new, 0.1.0)](#backstageplugin-auth-new-010)
+  - [`@backstage/plugin-auth-backend-module-openshift-provider` (new, 0.1.0)](#backstageplugin-auth-backend-module-openshift-provider-new-010)
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/plugin-catalog-backend-module-msgraph` (0.7.3 → 0.8.0)](#backstageplugin-catalog-backend-module-msgraph-073--080)
+  - [`@backstage/plugin-catalog-backend-module-puppetdb` (0.2.13 → 0.2.14)](#backstageplugin-catalog-backend-module-puppetdb-0213--0214)
+  - [`@backstage/plugin-catalog-react` (1.20.1 → 1.21.0)](#backstageplugin-catalog-react-1201--1210)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/core-components` (0.17.5 → 0.18.0)](#backstagecore-components-0175--0180)
+  - [`@backstage/frontend-app-api` (0.12.0 → 0.13.0)](#backstagefrontend-app-api-0120--0130)
+  - [`@backstage/frontend-plugin-api` (0.11.0 → 0.12.0)](#backstagefrontend-plugin-api-0110--0120)
+  - [`@backstage/plugin-app` (0.2.0 → 0.3.0)](#backstageplugin-app-020--030)
+  - [`@backstage/plugin-catalog-backend-module-github` (0.10.2 → 0.11.0)](#backstageplugin-catalog-backend-module-github-0102--0110)
+  - [`@backstage/plugin-catalog-graph` (0.4.22 → 0.5.0)](#backstageplugin-catalog-graph-0422--050)
+  - [`@backstage/plugin-scaffolder-backend-module-github` (0.8.2 → 0.9.0)](#backstageplugin-scaffolder-backend-module-github-082--090)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/app-defaults` (1.6.5 → 1.7.0)](#backstageapp-defaults-165--170)
+  - [`@backstage/backend-test-utils` (1.8.0 → 1.9.0)](#backstagebackend-test-utils-180--190)
+  - [`@backstage/catalog-client` (1.11.0 → 1.12.0)](#backstagecatalog-client-1110--1120)
+  - [`@backstage/core-app-api` (1.18.0 → 1.19.0)](#backstagecore-app-api-1180--1190)
+  - [`@backstage/core-plugin-api` (1.10.9 → 1.11.0)](#backstagecore-plugin-api-1109--1110)
+  - [`@backstage/integration` (1.17.1 → 1.18.0)](#backstageintegration-1171--1180)
+  - [`@backstage/plugin-catalog-backend` (3.0.1 → 3.1.0)](#backstageplugin-catalog-backend-301--310)
+  - [`@backstage/plugin-catalog-node` (1.18.0 → 1.19.0)](#backstageplugin-catalog-node-1180--1190)
+  - [`@backstage/plugin-techdocs` (1.14.1 → 1.15.0)](#backstageplugin-techdocs-1141--1150)
+  - [`@backstage/plugin-techdocs-addons-test-utils` (1.0.52 → 1.1.0)](#backstageplugin-techdocs-addons-test-utils-1052--110)
+  - [`@backstage/plugin-techdocs-backend` (2.0.5 → 2.1.0)](#backstageplugin-techdocs-backend-205--210)
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/backend-defaults` (0.12.0 → 0.12.1)](#backstagebackend-defaults-0120--0121)
+  - [`@backstage/cli` (0.34.1 → 0.34.2)](#backstagecli-0341--0342)
+  - [`@backstage/config-loader` (1.10.2 → 1.10.3)](#backstageconfig-loader-1102--1103)
+  - [`@backstage/core-compat-api` (0.5.1 → 0.5.2)](#backstagecore-compat-api-051--052)
+  - [`@backstage/create-app` (0.7.3 → 0.7.4)](#backstagecreate-app-073--074)
+  - [`@backstage/frontend-defaults` (0.3.0 → 0.3.1)](#backstagefrontend-defaults-030--031)
+  - [`@backstage/frontend-test-utils` (0.3.5 → 0.3.6)](#backstagefrontend-test-utils-035--036)
+  - [`@backstage/plugin-app-backend` (0.5.5 → 0.5.6)](#backstageplugin-app-backend-055--056)
+  - [`@backstage/plugin-auth-backend` (0.25.3 → 0.25.4)](#backstageplugin-auth-backend-0253--0254)
+  - [`@backstage/plugin-auth-node` (0.6.6 → 0.6.7)](#backstageplugin-auth-node-066--067)
+  - [`@backstage/plugin-auth-react` (0.1.18 → 0.1.19)](#backstageplugin-auth-react-0118--0119)
+  - [`@backstage/plugin-catalog` (1.31.2 → 1.31.3)](#backstageplugin-catalog-1312--1313)
+  - [`@backstage/plugin-catalog-backend-module-gitlab` (0.7.2 → 0.7.3)](#backstageplugin-catalog-backend-module-gitlab-072--073)
+  - [`@backstage/plugin-events-backend` (0.5.5 → 0.5.6)](#backstageplugin-events-backend-055--056)
+  - [`@backstage/plugin-events-node` (0.4.14 → 0.4.15)](#backstageplugin-events-node-0414--0415)
+  - [`@backstage/plugin-home` (0.8.11 → 0.8.12)](#backstageplugin-home-0811--0812)
+  - [`@backstage/plugin-kubernetes-backend` (0.20.1 → 0.20.2)](#backstageplugin-kubernetes-backend-0201--0202)
+  - [`@backstage/plugin-mcp-actions-backend` (0.1.2 → 0.1.3)](#backstageplugin-mcp-actions-backend-012--013)
+  - [`@backstage/plugin-notifications` (0.5.8 → 0.5.9)](#backstageplugin-notifications-058--059)
+  - [`@backstage/plugin-notifications-backend` (0.5.9 → 0.5.10)](#backstageplugin-notifications-backend-059--0510)
+  - [`@backstage/plugin-notifications-backend-module-slack` (0.1.4 → 0.1.5)](#backstageplugin-notifications-backend-module-slack-014--015)
+  - [`@backstage/plugin-notifications-node` (0.2.18 → 0.2.19)](#backstageplugin-notifications-node-0218--0219)
+  - [`@backstage/plugin-org` (0.6.43 → 0.6.44)](#backstageplugin-org-0643--0644)
+  - [`@backstage/plugin-scaffolder` (1.34.0 → 1.34.1)](#backstageplugin-scaffolder-1340--1341)
+  - [`@backstage/plugin-scaffolder-backend` (2.2.0 → 2.2.1)](#backstageplugin-scaffolder-backend-220--221)
+  - [`@backstage/plugin-scaffolder-backend-module-gitlab` (0.9.4 → 0.9.5)](#backstageplugin-scaffolder-backend-module-gitlab-094--095)
+  - [`@backstage/plugin-scaffolder-react` (1.19.0 → 1.19.1)](#backstageplugin-scaffolder-react-1190--1191)
+  - [`@backstage/plugin-search-backend` (2.0.5 → 2.0.6)](#backstageplugin-search-backend-205--206)
+  - [`@backstage/plugin-search-backend-module-elasticsearch` (1.7.5 → 1.7.6)](#backstageplugin-search-backend-module-elasticsearch-175--176)
+  - [`@backstage/plugin-search-backend-module-explore` (0.3.6 → 0.3.7)](#backstageplugin-search-backend-module-explore-036--037)
+  - [`@backstage/plugin-techdocs-react` (1.3.2 → 1.3.3)](#backstageplugin-techdocs-react-132--133)
+  - [`@backstage/plugin-user-settings` (0.8.25 → 0.8.26)](#backstageplugin-user-settings-0825--0826)
+  - [`@backstage/repo-tools` (0.15.1 → 0.15.2)](#backstagerepo-tools-0151--0152)
+  - [`@backstage/types` (1.2.1 → 1.2.2)](#backstagetypes-121--122)
+  - [`@backstage/ui` (0.7.0 → 0.7.1)](#backstageui-070--071)
+  - [`@techdocs/cli` (1.9.7 → 1.9.8)](#techdocscli-197--198)
+
+## Newly added packages
+
+### `@backstage/plugin-auth` (new, 0.1.0)
+
+#### 0.1.0
+
+##### Minor Changes
 
 - 54ddfef: Initial publish of the `auth` frontend package
 
-## `@backstage/plugin-auth-backend-module-openshift-provider` (new, 0.1.0)
+### `@backstage/plugin-auth-backend-module-openshift-provider` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 5a84253: Add new `auth-backend-module-openshift-provider`. This authentication provider enables Backstage to sign in with OpenShift.
 
-## `@backstage/app-defaults` (1.6.5 → 1.7.0)
+## Breaking changes
 
-### 1.7.0
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.7.3 → 0.8.0)
 
-#### Minor Changes
+#### 0.8.0
 
-- 9956704: Add and configure the OpenShift authentication provider to the default APIs.
-
-## `@backstage/backend-defaults` (0.12.0 → 0.12.1)
-
-### 0.12.1
-
-#### Patch Changes
-
-- 33bd4d0: Deduplicate discovered features discovered with discoveryFeatureLoader
-- 4eda590: Fixed cache namespace and key prefix separator configuration to properly use configured values instead of hardcoded plugin ID. The cache manager now correctly combines the configured namespace with plugin IDs using the configured separator for Redis and Valkey. Memcache and memory store continue to use plugin ID as namespace.
-- f244e61: Add `backend.logger` config options to configure the `RootLoggerService`.
-
-  Read more about the new configuration options in the
-  [Root Logger Service](https://backstage.io/docs/backend-system/core-services/root-logger/)
-  documentation.
-
-## `@backstage/backend-test-utils` (1.8.0 → 1.9.0)
-
-### 1.9.0
-
-#### Minor Changes
-
-- 4e2c237: The `mockServices.rootConfig()` instance now has an `update` method that can be used to test configuration subscriptions and updates.
-
-## `@backstage/catalog-client` (1.11.0 → 1.12.0)
-
-### 1.12.0
-
-#### Minor Changes
-
-- 0e9ec44: Introduced new `streamEntities` async generator method for the catalog.
-
-  Catalog API and Catalog Service now includes a `streamEntities` method that allows for streaming entities from the catalog.
-  This method is designed to handle large datasets efficiently by processing entities in a stream rather than loading them
-  all into memory at once. This is useful when you need to fetch a large number of entities but do not want to use pagination
-  or fetch all entities at once.
-
-  Example usage:
-
-  ```ts
-  const pageStream = catalogClient.streamEntities({ pageSize: 100 }, { token });
-  for await (const page of pageStream) {
-    // Handle page of entities
-    for (const entity of page) {
-      console.log(entity);
-    }
-  }
-  ```
-
-#### Patch Changes
-
-- 0efcc97: Updated generated schemas
-
-## `@backstage/cli` (0.34.1 → 0.34.2)
-
-### 0.34.2
-
-#### Patch Changes
-
-- e6f45dc: Updated the WebPack configuration to use `contenthash`. This fixes an issue were builds would sometimes generate output files with the same name but different content across builds, leading to breakages when loading the frontend app.
-- fffd434: Disallow import fallback of critical shared dependencies in module federation.
-- 080f252: Fixed the `new-frontend-plugin` template that was incorrectly passing `id` instead of `pluginId` to `createFrontendPlugin` and unnecessarily importing `React`.
-- e0db9b8: Modify the `backstage.json` also for custom patterns if it extends the default pattern.
-
-  Examples:
-
-  - `@backstage/*` (default pattern)
-  - `@{backstage,backstage-community}/*`
-  - `@{extra1,backstage,extra2}/*`
-
-- 275bda8: Fixed an issue that could cause conflicts of detected modules in workspaces with multiple apps.
-- e1adce4: Updated the backend plugin template to use a new pattern for the `TodoListService` that reduces boilerplate.
-
-## `@backstage/config-loader` (1.10.2 → 1.10.3)
-
-### 1.10.3
-
-#### Patch Changes
-
-- a73f495: Allow using `BACKSTAGE_ENV` for loading environment specific config files
-
-## `@backstage/core-app-api` (1.18.0 → 1.19.0)
-
-### 1.19.0
-
-#### Minor Changes
-
-- 3fca906: Add `OpenShiftAuth` helper to create default OAuth flow for OpenShift.
-
-#### Patch Changes
-
-- 5ae6d9d: feat: support no en languages
-
-## `@backstage/core-compat-api` (0.5.1 → 0.5.2)
-
-### 0.5.2
-
-#### Patch Changes
-
-- dc01d6f: Fix for `compatWrapper` creating many wrapping `Providers` when they should not
-
-## `@backstage/core-components` (0.17.5 → 0.18.0)
-
-### 0.18.0
-
-#### Minor Changes
-
-- b9a87f4: Add optional `distance` property to `DependencyEdge` to reflect the distance to a root.
-
-#### Patch Changes
-
-- 1ad3d94: Dependency graph can now be opened in full screen mode
-- e409bec: Fixes for rendering initials in the avatar component.
-- ae7d426: update about card links style for pretty display with other language
-
-## `@backstage/core-plugin-api` (1.10.9 → 1.11.0)
-
-### 1.11.0
-
-#### Minor Changes
-
-- 5114627: Make `openshiftAuthApiRef` available in `@backstage/core-plugin-api`.
-
-## `@backstage/create-app` (0.7.3 → 0.7.4)
-
-### 0.7.4
-
-#### Patch Changes
-
-- b2d9fc1: Creates a plugin that redirects from the Home page to the Catalog index page to avoid seeing a not found page error when starting the app.
-- 020d484: Bumped create-app version.
-- 02dbe8e: Add missing dependency to `@backstage/cli`, `@backstage/core-plugin-api` and `@backstage/integration-react`
-
-## `@backstage/frontend-app-api` (0.12.0 → 0.13.0)
-
-### 0.13.0
-
-#### Minor Changes
-
-- 6516c3d: The `createSpecializedApp` no longer throws when encountering many common errors when starting up the app. It will instead return them through the `errors` property so that they can be handled more gracefully in the app.
-
-## `@backstage/frontend-defaults` (0.3.0 → 0.3.1)
-
-### 0.3.1
-
-#### Patch Changes
-
-- 6516c3d: The default app now leverages the new error reporting functionality from `@backstage/frontend-app-api`. If there are critical errors during startup, an error screen that shows a summary of all errors will now be shown, rather than leaving the screen blank. Other errors will be logged as warnings in the console.
-
-## `@backstage/frontend-plugin-api` (0.11.0 → 0.12.0)
-
-### 0.12.0
-
-#### Minor Changes
-
-- 894d514: Make `openshiftApiRef` available to the new frontend system.
-
-#### Patch Changes
-
-- 2fb8b04: Improved the types of `createFrontendPlugin` and `createFrontendModule` so that errors due to incompatible options are indicated more clearly.
-
-## `@backstage/frontend-test-utils` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
-
-- 6516c3d: Internal update to use and throw app errors.
-
-## `@backstage/integration` (1.17.1 → 1.18.0)
-
-### 1.18.0
-
-#### Minor Changes
-
-- 03bdc68: Added support for limiting GithubAppCredentialsMux to specific apps
-
-#### Patch Changes
-
-- 56897d7: Fixes issue with Github credentials provider which fails to match organization name if using allowedInstallationOwners
-
-## `@backstage/plugin-app` (0.2.0 → 0.3.0)
-
-### 0.3.0
-
-#### Minor Changes
-
-- 99790db: Add implementation of OpenShift authentication provider.
-
-## `@backstage/plugin-app-backend` (0.5.5 → 0.5.6)
-
-### 0.5.6
-
-#### Patch Changes
-
-- afd368e: Internal update to not expose the old `createRouter`.
-
-## `@backstage/plugin-auth-backend` (0.25.3 → 0.25.4)
-
-### 0.25.4
-
-#### Patch Changes
-
-- 1d47bf3: Implementing Dynamic Client Registration with the OIDC server. You can enable this by setting `auth.experimentalDynamicClientRegistration.enabled` in `app-config.yaml`. This is highly experimental, but feedback welcome.
-- 54ddfef: Updating plugin metadata
-
-## `@backstage/plugin-auth-node` (0.6.6 → 0.6.7)
-
-### 0.6.7
-
-#### Patch Changes
-
-- 54ddfef: Updating plugin metadata
-- 3aff9e1: Changes OAuth cookies from domain-scoped to host-only by avoid setting the domain attribute in the default cookie configurer.
-
-## `@backstage/plugin-auth-react` (0.1.18 → 0.1.19)
-
-### 0.1.19
-
-#### Patch Changes
-
-- 54ddfef: Updating plugin metadata
-
-## `@backstage/plugin-catalog` (1.31.2 → 1.31.3)
-
-### 1.31.3
-
-#### Patch Changes
-
-- 4316c11: Catalog table columns support i18n
-- ce1239e: Auto-focus the first menu item in `EntityContextMenu`, and do not render a divider if an empty array is passed to `UNSTABLE_extraContextMenuItems`.
-- 85c5e04: Fix incorrect `defaultTarget` on `createComponentRouteRef`.
-
-## `@backstage/plugin-catalog-backend` (3.0.1 → 3.1.0)
-
-### 3.1.0
-
-#### Minor Changes
-
-- 9b40a55: Add support for specifying an entity `spec.type` in `catalog.rules` and `catalog.locations.rules` within the catalog configuration.
-
-  For example, this enables allowing all `Template` entities with the type `website`:
-
-  ```diff
-    catalog:
-      rules:
-        - allow:
-            - Component
-            - API
-            - Resource
-            - System
-            - Domain
-            - Location
-  +     - allow:
-  +         - kind: Template
-  +           spec.type: website
-          locations:
-            - type: url
-              pattern: https://github.com/org/*\/blob/master/*.yaml
-  ```
-
-#### Patch Changes
-
-- 37b4eaf: The 'get-catalog-entity' action now throws a ConflictError instead of generic Error if multiple entities are found, so MCP call doesn't fail with 500.
-- 2bbd24f: Order catalog processors by priority.
-
-  This change enables the ordering of catalog processors by their priority,
-  allowing for more control over the catalog processing sequence.
-  The default priority is set to 20, and processors can be assigned a custom
-  priority to influence their execution order. Lower number indicates higher priority.
-  The priority can be set by implementing the `getPriority` method in the processor class
-  or by adding a `catalog.processors.<processorName>.priority` configuration
-  in the `app-config.yaml` file. The configuration takes precedence over the method.
-
-- e934a27: Updating `catalog:get-catalog-entity` action to be `readOnly` and non destructive
-- 0efcc97: Updated generated schemas
-- 2204f5b: Prevent deadlock in catalog deferred stitching
-- 58874c4: Add support to disable catalog providers and processors via configuration
-- a4c82ad: Only run provider orphan cleanup if the engine is started in the first place
-
-## `@backstage/plugin-catalog-backend-module-github` (0.10.2 → 0.11.0)
-
-### 0.11.0
-
-#### Minor Changes
-
-- 03bdc68: Added support for discovery by app
-
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.7.2 → 0.7.3)
-
-### 0.7.3
-
-#### Patch Changes
-
-- ea80e76: When possible, requests a more limited set of results from the Gitlab projects API, which can reduce the amount of network traffic required to sync with Gitlab.
-
-## `@backstage/plugin-catalog-backend-module-msgraph` (0.7.3 → 0.8.0)
-
-### 0.8.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 577f0ed: **BREAKING**: Encode query filters for requests made to msgraph. If you currently have manually encoded characters in a filter, this is a breaking change and must be updated to avoid requests being double encoded.
 
@@ -336,32 +111,23 @@ Newly added: `@backstage/plugin-auth`, `@backstage/plugin-auth-backend-module-op
   +    filter: department in('MARKETING', 'RESEARCH & DEVELOPMENT')
   ```
 
-#### Patch Changes
+##### Patch Changes
 
 - 7597781: Ensure that msgraph parent group stays same in case the group has multiple parents
 
-## `@backstage/plugin-catalog-backend-module-puppetdb` (0.2.13 → 0.2.14)
+### `@backstage/plugin-catalog-backend-module-puppetdb` (0.2.13 → 0.2.14)
 
-### 0.2.14
+#### 0.2.14
 
-#### Patch Changes
+##### Patch Changes
 
 - afd368e: **BREAKING ALPHA**: The module has been moved from the `/alpha` export to the root of the package.
 
-## `@backstage/plugin-catalog-graph` (0.4.22 → 0.5.0)
+### `@backstage/plugin-catalog-react` (1.20.1 → 1.21.0)
 
-### 0.5.0
+#### 1.21.0
 
-#### Minor Changes
-
-- ae6b606: Support custom relations by using an API to define known relations and which to show by default
-  Fixes "simplified" bug (#30121) which caused graphs not to be simplified
-
-## `@backstage/plugin-catalog-node` (1.18.0 → 1.19.0)
-
-### 1.19.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 0e9ec44: Introduced new `streamEntities` async generator method for the catalog.
 
@@ -382,172 +148,79 @@ Newly added: `@backstage/plugin-auth`, `@backstage/plugin-auth-backend-module-op
   }
   ```
 
-#### Patch Changes
-
-- 2bbd24f: Order catalog processors by priority.
-
-  This change enables the ordering of catalog processors by their priority,
-  allowing for more control over the catalog processing sequence.
-  The default priority is set to 20, and processors can be assigned a custom
-  priority to influence their execution order. Lower number indicates higher priority.
-  The priority can be set by implementing the `getPriority` method in the processor class
-  or by adding a `catalog.processors.<processorName>.priority` configuration
-  in the `app-config.yaml` file. The configuration takes precedence over the method.
-
-## `@backstage/plugin-catalog-react` (1.20.1 → 1.21.0)
-
-### 1.21.0
-
-#### Minor Changes
-
-- 0e9ec44: Introduced new `streamEntities` async generator method for the catalog.
-
-  Catalog API and Catalog Service now includes a `streamEntities` method that allows for streaming entities from the catalog.
-  This method is designed to handle large datasets efficiently by processing entities in a stream rather than loading them
-  all into memory at once. This is useful when you need to fetch a large number of entities but do not want to use pagination
-  or fetch all entities at once.
-
-  Example usage:
-
-  ```ts
-  const pageStream = catalogClient.streamEntities({ pageSize: 100 }, { token });
-  for await (const page of pageStream) {
-    // Handle page of entities
-    for (const entity of page) {
-      console.log(entity);
-    }
-  }
-  ```
-
-#### Patch Changes
+##### Patch Changes
 
 - 0174799: Fix a potential race condition in EntityListProvider when selecting filters
 - 4316c11: Catalog table columns support i18n
 - 79ff318: Removed the deprecation warning when not passing an explicit type to `EntityCardBlueprint`. Omitting the type is now intended, allowing the layout to pick the default type instead, typically `content`.
 - ad0f58d: Support `default*` for older packages as this package is in range for breaking `/alpha` changes
 
-## `@backstage/plugin-events-backend` (0.5.5 → 0.5.6)
+## 0.x minor version bumps
 
-### 0.5.6
+### `@backstage/core-components` (0.17.5 → 0.18.0)
 
-#### Patch Changes
+#### 0.18.0
 
-- 0efcc97: Updated generated schemas
+##### Minor Changes
 
-## `@backstage/plugin-events-node` (0.4.14 → 0.4.15)
+- b9a87f4: Add optional `distance` property to `DependencyEdge` to reflect the distance to a root.
 
-### 0.4.15
+##### Patch Changes
 
-#### Patch Changes
+- 1ad3d94: Dependency graph can now be opened in full screen mode
+- e409bec: Fixes for rendering initials in the avatar component.
+- ae7d426: update about card links style for pretty display with other language
 
-- 0efcc97: Updated generated schemas
+### `@backstage/frontend-app-api` (0.12.0 → 0.13.0)
 
-## `@backstage/plugin-home` (0.8.11 → 0.8.12)
+#### 0.13.0
 
-### 0.8.12
+##### Minor Changes
 
-#### Patch Changes
+- 6516c3d: The `createSpecializedApp` no longer throws when encountering many common errors when starting up the app. It will instead return them through the `errors` property so that they can be handled more gracefully in the app.
 
-- 929c55a: Fixed race condition in CustomHomepageGrid by waiting for storage to load before rendering custom layout to prevent
-  rendering of the default content.
+### `@backstage/frontend-plugin-api` (0.11.0 → 0.12.0)
 
-## `@backstage/plugin-kubernetes-backend` (0.20.1 → 0.20.2)
+#### 0.12.0
 
-### 0.20.2
+##### Minor Changes
 
-#### Patch Changes
+- 894d514: Make `openshiftApiRef` available to the new frontend system.
 
-- dd7b6d2: Fix a bug where `getDefault` in the `kubernetesFetcherExtensionPoint` had the wrong `this` value
-- 80cf8c9: Fix issue with default objects not being loaded properly
+##### Patch Changes
 
-## `@backstage/plugin-mcp-actions-backend` (0.1.2 → 0.1.3)
+- 2fb8b04: Improved the types of `createFrontendPlugin` and `createFrontendModule` so that errors due to incompatible options are indicated more clearly.
 
-### 0.1.3
+### `@backstage/plugin-app` (0.2.0 → 0.3.0)
 
-#### Patch Changes
+#### 0.3.0
 
-- 1d47bf3: Proxy `/.well-known/oauth-authorization-server` to `/.well-known/openid-configuration` on `auth-backend` when `auth.experimentalDynamicClientRegistration.enabled` is enabled.
-- 7f2a4a0: Updating docs
-- d08b0c9: The MCP backend will now convert known Backstage errors into textual responses with `isError: true`.
-  The error message can be useful for an LLM to understand and maybe give back to the user.
-  Previously all errors where thrown out to `@modelcontextprotocol/sdk` which causes a generic 500.
+##### Minor Changes
 
-## `@backstage/plugin-notifications` (0.5.8 → 0.5.9)
+- 99790db: Add implementation of OpenShift authentication provider.
 
-### 0.5.9
+### `@backstage/plugin-catalog-backend-module-github` (0.10.2 → 0.11.0)
 
-#### Patch Changes
+#### 0.11.0
 
-- 4815b12: Fixed missing app context when rendering the notifications view
+##### Minor Changes
 
-## `@backstage/plugin-notifications-backend` (0.5.9 → 0.5.10)
+- 03bdc68: Added support for discovery by app
 
-### 0.5.10
+### `@backstage/plugin-catalog-graph` (0.4.22 → 0.5.0)
 
-#### Patch Changes
+#### 0.5.0
 
-- a95cebd: Internal refactoring for better type support
-- 7e7ed57: A new extension point was added that can be used to modify how the users receiving notifications
-  are resolved. The interface passed to the extension point should only return complete user entity references
-  based on the notification target references and the excluded entity references. Note that the inputs are lists
-  of entity references that can be any entity kind, not just user entities.
+##### Minor Changes
 
-  Using this extension point will override the default behavior of resolving users with the
-  `DefaultNotificationRecipientResolver`.
+- ae6b606: Support custom relations by using an API to define known relations and which to show by default
+  Fixes "simplified" bug (#30121) which caused graphs not to be simplified
 
-## `@backstage/plugin-notifications-backend-module-slack` (0.1.4 → 0.1.5)
+### `@backstage/plugin-scaffolder-backend-module-github` (0.8.2 → 0.9.0)
 
-### 0.1.5
+#### 0.9.0
 
-#### Patch Changes
-
-- a95cebd: Internal refactoring for better type support
-
-## `@backstage/plugin-notifications-node` (0.2.18 → 0.2.19)
-
-### 0.2.19
-
-#### Patch Changes
-
-- 7e7ed57: A new extension point was added that can be used to modify how the users receiving notifications
-  are resolved. The interface passed to the extension point should only return complete user entity references
-  based on the notification target references and the excluded entity references. Note that the inputs are lists
-  of entity references that can be any entity kind, not just user entities.
-
-  Using this extension point will override the default behavior of resolving users with the
-  `DefaultNotificationRecipientResolver`.
-
-## `@backstage/plugin-org` (0.6.43 → 0.6.44)
-
-### 0.6.44
-
-#### Patch Changes
-
-- 22b69f2: Fixing issue with extra slash in the routing
-
-## `@backstage/plugin-scaffolder` (1.34.0 → 1.34.1)
-
-### 1.34.1
-
-#### Patch Changes
-
-- 0d415ae: Render a TechDocs link on the Scaffolder Template List page when templates include either `backstage.io/techdocs-ref` or `backstage.io/techdocs-entity` annotations, using the shared `buildTechDocsURL` helper. Also adds tests to verify both annotations and optional `backstage.io/techdocs-entity-path` are respected.
-- 7151260: Prevent the MultiEntityPicker from removing options present in form state when new options are selected
-
-## `@backstage/plugin-scaffolder-backend` (2.2.0 → 2.2.1)
-
-### 2.2.1
-
-#### Patch Changes
-
-- a57185f: Added support for executing actions from the `ActionsRegistry` in the `scaffolder-backend`
-- c3405db: Fixed a regression that prevented uploads greater than 100KB. Uploads up to 10MB are supported again.
-
-## `@backstage/plugin-scaffolder-backend-module-github` (0.8.2 → 0.9.0)
-
-### 0.9.0
-
-#### Minor Changes
+##### Minor Changes
 
 - f0f06b4: Adding a new scaffolder action `github:issues:create` following the reference of `github:issues:label` with `dryRun` testing possibility
 
@@ -581,7 +254,7 @@ Newly added: `@backstage/plugin-auth`, `@backstage/plugin-auth-backend-module-op
           url: ${{ steps['create-simple-issue'].output.issueUrl }}
   ```
 
-#### Patch Changes
+##### Patch Changes
 
 - aee107b: Add `auto_init` option to `github:repo:create` action to create repository with an initial commit containing a README.md file
 
@@ -600,126 +273,536 @@ Newly added: `@backstage/plugin-auth`, `@backstage/plugin-auth-backend-module-op
 
 - 6393b78: Add block creations field in github branch protection scaffolder actions
 
-## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.9.4 → 0.9.5)
+## Other minor version bumps
 
-### 0.9.5
+### `@backstage/app-defaults` (1.6.5 → 1.7.0)
 
-#### Patch Changes
+#### 1.7.0
 
-- a84ddea: The log message now indicates that the pipeline trigger token was deleted and not pipeline itself.
+##### Minor Changes
 
-## `@backstage/plugin-scaffolder-react` (1.19.0 → 1.19.1)
+- 9956704: Add and configure the OpenShift authentication provider to the default APIs.
 
-### 1.19.1
+### `@backstage/backend-test-utils` (1.8.0 → 1.9.0)
 
-#### Patch Changes
+#### 1.9.0
 
-- 58fc108: Fix scaffolder task log stream not having a minimum height
+##### Minor Changes
 
-## `@backstage/plugin-search-backend` (2.0.5 → 2.0.6)
+- 4e2c237: The `mockServices.rootConfig()` instance now has an `update` method that can be used to test configuration subscriptions and updates.
 
-### 2.0.6
+### `@backstage/catalog-client` (1.11.0 → 1.12.0)
 
-#### Patch Changes
+#### 1.12.0
+
+##### Minor Changes
+
+- 0e9ec44: Introduced new `streamEntities` async generator method for the catalog.
+
+  Catalog API and Catalog Service now includes a `streamEntities` method that allows for streaming entities from the catalog.
+  This method is designed to handle large datasets efficiently by processing entities in a stream rather than loading them
+  all into memory at once. This is useful when you need to fetch a large number of entities but do not want to use pagination
+  or fetch all entities at once.
+
+  Example usage:
+
+  ```ts
+  const pageStream = catalogClient.streamEntities({ pageSize: 100 }, { token });
+  for await (const page of pageStream) {
+    // Handle page of entities
+    for (const entity of page) {
+      console.log(entity);
+    }
+  }
+  ```
+
+##### Patch Changes
 
 - 0efcc97: Updated generated schemas
 
-## `@backstage/plugin-search-backend-module-elasticsearch` (1.7.5 → 1.7.6)
+### `@backstage/core-app-api` (1.18.0 → 1.19.0)
 
-### 1.7.6
+#### 1.19.0
 
-#### Patch Changes
+##### Minor Changes
 
-- cde70ca: Added support for batchKeyField in the Elasticsearch indexer to allow consistent document IDs during bulk uploads.
+- 3fca906: Add `OpenShiftAuth` helper to create default OAuth flow for OpenShift.
 
-## `@backstage/plugin-search-backend-module-explore` (0.3.6 → 0.3.7)
+##### Patch Changes
 
-### 0.3.7
+- 5ae6d9d: feat: support no en languages
 
-#### Patch Changes
+### `@backstage/core-plugin-api` (1.10.9 → 1.11.0)
 
-- 9a93520: Deprecate and mark explore collator as moved
+#### 1.11.0
 
-## `@backstage/plugin-techdocs` (1.14.1 → 1.15.0)
+##### Minor Changes
 
-### 1.15.0
+- 5114627: Make `openshiftAuthApiRef` available in `@backstage/core-plugin-api`.
 
-#### Minor Changes
+### `@backstage/integration` (1.17.1 → 1.18.0)
+
+#### 1.18.0
+
+##### Minor Changes
+
+- 03bdc68: Added support for limiting GithubAppCredentialsMux to specific apps
+
+##### Patch Changes
+
+- 56897d7: Fixes issue with Github credentials provider which fails to match organization name if using allowedInstallationOwners
+
+### `@backstage/plugin-catalog-backend` (3.0.1 → 3.1.0)
+
+#### 3.1.0
+
+##### Minor Changes
+
+- 9b40a55: Add support for specifying an entity `spec.type` in `catalog.rules` and `catalog.locations.rules` within the catalog configuration.
+
+  For example, this enables allowing all `Template` entities with the type `website`:
+
+  ```diff
+    catalog:
+      rules:
+        - allow:
+            - Component
+            - API
+            - Resource
+            - System
+            - Domain
+            - Location
+  +     - allow:
+  +         - kind: Template
+  +           spec.type: website
+          locations:
+            - type: url
+              pattern: https://github.com/org/*\/blob/master/*.yaml
+  ```
+
+##### Patch Changes
+
+- 37b4eaf: The 'get-catalog-entity' action now throws a ConflictError instead of generic Error if multiple entities are found, so MCP call doesn't fail with 500.
+- 2bbd24f: Order catalog processors by priority.
+
+  This change enables the ordering of catalog processors by their priority,
+  allowing for more control over the catalog processing sequence.
+  The default priority is set to 20, and processors can be assigned a custom
+  priority to influence their execution order. Lower number indicates higher priority.
+  The priority can be set by implementing the `getPriority` method in the processor class
+  or by adding a `catalog.processors.<processorName>.priority` configuration
+  in the `app-config.yaml` file. The configuration takes precedence over the method.
+
+- e934a27: Updating `catalog:get-catalog-entity` action to be `readOnly` and non destructive
+- 0efcc97: Updated generated schemas
+- 2204f5b: Prevent deadlock in catalog deferred stitching
+- 58874c4: Add support to disable catalog providers and processors via configuration
+- a4c82ad: Only run provider orphan cleanup if the engine is started in the first place
+
+### `@backstage/plugin-catalog-node` (1.18.0 → 1.19.0)
+
+#### 1.19.0
+
+##### Minor Changes
+
+- 0e9ec44: Introduced new `streamEntities` async generator method for the catalog.
+
+  Catalog API and Catalog Service now includes a `streamEntities` method that allows for streaming entities from the catalog.
+  This method is designed to handle large datasets efficiently by processing entities in a stream rather than loading them
+  all into memory at once. This is useful when you need to fetch a large number of entities but do not want to use pagination
+  or fetch all entities at once.
+
+  Example usage:
+
+  ```ts
+  const pageStream = catalogClient.streamEntities({ pageSize: 100 }, { token });
+  for await (const page of pageStream) {
+    // Handle page of entities
+    for (const entity of page) {
+      console.log(entity);
+    }
+  }
+  ```
+
+##### Patch Changes
+
+- 2bbd24f: Order catalog processors by priority.
+
+  This change enables the ordering of catalog processors by their priority,
+  allowing for more control over the catalog processing sequence.
+  The default priority is set to 20, and processors can be assigned a custom
+  priority to influence their execution order. Lower number indicates higher priority.
+  The priority can be set by implementing the `getPriority` method in the processor class
+  or by adding a `catalog.processors.<processorName>.priority` configuration
+  in the `app-config.yaml` file. The configuration takes precedence over the method.
+
+### `@backstage/plugin-techdocs` (1.14.1 → 1.15.0)
+
+#### 1.15.0
+
+##### Minor Changes
 
 - a0b604c: Adding redirect handling for TechDocs URLs that reference entities that now reference an external entity for TechDocs. Including tests and documentation.
 
-#### Patch Changes
+##### Patch Changes
 
 - 313cec7: Updated dependency `dompurify` to `^3.2.4`.
 - 8d18d23: TechDocs page titles have been improved, especially for deeply nested pages.
 - 1dfee19: Reverts a change in CSS layout that shifted the content of the Techdocs too far to the left.
 - 4ce5831: Support Techdocs redirect with dompurify 3.2.6+
 
-## `@backstage/plugin-techdocs-addons-test-utils` (1.0.52 → 1.1.0)
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.52 → 1.1.0)
 
-### 1.1.0
+#### 1.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 72543e9: Adding catalogApiRef to test-utils to support catalog API usage by TechDocs reader page.
 
-## `@backstage/plugin-techdocs-backend` (2.0.5 → 2.1.0)
+### `@backstage/plugin-techdocs-backend` (2.0.5 → 2.1.0)
 
-### 2.1.0
+#### 2.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 063cdc5: Techdocs: support HumanDuration for cache TTL and timeout configuration
 - a0b604c: Adding new entity that specifies an external entity in the techdocs-entity annotation and updates to documentation regarding TechDocs redirects.
 
-## `@backstage/plugin-techdocs-react` (1.3.2 → 1.3.3)
+## Patch version bumps
 
-### 1.3.3
+### `@backstage/backend-defaults` (0.12.0 → 0.12.1)
 
-#### Patch Changes
+#### 0.12.1
+
+##### Patch Changes
+
+- 33bd4d0: Deduplicate discovered features discovered with discoveryFeatureLoader
+- 4eda590: Fixed cache namespace and key prefix separator configuration to properly use configured values instead of hardcoded plugin ID. The cache manager now correctly combines the configured namespace with plugin IDs using the configured separator for Redis and Valkey. Memcache and memory store continue to use plugin ID as namespace.
+- f244e61: Add `backend.logger` config options to configure the `RootLoggerService`.
+
+  Read more about the new configuration options in the
+  [Root Logger Service](https://backstage.io/docs/backend-system/core-services/root-logger/)
+  documentation.
+
+### `@backstage/cli` (0.34.1 → 0.34.2)
+
+#### 0.34.2
+
+##### Patch Changes
+
+- e6f45dc: Updated the WebPack configuration to use `contenthash`. This fixes an issue were builds would sometimes generate output files with the same name but different content across builds, leading to breakages when loading the frontend app.
+- fffd434: Disallow import fallback of critical shared dependencies in module federation.
+- 080f252: Fixed the `new-frontend-plugin` template that was incorrectly passing `id` instead of `pluginId` to `createFrontendPlugin` and unnecessarily importing `React`.
+- e0db9b8: Modify the `backstage.json` also for custom patterns if it extends the default pattern.
+
+  Examples:
+
+  - `@backstage/*` (default pattern)
+  - `@{backstage,backstage-community}/*`
+  - `@{extra1,backstage,extra2}/*`
+
+- 275bda8: Fixed an issue that could cause conflicts of detected modules in workspaces with multiple apps.
+- e1adce4: Updated the backend plugin template to use a new pattern for the `TodoListService` that reduces boilerplate.
+
+### `@backstage/config-loader` (1.10.2 → 1.10.3)
+
+#### 1.10.3
+
+##### Patch Changes
+
+- a73f495: Allow using `BACKSTAGE_ENV` for loading environment specific config files
+
+### `@backstage/core-compat-api` (0.5.1 → 0.5.2)
+
+#### 0.5.2
+
+##### Patch Changes
+
+- dc01d6f: Fix for `compatWrapper` creating many wrapping `Providers` when they should not
+
+### `@backstage/create-app` (0.7.3 → 0.7.4)
+
+#### 0.7.4
+
+##### Patch Changes
+
+- b2d9fc1: Creates a plugin that redirects from the Home page to the Catalog index page to avoid seeing a not found page error when starting the app.
+- 020d484: Bumped create-app version.
+- 02dbe8e: Add missing dependency to `@backstage/cli`, `@backstage/core-plugin-api` and `@backstage/integration-react`
+
+### `@backstage/frontend-defaults` (0.3.0 → 0.3.1)
+
+#### 0.3.1
+
+##### Patch Changes
+
+- 6516c3d: The default app now leverages the new error reporting functionality from `@backstage/frontend-app-api`. If there are critical errors during startup, an error screen that shows a summary of all errors will now be shown, rather than leaving the screen blank. Other errors will be logged as warnings in the console.
+
+### `@backstage/frontend-test-utils` (0.3.5 → 0.3.6)
+
+#### 0.3.6
+
+##### Patch Changes
+
+- 6516c3d: Internal update to use and throw app errors.
+
+### `@backstage/plugin-app-backend` (0.5.5 → 0.5.6)
+
+#### 0.5.6
+
+##### Patch Changes
+
+- afd368e: Internal update to not expose the old `createRouter`.
+
+### `@backstage/plugin-auth-backend` (0.25.3 → 0.25.4)
+
+#### 0.25.4
+
+##### Patch Changes
+
+- 1d47bf3: Implementing Dynamic Client Registration with the OIDC server. You can enable this by setting `auth.experimentalDynamicClientRegistration.enabled` in `app-config.yaml`. This is highly experimental, but feedback welcome.
+- 54ddfef: Updating plugin metadata
+
+### `@backstage/plugin-auth-node` (0.6.6 → 0.6.7)
+
+#### 0.6.7
+
+##### Patch Changes
+
+- 54ddfef: Updating plugin metadata
+- 3aff9e1: Changes OAuth cookies from domain-scoped to host-only by avoid setting the domain attribute in the default cookie configurer.
+
+### `@backstage/plugin-auth-react` (0.1.18 → 0.1.19)
+
+#### 0.1.19
+
+##### Patch Changes
+
+- 54ddfef: Updating plugin metadata
+
+### `@backstage/plugin-catalog` (1.31.2 → 1.31.3)
+
+#### 1.31.3
+
+##### Patch Changes
+
+- 4316c11: Catalog table columns support i18n
+- ce1239e: Auto-focus the first menu item in `EntityContextMenu`, and do not render a divider if an empty array is passed to `UNSTABLE_extraContextMenuItems`.
+- 85c5e04: Fix incorrect `defaultTarget` on `createComponentRouteRef`.
+
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.7.2 → 0.7.3)
+
+#### 0.7.3
+
+##### Patch Changes
+
+- ea80e76: When possible, requests a more limited set of results from the Gitlab projects API, which can reduce the amount of network traffic required to sync with Gitlab.
+
+### `@backstage/plugin-events-backend` (0.5.5 → 0.5.6)
+
+#### 0.5.6
+
+##### Patch Changes
+
+- 0efcc97: Updated generated schemas
+
+### `@backstage/plugin-events-node` (0.4.14 → 0.4.15)
+
+#### 0.4.15
+
+##### Patch Changes
+
+- 0efcc97: Updated generated schemas
+
+### `@backstage/plugin-home` (0.8.11 → 0.8.12)
+
+#### 0.8.12
+
+##### Patch Changes
+
+- 929c55a: Fixed race condition in CustomHomepageGrid by waiting for storage to load before rendering custom layout to prevent
+  rendering of the default content.
+
+### `@backstage/plugin-kubernetes-backend` (0.20.1 → 0.20.2)
+
+#### 0.20.2
+
+##### Patch Changes
+
+- dd7b6d2: Fix a bug where `getDefault` in the `kubernetesFetcherExtensionPoint` had the wrong `this` value
+- 80cf8c9: Fix issue with default objects not being loaded properly
+
+### `@backstage/plugin-mcp-actions-backend` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 1d47bf3: Proxy `/.well-known/oauth-authorization-server` to `/.well-known/openid-configuration` on `auth-backend` when `auth.experimentalDynamicClientRegistration.enabled` is enabled.
+- 7f2a4a0: Updating docs
+- d08b0c9: The MCP backend will now convert known Backstage errors into textual responses with `isError: true`.
+  The error message can be useful for an LLM to understand and maybe give back to the user.
+  Previously all errors where thrown out to `@modelcontextprotocol/sdk` which causes a generic 500.
+
+### `@backstage/plugin-notifications` (0.5.8 → 0.5.9)
+
+#### 0.5.9
+
+##### Patch Changes
+
+- 4815b12: Fixed missing app context when rendering the notifications view
+
+### `@backstage/plugin-notifications-backend` (0.5.9 → 0.5.10)
+
+#### 0.5.10
+
+##### Patch Changes
+
+- a95cebd: Internal refactoring for better type support
+- 7e7ed57: A new extension point was added that can be used to modify how the users receiving notifications
+  are resolved. The interface passed to the extension point should only return complete user entity references
+  based on the notification target references and the excluded entity references. Note that the inputs are lists
+  of entity references that can be any entity kind, not just user entities.
+
+  Using this extension point will override the default behavior of resolving users with the
+  `DefaultNotificationRecipientResolver`.
+
+### `@backstage/plugin-notifications-backend-module-slack` (0.1.4 → 0.1.5)
+
+#### 0.1.5
+
+##### Patch Changes
+
+- a95cebd: Internal refactoring for better type support
+
+### `@backstage/plugin-notifications-node` (0.2.18 → 0.2.19)
+
+#### 0.2.19
+
+##### Patch Changes
+
+- 7e7ed57: A new extension point was added that can be used to modify how the users receiving notifications
+  are resolved. The interface passed to the extension point should only return complete user entity references
+  based on the notification target references and the excluded entity references. Note that the inputs are lists
+  of entity references that can be any entity kind, not just user entities.
+
+  Using this extension point will override the default behavior of resolving users with the
+  `DefaultNotificationRecipientResolver`.
+
+### `@backstage/plugin-org` (0.6.43 → 0.6.44)
+
+#### 0.6.44
+
+##### Patch Changes
+
+- 22b69f2: Fixing issue with extra slash in the routing
+
+### `@backstage/plugin-scaffolder` (1.34.0 → 1.34.1)
+
+#### 1.34.1
+
+##### Patch Changes
+
+- 0d415ae: Render a TechDocs link on the Scaffolder Template List page when templates include either `backstage.io/techdocs-ref` or `backstage.io/techdocs-entity` annotations, using the shared `buildTechDocsURL` helper. Also adds tests to verify both annotations and optional `backstage.io/techdocs-entity-path` are respected.
+- 7151260: Prevent the MultiEntityPicker from removing options present in form state when new options are selected
+
+### `@backstage/plugin-scaffolder-backend` (2.2.0 → 2.2.1)
+
+#### 2.2.1
+
+##### Patch Changes
+
+- a57185f: Added support for executing actions from the `ActionsRegistry` in the `scaffolder-backend`
+- c3405db: Fixed a regression that prevented uploads greater than 100KB. Uploads up to 10MB are supported again.
+
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.9.4 → 0.9.5)
+
+#### 0.9.5
+
+##### Patch Changes
+
+- a84ddea: The log message now indicates that the pipeline trigger token was deleted and not pipeline itself.
+
+### `@backstage/plugin-scaffolder-react` (1.19.0 → 1.19.1)
+
+#### 1.19.1
+
+##### Patch Changes
+
+- 58fc108: Fix scaffolder task log stream not having a minimum height
+
+### `@backstage/plugin-search-backend` (2.0.5 → 2.0.6)
+
+#### 2.0.6
+
+##### Patch Changes
+
+- 0efcc97: Updated generated schemas
+
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.7.5 → 1.7.6)
+
+#### 1.7.6
+
+##### Patch Changes
+
+- cde70ca: Added support for batchKeyField in the Elasticsearch indexer to allow consistent document IDs during bulk uploads.
+
+### `@backstage/plugin-search-backend-module-explore` (0.3.6 → 0.3.7)
+
+#### 0.3.7
+
+##### Patch Changes
+
+- 9a93520: Deprecate and mark explore collator as moved
+
+### `@backstage/plugin-techdocs-react` (1.3.2 → 1.3.3)
+
+#### 1.3.3
+
+##### Patch Changes
 
 - a0b604c: Update to documentation regarding TechDocs redirects.
 
-## `@backstage/plugin-user-settings` (0.8.25 → 0.8.26)
+### `@backstage/plugin-user-settings` (0.8.25 → 0.8.26)
 
-### 0.8.26
+#### 0.8.26
 
-#### Patch Changes
+##### Patch Changes
 
 - 320a9ac: Add the OpenShift authenticator provider to the default `user-settings` providers page.
 - b713b54: Tool-tip text correction for the Theme selection in settings page
 
-## `@backstage/repo-tools` (0.15.1 → 0.15.2)
+### `@backstage/repo-tools` (0.15.1 → 0.15.2)
 
-### 0.15.2
+#### 0.15.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 133ac7a: Fixed knip-reports command failing when workspace path contains spaces and process termination issues by replacing `execFile` with `spawn` and removing `shell` option.
 
-## `@backstage/types` (1.2.1 → 1.2.2)
+### `@backstage/types` (1.2.1 → 1.2.2)
 
-### 1.2.2
+#### 1.2.2
 
-#### Patch Changes
+##### Patch Changes
 
 - a95cebd: Internal refactoring for better type support
 
-## `@backstage/ui` (0.7.0 → 0.7.1)
+### `@backstage/ui` (0.7.0 → 0.7.1)
 
-### 0.7.1
+#### 0.7.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 7307930: Add missing class for flex: baseline
 - 89da341: Fix Select component to properly attach aria-label and aria-labelledby props to the rendered element for improved accessibility.
 - 0ffa4c7: Removed the need to mock `window.matchMedia` in tests, falling back to default breakpoint values instead.
 
-## `@techdocs/cli` (1.9.7 → 1.9.8)
+### `@techdocs/cli` (1.9.7 → 1.9.8)
 
-### 1.9.8
+#### 1.9.8
 
-#### Patch Changes
+##### Patch Changes
 
 - db63208: Fixed an issue where `@techdocs/cli serve` command did not pick up the latest changes to TechDocs.
 

@@ -2,35 +2,832 @@
 
 Changes between 1.27.7 and 1.28.0 — 159 changed and 2 added packages.
 
-Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-user-settings-common`.
+## Summary
 
-## `@backstage/plugin-auth-backend-module-onelogin-provider` (new, 0.1.0)
+- [Newly added packages](#newly-added-packages): 2 packages
+- [Breaking changes](#breaking-changes): 10 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 11 packages
+- [0.0.x patch version bumps](#00x-patch-version-bumps): 8 packages
+- [Other minor version bumps](#other-minor-version-bumps): 4 packages
+- [Other patch version bumps](#other-patch-version-bumps): 117 packages
 
-### 0.1.0
+## Table of contents
 
-#### Minor Changes
+- [Newly added packages](#newly-added-packages)
+  - [`@backstage/plugin-auth-backend-module-onelogin-provider` (new, 0.1.0)](#backstageplugin-auth-backend-module-onelogin-provider-new-010)
+  - [`@backstage/plugin-user-settings-common` (new, 0.0.1)](#backstageplugin-user-settings-common-new-001)
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/backend-defaults` (0.2.18 → 0.3.0)](#backstagebackend-defaults-0218--030)
+  - [`@backstage/backend-plugin-api` (0.6.18 → 0.6.19)](#backstagebackend-plugin-api-0618--0619)
+  - [`@backstage/integration` (1.11.0 → 1.12.0)](#backstageintegration-1110--1120)
+  - [`@backstage/plugin-auth-backend-module-atlassian-provider` (0.1.10 → 0.2.0)](#backstageplugin-auth-backend-module-atlassian-provider-0110--020)
+  - [`@backstage/plugin-auth-backend-module-oauth2-provider` (0.1.15 → 0.2.0)](#backstageplugin-auth-backend-module-oauth2-provider-0115--020)
+  - [`@backstage/plugin-auth-backend-module-oidc-provider` (0.1.9 → 0.2.0)](#backstageplugin-auth-backend-module-oidc-provider-019--020)
+  - [`@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.12 → 0.1.13)](#backstageplugin-auth-backend-module-pinniped-provider-0112--0113)
+  - [`@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.1.10 → 0.2.0)](#backstageplugin-auth-backend-module-vmware-cloud-provider-0110--020)
+  - [`@backstage/plugin-proxy-backend` (0.4.16 → 0.5.0)](#backstageplugin-proxy-backend-0416--050)
+  - [`@backstage/plugin-search-backend-module-elasticsearch` (1.4.1 → 1.5.0)](#backstageplugin-search-backend-module-elasticsearch-141--150)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/backend-common` (0.22.0 → 0.23.0)](#backstagebackend-common-0220--0230)
+  - [`@backstage/backend-test-utils` (0.3.8 → 0.4.0)](#backstagebackend-test-utils-038--040)
+  - [`@backstage/plugin-catalog-backend-module-ldap` (0.5.34 → 0.6.0)](#backstageplugin-catalog-backend-module-ldap-0534--060)
+  - [`@backstage/plugin-catalog-import` (0.11.0 → 0.12.0)](#backstageplugin-catalog-import-0110--0120)
+  - [`@backstage/plugin-kubernetes-backend` (0.17.1 → 0.18.0)](#backstageplugin-kubernetes-backend-0171--0180)
+  - [`@backstage/plugin-kubernetes-common` (0.7.6 → 0.8.0)](#backstageplugin-kubernetes-common-076--080)
+  - [`@backstage/plugin-kubernetes-react` (0.3.5 → 0.4.0)](#backstageplugin-kubernetes-react-035--040)
+  - [`@backstage/plugin-notifications-backend` (0.2.1 → 0.3.0)](#backstageplugin-notifications-backend-021--030)
+  - [`@backstage/plugin-notifications-backend-module-email` (0.0.1 → 0.1.0)](#backstageplugin-notifications-backend-module-email-001--010)
+  - [`@backstage/plugin-notifications-node` (0.1.4 → 0.2.0)](#backstageplugin-notifications-node-014--020)
+  - [`@backstage/plugin-scaffolder-backend-module-github` (0.2.8 → 0.3.0)](#backstageplugin-scaffolder-backend-module-github-028--030)
+- [0.0.x patch version bumps](#00x-patch-version-bumps)
+  - [`@backstage/plugin-auth-backend-module-okta-provider` (0.0.11 → 0.0.12)](#backstageplugin-auth-backend-module-okta-provider-0011--0012)
+  - [`@backstage/plugin-catalog-backend-module-gitlab-org` (0.0.1 → 0.0.2)](#backstageplugin-catalog-backend-module-gitlab-org-001--002)
+  - [`@backstage/plugin-catalog-unprocessed-entities-common` (0.0.1 → 0.0.2)](#backstageplugin-catalog-unprocessed-entities-common-001--002)
+  - [`@backstage/plugin-kubernetes-cluster` (0.0.11 → 0.0.12)](#backstageplugin-kubernetes-cluster-0011--0012)
+  - [`@backstage/plugin-notifications-common` (0.0.3 → 0.0.4)](#backstageplugin-notifications-common-003--004)
+  - [`@backstage/plugin-scaffolder-backend-module-notifications` (0.0.1 → 0.0.2)](#backstageplugin-scaffolder-backend-module-notifications-001--002)
+  - [`@backstage/plugin-signals` (0.0.6 → 0.0.7)](#backstageplugin-signals-006--007)
+  - [`@backstage/plugin-signals-react` (0.0.3 → 0.0.4)](#backstageplugin-signals-react-003--004)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/plugin-catalog` (1.20.0 → 1.21.0)](#backstageplugin-catalog-1200--1210)
+  - [`@backstage/plugin-catalog-backend` (1.22.0 → 1.23.0)](#backstageplugin-catalog-backend-1220--1230)
+  - [`@backstage/plugin-scaffolder` (1.20.1 → 1.21.0)](#backstageplugin-scaffolder-1201--1210)
+  - [`@backstage/plugin-scaffolder-react` (1.8.6 → 1.9.0)](#backstageplugin-scaffolder-react-186--190)
+- [Other patch version bumps](#other-patch-version-bumps)
+  - [`@backstage/backend-app-api` (0.7.5 → 0.7.6)](#backstagebackend-app-api-075--076)
+  - [`@backstage/backend-dynamic-feature-service` (0.2.10 → 0.2.11)](#backstagebackend-dynamic-feature-service-0210--0211)
+  - [`@backstage/backend-tasks` (0.5.23 → 0.5.24)](#backstagebackend-tasks-0523--0524)
+  - [`@backstage/cli` (0.26.6 → 0.26.7)](#backstagecli-0266--0267)
+  - [`@backstage/cli-common` (0.1.13 → 0.1.14)](#backstagecli-common-0113--0114)
+  - [`@backstage/cli-node` (0.2.5 → 0.2.6)](#backstagecli-node-025--026)
+  - [`@backstage/core-app-api` (1.12.5 → 1.12.6)](#backstagecore-app-api-1125--1126)
+  - [`@backstage/core-compat-api` (0.2.5 → 0.2.6)](#backstagecore-compat-api-025--026)
+  - [`@backstage/core-components` (0.14.7 → 0.14.8)](#backstagecore-components-0147--0148)
+  - [`@backstage/core-plugin-api` (1.9.2 → 1.9.3)](#backstagecore-plugin-api-192--193)
+  - [`@backstage/create-app` (0.5.15 → 0.5.16)](#backstagecreate-app-0515--0516)
+  - [`@backstage/integration-react` (1.1.27 → 1.1.28)](#backstageintegration-react-1127--1128)
+  - [`@backstage/plugin-api-docs` (0.11.5 → 0.11.6)](#backstageplugin-api-docs-0115--0116)
+  - [`@backstage/plugin-api-docs-module-protoc-gen-doc` (0.1.6 → 0.1.7)](#backstageplugin-api-docs-module-protoc-gen-doc-016--017)
+  - [`@backstage/plugin-app-backend` (0.3.67 → 0.3.68)](#backstageplugin-app-backend-0367--0368)
+  - [`@backstage/plugin-app-node` (0.1.18 → 0.1.19)](#backstageplugin-app-node-0118--0119)
+  - [`@backstage/plugin-app-visualizer` (0.1.6 → 0.1.7)](#backstageplugin-app-visualizer-016--017)
+  - [`@backstage/plugin-auth-backend` (0.22.5 → 0.22.6)](#backstageplugin-auth-backend-0225--0226)
+  - [`@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.10 → 0.1.11)](#backstageplugin-auth-backend-module-aws-alb-provider-0110--0111)
+  - [`@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.1.1 → 0.1.2)](#backstageplugin-auth-backend-module-azure-easyauth-provider-011--012)
+  - [`@backstage/plugin-auth-backend-module-bitbucket-provider` (0.1.1 → 0.1.2)](#backstageplugin-auth-backend-module-bitbucket-provider-011--012)
+  - [`@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.1.1 → 0.1.2)](#backstageplugin-auth-backend-module-cloudflare-access-provider-011--012)
+  - [`@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.13 → 0.2.14)](#backstageplugin-auth-backend-module-gcp-iap-provider-0213--0214)
+  - [`@backstage/plugin-auth-backend-module-github-provider` (0.1.15 → 0.1.16)](#backstageplugin-auth-backend-module-github-provider-0115--0116)
+  - [`@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.15 → 0.1.16)](#backstageplugin-auth-backend-module-gitlab-provider-0115--0116)
+  - [`@backstage/plugin-auth-backend-module-google-provider` (0.1.15 → 0.1.16)](#backstageplugin-auth-backend-module-google-provider-0115--0116)
+  - [`@backstage/plugin-auth-backend-module-guest-provider` (0.1.4 → 0.1.5)](#backstageplugin-auth-backend-module-guest-provider-014--015)
+  - [`@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.13 → 0.1.14)](#backstageplugin-auth-backend-module-microsoft-provider-0113--0114)
+  - [`@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.11 → 0.1.12)](#backstageplugin-auth-backend-module-oauth2-proxy-provider-0111--0112)
+  - [`@backstage/plugin-auth-node` (0.4.13 → 0.4.14)](#backstageplugin-auth-node-0413--0414)
+  - [`@backstage/plugin-auth-react` (0.1.2 → 0.1.3)](#backstageplugin-auth-react-012--013)
+  - [`@backstage/plugin-bitbucket-cloud-common` (0.2.19 → 0.2.20)](#backstageplugin-bitbucket-cloud-common-0219--0220)
+  - [`@backstage/plugin-catalog-backend-module-aws` (0.3.13 → 0.3.14)](#backstageplugin-catalog-backend-module-aws-0313--0314)
+  - [`@backstage/plugin-catalog-backend-module-azure` (0.1.38 → 0.1.39)](#backstageplugin-catalog-backend-module-azure-0138--0139)
+  - [`@backstage/plugin-catalog-backend-module-backstage-openapi` (0.2.1 → 0.2.2)](#backstageplugin-catalog-backend-module-backstage-openapi-021--022)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.2.5 → 0.2.6)](#backstageplugin-catalog-backend-module-bitbucket-cloud-025--026)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.32 → 0.1.33)](#backstageplugin-catalog-backend-module-bitbucket-server-0132--0133)
+  - [`@backstage/plugin-catalog-backend-module-gcp` (0.1.19 → 0.1.20)](#backstageplugin-catalog-backend-module-gcp-0119--0120)
+  - [`@backstage/plugin-catalog-backend-module-gerrit` (0.1.35 → 0.1.36)](#backstageplugin-catalog-backend-module-gerrit-0135--0136)
+  - [`@backstage/plugin-catalog-backend-module-github` (0.6.1 → 0.6.2)](#backstageplugin-catalog-backend-module-github-061--062)
+  - [`@backstage/plugin-catalog-backend-module-github-org` (0.1.13 → 0.1.14)](#backstageplugin-catalog-backend-module-github-org-0113--0114)
+  - [`@backstage/plugin-catalog-backend-module-gitlab` (0.3.17 → 0.3.18)](#backstageplugin-catalog-backend-module-gitlab-0317--0318)
+  - [`@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.23 → 0.4.24)](#backstageplugin-catalog-backend-module-incremental-ingestion-0423--0424)
+  - [`@backstage/plugin-catalog-backend-module-msgraph` (0.5.26 → 0.5.27)](#backstageplugin-catalog-backend-module-msgraph-0526--0527)
+  - [`@backstage/plugin-catalog-backend-module-openapi` (0.1.36 → 0.1.37)](#backstageplugin-catalog-backend-module-openapi-0136--0137)
+  - [`@backstage/plugin-catalog-backend-module-puppetdb` (0.1.24 → 0.1.25)](#backstageplugin-catalog-backend-module-puppetdb-0124--0125)
+  - [`@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.16 → 0.1.17)](#backstageplugin-catalog-backend-module-scaffolder-entity-model-0116--0117)
+  - [`@backstage/plugin-catalog-backend-module-unprocessed` (0.4.5 → 0.4.6)](#backstageplugin-catalog-backend-module-unprocessed-045--046)
+  - [`@backstage/plugin-catalog-common` (1.0.23 → 1.0.24)](#backstageplugin-catalog-common-1023--1024)
+  - [`@backstage/plugin-catalog-graph` (0.4.5 → 0.4.6)](#backstageplugin-catalog-graph-045--046)
+  - [`@backstage/plugin-catalog-node` (1.12.0 → 1.12.1)](#backstageplugin-catalog-node-1120--1121)
+  - [`@backstage/plugin-catalog-react` (1.12.0 → 1.12.1)](#backstageplugin-catalog-react-1120--1121)
+  - [`@backstage/plugin-catalog-unprocessed-entities` (0.2.4 → 0.2.5)](#backstageplugin-catalog-unprocessed-entities-024--025)
+  - [`@backstage/plugin-config-schema` (0.1.55 → 0.1.56)](#backstageplugin-config-schema-0155--0156)
+  - [`@backstage/plugin-devtools` (0.1.14 → 0.1.15)](#backstageplugin-devtools-0114--0115)
+  - [`@backstage/plugin-devtools-backend` (0.3.4 → 0.3.5)](#backstageplugin-devtools-backend-034--035)
+  - [`@backstage/plugin-devtools-common` (0.1.9 → 0.1.10)](#backstageplugin-devtools-common-019--0110)
+  - [`@backstage/plugin-events-backend` (0.3.5 → 0.3.6)](#backstageplugin-events-backend-035--036)
+  - [`@backstage/plugin-events-backend-module-aws-sqs` (0.3.4 → 0.3.5)](#backstageplugin-events-backend-module-aws-sqs-034--035)
+  - [`@backstage/plugin-events-backend-module-azure` (0.2.4 → 0.2.5)](#backstageplugin-events-backend-module-azure-024--025)
+  - [`@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.4 → 0.2.5)](#backstageplugin-events-backend-module-bitbucket-cloud-024--025)
+  - [`@backstage/plugin-events-backend-module-gerrit` (0.2.4 → 0.2.5)](#backstageplugin-events-backend-module-gerrit-024--025)
+  - [`@backstage/plugin-events-backend-module-github` (0.2.4 → 0.2.5)](#backstageplugin-events-backend-module-github-024--025)
+  - [`@backstage/plugin-events-backend-module-gitlab` (0.2.4 → 0.2.5)](#backstageplugin-events-backend-module-gitlab-024--025)
+  - [`@backstage/plugin-events-backend-test-utils` (0.1.28 → 0.1.29)](#backstageplugin-events-backend-test-utils-0128--0129)
+  - [`@backstage/plugin-events-node` (0.3.4 → 0.3.5)](#backstageplugin-events-node-034--035)
+  - [`@backstage/plugin-home` (0.7.4 → 0.7.5)](#backstageplugin-home-074--075)
+  - [`@backstage/plugin-home-react` (0.1.13 → 0.1.14)](#backstageplugin-home-react-0113--0114)
+  - [`@backstage/plugin-kubernetes` (0.11.10 → 0.11.11)](#backstageplugin-kubernetes-01110--01111)
+  - [`@backstage/plugin-kubernetes-node` (0.1.12 → 0.1.13)](#backstageplugin-kubernetes-node-0112--0113)
+  - [`@backstage/plugin-notifications` (0.2.1 → 0.2.2)](#backstageplugin-notifications-021--022)
+  - [`@backstage/plugin-org` (0.6.25 → 0.6.26)](#backstageplugin-org-0625--0626)
+  - [`@backstage/plugin-org-react` (0.1.24 → 0.1.25)](#backstageplugin-org-react-0124--0125)
+  - [`@backstage/plugin-permission-backend` (0.5.42 → 0.5.43)](#backstageplugin-permission-backend-0542--0543)
+  - [`@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.15 → 0.1.16)](#backstageplugin-permission-backend-module-allow-all-policy-0115--0116)
+  - [`@backstage/plugin-permission-common` (0.7.13 → 0.7.14)](#backstageplugin-permission-common-0713--0714)
+  - [`@backstage/plugin-permission-node` (0.7.29 → 0.7.30)](#backstageplugin-permission-node-0729--0730)
+  - [`@backstage/plugin-permission-react` (0.4.22 → 0.4.23)](#backstageplugin-permission-react-0422--0423)
+  - [`@backstage/plugin-scaffolder-backend` (1.22.8 → 1.22.9)](#backstageplugin-scaffolder-backend-1228--1229)
+  - [`@backstage/plugin-scaffolder-backend-module-azure` (0.1.10 → 0.1.11)](#backstageplugin-scaffolder-backend-module-azure-0110--0111)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.8 → 0.2.9)](#backstageplugin-scaffolder-backend-module-bitbucket-028--029)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.8 → 0.1.9)](#backstageplugin-scaffolder-backend-module-bitbucket-cloud-018--019)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.8 → 0.1.9)](#backstageplugin-scaffolder-backend-module-bitbucket-server-018--019)
+  - [`@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.19 → 0.2.20)](#backstageplugin-scaffolder-backend-module-confluence-to-markdown-0219--0220)
+  - [`@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.42 → 0.2.43)](#backstageplugin-scaffolder-backend-module-cookiecutter-0242--0243)
+  - [`@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.10 → 0.1.11)](#backstageplugin-scaffolder-backend-module-gerrit-0110--0111)
+  - [`@backstage/plugin-scaffolder-backend-module-gitea` (0.1.8 → 0.1.9)](#backstageplugin-scaffolder-backend-module-gitea-018--019)
+  - [`@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.0 → 0.4.1)](#backstageplugin-scaffolder-backend-module-gitlab-040--041)
+  - [`@backstage/plugin-scaffolder-backend-module-rails` (0.4.35 → 0.4.36)](#backstageplugin-scaffolder-backend-module-rails-0435--0436)
+  - [`@backstage/plugin-scaffolder-backend-module-sentry` (0.1.26 → 0.1.27)](#backstageplugin-scaffolder-backend-module-sentry-0126--0127)
+  - [`@backstage/plugin-scaffolder-backend-module-yeoman` (0.3.1 → 0.3.2)](#backstageplugin-scaffolder-backend-module-yeoman-031--032)
+  - [`@backstage/plugin-scaffolder-common` (1.5.2 → 1.5.3)](#backstageplugin-scaffolder-common-152--153)
+  - [`@backstage/plugin-scaffolder-node` (0.4.4 → 0.4.5)](#backstageplugin-scaffolder-node-044--045)
+  - [`@backstage/plugin-scaffolder-node-test-utils` (0.1.4 → 0.1.5)](#backstageplugin-scaffolder-node-test-utils-014--015)
+  - [`@backstage/plugin-search` (1.4.11 → 1.4.12)](#backstageplugin-search-1411--1412)
+  - [`@backstage/plugin-search-backend` (1.5.9 → 1.5.10)](#backstageplugin-search-backend-159--1510)
+  - [`@backstage/plugin-search-backend-module-catalog` (0.1.24 → 0.1.25)](#backstageplugin-search-backend-module-catalog-0124--0125)
+  - [`@backstage/plugin-search-backend-module-explore` (0.1.24 → 0.1.25)](#backstageplugin-search-backend-module-explore-0124--0125)
+  - [`@backstage/plugin-search-backend-module-pg` (0.5.27 → 0.5.28)](#backstageplugin-search-backend-module-pg-0527--0528)
+  - [`@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.11 → 0.1.12)](#backstageplugin-search-backend-module-stack-overflow-collator-0111--0112)
+  - [`@backstage/plugin-search-backend-module-techdocs` (0.1.23 → 0.1.24)](#backstageplugin-search-backend-module-techdocs-0123--0124)
+  - [`@backstage/plugin-search-backend-node` (1.2.23 → 1.2.24)](#backstageplugin-search-backend-node-1223--1224)
+  - [`@backstage/plugin-search-common` (1.2.11 → 1.2.12)](#backstageplugin-search-common-1211--1212)
+  - [`@backstage/plugin-search-react` (1.7.11 → 1.7.12)](#backstageplugin-search-react-1711--1712)
+  - [`@backstage/plugin-signals-backend` (0.1.4 → 0.1.5)](#backstageplugin-signals-backend-014--015)
+  - [`@backstage/plugin-signals-node` (0.1.4 → 0.1.5)](#backstageplugin-signals-node-014--015)
+  - [`@backstage/plugin-techdocs` (1.10.5 → 1.10.6)](#backstageplugin-techdocs-1105--1106)
+  - [`@backstage/plugin-techdocs-addons-test-utils` (1.0.32 → 1.0.33)](#backstageplugin-techdocs-addons-test-utils-1032--1033)
+  - [`@backstage/plugin-techdocs-backend` (1.10.5 → 1.10.6)](#backstageplugin-techdocs-backend-1105--1106)
+  - [`@backstage/plugin-techdocs-module-addons-contrib` (1.1.10 → 1.1.11)](#backstageplugin-techdocs-module-addons-contrib-1110--1111)
+  - [`@backstage/plugin-techdocs-node` (1.12.4 → 1.12.5)](#backstageplugin-techdocs-node-1124--1125)
+  - [`@backstage/plugin-techdocs-react` (1.2.4 → 1.2.5)](#backstageplugin-techdocs-react-124--125)
+  - [`@backstage/plugin-user-settings` (0.8.6 → 0.8.7)](#backstageplugin-user-settings-086--087)
+  - [`@backstage/plugin-user-settings-backend` (0.2.17 → 0.2.18)](#backstageplugin-user-settings-backend-0217--0218)
+  - [`@backstage/repo-tools` (0.9.0 → 0.9.1)](#backstagerepo-tools-090--091)
+  - [`@backstage/theme` (0.5.5 → 0.5.6)](#backstagetheme-055--056)
+  - [`@techdocs/cli` (1.8.11 → 1.8.12)](#techdocscli-1811--1812)
+
+## Newly added packages
+
+### `@backstage/plugin-auth-backend-module-onelogin-provider` (new, 0.1.0)
+
+#### 0.1.0
+
+##### Minor Changes
 
 - 566d7cb: Separate out the OneLogin provider into its own module
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-user-settings-common` (new, 0.0.1)
+### `@backstage/plugin-user-settings-common` (new, 0.0.1)
 
-### 0.0.1
+#### 0.0.1
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 - e6ec179: Use signals to update user settings across sessions
 
-## `@backstage/backend-app-api` (0.7.5 → 0.7.6)
+## Breaking changes
 
-### 0.7.6
+### `@backstage/backend-defaults` (0.2.18 → 0.3.0)
 
-#### Patch Changes
+#### 0.3.0
+
+##### Minor Changes
+
+- 662dce8: **BREAKING**: The `workdir` argument have been removed from The `GerritUrlReader` constructor.
+
+  **BREAKING**: The Gerrit `readTree` implementation will now only use the Gitiles api. Support
+  for using git to clone the repo has been removed.
+
+- 02103be: Deprecated and moved over core services to `@backstage/backend-defaults`
+
+##### Patch Changes
+
+- 1897169: Exposed `DefaultSchedulerService`
+- b5bc997: Refactor cache manager inline types.
+- e171620: Remove dependency with `@backstage/backend-commons` package.
+- 6551b3d: Added core service factories and implementations from
+  `@backstage/backend-app-api`. They are now available as subpath exports, e.g.
+  `@backstage/backend-defaults/scheduler` is where the service factory and default
+  implementation of `coreServices.scheduler` now lives. They have been marked as
+  deprecated in their old locations.
+- 8aab451: Internal minor refactors of the database connectors
+- 0634fdc: Deprecated `dropDatabase`
+- b2ee7f3: Moved over all URL reader functionality from `@backstage/backend-common` to `@backstage/backend-defaults/urlReader`. Please update your imports.
+- 9539a0b: Added `@backstage/backend-defaults/auth`, `@backstage/backend-defaults/httpAuth`, and `@backstage/backend-defaults/userInfo` to house their respective backend service factories. You should now import these services from those new locations, instead of `@backstage/backend-app-api`.
+
+### `@backstage/backend-plugin-api` (0.6.18 → 0.6.19)
+
+#### 0.6.19
+
+##### Patch Changes
+
+- 78a0b08: **DEPRECATION**: You should no longer do a function call on backend features when adding them to backends. The support for doing that is deprecated, and you should remove all trailing `()` parentheses after plugins and modules where you add them to your backend or test backends (e.g. when using `startTestBackend`).
+
+  The background for this is that `createBackendPlugin` and `createBackendModule` function now effectively return a `BackendFeature` rather than a `() => BackendFeature`. This is part of the cleanup efforts for New Backend System 1.0. In the short run this is non-breaking because the feature type has been given a callback signature that returns itself. But we strongly recommend that you remove all now-redundant calls made to feature objects, because that callback signature will be removed in a future release.
+
+  Service factories are still callbacks at this point.
+
+  Example change:
+
+  ```diff
+   await startTestBackend({
+     features: [
+       eventsServiceFactory(), // service - stays unchanged
+  -    catalogModuleBitbucketCloudEntityProvider(), // module - remove parentheses
+  +    catalogModuleBitbucketCloudEntityProvider,
+  ```
+
+- 9bdc3e8: In tests, return `null` rather than throwing an error when trying to get the `ExtensionPoint.T` property, so that tests asserting the property are not easily broken.
+- 9e63318: Added an optional `accessRestrictions` to external access service tokens and service principals in general, such that you can limit their access to certain plugins or permissions.
+- 3aa3fc7: Marked the `TokenManagerService` and `IdentityService` types as deprecated
+- b2ee7f3: Deprecated all of the `UrlReader` related type names and replaced them with prefixed versions. Please update your imports.
+
+  - `ReadTreeOptions` was renamed to `UrlReaderServiceReadTreeOptions`
+  - `ReadTreeResponse` was renamed to `UrlReaderServiceReadTreeResponse`
+  - `ReadTreeResponseDirOptions` was renamed to `UrlReaderServiceReadTreeResponseDirOptions`
+  - `ReadTreeResponseFile` was renamed to `UrlReaderServiceReadTreeResponseFile`
+  - `ReadUrlResponse` was renamed to `UrlReaderServiceReadUrlResponse`
+  - `ReadUrlOptions` was renamed to `UrlReaderServiceReadUrlOptions`
+  - `SearchOptions` was renamed to `UrlReaderServiceSearchOptions`
+  - `SearchResponse` was renamed to `UrlReaderServiceSearchResponse`
+  - `SearchResponseFile` was renamed to `UrlReaderServiceSearchResponseFile`
+
+- 9539a0b: Improved `coreServices` doc comments
+- 6551b3d: Moved the declaration of the `SchedulerService` here, along with prefixed versions of all of the types it depends on, from `@backstage/backend-tasks`
+- 0665b7e: Renamed `BackendPluginConfig`, `BackendModuleConfig`, and `ExtensionPointConfig` respectively to `CreateBackendPluginOptions`, `CreateBackendModuleOptions`, and `CreateExtensionPointOptions` to standardize frontend and backend factories signatures.
+- 1779188: Start using the `isDatabaseConflictError` helper from the `@backstage/backend-plugin-api` package in order to avoid dependency with the soon to deprecate `@backstage/backend-common` package.
+
+### `@backstage/integration` (1.11.0 → 1.12.0)
+
+#### 1.12.0
+
+##### Minor Changes
+
+- be1014d: **BREAKING** Removed deprecated code from when casing was changed from `GitHub` to `Github` nearly two years ago. The following items have been removed:
+
+  - `getGitHubFileFetchUrl` (use `getGithubFileFetchUrl` instead)
+  - `GitHubIntegrationConfig` (use `GithubIntegrationConfig` instead)
+  - `GitHubIntegration` (use `GithubIntegration` instead)
+  - `readGitHubIntegrationConfig` (use `readGithubIntegrationConfig` instead)
+  - `readGitHubIntegrationConfigs` (use `readGithubIntegrationConfigs` instead)
+  - `replaceGitHubUrlType` (use `replaceGithubUrlType` instead)
+
+- 395b973: Implemented `readTree` for Harness provider to support TechDocs functionality
+- 662dce8: **BREAKING**: `gitilesBaseUrl` is now mandatory for the Gerrit integration. The
+  ability to override this requirement using the `DISABLE_GERRIT_GITILES_REQUIREMENT`
+  environment variable has been removed.
+
+##### Patch Changes
+
+- 509e08c: Updated function for getHarnessEditContentsUrl
+- 23ee9ab: Fix AWS CodeCommit integration by allowing to change the host
+
+### `@backstage/plugin-auth-backend-module-atlassian-provider` (0.1.10 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 8efc6cf: **BREAKING**: The `scope` and `scopes` config options have been removed and replaced by the standard `additionalScopes` config. In addition, the `offline_access`, `read:jira-work`, and `read:jira-user` scopes have been set to required and will always be present.
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-auth-backend-module-oauth2-provider` (0.1.15 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 8efc6cf: **BREAKING**: The `scope` config option have been removed and replaced by the standard `additionalScopes` config.
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-auth-backend-module-oidc-provider` (0.1.9 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 8efc6cf: **BREAKING**: The `scope` config option have been removed and replaced by the standard `additionalScopes` config. In addition, `openid`, `profile`, and `email` scopes have been set to required and will always be present.
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+- 4f21993: if oidc server do not provide revocation_endpoint，we should not call revoke function
+
+### `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.12 → 0.1.13)
+
+#### 0.1.13
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- 8efc6cf: **BREAKING**: The `scope` config option have been removed and replaced by the standard `additionalScopes` config. In addition, the `openid`, `pinniped:request-audience`, `username`, and `offline_access` scopes have been set to required and will always be present.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.1.10 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 8efc6cf: **BREAKING**: The `scope` config option have been removed and replaced by the standard `additionalScopes` config. In addition, `openid`, and `offline_access` scopes have been set to required and will always be present.
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-proxy-backend` (0.4.16 → 0.5.0)
+
+#### 0.5.0
+
+##### Minor Changes
+
+- 88480e4: **BREAKING**: The proxy backend plugin is now protected by Backstage auth, by
+  default. Unless specifically configured (see below), all proxy endpoints will
+  reject requests immediately unless a valid Backstage user or service token is
+  passed along with the request. This aligns the proxy with how other Backstage
+  backends behave out of the box, and serves to protect your upstreams from
+  unauthorized access.
+
+  A proxy configuration section can now look as follows:
+
+  ```yaml
+  proxy:
+    endpoints:
+      '/pagerduty':
+        target: https://api.pagerduty.com
+        credentials: require # NEW!
+        headers:
+          Authorization: Token token=${PAGERDUTY_TOKEN}
+  ```
+
+  There are three possible `credentials` settings at this point:
+
+  - `require`: Callers must provide Backstage user or service credentials with
+    each request. The credentials are not forwarded to the proxy target.
+  - `forward`: Callers must provide Backstage user or service credentials with
+    each request, and those credentials are forwarded to the proxy target.
+  - `dangerously-allow-unauthenticated`: No Backstage credentials are required to
+    access this proxy target. The target can still apply its own credentials
+    checks, but the proxy will not help block non-Backstage-blessed callers. If
+    you also add `allowedHeaders: ['Authorization']` to an endpoint configuration,
+    then the Backstage token (if provided) WILL be forwarded.
+
+  The value `dangerously-allow-unauthenticated` was the old default.
+
+  The value `require` is the new default, so requests that were previously
+  permitted may now start resulting in `401 Unauthorized` responses. If you have
+  `backend.auth.dangerouslyDisableDefaultAuthPolicy` set to `true`, this does not
+  apply; the proxy will behave as if all endpoints were set to
+  `dangerously-allow-unauthenticated`.
+
+  If you have proxy endpoints that require unauthenticated access still, please
+  add `credentials: dangerously-allow-unauthenticated` to their declarations in
+  your app-config.
+
+##### Patch Changes
+
+- 8869b8e: Updated local development setup.
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.4.1 → 1.5.0)
+
+#### 1.5.0
+
+##### Minor Changes
+
+- b186701: **BREAKING**: The ElasticSearch indexer will now delete stale indices matching the indexer's pattern.
+  The method `getAliases` of `ElasticSearchClientWrapper` has been deprecated and might be removed in future releases.
+
+  An indexer using the `some-type-index__*` pattern will remove indices matching this pattern after indexation
+  to prevent stale indices leading to shards exhaustion.
+
+  Before upgrading ensure that the index pattern doesn't match indices that are not managed by Backstage
+  and thus shouldn't be deleted.
+
+  Note: The ElasticSearch indexer already uses wildcards patterns to remove aliases on these indices.
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- 6a576dc: Replace the usage of `getVoidLogger` with `mockServices.logger.mock` in order to remove the dependency with the soon-to-be-deprecated `backend-common` package.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+## 0.x minor version bumps
+
+### `@backstage/backend-common` (0.22.0 → 0.23.0)
+
+#### 0.23.0
+
+##### Minor Changes
+
+- 395b973: Implemented `readTree` for Harness provider to support TechDocs functionality
+- 02103be: Deprecated and moved over core services to `@backstage/backend-defaults`
+
+##### Patch Changes
+
+- 9539a0b: Import utility functions from `backend-defaults` instead of `backend-app-api`
+- b2c4607: Removed accents on deprecation note
+- c6c0919: Updated configuration schema to include the `useRedisSets` cache config option.
+- ed3074e: The `database` types, helpers and implementations were moved to the package `@backstage/backend-defaults` and deprecated from the package `@backstage/backend-commons`.
+- 9cca724: The `TokenManager` has been deprecated in preparation for the [stable release of the New Backend System](https://github.com/backstage/backstage/issues/24493). Please [migrate](https://backstage.io/docs/tutorials/auth-service-migration) to the new `coreServices.auth`, `coreServices.httpAuth`, and `coreServices.userInfo` services as needed instead.
+- 1779188: In preparation to the new backend system stable release, the `isDatabaseConflictError` helper have been moved to the `@backstage/backend-plugin-api` package and deprecated from `@backstage/backend-common`.
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- e171620: Move `cache` implementation and types to the `@backstage/backend-defaults` package.
+- 1a6f38a: `ContainerRunner`, `DockerContainerRunner` and `KubernetesContainerRunner` are now deprecated
+- 8869b8e: We are deprecating the legacy `createServiceBuilder` factory, so if you are still using it, please checkout the migration guide and [migrate](https://backstage.io/docs/backend-system/building-plugins-and-modules/migrating) your plugin to use the new backend system.
+- 0634fdc: Deprecated `dropDatabase`
+- b2ee7f3: Moved over all URL reader functionality from `@backstage/backend-common` to `@backstage/backend-defaults/urlReader`. Please update your imports.
+- d94a477: Removed the circular dependency on `@backstage/backend-app-api`
+- 3bd04bb: We are deprecating the legacy router handlers and contexts in preparation for the new backend system stable release.
+- 23ee9ab: Fix AWS CodeCommit integration by allowing to change the host
+- e9a03c9: Finalizes the deprecation of legacy backend utilities. Deprecated utilities include the `ServiceBuilder` type, `notFoundHandler` and `redactWintonLogLine` functions.
+- 6a576dc: Deprecate legacy service logger helpers and stop using `getVoidLogger` in tests.
+- 032a7a6: Deprecate the legacy error and request logging handler types, respectively: `ErrorHandlerOptions` and `RequestLoggingHandlerFactory`.
+
+### `@backstage/backend-test-utils` (0.3.8 → 0.4.0)
+
+#### 0.4.0
+
+##### Minor Changes
+
+- 805cbe7: Added `TestCaches` that functions just like `TestDatabases`
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- 9e63318: Made it possible to give access restrictions to `mockCredentials.service`
+- 006b3e8: The type `MockDirectoryOptions` was renamed to `CreateMockDirectoryOptions` so that it's clear these options are exclusive to the mock directory factory.
+- 0634fdc: Refactored `TestDatabases` to no longer depend on `backend-common`
+- 6a576dc: Fix the logger service mock to prevent returning `undefined` from the `child` method.
+- 6c11f6e: Use imports from backend-defaults instead of the deprecated ones from backend-app-api
+
+### `@backstage/plugin-catalog-backend-module-ldap` (0.5.34 → 0.6.0)
+
+#### 0.6.0
+
+##### Minor Changes
+
+- debcc8c: Migrate LDAP catalog module to the new backend system.
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-catalog-import` (0.11.0 → 0.12.0)
+
+#### 0.12.0
+
+##### Minor Changes
+
+- 4f92394: Migrate from identityApi to fetchApi in frontend plugins.
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+- 3daad61: Integrated Azure DevOps as a catalog import source. This enables Backstage to create Pull Requests to Azure DevOps repositories as it does with GitHub repositories
+
+### `@backstage/plugin-kubernetes-backend` (0.17.1 → 0.18.0)
+
+#### 0.18.0
+
+##### Minor Changes
+
+- 0177f75: Update kubernetes plugins to use autoscaling/v2
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-kubernetes-common` (0.7.6 → 0.8.0)
+
+#### 0.8.0
+
+##### Minor Changes
+
+- 0177f75: Update kubernetes plugins to use autoscaling/v2
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-kubernetes-react` (0.3.5 → 0.4.0)
+
+#### 0.4.0
+
+##### Minor Changes
+
+- 4f92394: Migrate from identityApi to fetchApi in frontend plugins.
+- 0177f75: Update kubernetes plugins to use autoscaling/v2
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-notifications-backend` (0.2.1 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- 07a789b: adding filtering of notifications by processors
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-notifications-backend-module-email` (0.0.1 → 0.1.0)
+
+#### 0.1.0
+
+##### Minor Changes
+
+- 07a789b: add notification filters
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-notifications-node` (0.1.4 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 07a789b: add notifications filtering by processors
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+- 1354d81: Use `node-fetch` instead of native fetch, as per https://backstage.io/docs/architecture-decisions/adrs-adr013
+
+### `@backstage/plugin-scaffolder-backend-module-github` (0.2.8 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- 403394a: Allow empty author info in createPullRequest action for Github
+
+##### Patch Changes
+
+- f145a04: Added handling for dry run to githubPullRequest and githubWebhook and added tests for this functionality
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+## 0.0.x patch version bumps
+
+### `@backstage/plugin-auth-backend-module-okta-provider` (0.0.11 → 0.0.12)
+
+#### 0.0.12
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- 8efc6cf: Added support for the new shared `additionalScopes` configuration, which means it can now also be specified as an array. In addition, the `openid`, `email`, `profile`, and `offline_access` scopes have been set to required and will always be present.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-catalog-backend-module-gitlab-org` (0.0.1 → 0.0.2)
+
+#### 0.0.2
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-catalog-unprocessed-entities-common` (0.0.1 → 0.0.2)
+
+#### 0.0.2
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-kubernetes-cluster` (0.0.11 → 0.0.12)
+
+#### 0.0.12
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-notifications-common` (0.0.3 → 0.0.4)
+
+#### 0.0.4
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-scaffolder-backend-module-notifications` (0.0.1 → 0.0.2)
+
+#### 0.0.2
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-signals` (0.0.6 → 0.0.7)
+
+#### 0.0.7
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-signals-react` (0.0.3 → 0.0.4)
+
+#### 0.0.4
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+## Other minor version bumps
+
+### `@backstage/plugin-catalog` (1.20.0 → 1.21.0)
+
+#### 1.21.0
+
+##### Minor Changes
+
+- 863a800: Added the following default targets for external routes:
+
+  - `createComponent` binds to the Scaffolder page.
+  - `viewTechDoc` binds to the TechDocs entity documentation page.
+  - `createFromTemplate` binds to the Scaffolder selected template page.
+
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+- e04e57d: Fix bug with missing Actions column after adding "pagination" prop to catalog table
+- a2d2649: Export `catalogTranslationRef` under `/alpha`
+- bcec60f: updated the ContextMenu, ActionsPage, OngoingTask and TemplateCard frontend components to support the new scaffolder permissions:
+
+  - `scaffolder.task.create`
+  - `scaffolder.task.cancel`
+  - `scaffolder.task.read`
+
+### `@backstage/plugin-catalog-backend` (1.22.0 → 1.23.0)
+
+#### 1.23.0
+
+##### Minor Changes
+
+- c7528b0: Pass through `EventsService` too in the new backend system
+
+##### Patch Changes
+
+- 8869b8e: Updated local development setup.
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+- d779e3b: Added a regex test to check commit hash. If url is from git commit branch ignore the edit url.
+- 6c5cab1: Fix bug in `getLocationByEntity`
+- 0f55f5c: Ensure name and title are both indexed by the DefaultCatalogCollator
+- 1779188: Start using the `isDatabaseConflictError` helper from the `@backstage/backend-plugin-api` package in order to avoid dependency with the soon to deprecate `@backstage/backend-common` package.
+
+### `@backstage/plugin-scaffolder` (1.20.1 → 1.21.0)
+
+#### 1.21.0
+
+##### Minor Changes
+
+- d57ebbc: Changed the way to display entities in EntityPicker to use entityPresentationApi instead of humanizeEntityRef
+- 62bd9eb: Replace `ui:widget: password` with the a warning message stating that it's not secure and to use the build in `SecretField`.
+
+  You can do this by updating your `template.yaml` files that have the reference `ui:widget: password` to `ui:field: Secret` instead.
+
+  ```diff
+  apiVersion: backstage.io/v1alpha1
+  kind: Template
+  metadata:
+    ...
+
+  spec:
+    parameters:
+      - title: collect some information
+        schema:
+          type: object
+          properties:
+            password:
+              title: Password
+              type: string
+  -            ui:widget: password
+  +            ui:field: Secret
+    steps:
+      - id: collect-info
+        name: Collect some information
+        action: acme:do:something
+        input:
+  -        password: ${{ parameters.password }}
+  +        password: ${{ secrets.password }}
+  ```
+
+- 60085dd: Added the following default targets for external routes:
+
+  - `registerComponent` binds to the catalog import page.
+  - `viewTechDoc` binds to the TechDocs entity documentation page.
+
+##### Patch Changes
+
+- cbebad1: Internal updates to allow reusing Backstage's `fetchApi` implementation for event source requests. This allows you to for example, override the `Authorization` header.
+- 1ea7679: Removed waiting for the workspace and repository fields to be filled in before requesting user credentials
+- d44a20a: Added additional plugin metadata to `package.json`.
+- 6cb4886: Updated dependency `@rjsf/utils` to `5.18.4`.
+  Updated dependency `@rjsf/core` to `5.18.4`.
+  Updated dependency `@rjsf/material-ui` to `5.18.4`.
+  Updated dependency `@rjsf/validator-ajv8` to `5.18.4`.
+- 75dcd7e: Fixing bug in `formData` type as it should be `optional` as it's possibly undefined
+- bcec60f: updated the ContextMenu, ActionsPage, OngoingTask and TemplateCard frontend components to support the new scaffolder permissions:
+
+  - `scaffolder.task.create`
+  - `scaffolder.task.cancel`
+  - `scaffolder.task.read`
+
+- 612a453: Change owner to project for azure host
+
+### `@backstage/plugin-scaffolder-react` (1.8.6 → 1.9.0)
+
+#### 1.9.0
+
+##### Minor Changes
+
+- 62bd9eb: Replace `ui:widget: password` with the a warning message stating that it's not secure and to use the build in `SecretField`.
+
+  You can do this by updating your `template.yaml` files that have the reference `ui:widget: password` to `ui:field: Secret` instead.
+
+  ```diff
+  apiVersion: backstage.io/v1alpha1
+  kind: Template
+  metadata:
+    ...
+
+  spec:
+    parameters:
+      - title: collect some information
+        schema:
+          type: object
+          properties:
+            password:
+              title: Password
+              type: string
+  -            ui:widget: password
+  +            ui:field: Secret
+    steps:
+      - id: collect-info
+        name: Collect some information
+        action: acme:do:something
+        input:
+  -        password: ${{ parameters.password }}
+  +        password: ${{ secrets.password }}
+  ```
+
+##### Patch Changes
+
+- 86dc29d: Links that are rendered in the markdown in the `ScaffolderField` component are now opened in new tabs.
+- d44a20a: Added additional plugin metadata to `package.json`.
+- fa8560e: Prevents Autocomplete dropdown from overlapping sidebar on hovering it
+- 6cb4886: Updated dependency `@rjsf/utils` to `5.18.4`.
+  Updated dependency `@rjsf/core` to `5.18.4`.
+  Updated dependency `@rjsf/material-ui` to `5.18.4`.
+  Updated dependency `@rjsf/validator-ajv8` to `5.18.4`.
+- 75dcd7e: Fixing bug in `formData` type as it should be `optional` as it's possibly undefined
+- 928cfa0: Fixed a typo '
+
+## Other patch version bumps
+
+### `@backstage/backend-app-api` (0.7.5 → 0.7.6)
+
+#### 0.7.6
+
+##### Patch Changes
 
 - b7de623: Fixed a potential crash when passing an object with a `null` prototype as log meta.
 - 9539a0b: Deprecated `authServiceFactory`, `httpAuthServiceFactory`, and `userInfoServiceFactory`. Please import them from `@backstage/backend-defaults/auth`, `@backstage/backend-defaults/httpAuth`, and `@backstage/backend-defaults/userInfo` respectively instead.
@@ -85,147 +882,30 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
   implementation of `coreServices.scheduler` now lives.
 - d617103: Updating the logger redaction message to something less dramatic
 
-## `@backstage/backend-common` (0.22.0 → 0.23.0)
+### `@backstage/backend-dynamic-feature-service` (0.2.10 → 0.2.11)
 
-### 0.23.0
+#### 0.2.11
 
-#### Minor Changes
-
-- 395b973: Implemented `readTree` for Harness provider to support TechDocs functionality
-- 02103be: Deprecated and moved over core services to `@backstage/backend-defaults`
-
-#### Patch Changes
-
-- 9539a0b: Import utility functions from `backend-defaults` instead of `backend-app-api`
-- b2c4607: Removed accents on deprecation note
-- c6c0919: Updated configuration schema to include the `useRedisSets` cache config option.
-- ed3074e: The `database` types, helpers and implementations were moved to the package `@backstage/backend-defaults` and deprecated from the package `@backstage/backend-commons`.
-- 9cca724: The `TokenManager` has been deprecated in preparation for the [stable release of the New Backend System](https://github.com/backstage/backstage/issues/24493). Please [migrate](https://backstage.io/docs/tutorials/auth-service-migration) to the new `coreServices.auth`, `coreServices.httpAuth`, and `coreServices.userInfo` services as needed instead.
-- 1779188: In preparation to the new backend system stable release, the `isDatabaseConflictError` helper have been moved to the `@backstage/backend-plugin-api` package and deprecated from `@backstage/backend-common`.
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- e171620: Move `cache` implementation and types to the `@backstage/backend-defaults` package.
-- 1a6f38a: `ContainerRunner`, `DockerContainerRunner` and `KubernetesContainerRunner` are now deprecated
-- 8869b8e: We are deprecating the legacy `createServiceBuilder` factory, so if you are still using it, please checkout the migration guide and [migrate](https://backstage.io/docs/backend-system/building-plugins-and-modules/migrating) your plugin to use the new backend system.
-- 0634fdc: Deprecated `dropDatabase`
-- b2ee7f3: Moved over all URL reader functionality from `@backstage/backend-common` to `@backstage/backend-defaults/urlReader`. Please update your imports.
-- d94a477: Removed the circular dependency on `@backstage/backend-app-api`
-- 3bd04bb: We are deprecating the legacy router handlers and contexts in preparation for the new backend system stable release.
-- 23ee9ab: Fix AWS CodeCommit integration by allowing to change the host
-- e9a03c9: Finalizes the deprecation of legacy backend utilities. Deprecated utilities include the `ServiceBuilder` type, `notFoundHandler` and `redactWintonLogLine` functions.
-- 6a576dc: Deprecate legacy service logger helpers and stop using `getVoidLogger` in tests.
-- 032a7a6: Deprecate the legacy error and request logging handler types, respectively: `ErrorHandlerOptions` and `RequestLoggingHandlerFactory`.
-
-## `@backstage/backend-defaults` (0.2.18 → 0.3.0)
-
-### 0.3.0
-
-#### Minor Changes
-
-- 662dce8: **BREAKING**: The `workdir` argument have been removed from The `GerritUrlReader` constructor.
-
-  **BREAKING**: The Gerrit `readTree` implementation will now only use the Gitiles api. Support
-  for using git to clone the repo has been removed.
-
-- 02103be: Deprecated and moved over core services to `@backstage/backend-defaults`
-
-#### Patch Changes
-
-- 1897169: Exposed `DefaultSchedulerService`
-- b5bc997: Refactor cache manager inline types.
-- e171620: Remove dependency with `@backstage/backend-commons` package.
-- 6551b3d: Added core service factories and implementations from
-  `@backstage/backend-app-api`. They are now available as subpath exports, e.g.
-  `@backstage/backend-defaults/scheduler` is where the service factory and default
-  implementation of `coreServices.scheduler` now lives. They have been marked as
-  deprecated in their old locations.
-- 8aab451: Internal minor refactors of the database connectors
-- 0634fdc: Deprecated `dropDatabase`
-- b2ee7f3: Moved over all URL reader functionality from `@backstage/backend-common` to `@backstage/backend-defaults/urlReader`. Please update your imports.
-- 9539a0b: Added `@backstage/backend-defaults/auth`, `@backstage/backend-defaults/httpAuth`, and `@backstage/backend-defaults/userInfo` to house their respective backend service factories. You should now import these services from those new locations, instead of `@backstage/backend-app-api`.
-
-## `@backstage/backend-dynamic-feature-service` (0.2.10 → 0.2.11)
-
-### 0.2.11
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 
-## `@backstage/backend-plugin-api` (0.6.18 → 0.6.19)
+### `@backstage/backend-tasks` (0.5.23 → 0.5.24)
 
-### 0.6.19
+#### 0.5.24
 
-#### Patch Changes
-
-- 78a0b08: **DEPRECATION**: You should no longer do a function call on backend features when adding them to backends. The support for doing that is deprecated, and you should remove all trailing `()` parentheses after plugins and modules where you add them to your backend or test backends (e.g. when using `startTestBackend`).
-
-  The background for this is that `createBackendPlugin` and `createBackendModule` function now effectively return a `BackendFeature` rather than a `() => BackendFeature`. This is part of the cleanup efforts for New Backend System 1.0. In the short run this is non-breaking because the feature type has been given a callback signature that returns itself. But we strongly recommend that you remove all now-redundant calls made to feature objects, because that callback signature will be removed in a future release.
-
-  Service factories are still callbacks at this point.
-
-  Example change:
-
-  ```diff
-   await startTestBackend({
-     features: [
-       eventsServiceFactory(), // service - stays unchanged
-  -    catalogModuleBitbucketCloudEntityProvider(), // module - remove parentheses
-  +    catalogModuleBitbucketCloudEntityProvider,
-  ```
-
-- 9bdc3e8: In tests, return `null` rather than throwing an error when trying to get the `ExtensionPoint.T` property, so that tests asserting the property are not easily broken.
-- 9e63318: Added an optional `accessRestrictions` to external access service tokens and service principals in general, such that you can limit their access to certain plugins or permissions.
-- 3aa3fc7: Marked the `TokenManagerService` and `IdentityService` types as deprecated
-- b2ee7f3: Deprecated all of the `UrlReader` related type names and replaced them with prefixed versions. Please update your imports.
-
-  - `ReadTreeOptions` was renamed to `UrlReaderServiceReadTreeOptions`
-  - `ReadTreeResponse` was renamed to `UrlReaderServiceReadTreeResponse`
-  - `ReadTreeResponseDirOptions` was renamed to `UrlReaderServiceReadTreeResponseDirOptions`
-  - `ReadTreeResponseFile` was renamed to `UrlReaderServiceReadTreeResponseFile`
-  - `ReadUrlResponse` was renamed to `UrlReaderServiceReadUrlResponse`
-  - `ReadUrlOptions` was renamed to `UrlReaderServiceReadUrlOptions`
-  - `SearchOptions` was renamed to `UrlReaderServiceSearchOptions`
-  - `SearchResponse` was renamed to `UrlReaderServiceSearchResponse`
-  - `SearchResponseFile` was renamed to `UrlReaderServiceSearchResponseFile`
-
-- 9539a0b: Improved `coreServices` doc comments
-- 6551b3d: Moved the declaration of the `SchedulerService` here, along with prefixed versions of all of the types it depends on, from `@backstage/backend-tasks`
-- 0665b7e: Renamed `BackendPluginConfig`, `BackendModuleConfig`, and `ExtensionPointConfig` respectively to `CreateBackendPluginOptions`, `CreateBackendModuleOptions`, and `CreateExtensionPointOptions` to standardize frontend and backend factories signatures.
-- 1779188: Start using the `isDatabaseConflictError` helper from the `@backstage/backend-plugin-api` package in order to avoid dependency with the soon to deprecate `@backstage/backend-common` package.
-
-## `@backstage/backend-tasks` (0.5.23 → 0.5.24)
-
-### 0.5.24
-
-#### Patch Changes
+##### Patch Changes
 
 - 736bc3c: Marked all exports as deprecated and pointed at `@backstage/backend-plugin-api` and `@backstage/backend-defaults`
 - ed473cd: Updated the `TaskScheduleDefinitionConfig` deprecated comment to point to `SchedulerServiceTaskScheduleDefinitionConfig`
 - 6a576dc: Deprecate the legacy `TaskScheduler.fromConfig` method and stop using the `getVoidlogger` in tests files to reduce the dependency on the soon-to-deprecate `backstage-common` package.
 - 1897169: More detailed deprecation messages
 
-## `@backstage/backend-test-utils` (0.3.8 → 0.4.0)
+### `@backstage/cli` (0.26.6 → 0.26.7)
 
-### 0.4.0
+#### 0.26.7
 
-#### Minor Changes
-
-- 805cbe7: Added `TestCaches` that functions just like `TestDatabases`
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- 9e63318: Made it possible to give access restrictions to `mockCredentials.service`
-- 006b3e8: The type `MockDirectoryOptions` was renamed to `CreateMockDirectoryOptions` so that it's clear these options are exclusive to the mock directory factory.
-- 0634fdc: Refactored `TestDatabases` to no longer depend on `backend-common`
-- 6a576dc: Fix the logger service mock to prevent returning `undefined` from the `child` method.
-- 6c11f6e: Use imports from backend-defaults instead of the deprecated ones from backend-app-api
-
-## `@backstage/cli` (0.26.6 → 0.26.7)
-
-### 0.26.7
-
-#### Patch Changes
+##### Patch Changes
 
 - 788eca7: Fix readme for new plugins created using cli
 - 90c5268: Add `peerDependencies` to `devDependencies` in `package.json.hbs` templates.
@@ -236,29 +916,29 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
 - 009da47: Fix `versions:check --fix` when `yarn.lock` has multiple joint versions in the same section
 - 9ee948a: Bump `esbuild` target for package builds to `ES2022`.
 
-## `@backstage/cli-common` (0.1.13 → 0.1.14)
+### `@backstage/cli-common` (0.1.13 → 0.1.14)
 
-### 0.1.14
+#### 0.1.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 142abb0: The monorepo root check in `findPaths` will now accept a shorthand `workspaces` config in `package.json`, no longer requiring `workspaces.packages`.
 
-## `@backstage/cli-node` (0.2.5 → 0.2.6)
+### `@backstage/cli-node` (0.2.5 → 0.2.6)
 
-### 0.2.6
+#### 0.2.6
 
-#### Patch Changes
+##### Patch Changes
 
 - a1ae9cc: Updated doc link.
 - c328131: Added new plugin metadata fields to `BackstagePackageJson` type.
 - 93be042: Upgraded @yarnpkg/parsers to stable 3.0
 
-## `@backstage/core-app-api` (1.12.5 → 1.12.6)
+### `@backstage/core-app-api` (1.12.5 → 1.12.6)
 
-### 1.12.6
+#### 1.12.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 35fbe09: Added support for configuration of route bindings through static configuration, and default targets for external route refs.
 
@@ -286,19 +966,19 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
   });
   ```
 
-## `@backstage/core-compat-api` (0.2.5 → 0.2.6)
+### `@backstage/core-compat-api` (0.2.5 → 0.2.6)
 
-### 0.2.6
+#### 0.2.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 35fbe09: Add support for forwarding default target from legacy external route refs.
 
-## `@backstage/core-components` (0.14.7 → 0.14.8)
+### `@backstage/core-components` (0.14.7 → 0.14.8)
 
-### 0.14.8
+#### 0.14.8
 
-#### Patch Changes
+##### Patch Changes
 
 - a0b46f6: Having tooltip inherit font size for consistency in catalog table columns
 - 59cee81: Use `inherit` variant on OverflowTooltip underlying Typography component.
@@ -308,19 +988,19 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
 - 3e175c8: Removed max width from `Select` component.
 - 57d7582: Fixed a bug in `SupportButton` where the title was rendered with the characteristics of a button.
 
-## `@backstage/core-plugin-api` (1.9.2 → 1.9.3)
+### `@backstage/core-plugin-api` (1.9.2 → 1.9.3)
 
-### 1.9.3
+#### 1.9.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 35fbe09: A new `defaultTarget` option has been added to `createExternalRouteRef`. This allows one to specify a default target of the route by name, for example `'catalog.catalogIndex'`, which will be used if the target route is present in the app and there is no explicit route binding.
 
-## `@backstage/create-app` (0.5.15 → 0.5.16)
+### `@backstage/create-app` (0.5.15 → 0.5.16)
 
-### 0.5.16
+#### 0.5.16
 
-#### Patch Changes
+##### Patch Changes
 
 - cce0495: Bumped create-app version.
 - 77da22e: Bumped create-app version.
@@ -330,63 +1010,38 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
 - 1a212f9: Remove Tech Radar menu item from sidebar of scaffolded app to align with removal of tech-radar plugin from backend
 - 81507c8: Updated `node-gyp` to v10
 
-## `@backstage/integration` (1.11.0 → 1.12.0)
+### `@backstage/integration-react` (1.1.27 → 1.1.28)
 
-### 1.12.0
+#### 1.1.28
 
-#### Minor Changes
-
-- be1014d: **BREAKING** Removed deprecated code from when casing was changed from `GitHub` to `Github` nearly two years ago. The following items have been removed:
-
-  - `getGitHubFileFetchUrl` (use `getGithubFileFetchUrl` instead)
-  - `GitHubIntegrationConfig` (use `GithubIntegrationConfig` instead)
-  - `GitHubIntegration` (use `GithubIntegration` instead)
-  - `readGitHubIntegrationConfig` (use `readGithubIntegrationConfig` instead)
-  - `readGitHubIntegrationConfigs` (use `readGithubIntegrationConfigs` instead)
-  - `replaceGitHubUrlType` (use `replaceGithubUrlType` instead)
-
-- 395b973: Implemented `readTree` for Harness provider to support TechDocs functionality
-- 662dce8: **BREAKING**: `gitilesBaseUrl` is now mandatory for the Gerrit integration. The
-  ability to override this requirement using the `DISABLE_GERRIT_GITILES_REQUIREMENT`
-  environment variable has been removed.
-
-#### Patch Changes
-
-- 509e08c: Updated function for getHarnessEditContentsUrl
-- 23ee9ab: Fix AWS CodeCommit integration by allowing to change the host
-
-## `@backstage/integration-react` (1.1.27 → 1.1.28)
-
-### 1.1.28
-
-#### Patch Changes
+##### Patch Changes
 
 - 23ee9ab: Fix AWS CodeCommit integration by allowing to change the host
 
-## `@backstage/plugin-api-docs` (0.11.5 → 0.11.6)
+### `@backstage/plugin-api-docs` (0.11.5 → 0.11.6)
 
-### 0.11.6
+#### 0.11.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 7f84039: The `registerComponent` external route will now by default bind to the catalog import page if it is available.
 - 9cdc651: Make sure that the toggle button state is properly reflected in API cards
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 96cd13e: `DefaultApiExplorerPage` now accepts an optional `ownerPickerMode` for toggling the behavior of the `EntityOwnerPicker`, exposing a new mode `<DefaultApiExplorerPage ownerPickerMode="all" />` particularly suitable for larger catalogs. In this new mode, `EntityOwnerPicker` will display all the users and groups present in the catalog.
 
-## `@backstage/plugin-api-docs-module-protoc-gen-doc` (0.1.6 → 0.1.7)
+### `@backstage/plugin-api-docs-module-protoc-gen-doc` (0.1.6 → 0.1.7)
 
-### 0.1.7
+#### 0.1.7
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-app-backend` (0.3.67 → 0.3.68)
+### `@backstage/plugin-app-backend` (0.3.67 → 0.3.68)
 
-### 0.3.68
+#### 0.3.68
 
-#### Patch Changes
+##### Patch Changes
 
 - 8869b8e: Updated local development setup.
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
@@ -394,27 +1049,27 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
   This support is critical for dynamic frontend plugins to have access to their config values.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-app-node` (0.1.18 → 0.1.19)
+### `@backstage/plugin-app-node` (0.1.18 → 0.1.19)
 
-### 0.1.19
+#### 0.1.19
 
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-app-visualizer` (0.1.6 → 0.1.7)
-
-### 0.1.7
-
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend` (0.22.5 → 0.22.6)
+### `@backstage/plugin-app-visualizer` (0.1.6 → 0.1.7)
 
-### 0.22.6
+#### 0.1.7
 
-#### Patch Changes
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-auth-backend` (0.22.5 → 0.22.6)
+
+#### 0.22.6
+
+##### Patch Changes
 
 - 3e823d3: Limited user tokens will no longer include the `ent` field in its payload. Ownership claims will now be fetched from the user info service.
 
@@ -425,190 +1080,117 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 3e1bb15: Updated to use the new `@backstage/plugin-auth-backend-module-onelogin-provider` implementation
 
-## `@backstage/plugin-auth-backend-module-atlassian-provider` (0.1.10 → 0.2.0)
+### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.10 → 0.1.11)
 
-### 0.2.0
+#### 0.1.11
 
-#### Minor Changes
-
-- 8efc6cf: **BREAKING**: The `scope` and `scopes` config options have been removed and replaced by the standard `additionalScopes` config. In addition, the `offline_access`, `read:jira-work`, and `read:jira-user` scopes have been set to required and will always be present.
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.10 → 0.1.11)
+### `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.1.1 → 0.1.2)
 
-### 0.1.11
+#### 0.1.2
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.1.1 → 0.1.2)
+### `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.1.1 → 0.1.2)
 
-### 0.1.2
+#### 0.1.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - 8efc6cf: Added support for the new shared `additionalScopes` configuration. In addition, the `account` scope has been set to required and will always be present.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.1.1 → 0.1.2)
+### `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.1.1 → 0.1.2)
 
-### 0.1.2
+#### 0.1.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 1354d81: Use `node-fetch` instead of native fetch, as per https://backstage.io/docs/architecture-decisions/adrs-adr013
 
-## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.13 → 0.2.14)
+### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.13 → 0.2.14)
 
-### 0.2.14
+#### 0.2.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend-module-github-provider` (0.1.15 → 0.1.16)
+### `@backstage/plugin-auth-backend-module-github-provider` (0.1.15 → 0.1.16)
 
-### 0.1.16
+#### 0.1.16
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - 8efc6cf: Added support for the new shared `additionalScopes` configuration. In addition, the `read:user` scope has been set to required and will always be present.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.15 → 0.1.16)
+### `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.15 → 0.1.16)
 
-### 0.1.16
+#### 0.1.16
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - 8efc6cf: Added support for the new shared `additionalScopes` configuration. In addition, the `read_user` scope has been set to required and will always be present.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend-module-google-provider` (0.1.15 → 0.1.16)
+### `@backstage/plugin-auth-backend-module-google-provider` (0.1.15 → 0.1.16)
 
-### 0.1.16
+#### 0.1.16
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - 8efc6cf: Added support for the new shared `additionalScopes` configuration. In addition, the `openid`, `userinfo.email`, and `userinfo.profile` scopes have been set to required and will always be present.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend-module-guest-provider` (0.1.4 → 0.1.5)
+### `@backstage/plugin-auth-backend-module-guest-provider` (0.1.4 → 0.1.5)
 
-### 0.1.5
+#### 0.1.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.13 → 0.1.14)
+### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.13 → 0.1.14)
 
-### 0.1.14
+#### 0.1.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - 8efc6cf: Added support for the new shared `additionalScopes` configuration.
 - d44a20a: Added additional plugin metadata to `package.json`.
 - c187a9c: Minor internal type updates
 
-## `@backstage/plugin-auth-backend-module-oauth2-provider` (0.1.15 → 0.2.0)
+### `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.11 → 0.1.12)
 
-### 0.2.0
+#### 0.1.12
 
-#### Minor Changes
-
-- 8efc6cf: **BREAKING**: The `scope` config option have been removed and replaced by the standard `additionalScopes` config.
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.11 → 0.1.12)
+### `@backstage/plugin-auth-node` (0.4.13 → 0.4.14)
 
-### 0.1.12
+#### 0.4.14
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-auth-backend-module-oidc-provider` (0.1.9 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- 8efc6cf: **BREAKING**: The `scope` config option have been removed and replaced by the standard `additionalScopes` config. In addition, `openid`, `profile`, and `email` scopes have been set to required and will always be present.
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-- 4f21993: if oidc server do not provide revocation_endpoint，we should not call revoke function
-
-## `@backstage/plugin-auth-backend-module-okta-provider` (0.0.11 → 0.0.12)
-
-### 0.0.12
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- 8efc6cf: Added support for the new shared `additionalScopes` configuration, which means it can now also be specified as an array. In addition, the `openid`, `email`, `profile`, and `offline_access` scopes have been set to required and will always be present.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.12 → 0.1.13)
-
-### 0.1.13
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- 8efc6cf: **BREAKING**: The `scope` config option have been removed and replaced by the standard `additionalScopes` config. In addition, the `openid`, `pinniped:request-audience`, `username`, and `offline_access` scopes have been set to required and will always be present.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.1.10 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- 8efc6cf: **BREAKING**: The `scope` config option have been removed and replaced by the standard `additionalScopes` config. In addition, `openid`, and `offline_access` scopes have been set to required and will always be present.
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-auth-node` (0.4.13 → 0.4.14)
-
-### 0.4.14
-
-#### Patch Changes
+##### Patch Changes
 
 - 798ec37: Updated scope management for OAuth providers, where the `createOAuthAuthenticator` now accepts a new collection of `scopes` options:
 
@@ -622,431 +1204,335 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-auth-react` (0.1.2 → 0.1.3)
+### `@backstage/plugin-auth-react` (0.1.2 → 0.1.3)
 
-### 0.1.3
+#### 0.1.3
 
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-bitbucket-cloud-common` (0.2.19 → 0.2.20)
-
-### 0.2.20
-
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog` (1.20.0 → 1.21.0)
+### `@backstage/plugin-bitbucket-cloud-common` (0.2.19 → 0.2.20)
 
-### 1.21.0
+#### 0.2.20
 
-#### Minor Changes
-
-- 863a800: Added the following default targets for external routes:
-
-  - `createComponent` binds to the Scaffolder page.
-  - `viewTechDoc` binds to the TechDocs entity documentation page.
-  - `createFromTemplate` binds to the Scaffolder selected template page.
-
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
-- e04e57d: Fix bug with missing Actions column after adding "pagination" prop to catalog table
-- a2d2649: Export `catalogTranslationRef` under `/alpha`
-- bcec60f: updated the ContextMenu, ActionsPage, OngoingTask and TemplateCard frontend components to support the new scaffolder permissions:
 
-  - `scaffolder.task.create`
-  - `scaffolder.task.cancel`
-  - `scaffolder.task.read`
+### `@backstage/plugin-catalog-backend-module-aws` (0.3.13 → 0.3.14)
 
-## `@backstage/plugin-catalog-backend` (1.22.0 → 1.23.0)
+#### 0.3.14
 
-### 1.23.0
-
-#### Minor Changes
-
-- c7528b0: Pass through `EventsService` too in the new backend system
-
-#### Patch Changes
-
-- 8869b8e: Updated local development setup.
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-- d779e3b: Added a regex test to check commit hash. If url is from git commit branch ignore the edit url.
-- 6c5cab1: Fix bug in `getLocationByEntity`
-- 0f55f5c: Ensure name and title are both indexed by the DefaultCatalogCollator
-- 1779188: Start using the `isDatabaseConflictError` helper from the `@backstage/backend-plugin-api` package in order to avoid dependency with the soon to deprecate `@backstage/backend-common` package.
-
-## `@backstage/plugin-catalog-backend-module-aws` (0.3.13 → 0.3.14)
-
-### 0.3.14
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-backend-module-azure` (0.1.38 → 0.1.39)
+### `@backstage/plugin-catalog-backend-module-azure` (0.1.38 → 0.1.39)
 
-### 0.1.39
+#### 0.1.39
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.2.1 → 0.2.2)
-
-### 0.2.2
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.2.5 → 0.2.6)
+### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.2.1 → 0.2.2)
 
-### 0.2.6
+#### 0.2.2
 
-#### Patch Changes
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.2.5 → 0.2.6)
+
+#### 0.2.6
+
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - 6a576dc: Replace the usage of `getVoidLogger` with `mockServices.logger.mock` in order to remove the dependency with the soon-to-be-deprecated `backend-common` package.
 - b51e823: Remove debug console logging statement
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.32 → 0.1.33)
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.32 → 0.1.33)
 
-### 0.1.33
+#### 0.1.33
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-catalog-backend-module-gcp` (0.1.19 → 0.1.20)
-
-### 0.1.20
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-backend-module-gerrit` (0.1.35 → 0.1.36)
+### `@backstage/plugin-catalog-backend-module-gcp` (0.1.19 → 0.1.20)
 
-### 0.1.36
+#### 0.1.20
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-backend-module-github` (0.6.1 → 0.6.2)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.35 → 0.1.36)
 
-### 0.6.2
+#### 0.1.36
 
-#### Patch Changes
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-catalog-backend-module-github` (0.6.1 → 0.6.2)
+
+#### 0.6.2
+
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 67d0530: Fix bug in root repo import where catalog-info.yaml.hcl file is found by search and breaks the import
 
-## `@backstage/plugin-catalog-backend-module-github-org` (0.1.13 → 0.1.14)
+### `@backstage/plugin-catalog-backend-module-github-org` (0.1.13 → 0.1.14)
 
-### 0.1.14
+#### 0.1.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.3.17 → 0.3.18)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.17 → 0.3.18)
 
-### 0.3.18
+#### 0.3.18
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 150fc77: Fixed an issue in `GitlabOrgDiscoveryEntityProvider` where a missing `orgEnabled` config key was throwing an error.
 - f271164: Fixed an issue in `GitlabDiscoveryEntityProvider` where the fallback branch was taking precedence over the GitLab default branch.
 
-## `@backstage/plugin-catalog-backend-module-gitlab-org` (0.0.1 → 0.0.2)
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.23 → 0.4.24)
 
-### 0.0.2
+#### 0.4.24
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.23 → 0.4.24)
-
-### 0.4.24
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-backend-module-ldap` (0.5.34 → 0.6.0)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.26 → 0.5.27)
 
-### 0.6.0
+#### 0.5.27
 
-#### Minor Changes
-
-- debcc8c: Migrate LDAP catalog module to the new backend system.
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-catalog-backend-module-msgraph` (0.5.26 → 0.5.27)
-
-### 0.5.27
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - f7be17a: Added missing `userSelect` property in `readMicrosoftGraphOrg` method
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-backend-module-openapi` (0.1.36 → 0.1.37)
+### `@backstage/plugin-catalog-backend-module-openapi` (0.1.36 → 0.1.37)
 
-### 0.1.37
+#### 0.1.37
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.24 → 0.1.25)
-
-### 0.1.25
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.16 → 0.1.17)
+### `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.24 → 0.1.25)
 
-### 0.1.17
+#### 0.1.25
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-catalog-backend-module-unprocessed` (0.4.5 → 0.4.6)
-
-### 0.4.6
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-common` (1.0.23 → 1.0.24)
+### `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.16 → 0.1.17)
 
-### 1.0.24
+#### 0.1.17
 
-#### Patch Changes
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-catalog-backend-module-unprocessed` (0.4.5 → 0.4.6)
+
+#### 0.4.6
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-catalog-common` (1.0.23 → 1.0.24)
+
+#### 1.0.24
+
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-graph` (0.4.5 → 0.4.6)
+### `@backstage/plugin-catalog-graph` (0.4.5 → 0.4.6)
 
-### 0.4.6
+#### 0.4.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 8d474d3: Add function to `EntityRelationsGraph` filter that excludes entities from graph
 - d44a20a: Added additional plugin metadata to `package.json`.
 - cd6aeea: The `catalogEntity` external route will now by default bind to the catalog entity page if it is available.
 
-## `@backstage/plugin-catalog-import` (0.11.0 → 0.12.0)
+### `@backstage/plugin-catalog-node` (1.12.0 → 1.12.1)
 
-### 0.12.0
+#### 1.12.1
 
-#### Minor Changes
-
-- 4f92394: Migrate from identityApi to fetchApi in frontend plugins.
-
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-- 3daad61: Integrated Azure DevOps as a catalog import source. This enables Backstage to create Pull Requests to Azure DevOps repositories as it does with GitHub repositories
-
-## `@backstage/plugin-catalog-node` (1.12.0 → 1.12.1)
-
-### 1.12.1
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-catalog-react` (1.12.0 → 1.12.1)
+### `@backstage/plugin-catalog-react` (1.12.0 → 1.12.1)
 
-### 1.12.1
+#### 1.12.1
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 - fa8560e: Prevents Autocomplete dropdown from overlapping sidebar on hovering it
 
-## `@backstage/plugin-catalog-unprocessed-entities` (0.2.4 → 0.2.5)
+### `@backstage/plugin-catalog-unprocessed-entities` (0.2.4 → 0.2.5)
 
-### 0.2.5
+#### 0.2.5
 
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-catalog-unprocessed-entities-common` (0.0.1 → 0.0.2)
-
-### 0.0.2
-
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-config-schema` (0.1.55 → 0.1.56)
+### `@backstage/plugin-config-schema` (0.1.55 → 0.1.56)
 
-### 0.1.56
+#### 0.1.56
 
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-devtools` (0.1.14 → 0.1.15)
-
-### 0.1.15
-
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-devtools-backend` (0.3.4 → 0.3.5)
+### `@backstage/plugin-devtools` (0.1.14 → 0.1.15)
 
-### 0.3.5
+#### 0.1.15
 
-#### Patch Changes
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-devtools-backend` (0.3.4 → 0.3.5)
+
+#### 0.3.5
+
+##### Patch Changes
 
 - 8869b8e: Updated local development setup.
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-devtools-common` (0.1.9 → 0.1.10)
+### `@backstage/plugin-devtools-common` (0.1.9 → 0.1.10)
 
-### 0.1.10
+#### 0.1.10
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-events-backend` (0.3.5 → 0.3.6)
+### `@backstage/plugin-events-backend` (0.3.5 → 0.3.6)
 
-### 0.3.6
+#### 0.3.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-events-backend-module-aws-sqs` (0.3.4 → 0.3.5)
+### `@backstage/plugin-events-backend-module-aws-sqs` (0.3.4 → 0.3.5)
 
-### 0.3.5
+#### 0.3.5
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-events-backend-module-azure` (0.2.4 → 0.2.5)
-
-### 0.2.5
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.4 → 0.2.5)
+### `@backstage/plugin-events-backend-module-azure` (0.2.4 → 0.2.5)
 
-### 0.2.5
+#### 0.2.5
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-events-backend-module-gerrit` (0.2.4 → 0.2.5)
-
-### 0.2.5
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-events-backend-module-github` (0.2.4 → 0.2.5)
+### `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.4 → 0.2.5)
 
-### 0.2.5
+#### 0.2.5
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-events-backend-module-gitlab` (0.2.4 → 0.2.5)
-
-### 0.2.5
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-events-backend-test-utils` (0.1.28 → 0.1.29)
+### `@backstage/plugin-events-backend-module-gerrit` (0.2.4 → 0.2.5)
 
-### 0.1.29
+#### 0.2.5
 
-#### Patch Changes
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-events-backend-module-github` (0.2.4 → 0.2.5)
+
+#### 0.2.5
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-events-backend-module-gitlab` (0.2.4 → 0.2.5)
+
+#### 0.2.5
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-events-backend-test-utils` (0.1.28 → 0.1.29)
+
+#### 0.1.29
+
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-events-node` (0.3.4 → 0.3.5)
+### `@backstage/plugin-events-node` (0.3.4 → 0.3.5)
 
-### 0.3.5
+#### 0.3.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 6a576dc: Replace the usage of `getVoidLogger` with `mockServices.logger.mock` in order to remove the dependency with the soon-to-be-deprecated `backend-common` package.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-home` (0.7.4 → 0.7.5)
+### `@backstage/plugin-home` (0.7.4 → 0.7.5)
 
-### 0.7.5
+#### 0.7.5
 
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-- 6cb4886: Updated dependency `@rjsf/utils` to `5.18.4`.
-  Updated dependency `@rjsf/core` to `5.18.4`.
-  Updated dependency `@rjsf/material-ui` to `5.18.4`.
-  Updated dependency `@rjsf/validator-ajv8` to `5.18.4`.
-
-## `@backstage/plugin-home-react` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 6cb4886: Updated dependency `@rjsf/utils` to `5.18.4`.
@@ -1054,307 +1540,111 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
   Updated dependency `@rjsf/material-ui` to `5.18.4`.
   Updated dependency `@rjsf/validator-ajv8` to `5.18.4`.
 
-## `@backstage/plugin-kubernetes` (0.11.10 → 0.11.11)
+### `@backstage/plugin-home-react` (0.1.13 → 0.1.14)
 
-### 0.11.11
+#### 0.1.14
 
-#### Patch Changes
+##### Patch Changes
+
+- d44a20a: Added additional plugin metadata to `package.json`.
+- 6cb4886: Updated dependency `@rjsf/utils` to `5.18.4`.
+  Updated dependency `@rjsf/core` to `5.18.4`.
+  Updated dependency `@rjsf/material-ui` to `5.18.4`.
+  Updated dependency `@rjsf/validator-ajv8` to `5.18.4`.
+
+### `@backstage/plugin-kubernetes` (0.11.10 → 0.11.11)
+
+#### 0.11.11
+
+##### Patch Changes
 
 - 4f92394: Migrate from identityApi to fetchApi in frontend plugins.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-kubernetes-backend` (0.17.1 → 0.18.0)
+### `@backstage/plugin-kubernetes-node` (0.1.12 → 0.1.13)
 
-### 0.18.0
+#### 0.1.13
 
-#### Minor Changes
-
-- 0177f75: Update kubernetes plugins to use autoscaling/v2
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-kubernetes-cluster` (0.0.11 → 0.0.12)
-
-### 0.0.12
-
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-kubernetes-common` (0.7.6 → 0.8.0)
+### `@backstage/plugin-notifications` (0.2.1 → 0.2.2)
 
-### 0.8.0
+#### 0.2.2
 
-#### Minor Changes
-
-- 0177f75: Update kubernetes plugins to use autoscaling/v2
-
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-kubernetes-node` (0.1.12 → 0.1.13)
-
-### 0.1.13
-
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-kubernetes-react` (0.3.5 → 0.4.0)
-
-### 0.4.0
-
-#### Minor Changes
-
-- 4f92394: Migrate from identityApi to fetchApi in frontend plugins.
-- 0177f75: Update kubernetes plugins to use autoscaling/v2
-
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-notifications` (0.2.1 → 0.2.2)
-
-### 0.2.2
-
-#### Patch Changes
+##### Patch Changes
 
 - 7f02684: Do not always show scrollbars in notification description
 - 6d196b4: Fixes performance issue with Notifications title counter.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-notifications-backend` (0.2.1 → 0.3.0)
+### `@backstage/plugin-org` (0.6.25 → 0.6.26)
 
-### 0.3.0
+#### 0.6.26
 
-#### Minor Changes
-
-- 07a789b: adding filtering of notifications by processors
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-notifications-backend-module-email` (0.0.1 → 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- 07a789b: add notification filters
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-notifications-common` (0.0.3 → 0.0.4)
-
-### 0.0.4
-
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-notifications-node` (0.1.4 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- 07a789b: add notifications filtering by processors
-
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-- 1354d81: Use `node-fetch` instead of native fetch, as per https://backstage.io/docs/architecture-decisions/adrs-adr013
-
-## `@backstage/plugin-org` (0.6.25 → 0.6.26)
-
-### 0.6.26
-
-#### Patch Changes
+##### Patch Changes
 
 - d8e2f53: The `catalogIndex` external route is now optional and will by default bind to the catalog index page if it is available.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-org-react` (0.1.24 → 0.1.25)
+### `@backstage/plugin-org-react` (0.1.24 → 0.1.25)
 
-### 0.1.25
+#### 0.1.25
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-permission-backend` (0.5.42 → 0.5.43)
+### `@backstage/plugin-permission-backend` (0.5.42 → 0.5.43)
 
-### 0.5.43
+#### 0.5.43
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.15 → 0.1.16)
+### `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.15 → 0.1.16)
 
-### 0.1.16
+#### 0.1.16
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-permission-common` (0.7.13 → 0.7.14)
+### `@backstage/plugin-permission-common` (0.7.13 → 0.7.14)
 
-### 0.7.14
+#### 0.7.14
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-permission-node` (0.7.29 → 0.7.30)
+### `@backstage/plugin-permission-node` (0.7.29 → 0.7.30)
 
-### 0.7.30
+#### 0.7.30
 
-#### Patch Changes
+##### Patch Changes
 
 - 9e63318: Ensure that service token access restrictions, when present, are taken into account
 - d44a20a: Added additional plugin metadata to `package.json`.
 - c7b0dd1: Import `tokenManager` definition from `@backstage/backend-plugin-api`
 
-## `@backstage/plugin-permission-react` (0.4.22 → 0.4.23)
+### `@backstage/plugin-permission-react` (0.4.22 → 0.4.23)
 
-### 0.4.23
+#### 0.4.23
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-proxy-backend` (0.4.16 → 0.5.0)
+### `@backstage/plugin-scaffolder-backend` (1.22.8 → 1.22.9)
 
-### 0.5.0
+#### 1.22.9
 
-#### Minor Changes
-
-- 88480e4: **BREAKING**: The proxy backend plugin is now protected by Backstage auth, by
-  default. Unless specifically configured (see below), all proxy endpoints will
-  reject requests immediately unless a valid Backstage user or service token is
-  passed along with the request. This aligns the proxy with how other Backstage
-  backends behave out of the box, and serves to protect your upstreams from
-  unauthorized access.
-
-  A proxy configuration section can now look as follows:
-
-  ```yaml
-  proxy:
-    endpoints:
-      '/pagerduty':
-        target: https://api.pagerduty.com
-        credentials: require # NEW!
-        headers:
-          Authorization: Token token=${PAGERDUTY_TOKEN}
-  ```
-
-  There are three possible `credentials` settings at this point:
-
-  - `require`: Callers must provide Backstage user or service credentials with
-    each request. The credentials are not forwarded to the proxy target.
-  - `forward`: Callers must provide Backstage user or service credentials with
-    each request, and those credentials are forwarded to the proxy target.
-  - `dangerously-allow-unauthenticated`: No Backstage credentials are required to
-    access this proxy target. The target can still apply its own credentials
-    checks, but the proxy will not help block non-Backstage-blessed callers. If
-    you also add `allowedHeaders: ['Authorization']` to an endpoint configuration,
-    then the Backstage token (if provided) WILL be forwarded.
-
-  The value `dangerously-allow-unauthenticated` was the old default.
-
-  The value `require` is the new default, so requests that were previously
-  permitted may now start resulting in `401 Unauthorized` responses. If you have
-  `backend.auth.dangerouslyDisableDefaultAuthPolicy` set to `true`, this does not
-  apply; the proxy will behave as if all endpoints were set to
-  `dangerously-allow-unauthenticated`.
-
-  If you have proxy endpoints that require unauthenticated access still, please
-  add `credentials: dangerously-allow-unauthenticated` to their declarations in
-  your app-config.
-
-#### Patch Changes
-
-- 8869b8e: Updated local development setup.
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-scaffolder` (1.20.1 → 1.21.0)
-
-### 1.21.0
-
-#### Minor Changes
-
-- d57ebbc: Changed the way to display entities in EntityPicker to use entityPresentationApi instead of humanizeEntityRef
-- 62bd9eb: Replace `ui:widget: password` with the a warning message stating that it's not secure and to use the build in `SecretField`.
-
-  You can do this by updating your `template.yaml` files that have the reference `ui:widget: password` to `ui:field: Secret` instead.
-
-  ```diff
-  apiVersion: backstage.io/v1alpha1
-  kind: Template
-  metadata:
-    ...
-
-  spec:
-    parameters:
-      - title: collect some information
-        schema:
-          type: object
-          properties:
-            password:
-              title: Password
-              type: string
-  -            ui:widget: password
-  +            ui:field: Secret
-    steps:
-      - id: collect-info
-        name: Collect some information
-        action: acme:do:something
-        input:
-  -        password: ${{ parameters.password }}
-  +        password: ${{ secrets.password }}
-  ```
-
-- 60085dd: Added the following default targets for external routes:
-
-  - `registerComponent` binds to the catalog import page.
-  - `viewTechDoc` binds to the TechDocs entity documentation page.
-
-#### Patch Changes
-
-- cbebad1: Internal updates to allow reusing Backstage's `fetchApi` implementation for event source requests. This allows you to for example, override the `Authorization` header.
-- 1ea7679: Removed waiting for the workspace and repository fields to be filled in before requesting user credentials
-- d44a20a: Added additional plugin metadata to `package.json`.
-- 6cb4886: Updated dependency `@rjsf/utils` to `5.18.4`.
-  Updated dependency `@rjsf/core` to `5.18.4`.
-  Updated dependency `@rjsf/material-ui` to `5.18.4`.
-  Updated dependency `@rjsf/validator-ajv8` to `5.18.4`.
-- 75dcd7e: Fixing bug in `formData` type as it should be `optional` as it's possibly undefined
-- bcec60f: updated the ContextMenu, ActionsPage, OngoingTask and TemplateCard frontend components to support the new scaffolder permissions:
-
-  - `scaffolder.task.create`
-  - `scaffolder.task.cancel`
-  - `scaffolder.task.read`
-
-- 612a453: Change owner to project for azure host
-
-## `@backstage/plugin-scaffolder-backend` (1.22.8 → 1.22.9)
-
-### 1.22.9
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - 5c65785: Fixing issues with log redaction in the scaffolder logs
@@ -1368,147 +1658,124 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
   - `scaffolder.task.cancel`
   - `scaffolder.task.read`
 
-## `@backstage/plugin-scaffolder-backend-module-azure` (0.1.10 → 0.1.11)
+### `@backstage/plugin-scaffolder-backend-module-azure` (0.1.10 → 0.1.11)
 
-### 0.1.11
+#### 0.1.11
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - b4169ee: Use `GitRepository.webUrl` instead of `GitRepository.remoteUrl` to set the value of `repoContentsUrl` as `remoteUrl` can sometimes return an URL with the wrong format (e.g. `https://<organization>@dev.azure.com/<organization>/<project>/\_git/<repository>`).
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.8 → 0.2.9)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.8 → 0.2.9)
 
-### 0.2.9
+#### 0.2.9
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.8 → 0.1.9)
-
-### 0.1.9
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.8 → 0.1.9)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.8 → 0.1.9)
 
-### 0.1.9
+#### 0.1.9
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.19 → 0.2.20)
-
-### 0.2.20
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.42 → 0.2.43)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.8 → 0.1.9)
 
-### 0.2.43
+#### 0.1.9
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.10 → 0.1.11)
-
-### 0.1.11
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-scaffolder-backend-module-gitea` (0.1.8 → 0.1.9)
+### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.19 → 0.2.20)
 
-### 0.1.9
+#### 0.2.20
 
-#### Patch Changes
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.42 → 0.2.43)
+
+#### 0.2.43
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.10 → 0.1.11)
+
+#### 0.1.11
+
+##### Patch Changes
+
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
+
+### `@backstage/plugin-scaffolder-backend-module-gitea` (0.1.8 → 0.1.9)
+
+#### 0.1.9
+
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 1354d81: Use `node-fetch` instead of native fetch, as per https://backstage.io/docs/architecture-decisions/adrs-adr013
 
-## `@backstage/plugin-scaffolder-backend-module-github` (0.2.8 → 0.3.0)
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.0 → 0.4.1)
 
-### 0.3.0
+#### 0.4.1
 
-#### Minor Changes
-
-- 403394a: Allow empty author info in createPullRequest action for Github
-
-#### Patch Changes
-
-- f145a04: Added handling for dry run to githubPullRequest and githubWebhook and added tests for this functionality
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.0 → 0.4.1)
-
-### 0.4.1
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - cf96041: Added `gitlab:issue:edit` action to edit existing GitLab issues
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 829e0ec: Add new `gitlab:pipeline:trigger` action to trigger GitLab pipelines.
 
-## `@backstage/plugin-scaffolder-backend-module-notifications` (0.0.1 → 0.0.2)
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.35 → 0.4.36)
 
-### 0.0.2
+#### 0.4.36
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.4.35 → 0.4.36)
-
-### 0.4.36
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.26 → 0.1.27)
+### `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.26 → 0.1.27)
 
-### 0.1.27
+#### 0.1.27
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 1354d81: Use `node-fetch` instead of native fetch, as per https://backstage.io/docs/architecture-decisions/adrs-adr013
 
-## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.3.1 → 0.3.2)
+### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.3.1 → 0.3.2)
 
-### 0.3.2
+#### 0.3.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-scaffolder-common` (1.5.2 → 1.5.3)
+### `@backstage/plugin-scaffolder-common` (1.5.2 → 1.5.3)
 
-### 1.5.3
+#### 1.5.3
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 - bcec60f: added the following new permissions to the scaffolder backend endpoints:
@@ -1517,85 +1784,37 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
   - `scaffolder.task.cancel`
   - `scaffolder.task.read`
 
-## `@backstage/plugin-scaffolder-node` (0.4.4 → 0.4.5)
+### `@backstage/plugin-scaffolder-node` (0.4.4 → 0.4.5)
 
-### 0.4.5
+#### 0.4.5
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-scaffolder-node-test-utils` (0.1.4 → 0.1.5)
+### `@backstage/plugin-scaffolder-node-test-utils` (0.1.4 → 0.1.5)
 
-### 0.1.5
+#### 0.1.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 6a576dc: Replace the usage of `getVoidLogger` with `mockServices.logger.mock` in order to remove the dependency with the soon-to-be-deprecated `backend-common` package.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-scaffolder-react` (1.8.6 → 1.9.0)
+### `@backstage/plugin-search` (1.4.11 → 1.4.12)
 
-### 1.9.0
+#### 1.4.12
 
-#### Minor Changes
-
-- 62bd9eb: Replace `ui:widget: password` with the a warning message stating that it's not secure and to use the build in `SecretField`.
-
-  You can do this by updating your `template.yaml` files that have the reference `ui:widget: password` to `ui:field: Secret` instead.
-
-  ```diff
-  apiVersion: backstage.io/v1alpha1
-  kind: Template
-  metadata:
-    ...
-
-  spec:
-    parameters:
-      - title: collect some information
-        schema:
-          type: object
-          properties:
-            password:
-              title: Password
-              type: string
-  -            ui:widget: password
-  +            ui:field: Secret
-    steps:
-      - id: collect-info
-        name: Collect some information
-        action: acme:do:something
-        input:
-  -        password: ${{ parameters.password }}
-  +        password: ${{ secrets.password }}
-  ```
-
-#### Patch Changes
-
-- 86dc29d: Links that are rendered in the markdown in the `ScaffolderField` component are now opened in new tabs.
-- d44a20a: Added additional plugin metadata to `package.json`.
-- fa8560e: Prevents Autocomplete dropdown from overlapping sidebar on hovering it
-- 6cb4886: Updated dependency `@rjsf/utils` to `5.18.4`.
-  Updated dependency `@rjsf/core` to `5.18.4`.
-  Updated dependency `@rjsf/material-ui` to `5.18.4`.
-  Updated dependency `@rjsf/validator-ajv8` to `5.18.4`.
-- 75dcd7e: Fixing bug in `formData` type as it should be `optional` as it's possibly undefined
-- 928cfa0: Fixed a typo '
-
-## `@backstage/plugin-search` (1.4.11 → 1.4.12)
-
-### 1.4.12
-
-#### Patch Changes
+##### Patch Changes
 
 - 4f92394: Migrate from identityApi to fetchApi in frontend plugins.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-search-backend` (1.5.9 → 1.5.10)
+### `@backstage/plugin-search-backend` (1.5.9 → 1.5.10)
 
-### 1.5.10
+#### 1.5.10
 
-#### Patch Changes
+##### Patch Changes
 
 - 8869b8e: Updated local development setup.
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
@@ -1603,140 +1822,101 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
 - 5b6f979: Split backend search plugin startup into "init" and "start" stages to ensure necessary initialization has happened before startup
 - 34dc47d: Move @backstage/repo-tools to devDependencies
 
-## `@backstage/plugin-search-backend-module-catalog` (0.1.24 → 0.1.25)
+### `@backstage/plugin-search-backend-module-catalog` (0.1.24 → 0.1.25)
 
-### 0.1.25
+#### 0.1.25
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-search-backend-module-elasticsearch` (1.4.1 → 1.5.0)
+### `@backstage/plugin-search-backend-module-explore` (0.1.24 → 0.1.25)
 
-### 1.5.0
+#### 0.1.25
 
-#### Minor Changes
+##### Patch Changes
 
-- b186701: **BREAKING**: The ElasticSearch indexer will now delete stale indices matching the indexer's pattern.
-  The method `getAliases` of `ElasticSearchClientWrapper` has been deprecated and might be removed in future releases.
+- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
+- d44a20a: Added additional plugin metadata to `package.json`.
 
-  An indexer using the `some-type-index__*` pattern will remove indices matching this pattern after indexation
-  to prevent stale indices leading to shards exhaustion.
+### `@backstage/plugin-search-backend-module-pg` (0.5.27 → 0.5.28)
 
-  Before upgrading ensure that the index pattern doesn't match indices that are not managed by Backstage
-  and thus shouldn't be deleted.
+#### 0.5.28
 
-  Note: The ElasticSearch indexer already uses wildcards patterns to remove aliases on these indices.
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - 6a576dc: Replace the usage of `getVoidLogger` with `mockServices.logger.mock` in order to remove the dependency with the soon-to-be-deprecated `backend-common` package.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-search-backend-module-explore` (0.1.24 → 0.1.25)
+### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.11 → 0.1.12)
 
-### 0.1.25
+#### 0.1.12
 
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-search-backend-module-pg` (0.5.27 → 0.5.28)
-
-### 0.5.28
-
-#### Patch Changes
-
-- 78a0b08: Internal refactor to handle `BackendFeature` contract change.
-- 6a576dc: Replace the usage of `getVoidLogger` with `mockServices.logger.mock` in order to remove the dependency with the soon-to-be-deprecated `backend-common` package.
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-search-backend-module-techdocs` (0.1.23 → 0.1.24)
+### `@backstage/plugin-search-backend-module-techdocs` (0.1.23 → 0.1.24)
 
-### 0.1.24
+#### 0.1.24
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-search-backend-node` (1.2.23 → 1.2.24)
+### `@backstage/plugin-search-backend-node` (1.2.23 → 1.2.24)
 
-### 1.2.24
+#### 1.2.24
 
-#### Patch Changes
+##### Patch Changes
 
 - 6a576dc: Replace the usage of `getVoidLogger` with `mockServices.logger.mock` in order to remove the dependency with the soon-to-be-deprecated `backend-common` package.
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 5b6f979: Split backend search plugin startup into "init" and "start" stages to ensure necessary initialization has happened before startup
 
-## `@backstage/plugin-search-common` (1.2.11 → 1.2.12)
+### `@backstage/plugin-search-common` (1.2.11 → 1.2.12)
 
-### 1.2.12
+#### 1.2.12
 
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-search-react` (1.7.11 → 1.7.12)
-
-### 1.7.12
-
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-signals` (0.0.6 → 0.0.7)
+### `@backstage/plugin-search-react` (1.7.11 → 1.7.12)
 
-### 0.0.7
+#### 1.7.12
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-signals-backend` (0.1.4 → 0.1.5)
+### `@backstage/plugin-signals-backend` (0.1.4 → 0.1.5)
 
-### 0.1.5
+#### 0.1.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - 6a576dc: Replace the usage of `getVoidLogger` with `mockServices.logger.mock` in order to remove the dependency with the soon-to-be-deprecated `backend-common` package.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-signals-node` (0.1.4 → 0.1.5)
+### `@backstage/plugin-signals-node` (0.1.4 → 0.1.5)
 
-### 0.1.5
+#### 0.1.5
 
-#### Patch Changes
-
-- d44a20a: Added additional plugin metadata to `package.json`.
-
-## `@backstage/plugin-signals-react` (0.0.3 → 0.0.4)
-
-### 0.0.4
-
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-techdocs` (1.10.5 → 1.10.6)
+### `@backstage/plugin-techdocs` (1.10.5 → 1.10.6)
 
-### 1.10.6
+#### 1.10.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 654af4a: mkdocs-material have updated their CSS variable template, and a few are unset in Backstage. This patch adds the missing variables to ensure coverage.
 - cbebad1: Internal updates to allow reusing Backstage's `fetchApi` implementation for event source requests. This allows you to for example, override the `Authorization` header.
@@ -1745,19 +1925,19 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 1256d88: Fixed an issue preventing the `TechDocsSearchBar` component from opening when clicking on the arrow icon.
 
-## `@backstage/plugin-techdocs-addons-test-utils` (1.0.32 → 1.0.33)
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.32 → 1.0.33)
 
-### 1.0.33
+#### 1.0.33
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-techdocs-backend` (1.10.5 → 1.10.6)
+### `@backstage/plugin-techdocs-backend` (1.10.5 → 1.10.6)
 
-### 1.10.6
+#### 1.10.6
 
-#### Patch Changes
+##### Patch Changes
 
 - e64bfb2: Allow defining custom build log transport for techdocs builder
 - 8869b8e: Updated local development setup.
@@ -1765,74 +1945,74 @@ Newly added: `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backst
 - 2110d76: Removed `dockerode` dependency.
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.10 → 1.1.11)
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.10 → 1.1.11)
 
-### 1.1.11
+#### 1.1.11
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-techdocs-node` (1.12.4 → 1.12.5)
+### `@backstage/plugin-techdocs-node` (1.12.4 → 1.12.5)
 
-### 1.12.5
+#### 1.12.5
 
-#### Patch Changes
+##### Patch Changes
 
 - e64bfb2: Allow defining custom build log transport for techdocs builder
 - 48c38f0: `TechdocsGenerator` won't require a `containerRunner` option anymore for generating TechDocs in docker.
 - d44a20a: Added additional plugin metadata to `package.json`.
 - 5db7536: Updated `getRepoUrlFromLocationAnnotation` to check for Harness SCM integration
 
-## `@backstage/plugin-techdocs-react` (1.2.4 → 1.2.5)
+### `@backstage/plugin-techdocs-react` (1.2.4 → 1.2.5)
 
-### 1.2.5
+#### 1.2.5
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 
-## `@backstage/plugin-user-settings` (0.8.6 → 0.8.7)
+### `@backstage/plugin-user-settings` (0.8.6 → 0.8.7)
 
-### 0.8.7
+#### 0.8.7
 
-#### Patch Changes
+##### Patch Changes
 
 - d44a20a: Added additional plugin metadata to `package.json`.
 - e6ec179: Use signals to update user settings across sessions
 
-## `@backstage/plugin-user-settings-backend` (0.2.17 → 0.2.18)
+### `@backstage/plugin-user-settings-backend` (0.2.17 → 0.2.18)
 
-### 0.2.18
+#### 0.2.18
 
-#### Patch Changes
+##### Patch Changes
 
 - 8869b8e: Updated local development setup.
 - 78a0b08: Internal refactor to handle `BackendFeature` contract change.
 - d44a20a: Added additional plugin metadata to `package.json`.
 - e6ec179: Use signals to update user settings across sessions
 
-## `@backstage/repo-tools` (0.9.0 → 0.9.1)
+### `@backstage/repo-tools` (0.9.0 → 0.9.1)
 
-### 0.9.1
+#### 0.9.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 8721a02: Add `--client-additional-properties` option to `openapi generate` command
 
-## `@backstage/theme` (0.5.5 → 0.5.6)
+### `@backstage/theme` (0.5.5 → 0.5.6)
 
-### 0.5.6
+#### 0.5.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 702fa7d: Internal refactor to fix an issue where the MUI 5 `v5-` class prefixing gets removed by tree shaking.
 
-## `@techdocs/cli` (1.8.11 → 1.8.12)
+### `@techdocs/cli` (1.8.11 → 1.8.12)
 
-### 1.8.12
+#### 1.8.12
 
-#### Patch Changes
+##### Patch Changes
 
 - 2110d76: Removed `dockerode` dependency.
 

@@ -2,37 +2,120 @@
 
 Changes between 1.28.4 and 1.29.0 — 153 changed and 2 added packages.
 
-Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-scaffolder-backend-module-gcp`.
+## Summary
 
-## `@backstage/plugin-catalog-backend-module-logs` (new, 0.0.1)
+- [Newly added packages](#newly-added-packages): 2 packages
+- [Breaking changes](#breaking-changes): 6 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 1 package
+- [0.0.x patch version bumps](#00x-patch-version-bumps): 1 package
+- [Other minor version bumps](#other-minor-version-bumps): 6 packages
+- [Other patch version bumps](#other-patch-version-bumps): 47 packages
 
-### 0.0.1
+## Table of contents
 
-#### Patch Changes
+- [Newly added packages](#newly-added-packages)
+  - [`@backstage/plugin-catalog-backend-module-logs` (new, 0.0.1)](#backstageplugin-catalog-backend-module-logs-new-001)
+  - [`@backstage/plugin-scaffolder-backend-module-gcp` (new, 0.1.0)](#backstageplugin-scaffolder-backend-module-gcp-new-010)
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/backend-app-api` (0.7.9 → 0.8.0)](#backstagebackend-app-api-079--080)
+  - [`@backstage/backend-defaults` (0.3.3 → 0.4.0)](#backstagebackend-defaults-033--040)
+  - [`@backstage/backend-plugin-api` (0.6.21 → 0.7.0)](#backstagebackend-plugin-api-0621--070)
+  - [`@backstage/plugin-catalog-backend-module-ldap` (0.6.2 → 0.7.0)](#backstageplugin-catalog-backend-module-ldap-062--070)
+  - [`@backstage/plugin-permission-common` (0.7.14 → 0.8.0)](#backstageplugin-permission-common-0714--080)
+  - [`@backstage/plugin-permission-node` (0.7.32 → 0.8.0)](#backstageplugin-permission-node-0732--080)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/plugin-scaffolder-backend-module-github` (0.3.2 → 0.4.0)](#backstageplugin-scaffolder-backend-module-github-032--040)
+- [0.0.x patch version bumps](#00x-patch-version-bumps)
+  - [`@backstage/plugin-notifications-common` (0.0.4 → 0.0.5)](#backstageplugin-notifications-common-004--005)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/core-app-api` (1.13.0 → 1.14.0)](#backstagecore-app-api-1130--1140)
+  - [`@backstage/integration` (1.12.0 → 1.13.0)](#backstageintegration-1120--1130)
+  - [`@backstage/plugin-catalog-backend` (1.23.2 → 1.24.0)](#backstageplugin-catalog-backend-1232--1240)
+  - [`@backstage/plugin-scaffolder` (1.22.0 → 1.23.0)](#backstageplugin-scaffolder-1220--1230)
+  - [`@backstage/plugin-scaffolder-backend` (1.22.11 → 1.23.0)](#backstageplugin-scaffolder-backend-12211--1230)
+  - [`@backstage/plugin-scaffolder-react` (1.9.0 → 1.10.0)](#backstageplugin-scaffolder-react-190--1100)
+- [Other patch version bumps](#other-patch-version-bumps)
+  - [`@backstage/backend-common` (0.23.2 → 0.23.3)](#backstagebackend-common-0232--0233)
+  - [`@backstage/backend-dynamic-feature-service` (0.2.14 → 0.2.15)](#backstagebackend-dynamic-feature-service-0214--0215)
+  - [`@backstage/backend-tasks` (0.5.26 → 0.5.27)](#backstagebackend-tasks-0526--0527)
+  - [`@backstage/backend-test-utils` (0.4.3 → 0.4.4)](#backstagebackend-test-utils-043--044)
+  - [`@backstage/cli` (0.26.10 → 0.26.11)](#backstagecli-02610--02611)
+  - [`@backstage/cli-node` (0.2.6 → 0.2.7)](#backstagecli-node-026--027)
+  - [`@backstage/core-components` (0.14.8 → 0.14.9)](#backstagecore-components-0148--0149)
+  - [`@backstage/create-app` (0.5.16 → 0.5.17)](#backstagecreate-app-0516--0517)
+  - [`@backstage/frontend-app-api` (0.7.2 → 0.7.3)](#backstagefrontend-app-api-072--073)
+  - [`@backstage/frontend-test-utils` (0.1.9 → 0.1.10)](#backstagefrontend-test-utils-019--0110)
+  - [`@backstage/plugin-auth-backend-module-atlassian-provider` (0.2.2 → 0.2.3)](#backstageplugin-auth-backend-module-atlassian-provider-022--023)
+  - [`@backstage/plugin-auth-node` (0.4.16 → 0.4.17)](#backstageplugin-auth-node-0416--0417)
+  - [`@backstage/plugin-bitbucket-cloud-common` (0.2.20 → 0.2.21)](#backstageplugin-bitbucket-cloud-common-0220--0221)
+  - [`@backstage/plugin-catalog` (1.21.0 → 1.21.1)](#backstageplugin-catalog-1210--1211)
+  - [`@backstage/plugin-catalog-backend-module-aws` (0.3.16 → 0.3.17)](#backstageplugin-catalog-backend-module-aws-0316--0317)
+  - [`@backstage/plugin-catalog-backend-module-github` (0.6.4 → 0.6.5)](#backstageplugin-catalog-backend-module-github-064--065)
+  - [`@backstage/plugin-catalog-backend-module-gitlab` (0.3.20 → 0.3.21)](#backstageplugin-catalog-backend-module-gitlab-0320--0321)
+  - [`@backstage/plugin-catalog-backend-module-msgraph` (0.5.29 → 0.5.30)](#backstageplugin-catalog-backend-module-msgraph-0529--0530)
+  - [`@backstage/plugin-catalog-react` (1.12.1 → 1.12.2)](#backstageplugin-catalog-react-1121--1122)
+  - [`@backstage/plugin-events-node` (0.3.7 → 0.3.8)](#backstageplugin-events-node-037--038)
+  - [`@backstage/plugin-home` (0.7.6 → 0.7.7)](#backstageplugin-home-076--077)
+  - [`@backstage/plugin-home-react` (0.1.14 → 0.1.15)](#backstageplugin-home-react-0114--0115)
+  - [`@backstage/plugin-kubernetes-react` (0.4.0 → 0.4.1)](#backstageplugin-kubernetes-react-040--041)
+  - [`@backstage/plugin-notifications` (0.2.2 → 0.2.3)](#backstageplugin-notifications-022--023)
+  - [`@backstage/plugin-notifications-backend` (0.3.2 → 0.3.3)](#backstageplugin-notifications-backend-032--033)
+  - [`@backstage/plugin-notifications-backend-module-email` (0.1.2 → 0.1.3)](#backstageplugin-notifications-backend-module-email-012--013)
+  - [`@backstage/plugin-notifications-node` (0.2.2 → 0.2.3)](#backstageplugin-notifications-node-022--023)
+  - [`@backstage/plugin-org` (0.6.26 → 0.6.27)](#backstageplugin-org-0626--0627)
+  - [`@backstage/plugin-permission-backend` (0.5.45 → 0.5.46)](#backstageplugin-permission-backend-0545--0546)
+  - [`@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.18 → 0.1.19)](#backstageplugin-permission-backend-module-allow-all-policy-0118--0119)
+  - [`@backstage/plugin-permission-react` (0.4.23 → 0.4.24)](#backstageplugin-permission-react-0423--0424)
+  - [`@backstage/plugin-scaffolder-backend-module-azure` (0.1.13 → 0.1.14)](#backstageplugin-scaffolder-backend-module-azure-0113--0114)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.11 → 0.1.12)](#backstageplugin-scaffolder-backend-module-bitbucket-cloud-0111--0112)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.11 → 0.1.12)](#backstageplugin-scaffolder-backend-module-bitbucket-server-0111--0112)
+  - [`@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.45 → 0.2.46)](#backstageplugin-scaffolder-backend-module-cookiecutter-0245--0246)
+  - [`@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.3 → 0.4.4)](#backstageplugin-scaffolder-backend-module-gitlab-043--044)
+  - [`@backstage/plugin-scaffolder-backend-module-rails` (0.4.38 → 0.4.39)](#backstageplugin-scaffolder-backend-module-rails-0438--0439)
+  - [`@backstage/plugin-scaffolder-node` (0.4.7 → 0.4.8)](#backstageplugin-scaffolder-node-047--048)
+  - [`@backstage/plugin-scaffolder-node-test-utils` (0.1.8 → 0.1.9)](#backstageplugin-scaffolder-node-test-utils-018--019)
+  - [`@backstage/plugin-search` (1.4.13 → 1.4.14)](#backstageplugin-search-1413--1414)
+  - [`@backstage/plugin-search-backend` (1.5.13 → 1.5.14)](#backstageplugin-search-backend-1513--1514)
+  - [`@backstage/plugin-techdocs` (1.10.6 → 1.10.7)](#backstageplugin-techdocs-1106--1107)
+  - [`@backstage/plugin-techdocs-backend` (1.10.8 → 1.10.9)](#backstageplugin-techdocs-backend-1108--1109)
+  - [`@backstage/plugin-techdocs-node` (1.12.7 → 1.12.8)](#backstageplugin-techdocs-node-1127--1128)
+  - [`@backstage/plugin-techdocs-react` (1.2.5 → 1.2.6)](#backstageplugin-techdocs-react-125--126)
+  - [`@backstage/test-utils` (1.5.7 → 1.5.8)](#backstagetest-utils-157--158)
+  - [`@techdocs/cli` (1.8.15 → 1.8.16)](#techdocscli-1815--1816)
+
+## Newly added packages
+
+### `@backstage/plugin-catalog-backend-module-logs` (new, 0.0.1)
+
+#### 0.0.1
+
+##### Patch Changes
 
 - 97caf55: Creates a new module to make logging catalog errors simple. This module subscribes to catalog events and logs them.
 
   See [Backstage documentation](https://backstage.io/docs/features/software-catalog/configuration#subscribing-to-catalog-errors) for details on how to install
   and configure the plugin.
 
-## `@backstage/plugin-scaffolder-backend-module-gcp` (new, 0.1.0)
+### `@backstage/plugin-scaffolder-backend-module-gcp` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 0b52438: Serialization of the scaffolder workspace into GCP bucket
 
-## `@backstage/backend-app-api` (0.7.9 → 0.8.0)
+## Breaking changes
 
-### 0.8.0
+### `@backstage/backend-app-api` (0.7.9 → 0.8.0)
 
-#### Minor Changes
+#### 0.8.0
+
+##### Minor Changes
 
 - 1cb84d7: **BREAKING**: Removed the depreacted `getPath` option from `httpRouterServiceFactory`, as well as the `HttpRouterFactoryOptions` type.
 - f691c9b: **BREAKING**: Removed the ability to pass callback-form service factories through the `defaultServiceFactories` option of `createSpecializedBackend`. This is an immediate breaking change as usage of this function is expected to be very rare.
 
-#### Patch Changes
+##### Patch Changes
 
 - 2f99178: The `ServiceFactoryTest.get` method was deprecated and the `ServiceFactoryTest.getSubject` should be used instead. The `getSubject` method has the same behavior, but has a better method name to indicate that the service instance returned is the subject currently being tested.
 - b05e1e1: Service factories exported by this package have been updated to use the new service factory format that doesn't use a callback.
@@ -41,27 +124,15 @@ Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin
 - 18b96b1: The ability to install backend features in callback form (`() => BackendFeature`) has been deprecated. This typically means that you need to update the installed features to use the latest version of `@backstage/backend-plugin-api`. If the feature is from a third-party package, please reach out to the package maintainer to update it.
 - a63c4b6: Fixing issue with `MiddlewareFactory` deprecation wrapping
 
-## `@backstage/backend-common` (0.23.2 → 0.23.3)
+### `@backstage/backend-defaults` (0.3.3 → 0.4.0)
 
-### 0.23.3
+#### 0.4.0
 
-#### Patch Changes
-
-- 8c09c97: Deprecate legacy status check factory, handler and types.
-- d228862: Update default backend plugin created by the cli to use non-deprecated error handling middleware
-- c964a3d: Add dependencies that are needed by cross-imports from backend-defaults
-- b60db08: Fixing exporting of classes properly from new packages
-- b9ed1bb: bumped better-sqlite3 from ^9.0.0 to ^11.0.0
-
-## `@backstage/backend-defaults` (0.3.3 → 0.4.0)
-
-### 0.4.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 1cb84d7: **BREAKING**: Removed the depreacted `getPath` option from `httpRouterServiceFactory`, as well as the `HttpRouterFactoryOptions` type.
 
-#### Patch Changes
+##### Patch Changes
 
 - 53ced70: Added a new Root Health Service which adds new endpoints for health checks.
 - 2f99178: The `ServiceFactoryTest.get` method was deprecated and the `ServiceFactoryTest.getSubject` should be used instead. The `getSubject` method has the same behavior, but has a better method name to indicate that the service instance returned is the subject currently being tested.
@@ -72,23 +143,15 @@ Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin
 - b9ed1bb: bumped better-sqlite3 from ^9.0.0 to ^11.0.0
 - e28af58: Refactor of `rootConfigServiceFactory` to allow it to be constructed with options, but without declaring options via `createServiceFactory`.
 
-## `@backstage/backend-dynamic-feature-service` (0.2.14 → 0.2.15)
+### `@backstage/backend-plugin-api` (0.6.21 → 0.7.0)
 
-### 0.2.15
+#### 0.7.0
 
-#### Patch Changes
-
-- b05e1e1: Service factories exported by this package have been updated to use the new service factory format that doesn't use a callback.
-
-## `@backstage/backend-plugin-api` (0.6.21 → 0.7.0)
-
-### 0.7.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 36f91e8: **BREAKING**: The `PermissionsService` no longer supports passing the deprecated `token` option, and the request options are now required.
 
-#### Patch Changes
+##### Patch Changes
 
 - 53ced70: Added a new Root Health Service which adds new endpoints for health checks.
 - 083eaf9: Fix bug where ISO durations could no longer be used for schedules
@@ -172,19 +235,206 @@ Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin
   - The `RootServiceFactoryConfig` type was renamed to `RootServiceFactoryOptions`;
   - The `PluginServiceFactoryConfig` type was renamed to `PluginServiceFactoryOptions`
 
-## `@backstage/backend-tasks` (0.5.26 → 0.5.27)
+### `@backstage/plugin-catalog-backend-module-ldap` (0.6.2 → 0.7.0)
 
-### 0.5.27
+#### 0.7.0
 
-#### Patch Changes
+##### Minor Changes
+
+- cb32ca7: **BREAKING**: `readLdapOrg` and the `LdapProviderConfig` type now always accept arrays of user and group configs, not just single items.
+
+  Added support for single ldap catalog provider to provide list and undefined user and group bindings next to standard single one.
+
+##### Patch Changes
 
 - 083eaf9: Fix bug where ISO durations could no longer be used for schedules
 
-## `@backstage/backend-test-utils` (0.4.3 → 0.4.4)
+### `@backstage/plugin-permission-common` (0.7.14 → 0.8.0)
 
-### 0.4.4
+#### 0.8.0
 
-#### Patch Changes
+##### Minor Changes
+
+- f4085b8: **BREAKING**: Removed the deprecated and unused `token` option from `EvaluatorRequestOptions`. The `PermissionsClient` now has its own `PermissionClientRequestOptions` type that declares the `token` option instead.
+
+### `@backstage/plugin-permission-node` (0.7.32 → 0.8.0)
+
+#### 0.8.0
+
+##### Minor Changes
+
+- 36f91e8: **BREAKING**: Updated the `ServerPermissionClient` to match the new `PermissionsService` interface, where the deprecated `token` option has been removed and the options are now required.
+
+##### Patch Changes
+
+- ed10fd2: The `PermissionPolicy` interface has been updated to align with the recent changes to the Backstage auth system. The second argument to the `handle` method is now of the new `PolicyQueryUser` type. This type maintains the old fields from the `BackstageIdentityResponse`, which are now all deprecated. Instead, two new fields have been added, which allows access to the same information:
+
+  - `credentials` - A `BackstageCredentials` object, which is useful for making requests to other services on behalf of the user as part of evaluating the policy. This replaces the deprecated `token` field. See the [Auth Service documentation](https://backstage.io/docs/backend-system/core-services/auth#creating-request-tokens) for information about how to create a token using these credentials.
+  - `info` - A `BackstageUserInfo` object, which contains the same information as the deprecated `identity`, except for the `type` field that was redundant.
+
+  Most existing policies can be updated by replacing the `BackstageIdentityResponse` type with `PolicyQueryUser`, which is exported from `@backstage/plugin-permission-node`, as well as replacing any occurrences of `user?.identity` with `user?.info`.
+
+- 28b2cfb: Fix invalid cross-reference in API Reference docs
+
+## 0.x minor version bumps
+
+### `@backstage/plugin-scaffolder-backend-module-github` (0.3.2 → 0.4.0)
+
+#### 0.4.0
+
+##### Minor Changes
+
+- 70c4b36: Adds support for custom tag policies when creating GitHub environments.
+
+##### Patch Changes
+
+- ccfc9d1: Fixed bug resulting from missing required owner and repo arguments in `getEnvironmentPublicKey` in action `github:environment:create`.
+
+  Adding environment secrets now works as expected.
+
+- 141f366: Added action to enable GitHub Pages on a repo
+- 4410fed: Fixed issue with octokit call missing owner and repo when creating environment variables and secrets using github:environment:create action
+- dfaa28d: Adds `requireLastPushApproval` input property to configure Branch Protection Settings in `github:publish` action
+
+  Adds `requireLastPushApproval` input property to configure Branch Protection Settings in `github:repo:push` action
+
+## 0.0.x patch version bumps
+
+### `@backstage/plugin-notifications-common` (0.0.4 → 0.0.5)
+
+#### 0.0.5
+
+##### Patch Changes
+
+- 4e4ef2b: Move notification processor filter parsing to common package
+
+## Other minor version bumps
+
+### `@backstage/core-app-api` (1.13.0 → 1.14.0)
+
+#### 1.14.0
+
+##### Minor Changes
+
+- d3c39fc: Allow for the disabling of external routes through config, which was rendered impossible after the introduction of default targets.
+
+  ```yaml
+  app:
+    routes:
+      bindings:
+        # This has the effect of removing the button for registering new
+        # catalog entities in the scaffolder template list view
+        scaffolder.registerComponent: false
+  ```
+
+##### Patch Changes
+
+- db2e2d5: Updated config schema to support app.routes.bindings
+
+### `@backstage/integration` (1.12.0 → 1.13.0)
+
+#### 1.13.0
+
+##### Minor Changes
+
+- b5deed0: Add support for `token` for `bitbucketCloud` integration
+
+### `@backstage/plugin-catalog-backend` (1.23.2 → 1.24.0)
+
+#### 1.24.0
+
+##### Minor Changes
+
+- b9ed1bb: bumped better-sqlite3 from ^9.0.0 to ^11.0.0
+
+### `@backstage/plugin-scaffolder` (1.22.0 → 1.23.0)
+
+#### 1.23.0
+
+##### Minor Changes
+
+- 52b6db0: Use virtualization with `EntityPicker` as done earlier with `MultiEntityPicker` to fix performance issues with large data sets. `VirtualizedListbox` extracted into reusable component.
+- 3583ce5: Use virtualization with `MultiEntityPicker`. Fixes performance issues with large data sets.
+- b5deed0: Add support for `bitbucketCloud` autocomplete in `RepoUrlPicker`
+
+##### Patch Changes
+
+- 4d7e11f: enable resizing of the task log stream viewer
+- 661b354: Fixed a bug where the `RepoUrlPicker` would still require the `owner` field for `azure`
+- cc81579: Updated dependency `@rjsf/utils` to `5.18.5`.
+  Updated dependency `@rjsf/core` to `5.18.5`.
+  Updated dependency `@rjsf/material-ui` to `5.18.5`.
+  Updated dependency `@rjsf/validator-ajv8` to `5.18.5`.
+- 89c44b3: Support `catalogFilter` array on `OwnedEntityPicker`
+
+### `@backstage/plugin-scaffolder-backend` (1.22.11 → 1.23.0)
+
+#### 1.23.0
+
+##### Minor Changes
+
+- b5deed0: Add support for `autocomplete` extension point to provide additional `autocomplete` handlers
+- 0b52438: Serialization of the scaffolder workspace into GCP bucket
+
+##### Patch Changes
+
+- b9451dd: Updated `catalog:write` scaffolder action to show correct file path location in log message
+- ff1bb4c: Added a documentation how to use checkpoints
+- da90cce: Updated dependency `esbuild` to `^0.21.0`.
+- 62d1fe3: Fix user entity not being fetched for scaffolder dry runner
+
+### `@backstage/plugin-scaffolder-react` (1.9.0 → 1.10.0)
+
+#### 1.10.0
+
+##### Minor Changes
+
+- 354e68c: Improve validation error display text in scaffolder
+- b5deed0: Add support for `bitbucketCloud` autocomplete in `RepoUrlPicker`
+
+##### Patch Changes
+
+- cc81579: Updated dependency `@rjsf/utils` to `5.18.5`.
+  Updated dependency `@rjsf/core` to `5.18.5`.
+  Updated dependency `@rjsf/material-ui` to `5.18.5`.
+  Updated dependency `@rjsf/validator-ajv8` to `5.18.5`.
+- 4d7e11f: disables rendering of output box if no output is returned
+
+## Other patch version bumps
+
+### `@backstage/backend-common` (0.23.2 → 0.23.3)
+
+#### 0.23.3
+
+##### Patch Changes
+
+- 8c09c97: Deprecate legacy status check factory, handler and types.
+- d228862: Update default backend plugin created by the cli to use non-deprecated error handling middleware
+- c964a3d: Add dependencies that are needed by cross-imports from backend-defaults
+- b60db08: Fixing exporting of classes properly from new packages
+- b9ed1bb: bumped better-sqlite3 from ^9.0.0 to ^11.0.0
+
+### `@backstage/backend-dynamic-feature-service` (0.2.14 → 0.2.15)
+
+#### 0.2.15
+
+##### Patch Changes
+
+- b05e1e1: Service factories exported by this package have been updated to use the new service factory format that doesn't use a callback.
+
+### `@backstage/backend-tasks` (0.5.26 → 0.5.27)
+
+#### 0.5.27
+
+##### Patch Changes
+
+- 083eaf9: Fix bug where ISO durations could no longer be used for schedules
+
+### `@backstage/backend-test-utils` (0.4.3 → 0.4.4)
+
+#### 0.4.4
+
+##### Patch Changes
 
 - 2f99178: The `ServiceFactoryTest.get` method was deprecated and the `ServiceFactoryTest.getSubject` should be used instead. The `getSubject` method has the same behavior, but has a better method name to indicate that the service instance returned is the subject currently being tested.
 - edf5cc3: The function `isDockerDisabledForTests` is deprecated and will no longer be exported in the near future as it should only be used internally.
@@ -195,11 +445,11 @@ Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin
 - b9ed1bb: bumped better-sqlite3 from ^9.0.0 to ^11.0.0
 - 98ccf00: Internal refactor of `mockServices.httpAuth.factory` to allow it to still be constructed with options, but without declaring options via `createServiceFactory`.
 
-## `@backstage/cli` (0.26.10 → 0.26.11)
+### `@backstage/cli` (0.26.10 → 0.26.11)
 
-### 0.26.11
+#### 0.26.11
 
-#### Patch Changes
+##### Patch Changes
 
 - 133464c: Added experimental support for dynamic frontend plugin builds, enabled via setting `EXPERIMENTAL_MODULE_FEDERATION` for the app build, and using the `frontend-dynamic-container` package role to create a container. Both of these are experimental and will change in the future.
 - e2e320c: - remove unused dependencies `winston` and `yn` from the template of backend plugins;
@@ -214,60 +464,39 @@ Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin
 - 0510d98: Subpath export `package.json` should be of a unique name to avoid typescript resolution issues
 - 4baac0c: The `backendPlugin` and `backendModule` factory now includes a step for automatically adding the new backend plugin/module to the `index.ts` file of the backend.
 
-## `@backstage/cli-node` (0.2.6 → 0.2.7)
+### `@backstage/cli-node` (0.2.6 → 0.2.7)
 
-### 0.2.7
+#### 0.2.7
 
-#### Patch Changes
+##### Patch Changes
 
 - 133464c: Added internal metadata for the new experimental `frontend-dynamic-container` role.
 
-## `@backstage/core-app-api` (1.13.0 → 1.14.0)
+### `@backstage/core-components` (0.14.8 → 0.14.9)
 
-### 1.14.0
+#### 0.14.9
 
-#### Minor Changes
-
-- d3c39fc: Allow for the disabling of external routes through config, which was rendered impossible after the introduction of default targets.
-
-  ```yaml
-  app:
-    routes:
-      bindings:
-        # This has the effect of removing the button for registering new
-        # catalog entities in the scaffolder template list view
-        scaffolder.registerComponent: false
-  ```
-
-#### Patch Changes
-
-- db2e2d5: Updated config schema to support app.routes.bindings
-
-## `@backstage/core-components` (0.14.8 → 0.14.9)
-
-### 0.14.9
-
-#### Patch Changes
+##### Patch Changes
 
 - d4ffdbb: Fixed bug where `<Select>` component with empty string as placeholder gave an error
 - 99d672d: Modified the `Select` component to take in a `data-testid` parameter ensuring backwards compatibility with default value corresponding to previously hardcoded `data-testid` of "select".
 
-## `@backstage/create-app` (0.5.16 → 0.5.17)
+### `@backstage/create-app` (0.5.16 → 0.5.17)
 
-### 0.5.17
+#### 0.5.17
 
-#### Patch Changes
+##### Patch Changes
 
 - 780d994: Added `MyGroupsSidebarItem` to the sidebar in the `create-app` template
 - f03d12a: Bumped create-app version.
 - e90a2cd: Added the Catalog logs module to the `create-app` template
 - 3ac2a6a: Added the Postgres Search Engine to the `create-app` template
 
-## `@backstage/frontend-app-api` (0.7.2 → 0.7.3)
+### `@backstage/frontend-app-api` (0.7.2 → 0.7.3)
 
-### 0.7.3
+#### 0.7.3
 
-#### Patch Changes
+##### Patch Changes
 
 - d3c39fc: Allow for the disabling of external routes through config, which was rendered impossible after the introduction of default targets.
 
@@ -280,76 +509,60 @@ Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin
         scaffolder.registerComponent: false
   ```
 
-## `@backstage/frontend-test-utils` (0.1.9 → 0.1.10)
+### `@backstage/frontend-test-utils` (0.1.9 → 0.1.10)
 
-### 0.1.10
+#### 0.1.10
 
-#### Patch Changes
+##### Patch Changes
 
 - 95a3a0b: Rename frontend and backend `setupRequestMockHandlers` methods to `registerMswTestHooks`.
 
-## `@backstage/integration` (1.12.0 → 1.13.0)
+### `@backstage/plugin-auth-backend-module-atlassian-provider` (0.2.2 → 0.2.3)
 
-### 1.13.0
+#### 0.2.3
 
-#### Minor Changes
-
-- b5deed0: Add support for `token` for `bitbucketCloud` integration
-
-## `@backstage/plugin-auth-backend-module-atlassian-provider` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
+##### Patch Changes
 
 - b9832ae: Fix several issues with the Atlassian auth provider (type definition, profile url, profile transformation, scopes)
 
-## `@backstage/plugin-auth-node` (0.4.16 → 0.4.17)
+### `@backstage/plugin-auth-node` (0.4.16 → 0.4.17)
 
-### 0.4.17
+#### 0.4.17
 
-#### Patch Changes
+##### Patch Changes
 
 - 55c1a72: Fix issues with Atlassian OAuth provider: retrieve the email and photo that were not in arrays but rather in single props.
 
-## `@backstage/plugin-bitbucket-cloud-common` (0.2.20 → 0.2.21)
+### `@backstage/plugin-bitbucket-cloud-common` (0.2.20 → 0.2.21)
 
-### 0.2.21
+#### 0.2.21
 
-#### Patch Changes
+##### Patch Changes
 
 - b5deed0: Add support for `autocomplete` handler to provide autocomplete options for `RepoUrlPicker`
 
-## `@backstage/plugin-catalog` (1.21.0 → 1.21.1)
+### `@backstage/plugin-catalog` (1.21.0 → 1.21.1)
 
-### 1.21.1
+#### 1.21.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 06c0956: Support i18n for catalog and catalog-react plugins
 - d133eaa: Added small notes to AboutCard to discourage customizability PRs
 
-## `@backstage/plugin-catalog-backend` (1.23.2 → 1.24.0)
+### `@backstage/plugin-catalog-backend-module-aws` (0.3.16 → 0.3.17)
 
-### 1.24.0
+#### 0.3.17
 
-#### Minor Changes
-
-- b9ed1bb: bumped better-sqlite3 from ^9.0.0 to ^11.0.0
-
-## `@backstage/plugin-catalog-backend-module-aws` (0.3.16 → 0.3.17)
-
-### 0.3.17
-
-#### Patch Changes
+##### Patch Changes
 
 - 4afa050: Export `defaultEksClusterEntityTransformer` to allow library consumers to layer additional changes on top of the default transformer.
 
-## `@backstage/plugin-catalog-backend-module-github` (0.6.4 → 0.6.5)
+### `@backstage/plugin-catalog-backend-module-github` (0.6.4 → 0.6.5)
 
-### 0.6.5
+#### 0.6.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 9112efc: Adds support for `repository` events.
 
@@ -378,140 +591,118 @@ Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin
   Catalog entities related to the `GithubEntityProvider` instance will be adjusted
   according to action and its meaning for them.
 
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.3.20 → 0.3.21)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.20 → 0.3.21)
 
-### 0.3.21
+#### 0.3.21
 
-#### Patch Changes
+##### Patch Changes
 
 - 8db30ad: The Gitlab configuration supports an additional optional boolean key `catalog.providers.gitlab.<your-org>.restrictUsersToGroup`. Setting this to `true` will make Backstage only import users from the group defined in the `group` key, instead of all users in the organisation (self-hosted) or of the root group (SaaS). It will default to false, keeping the original implementation intact, when not explicitly set.
 
-## `@backstage/plugin-catalog-backend-module-ldap` (0.6.2 → 0.7.0)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.29 → 0.5.30)
 
-### 0.7.0
+#### 0.5.30
 
-#### Minor Changes
-
-- cb32ca7: **BREAKING**: `readLdapOrg` and the `LdapProviderConfig` type now always accept arrays of user and group configs, not just single items.
-
-  Added support for single ldap catalog provider to provide list and undefined user and group bindings next to standard single one.
-
-#### Patch Changes
-
-- 083eaf9: Fix bug where ISO durations could no longer be used for schedules
-
-## `@backstage/plugin-catalog-backend-module-msgraph` (0.5.29 → 0.5.30)
-
-### 0.5.30
-
-#### Patch Changes
+##### Patch Changes
 
 - f7bdcea: Adds a dynamic provider for the plugin-catalog-backend-module-msgraph. Configuration is now runtime configurable through the ProviderConfigTransformer.
 
-## `@backstage/plugin-catalog-react` (1.12.1 → 1.12.2)
+### `@backstage/plugin-catalog-react` (1.12.1 → 1.12.2)
 
-### 1.12.2
+#### 1.12.2
 
-#### Patch Changes
+##### Patch Changes
 
 - 06c0956: Support i18n for catalog and catalog-react plugins
 - 2030962: Make EntityOwnerPicker display metadata.title or spec.profile.displayName for mode=only-owners instead of metadata.name
 
-## `@backstage/plugin-events-node` (0.3.7 → 0.3.8)
+### `@backstage/plugin-events-node` (0.3.7 → 0.3.8)
 
-### 0.3.8
+#### 0.3.8
 
-#### Patch Changes
+##### Patch Changes
 
 - b05e1e1: Service factories exported by this package have been updated to use the new service factory format that doesn't use a callback.
 
-## `@backstage/plugin-home` (0.7.6 → 0.7.7)
+### `@backstage/plugin-home` (0.7.6 → 0.7.7)
 
-### 0.7.7
+#### 0.7.7
 
-#### Patch Changes
-
-- cc81579: Updated dependency `@rjsf/utils` to `5.18.5`.
-  Updated dependency `@rjsf/core` to `5.18.5`.
-  Updated dependency `@rjsf/material-ui` to `5.18.5`.
-  Updated dependency `@rjsf/validator-ajv8` to `5.18.5`.
-
-## `@backstage/plugin-home-react` (0.1.14 → 0.1.15)
-
-### 0.1.15
-
-#### Patch Changes
+##### Patch Changes
 
 - cc81579: Updated dependency `@rjsf/utils` to `5.18.5`.
   Updated dependency `@rjsf/core` to `5.18.5`.
   Updated dependency `@rjsf/material-ui` to `5.18.5`.
   Updated dependency `@rjsf/validator-ajv8` to `5.18.5`.
 
-## `@backstage/plugin-kubernetes-react` (0.4.0 → 0.4.1)
+### `@backstage/plugin-home-react` (0.1.14 → 0.1.15)
 
-### 0.4.1
+#### 0.1.15
 
-#### Patch Changes
+##### Patch Changes
+
+- cc81579: Updated dependency `@rjsf/utils` to `5.18.5`.
+  Updated dependency `@rjsf/core` to `5.18.5`.
+  Updated dependency `@rjsf/material-ui` to `5.18.5`.
+  Updated dependency `@rjsf/validator-ajv8` to `5.18.5`.
+
+### `@backstage/plugin-kubernetes-react` (0.4.0 → 0.4.1)
+
+#### 0.4.1
+
+##### Patch Changes
 
 - e3cb6ab: Add a namespace label to RolloutDrawer
 - 2414d86: Fix the `HTML` markup of the `FixDialog` component, `ul` and `li` are not allowed inside a `p` tag.
 
-## `@backstage/plugin-notifications` (0.2.2 → 0.2.3)
+### `@backstage/plugin-notifications` (0.2.2 → 0.2.3)
 
-### 0.2.3
+#### 0.2.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 3bf0697: The toolbar on the Notifications page is hidden when there are no listed notifications.
 
-## `@backstage/plugin-notifications-backend` (0.3.2 → 0.3.3)
+### `@backstage/plugin-notifications-backend` (0.3.2 → 0.3.3)
 
-### 0.3.3
+#### 0.3.3
 
-#### Patch Changes
+##### Patch Changes
 
 - d7b8ca5: Added an option to filter notifications by topic
 
-## `@backstage/plugin-notifications-backend-module-email` (0.1.2 → 0.1.3)
+### `@backstage/plugin-notifications-backend-module-email` (0.1.2 → 0.1.3)
 
-### 0.1.3
+#### 0.1.3
 
-#### Patch Changes
-
-- 4e4ef2b: Move notification processor filter parsing to common package
-
-## `@backstage/plugin-notifications-common` (0.0.4 → 0.0.5)
-
-### 0.0.5
-
-#### Patch Changes
+##### Patch Changes
 
 - 4e4ef2b: Move notification processor filter parsing to common package
 
-## `@backstage/plugin-notifications-node` (0.2.2 → 0.2.3)
+### `@backstage/plugin-notifications-node` (0.2.2 → 0.2.3)
 
-### 0.2.3
+#### 0.2.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 4e4ef2b: Move notification processor filter parsing to common package
 
-## `@backstage/plugin-org` (0.6.26 → 0.6.27)
+### `@backstage/plugin-org` (0.6.26 → 0.6.27)
 
-### 0.6.27
+#### 0.6.27
 
-#### Patch Changes
+##### Patch Changes
 
 - 5132d28: The `useGetEntities` hook could result in requests to `/api/catalog/entities` where the headers exceed the default maximum Node.js header size of 16KB. The hook logic has been adjusted to batch the requests.
 - c307ef4: Added `relationType` property to EntityMembersListCard component that allows for display users related to a group via some other relationship aside from `memberOf`.
 
   Also, as a side effect, the `relationsType` property has been deprecated in favor of a more accurately named `relationAggregation` property.
 
-## `@backstage/plugin-permission-backend` (0.5.45 → 0.5.46)
+### `@backstage/plugin-permission-backend` (0.5.45 → 0.5.46)
 
-### 0.5.46
+#### 0.5.46
 
-#### Patch Changes
+##### Patch Changes
 
 - ed10fd2: The `PermissionPolicy` interface has been updated to align with the recent changes to the Backstage auth system. The second argument to the `handle` method is now of the new `PolicyQueryUser` type. This type maintains the old fields from the `BackstageIdentityResponse`, which are now all deprecated. Instead, two new fields have been added, which allows access to the same information:
 
@@ -520,255 +711,155 @@ Newly added: `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin
 
   Most existing policies can be updated by replacing the `BackstageIdentityResponse` type with `PolicyQueryUser`, which is exported from `@backstage/plugin-permission-node`, as well as replacing any occurrences of `user?.identity` with `user?.info`.
 
-## `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.18 → 0.1.19)
+### `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.18 → 0.1.19)
 
-### 0.1.19
+#### 0.1.19
 
-#### Patch Changes
+##### Patch Changes
 
 - ed10fd2: Internal refactor to use new `PolicyQueryUser` type.
 
-## `@backstage/plugin-permission-common` (0.7.14 → 0.8.0)
+### `@backstage/plugin-permission-react` (0.4.23 → 0.4.24)
 
-### 0.8.0
+#### 0.4.24
 
-#### Minor Changes
-
-- f4085b8: **BREAKING**: Removed the deprecated and unused `token` option from `EvaluatorRequestOptions`. The `PermissionsClient` now has its own `PermissionClientRequestOptions` type that declares the `token` option instead.
-
-## `@backstage/plugin-permission-node` (0.7.32 → 0.8.0)
-
-### 0.8.0
-
-#### Minor Changes
-
-- 36f91e8: **BREAKING**: Updated the `ServerPermissionClient` to match the new `PermissionsService` interface, where the deprecated `token` option has been removed and the options are now required.
-
-#### Patch Changes
-
-- ed10fd2: The `PermissionPolicy` interface has been updated to align with the recent changes to the Backstage auth system. The second argument to the `handle` method is now of the new `PolicyQueryUser` type. This type maintains the old fields from the `BackstageIdentityResponse`, which are now all deprecated. Instead, two new fields have been added, which allows access to the same information:
-
-  - `credentials` - A `BackstageCredentials` object, which is useful for making requests to other services on behalf of the user as part of evaluating the policy. This replaces the deprecated `token` field. See the [Auth Service documentation](https://backstage.io/docs/backend-system/core-services/auth#creating-request-tokens) for information about how to create a token using these credentials.
-  - `info` - A `BackstageUserInfo` object, which contains the same information as the deprecated `identity`, except for the `type` field that was redundant.
-
-  Most existing policies can be updated by replacing the `BackstageIdentityResponse` type with `PolicyQueryUser`, which is exported from `@backstage/plugin-permission-node`, as well as replacing any occurrences of `user?.identity` with `user?.info`.
-
-- 28b2cfb: Fix invalid cross-reference in API Reference docs
-
-## `@backstage/plugin-permission-react` (0.4.23 → 0.4.24)
-
-### 0.4.24
-
-#### Patch Changes
+##### Patch Changes
 
 - 28b2cfb: Improve API Reference documentation
 
-## `@backstage/plugin-scaffolder` (1.22.0 → 1.23.0)
+### `@backstage/plugin-scaffolder-backend-module-azure` (0.1.13 → 0.1.14)
 
-### 1.23.0
+#### 0.1.14
 
-#### Minor Changes
-
-- 52b6db0: Use virtualization with `EntityPicker` as done earlier with `MultiEntityPicker` to fix performance issues with large data sets. `VirtualizedListbox` extracted into reusable component.
-- 3583ce5: Use virtualization with `MultiEntityPicker`. Fixes performance issues with large data sets.
-- b5deed0: Add support for `bitbucketCloud` autocomplete in `RepoUrlPicker`
-
-#### Patch Changes
-
-- 4d7e11f: enable resizing of the task log stream viewer
-- 661b354: Fixed a bug where the `RepoUrlPicker` would still require the `owner` field for `azure`
-- cc81579: Updated dependency `@rjsf/utils` to `5.18.5`.
-  Updated dependency `@rjsf/core` to `5.18.5`.
-  Updated dependency `@rjsf/material-ui` to `5.18.5`.
-  Updated dependency `@rjsf/validator-ajv8` to `5.18.5`.
-- 89c44b3: Support `catalogFilter` array on `OwnedEntityPicker`
-
-## `@backstage/plugin-scaffolder-backend` (1.22.11 → 1.23.0)
-
-### 1.23.0
-
-#### Minor Changes
-
-- b5deed0: Add support for `autocomplete` extension point to provide additional `autocomplete` handlers
-- 0b52438: Serialization of the scaffolder workspace into GCP bucket
-
-#### Patch Changes
-
-- b9451dd: Updated `catalog:write` scaffolder action to show correct file path location in log message
-- ff1bb4c: Added a documentation how to use checkpoints
-- da90cce: Updated dependency `esbuild` to `^0.21.0`.
-- 62d1fe3: Fix user entity not being fetched for scaffolder dry runner
-
-## `@backstage/plugin-scaffolder-backend-module-azure` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
+##### Patch Changes
 
 - 661b354: Fixed a bug where the `RepoUrlPicker` would still require the `owner` field for `azure`
 
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.11 → 0.1.12)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.11 → 0.1.12)
 
-### 0.1.12
+#### 0.1.12
 
-#### Patch Changes
+##### Patch Changes
 
 - b5deed0: Add support for `autocomplete` handler to provide autocomplete options for `RepoUrlPicker`
 
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.11 → 0.1.12)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.11 → 0.1.12)
 
-### 0.1.12
+#### 0.1.12
 
-#### Patch Changes
+##### Patch Changes
 
 - 6a4ad4e: Instead of using hardcoded `targetBranch` now fetch the default branch from Bitbucket repository.
   This prevents from errors when no `targetBranch` is provided and the default repository branch is different from `master`, for example: `main`.
 
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.45 → 0.2.46)
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.45 → 0.2.46)
 
-### 0.2.46
+#### 0.2.46
 
-#### Patch Changes
+##### Patch Changes
 
 - 0ac124b: Updated configuration instructions
 
-## `@backstage/plugin-scaffolder-backend-module-github` (0.3.2 → 0.4.0)
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.3 → 0.4.4)
 
-### 0.4.0
+#### 0.4.4
 
-#### Minor Changes
-
-- 70c4b36: Adds support for custom tag policies when creating GitHub environments.
-
-#### Patch Changes
-
-- ccfc9d1: Fixed bug resulting from missing required owner and repo arguments in `getEnvironmentPublicKey` in action `github:environment:create`.
-
-  Adding environment secrets now works as expected.
-
-- 141f366: Added action to enable GitHub Pages on a repo
-- 4410fed: Fixed issue with octokit call missing owner and repo when creating environment variables and secrets using github:environment:create action
-- dfaa28d: Adds `requireLastPushApproval` input property to configure Branch Protection Settings in `github:publish` action
-
-  Adds `requireLastPushApproval` input property to configure Branch Protection Settings in `github:repo:push` action
-
-## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.4.3 → 0.4.4)
-
-### 0.4.4
-
-#### Patch Changes
+##### Patch Changes
 
 - 0ac124b: Updated configuration instructions
 - 2fb0eb8: Added support for passing `variables` to `gitlab:pipeline:trigger`
 
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.4.38 → 0.4.39)
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.38 → 0.4.39)
 
-### 0.4.39
+#### 0.4.39
 
-#### Patch Changes
+##### Patch Changes
 
 - 0ac124b: Updated configuration instructions
 
-## `@backstage/plugin-scaffolder-node` (0.4.7 → 0.4.8)
+### `@backstage/plugin-scaffolder-node` (0.4.7 → 0.4.8)
 
-### 0.4.8
+#### 0.4.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 661b354: Fixed a bug where the `RepoUrlPicker` would still require the `owner` field for `azure`
 - b5deed0: Add support for `autocomplete` extension point to provide additional `autocomplete` handlers
 - 0b52438: Serialization of the scaffolder workspace into GCP bucket
 
-## `@backstage/plugin-scaffolder-node-test-utils` (0.1.8 → 0.1.9)
+### `@backstage/plugin-scaffolder-node-test-utils` (0.1.8 → 0.1.9)
 
-### 0.1.9
+#### 0.1.9
 
-#### Patch Changes
+##### Patch Changes
 
 - 54429b5: Filename and imports correction for mockActionContext.ts
 
-## `@backstage/plugin-scaffolder-react` (1.9.0 → 1.10.0)
+### `@backstage/plugin-search` (1.4.13 → 1.4.14)
 
-### 1.10.0
+#### 1.4.14
 
-#### Minor Changes
-
-- 354e68c: Improve validation error display text in scaffolder
-- b5deed0: Add support for `bitbucketCloud` autocomplete in `RepoUrlPicker`
-
-#### Patch Changes
-
-- cc81579: Updated dependency `@rjsf/utils` to `5.18.5`.
-  Updated dependency `@rjsf/core` to `5.18.5`.
-  Updated dependency `@rjsf/material-ui` to `5.18.5`.
-  Updated dependency `@rjsf/validator-ajv8` to `5.18.5`.
-- 4d7e11f: disables rendering of output box if no output is returned
-
-## `@backstage/plugin-search` (1.4.13 → 1.4.14)
-
-### 1.4.14
-
-#### Patch Changes
+##### Patch Changes
 
 - 1117aba: Update deps in search api extension to include fetch api
 
-## `@backstage/plugin-search-backend` (1.5.13 → 1.5.14)
+### `@backstage/plugin-search-backend` (1.5.13 → 1.5.14)
 
-### 1.5.14
+#### 1.5.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 343f656: The `AuthorizedSearchEngine` will now ignore the deprecated `token` option, and treat it as an unauthorized request. This will not have any effect in practice, since credentials are always provided by the router.
 
-## `@backstage/plugin-techdocs` (1.10.6 → 1.10.7)
+### `@backstage/plugin-techdocs` (1.10.6 → 1.10.7)
 
-### 1.10.7
+#### 1.10.7
 
-#### Patch Changes
+##### Patch Changes
 
 - 8fc2622: Fixed an issue that was causing techdocs pages unnecessarily re-render on navigate.
 - 6fa652c: Improve default sorting of docs table
 - 605b691: Allow for searching TechDocs by entity title
 - 60caa92: Fix double scrollbar bug in reader
 
-## `@backstage/plugin-techdocs-backend` (1.10.8 → 1.10.9)
+### `@backstage/plugin-techdocs-backend` (1.10.8 → 1.10.9)
 
-### 1.10.9
+#### 1.10.9
 
-#### Patch Changes
+##### Patch Changes
 
 - 9ecf5fd: Adds extension point for publishers to the techdocs backend
 
-## `@backstage/plugin-techdocs-node` (1.12.7 → 1.12.8)
+### `@backstage/plugin-techdocs-node` (1.12.7 → 1.12.8)
 
-### 1.12.8
+#### 1.12.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 9ecf5fd: Adds extension point for publishers to the techdocs backend
 - 4c4d077: Bumps default version of techdocs docker image to latest
 
-## `@backstage/plugin-techdocs-react` (1.2.5 → 1.2.6)
+### `@backstage/plugin-techdocs-react` (1.2.5 → 1.2.6)
 
-### 1.2.6
+#### 1.2.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 8ac9ce5: Resolved the issue where changes in TechDoc add-ons, including the TextSize add-on, were not reapplying during navigation
 
-## `@backstage/test-utils` (1.5.7 → 1.5.8)
+### `@backstage/test-utils` (1.5.7 → 1.5.8)
 
-### 1.5.8
+#### 1.5.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 95a3a0b: Rename frontend and backend `setupRequestMockHandlers` methods to `registerMswTestHooks`.
 
-## `@techdocs/cli` (1.8.15 → 1.8.16)
+### `@techdocs/cli` (1.8.15 → 1.8.16)
 
-### 1.8.16
+#### 1.8.16
 
-#### Patch Changes
+##### Patch Changes
 
 - c964a3d: Import discovery from backend-defaults instead of backend-common
 

@@ -2,11 +2,22 @@
 
 Changes between 1.9.0 and 1.9.1 — 75 changed and 0 added packages.
 
-## `@backstage/core-components` (0.12.1 → 0.12.2)
+## Summary
 
-### 0.12.2
+- [Patch version bumps](#patch-version-bumps): 1 package
 
-#### Patch Changes
+## Table of contents
+
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/core-components` (0.12.1 → 0.12.2)](#backstagecore-components-0121--0122)
+
+## Patch version bumps
+
+### `@backstage/core-components` (0.12.1 → 0.12.2)
+
+#### 0.12.2
+
+##### Patch Changes
 
 - Fixing the UPPERCASED links in the sidebar
 

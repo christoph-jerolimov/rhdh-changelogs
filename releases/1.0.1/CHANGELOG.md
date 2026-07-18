@@ -2,11 +2,22 @@
 
 Changes between 1.0.0 and 1.0.1 — 1 changed and 0 added packages.
 
-## `@backstage/plugin-auth-backend` (0.12.2 → 0.12.3)
+## Summary
 
-### 0.12.3
+- [Patch version bumps](#patch-version-bumps): 1 package
 
-#### Patch Changes
+## Table of contents
+
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/plugin-auth-backend` (0.12.2 → 0.12.3)](#backstageplugin-auth-backend-0122--0123)
+
+## Patch version bumps
+
+### `@backstage/plugin-auth-backend` (0.12.2 → 0.12.3)
+
+#### 0.12.3
+
+##### Patch Changes
 
 - Fix migrations to do the right thing on sqlite databases, and reapply the column type fix for those who are _not_ on sqlite databases.
 

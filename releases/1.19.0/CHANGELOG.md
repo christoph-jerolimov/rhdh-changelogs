@@ -2,164 +2,256 @@
 
 Changes between 1.18.5 and 1.19.0 — 221 changed and 7 added packages.
 
-Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-kubernetes-react`.
+## Summary
 
-## `@backstage/e2e-test-utils` (new, 0.1.0)
+- [Newly added packages](#newly-added-packages): 7 packages
+- [Breaking changes](#breaking-changes): 6 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 8 packages
+- [0.0.x patch version bumps](#00x-patch-version-bumps): 3 packages
+- [Other minor version bumps](#other-minor-version-bumps): 9 packages
+- [Other patch version bumps](#other-patch-version-bumps): 125 packages
 
-### 0.1.0
+## Table of contents
 
-#### Minor Changes
+- [Newly added packages](#newly-added-packages)
+  - [`@backstage/e2e-test-utils` (new, 0.1.0)](#backstagee2e-test-utils-new-010)
+  - [`@backstage/plugin-auth-backend-module-microsoft-provider` (new, 0.1.0)](#backstageplugin-auth-backend-module-microsoft-provider-new-010)
+  - [`@backstage/plugin-auth-backend-module-pinniped-provider` (new, 0.1.0)](#backstageplugin-auth-backend-module-pinniped-provider-new-010)
+  - [`@backstage/plugin-catalog-backend-module-github-org` (new, 0.1.0)](#backstageplugin-catalog-backend-module-github-org-new-010)
+  - [`@backstage/plugin-kubernetes-cluster` (new, 0.0.1)](#backstageplugin-kubernetes-cluster-new-001)
+  - [`@backstage/plugin-kubernetes-node` (new, 0.1.0)](#backstageplugin-kubernetes-node-new-010)
+  - [`@backstage/plugin-kubernetes-react` (new, 0.1.0)](#backstageplugin-kubernetes-react-new-010)
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/cli` (0.22.14 → 0.23.0)](#backstagecli-02214--0230)
+  - [`@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.1.2 → 0.2.0)](#backstageplugin-auth-backend-module-gcp-iap-provider-012--020)
+  - [`@backstage/plugin-auth-node` (0.3.2 → 0.4.0)](#backstageplugin-auth-node-032--040)
+  - [`@backstage/plugin-kubernetes` (0.10.3 → 0.11.0)](#backstageplugin-kubernetes-0103--0110)
+  - [`@backstage/plugin-kubernetes-backend` (0.12.2 → 0.13.0)](#backstageplugin-kubernetes-backend-0122--0130)
+  - [`@backstage/plugin-kubernetes-common` (0.6.6 → 0.7.0)](#backstageplugin-kubernetes-common-066--070)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/frontend-app-api` (0.1.0 → 0.2.0)](#backstagefrontend-app-api-010--020)
+  - [`@backstage/frontend-plugin-api` (0.1.0 → 0.2.0)](#backstagefrontend-plugin-api-010--020)
+  - [`@backstage/plugin-catalog-backend-module-aws` (0.2.8 → 0.3.0)](#backstageplugin-catalog-backend-module-aws-028--030)
+  - [`@backstage/plugin-catalog-graphql` (0.3.23 → 0.4.0)](#backstageplugin-catalog-graphql-0323--040)
+  - [`@backstage/plugin-graphql-backend` (0.1.43 → 0.2.0)](#backstageplugin-graphql-backend-0143--020)
+  - [`@backstage/plugin-jenkins` (0.8.6 → 0.9.0)](#backstageplugin-jenkins-086--090)
+  - [`@backstage/plugin-jenkins-backend` (0.2.8 → 0.3.0)](#backstageplugin-jenkins-backend-028--030)
+  - [`@backstage/plugin-newrelic-dashboard` (0.2.17 → 0.3.0)](#backstageplugin-newrelic-dashboard-0217--030)
+- [0.0.x patch version bumps](#00x-patch-version-bumps)
+  - [`@backstage/backend-openapi-utils` (0.0.4 → 0.0.5)](#backstagebackend-openapi-utils-004--005)
+  - [`@backstage/plugin-analytics-module-newrelic-browser` (0.0.2 → 0.0.3)](#backstageplugin-analytics-module-newrelic-browser-002--003)
+  - [`@backstage/plugin-explore-react` (0.0.31 → 0.0.32)](#backstageplugin-explore-react-0031--0032)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/core-app-api` (1.10.0 → 1.11.0)](#backstagecore-app-api-1100--1110)
+  - [`@backstage/core-plugin-api` (1.6.0 → 1.7.0)](#backstagecore-plugin-api-160--170)
+  - [`@backstage/plugin-catalog` (1.13.0 → 1.14.0)](#backstageplugin-catalog-1130--1140)
+  - [`@backstage/plugin-catalog-backend` (1.13.3 → 1.14.0)](#backstageplugin-catalog-backend-1133--1140)
+  - [`@backstage/plugin-scaffolder-backend` (1.17.3 → 1.18.0)](#backstageplugin-scaffolder-backend-1173--1180)
+  - [`@backstage/plugin-techdocs` (1.7.0 → 1.8.0)](#backstageplugin-techdocs-170--180)
+  - [`@backstage/plugin-techdocs-backend` (1.7.2 → 1.8.0)](#backstageplugin-techdocs-backend-172--180)
+  - [`@backstage/plugin-techdocs-node` (1.8.2 → 1.9.0)](#backstageplugin-techdocs-node-182--190)
+  - [`@techdocs/cli` (1.5.2 → 1.6.0)](#techdocscli-152--160)
+- [Other patch version bumps](#other-patch-version-bumps)
+  - [`@backstage/app-defaults` (1.4.3 → 1.4.4)](#backstageapp-defaults-143--144)
+  - [`@backstage/backend-app-api` (0.5.5 → 0.5.6)](#backstagebackend-app-api-055--056)
+  - [`@backstage/backend-common` (0.19.7 → 0.19.8)](#backstagebackend-common-0197--0198)
+  - [`@backstage/backend-dev-utils` (0.1.1 → 0.1.2)](#backstagebackend-dev-utils-011--012)
+  - [`@backstage/backend-tasks` (0.5.10 → 0.5.11)](#backstagebackend-tasks-0510--0511)
+  - [`@backstage/backend-test-utils` (0.2.6 → 0.2.7)](#backstagebackend-test-utils-026--027)
+  - [`@backstage/catalog-model` (1.4.2 → 1.4.3)](#backstagecatalog-model-142--143)
+  - [`@backstage/cli-common` (0.1.12 → 0.1.13)](#backstagecli-common-0112--0113)
+  - [`@backstage/codemods` (0.1.45 → 0.1.46)](#backstagecodemods-0145--0146)
+  - [`@backstage/config-loader` (1.5.0 → 1.5.1)](#backstageconfig-loader-150--151)
+  - [`@backstage/core-components` (0.13.5 → 0.13.6)](#backstagecore-components-0135--0136)
+  - [`@backstage/create-app` (0.5.5 → 0.5.6)](#backstagecreate-app-055--056)
+  - [`@backstage/dev-utils` (1.0.21 → 1.0.22)](#backstagedev-utils-1021--1022)
+  - [`@backstage/errors` (1.2.2 → 1.2.3)](#backstageerrors-122--123)
+  - [`@backstage/integration` (1.7.0 → 1.7.1)](#backstageintegration-170--171)
+  - [`@backstage/integration-react` (1.1.19 → 1.1.20)](#backstageintegration-react-1119--1120)
+  - [`@backstage/plugin-adr` (0.6.7 → 0.6.8)](#backstageplugin-adr-067--068)
+  - [`@backstage/plugin-airbrake` (0.3.24 → 0.3.25)](#backstageplugin-airbrake-0324--0325)
+  - [`@backstage/plugin-allure` (0.1.40 → 0.1.41)](#backstageplugin-allure-0140--0141)
+  - [`@backstage/plugin-analytics-module-ga` (0.1.33 → 0.1.34)](#backstageplugin-analytics-module-ga-0133--0134)
+  - [`@backstage/plugin-analytics-module-ga4` (0.1.4 → 0.1.5)](#backstageplugin-analytics-module-ga4-014--015)
+  - [`@backstage/plugin-apache-airflow` (0.2.15 → 0.2.16)](#backstageplugin-apache-airflow-0215--0216)
+  - [`@backstage/plugin-api-docs` (0.9.11 → 0.9.12)](#backstageplugin-api-docs-0911--0912)
+  - [`@backstage/plugin-api-docs-module-protoc-gen-doc` (0.1.3 → 0.1.4)](#backstageplugin-api-docs-module-protoc-gen-doc-013--014)
+  - [`@backstage/plugin-apollo-explorer` (0.1.15 → 0.1.16)](#backstageplugin-apollo-explorer-0115--0116)
+  - [`@backstage/plugin-auth-backend` (0.19.2 → 0.19.3)](#backstageplugin-auth-backend-0192--0193)
+  - [`@backstage/plugin-auth-backend-module-github-provider` (0.1.2 → 0.1.3)](#backstageplugin-auth-backend-module-github-provider-012--013)
+  - [`@backstage/plugin-azure-devops` (0.3.6 → 0.3.7)](#backstageplugin-azure-devops-036--037)
+  - [`@backstage/plugin-azure-sites` (0.1.13 → 0.1.14)](#backstageplugin-azure-sites-0113--0114)
+  - [`@backstage/plugin-badges` (0.2.48 → 0.2.49)](#backstageplugin-badges-0248--0249)
+  - [`@backstage/plugin-badges-backend` (0.3.2 → 0.3.3)](#backstageplugin-badges-backend-032--033)
+  - [`@backstage/plugin-bazaar` (0.2.16 → 0.2.17)](#backstageplugin-bazaar-0216--0217)
+  - [`@backstage/plugin-bitrise` (0.1.51 → 0.1.52)](#backstageplugin-bitrise-0151--0152)
+  - [`@backstage/plugin-catalog-backend-module-azure` (0.1.24 → 0.1.25)](#backstageplugin-catalog-backend-module-azure-0124--0125)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.20 → 0.1.21)](#backstageplugin-catalog-backend-module-bitbucket-cloud-0120--0121)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.18 → 0.1.19)](#backstageplugin-catalog-backend-module-bitbucket-server-0118--0119)
+  - [`@backstage/plugin-catalog-backend-module-gerrit` (0.1.21 → 0.1.22)](#backstageplugin-catalog-backend-module-gerrit-0121--0122)
+  - [`@backstage/plugin-catalog-backend-module-github` (0.4.3 → 0.4.4)](#backstageplugin-catalog-backend-module-github-043--044)
+  - [`@backstage/plugin-catalog-backend-module-gitlab` (0.3.2 → 0.3.3)](#backstageplugin-catalog-backend-module-gitlab-032--033)
+  - [`@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.9 → 0.4.10)](#backstageplugin-catalog-backend-module-incremental-ingestion-049--0410)
+  - [`@backstage/plugin-catalog-backend-module-ldap` (0.5.20 → 0.5.21)](#backstageplugin-catalog-backend-module-ldap-0520--0521)
+  - [`@backstage/plugin-catalog-backend-module-msgraph` (0.5.12 → 0.5.13)](#backstageplugin-catalog-backend-module-msgraph-0512--0513)
+  - [`@backstage/plugin-catalog-backend-module-puppetdb` (0.1.10 → 0.1.11)](#backstageplugin-catalog-backend-module-puppetdb-0110--0111)
+  - [`@backstage/plugin-catalog-graph` (0.2.36 → 0.2.37)](#backstageplugin-catalog-graph-0236--0237)
+  - [`@backstage/plugin-catalog-import` (0.10.0 → 0.10.1)](#backstageplugin-catalog-import-0100--0101)
+  - [`@backstage/plugin-catalog-node` (1.4.6 → 1.4.7)](#backstageplugin-catalog-node-146--147)
+  - [`@backstage/plugin-catalog-react` (1.8.4 → 1.8.5)](#backstageplugin-catalog-react-184--185)
+  - [`@backstage/plugin-catalog-unprocessed-entities` (0.1.3 → 0.1.4)](#backstageplugin-catalog-unprocessed-entities-013--014)
+  - [`@backstage/plugin-cicd-statistics` (0.1.26 → 0.1.27)](#backstageplugin-cicd-statistics-0126--0127)
+  - [`@backstage/plugin-circleci` (0.3.24 → 0.3.25)](#backstageplugin-circleci-0324--0325)
+  - [`@backstage/plugin-cloudbuild` (0.3.24 → 0.3.25)](#backstageplugin-cloudbuild-0324--0325)
+  - [`@backstage/plugin-code-climate` (0.1.24 → 0.1.25)](#backstageplugin-code-climate-0124--0125)
+  - [`@backstage/plugin-code-coverage` (0.2.17 → 0.2.18)](#backstageplugin-code-coverage-0217--0218)
+  - [`@backstage/plugin-code-coverage-backend` (0.2.19 → 0.2.20)](#backstageplugin-code-coverage-backend-0219--0220)
+  - [`@backstage/plugin-codescene` (0.1.17 → 0.1.18)](#backstageplugin-codescene-0117--0118)
+  - [`@backstage/plugin-config-schema` (0.1.45 → 0.1.46)](#backstageplugin-config-schema-0145--0146)
+  - [`@backstage/plugin-cost-insights` (0.12.13 → 0.12.14)](#backstageplugin-cost-insights-01213--01214)
+  - [`@backstage/plugin-devtools` (0.1.4 → 0.1.5)](#backstageplugin-devtools-014--015)
+  - [`@backstage/plugin-dynatrace` (7.0.4 → 7.0.5)](#backstageplugin-dynatrace-704--705)
+  - [`@backstage/plugin-entity-feedback` (0.2.7 → 0.2.8)](#backstageplugin-entity-feedback-027--028)
+  - [`@backstage/plugin-entity-validation` (0.1.9 → 0.1.10)](#backstageplugin-entity-validation-019--0110)
+  - [`@backstage/plugin-explore` (0.4.10 → 0.4.11)](#backstageplugin-explore-0410--0411)
+  - [`@backstage/plugin-firehydrant` (0.2.8 → 0.2.9)](#backstageplugin-firehydrant-028--029)
+  - [`@backstage/plugin-fossa` (0.2.56 → 0.2.57)](#backstageplugin-fossa-0256--0257)
+  - [`@backstage/plugin-gcalendar` (0.3.18 → 0.3.19)](#backstageplugin-gcalendar-0318--0319)
+  - [`@backstage/plugin-gcp-projects` (0.3.41 → 0.3.42)](#backstageplugin-gcp-projects-0341--0342)
+  - [`@backstage/plugin-git-release-manager` (0.3.37 → 0.3.38)](#backstageplugin-git-release-manager-0337--0338)
+  - [`@backstage/plugin-github-actions` (0.6.5 → 0.6.6)](#backstageplugin-github-actions-065--066)
+  - [`@backstage/plugin-github-deployments` (0.1.55 → 0.1.56)](#backstageplugin-github-deployments-0155--0156)
+  - [`@backstage/plugin-github-issues` (0.2.13 → 0.2.14)](#backstageplugin-github-issues-0213--0214)
+  - [`@backstage/plugin-github-pull-requests-board` (0.1.18 → 0.1.19)](#backstageplugin-github-pull-requests-board-0118--0119)
+  - [`@backstage/plugin-gitops-profiles` (0.3.40 → 0.3.41)](#backstageplugin-gitops-profiles-0340--0341)
+  - [`@backstage/plugin-gocd` (0.1.30 → 0.1.31)](#backstageplugin-gocd-0130--0131)
+  - [`@backstage/plugin-graphiql` (0.2.54 → 0.2.55)](#backstageplugin-graphiql-0254--0255)
+  - [`@backstage/plugin-graphql-voyager` (0.1.7 → 0.1.8)](#backstageplugin-graphql-voyager-017--018)
+  - [`@backstage/plugin-home` (0.5.8 → 0.5.9)](#backstageplugin-home-058--059)
+  - [`@backstage/plugin-home-react` (0.1.3 → 0.1.4)](#backstageplugin-home-react-013--014)
+  - [`@backstage/plugin-ilert` (0.2.13 → 0.2.14)](#backstageplugin-ilert-0213--0214)
+  - [`@backstage/plugin-kafka` (0.3.24 → 0.3.25)](#backstageplugin-kafka-0324--0325)
+  - [`@backstage/plugin-lighthouse` (0.4.9 → 0.4.10)](#backstageplugin-lighthouse-049--0410)
+  - [`@backstage/plugin-linguist` (0.1.9 → 0.1.10)](#backstageplugin-linguist-019--0110)
+  - [`@backstage/plugin-microsoft-calendar` (0.1.7 → 0.1.8)](#backstageplugin-microsoft-calendar-017--018)
+  - [`@backstage/plugin-newrelic` (0.3.40 → 0.3.41)](#backstageplugin-newrelic-0340--0341)
+  - [`@backstage/plugin-nomad` (0.1.5 → 0.1.6)](#backstageplugin-nomad-015--016)
+  - [`@backstage/plugin-nomad-backend` (0.1.7 → 0.1.8)](#backstageplugin-nomad-backend-017--018)
+  - [`@backstage/plugin-octopus-deploy` (0.2.6 → 0.2.7)](#backstageplugin-octopus-deploy-026--027)
+  - [`@backstage/plugin-opencost` (0.2.0 → 0.2.1)](#backstageplugin-opencost-020--021)
+  - [`@backstage/plugin-org` (0.6.14 → 0.6.15)](#backstageplugin-org-0614--0615)
+  - [`@backstage/plugin-org-react` (0.1.13 → 0.1.14)](#backstageplugin-org-react-0113--0114)
+  - [`@backstage/plugin-pagerduty` (0.6.5 → 0.6.6)](#backstageplugin-pagerduty-065--066)
+  - [`@backstage/plugin-periskop` (0.1.22 → 0.1.23)](#backstageplugin-periskop-0122--0123)
+  - [`@backstage/plugin-permission-react` (0.4.15 → 0.4.16)](#backstageplugin-permission-react-0415--0416)
+  - [`@backstage/plugin-playlist` (0.1.16 → 0.1.17)](#backstageplugin-playlist-0116--0117)
+  - [`@backstage/plugin-playlist-backend` (0.3.9 → 0.3.10)](#backstageplugin-playlist-backend-039--0310)
+  - [`@backstage/plugin-puppetdb` (0.1.7 → 0.1.8)](#backstageplugin-puppetdb-017--018)
+  - [`@backstage/plugin-rollbar` (0.4.24 → 0.4.25)](#backstageplugin-rollbar-0424--0425)
+  - [`@backstage/plugin-rollbar-backend` (0.1.50 → 0.1.51)](#backstageplugin-rollbar-backend-0150--0151)
+  - [`@backstage/plugin-scaffolder` (1.15.0 → 1.15.1)](#backstageplugin-scaffolder-1150--1151)
+  - [`@backstage/plugin-scaffolder-backend-module-rails` (0.4.22 → 0.4.23)](#backstageplugin-scaffolder-backend-module-rails-0422--0423)
+  - [`@backstage/plugin-scaffolder-react` (1.5.5 → 1.5.6)](#backstageplugin-scaffolder-react-155--156)
+  - [`@backstage/plugin-search` (1.4.0 → 1.4.1)](#backstageplugin-search-140--141)
+  - [`@backstage/plugin-search-backend` (1.4.5 → 1.4.6)](#backstageplugin-search-backend-145--146)
+  - [`@backstage/plugin-search-backend-module-elasticsearch` (1.3.8 → 1.3.9)](#backstageplugin-search-backend-module-elasticsearch-138--139)
+  - [`@backstage/plugin-search-react` (1.7.0 → 1.7.1)](#backstageplugin-search-react-170--171)
+  - [`@backstage/plugin-sentry` (0.5.9 → 0.5.10)](#backstageplugin-sentry-059--0510)
+  - [`@backstage/plugin-shortcuts` (0.3.14 → 0.3.15)](#backstageplugin-shortcuts-0314--0315)
+  - [`@backstage/plugin-sonarqube` (0.7.5 → 0.7.6)](#backstageplugin-sonarqube-075--076)
+  - [`@backstage/plugin-sonarqube-backend` (0.2.7 → 0.2.8)](#backstageplugin-sonarqube-backend-027--028)
+  - [`@backstage/plugin-splunk-on-call` (0.4.13 → 0.4.14)](#backstageplugin-splunk-on-call-0413--0414)
+  - [`@backstage/plugin-stack-overflow` (0.1.20 → 0.1.21)](#backstageplugin-stack-overflow-0120--0121)
+  - [`@backstage/plugin-stackstorm` (0.1.6 → 0.1.7)](#backstageplugin-stackstorm-016--017)
+  - [`@backstage/plugin-tech-insights` (0.3.16 → 0.3.17)](#backstageplugin-tech-insights-0316--0317)
+  - [`@backstage/plugin-tech-insights-backend` (0.5.19 → 0.5.20)](#backstageplugin-tech-insights-backend-0519--0520)
+  - [`@backstage/plugin-tech-radar` (0.6.8 → 0.6.9)](#backstageplugin-tech-radar-068--069)
+  - [`@backstage/plugin-techdocs-addons-test-utils` (1.0.21 → 1.0.22)](#backstageplugin-techdocs-addons-test-utils-1021--1022)
+  - [`@backstage/plugin-techdocs-module-addons-contrib` (1.1.0 → 1.1.1)](#backstageplugin-techdocs-module-addons-contrib-110--111)
+  - [`@backstage/plugin-techdocs-react` (1.1.11 → 1.1.12)](#backstageplugin-techdocs-react-1111--1112)
+  - [`@backstage/plugin-todo` (0.2.27 → 0.2.28)](#backstageplugin-todo-0227--0228)
+  - [`@backstage/plugin-user-settings` (0.7.10 → 0.7.11)](#backstageplugin-user-settings-0710--0711)
+  - [`@backstage/plugin-vault` (0.1.19 → 0.1.20)](#backstageplugin-vault-0119--0120)
+  - [`@backstage/plugin-xcmetrics` (0.2.43 → 0.2.44)](#backstageplugin-xcmetrics-0243--0244)
+  - [`@backstage/repo-tools` (0.3.4 → 0.3.5)](#backstagerepo-tools-034--035)
+  - [`@backstage/test-utils` (1.4.3 → 1.4.4)](#backstagetest-utils-143--144)
+  - [`@backstage/theme` (0.4.2 → 0.4.3)](#backstagetheme-042--043)
+  - [`@backstage/version-bridge` (1.0.5 → 1.0.6)](#backstageversion-bridge-105--106)
+
+## Newly added packages
+
+### `@backstage/e2e-test-utils` (new, 0.1.0)
+
+#### 0.1.0
+
+##### Minor Changes
 
 - f5b41b27a9: Initial release.
 
-## `@backstage/plugin-auth-backend-module-microsoft-provider` (new, 0.1.0)
+### `@backstage/plugin-auth-backend-module-microsoft-provider` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 2d8f7e82c1: Migrated the Microsoft auth provider to new `@backstage/plugin-auth-backend-module-microsoft-provider` module package.
 
-## `@backstage/plugin-auth-backend-module-pinniped-provider` (new, 0.1.0)
+### `@backstage/plugin-auth-backend-module-pinniped-provider` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - ae34255836: Add new Pinniped auth module and authenticator to be used alongside the new Pinniped auth provider.
 
-## `@backstage/plugin-catalog-backend-module-github-org` (new, 0.1.0)
+### `@backstage/plugin-catalog-backend-module-github-org` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - c101e683d5: Added `catalogModuleGithubOrgEntityProvider` to ingest users and teams from multiple Github organizations.
 
-## `@backstage/plugin-kubernetes-cluster` (new, 0.0.1)
+### `@backstage/plugin-kubernetes-cluster` (new, 0.0.1)
 
-### 0.0.1
+#### 0.0.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
 
-## `@backstage/plugin-kubernetes-node` (new, 0.1.0)
+### `@backstage/plugin-kubernetes-node` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - cbb0e3c3f4: A new plugin has been introduced to house the extension points for Kubernetes backend plugin; at the moment only the `KubernetesObjectsProviderExtensionPoint` is present. The `kubernetes-backend` plugin was modified to use this new extension point.
 
-## `@backstage/plugin-kubernetes-react` (new, 0.1.0)
+### `@backstage/plugin-kubernetes-react` (new, 0.1.0)
 
-### 0.1.0
+#### 0.1.0
 
-#### Minor Changes
+##### Minor Changes
 
 - 2d8151061c: Refactor Kubernetes plugins in line with ADR 11, no breaking changes yet
 
-#### Patch Changes
+##### Patch Changes
 
 - 4262e12921: Handle mixed decimals and bigint when calculating k8s resource usage
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
 - 5dac12e435: The kubernetes APIs invokes Authentication Strategies when Backstage-Kubernetes-Authorization-X-X headers are provided, this enable the possibility to invoke strategies that executes additional steps to get a kubernetes token like on pinniped or custom strategies
 
-## `@backstage/app-defaults` (1.4.3 → 1.4.4)
+## Breaking changes
 
-### 1.4.4
+### `@backstage/cli` (0.22.14 → 0.23.0)
 
-#### Patch Changes
+#### 0.23.0
 
-- 1a0616fa10: Add missing resource and template app icons
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-
-## `@backstage/backend-app-api` (0.5.5 → 0.5.6)
-
-### 0.5.6
-
-#### Patch Changes
-
-- 74491c9602: Moved `HostDiscovery` from `@backstage/backend-common`.
-- a4617c422a: Added `watch` option to configuration loaders that can be used to disable file watching by setting it to `false`.
-
-## `@backstage/backend-common` (0.19.7 → 0.19.8)
-
-### 0.19.8
-
-#### Patch Changes
-
-- 74491c9602: The `HostDiscovery` export has been deprecated, import it from `@backstage/backend-app-api` instead.
-- b95d66d4ea: Properly close write stream when writing temporary archive for processing zip-based `.readTree()` responses.
-- b94f32271e: Added the ability to fetch git tags through the `Git` class. This is useful for scaffolder actions that want to take action based on tag versions in a cloned repository
-- 0b55f773a7: Removed some unused dependencies
-- 4c39e38f1e: Added `/testUtils` entry point, with a utility for mocking resolve package paths as returned by `resolvePackagePath`.
-- 9101c0d1b6: Updated dependency `@kubernetes/client-node` to `0.19.0`.
-- a250ad775f: Removed `mock-fs` dev dependency.
-- 2a40cd46a8: Adds the optional flag for useRedisSets for the Redis cache to the config.
-- 1c3d6fa2b2: The `useHotCleanup` and `useHotMemoize` helpers are now deprecated, since hot module reloads for backend are being phased out.
-
-## `@backstage/backend-dev-utils` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- afa48341fb: Fix an issue where early IPC responses would be lost.
-
-## `@backstage/backend-openapi-utils` (0.0.4 → 0.0.5)
-
-### 0.0.5
-
-#### Patch Changes
-
-- 7c83975531: Adds new public utility types for common OpenAPI values, like request and response shapes and parameters available on an endpoint.
-
-  **deprecated** `internal` namespace
-  The internal namespace will continue to be exported but now uses OpenAPI format for path parameters. You should use the new utility types.
-
-## `@backstage/backend-tasks` (0.5.10 → 0.5.11)
-
-### 0.5.11
-
-#### Patch Changes
-
-- 5db102bfdf: Instrument `backend-tasks` with some counters and histograms for duration.
-
-  `backend_tasks.task.runs.count`: Counter with the total number of times a task has been run.
-  `backend_tasks.task.runs.duration`: Histogram with the run durations for each task.
-
-  Both these metrics have come with `result` `taskId` and `scope` labels for finer grained grouping.
-
-- ddd76ac98d: Fix bug where backend tasks that are defined with HumanDuration are immediately triggered on application startup
-
-## `@backstage/backend-test-utils` (0.2.6 → 0.2.7)
-
-### 0.2.7
-
-#### Patch Changes
-
-- a250ad775f: Added `createMockDirectory()` to help out with file system mocking in tests.
-- 5ddc03813e: Remove third type parameter used for `MockInstance`, in order to be compatible with older versions of `@types/jest`.
-- 74491c9602: Updated to import `HostDiscovery` from `@backstage/backend-app-api`.
-
-## `@backstage/catalog-model` (1.4.2 → 1.4.3)
-
-### 1.4.3
-
-#### Patch Changes
-
-- 0b55f773a7: Removed some unused dependencies
-
-## `@backstage/cli` (0.22.14 → 0.23.0)
-
-### 0.23.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 8defbd5434: Update typescript-eslint to 6.7.x, adding compatibility with TypeScript 5.2.
 
@@ -169,7 +261,7 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 
   This new command is no longer based on Webpack, but instead uses Node.js loaders to transpile on the fly. Rather than hot reloading modules the entire backend is now restarted on change, but the SQLite database state is still maintained across restarts via a parent process.
 
-#### Patch Changes
+##### Patch Changes
 
 - 9468a67b92: In frontend builds and tests `process.env.HAS_REACT_DOM_CLIENT` will now be defined if `react-dom/client` is present, i.e. if using React 18. This allows for conditional imports of `react-dom/client`.
 - 68158034e8: Fix for the new backend `start` command to make it work on Windows.
@@ -201,42 +293,242 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 - 3ef18f8c06: Explicitly set `exports: 'named'` for CJS builds, ensuring that they have e.g. `exports["default"] = catalogPlugin;`
 - 7187f2953e: The experimental package discovery will now always use the package name for include and exclude filtering, rather than the full module id. Entries pointing to a subpath export will now instead have an `export` field specifying the subpath that the import is from.
 
-## `@backstage/cli-common` (0.1.12 → 0.1.13)
+### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.1.2 → 0.2.0)
 
-### 0.1.13
+#### 0.2.0
 
-#### Patch Changes
+##### Minor Changes
 
-- de42eebaaf: Bumped dev dependencies `@types/node` and `mock-fs`.
+- 6f142d5356: **BREAKING** `gcpIapAuthenticator.initialize()` is no longer `async`
 
-## `@backstage/codemods` (0.1.45 → 0.1.46)
+### `@backstage/plugin-auth-node` (0.3.2 → 0.4.0)
 
-### 0.1.46
+#### 0.4.0
 
-#### Patch Changes
+##### Minor Changes
 
-- de42eebaaf: Bumped dev dependencies `@types/node` and `mock-fs`.
+- 6f142d5356: **BREAKING**: The recently introduced `ProxyAuthenticator.initialize()` method is no longer `async` to match the way the OAuth equivalent is implemented.
 
-## `@backstage/config-loader` (1.5.0 → 1.5.1)
+##### Patch Changes
 
-### 1.5.1
+- 6c2b0793bf: Fix for persisted scopes not being properly restored on sign-in.
+- 8b8b1d23ae: Fixed cookie persisted scope not returned in OAuth refresh handler response.
+- ae34255836: Adding optional audience parameter to OAuthState type declaration
 
-#### Patch Changes
+### `@backstage/plugin-kubernetes` (0.10.3 → 0.11.0)
 
-- 0b55f773a7: Removed some unused dependencies
-- 30c553c1d2: Updated dependency `typescript-json-schema` to `^0.61.0`.
-- 773ea341d2: The `FileConfigSource` will now retry file reading after a short delay if it reads an empty file. This is to avoid flakiness during watch mode where change events can trigger before the file content has been written.
-- a4617c422a: Added `watch` option to configuration loaders that can be used to disable file watching by setting it to `false`.
+#### 0.11.0
 
-## `@backstage/core-app-api` (1.10.0 → 1.11.0)
+##### Minor Changes
 
-### 1.11.0
+- 2d8151061c: Refactor Kubernetes plugins in line with ADR 11, no breaking changes yet
 
-#### Minor Changes
+##### Patch Changes
+
+- 9101c0d1b6: Updated dependency `@kubernetes/client-node` to `0.19.0`.
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+- b0aca1a798: Updated dependency `xterm-addon-attach` to `^0.9.0`.
+  Updated dependency `xterm-addon-fit` to `^0.8.0`.
+- 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
+
+### `@backstage/plugin-kubernetes-backend` (0.12.2 → 0.13.0)
+
+#### 0.13.0
+
+##### Minor Changes
+
+- ae943c3bb1: **BREAKING** Allow passing undefined `labelSelector` to `KubernetesFetcher`
+
+  `KubernetesFetch` no longer auto-adds `labelSelector` when empty string was passed.
+  This is only applicable if you have custom ObjectProvider implementation, as build-in `KubernetesFanOutHandler` already does this
+
+##### Patch Changes
+
+- cbb0e3c3f4: A new plugin has been introduced to house the extension points for Kubernetes backend plugin; at the moment only the `KubernetesObjectsProviderExtensionPoint` is present. The `kubernetes-backend` plugin was modified to use this new extension point.
+- 9101c0d1b6: Updated dependency `@kubernetes/client-node` to `0.19.0`.
+- 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
+- 5dac12e435: The kubernetes APIs invokes Authentication Strategies when Backstage-Kubernetes-Authorization-X-X headers are provided, this enable the possibility to invoke strategies that executes additional steps to get a kubernetes token like on pinniped or custom strategies
+
+### `@backstage/plugin-kubernetes-common` (0.6.6 → 0.7.0)
+
+#### 0.7.0
+
+##### Minor Changes
+
+- 2d8151061c: Refactor Kubernetes plugins in line with ADR 11, no breaking changes yet
+
+##### Patch Changes
+
+- 9101c0d1b6: Updated dependency `@kubernetes/client-node` to `0.19.0`.
+- 5dac12e435: The kubernetes APIs invokes Authentication Strategies when Backstage-Kubernetes-Authorization-X-X headers are provided, this enable the possibility to invoke strategies that executes additional steps to get a kubernetes token like on pinniped or custom strategies
+
+## 0.x minor version bumps
+
+### `@backstage/frontend-app-api` (0.1.0 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 4461d87d5a: Removed support for the new `useRouteRef`.
+- 9d03dfe5e3: The `createApp` config option has been replaced by a new `configLoader` option. There is now also a `pluginLoader` option that can be used to dynamically load plugins into the app.
+- d7c5d80c57: The hidden `'root'` extension has been removed and has instead been made an input of the `'core'` extension. The checks for rejecting configuration of the `'root'` extension to rejects configuration of the `'core'` extension instead.
+- d920b8c343: Added support for installing `ExtensionOverrides` via `createApp` options. As part of this change the `plugins` option has been renamed to `features`, and the `pluginLoader` has been renamed to `featureLoader`.
+
+##### Patch Changes
+
+- 322bbcae24: Internal update for removal of experimental plugin configuration API.
+- f78ac58f88: Filters for discovered packages are now also applied at runtime. This makes it possible to disable packages through the `app.experimental.packages` config at runtime.
+- 68ffb9e67d: The app will now reject any extensions that attach to nonexistent inputs.
+- 5072824817: Implement `toString()` and `toJSON()` for extension instances.
+- 1e60a9c3a5: Fixed an issue preventing the routing system to match subroutes
+- 52366db5b3: Make themes configurable through extensions, and switched default themes to use extensions instead.
+- 2ecd33618a: Added the `bindRoutes` option to `createApp`.
+- e5a2956dd2: Register default api implementations when creating declarative integrated apps.
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- 06432f900c: Updates for `at` -> `attachTo` refactor.
+- 1718ec75b7: Added support for the existing routing system.
+- 66d51a4827: Prevents root extension override and duplicated plugin extensions.
+
+### `@backstage/frontend-plugin-api` (0.1.0 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 06432f900c: Extension attachment point is now configured via `attachTo: { id, input }` instead of `at: 'id/input'`.
+- 4461d87d5a: Removed support for the new `useRouteRef`.
+
+##### Patch Changes
+
+- d3a37f55c0: Add support for `SidebarGroup` on the sidebar item extension.
+- 2ecd33618a: Plugins can now be assigned `routes` and `externalRoutes` when created.
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- c1e9ca6500: Added `createExtensionOverrides` which can be used to install a collection of extensions in an app that will replace any existing ones.
+- 52366db5b3: Added `createThemeExtension` and `coreExtensionData.theme`.
+
+### `@backstage/plugin-catalog-backend-module-aws` (0.2.8 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- 5abc2fd4d6: AwsEksClusterProcessor supports Entity callback function and passes in region when initialize EKS cluster
+
+##### Patch Changes
+
+- 890e3b5ad4: Make sure to include the error message when ingestion fails
+
+### `@backstage/plugin-catalog-graphql` (0.3.23 → 0.4.0)
+
+#### 0.4.0
+
+##### Minor Changes
+
+- 9def1e95ab: This package has been deprecated, consider using [@frontside/backstage-plugin-graphql-backend](https://www.npmjs.com/package/@frontside/backstage-plugin-graphql-backend) instead.
+
+### `@backstage/plugin-graphql-backend` (0.1.43 → 0.2.0)
+
+#### 0.2.0
+
+##### Minor Changes
+
+- 9def1e95ab: This package has been deprecated, consider using [@frontside/backstage-plugin-graphql-backend](https://www.npmjs.com/package/@frontside/backstage-plugin-graphql-backend) instead.
+
+### `@backstage/plugin-jenkins` (0.8.6 → 0.9.0)
+
+#### 0.9.0
+
+##### Minor Changes
+
+- 411896faf9: Added JobRunTable Component.
+  Added new Route and extended Api to get buildJobs.
+  Actions column has a new icon button, clicking on which takes us to page where we
+  can see all the job runs.
+
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+- 1a05cf34f6: Extend EntityJenkinsContent to receive columns as prop
+
+### `@backstage/plugin-jenkins-backend` (0.2.8 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- 411896faf9: Added JobRunTable Component.
+  Added new Route and extended Api to get buildJobs.
+  Actions column has a new icon button, clicking on which takes us to page where we
+  can see all the job runs.
+
+##### Patch Changes
+
+- 930ac236d8: Added support for the [new backend system](https://backstage.io/docs/backend-system/)
+
+### `@backstage/plugin-newrelic-dashboard` (0.2.17 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- d7eba6cab4: Changes in `newrelic-dashboard` plugin:
+
+  - Make DashboardSnapshotList component public
+  - Settle discrepancies in the exported API
+  - Deprecate DashboardSnapshotComponent
+
+- e605ea4906: Add storybook for newrelic-dashboard plugin.
+
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- 61d55942ae: Fix the styles for NewRelicDashboard, add more responsiveness
+- 5194a51a1c: Fixed React Warning: "Each child in a list should have a unique 'key' prop" during the rendering of `EntityNewRelicDashboardCard`
+
+## 0.0.x patch version bumps
+
+### `@backstage/backend-openapi-utils` (0.0.4 → 0.0.5)
+
+#### 0.0.5
+
+##### Patch Changes
+
+- 7c83975531: Adds new public utility types for common OpenAPI values, like request and response shapes and parameters available on an endpoint.
+
+  **deprecated** `internal` namespace
+  The internal namespace will continue to be exported but now uses OpenAPI format for path parameters. You should use the new utility types.
+
+### `@backstage/plugin-analytics-module-newrelic-browser` (0.0.2 → 0.0.3)
+
+#### 0.0.3
+
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+
+### `@backstage/plugin-explore-react` (0.0.31 → 0.0.32)
+
+#### 0.0.32
+
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+## Other minor version bumps
+
+### `@backstage/core-app-api` (1.10.0 → 1.11.0)
+
+#### 1.11.0
+
+##### Minor Changes
 
 - c9d9bfeca2: URL encode some well known unsafe characters in `RouteResolver` (and therefore `useRouteRef`)
 
-#### Patch Changes
+##### Patch Changes
 
 - 29e4d8b76b: Fixed bug in `AppRouter` to determine the correct `signOutTargetUrl` if `app.baseUrl` contains a `basePath`
 - acca17e91a: Wrap entire app in `<Suspense>`, enabling support for using translations outside plugins.
@@ -245,11 +537,258 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - f1b349cfba: Fixed a bug in `TranslationApi` implementation where in some cases it wouldn't notify subscribers of language changes.
 
-## `@backstage/core-components` (0.13.5 → 0.13.6)
+### `@backstage/core-plugin-api` (1.6.0 → 1.7.0)
 
-### 0.13.6
+#### 1.7.0
 
-#### Patch Changes
+##### Minor Changes
+
+- 322bbcae24: Removed the exprimental plugin configuration API. The `__experimentalReconfigure()` from the plugin options as well as the `__experimentalConfigure()` method on plugin instances have both been removed.
+
+##### Patch Changes
+
+- 0b55f773a7: Removed some unused dependencies
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-catalog` (1.13.0 → 1.14.0)
+
+#### 1.14.0
+
+##### Minor Changes
+
+- 28f1ab2e1a: The catalog plugin no longer implements the experimental reconfiguration API. The create button title can now instead be configured using the new experimental internationalization API, via the `catalogTranslationRef` exported at `/alpha`. For example:
+
+  ```ts
+  import { catalogTranslationRef } from '@backstage/plugin-catalog/alpha';
+
+  const app = createApp({
+    __experimentalTranslations: {
+      resources: [
+        createTranslationMessages({
+          ref: catalogTranslationRef,
+          catalog_page_create_button_title: 'Create Software',
+        }),
+      ],
+    },
+  });
+  ```
+
+- f3561a2935: include owner chip in catalog search result item
+
+##### Patch Changes
+
+- 7c4a8e4d5f: Create an experimental `CatalogSearchResultItemExtension` for declarative integration with Backstage; it can be accessed via the `/alpha` import.
+- 0296f272b4: The `spec.lifecycle' field in entities will now always be rendered as a string.
+- 0b55f773a7: Removed some unused dependencies
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+- e5a2956dd2: Migrate catalog api to declarative integration system, it is exported from `/alpha` subpath.
+
+### `@backstage/plugin-catalog-backend` (1.13.3 → 1.14.0)
+
+#### 1.14.0
+
+##### Minor Changes
+
+- 78af9433c8: Instrumenting some missing metrics with `OpenTelemetry`
+
+##### Patch Changes
+
+- 7a2e2924c7: Marked the `LocationEntityProcessor` as deprecated, as it is no longer used internally since way back and can even be harmful at this point.
+- 0b55f773a7: Removed some unused dependencies
+- 348e8c1cdb: Fixes a bug where eagerly deleted entities did not properly trigger re-stitching of entities that they had relations to.
+- b97e9790f0: Internal refactors, laying the foundation for later introducing deferred stitching (see #18062).
+
+### `@backstage/plugin-scaffolder-backend` (1.17.3 → 1.18.0)
+
+#### 1.18.0
+
+##### Minor Changes
+
+- dea0aafda7: Updated `publish:gitlab` action properties to support additional Gitlab project settings:
+
+  - general project settings provided by gitlab project create API (new `settings` property)
+  - branch level settings to create additional branches and make them protected (new `branches` property)
+  - project level environment variables settings (new `projectVariables` property)
+
+  Marked existed properties `repoVisibility` and `topics` as deprecated, as they are covered by `settings` property.
+
+- f41099bb31: Display meaningful error to the output if Gitlab namespace not found inside `publish:gitlab`.
+
+##### Patch Changes
+
+- 7dd82cc07e: Add examples for `github:issues:label` scaffolder action & improve related tests
+- 733ddf7130: Add examples for `publish:Azure` scaffolder action.
+
+### `@backstage/plugin-techdocs` (1.7.0 → 1.8.0)
+
+#### 1.8.0
+
+##### Minor Changes
+
+- 27740caa2d: Added experimental support for declarative integration via the `/alpha` subpath.
+
+##### Patch Changes
+
+- 4918f65ab2: Create an experimental `TechDocsSearchResultItemExtension` for declarative integration with Backstage; it can be accessed via the `/alpha` import.
+- 3605370af6: Improved `DocsTable` to display pagination controls dynamically, appearing only when needed.
+- 0296f272b4: The `spec.lifecycle' field in entities will now always be rendered as a string.
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+- 9468a67b92: Added support for React 18. The new `createRoot` API from `react-dom/client` will now be used if present.
+- df449a7a31: Add kind column by default to TechDocsTable
+
+### `@backstage/plugin-techdocs-backend` (1.7.2 → 1.8.0)
+
+#### 1.8.0
+
+##### Minor Changes
+
+- 344cfbcfbc: Allow prepared directory clean up for custom preparers
+
+  When using custom preparer for TechDocs, the `preparedDir` might
+  end up taking disk space. This requires all custom preparers to
+  implement a new method `shouldCleanPreparedDirectory` which indicates
+  whether the prepared directory should be cleaned after generation.
+
+### `@backstage/plugin-techdocs-node` (1.8.2 → 1.9.0)
+
+#### 1.9.0
+
+##### Minor Changes
+
+- 344cfbcfbc: Allow prepared directory clean up for custom preparers
+
+  When using custom preparer for TechDocs, the `preparedDir` might
+  end up taking disk space. This requires all custom preparers to
+  implement a new method `shouldCleanPreparedDirectory` which indicates
+  whether the prepared directory should be cleaned after generation.
+
+- d06b30b050: Add possibility to use a mkdocs config file with a different name than `mkdocs.<yaml|yml> with the serve command using the `--mkdocs-config-file-name` argument
+
+### `@techdocs/cli` (1.5.2 → 1.6.0)
+
+#### 1.6.0
+
+##### Minor Changes
+
+- d06b30b050: Add possibility to use a mkdocs config file with a different name than `mkdocs.<yaml|yml> with the serve command using the `--mkdocs-config-file-name` argument
+
+##### Patch Changes
+
+- de42eebaaf: Bumped dev dependencies `@types/node` and `mock-fs`.
+- 2b6e572051: Restructured tests.
+
+## Other patch version bumps
+
+### `@backstage/app-defaults` (1.4.3 → 1.4.4)
+
+#### 1.4.4
+
+##### Patch Changes
+
+- 1a0616fa10: Add missing resource and template app icons
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+
+### `@backstage/backend-app-api` (0.5.5 → 0.5.6)
+
+#### 0.5.6
+
+##### Patch Changes
+
+- 74491c9602: Moved `HostDiscovery` from `@backstage/backend-common`.
+- a4617c422a: Added `watch` option to configuration loaders that can be used to disable file watching by setting it to `false`.
+
+### `@backstage/backend-common` (0.19.7 → 0.19.8)
+
+#### 0.19.8
+
+##### Patch Changes
+
+- 74491c9602: The `HostDiscovery` export has been deprecated, import it from `@backstage/backend-app-api` instead.
+- b95d66d4ea: Properly close write stream when writing temporary archive for processing zip-based `.readTree()` responses.
+- b94f32271e: Added the ability to fetch git tags through the `Git` class. This is useful for scaffolder actions that want to take action based on tag versions in a cloned repository
+- 0b55f773a7: Removed some unused dependencies
+- 4c39e38f1e: Added `/testUtils` entry point, with a utility for mocking resolve package paths as returned by `resolvePackagePath`.
+- 9101c0d1b6: Updated dependency `@kubernetes/client-node` to `0.19.0`.
+- a250ad775f: Removed `mock-fs` dev dependency.
+- 2a40cd46a8: Adds the optional flag for useRedisSets for the Redis cache to the config.
+- 1c3d6fa2b2: The `useHotCleanup` and `useHotMemoize` helpers are now deprecated, since hot module reloads for backend are being phased out.
+
+### `@backstage/backend-dev-utils` (0.1.1 → 0.1.2)
+
+#### 0.1.2
+
+##### Patch Changes
+
+- afa48341fb: Fix an issue where early IPC responses would be lost.
+
+### `@backstage/backend-tasks` (0.5.10 → 0.5.11)
+
+#### 0.5.11
+
+##### Patch Changes
+
+- 5db102bfdf: Instrument `backend-tasks` with some counters and histograms for duration.
+
+  `backend_tasks.task.runs.count`: Counter with the total number of times a task has been run.
+  `backend_tasks.task.runs.duration`: Histogram with the run durations for each task.
+
+  Both these metrics have come with `result` `taskId` and `scope` labels for finer grained grouping.
+
+- ddd76ac98d: Fix bug where backend tasks that are defined with HumanDuration are immediately triggered on application startup
+
+### `@backstage/backend-test-utils` (0.2.6 → 0.2.7)
+
+#### 0.2.7
+
+##### Patch Changes
+
+- a250ad775f: Added `createMockDirectory()` to help out with file system mocking in tests.
+- 5ddc03813e: Remove third type parameter used for `MockInstance`, in order to be compatible with older versions of `@types/jest`.
+- 74491c9602: Updated to import `HostDiscovery` from `@backstage/backend-app-api`.
+
+### `@backstage/catalog-model` (1.4.2 → 1.4.3)
+
+#### 1.4.3
+
+##### Patch Changes
+
+- 0b55f773a7: Removed some unused dependencies
+
+### `@backstage/cli-common` (0.1.12 → 0.1.13)
+
+#### 0.1.13
+
+##### Patch Changes
+
+- de42eebaaf: Bumped dev dependencies `@types/node` and `mock-fs`.
+
+### `@backstage/codemods` (0.1.45 → 0.1.46)
+
+#### 0.1.46
+
+##### Patch Changes
+
+- de42eebaaf: Bumped dev dependencies `@types/node` and `mock-fs`.
+
+### `@backstage/config-loader` (1.5.0 → 1.5.1)
+
+#### 1.5.1
+
+##### Patch Changes
+
+- 0b55f773a7: Removed some unused dependencies
+- 30c553c1d2: Updated dependency `typescript-json-schema` to `^0.61.0`.
+- 773ea341d2: The `FileConfigSource` will now retry file reading after a short delay if it reads an empty file. This is to avoid flakiness during watch mode where change events can trigger before the file content has been written.
+- a4617c422a: Added `watch` option to configuration loaders that can be used to disable file watching by setting it to `false`.
+
+### `@backstage/core-components` (0.13.5 → 0.13.6)
+
+#### 0.13.6
+
+##### Patch Changes
 
 - 4eab5cf901: The `TabbedLayout` component will now also navigate when clicking the active tab, which allows for navigation back from any sub routes.
 - 0b55f773a7: Removed some unused dependencies
@@ -261,25 +800,11 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 - 16126dbe6a: Change overlay header colors in the mobile menu to use navigation color from the theme
 - d19a827ef1: MissingAnnotationEmptyState component can now dynamically generate a YAML example based off the current entity being used.
 
-## `@backstage/core-plugin-api` (1.6.0 → 1.7.0)
+### `@backstage/create-app` (0.5.5 → 0.5.6)
 
-### 1.7.0
+#### 0.5.6
 
-#### Minor Changes
-
-- 322bbcae24: Removed the exprimental plugin configuration API. The `__experimentalReconfigure()` from the plugin options as well as the `__experimentalConfigure()` method on plugin instances have both been removed.
-
-#### Patch Changes
-
-- 0b55f773a7: Removed some unused dependencies
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/create-app` (0.5.5 → 0.5.6)
-
-### 0.5.6
-
-#### Patch Changes
+##### Patch Changes
 
 - ba6a3b59c1: Removed duplicate `apple-touch-icon` link from `packages/app/public/index.html` that linked to nonexistent icon.
 - c8ec0dea4a: Create unique temp directory for each `create-app` execution.
@@ -309,368 +834,234 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
   + playwright.config.ts
   ```
 
-## `@backstage/dev-utils` (1.0.21 → 1.0.22)
+### `@backstage/dev-utils` (1.0.21 → 1.0.22)
 
-### 1.0.22
+#### 1.0.22
 
-#### Patch Changes
+##### Patch Changes
 
 - 080d1beb2a: Moving development `dependencies` to `devDependencies`
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 9468a67b92: Added support for React 18. The new `createRoot` API from `react-dom/client` will now be used if present.
 
-## `@backstage/errors` (1.2.2 → 1.2.3)
+### `@backstage/errors` (1.2.2 → 1.2.3)
 
-### 1.2.3
+#### 1.2.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 0b55f773a7: Removed some unused dependencies
 
-## `@backstage/frontend-app-api` (0.1.0 → 0.2.0)
+### `@backstage/integration` (1.7.0 → 1.7.1)
 
-### 0.2.0
+#### 1.7.1
 
-#### Minor Changes
-
-- 4461d87d5a: Removed support for the new `useRouteRef`.
-- 9d03dfe5e3: The `createApp` config option has been replaced by a new `configLoader` option. There is now also a `pluginLoader` option that can be used to dynamically load plugins into the app.
-- d7c5d80c57: The hidden `'root'` extension has been removed and has instead been made an input of the `'core'` extension. The checks for rejecting configuration of the `'root'` extension to rejects configuration of the `'core'` extension instead.
-- d920b8c343: Added support for installing `ExtensionOverrides` via `createApp` options. As part of this change the `plugins` option has been renamed to `features`, and the `pluginLoader` has been renamed to `featureLoader`.
-
-#### Patch Changes
-
-- 322bbcae24: Internal update for removal of experimental plugin configuration API.
-- f78ac58f88: Filters for discovered packages are now also applied at runtime. This makes it possible to disable packages through the `app.experimental.packages` config at runtime.
-- 68ffb9e67d: The app will now reject any extensions that attach to nonexistent inputs.
-- 5072824817: Implement `toString()` and `toJSON()` for extension instances.
-- 1e60a9c3a5: Fixed an issue preventing the routing system to match subroutes
-- 52366db5b3: Make themes configurable through extensions, and switched default themes to use extensions instead.
-- 2ecd33618a: Added the `bindRoutes` option to `createApp`.
-- e5a2956dd2: Register default api implementations when creating declarative integrated apps.
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- 06432f900c: Updates for `at` -> `attachTo` refactor.
-- 1718ec75b7: Added support for the existing routing system.
-- 66d51a4827: Prevents root extension override and duplicated plugin extensions.
-
-## `@backstage/frontend-plugin-api` (0.1.0 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
-
-- 06432f900c: Extension attachment point is now configured via `attachTo: { id, input }` instead of `at: 'id/input'`.
-- 4461d87d5a: Removed support for the new `useRouteRef`.
-
-#### Patch Changes
-
-- d3a37f55c0: Add support for `SidebarGroup` on the sidebar item extension.
-- 2ecd33618a: Plugins can now be assigned `routes` and `externalRoutes` when created.
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- c1e9ca6500: Added `createExtensionOverrides` which can be used to install a collection of extensions in an app that will replace any existing ones.
-- 52366db5b3: Added `createThemeExtension` and `coreExtensionData.theme`.
-
-## `@backstage/integration` (1.7.0 → 1.7.1)
-
-### 1.7.1
-
-#### Patch Changes
+##### Patch Changes
 
 - 3963d0b885: Ensure that all relevant config fields are properly marked as secret
 - 0b55f773a7: Removed some unused dependencies
 
-## `@backstage/integration-react` (1.1.19 → 1.1.20)
+### `@backstage/integration-react` (1.1.19 → 1.1.20)
 
-### 1.1.20
+#### 1.1.20
 
-#### Patch Changes
+##### Patch Changes
 
 - 0b55f773a7: Removed some unused dependencies
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-adr` (0.6.7 → 0.6.8)
+### `@backstage/plugin-adr` (0.6.7 → 0.6.8)
 
-### 0.6.8
+#### 0.6.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 499e34656e: Fix icon alignment in `AdrSearchResultListItem`
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 1204e7628e: Create an experimental `AdrSearchResultItemExtension` for declarative integration with Backstage; it can be accessed via the `/alpha` import.
 
-## `@backstage/plugin-airbrake` (0.3.24 → 0.3.25)
+### `@backstage/plugin-airbrake` (0.3.24 → 0.3.25)
 
-### 0.3.25
+#### 0.3.25
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-allure` (0.1.40 → 0.1.41)
-
-### 0.1.41
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-analytics-module-ga` (0.1.33 → 0.1.34)
+### `@backstage/plugin-allure` (0.1.40 → 0.1.41)
 
-### 0.1.34
+#### 0.1.41
 
-#### Patch Changes
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-analytics-module-ga` (0.1.33 → 0.1.34)
+
+#### 0.1.34
+
+##### Patch Changes
 
 - 0b55f773a7: Removed some unused dependencies
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-analytics-module-ga4` (0.1.4 → 0.1.5)
+### `@backstage/plugin-analytics-module-ga4` (0.1.4 → 0.1.5)
 
-### 0.1.5
+#### 0.1.5
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-analytics-module-newrelic-browser` (0.0.2 → 0.0.3)
-
-### 0.0.3
-
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-
-## `@backstage/plugin-apache-airflow` (0.2.15 → 0.2.16)
-
-### 0.2.16
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-api-docs` (0.9.11 → 0.9.12)
+### `@backstage/plugin-apache-airflow` (0.2.15 → 0.2.16)
 
-### 0.9.12
+#### 0.2.16
 
-#### Patch Changes
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-api-docs` (0.9.11 → 0.9.12)
+
+#### 0.9.12
+
+##### Patch Changes
 
 - 0117a6b47e: Adding `requestInterceptor` option to `api-docs` and pass it to SwaggerUI. This will enable to configure a proxy or headers to be sent to all the request made through the `Try it out` button on SwaggerUI.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 18f1756908: added aria-label on api definition button for better a11y.
 
-## `@backstage/plugin-api-docs-module-protoc-gen-doc` (0.1.3 → 0.1.4)
+### `@backstage/plugin-api-docs-module-protoc-gen-doc` (0.1.3 → 0.1.4)
 
-### 0.1.4
+#### 0.1.4
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 
-## `@backstage/plugin-apollo-explorer` (0.1.15 → 0.1.16)
+### `@backstage/plugin-apollo-explorer` (0.1.15 → 0.1.16)
 
-### 0.1.16
+#### 0.1.16
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-auth-backend` (0.19.2 → 0.19.3)
+### `@backstage/plugin-auth-backend` (0.19.2 → 0.19.3)
 
-### 0.19.3
+#### 0.19.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 9ff7935152: Fixed bug in oidc refresh handler, if token endpoints response on refresh request does not contain a scope, the requested scope is used.
 - 2d8f7e82c1: Migrated the Microsoft auth provider to new `@backstage/plugin-auth-backend-module-microsoft-provider` module package.
 
-## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.1.2 → 0.2.0)
+### `@backstage/plugin-auth-backend-module-github-provider` (0.1.2 → 0.1.3)
 
-### 0.2.0
+#### 0.1.3
 
-#### Minor Changes
-
-- 6f142d5356: **BREAKING** `gcpIapAuthenticator.initialize()` is no longer `async`
-
-## `@backstage/plugin-auth-backend-module-github-provider` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
+##### Patch Changes
 
 - 5d32a58b5a: Fixed a bug where the GitHub authenticator did not properly persist granted OAuth scopes.
 
-## `@backstage/plugin-auth-node` (0.3.2 → 0.4.0)
+### `@backstage/plugin-azure-devops` (0.3.6 → 0.3.7)
 
-### 0.4.0
+#### 0.3.7
 
-#### Minor Changes
-
-- 6f142d5356: **BREAKING**: The recently introduced `ProxyAuthenticator.initialize()` method is no longer `async` to match the way the OAuth equivalent is implemented.
-
-#### Patch Changes
-
-- 6c2b0793bf: Fix for persisted scopes not being properly restored on sign-in.
-- 8b8b1d23ae: Fixed cookie persisted scope not returned in OAuth refresh handler response.
-- ae34255836: Adding optional audience parameter to OAuthState type declaration
-
-## `@backstage/plugin-azure-devops` (0.3.6 → 0.3.7)
-
-### 0.3.7
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-azure-sites` (0.1.13 → 0.1.14)
+### `@backstage/plugin-azure-sites` (0.1.13 → 0.1.14)
 
-### 0.1.14
+#### 0.1.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-badges` (0.2.48 → 0.2.49)
+### `@backstage/plugin-badges` (0.2.48 → 0.2.49)
 
-### 0.2.49
+#### 0.2.49
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 
-## `@backstage/plugin-badges-backend` (0.3.2 → 0.3.3)
+### `@backstage/plugin-badges-backend` (0.3.2 → 0.3.3)
 
-### 0.3.3
+#### 0.3.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 817f2acbb1: Make sure the default badge factory is used if nothing is defined
 
-## `@backstage/plugin-bazaar` (0.2.16 → 0.2.17)
+### `@backstage/plugin-bazaar` (0.2.16 → 0.2.17)
 
-### 0.2.17
+#### 0.2.17
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-
-## `@backstage/plugin-bitrise` (0.1.51 → 0.1.52)
-
-### 0.1.52
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-catalog` (1.13.0 → 1.14.0)
+### `@backstage/plugin-bitrise` (0.1.51 → 0.1.52)
 
-### 1.14.0
+#### 0.1.52
 
-#### Minor Changes
+##### Patch Changes
 
-- 28f1ab2e1a: The catalog plugin no longer implements the experimental reconfiguration API. The create button title can now instead be configured using the new experimental internationalization API, via the `catalogTranslationRef` exported at `/alpha`. For example:
-
-  ```ts
-  import { catalogTranslationRef } from '@backstage/plugin-catalog/alpha';
-
-  const app = createApp({
-    __experimentalTranslations: {
-      resources: [
-        createTranslationMessages({
-          ref: catalogTranslationRef,
-          catalog_page_create_button_title: 'Create Software',
-        }),
-      ],
-    },
-  });
-  ```
-
-- f3561a2935: include owner chip in catalog search result item
-
-#### Patch Changes
-
-- 7c4a8e4d5f: Create an experimental `CatalogSearchResultItemExtension` for declarative integration with Backstage; it can be accessed via the `/alpha` import.
-- 0296f272b4: The `spec.lifecycle' field in entities will now always be rendered as a string.
-- 0b55f773a7: Removed some unused dependencies
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-- e5a2956dd2: Migrate catalog api to declarative integration system, it is exported from `/alpha` subpath.
 
-## `@backstage/plugin-catalog-backend` (1.13.3 → 1.14.0)
+### `@backstage/plugin-catalog-backend-module-azure` (0.1.24 → 0.1.25)
 
-### 1.14.0
+#### 0.1.25
 
-#### Minor Changes
-
-- 78af9433c8: Instrumenting some missing metrics with `OpenTelemetry`
-
-#### Patch Changes
-
-- 7a2e2924c7: Marked the `LocationEntityProcessor` as deprecated, as it is no longer used internally since way back and can even be harmful at this point.
-- 0b55f773a7: Removed some unused dependencies
-- 348e8c1cdb: Fixes a bug where eagerly deleted entities did not properly trigger re-stitching of entities that they had relations to.
-- b97e9790f0: Internal refactors, laying the foundation for later introducing deferred stitching (see #18062).
-
-## `@backstage/plugin-catalog-backend-module-aws` (0.2.8 → 0.3.0)
-
-### 0.3.0
-
-#### Minor Changes
-
-- 5abc2fd4d6: AwsEksClusterProcessor supports Entity callback function and passes in region when initialize EKS cluster
-
-#### Patch Changes
+##### Patch Changes
 
 - 890e3b5ad4: Make sure to include the error message when ingestion fails
 
-## `@backstage/plugin-catalog-backend-module-azure` (0.1.24 → 0.1.25)
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.20 → 0.1.21)
 
-### 0.1.25
+#### 0.1.21
 
-#### Patch Changes
-
-- 890e3b5ad4: Make sure to include the error message when ingestion fails
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.20 → 0.1.21)
-
-### 0.1.21
-
-#### Patch Changes
+##### Patch Changes
 
 - 890e3b5ad4: Make sure to include the error message when ingestion fails
 
-## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.18 → 0.1.19)
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.18 → 0.1.19)
 
-### 0.1.19
+#### 0.1.19
 
-#### Patch Changes
-
-- 890e3b5ad4: Make sure to include the error message when ingestion fails
-
-## `@backstage/plugin-catalog-backend-module-gerrit` (0.1.21 → 0.1.22)
-
-### 0.1.22
-
-#### Patch Changes
+##### Patch Changes
 
 - 890e3b5ad4: Make sure to include the error message when ingestion fails
 
-## `@backstage/plugin-catalog-backend-module-github` (0.4.3 → 0.4.4)
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.21 → 0.1.22)
 
-### 0.4.4
+#### 0.1.22
 
-#### Patch Changes
+##### Patch Changes
+
+- 890e3b5ad4: Make sure to include the error message when ingestion fails
+
+### `@backstage/plugin-catalog-backend-module-github` (0.4.3 → 0.4.4)
+
+#### 0.4.4
+
+##### Patch Changes
 
 - 890e3b5ad4: Make sure to include the error message when ingestion fails
 - 0b55f773a7: Removed some unused dependencies
@@ -678,11 +1069,11 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 - b4b1cbf9fa: Make `defaultUserTransformer` resolve to `UserEntity` instead of `Entity`
 - c101e683d5: Removed `catalogModuleGithubOrgEntityProvider`. Import from `@backstage/plugin-catalog-backend-module-github-org` instead.
 
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.3.2 → 0.3.3)
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.2 → 0.3.3)
 
-### 0.3.3
+#### 0.3.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 4f70fdfc93: fix: use REST API to get root group memberships for GitLab SaaS users listing
 
@@ -704,78 +1095,70 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 - 0b55f773a7: Removed some unused dependencies
 - 6ae7f12abb: Make sure the archived projects are skipped with the Gitlab API
 
-## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.9 → 0.4.10)
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.9 → 0.4.10)
 
-### 0.4.10
+#### 0.4.10
 
-#### Patch Changes
+##### Patch Changes
 
 - 0b55f773a7: Removed some unused dependencies
 
-## `@backstage/plugin-catalog-backend-module-ldap` (0.5.20 → 0.5.21)
+### `@backstage/plugin-catalog-backend-module-ldap` (0.5.20 → 0.5.21)
 
-### 0.5.21
+#### 0.5.21
 
-#### Patch Changes
-
-- 890e3b5ad4: Make sure to include the error message when ingestion fails
-
-## `@backstage/plugin-catalog-backend-module-msgraph` (0.5.12 → 0.5.13)
-
-### 0.5.13
-
-#### Patch Changes
+##### Patch Changes
 
 - 890e3b5ad4: Make sure to include the error message when ingestion fails
 
-## `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.10 → 0.1.11)
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.12 → 0.5.13)
 
-### 0.1.11
+#### 0.5.13
 
-#### Patch Changes
+##### Patch Changes
 
 - 890e3b5ad4: Make sure to include the error message when ingestion fails
 
-## `@backstage/plugin-catalog-graph` (0.2.36 → 0.2.37)
+### `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.10 → 0.1.11)
 
-### 0.2.37
+#### 0.1.11
 
-#### Patch Changes
+##### Patch Changes
+
+- 890e3b5ad4: Make sure to include the error message when ingestion fails
+
+### `@backstage/plugin-catalog-graph` (0.2.36 → 0.2.37)
+
+#### 0.2.37
+
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-catalog-graphql` (0.3.23 → 0.4.0)
+### `@backstage/plugin-catalog-import` (0.10.0 → 0.10.1)
 
-### 0.4.0
+#### 0.10.1
 
-#### Minor Changes
-
-- 9def1e95ab: This package has been deprecated, consider using [@frontside/backstage-plugin-graphql-backend](https://www.npmjs.com/package/@frontside/backstage-plugin-graphql-backend) instead.
-
-## `@backstage/plugin-catalog-import` (0.10.0 → 0.10.1)
-
-### 0.10.1
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 0296f272b4: The `app.title` configuration is now properly required to be a string.
 
-## `@backstage/plugin-catalog-node` (1.4.6 → 1.4.7)
+### `@backstage/plugin-catalog-node` (1.4.6 → 1.4.7)
 
-### 1.4.7
+#### 1.4.7
 
-#### Patch Changes
+##### Patch Changes
 
 - 7a2e2924c7: Added docs to `processingResult`
 
-## `@backstage/plugin-catalog-react` (1.8.4 → 1.8.5)
+### `@backstage/plugin-catalog-react` (1.8.4 → 1.8.5)
 
-### 1.8.5
+#### 1.8.5
 
-#### Patch Changes
+##### Patch Changes
 
 - a402e1dfb9: Fixed an issue causing `EntityPage` to show an error for entities containing special characters
 - 0b55f773a7: Removed some unused dependencies
@@ -783,54 +1166,54 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 0296f272b4: The `spec.type` field in entities will now always be rendered as a string.
 
-## `@backstage/plugin-catalog-unprocessed-entities` (0.1.3 → 0.1.4)
+### `@backstage/plugin-catalog-unprocessed-entities` (0.1.3 → 0.1.4)
 
-### 0.1.4
+#### 0.1.4
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 
-## `@backstage/plugin-cicd-statistics` (0.1.26 → 0.1.27)
+### `@backstage/plugin-cicd-statistics` (0.1.26 → 0.1.27)
 
-### 0.1.27
+#### 0.1.27
 
-#### Patch Changes
+##### Patch Changes
 
 - 0b55f773a7: Removed some unused dependencies
 
-## `@backstage/plugin-circleci` (0.3.24 → 0.3.25)
+### `@backstage/plugin-circleci` (0.3.24 → 0.3.25)
 
-### 0.3.25
+#### 0.3.25
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-cloudbuild` (0.3.24 → 0.3.25)
-
-### 0.3.25
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-code-climate` (0.1.24 → 0.1.25)
+### `@backstage/plugin-cloudbuild` (0.3.24 → 0.3.25)
 
-### 0.1.25
+#### 0.3.25
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-code-coverage` (0.2.17 → 0.2.18)
+### `@backstage/plugin-code-climate` (0.1.24 → 0.1.25)
 
-### 0.2.18
+#### 0.1.25
 
-#### Patch Changes
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-code-coverage` (0.2.17 → 0.2.18)
+
+#### 0.2.18
+
+##### Patch Changes
 
 - 88b0b32547: Fixed the coverage history statistics to compare newest with oldest record
 - 0296f272b4: The warning for missing code coverage will now render the entity as a reference.
@@ -838,532 +1221,415 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - a468544fa9: Updated layout to improve contrasts and consistency with other plugins
 
-## `@backstage/plugin-code-coverage-backend` (0.2.19 → 0.2.20)
+### `@backstage/plugin-code-coverage-backend` (0.2.19 → 0.2.20)
 
-### 0.2.20
+#### 0.2.20
 
-#### Patch Changes
+##### Patch Changes
 
 - 4aa27aa200: Added option to set body size limit
 
-## `@backstage/plugin-codescene` (0.1.17 → 0.1.18)
+### `@backstage/plugin-codescene` (0.1.17 → 0.1.18)
 
-### 0.1.18
+#### 0.1.18
 
-#### Patch Changes
+##### Patch Changes
 
 - 9c9a9100b0: Internal refactor to avoid using the deprecated `.icon.svg` extension.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-config-schema` (0.1.45 → 0.1.46)
+### `@backstage/plugin-config-schema` (0.1.45 → 0.1.46)
 
-### 0.1.46
+#### 0.1.46
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-cost-insights` (0.12.13 → 0.12.14)
+### `@backstage/plugin-cost-insights` (0.12.13 → 0.12.14)
 
-### 0.12.14
+#### 0.12.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - ba4820883c: Updated dependency `@types/pluralize` to `^0.0.31`.
 - 959aa2a09f: The experimental plugin configuration has been removed. The trend line can now instead be hidden by setting `costInsights.hideTrendLine` to `true` in the configuration.
 
-## `@backstage/plugin-devtools` (0.1.4 → 0.1.5)
+### `@backstage/plugin-devtools` (0.1.4 → 0.1.5)
 
-### 0.1.5
+#### 0.1.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 
-## `@backstage/plugin-dynatrace` (7.0.4 → 7.0.5)
+### `@backstage/plugin-dynatrace` (7.0.4 → 7.0.5)
 
-### 7.0.5
+#### 7.0.5
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-entity-feedback` (0.2.7 → 0.2.8)
+### `@backstage/plugin-entity-feedback` (0.2.7 → 0.2.8)
 
-### 0.2.8
+#### 0.2.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 48c8b93e98: Added tooltip to like dislike buttons
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-entity-validation` (0.1.9 → 0.1.10)
+### `@backstage/plugin-entity-validation` (0.1.9 → 0.1.10)
 
-### 0.1.10
+#### 0.1.10
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-explore` (0.4.10 → 0.4.11)
+### `@backstage/plugin-explore` (0.4.10 → 0.4.11)
 
-### 0.4.11
+#### 0.4.11
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 0f10c53a05: Create an experimental `ExploreSearchResultItemExtension` for declarative integration with Backstage; it can be accessed via the `/alpha` import.
 
-## `@backstage/plugin-explore-react` (0.0.31 → 0.0.32)
+### `@backstage/plugin-firehydrant` (0.2.8 → 0.2.9)
 
-### 0.0.32
+#### 0.2.9
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-firehydrant` (0.2.8 → 0.2.9)
-
-### 0.2.9
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-fossa` (0.2.56 → 0.2.57)
+### `@backstage/plugin-fossa` (0.2.56 → 0.2.57)
 
-### 0.2.57
+#### 0.2.57
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-gcalendar` (0.3.18 → 0.3.19)
-
-### 0.3.19
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-gcp-projects` (0.3.41 → 0.3.42)
+### `@backstage/plugin-gcalendar` (0.3.18 → 0.3.19)
 
-### 0.3.42
+#### 0.3.19
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-git-release-manager` (0.3.37 → 0.3.38)
-
-### 0.3.38
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-github-actions` (0.6.5 → 0.6.6)
+### `@backstage/plugin-gcp-projects` (0.3.41 → 0.3.42)
 
-### 0.6.6
+#### 0.3.42
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-github-deployments` (0.1.55 → 0.1.56)
-
-### 0.1.56
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-github-issues` (0.2.13 → 0.2.14)
+### `@backstage/plugin-git-release-manager` (0.3.37 → 0.3.38)
 
-### 0.2.14
+#### 0.3.38
 
-#### Patch Changes
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-github-actions` (0.6.5 → 0.6.6)
+
+#### 0.6.6
+
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-github-deployments` (0.1.55 → 0.1.56)
+
+#### 0.1.56
+
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-github-issues` (0.2.13 → 0.2.14)
+
+#### 0.2.14
+
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 7bd0a8ab3c: Filters out entities that belonged to a different github instance other than the one configured by the plugin
 
-## `@backstage/plugin-github-pull-requests-board` (0.1.18 → 0.1.19)
+### `@backstage/plugin-github-pull-requests-board` (0.1.18 → 0.1.19)
 
-### 0.1.19
+#### 0.1.19
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-gitops-profiles` (0.3.40 → 0.3.41)
-
-### 0.3.41
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-gocd` (0.1.30 → 0.1.31)
+### `@backstage/plugin-gitops-profiles` (0.3.40 → 0.3.41)
 
-### 0.1.31
+#### 0.3.41
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-graphiql` (0.2.54 → 0.2.55)
+### `@backstage/plugin-gocd` (0.1.30 → 0.1.31)
 
-### 0.2.55
+#### 0.1.31
 
-#### Patch Changes
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-graphiql` (0.2.54 → 0.2.55)
+
+#### 0.2.55
+
+##### Patch Changes
 
 - 9c9a9100b0: Internal refactor to avoid using the deprecated `.icon.svg` extension.
 - 06432f900c: Updated `/alpha` exports to use new `attachTo` option.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-graphql-backend` (0.1.43 → 0.2.0)
+### `@backstage/plugin-graphql-voyager` (0.1.7 → 0.1.8)
 
-### 0.2.0
+#### 0.1.8
 
-#### Minor Changes
-
-- 9def1e95ab: This package has been deprecated, consider using [@frontside/backstage-plugin-graphql-backend](https://www.npmjs.com/package/@frontside/backstage-plugin-graphql-backend) instead.
-
-## `@backstage/plugin-graphql-voyager` (0.1.7 → 0.1.8)
-
-### 0.1.8
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-home` (0.5.8 → 0.5.9)
+### `@backstage/plugin-home` (0.5.8 → 0.5.9)
 
-### 0.5.9
+#### 0.5.9
 
-#### Patch Changes
+##### Patch Changes
 
 - f997f771da: Adds Top/Recently Visited components to homepage
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-home-react` (0.1.3 → 0.1.4)
+### `@backstage/plugin-home-react` (0.1.3 → 0.1.4)
 
-### 0.1.4
+#### 0.1.4
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-ilert` (0.2.13 → 0.2.14)
+### `@backstage/plugin-ilert` (0.2.13 → 0.2.14)
 
-### 0.2.14
+#### 0.2.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 0b55f773a7: Removed some unused dependencies
 - 9c9a9100b0: Internal refactor to avoid using the deprecated `.icon.svg` extension.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-jenkins` (0.8.6 → 0.9.0)
+### `@backstage/plugin-kafka` (0.3.24 → 0.3.25)
 
-### 0.9.0
+#### 0.3.25
 
-#### Minor Changes
-
-- 411896faf9: Added JobRunTable Component.
-  Added new Route and extended Api to get buildJobs.
-  Actions column has a new icon button, clicking on which takes us to page where we
-  can see all the job runs.
-
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-- 1a05cf34f6: Extend EntityJenkinsContent to receive columns as prop
-
-## `@backstage/plugin-jenkins-backend` (0.2.8 → 0.3.0)
-
-### 0.3.0
-
-#### Minor Changes
-
-- 411896faf9: Added JobRunTable Component.
-  Added new Route and extended Api to get buildJobs.
-  Actions column has a new icon button, clicking on which takes us to page where we
-  can see all the job runs.
-
-#### Patch Changes
-
-- 930ac236d8: Added support for the [new backend system](https://backstage.io/docs/backend-system/)
-
-## `@backstage/plugin-kafka` (0.3.24 → 0.3.25)
-
-### 0.3.25
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-kubernetes` (0.10.3 → 0.11.0)
+### `@backstage/plugin-lighthouse` (0.4.9 → 0.4.10)
 
-### 0.11.0
+#### 0.4.10
 
-#### Minor Changes
-
-- 2d8151061c: Refactor Kubernetes plugins in line with ADR 11, no breaking changes yet
-
-#### Patch Changes
-
-- 9101c0d1b6: Updated dependency `@kubernetes/client-node` to `0.19.0`.
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-- b0aca1a798: Updated dependency `xterm-addon-attach` to `^0.9.0`.
-  Updated dependency `xterm-addon-fit` to `^0.8.0`.
-- 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
-
-## `@backstage/plugin-kubernetes-backend` (0.12.2 → 0.13.0)
-
-### 0.13.0
-
-#### Minor Changes
-
-- ae943c3bb1: **BREAKING** Allow passing undefined `labelSelector` to `KubernetesFetcher`
-
-  `KubernetesFetch` no longer auto-adds `labelSelector` when empty string was passed.
-  This is only applicable if you have custom ObjectProvider implementation, as build-in `KubernetesFanOutHandler` already does this
-
-#### Patch Changes
-
-- cbb0e3c3f4: A new plugin has been introduced to house the extension points for Kubernetes backend plugin; at the moment only the `KubernetesObjectsProviderExtensionPoint` is present. The `kubernetes-backend` plugin was modified to use this new extension point.
-- 9101c0d1b6: Updated dependency `@kubernetes/client-node` to `0.19.0`.
-- 95518765ee: Add Kubernetes cluster plugin. Viewing Kubernetes clusters as an Admin from Backstage
-- 5dac12e435: The kubernetes APIs invokes Authentication Strategies when Backstage-Kubernetes-Authorization-X-X headers are provided, this enable the possibility to invoke strategies that executes additional steps to get a kubernetes token like on pinniped or custom strategies
-
-## `@backstage/plugin-kubernetes-common` (0.6.6 → 0.7.0)
-
-### 0.7.0
-
-#### Minor Changes
-
-- 2d8151061c: Refactor Kubernetes plugins in line with ADR 11, no breaking changes yet
-
-#### Patch Changes
-
-- 9101c0d1b6: Updated dependency `@kubernetes/client-node` to `0.19.0`.
-- 5dac12e435: The kubernetes APIs invokes Authentication Strategies when Backstage-Kubernetes-Authorization-X-X headers are provided, this enable the possibility to invoke strategies that executes additional steps to get a kubernetes token like on pinniped or custom strategies
-
-## `@backstage/plugin-lighthouse` (0.4.9 → 0.4.10)
-
-### 0.4.10
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-linguist` (0.1.9 → 0.1.10)
+### `@backstage/plugin-linguist` (0.1.9 → 0.1.10)
 
-### 0.1.10
+#### 0.1.10
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-microsoft-calendar` (0.1.7 → 0.1.8)
-
-### 0.1.8
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-newrelic` (0.3.40 → 0.3.41)
+### `@backstage/plugin-microsoft-calendar` (0.1.7 → 0.1.8)
 
-### 0.3.41
+#### 0.1.8
 
-#### Patch Changes
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-newrelic` (0.3.40 → 0.3.41)
+
+#### 0.3.41
+
+##### Patch Changes
 
 - ce50a15506: Fixed sorting and searching in the NewRelic table.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-newrelic-dashboard` (0.2.17 → 0.3.0)
+### `@backstage/plugin-nomad` (0.1.5 → 0.1.6)
 
-### 0.3.0
+#### 0.1.6
 
-#### Minor Changes
-
-- d7eba6cab4: Changes in `newrelic-dashboard` plugin:
-
-  - Make DashboardSnapshotList component public
-  - Settle discrepancies in the exported API
-  - Deprecate DashboardSnapshotComponent
-
-- e605ea4906: Add storybook for newrelic-dashboard plugin.
-
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- 61d55942ae: Fix the styles for NewRelicDashboard, add more responsiveness
-- 5194a51a1c: Fixed React Warning: "Each child in a list should have a unique 'key' prop" during the rendering of `EntityNewRelicDashboardCard`
-
-## `@backstage/plugin-nomad` (0.1.5 → 0.1.6)
-
-### 0.1.6
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 
-## `@backstage/plugin-nomad-backend` (0.1.7 → 0.1.8)
+### `@backstage/plugin-nomad-backend` (0.1.7 → 0.1.8)
 
-### 0.1.8
+#### 0.1.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 6822918c50: Added support for the [new backend system](https://backstage.io/docs/backend-system/)
 
-## `@backstage/plugin-octopus-deploy` (0.2.6 → 0.2.7)
+### `@backstage/plugin-octopus-deploy` (0.2.6 → 0.2.7)
 
-### 0.2.7
+#### 0.2.7
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-opencost` (0.2.0 → 0.2.1)
+### `@backstage/plugin-opencost` (0.2.0 → 0.2.1)
 
-### 0.2.1
+#### 0.2.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - 777b9a16a4: Fix for broken image reference.
 
-## `@backstage/plugin-org` (0.6.14 → 0.6.15)
+### `@backstage/plugin-org` (0.6.14 → 0.6.15)
 
-### 0.6.15
+#### 0.6.15
 
-#### Patch Changes
+##### Patch Changes
 
 - dc5b6b971b: Fixed the display of OwnershipCard with aggregated relations by loading relations when getting children of entity.
   This allows the already existing recursive method to work properly when children of entity have children themselves.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-org-react` (0.1.13 → 0.1.14)
+### `@backstage/plugin-org-react` (0.1.13 → 0.1.14)
 
-### 0.1.14
+#### 0.1.14
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-pagerduty` (0.6.5 → 0.6.6)
+### `@backstage/plugin-pagerduty` (0.6.5 → 0.6.6)
 
-### 0.6.6
+#### 0.6.6
 
-#### Patch Changes
+##### Patch Changes
 
 - b9ce306814: Minor fix to avoid usage of deprecated prop
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-periskop` (0.1.22 → 0.1.23)
+### `@backstage/plugin-periskop` (0.1.22 → 0.1.23)
 
-### 0.1.23
+#### 0.1.23
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-permission-react` (0.4.15 → 0.4.16)
+### `@backstage/plugin-permission-react` (0.4.15 → 0.4.16)
 
-### 0.4.16
+#### 0.4.16
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 
-## `@backstage/plugin-playlist` (0.1.16 → 0.1.17)
+### `@backstage/plugin-playlist` (0.1.16 → 0.1.17)
 
-### 0.1.17
+#### 0.1.17
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 65498193e8: Updated Playlist read me with additional screenshots
 
-## `@backstage/plugin-playlist-backend` (0.3.9 → 0.3.10)
+### `@backstage/plugin-playlist-backend` (0.3.9 → 0.3.10)
 
-### 0.3.10
+#### 0.3.10
 
-#### Patch Changes
+##### Patch Changes
 
 - 9e46f5ff49: Added support to the playlist plugin for the new backend
 
-## `@backstage/plugin-puppetdb` (0.1.7 → 0.1.8)
+### `@backstage/plugin-puppetdb` (0.1.7 → 0.1.8)
 
-### 0.1.8
+#### 0.1.8
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 
-## `@backstage/plugin-rollbar` (0.4.24 → 0.4.25)
+### `@backstage/plugin-rollbar` (0.4.24 → 0.4.25)
 
-### 0.4.25
+#### 0.4.25
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-rollbar-backend` (0.1.50 → 0.1.51)
+### `@backstage/plugin-rollbar-backend` (0.1.50 → 0.1.51)
 
-### 0.1.51
+#### 0.1.51
 
-#### Patch Changes
+##### Patch Changes
 
 - 407f4284be: ensure rollbar token is hidden
 
-## `@backstage/plugin-scaffolder` (1.15.0 → 1.15.1)
+### `@backstage/plugin-scaffolder` (1.15.0 → 1.15.1)
 
-### 1.15.1
+#### 1.15.1
 
-#### Patch Changes
+##### Patch Changes
 
 - b337d78c3b: fixed issue related template editor fails with multiple templates per file.
 - ff2ab02690: Make entity picker more reliable with only one available entity
@@ -1372,76 +1638,55 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 4c70fe497d: `RepoUrlPickerRepoName` now correctly handles value changes in allowed repos.
 
-## `@backstage/plugin-scaffolder-backend` (1.17.3 → 1.18.0)
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.22 → 0.4.23)
 
-### 1.18.0
+#### 0.4.23
 
-#### Minor Changes
-
-- dea0aafda7: Updated `publish:gitlab` action properties to support additional Gitlab project settings:
-
-  - general project settings provided by gitlab project create API (new `settings` property)
-  - branch level settings to create additional branches and make them protected (new `branches` property)
-  - project level environment variables settings (new `projectVariables` property)
-
-  Marked existed properties `repoVisibility` and `topics` as deprecated, as they are covered by `settings` property.
-
-- f41099bb31: Display meaningful error to the output if Gitlab namespace not found inside `publish:gitlab`.
-
-#### Patch Changes
-
-- 7dd82cc07e: Add examples for `github:issues:label` scaffolder action & improve related tests
-- 733ddf7130: Add examples for `publish:Azure` scaffolder action.
-
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.4.22 → 0.4.23)
-
-### 0.4.23
-
-#### Patch Changes
+##### Patch Changes
 
 - de42eebaaf: Bumped dev dependencies `@types/node` and `mock-fs`.
 
-## `@backstage/plugin-scaffolder-react` (1.5.5 → 1.5.6)
+### `@backstage/plugin-scaffolder-react` (1.5.5 → 1.5.6)
 
-### 1.5.6
+#### 1.5.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-search` (1.4.0 → 1.4.1)
+### `@backstage/plugin-search` (1.4.0 → 1.4.1)
 
-### 1.4.1
+#### 1.4.1
 
-#### Patch Changes
+##### Patch Changes
 
 - e5a2956dd2: Create an experimental search plugin that is compatible with the declarative integration system, it is exported from `/alpha` subpath.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 0296f272b4: Minor internal code cleanup.
 
-## `@backstage/plugin-search-backend` (1.4.5 → 1.4.6)
+### `@backstage/plugin-search-backend` (1.4.5 → 1.4.6)
 
-### 1.4.6
+#### 1.4.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 16be6f9473: Set the default length limit to search query to 100. To override it, define `search.maxTermLength` in the config file.
 
-## `@backstage/plugin-search-backend-module-elasticsearch` (1.3.8 → 1.3.9)
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.3.8 → 1.3.9)
 
-### 1.3.9
+#### 1.3.9
 
-#### Patch Changes
+##### Patch Changes
 
 - 3963d0b885: Ensure that all relevant config fields are properly marked as secret
 
-## `@backstage/plugin-search-react` (1.7.0 → 1.7.1)
+### `@backstage/plugin-search-react` (1.7.0 → 1.7.1)
 
-### 1.7.1
+#### 1.7.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 06432f900c: Updated `/alpha` exports to use new `attachTo` option.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
@@ -1449,252 +1694,193 @@ Newly added: `@backstage/e2e-test-utils`, `@backstage/plugin-auth-backend-module
 - 0296f272b4: The filter options passed to `SearchResultGroupLayout` are now always explicitly rendered as strings by default.
 - 703a4ffc5b: Create `createSearchResultListItem` alpha version that only supports declarative integration.
 
-## `@backstage/plugin-sentry` (0.5.9 → 0.5.10)
+### `@backstage/plugin-sentry` (0.5.9 → 0.5.10)
 
-### 0.5.10
+#### 0.5.10
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-shortcuts` (0.3.14 → 0.3.15)
-
-### 0.3.15
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-sonarqube` (0.7.5 → 0.7.6)
+### `@backstage/plugin-shortcuts` (0.3.14 → 0.3.15)
 
-### 0.7.6
+#### 0.3.15
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-sonarqube-backend` (0.2.7 → 0.2.8)
+### `@backstage/plugin-sonarqube` (0.7.5 → 0.7.6)
 
-### 0.2.8
+#### 0.7.6
 
-#### Patch Changes
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-sonarqube-backend` (0.2.7 → 0.2.8)
+
+#### 0.2.8
+
+##### Patch Changes
 
 - a5d592d0ad: Added support for the [new backend system](https://backstage.io/docs/backend-system/)
 
-## `@backstage/plugin-splunk-on-call` (0.4.13 → 0.4.14)
+### `@backstage/plugin-splunk-on-call` (0.4.13 → 0.4.14)
 
-### 0.4.14
+#### 0.4.14
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-stack-overflow` (0.1.20 → 0.1.21)
-
-### 0.1.21
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-stackstorm` (0.1.6 → 0.1.7)
+### `@backstage/plugin-stack-overflow` (0.1.20 → 0.1.21)
 
-### 0.1.7
+#### 0.1.21
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-tech-insights` (0.3.16 → 0.3.17)
+### `@backstage/plugin-stackstorm` (0.1.6 → 0.1.7)
 
-### 0.3.17
+#### 0.1.7
 
-#### Patch Changes
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/plugin-tech-insights` (0.3.16 → 0.3.17)
+
+#### 0.3.17
+
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 - 21f409d776: Export `ScorecardInfo` and `ScorecardsList` components to be able to use manually queried check results directly.
 
-## `@backstage/plugin-tech-insights-backend` (0.5.19 → 0.5.20)
+### `@backstage/plugin-tech-insights-backend` (0.5.19 → 0.5.20)
 
-### 0.5.20
+#### 0.5.20
 
-#### Patch Changes
+##### Patch Changes
 
 - cc7dddfa7f: Increase the maximum allowed length of an entity filter for tech insights fact schemas.
 
-## `@backstage/plugin-tech-radar` (0.6.8 → 0.6.9)
+### `@backstage/plugin-tech-radar` (0.6.8 → 0.6.9)
 
-### 0.6.9
+#### 0.6.9
 
-#### Patch Changes
+##### Patch Changes
 
 - 0b55f773a7: Removed some unused dependencies
 - c09d2fa1d6: Added experimental support for the declarative integration.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-techdocs` (1.7.0 → 1.8.0)
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.21 → 1.0.22)
 
-### 1.8.0
+#### 1.0.22
 
-#### Minor Changes
-
-- 27740caa2d: Added experimental support for declarative integration via the `/alpha` subpath.
-
-#### Patch Changes
-
-- 4918f65ab2: Create an experimental `TechDocsSearchResultItemExtension` for declarative integration with Backstage; it can be accessed via the `/alpha` import.
-- 3605370af6: Improved `DocsTable` to display pagination controls dynamically, appearing only when needed.
-- 0296f272b4: The `spec.lifecycle' field in entities will now always be rendered as a string.
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-- 9468a67b92: Added support for React 18. The new `createRoot` API from `react-dom/client` will now be used if present.
-- df449a7a31: Add kind column by default to TechDocsTable
-
-## `@backstage/plugin-techdocs-addons-test-utils` (1.0.21 → 1.0.22)
-
-### 1.0.22
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-techdocs-backend` (1.7.2 → 1.8.0)
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.0 → 1.1.1)
 
-### 1.8.0
+#### 1.1.1
 
-#### Minor Changes
-
-- 344cfbcfbc: Allow prepared directory clean up for custom preparers
-
-  When using custom preparer for TechDocs, the `preparedDir` might
-  end up taking disk space. This requires all custom preparers to
-  implement a new method `shouldCleanPreparedDirectory` which indicates
-  whether the prepared directory should be cleaned after generation.
-
-## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.0 → 1.1.1)
-
-### 1.1.1
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-techdocs-node` (1.8.2 → 1.9.0)
+### `@backstage/plugin-techdocs-react` (1.1.11 → 1.1.12)
 
-### 1.9.0
+#### 1.1.12
 
-#### Minor Changes
-
-- 344cfbcfbc: Allow prepared directory clean up for custom preparers
-
-  When using custom preparer for TechDocs, the `preparedDir` might
-  end up taking disk space. This requires all custom preparers to
-  implement a new method `shouldCleanPreparedDirectory` which indicates
-  whether the prepared directory should be cleaned after generation.
-
-- d06b30b050: Add possibility to use a mkdocs config file with a different name than `mkdocs.<yaml|yml> with the serve command using the `--mkdocs-config-file-name` argument
-
-## `@backstage/plugin-techdocs-react` (1.1.11 → 1.1.12)
-
-### 1.1.12
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 
-## `@backstage/plugin-todo` (0.2.27 → 0.2.28)
+### `@backstage/plugin-todo` (0.2.27 → 0.2.28)
 
-### 0.2.28
+#### 0.2.28
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-user-settings` (0.7.10 → 0.7.11)
+### `@backstage/plugin-user-settings` (0.7.10 → 0.7.11)
 
-### 0.7.11
+#### 0.7.11
 
-#### Patch Changes
+##### Patch Changes
 
 - 18c8dee6f5: Added experimental support for declarative integration via the `/alpha` subpath.
 - d1b637d005: Fixed a bug where the theme icons would not be colored according to their active state.
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/plugin-vault` (0.1.19 → 0.1.20)
+### `@backstage/plugin-vault` (0.1.19 → 0.1.20)
 
-### 0.1.20
+#### 0.1.20
 
-#### Patch Changes
-
-- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
-
-## `@backstage/plugin-xcmetrics` (0.2.43 → 0.2.44)
-
-### 0.2.44
-
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 - f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
 
-## `@backstage/repo-tools` (0.3.4 → 0.3.5)
+### `@backstage/plugin-xcmetrics` (0.2.43 → 0.2.44)
 
-### 0.3.5
+#### 0.2.44
 
-#### Patch Changes
+##### Patch Changes
+
+- 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- f95af4e540: Updated dependency `@testing-library/dom` to `^9.0.0`.
+
+### `@backstage/repo-tools` (0.3.4 → 0.3.5)
+
+#### 0.3.5
+
+##### Patch Changes
 
 - de42eebaaf: Bumped dev dependencies `@types/node` and `mock-fs`.
 
-## `@backstage/test-utils` (1.4.3 → 1.4.4)
+### `@backstage/test-utils` (1.4.3 → 1.4.4)
 
-### 1.4.4
+#### 1.4.4
 
-#### Patch Changes
+##### Patch Changes
 
 - 322bbcae24: Removed the alpha `MockPluginProvider` export since the plugin configuration API has been removed.
 - 1a0616fa10: Add missing resource and template app icons
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
 
-## `@backstage/theme` (0.4.2 → 0.4.3)
+### `@backstage/theme` (0.4.2 → 0.4.3)
 
-### 0.4.3
+#### 0.4.3
 
-#### Patch Changes
+##### Patch Changes
 
 - 5ad5344756: Added support for string `fontSize` values (e.g. `"2.5rem"`) in themes in addition to numbers. Also added an optional `fontFamily` prop for header typography variants to allow further customization.
 
-## `@backstage/version-bridge` (1.0.5 → 1.0.6)
+### `@backstage/version-bridge` (1.0.5 → 1.0.6)
 
-### 1.0.6
+#### 1.0.6
 
-#### Patch Changes
+##### Patch Changes
 
 - 9a1fce352e: Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
-
-## `@techdocs/cli` (1.5.2 → 1.6.0)
-
-### 1.6.0
-
-#### Minor Changes
-
-- d06b30b050: Add possibility to use a mkdocs config file with a different name than `mkdocs.<yaml|yml> with the serve command using the `--mkdocs-config-file-name` argument
-
-#### Patch Changes
-
-- de42eebaaf: Bumped dev dependencies `@types/node` and `mock-fs`.
-- 2b6e572051: Restructured tests.
 
 _Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/backend-plugin-api`, `@backstage/catalog-client`, `@backstage/cli-node`, `@backstage/config`, `@backstage/integration-aws-node`, `@backstage/plugin-adr-backend`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-common`, `@backstage/plugin-entity-feedback-backend`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-lighthouse-common`, `@backstage/plugin-linguist-backend`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-common`, `@backstage/plugin-permission-node`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-todo-backend`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault-backend`._

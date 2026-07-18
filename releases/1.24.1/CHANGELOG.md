@@ -2,35 +2,53 @@
 
 Changes between 1.24.0 and 1.24.1 — 35 changed and 0 added packages.
 
-## `@backstage/plugin-catalog-backend` (1.18.0 → 1.19.0)
+## Summary
 
-### 1.19.0
+- [Minor version bumps](#minor-version-bumps): 2 packages
+- [Patch version bumps](#patch-version-bumps): 2 packages
 
-#### Minor Changes
+## Table of contents
+
+- [Minor version bumps](#minor-version-bumps)
+  - [`@backstage/plugin-catalog-backend` (1.18.0 → 1.19.0)](#backstageplugin-catalog-backend-1180--1190)
+  - [`@backstage/plugin-catalog-node` (1.8.0 → 1.9.0)](#backstageplugin-catalog-node-180--190)
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/plugin-catalog-backend-module-unprocessed` (0.4.0 → 0.4.1)](#backstageplugin-catalog-backend-module-unprocessed-040--041)
+  - [`@backstage/plugin-permission-backend` (0.5.37 → 0.5.38)](#backstageplugin-permission-backend-0537--0538)
+
+## Minor version bumps
+
+### `@backstage/plugin-catalog-backend` (1.18.0 → 1.19.0)
+
+#### 1.19.0
+
+##### Minor Changes
 
 - 9c7fb30: Added the ability to inject custom permissions from modules, on `CatalogBuilder` and `CatalogPermissionExtensionPoint`
 
-## `@backstage/plugin-catalog-backend-module-unprocessed` (0.4.0 → 0.4.1)
+### `@backstage/plugin-catalog-node` (1.8.0 → 1.9.0)
 
-### 0.4.1
+#### 1.9.0
 
-#### Patch Changes
+##### Minor Changes
+
+- 9c7fb30: Added the ability to inject custom permissions from modules, on `CatalogBuilder` and `CatalogPermissionExtensionPoint`
+
+## Patch version bumps
+
+### `@backstage/plugin-catalog-backend-module-unprocessed` (0.4.0 → 0.4.1)
+
+#### 0.4.1
+
+##### Patch Changes
 
 - 9c7fb30: Internal update that injects custom permissions into the catalog using its extension point
 
-## `@backstage/plugin-catalog-node` (1.8.0 → 1.9.0)
+### `@backstage/plugin-permission-backend` (0.5.37 → 0.5.38)
 
-### 1.9.0
+#### 0.5.38
 
-#### Minor Changes
-
-- 9c7fb30: Added the ability to inject custom permissions from modules, on `CatalogBuilder` and `CatalogPermissionExtensionPoint`
-
-## `@backstage/plugin-permission-backend` (0.5.37 → 0.5.38)
-
-### 0.5.38
-
-#### Patch Changes
+##### Patch Changes
 
 - 9c7fb30: Properly forward causes of errors from upstream backends in the `PermissionIntegrationClient`
 

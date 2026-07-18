@@ -2,334 +2,118 @@
 
 Changes between 1.51.2 and 1.52.0 — 185 changed and 1 added packages.
 
-Newly added: `@backstage/connections`.
+## Summary
 
-## `@backstage/connections` (new, 0.1.0)
+- [Newly added packages](#newly-added-packages): 1 package
+- [Breaking changes](#breaking-changes): 3 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 1 package
+- [Other minor version bumps](#other-minor-version-bumps): 3 packages
+- [Patch version bumps](#patch-version-bumps): 55 packages
 
-### 0.1.0
+## Table of contents
 
-#### Minor Changes
+- [Newly added packages](#newly-added-packages)
+  - [`@backstage/connections` (new, 0.1.0)](#backstageconnections-new-010)
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/plugin-app` (0.4.6 → 0.5.0)](#backstageplugin-app-046--050)
+  - [`@backstage/plugin-catalog-backend` (3.7.1 → 3.8.0)](#backstageplugin-catalog-backend-371--380)
+  - [`@backstage/ui` (0.15.0 → 0.16.0)](#backstageui-0150--0160)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.2.20 → 0.3.0)](#backstageplugin-auth-backend-module-oauth2-proxy-provider-0220--030)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/catalog-client` (1.15.2 → 1.16.0)](#backstagecatalog-client-1152--1160)
+  - [`@backstage/plugin-catalog-react` (3.0.0 → 3.1.0)](#backstageplugin-catalog-react-300--310)
+  - [`@backstage/plugin-scaffolder` (1.37.0 → 1.38.0)](#backstageplugin-scaffolder-1370--1380)
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/app-defaults` (1.7.8 → 1.7.9)](#backstageapp-defaults-178--179)
+  - [`@backstage/backend-app-api` (1.7.0 → 1.7.1)](#backstagebackend-app-api-170--171)
+  - [`@backstage/backend-defaults` (0.17.2 → 0.17.3)](#backstagebackend-defaults-0172--0173)
+  - [`@backstage/backend-dynamic-feature-service` (0.8.2 → 0.8.3)](#backstagebackend-dynamic-feature-service-082--083)
+  - [`@backstage/backend-plugin-api` (1.9.1 → 1.9.2)](#backstagebackend-plugin-api-191--192)
+  - [`@backstage/backend-test-utils` (1.11.3 → 1.11.4)](#backstagebackend-test-utils-1113--1114)
+  - [`@backstage/cli` (0.36.2 → 0.36.3)](#backstagecli-0362--0363)
+  - [`@backstage/cli-module-actions` (0.1.1 → 0.1.2)](#backstagecli-module-actions-011--012)
+  - [`@backstage/cli-module-auth` (0.1.2 → 0.1.3)](#backstagecli-module-auth-012--013)
+  - [`@backstage/cli-module-build` (0.1.3 → 0.1.4)](#backstagecli-module-build-013--014)
+  - [`@backstage/cli-module-config` (0.1.2 → 0.1.3)](#backstagecli-module-config-012--013)
+  - [`@backstage/cli-module-github` (0.1.2 → 0.1.3)](#backstagecli-module-github-012--013)
+  - [`@backstage/cli-module-info` (0.1.2 → 0.1.3)](#backstagecli-module-info-012--013)
+  - [`@backstage/cli-module-lint` (0.1.2 → 0.1.3)](#backstagecli-module-lint-012--013)
+  - [`@backstage/cli-module-maintenance` (0.1.2 → 0.1.3)](#backstagecli-module-maintenance-012--013)
+  - [`@backstage/cli-module-migrate` (0.1.2 → 0.1.3)](#backstagecli-module-migrate-012--013)
+  - [`@backstage/cli-module-new` (0.1.3 → 0.1.4)](#backstagecli-module-new-013--014)
+  - [`@backstage/cli-module-test-jest` (0.1.2 → 0.1.3)](#backstagecli-module-test-jest-012--013)
+  - [`@backstage/cli-module-translations` (0.1.2 → 0.1.3)](#backstagecli-module-translations-012--013)
+  - [`@backstage/cli-node` (0.3.2 → 0.3.3)](#backstagecli-node-032--033)
+  - [`@backstage/config-loader` (1.10.11 → 1.10.12)](#backstageconfig-loader-11011--11012)
+  - [`@backstage/core-components` (0.18.10 → 0.18.11)](#backstagecore-components-01810--01811)
+  - [`@backstage/create-app` (0.8.3 → 0.8.4)](#backstagecreate-app-083--084)
+  - [`@backstage/eslint-plugin` (0.3.0 → 0.3.1)](#backstageeslint-plugin-030--031)
+  - [`@backstage/frontend-plugin-api` (0.17.1 → 0.17.2)](#backstagefrontend-plugin-api-0171--0172)
+  - [`@backstage/frontend-test-utils` (0.6.0 → 0.6.1)](#backstagefrontend-test-utils-060--061)
+  - [`@backstage/integration` (2.0.2 → 2.0.3)](#backstageintegration-202--203)
+  - [`@backstage/plugin-app-backend` (0.5.14 → 0.5.15)](#backstageplugin-app-backend-0514--0515)
+  - [`@backstage/plugin-catalog` (2.0.5 → 2.0.6)](#backstageplugin-catalog-205--206)
+  - [`@backstage/plugin-catalog-backend-module-azure` (0.3.17 → 0.3.18)](#backstageplugin-catalog-backend-module-azure-0317--0318)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-server` (0.5.11 → 0.5.12)](#backstageplugin-catalog-backend-module-bitbucket-server-0511--0512)
+  - [`@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.12 → 0.7.13)](#backstageplugin-catalog-backend-module-incremental-ingestion-0712--0713)
+  - [`@backstage/plugin-catalog-backend-module-msgraph` (0.10.2 → 0.10.3)](#backstageplugin-catalog-backend-module-msgraph-0102--0103)
+  - [`@backstage/plugin-catalog-backend-module-openapi` (0.2.22 → 0.2.23)](#backstageplugin-catalog-backend-module-openapi-0222--0223)
+  - [`@backstage/plugin-catalog-graph` (0.6.4 → 0.6.5)](#backstageplugin-catalog-graph-064--065)
+  - [`@backstage/plugin-catalog-unprocessed-entities` (0.2.31 → 0.2.32)](#backstageplugin-catalog-unprocessed-entities-0231--0232)
+  - [`@backstage/plugin-events-backend` (0.6.2 → 0.6.3)](#backstageplugin-events-backend-062--063)
+  - [`@backstage/plugin-home` (0.9.6 → 0.9.7)](#backstageplugin-home-096--097)
+  - [`@backstage/plugin-kubernetes` (0.12.19 → 0.12.20)](#backstageplugin-kubernetes-01219--01220)
+  - [`@backstage/plugin-kubernetes-backend` (0.21.4 → 0.21.5)](#backstageplugin-kubernetes-backend-0214--0215)
+  - [`@backstage/plugin-mcp-actions-backend` (0.1.13 → 0.1.14)](#backstageplugin-mcp-actions-backend-0113--0114)
+  - [`@backstage/plugin-notifications-backend` (0.6.5 → 0.6.6)](#backstageplugin-notifications-backend-065--066)
+  - [`@backstage/plugin-org` (0.7.4 → 0.7.5)](#backstageplugin-org-074--075)
+  - [`@backstage/plugin-scaffolder-backend` (4.0.0 → 4.0.1)](#backstageplugin-scaffolder-backend-400--401)
+  - [`@backstage/plugin-scaffolder-backend-module-github` (0.9.9 → 0.9.10)](#backstageplugin-scaffolder-backend-module-github-099--0910)
+  - [`@backstage/plugin-scaffolder-common` (2.2.0 → 2.2.1)](#backstageplugin-scaffolder-common-220--221)
+  - [`@backstage/plugin-scaffolder-node` (0.13.3 → 0.13.4)](#backstageplugin-scaffolder-node-0133--0134)
+  - [`@backstage/plugin-scaffolder-react` (2.0.0 → 2.0.1)](#backstageplugin-scaffolder-react-200--201)
+  - [`@backstage/plugin-search` (1.7.4 → 1.7.5)](#backstageplugin-search-174--175)
+  - [`@backstage/plugin-search-backend` (2.1.2 → 2.1.3)](#backstageplugin-search-backend-212--213)
+  - [`@backstage/plugin-search-backend-module-stack-overflow-collator` (0.3.20 → 0.3.21)](#backstageplugin-search-backend-module-stack-overflow-collator-0320--0321)
+  - [`@backstage/plugin-search-react` (1.11.4 → 1.11.5)](#backstageplugin-search-react-1114--1115)
+  - [`@backstage/plugin-signals-backend` (0.3.15 → 0.3.16)](#backstageplugin-signals-backend-0315--0316)
+  - [`@backstage/plugin-techdocs` (1.17.6 → 1.17.7)](#backstageplugin-techdocs-1176--1177)
+  - [`@backstage/plugin-techdocs-module-addons-contrib` (1.1.36 → 1.1.37)](#backstageplugin-techdocs-module-addons-contrib-1136--1137)
+
+## Newly added packages
+
+### `@backstage/connections` (new, 0.1.0)
+
+#### 0.1.0
+
+##### Minor Changes
 
 - b1e3037: Added the connections package as experimental. A connection is a piece of configuration storing an external host and the credentials required to authenticate with that host. A single connections can be consumed by many plugins, reducing the amount of repeated configuration needed. Connections can have many auth methods which can be restricted to plugins/modules.
 
-#### Patch Changes
+##### Patch Changes
 
 - 95688f6: Added a `title` field to connections, providing a human-readable display name for each connection. When not explicitly configured, the title defaults to the provider name (e.g. "GitHub") or includes the host when multiple connections share a type (e.g. "GitHub (ghe.acme.com)").
 
-## `@backstage/app-defaults` (1.7.8 → 1.7.9)
+## Breaking changes
 
-### 1.7.9
+### `@backstage/plugin-app` (0.4.6 → 0.5.0)
 
-#### Patch Changes
+#### 0.5.0
 
-- 74ed625: Provide toastApi for old frontend system
-
-  Fixes 'No implementation available for apiRef{core.toast}' on old frontend system.
-
-## `@backstage/backend-app-api` (1.7.0 → 1.7.1)
-
-### 1.7.1
-
-#### Patch Changes
-
-- 2e895ea: Internal refactor.
-
-## `@backstage/backend-defaults` (0.17.2 → 0.17.3)
-
-### 0.17.3
-
-#### Patch Changes
-
-- 4f4bcf5: Upgraded `infinispan` from `^0.12.0` to `^0.13.0` to address known vulnerabilities.
-- a07e6a3: Updated `AzureBlobStorageUrlReader` to reference the correctly-named `AzureBlobStorageIntegration` type from `@backstage/integration`. The previously-used `AzureBlobStorageIntergation` is now an alias for the new type and remains a valid argument to the constructor.
-- b75158b: Adapted Azure-related tests for the Azure SDK upgrade to ESM-style exports. The `AzureBlobStorageUrlReader` now accepts an optional `createContainerClient` dependency for testability without needing to mock the `@azure/storage-blob` module.
-- 89a95ca: Fixed the task worker retry loop to respect the abort signal. Previously, when a task worker encountered an unexpected error, the retry loop would continue indefinitely even after the worker was signaled to stop. The retry loop now checks the abort signal before retrying and passes it to the retry delay, allowing the worker to shut down gracefully.
-- def82d4: Fixed the built-in rate limiter throwing a validation error and refusing to start when `backend.rateLimit` is enabled. Requests are now keyed using the address normalization helper from `express-rate-limit`, which is required by newer versions of that library and ensures IPv6 clients are grouped by their address block rather than by individual address.
-- 0211390: Added a new `v2` invoke endpoint (`/.backstage/actions/v2/actions/:id/invoke`) that accepts a wrapped body format `{ input, secrets }` with secrets validation. The existing `v1` invoke endpoint remains unchanged for backward compatibility. Updated `DefaultActionsService` to use the `v2` endpoint. Updated `DefaultActionsRegistryService` to expose secrets schema in the actions list response and validate secrets on invocation.
-- 34f21c3: Fix gitlabUrlReader issue with retrieving the repository archive tree
-
-## `@backstage/backend-dynamic-feature-service` (0.8.2 → 0.8.3)
-
-### 0.8.3
-
-#### Patch Changes
-
-- 7005478: Fixed dynamic backend plugin loading to fall back to the main package export when an alpha `package.json` is present but does not provide a plugin entrypoint. Previously, plugins whose alpha export only exposed supplementary APIs (such as permissions) could fail to load even though the main export was valid. The loader now tries the alpha entry first and uses the main export when the alpha module does not export a `BackendFeature`, `BackendFeatureFactory`, or `dynamicPluginInstaller`.
-
-## `@backstage/backend-plugin-api` (1.9.1 → 1.9.2)
-
-### 1.9.2
-
-#### Patch Changes
-
-- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
-- 0211390: Added optional `secrets` schema support to `ActionsRegistryActionOptions` and `ActionsRegistryActionContext`. Actions can now declare a Zod secrets schema separate from the input schema, enabling surfaces to collect sensitive credentials independently from tool arguments. Added optional `secrets` field to `ActionsServiceAction` metadata and `ActionsService.invoke()` parameters.
-
-## `@backstage/backend-test-utils` (1.11.3 → 1.11.4)
-
-### 1.11.4
-
-#### Patch Changes
-
-- 2e895ea: Internal refactor.
-- 2d181c0: Increased MySQL connection and pool timeouts to reduce flaky `connect ETIMEDOUT` failures in CI. The test MySQL container now also uses `mysql_native_password` for cheaper connection handshakes and disables binary logging.
-- 06a2035: Updated `MockActionsRegistry` to support the new secrets schema. The mock now validates secrets against the declared schema, rejects missing secrets for actions that require them, and forwards secrets to the action handler.
-
-## `@backstage/catalog-client` (1.15.2 → 1.16.0)
-
-### 1.16.0
-
-#### Minor Changes
-
-- 8f20cc2: `CatalogApi.queryEntities` now accepts a `totalItems` option (`'include'` or `'exclude'`, default `'include'`) on initial requests. Pass `'exclude'` to skip the `totalItems` count when the caller doesn't need it.
-
-#### Patch Changes
-
-- 378784e: Moved dependencies that are re-exported in the public API from `devDependencies` to `dependencies`. These were incorrectly demoted in #33936 because the source code only uses type imports, but the types still appear in the published API surface and need to be resolvable by consumers at build time.
-
-## `@backstage/cli` (0.36.2 → 0.36.3)
-
-### 0.36.3
-
-#### Patch Changes
-
-- b521571: Improved validation of conflicting CLI module commands, including conflicts between parent and nested command paths.
-
-## `@backstage/cli-module-actions` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-module-auth` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-module-build` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-- a1971ea: Suppress false-positive `@protobufjs/inquire` "Critical dependency" warning in the bundler. Since `protobufjs` 7.5.9, the dynamic require path in inquire is no longer exercised, but webpack/rspack still flags it during static analysis.
-- 8007b58: Updated dependency `embedded-postgres` to `18.3.0-beta.17`.
-
-## `@backstage/cli-module-config` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
-
-## `@backstage/cli-module-github` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-module-info` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-module-lint` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-module-maintenance` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-module-migrate` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-module-new` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- 4014819: Added a new `scaffolder-field-extension-module` template for scaffolding custom Scaffolder form field extensions via `backstage-cli new`.
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-module-test-jest` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-module-translations` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
-- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
-
-## `@backstage/cli-node` (0.3.2 → 0.3.3)
-
-### 0.3.3
-
-#### Patch Changes
-
-- b521571: Added `runCli` for creating executable CLI packages from a fixed collection of directly imported CLI modules, with validation for conflicting command paths. The single-module `runCliModule` helper is now deprecated.
-
-## `@backstage/config-loader` (1.10.11 → 1.10.12)
-
-### 1.10.12
-
-#### Patch Changes
-
-- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
-
-## `@backstage/core-components` (0.18.10 → 0.18.11)
-
-### 0.18.11
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-- a07e6a3: Added the correctly-spelled `'header'` literal to the `TableFiltersClassKey` union type and deprecated the previous typoed `'heder'` literal. The generated CSS class with the old key is preserved for backwards compatibility; switch to `'header'` to avoid future removal.
-- c161e1c: Lazy-load `react-syntax-highlighter` and `@dagrejs/dagre` so they are no longer pulled in eagerly through the barrel export. This reduces the upfront module cost of importing from `@backstage/core-components` by roughly 10 MB. The public API is unchanged.
-- dbe93a7: Fix autologout not working correctly when closing all tabs
-- 8add9b9: Fixed the proxy-based sign-in page failing to read the session token when the proxy issues a token whose payload is encoded using the URL-safe base64 alphabet. Such tokens are now decoded correctly so sign-in no longer breaks.
-- f35372d: Fixed text clipping in SidebarSubmenuItem by correcting line-height from 1 to 1.5
-
-## `@backstage/create-app` (0.8.3 → 0.8.4)
-
-### 0.8.4
-
-#### Patch Changes
-
-- 68db890: Bumped create-app version.
-- e7e4ef0: Bumped create-app version.
-- 6344c54: Newly scaffolded apps now use Yarn 4.13.0 (up from 4.4.1) and enable Yarn's `npmMinimalAgeGate: 3d` setting, which refuses to install npm packages published less than three days ago as a defense against supply-chain attacks. Backstage's own packages are exempted via `npmPreapprovedPackages: ['@backstage/*']` so newly released Backstage versions remain installable without delay.
-
-  Existing apps are unaffected. To opt in, add the `npmMinimalAgeGate` and `npmPreapprovedPackages` settings to your own `.yarnrc.yml` and upgrade Yarn to 4.13 or later.
-
-## `@backstage/eslint-plugin` (0.3.0 → 0.3.1)
-
-### 0.3.1
-
-#### Patch Changes
-
-- 5d80f77: Adds a new `@backstage/no-deprecated-bui-tokens` lint rule that warns when a deprecated `@backstage/ui` CSS token is referenced in a JavaScript or TypeScript file (including CSS-in-JS patterns and template literals). The rule is included in the `recommended` config, so plugin authors using `plugin:@backstage/recommended` will receive warnings automatically when using tokens that have been superseded by the new semantic color families. Note that plain CSS and CSS module files are outside ESLint's scope and are not covered by this rule.
-
-## `@backstage/frontend-plugin-api` (0.17.1 → 0.17.2)
-
-### 0.17.2
-
-#### Patch Changes
-
-- 378784e: Moved dependencies that are re-exported in the public API from `devDependencies` to `dependencies`. These were incorrectly demoted in #33936 because the source code only uses type imports, but the types still appear in the published API surface and need to be resolvable by consumers at build time.
-
-## `@backstage/frontend-test-utils` (0.6.0 → 0.6.1)
-
-### 0.6.1
-
-#### Patch Changes
-
-- 62dd4fc: Added a `mountPath` option to `renderInTestApp` that controls the route path pattern the test element is rendered at. When set, the element is wrapped in a `<Route>` with the given path, enabling `useParams()` to extract route parameters from the URL. Use together with `initialRouteEntries` to set a concrete URL that matches the pattern. This is useful for testing page components that depend on URL parameters, such as entity pages that use `useRouteRefParams`.
-
-## `@backstage/integration` (2.0.2 → 2.0.3)
-
-### 2.0.3
-
-#### Patch Changes
-
-- a07e6a3: Added the correctly-spelled `AzureBlobStorageIntegration` class export and deprecated the previous typoed `AzureBlobStorageIntergation` export. Existing usage of `AzureBlobStorageIntergation` continues to work; switch to `AzureBlobStorageIntegration` to avoid future removal.
-- b75158b: Adapted Azure-related tests for the Azure SDK upgrade to ESM-style exports. The `AzureBlobStorageUrlReader` now accepts an optional `createContainerClient` dependency for testability without needing to mock the `@azure/storage-blob` module.
-- 241d359: Changed visibility of Bitbucket username as it is not a secret.
-
-## `@backstage/plugin-app` (0.4.6 → 0.5.0)
-
-### 0.5.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 6e5fca3: **BREAKING** Changed the default discovery API implementation to use `FrontendHostDiscovery`, which supports the `discovery.endpoints` configuration for per-plugin endpoint overrides. Note that this will start honoring `discovery.endpoints` (including string `target` values), so if you currently use internal-only targets there, update them to the object form and move the internal URL to `target.internal`, omitting `target.external` (or setting it to a browser-reachable URL) to avoid routing the frontend to internal URLs.
 
-#### Patch Changes
+##### Patch Changes
 
 - 33d03ed: fix: make Toast text content selectable
 
-## `@backstage/plugin-app-backend` (0.5.14 → 0.5.15)
+### `@backstage/plugin-catalog-backend` (3.7.1 → 3.8.0)
 
-### 0.5.15
+#### 3.8.0
 
-#### Patch Changes
-
-- ca450be: Added a new `app.disablePublicEntryPoint` config option that allows you to opt out of the automatic public sign-in entry point. When set to `true`, the app backend will skip serving the public entry point to unauthenticated users, even if the app was bundled with an `index-public-experimental` entry point.
-
-## `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.2.20 → 0.3.0)
-
-### 0.3.0
-
-#### Minor Changes
-
-- 9822a2a: Added forwardedPreferredUsernameMatchingUserEntityName sign-in resolver
-
-## `@backstage/plugin-catalog` (2.0.5 → 2.0.6)
-
-### 2.0.6
-
-#### Patch Changes
-
-- 7172386: Updated the new frontend system Catalog index page to use the current Backstage UI page header and content container.
-- d8757b1: The entity list provider now fetches the entity list and the total count as two separate parallel requests when using cursor or offset pagination. The list query skips the expensive count computation (using `totalItems: 'exclude'`), so the table populates immediately. The count arrives asynchronously and updates the title. A new `totalItemsLoading` field is exposed on `EntityListContextProps` so consumers can distinguish a stale count from a fresh one.
-
-  The catalog table now keeps stale rows visible during filter changes and page navigation instead of replacing the entire table body with a spinner. The full-table spinner is only shown on the very first load when no data exists yet. The entity count in the title is dimmed while the count is refreshing, and a small spinner appears next to the title while rows are loading.
-
-- 82cf16f: Added `CatalogExportButton`, which adds CSV and JSON export support to the `CatalogIndexPage`.
-- d7c1dcf: Fixed a missing React key warning for context menu items on the entity page.
-- a07e6a3: Added the correctly-spelled `RelatedEntitiesCard.domainEntityColumns` static property and deprecated the previous typoed `RelatedEntitiesCard.domainEntityColums` property. Existing references to the old property continue to work; switch to `domainEntityColumns` to avoid future removal.
-
-## `@backstage/plugin-catalog-backend` (3.7.1 → 3.8.0)
-
-### 3.8.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 8f20cc2: `/entities/by-query` now accepts a `totalItems` parameter (`'include'` or `'exclude'`, default `'include'`) that controls whether the response's `totalItems` count is computed. Pass `'exclude'` to skip the count entirely when the caller doesn't need it — useful for cursor-paginated user interfaces that only display the count cosmetically. The accepted values list is forward-compatible: future modes (e.g. approximate counts) can be added without breaking existing callers.
 
@@ -339,7 +123,7 @@ Newly added: `@backstage/connections`.
 
 - dc7678c: Removed the immediate mode stitching strategy. All stitching now uses the deferred mode, which processes entities asynchronously via a worker queue. If your configuration includes `catalog.stitchingStrategy.mode: 'immediate'`, it will be ignored with a deprecation warning. The `pollingInterval` and `stitchTimeout` settings continue to work as before.
 
-#### Patch Changes
+##### Patch Changes
 
 - 9698738: Dropped the legacy `search_entity_id_idx` index which is now redundant with the covering unique index on `(entity_id, key, value)`. The old index caused the query planner to choose an inefficient scan pattern for catalog list queries with multiple sort fields, leading to severely degraded performance on large catalogs.
 - ccfa4f1: Optimized `entitiesBatch` on PostgreSQL to use `= ANY(array)` instead of `WHERE IN ($1, $2, ...)`. This produces a single stable query plan regardless of batch size, instead of up to 200 different plans that pollute the query plan cache. On PostgreSQL, batching is no longer needed so all entity refs are fetched in a single query.
@@ -353,263 +137,11 @@ Newly added: `@backstage/connections`.
 - 774d698: Fixed a race condition in the stitch queue and entity processing claim logic where `SELECT FOR UPDATE SKIP LOCKED` row locks were released before the subsequent timestamp bump, allowing multiple workers to claim the same rows. Both the select and update now run inside a single transaction for MySQL and PostgreSQL.
 - 0b8b677: Improved stitch queue semantics to prevent overlapping stitches for the same entity. New stitch requests that arrive while a stitch is in progress now only update the ticket (not the timestamp), so the in-progress worker is not interrupted. When the worker completes and detects a pending re-stitch, the queue entry becomes immediately eligible for pickup instead of waiting for the timeout period.
 
-## `@backstage/plugin-catalog-backend-module-azure` (0.3.17 → 0.3.18)
+### `@backstage/ui` (0.15.0 → 0.16.0)
 
-### 0.3.18
+#### 0.16.0
 
-#### Patch Changes
-
-- a07e6a3: Updated internal usage of `AzureBlobStorageIntegration` (previously misspelled as `AzureBlobStorageIntergation`) following the rename in `@backstage/integration`.
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.5.11 → 0.5.12)
-
-### 0.5.12
-
-#### Patch Changes
-
-- 9e2ff8c: Added a Bitbucket Server SCM event translation layer to the catalog backend module. The module now subscribes to Bitbucket Server webhook events and translates them into generic catalog SCM events, enabling instant catalog reprocessing when repositories are pushed to or renamed. The `analyzeBitbucketServerWebhookEvent` function is exported from the alpha entry point for custom integrations.
-
-## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.12 → 0.7.13)
-
-### 0.7.13
-
-#### Patch Changes
-
-- e846874: Alter column type for `ingestions.last_error` to remove the 255-character restriction.
-
-## `@backstage/plugin-catalog-backend-module-msgraph` (0.10.2 → 0.10.3)
-
-### 0.10.3
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-- e6493b9: Fixed a bug where setting `user.select` to an empty array would cause all users to be dropped from the catalog instead of using the default set of fields.
-- 8930d77: Reverted the server-side `accountEnabled eq true` base filter that was added in v1.51.0, which broke the `userGroupMember` path because the group members endpoint doesn't support `$filter` on that property. Disabled users (`accountEnabled === false`) are now filtered client-side in both the `/users` and group members paths. The mutual exclusivity checks between `userFilter` and `userGroupMemberFilter`/`userGroupMemberSearch` have been restored.
-
-## `@backstage/plugin-catalog-backend-module-openapi` (0.2.22 → 0.2.23)
-
-### 0.2.23
-
-#### Patch Changes
-
-- cf4b34b: Fixed resolution of relative `$ref` paths in OpenAPI and AsyncAPI specs by using the original reference string and parent document URL from the ref parser, instead of computing paths relative to the process working directory. This fixes a regression where cross-directory refs like `./../../common/specs/common.yaml` and nested refs at depth > 1 would resolve incorrectly.
-
-## `@backstage/plugin-catalog-graph` (0.6.4 → 0.6.5)
-
-### 0.6.5
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-
-## `@backstage/plugin-catalog-react` (3.0.0 → 3.1.0)
-
-### 3.1.0
-
-#### Minor Changes
-
-- b6d6551: Added optional `getOptionLabel` and `renderOption` props to `EntityAutocompletePicker`, allowing consumers to customize how option labels and option rendering are displayed in the autocomplete dropdown.
-- 5dd532d: Added a `refresh` function to the `useEntityList` hook.
-- 4212b78: Allow full text searching of Location target URLs in catalog tables
-
-#### Patch Changes
-
-- d8757b1: The entity list provider now fetches the entity list and the total count as two separate parallel requests when using cursor or offset pagination. The list query skips the expensive count computation (using `totalItems: 'exclude'`), so the table populates immediately. The count arrives asynchronously and updates the title. A new `totalItemsLoading` field is exposed on `EntityListContextProps` so consumers can distinguish a stale count from a fresh one.
-
-  The catalog table now keeps stale rows visible during filter changes and page navigation instead of replacing the entire table body with a spinner. The full-table spinner is only shown on the very first load when no data exists yet. The entity count in the title is dimmed while the count is refreshing, and a small spinner appears next to the title while rows are loading.
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-- 7c20545: Fixed redundant API calls during entity list initialization. Filter components that register their initial state in quick succession (e.g. `EntityKindPicker`, `UserListPicker`, `EntityTagPicker`) no longer trigger multiple identical fetches. Frontend-only filter changes such as toggling the user list are now applied synchronously without a network round-trip.
-
-## `@backstage/plugin-catalog-unprocessed-entities` (0.2.31 → 0.2.32)
-
-### 0.2.32
-
-#### Patch Changes
-
-- 80b4370: Updated instructions for enabling the `catalog-unprocessed-entities` page
-
-## `@backstage/plugin-events-backend` (0.6.2 → 0.6.3)
-
-### 0.6.3
-
-#### Patch Changes
-
-- f4342b9: Increased the events bus request body limit to 5mb to allow larger event payloads.
-
-## `@backstage/plugin-home` (0.9.6 → 0.9.7)
-
-### 0.9.7
-
-#### Patch Changes
-
-- a07e6a3: Added the correctly-spelled `'widgetSettingsOverlay.editSettingsTooltip'` translation key in `homeTranslationRef` and deprecated the previous typoed `'widgetSettingsOverlay.editSettingsTooptip'` key. Existing references to the old key continue to work; switch to the new key to avoid future removal.
-
-## `@backstage/plugin-kubernetes` (0.12.19 → 0.12.20)
-
-### 0.12.20
-
-#### Patch Changes
-
-- 07bd0b4: Removed the default Kubernetes standalone page that was registered at `/kubernetes`. This page was added by mistake and is not intended to be part of the plugin.
-
-## `@backstage/plugin-kubernetes-backend` (0.21.4 → 0.21.5)
-
-### 0.21.5
-
-#### Patch Changes
-
-- 998664c: chore(deps): Bump `ws` from 8.20.0 to 8.20.1
-- c4f935b: pool HTTPS agents per cluster in KubernetesFetcher
-
-## `@backstage/plugin-mcp-actions-backend` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
-
-- ed1be73: Validate each action against the MCP tool schema when responding to `tools/list`, and skip any action that doesn't conform instead of failing the entire response. A single misbehaving action with a malformed input schema will now be logged as a warning and omitted from the tool list, letting the remaining actions continue to be served.
-
-## `@backstage/plugin-notifications-backend` (0.6.5 → 0.6.6)
-
-### 0.6.6
-
-#### Patch Changes
-
-- ac410b1: Migrated the internal router to be generated from the plugin's OpenAPI specification. The HTTP API is unchanged.
-
-## `@backstage/plugin-org` (0.7.4 → 0.7.5)
-
-### 0.7.5
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-
-## `@backstage/plugin-scaffolder` (1.37.0 → 1.38.0)
-
-### 1.38.0
-
-#### Minor Changes
-
-- 3e5acb5: Extended the `RepoOwnerPicker` implementation with a custom variant for GitLab.
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
-
-## `@backstage/plugin-scaffolder-backend` (4.0.0 → 4.0.1)
-
-### 4.0.1
-
-#### Patch Changes
-
-- 063fc34: Restored user-supplied task secrets in scaffolder dry-run executions. The previous security fix that stripped secrets from dry-run also removed task secrets passed in the dry-run request body, which broke integration test setups that rely on user-supplied secrets. Environment secrets (server-configured) remain stripped during dry-run; only task secrets supplied by the caller are now forwarded to actions.
-
-## `@backstage/plugin-scaffolder-backend-module-github` (0.9.9 → 0.9.10)
-
-### 0.9.10
-
-#### Patch Changes
-
-- 464ebc2: Added a fallback for `publish:github` and `github:repo:push` actions that retries via the GitHub GraphQL API when the git push fails with a connection-level error (`ECONNRESET` or `ECONNREFUSED`, checked on both `error.code` and `error.cause.code`). The git smart HTTP protocol sends binary pack data in a POST request which can be blocked by network proxies that perform deep packet inspection. The GraphQL fallback uses standard JSON requests which are not affected.
-
-## `@backstage/plugin-scaffolder-common` (2.2.0 → 2.2.1)
-
-### 2.2.1
-
-#### Patch Changes
-
-- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
-
-## `@backstage/plugin-scaffolder-node` (0.13.3 → 0.13.4)
-
-### 0.13.4
-
-#### Patch Changes
-
-- 3d0ba59: Added retry with exponential back off to `Git.push()`. Scaffolder template actions that create a repository and immediately push to it (e.g., `publish:github`) can encounter transient failures when the repository is not yet fully provisioned. The push is now retried up to 5 times with increasing delays before failing. Authentication and permission errors (401, 403) fail immediately without retrying.
-
-## `@backstage/plugin-scaffolder-react` (2.0.0 → 2.0.1)
-
-### 2.0.1
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
-
-## `@backstage/plugin-search` (1.7.4 → 1.7.5)
-
-### 1.7.5
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-
-## `@backstage/plugin-search-backend` (2.1.2 → 2.1.3)
-
-### 2.1.3
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-
-## `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.3.20 → 0.3.21)
-
-### 0.3.21
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-
-## `@backstage/plugin-search-react` (1.11.4 → 1.11.5)
-
-### 1.11.5
-
-#### Patch Changes
-
-- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
-
-## `@backstage/plugin-signals-backend` (0.3.15 → 0.3.16)
-
-### 0.3.16
-
-#### Patch Changes
-
-- 998664c: chore(deps): Bump `ws` from 8.20.0 to 8.20.1
-
-## `@backstage/plugin-techdocs` (1.17.6 → 1.17.7)
-
-### 1.17.7
-
-#### Patch Changes
-
-- 460c597: Added missing i18n support for TechDocs plugin components including:
-
-  - Search components (placeholder text, no results message)
-  - Table components (column headers, pagination, toolbar, actions, empty states)
-  - Home page components (support button, page wrapper title/subtitle)
-  - Reader components (build logs, not found errors, state indicators, settings)
-  - Error messages and navigation labels
-
-  Also exported `techdocsTranslationRef` from the alpha entrypoint for external use.
-
-## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.36 → 1.1.37)
-
-### 1.1.37
-
-#### Patch Changes
-
-- 9095f69: Added a default export to the `/alpha` entrypoint that bundles all contributed TechDocs addon modules using `createFrontendFeatureLoader`. This allows the package to be loaded as a single feature in setups that discover frontend modules through their default export, such as dynamic plugin loaders.
-
-## `@backstage/ui` (0.15.0 → 0.16.0)
-
-### 0.16.0
-
-#### Minor Changes
+##### Minor Changes
 
 - fc4e624: `Combobox` now supports async collections, incremental loading, client and server search, and rich or custom item rendering. Loading placeholders expose `.bui-ComboboxLoading` and `.bui-ComboboxLoadingRow`, and stale visible results expose `data-stale` on `.bui-ComboboxList`.
 
@@ -679,7 +211,7 @@ Newly added: `@backstage/connections`.
 
   **Affected components:** Select
 
-#### Patch Changes
+##### Patch Changes
 
 - 3d6c2e4: Updated the dark theme neutral background tokens to provide clearer contrast between neutral surfaces.
 - c86efcd: Fixed the Table component not filling its container width in Firefox. The `overflow` style is now applied to a wrapper element instead of the `<table>` element directly, which avoids a Firefox behavior where non-visible overflow on tables causes them to shrink-wrap to content size.
@@ -773,5 +305,560 @@ Newly added: `@backstage/connections`.
   | `--bui-bg-info`       | `--bui-announcement-bg-subdued` |
   | `--bui-fg-info-on-bg` | `--bui-announcement-fg-subdued` |
   | `--bui-border-info`   | `--bui-announcement-border`     |
+
+## 0.x minor version bumps
+
+### `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.2.20 → 0.3.0)
+
+#### 0.3.0
+
+##### Minor Changes
+
+- 9822a2a: Added forwardedPreferredUsernameMatchingUserEntityName sign-in resolver
+
+## Other minor version bumps
+
+### `@backstage/catalog-client` (1.15.2 → 1.16.0)
+
+#### 1.16.0
+
+##### Minor Changes
+
+- 8f20cc2: `CatalogApi.queryEntities` now accepts a `totalItems` option (`'include'` or `'exclude'`, default `'include'`) on initial requests. Pass `'exclude'` to skip the `totalItems` count when the caller doesn't need it.
+
+##### Patch Changes
+
+- 378784e: Moved dependencies that are re-exported in the public API from `devDependencies` to `dependencies`. These were incorrectly demoted in #33936 because the source code only uses type imports, but the types still appear in the published API surface and need to be resolvable by consumers at build time.
+
+### `@backstage/plugin-catalog-react` (3.0.0 → 3.1.0)
+
+#### 3.1.0
+
+##### Minor Changes
+
+- b6d6551: Added optional `getOptionLabel` and `renderOption` props to `EntityAutocompletePicker`, allowing consumers to customize how option labels and option rendering are displayed in the autocomplete dropdown.
+- 5dd532d: Added a `refresh` function to the `useEntityList` hook.
+- 4212b78: Allow full text searching of Location target URLs in catalog tables
+
+##### Patch Changes
+
+- d8757b1: The entity list provider now fetches the entity list and the total count as two separate parallel requests when using cursor or offset pagination. The list query skips the expensive count computation (using `totalItems: 'exclude'`), so the table populates immediately. The count arrives asynchronously and updates the title. A new `totalItemsLoading` field is exposed on `EntityListContextProps` so consumers can distinguish a stale count from a fresh one.
+
+  The catalog table now keeps stale rows visible during filter changes and page navigation instead of replacing the entire table body with a spinner. The full-table spinner is only shown on the very first load when no data exists yet. The entity count in the title is dimmed while the count is refreshing, and a small spinner appears next to the title while rows are loading.
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+- 7c20545: Fixed redundant API calls during entity list initialization. Filter components that register their initial state in quick succession (e.g. `EntityKindPicker`, `UserListPicker`, `EntityTagPicker`) no longer trigger multiple identical fetches. Frontend-only filter changes such as toggling the user list are now applied synchronously without a network round-trip.
+
+### `@backstage/plugin-scaffolder` (1.37.0 → 1.38.0)
+
+#### 1.38.0
+
+##### Minor Changes
+
+- 3e5acb5: Extended the `RepoOwnerPicker` implementation with a custom variant for GitLab.
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
+
+## Patch version bumps
+
+### `@backstage/app-defaults` (1.7.8 → 1.7.9)
+
+#### 1.7.9
+
+##### Patch Changes
+
+- 74ed625: Provide toastApi for old frontend system
+
+  Fixes 'No implementation available for apiRef{core.toast}' on old frontend system.
+
+### `@backstage/backend-app-api` (1.7.0 → 1.7.1)
+
+#### 1.7.1
+
+##### Patch Changes
+
+- 2e895ea: Internal refactor.
+
+### `@backstage/backend-defaults` (0.17.2 → 0.17.3)
+
+#### 0.17.3
+
+##### Patch Changes
+
+- 4f4bcf5: Upgraded `infinispan` from `^0.12.0` to `^0.13.0` to address known vulnerabilities.
+- a07e6a3: Updated `AzureBlobStorageUrlReader` to reference the correctly-named `AzureBlobStorageIntegration` type from `@backstage/integration`. The previously-used `AzureBlobStorageIntergation` is now an alias for the new type and remains a valid argument to the constructor.
+- b75158b: Adapted Azure-related tests for the Azure SDK upgrade to ESM-style exports. The `AzureBlobStorageUrlReader` now accepts an optional `createContainerClient` dependency for testability without needing to mock the `@azure/storage-blob` module.
+- 89a95ca: Fixed the task worker retry loop to respect the abort signal. Previously, when a task worker encountered an unexpected error, the retry loop would continue indefinitely even after the worker was signaled to stop. The retry loop now checks the abort signal before retrying and passes it to the retry delay, allowing the worker to shut down gracefully.
+- def82d4: Fixed the built-in rate limiter throwing a validation error and refusing to start when `backend.rateLimit` is enabled. Requests are now keyed using the address normalization helper from `express-rate-limit`, which is required by newer versions of that library and ensures IPv6 clients are grouped by their address block rather than by individual address.
+- 0211390: Added a new `v2` invoke endpoint (`/.backstage/actions/v2/actions/:id/invoke`) that accepts a wrapped body format `{ input, secrets }` with secrets validation. The existing `v1` invoke endpoint remains unchanged for backward compatibility. Updated `DefaultActionsService` to use the `v2` endpoint. Updated `DefaultActionsRegistryService` to expose secrets schema in the actions list response and validate secrets on invocation.
+- 34f21c3: Fix gitlabUrlReader issue with retrieving the repository archive tree
+
+### `@backstage/backend-dynamic-feature-service` (0.8.2 → 0.8.3)
+
+#### 0.8.3
+
+##### Patch Changes
+
+- 7005478: Fixed dynamic backend plugin loading to fall back to the main package export when an alpha `package.json` is present but does not provide a plugin entrypoint. Previously, plugins whose alpha export only exposed supplementary APIs (such as permissions) could fail to load even though the main export was valid. The loader now tries the alpha entry first and uses the main export when the alpha module does not export a `BackendFeature`, `BackendFeatureFactory`, or `dynamicPluginInstaller`.
+
+### `@backstage/backend-plugin-api` (1.9.1 → 1.9.2)
+
+#### 1.9.2
+
+##### Patch Changes
+
+- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
+- 0211390: Added optional `secrets` schema support to `ActionsRegistryActionOptions` and `ActionsRegistryActionContext`. Actions can now declare a Zod secrets schema separate from the input schema, enabling surfaces to collect sensitive credentials independently from tool arguments. Added optional `secrets` field to `ActionsServiceAction` metadata and `ActionsService.invoke()` parameters.
+
+### `@backstage/backend-test-utils` (1.11.3 → 1.11.4)
+
+#### 1.11.4
+
+##### Patch Changes
+
+- 2e895ea: Internal refactor.
+- 2d181c0: Increased MySQL connection and pool timeouts to reduce flaky `connect ETIMEDOUT` failures in CI. The test MySQL container now also uses `mysql_native_password` for cheaper connection handshakes and disables binary logging.
+- 06a2035: Updated `MockActionsRegistry` to support the new secrets schema. The mock now validates secrets against the declared schema, rejects missing secrets for actions that require them, and forwards secrets to the action handler.
+
+### `@backstage/cli` (0.36.2 → 0.36.3)
+
+#### 0.36.3
+
+##### Patch Changes
+
+- b521571: Improved validation of conflicting CLI module commands, including conflicts between parent and nested command paths.
+
+### `@backstage/cli-module-actions` (0.1.1 → 0.1.2)
+
+#### 0.1.2
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-module-auth` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-module-build` (0.1.3 → 0.1.4)
+
+#### 0.1.4
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+- a1971ea: Suppress false-positive `@protobufjs/inquire` "Critical dependency" warning in the bundler. Since `protobufjs` 7.5.9, the dynamic require path in inquire is no longer exercised, but webpack/rspack still flags it during static analysis.
+- 8007b58: Updated dependency `embedded-postgres` to `18.3.0-beta.17`.
+
+### `@backstage/cli-module-config` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
+
+### `@backstage/cli-module-github` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-module-info` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-module-lint` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-module-maintenance` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-module-migrate` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-module-new` (0.1.3 → 0.1.4)
+
+#### 0.1.4
+
+##### Patch Changes
+
+- 4014819: Added a new `scaffolder-field-extension-module` template for scaffolding custom Scaffolder form field extensions via `backstage-cli new`.
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-module-test-jest` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-module-translations` (0.1.2 → 0.1.3)
+
+#### 0.1.3
+
+##### Patch Changes
+
+- 696c78c: The `--help` output for commands now shows a generated usage line that lists the available flags and any positional arguments the command accepts.
+- 2e6ffe6: Updated the standalone CLI executable to use the new CLI module runner.
+
+### `@backstage/cli-node` (0.3.2 → 0.3.3)
+
+#### 0.3.3
+
+##### Patch Changes
+
+- b521571: Added `runCli` for creating executable CLI packages from a fixed collection of directly imported CLI modules, with validation for conflicting command paths. The single-module `runCliModule` helper is now deprecated.
+
+### `@backstage/config-loader` (1.10.11 → 1.10.12)
+
+#### 1.10.12
+
+##### Patch Changes
+
+- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
+
+### `@backstage/core-components` (0.18.10 → 0.18.11)
+
+#### 0.18.11
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+- a07e6a3: Added the correctly-spelled `'header'` literal to the `TableFiltersClassKey` union type and deprecated the previous typoed `'heder'` literal. The generated CSS class with the old key is preserved for backwards compatibility; switch to `'header'` to avoid future removal.
+- c161e1c: Lazy-load `react-syntax-highlighter` and `@dagrejs/dagre` so they are no longer pulled in eagerly through the barrel export. This reduces the upfront module cost of importing from `@backstage/core-components` by roughly 10 MB. The public API is unchanged.
+- dbe93a7: Fix autologout not working correctly when closing all tabs
+- 8add9b9: Fixed the proxy-based sign-in page failing to read the session token when the proxy issues a token whose payload is encoded using the URL-safe base64 alphabet. Such tokens are now decoded correctly so sign-in no longer breaks.
+- f35372d: Fixed text clipping in SidebarSubmenuItem by correcting line-height from 1 to 1.5
+
+### `@backstage/create-app` (0.8.3 → 0.8.4)
+
+#### 0.8.4
+
+##### Patch Changes
+
+- 68db890: Bumped create-app version.
+- e7e4ef0: Bumped create-app version.
+- 6344c54: Newly scaffolded apps now use Yarn 4.13.0 (up from 4.4.1) and enable Yarn's `npmMinimalAgeGate: 3d` setting, which refuses to install npm packages published less than three days ago as a defense against supply-chain attacks. Backstage's own packages are exempted via `npmPreapprovedPackages: ['@backstage/*']` so newly released Backstage versions remain installable without delay.
+
+  Existing apps are unaffected. To opt in, add the `npmMinimalAgeGate` and `npmPreapprovedPackages` settings to your own `.yarnrc.yml` and upgrade Yarn to 4.13 or later.
+
+### `@backstage/eslint-plugin` (0.3.0 → 0.3.1)
+
+#### 0.3.1
+
+##### Patch Changes
+
+- 5d80f77: Adds a new `@backstage/no-deprecated-bui-tokens` lint rule that warns when a deprecated `@backstage/ui` CSS token is referenced in a JavaScript or TypeScript file (including CSS-in-JS patterns and template literals). The rule is included in the `recommended` config, so plugin authors using `plugin:@backstage/recommended` will receive warnings automatically when using tokens that have been superseded by the new semantic color families. Note that plain CSS and CSS module files are outside ESLint's scope and are not covered by this rule.
+
+### `@backstage/frontend-plugin-api` (0.17.1 → 0.17.2)
+
+#### 0.17.2
+
+##### Patch Changes
+
+- 378784e: Moved dependencies that are re-exported in the public API from `devDependencies` to `dependencies`. These were incorrectly demoted in #33936 because the source code only uses type imports, but the types still appear in the published API surface and need to be resolvable by consumers at build time.
+
+### `@backstage/frontend-test-utils` (0.6.0 → 0.6.1)
+
+#### 0.6.1
+
+##### Patch Changes
+
+- 62dd4fc: Added a `mountPath` option to `renderInTestApp` that controls the route path pattern the test element is rendered at. When set, the element is wrapped in a `<Route>` with the given path, enabling `useParams()` to extract route parameters from the URL. Use together with `initialRouteEntries` to set a concrete URL that matches the pattern. This is useful for testing page components that depend on URL parameters, such as entity pages that use `useRouteRefParams`.
+
+### `@backstage/integration` (2.0.2 → 2.0.3)
+
+#### 2.0.3
+
+##### Patch Changes
+
+- a07e6a3: Added the correctly-spelled `AzureBlobStorageIntegration` class export and deprecated the previous typoed `AzureBlobStorageIntergation` export. Existing usage of `AzureBlobStorageIntergation` continues to work; switch to `AzureBlobStorageIntegration` to avoid future removal.
+- b75158b: Adapted Azure-related tests for the Azure SDK upgrade to ESM-style exports. The `AzureBlobStorageUrlReader` now accepts an optional `createContainerClient` dependency for testability without needing to mock the `@azure/storage-blob` module.
+- 241d359: Changed visibility of Bitbucket username as it is not a secret.
+
+### `@backstage/plugin-app-backend` (0.5.14 → 0.5.15)
+
+#### 0.5.15
+
+##### Patch Changes
+
+- ca450be: Added a new `app.disablePublicEntryPoint` config option that allows you to opt out of the automatic public sign-in entry point. When set to `true`, the app backend will skip serving the public entry point to unauthenticated users, even if the app was bundled with an `index-public-experimental` entry point.
+
+### `@backstage/plugin-catalog` (2.0.5 → 2.0.6)
+
+#### 2.0.6
+
+##### Patch Changes
+
+- 7172386: Updated the new frontend system Catalog index page to use the current Backstage UI page header and content container.
+- d8757b1: The entity list provider now fetches the entity list and the total count as two separate parallel requests when using cursor or offset pagination. The list query skips the expensive count computation (using `totalItems: 'exclude'`), so the table populates immediately. The count arrives asynchronously and updates the title. A new `totalItemsLoading` field is exposed on `EntityListContextProps` so consumers can distinguish a stale count from a fresh one.
+
+  The catalog table now keeps stale rows visible during filter changes and page navigation instead of replacing the entire table body with a spinner. The full-table spinner is only shown on the very first load when no data exists yet. The entity count in the title is dimmed while the count is refreshing, and a small spinner appears next to the title while rows are loading.
+
+- 82cf16f: Added `CatalogExportButton`, which adds CSV and JSON export support to the `CatalogIndexPage`.
+- d7c1dcf: Fixed a missing React key warning for context menu items on the entity page.
+- a07e6a3: Added the correctly-spelled `RelatedEntitiesCard.domainEntityColumns` static property and deprecated the previous typoed `RelatedEntitiesCard.domainEntityColums` property. Existing references to the old property continue to work; switch to `domainEntityColumns` to avoid future removal.
+
+### `@backstage/plugin-catalog-backend-module-azure` (0.3.17 → 0.3.18)
+
+#### 0.3.18
+
+##### Patch Changes
+
+- a07e6a3: Updated internal usage of `AzureBlobStorageIntegration` (previously misspelled as `AzureBlobStorageIntergation`) following the rename in `@backstage/integration`.
+
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.5.11 → 0.5.12)
+
+#### 0.5.12
+
+##### Patch Changes
+
+- 9e2ff8c: Added a Bitbucket Server SCM event translation layer to the catalog backend module. The module now subscribes to Bitbucket Server webhook events and translates them into generic catalog SCM events, enabling instant catalog reprocessing when repositories are pushed to or renamed. The `analyzeBitbucketServerWebhookEvent` function is exported from the alpha entry point for custom integrations.
+
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.12 → 0.7.13)
+
+#### 0.7.13
+
+##### Patch Changes
+
+- e846874: Alter column type for `ingestions.last_error` to remove the 255-character restriction.
+
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.10.2 → 0.10.3)
+
+#### 0.10.3
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+- e6493b9: Fixed a bug where setting `user.select` to an empty array would cause all users to be dropped from the catalog instead of using the default set of fields.
+- 8930d77: Reverted the server-side `accountEnabled eq true` base filter that was added in v1.51.0, which broke the `userGroupMember` path because the group members endpoint doesn't support `$filter` on that property. Disabled users (`accountEnabled === false`) are now filtered client-side in both the `/users` and group members paths. The mutual exclusivity checks between `userFilter` and `userGroupMemberFilter`/`userGroupMemberSearch` have been restored.
+
+### `@backstage/plugin-catalog-backend-module-openapi` (0.2.22 → 0.2.23)
+
+#### 0.2.23
+
+##### Patch Changes
+
+- cf4b34b: Fixed resolution of relative `$ref` paths in OpenAPI and AsyncAPI specs by using the original reference string and parent document URL from the ref parser, instead of computing paths relative to the process working directory. This fixes a regression where cross-directory refs like `./../../common/specs/common.yaml` and nested refs at depth > 1 would resolve incorrectly.
+
+### `@backstage/plugin-catalog-graph` (0.6.4 → 0.6.5)
+
+#### 0.6.5
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+
+### `@backstage/plugin-catalog-unprocessed-entities` (0.2.31 → 0.2.32)
+
+#### 0.2.32
+
+##### Patch Changes
+
+- 80b4370: Updated instructions for enabling the `catalog-unprocessed-entities` page
+
+### `@backstage/plugin-events-backend` (0.6.2 → 0.6.3)
+
+#### 0.6.3
+
+##### Patch Changes
+
+- f4342b9: Increased the events bus request body limit to 5mb to allow larger event payloads.
+
+### `@backstage/plugin-home` (0.9.6 → 0.9.7)
+
+#### 0.9.7
+
+##### Patch Changes
+
+- a07e6a3: Added the correctly-spelled `'widgetSettingsOverlay.editSettingsTooltip'` translation key in `homeTranslationRef` and deprecated the previous typoed `'widgetSettingsOverlay.editSettingsTooptip'` key. Existing references to the old key continue to work; switch to the new key to avoid future removal.
+
+### `@backstage/plugin-kubernetes` (0.12.19 → 0.12.20)
+
+#### 0.12.20
+
+##### Patch Changes
+
+- 07bd0b4: Removed the default Kubernetes standalone page that was registered at `/kubernetes`. This page was added by mistake and is not intended to be part of the plugin.
+
+### `@backstage/plugin-kubernetes-backend` (0.21.4 → 0.21.5)
+
+#### 0.21.5
+
+##### Patch Changes
+
+- 998664c: chore(deps): Bump `ws` from 8.20.0 to 8.20.1
+- c4f935b: pool HTTPS agents per cluster in KubernetesFetcher
+
+### `@backstage/plugin-mcp-actions-backend` (0.1.13 → 0.1.14)
+
+#### 0.1.14
+
+##### Patch Changes
+
+- ed1be73: Validate each action against the MCP tool schema when responding to `tools/list`, and skip any action that doesn't conform instead of failing the entire response. A single misbehaving action with a malformed input schema will now be logged as a warning and omitted from the tool list, letting the remaining actions continue to be served.
+
+### `@backstage/plugin-notifications-backend` (0.6.5 → 0.6.6)
+
+#### 0.6.6
+
+##### Patch Changes
+
+- ac410b1: Migrated the internal router to be generated from the plugin's OpenAPI specification. The HTTP API is unchanged.
+
+### `@backstage/plugin-org` (0.7.4 → 0.7.5)
+
+#### 0.7.5
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+
+### `@backstage/plugin-scaffolder-backend` (4.0.0 → 4.0.1)
+
+#### 4.0.1
+
+##### Patch Changes
+
+- 063fc34: Restored user-supplied task secrets in scaffolder dry-run executions. The previous security fix that stripped secrets from dry-run also removed task secrets passed in the dry-run request body, which broke integration test setups that rely on user-supplied secrets. Environment secrets (server-configured) remain stripped during dry-run; only task secrets supplied by the caller are now forwarded to actions.
+
+### `@backstage/plugin-scaffolder-backend-module-github` (0.9.9 → 0.9.10)
+
+#### 0.9.10
+
+##### Patch Changes
+
+- 464ebc2: Added a fallback for `publish:github` and `github:repo:push` actions that retries via the GitHub GraphQL API when the git push fails with a connection-level error (`ECONNRESET` or `ECONNREFUSED`, checked on both `error.code` and `error.cause.code`). The git smart HTTP protocol sends binary pack data in a POST request which can be blocked by network proxies that perform deep packet inspection. The GraphQL fallback uses standard JSON requests which are not affected.
+
+### `@backstage/plugin-scaffolder-common` (2.2.0 → 2.2.1)
+
+#### 2.2.1
+
+##### Patch Changes
+
+- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
+
+### `@backstage/plugin-scaffolder-node` (0.13.3 → 0.13.4)
+
+#### 0.13.4
+
+##### Patch Changes
+
+- 3d0ba59: Added retry with exponential back off to `Git.push()`. Scaffolder template actions that create a repository and immediately push to it (e.g., `publish:github`) can encounter transient failures when the repository is not yet fully provisioned. The push is now retried up to 5 times with increasing delays before failing. Authentication and permission errors (401, 403) fail immediately without retrying.
+
+### `@backstage/plugin-scaffolder-react` (2.0.0 → 2.0.1)
+
+#### 2.0.1
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+- 02c4e8a: Removed unused `json-schema` runtime dependency. The package was only used for TypeScript types from `@types/json-schema`; affected imports have been converted to `import type` to allow safe removal.
+
+### `@backstage/plugin-search` (1.7.4 → 1.7.5)
+
+#### 1.7.5
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+
+### `@backstage/plugin-search-backend` (2.1.2 → 2.1.3)
+
+#### 2.1.3
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+
+### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.3.20 → 0.3.21)
+
+#### 0.3.21
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+
+### `@backstage/plugin-search-react` (1.11.4 → 1.11.5)
+
+#### 1.11.5
+
+##### Patch Changes
+
+- e0889a3: chore(deps): bump `qs` from 6.15.1 to 6.15.2
+
+### `@backstage/plugin-signals-backend` (0.3.15 → 0.3.16)
+
+#### 0.3.16
+
+##### Patch Changes
+
+- 998664c: chore(deps): Bump `ws` from 8.20.0 to 8.20.1
+
+### `@backstage/plugin-techdocs` (1.17.6 → 1.17.7)
+
+#### 1.17.7
+
+##### Patch Changes
+
+- 460c597: Added missing i18n support for TechDocs plugin components including:
+
+  - Search components (placeholder text, no results message)
+  - Table components (column headers, pagination, toolbar, actions, empty states)
+  - Home page components (support button, page wrapper title/subtitle)
+  - Reader components (build logs, not found errors, state indicators, settings)
+  - Error messages and navigation labels
+
+  Also exported `techdocsTranslationRef` from the alpha entrypoint for external use.
+
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.36 → 1.1.37)
+
+#### 1.1.37
+
+##### Patch Changes
+
+- 9095f69: Added a default export to the `/alpha` entrypoint that bundles all contributed TechDocs addon modules using `createFrontendFeatureLoader`. This allows the package to be loaded as a single feature in setups that discover frontend modules through their default export, such as dynamic plugin loaders.
 
 _Excluded dependency updates for packages: `@backstage/backend-openapi-utils`, `@backstage/cli-defaults`, `@backstage/core-app-api`, `@backstage/core-compat-api`, `@backstage/core-plugin-api`, `@backstage/dev-utils`, `@backstage/frontend-app-api`, `@backstage/frontend-defaults`, `@backstage/frontend-dev-utils`, `@backstage/frontend-dynamic-feature-loader`, `@backstage/integration-react`, `@backstage/plugin-api-docs`, `@backstage/plugin-app-node`, `@backstage/plugin-app-react`, `@backstage/plugin-app-visualizer`, `@backstage/plugin-auth`, `@backstage/plugin-auth-backend`, `@backstage/plugin-auth-backend-module-atlassian-provider`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-cloudflare-access-provider`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oidc-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-auth-backend-module-openshift-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-node`, `@backstage/plugin-auth-react`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-ai-model`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-gitea`, `@backstage/plugin-catalog-backend-module-github`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-msgraph-incremental`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-import`, `@backstage/plugin-catalog-node`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-react`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-module-google-pubsub`, `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-home-react`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-kubernetes-react`, `@backstage/plugin-mui-to-bui`, `@backstage/plugin-notifications`, `@backstage/plugin-notifications-backend-module-email`, `@backstage/plugin-notifications-backend-module-slack`, `@backstage/plugin-notifications-node`, `@backstage/plugin-org-react`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-signals`, `@backstage/plugin-signals-node`, `@backstage/plugin-signals-react`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-techdocs-node`, `@backstage/plugin-techdocs-react`, `@backstage/plugin-user-settings`, `@backstage/plugin-user-settings-backend`, `@backstage/repo-tools`, `@backstage/test-utils`, `@techdocs/cli`._

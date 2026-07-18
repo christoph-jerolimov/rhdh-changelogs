@@ -2,280 +2,123 @@
 
 Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
 
-## `@backstage/app-defaults` (1.7.6 → 1.7.7)
+## Summary
 
-### 1.7.7
+- [Breaking changes](#breaking-changes): 8 packages
+- [0.x minor version bumps](#0x-minor-version-bumps): 4 packages
+- [0.0.x patch version bumps](#00x-patch-version-bumps): 1 package
+- [Other minor version bumps](#other-minor-version-bumps): 7 packages
+- [Other patch version bumps](#other-patch-version-bumps): 61 packages
 
-#### Patch Changes
+## Table of contents
 
-- 400aa23: Added `FetchMiddlewares.clarifyFailures()` to the default fetch API middleware stack.
+- [Breaking changes](#breaking-changes)
+  - [`@backstage/catalog-client` (1.14.0 → 1.15.0)](#backstagecatalog-client-1140--1150)
+  - [`@backstage/frontend-plugin-api` (0.15.1 → 0.16.0)](#backstagefrontend-plugin-api-0151--0160)
+  - [`@backstage/plugin-auth-backend` (0.27.3 → 0.28.0)](#backstageplugin-auth-backend-0273--0280)
+  - [`@backstage/plugin-auth-node` (0.6.14 → 0.7.0)](#backstageplugin-auth-node-0614--070)
+  - [`@backstage/plugin-catalog-node` (2.1.0 → 2.2.0)](#backstageplugin-catalog-node-210--220)
+  - [`@backstage/plugin-permission-react` (0.4.41 → 0.5.0)](#backstageplugin-permission-react-0441--050)
+  - [`@backstage/plugin-signals-node` (0.1.29 → 0.2.0)](#backstageplugin-signals-node-0129--020)
+  - [`@backstage/ui` (0.13.3 → 0.14.0)](#backstageui-0133--0140)
+- [0.x minor version bumps](#0x-minor-version-bumps)
+  - [`@backstage/backend-defaults` (0.16.0 → 0.17.0)](#backstagebackend-defaults-0160--0170)
+  - [`@backstage/cli-module-actions` (0.0.1 → 0.1.0)](#backstagecli-module-actions-001--010)
+  - [`@backstage/plugin-api-docs` (0.13.5 → 0.14.0)](#backstageplugin-api-docs-0135--0140)
+  - [`@backstage/plugin-auth-backend-module-auth0-provider` (0.3.1 → 0.4.0)](#backstageplugin-auth-backend-module-auth0-provider-031--040)
+- [0.0.x patch version bumps](#00x-patch-version-bumps)
+  - [`@backstage/plugin-signals` (0.0.29 → 0.0.30)](#backstageplugin-signals-0029--0030)
+- [Other minor version bumps](#other-minor-version-bumps)
+  - [`@backstage/backend-plugin-api` (1.8.0 → 1.9.0)](#backstagebackend-plugin-api-180--190)
+  - [`@backstage/catalog-model` (1.7.7 → 1.8.0)](#backstagecatalog-model-177--180)
+  - [`@backstage/core-app-api` (1.19.6 → 1.20.0)](#backstagecore-app-api-1196--1200)
+  - [`@backstage/errors` (1.2.7 → 1.3.0)](#backstageerrors-127--130)
+  - [`@backstage/plugin-catalog-backend` (3.5.0 → 3.6.0)](#backstageplugin-catalog-backend-350--360)
+  - [`@backstage/plugin-scaffolder-backend` (3.3.0 → 3.4.0)](#backstageplugin-scaffolder-backend-330--340)
+  - [`@backstage/plugin-scaffolder-common` (2.0.0 → 2.1.0)](#backstageplugin-scaffolder-common-200--210)
+- [Other patch version bumps](#other-patch-version-bumps)
+  - [`@backstage/app-defaults` (1.7.6 → 1.7.7)](#backstageapp-defaults-176--177)
+  - [`@backstage/backend-app-api` (1.6.0 → 1.6.1)](#backstagebackend-app-api-160--161)
+  - [`@backstage/backend-dynamic-feature-service` (0.8.0 → 0.8.1)](#backstagebackend-dynamic-feature-service-080--081)
+  - [`@backstage/backend-openapi-utils` (0.6.7 → 0.6.8)](#backstagebackend-openapi-utils-067--068)
+  - [`@backstage/backend-test-utils` (1.11.1 → 1.11.2)](#backstagebackend-test-utils-1111--1112)
+  - [`@backstage/cli` (0.36.0 → 0.36.1)](#backstagecli-0360--0361)
+  - [`@backstage/cli-common` (0.2.0 → 0.2.1)](#backstagecli-common-020--021)
+  - [`@backstage/cli-module-auth` (0.1.0 → 0.1.1)](#backstagecli-module-auth-010--011)
+  - [`@backstage/cli-module-build` (0.1.0 → 0.1.1)](#backstagecli-module-build-010--011)
+  - [`@backstage/cli-module-migrate` (0.1.0 → 0.1.1)](#backstagecli-module-migrate-010--011)
+  - [`@backstage/cli-module-new` (0.1.1 → 0.1.2)](#backstagecli-module-new-011--012)
+  - [`@backstage/cli-module-test-jest` (0.1.0 → 0.1.1)](#backstagecli-module-test-jest-010--011)
+  - [`@backstage/cli-node` (0.3.0 → 0.3.1)](#backstagecli-node-030--031)
+  - [`@backstage/config-loader` (1.10.9 → 1.10.10)](#backstageconfig-loader-1109--11010)
+  - [`@backstage/core-compat-api` (0.5.9 → 0.5.10)](#backstagecore-compat-api-059--0510)
+  - [`@backstage/core-components` (0.18.8 → 0.18.9)](#backstagecore-components-0188--0189)
+  - [`@backstage/create-app` (0.8.1 → 0.8.2)](#backstagecreate-app-081--082)
+  - [`@backstage/eslint-plugin` (0.2.2 → 0.2.3)](#backstageeslint-plugin-022--023)
+  - [`@backstage/filter-predicates` (0.1.1 → 0.1.2)](#backstagefilter-predicates-011--012)
+  - [`@backstage/frontend-app-api` (0.16.1 → 0.16.2)](#backstagefrontend-app-api-0161--0162)
+  - [`@backstage/integration` (2.0.0 → 2.0.1)](#backstageintegration-200--201)
+  - [`@backstage/plugin-auth` (0.1.6 → 0.1.7)](#backstageplugin-auth-016--017)
+  - [`@backstage/plugin-catalog` (2.0.1 → 2.0.2)](#backstageplugin-catalog-201--202)
+  - [`@backstage/plugin-catalog-backend-module-azure` (0.3.15 → 0.3.16)](#backstageplugin-catalog-backend-module-azure-0315--0316)
+  - [`@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.5.9 → 0.5.10)](#backstageplugin-catalog-backend-module-bitbucket-cloud-059--0510)
+  - [`@backstage/plugin-catalog-backend-module-github` (0.13.0 → 0.13.1)](#backstageplugin-catalog-backend-module-github-0130--0131)
+  - [`@backstage/plugin-catalog-backend-module-gitlab` (0.8.1 → 0.8.2)](#backstageplugin-catalog-backend-module-gitlab-081--082)
+  - [`@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.10 → 0.7.11)](#backstageplugin-catalog-backend-module-incremental-ingestion-0710--0711)
+  - [`@backstage/plugin-catalog-graph` (0.6.0 → 0.6.1)](#backstageplugin-catalog-graph-060--061)
+  - [`@backstage/plugin-catalog-import` (0.13.11 → 0.13.12)](#backstageplugin-catalog-import-01311--01312)
+  - [`@backstage/plugin-catalog-react` (2.1.1 → 2.1.2)](#backstageplugin-catalog-react-211--212)
+  - [`@backstage/plugin-catalog-unprocessed-entities` (0.2.28 → 0.2.29)](#backstageplugin-catalog-unprocessed-entities-0228--0229)
+  - [`@backstage/plugin-devtools-backend` (0.5.15 → 0.5.16)](#backstageplugin-devtools-backend-0515--0516)
+  - [`@backstage/plugin-events-backend-module-google-pubsub` (0.2.1 → 0.2.2)](#backstageplugin-events-backend-module-google-pubsub-021--022)
+  - [`@backstage/plugin-gateway-backend` (1.1.3 → 1.1.4)](#backstageplugin-gateway-backend-113--114)
+  - [`@backstage/plugin-kubernetes` (0.12.17 → 0.12.18)](#backstageplugin-kubernetes-01217--01218)
+  - [`@backstage/plugin-kubernetes-backend` (0.21.2 → 0.21.3)](#backstageplugin-kubernetes-backend-0212--0213)
+  - [`@backstage/plugin-mcp-actions-backend` (0.1.11 → 0.1.12)](#backstageplugin-mcp-actions-backend-0111--0112)
+  - [`@backstage/plugin-notifications` (0.5.15 → 0.5.16)](#backstageplugin-notifications-0515--0516)
+  - [`@backstage/plugin-notifications-backend` (0.6.3 → 0.6.4)](#backstageplugin-notifications-backend-063--064)
+  - [`@backstage/plugin-notifications-backend-module-email` (0.3.19 → 0.3.20)](#backstageplugin-notifications-backend-module-email-0319--0320)
+  - [`@backstage/plugin-notifications-backend-module-slack` (0.4.0 → 0.4.1)](#backstageplugin-notifications-backend-module-slack-040--041)
+  - [`@backstage/plugin-org` (0.7.0 → 0.7.1)](#backstageplugin-org-070--071)
+  - [`@backstage/plugin-org-react` (0.1.48 → 0.1.49)](#backstageplugin-org-react-0148--0149)
+  - [`@backstage/plugin-scaffolder` (1.36.1 → 1.36.2)](#backstageplugin-scaffolder-1361--1362)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.3.4 → 0.3.5)](#backstageplugin-scaffolder-backend-module-bitbucket-cloud-034--035)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.19 → 0.2.20)](#backstageplugin-scaffolder-backend-module-bitbucket-server-0219--0220)
+  - [`@backstage/plugin-scaffolder-backend-module-github` (0.9.7 → 0.9.8)](#backstageplugin-scaffolder-backend-module-github-097--098)
+  - [`@backstage/plugin-scaffolder-backend-module-rails` (0.5.19 → 0.5.20)](#backstageplugin-scaffolder-backend-module-rails-0519--0520)
+  - [`@backstage/plugin-scaffolder-node` (0.13.1 → 0.13.2)](#backstageplugin-scaffolder-node-0131--0132)
+  - [`@backstage/plugin-scaffolder-react` (1.20.0 → 1.20.1)](#backstageplugin-scaffolder-react-1200--1201)
+  - [`@backstage/plugin-search` (1.7.0 → 1.7.1)](#backstageplugin-search-170--171)
+  - [`@backstage/plugin-search-backend-module-pg` (0.5.53 → 0.5.54)](#backstageplugin-search-backend-module-pg-0553--0554)
+  - [`@backstage/plugin-search-backend-module-techdocs` (0.4.12 → 0.4.13)](#backstageplugin-search-backend-module-techdocs-0412--0413)
+  - [`@backstage/plugin-search-backend-node` (1.4.2 → 1.4.3)](#backstageplugin-search-backend-node-142--143)
+  - [`@backstage/plugin-techdocs` (1.17.2 → 1.17.3)](#backstageplugin-techdocs-1172--1173)
+  - [`@backstage/plugin-techdocs-backend` (2.1.6 → 2.1.7)](#backstageplugin-techdocs-backend-216--217)
+  - [`@backstage/plugin-techdocs-node` (1.14.4 → 1.14.5)](#backstageplugin-techdocs-node-1144--1145)
+  - [`@backstage/repo-tools` (0.17.0 → 0.17.1)](#backstagerepo-tools-0170--0171)
+  - [`@backstage/theme` (0.7.2 → 0.7.3)](#backstagetheme-072--073)
+  - [`@techdocs/cli` (1.10.6 → 1.10.7)](#techdocscli-1106--1107)
 
-## `@backstage/backend-app-api` (1.6.0 → 1.6.1)
+## Breaking changes
 
-### 1.6.1
+### `@backstage/catalog-client` (1.14.0 → 1.15.0)
 
-#### Patch Changes
+#### 1.15.0
 
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/backend-defaults` (0.16.0 → 0.17.0)
-
-### 0.17.0
-
-#### Minor Changes
-
-- c69e03c: Added support for AWS RDS IAM authentication for PostgreSQL connections. Set `connection.type: rds` along with `host`, `user`, and `region` to use short-lived IAM tokens instead of a static password. Requires the `@aws-sdk/rds-signer` package and an IAM role with `rds-db:connect` permission.
-
-#### Patch Changes
-
-- 4559806: Added support for typed `examples` on actions registered via the actions registry. Action authors can now provide examples with compile-time-checked `input` and `output` values that match their schema definitions.
-- 5cd814f: Refactored auditor severity log level mappings to use `zod/v4` with schema-driven defaults and type inference.
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- 6e2aaab: Fixed `AwsS3UrlReader` failing to read files from S3 buckets configured with custom endpoint hosts. When an integration was configured with a specific endpoint like `https://bucket-1.s3.eu-central-1.amazonaws.com`, the URL parser incorrectly fell through to the non-AWS code path, always defaulting the region to `us-east-1` instead of extracting it from the hostname.
-- 308c672: `HostDiscovery` now logs a warning when `backend.baseUrl` is set to a localhost address while `NODE_ENV` is `production`, and when `backend.baseUrl` is not a valid URL.
-- 85c5a46: DefaultActionsRegistryService: add json middleware to /.backstage/actions/ routes only
-- 547258f: Refactored the database creation retry loop to avoid an unnecessary delay after the final failed attempt.
-- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
-- f14df56: Added experimental support for using `embedded-postgres` as the database for local development. Set `backend.database.client` to `embedded-postgres` in your app config to enable this. The `embedded-postgres` package must be installed as an explicit dependency in your project.
-
-## `@backstage/backend-dynamic-feature-service` (0.8.0 → 0.8.1)
-
-### 0.8.1
-
-#### Patch Changes
-
-- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
-
-## `@backstage/backend-openapi-utils` (0.6.7 → 0.6.8)
-
-### 0.6.8
-
-#### Patch Changes
-
-- 59dd9b9: Fixes a memory leak during `wrapServer` where stopped servers weren't removed from the clean up list.
-
-## `@backstage/backend-plugin-api` (1.8.0 → 1.9.0)
-
-### 1.9.0
-
-#### Minor Changes
-
-- 4559806: Added support for typed `examples` on actions registered via the actions registry. Action authors can now provide examples with compile-time-checked `input` and `output` values that match their schema definitions.
-
-#### Patch Changes
-
-- 213ebe7: Aligned `.T` behavior between `ExtensionPoint` and `ServiceRef` to consistently return `null` instead of throwing.
-- 68c557b: Added stricter type checks in `isDatabaseConflictError`.
-
-## `@backstage/backend-test-utils` (1.11.1 → 1.11.2)
-
-### 1.11.2
-
-#### Patch Changes
-
-- 4559806: Added support for typed `examples` on actions registered via the actions registry. Action authors can now provide examples with compile-time-checked `input` and `output` values that match their schema definitions.
-- f44c6bd: Deduplicated internal readiness-polling helpers used by the database and cache test infrastructure.
-
-## `@backstage/catalog-client` (1.14.0 → 1.15.0)
-
-### 1.15.0
-
-#### Minor Changes
+##### Minor Changes
 
 - c384fff: **BREAKING PRODUCERS**: Added required `entityRef` field to the `Location` type, exposing the stable entity reference for each registered location. Any code that produces `Location` objects must now include this field. Added `updateLocation` method to `CatalogApi` for updating the type and target of an existing location.
 
-## `@backstage/catalog-model` (1.7.7 → 1.8.0)
+### `@backstage/frontend-plugin-api` (0.15.1 → 0.16.0)
 
-### 1.8.0
+#### 0.16.0
 
-#### Minor Changes
-
-- e5fcfcb: Added a new catalog model layer system that allows plugins to declare and extend catalog entity kinds, annotations, labels, tags, and relations using JSON Schema. The new `createCatalogModelLayer` API provides a builder for composing model definitions, and a `compileCatalogModel` function validates and merges them into a unified model. Built-in entity kinds now include model layer definitions.
-
-## `@backstage/cli` (0.36.0 → 0.36.1)
-
-### 0.36.1
-
-#### Patch Changes
-
-- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- a2f0c72: Removed the unused `isDev` export from the internal version module.
-- a7a14b7: Added `DOM.AsyncIterable` to the default `lib` in the shared TypeScript configuration, enabling standard async iteration support for DOM APIs such as `FileSystemDirectoryHandle`. This aligns behavior with [TypeScript 6.0](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/#the-dom-lib-now-contains-domiterable-and-domasynciterable), where this lib is included in `DOM` by default.
-
-## `@backstage/cli-common` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- e928e73: chore(deps): bump `undici` from 7.22.0 to 7.24.0
-- 46ff470: Deprecated `bootstrapEnvProxyAgents()` in favor of Node.js built-in proxy support. Set `NODE_USE_ENV_PROXY=1` alongside your `HTTP_PROXY`/`HTTPS_PROXY` environment variables instead. See the [corporate proxy guide](https://backstage.io/docs/tutorials/corporate-proxy/) for details. This function will be removed in a future release.
-
-## `@backstage/cli-module-actions` (0.0.1 → 0.1.0)
-
-### 0.1.0
-
-#### Minor Changes
-
-- c705d44: Added improved CLI output formatting and UX for the actions module. The `list` command now groups actions by plugin source with colored headers and action titles. The `execute --help` command renders full action details including markdown descriptions. Complex schema types like objects, arrays, and union types are now accepted as JSON flags. Error messages from the server are now surfaced directly. The `sources add` and `sources remove` commands accept multiple plugin IDs at once.
-
-## `@backstage/cli-module-auth` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
-- c705d44: Fixed `auth login` clearing previously configured action sources and other instance metadata when re-authenticating.
-
-## `@backstage/cli-module-build` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
-- f1b493f: Fixed the embedded-postgres PID file being written before database initialization, which prevented the database from initializing successfully.
-- f52a296: Suppressed false-positive Module Federation warning for shared dependencies that use secondary entry points (e.g. `@mui/material/styles`). These sub-path `package.json` files lack a `version` field, causing the bundler to emit "No version specified" warnings that fail CI builds.
-- c16c508: When building dist-workspaces with --always-pack, batch `yarn pack` operations to avoid packing packages and their dependencies simultaneously.
-- f14df56: Added experimental support for using `embedded-postgres` as the database for local development. Set `backend.database.client` to `embedded-postgres` in your app config to enable this. The `embedded-postgres` package must be installed as an explicit dependency in your project.
-
-## `@backstage/cli-module-migrate` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/cli-module-new` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- 64a91d0: Rename the legacy `frontend-plugin` to `frontend-plugin-legacy`
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- 2b4f97a: Updated frontend-plugin template to provide a todo list visualization compatible with the backend plugin.
-
-## `@backstage/cli-module-test-jest` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
-- 6cc4811: Minor error message update
-
-## `@backstage/cli-node` (0.3.0 → 0.3.1)
-
-### 0.3.1
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/config-loader` (1.10.9 → 1.10.10)
-
-### 1.10.10
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/core-app-api` (1.19.6 → 1.20.0)
-
-### 1.20.0
-
-#### Minor Changes
-
-- 400aa23: Added `FetchMiddlewares.clarifyFailures()` which replaces the uninformative "TypeError: Failed to fetch" with a message that includes the request method and URL.
-
-#### Patch Changes
-
-- 9244b70: The default auth implementation now checks for a `logoutUrl` in the logout response body. If the auth provider returns one (e.g. Auth0 federated logout), the browser is redirected to that URL to clear the provider's session cookies. This is backward compatible — providers that return an empty response are unaffected.
-
-## `@backstage/core-compat-api` (0.5.9 → 0.5.10)
-
-### 0.5.10
-
-#### Patch Changes
-
-- 77ab7d5: Hide the default page header for pages created through the compatibility wrappers, since legacy plugins already render their own headers.
-- 49397c1: Removed unnecessary type argument from internal `createRouteRef` call.
-
-## `@backstage/core-components` (0.18.8 → 0.18.9)
-
-### 0.18.9
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- 320eed3: Resolved DOM nesting warning in OAuthRequestDialog by rendering secondary text as block-level spans.
-- 58b9f3f: Use Backstage Link component for markdown anchor rendering to ensure consistent internal and external link behavior.
-
-## `@backstage/create-app` (0.8.1 → 0.8.2)
-
-### 0.8.2
-
-#### Patch Changes
-
-- a2cb332: Bumped create-app version.
-- 6c10d88: Bumped create-app version.
-- e8ffac1: Various fixes for the `create-app` template: reorganizing sidebar items, removing redundant config and code, and adding a documentation example.
-- 72a493a: Added the `mcp-actions-backend` and `plugin-auth` plugins
-- 4cf9f3a: Removed the unnecessary `@backstage/cli-module-new` dependency from the `next-app` template, since it is already included through `@backstage/cli-defaults`.
-- 2541837: Renamed the built-in template directories from `next-app` to `default-app` and `default-app` to `legacy-app`.
-
-## `@backstage/errors` (1.2.7 → 1.3.0)
-
-### 1.3.0
-
-#### Minor Changes
-
-- b2319ff: A new `toError` utility function is now available for converting unknown values to `ErrorLike` objects. If the value is already error-like it is returned as-is, strings are used directly as the error message, and all other values are wrapped as `unknown error '<stringified>'`. Non-error causes passed to `CustomErrorBase` are now converted and stored using `toError` rather than discarded.
-
-#### Patch Changes
-
-- 608c1e5: Simplified `assertError` to delegate to `isError` instead of duplicating the same checks.
-
-## `@backstage/eslint-plugin` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- df43b0e: Fixed `no-mixed-plugin-imports` rule to return `null` from non-fixable suggestion handlers and added an explicit `SuggestionReportDescriptor[]` type annotation, matching the stricter type checking in TypeScript 6.0.
-
-## `@backstage/filter-predicates` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- 8923d6d: Added `createZodV4FilterPredicateSchema` as a zod v4 counterpart to `createZodV3FilterPredicateSchema`.
-
-## `@backstage/frontend-app-api` (0.16.1 → 0.16.2)
-
-### 0.16.2
-
-#### Patch Changes
-
-- 400aa23: Wrapped extension permission authorization in a try/catch to surface errors as `ForwardedError` with a clear message.
-- 364d4fe: Added `apis` to `BootstrapSpecializedApp` and `FinalizedSpecializedApp` types.
-
-## `@backstage/frontend-plugin-api` (0.15.1 → 0.16.0)
-
-### 0.16.0
-
-#### Minor Changes
+##### Minor Changes
 
 - fa55078: **BREAKING**: Removed the deprecated `createSchemaFromZod` helper. Use the new `configSchema` option instead. See the [1.50 migration documentation](https://backstage.io/docs/frontend-system/architecture/migrations#150) for more information.
 - 49397c1: Simplified the type signature of `createRouteRef` by replacing the dual `TParams`/`TParamKeys` type parameters with a single `TParamKey` parameter. This is a breaking change for callers that explicitly provided type arguments, but most usage that relies on inference is unaffected.
 
-#### Patch Changes
+##### Patch Changes
 
 - 4c09967: Fixed the duplicate extension error message in `createFrontendModule` to correctly say "Module" instead of "Plugin".
 - e4804ab: Added `open` method to `DialogApi` that renders dialogs without any built-in dialog chrome, giving the caller full control over the dialog presentation. This avoids focus trap conflicts that occur when mixing components from different design libraries. The existing `show` and `showModal` methods are now deprecated in favor of `open`.
@@ -284,39 +127,11 @@ Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
 - d66a3ec: Added `titleLink` prop to `PageLayoutProps` so the plugin header title can link back to the plugin root.
 - e220589: Removed the unnecessary need to use `defineParams` callback from `PluginHeaderActionBlueprint`. It still works, but is no longer required.
 
-## `@backstage/integration` (2.0.0 → 2.0.1)
+### `@backstage/plugin-auth-backend` (0.27.3 → 0.28.0)
 
-### 2.0.1
+#### 0.28.0
 
-#### Patch Changes
-
-- d112499: Fixed `SingleInstanceGithubCredentialsProvider` to return app credentials when `getCredentials` is called with a bare host URL (e.g. `https://github.com`) instead of falling back to a personal access token.
-
-## `@backstage/plugin-api-docs` (0.13.5 → 0.14.0)
-
-### 0.14.0
-
-#### Minor Changes
-
-- b871d4e: Use Entity Presentation API for entity display in api-docs plugin
-
-#### Patch Changes
-
-- da17844: Update readme to add instructions for custom api base URL
-
-## `@backstage/plugin-auth` (0.1.6 → 0.1.7)
-
-### 0.1.7
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/plugin-auth-backend` (0.27.3 → 0.28.0)
-
-### 0.28.0
-
-#### Minor Changes
+##### Minor Changes
 
 - d7c67cd: **BREAKING**: The setting `auth.omitIdentityTokenOwnershipClaim` has had its default value switched to `true`.
 
@@ -326,30 +141,16 @@ Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
 
   The setting will remain for some time to allow it to be set back to `false` if need be, but it will be removed entirely in a future release.
 
-#### Patch Changes
+##### Patch Changes
 
 - 482ceed: Migrated from `assertError` to `toError` for error handling.
 - dc87ac1: Fixed CIMD redirect URI matching to allow any port for localhost addresses per RFC 8252 Section 7.3. Native CLI clients use ephemeral ports for OAuth callbacks, which are now accepted when the registered redirect URI uses a localhost address.
 
-## `@backstage/plugin-auth-backend-module-auth0-provider` (0.3.1 → 0.4.0)
+### `@backstage/plugin-auth-node` (0.6.14 → 0.7.0)
 
-### 0.4.0
+#### 0.7.0
 
-#### Minor Changes
-
-- 9244b70: Sign-out now redirects the browser to Auth0's `/v2/logout` endpoint, clearing the Auth0 session cookie so that the next sign-in creates a new Auth0 session. Previously, only the Backstage session was cleared, allowing users to sign back in without going through Auth0 logout first.
-
-  Set `federatedLogout: true` in the Auth0 provider config to additionally clear the upstream IdP session (e.g. Okta, Google). This is what guarantees a full re-login across the entire SSO chain and may require users to re-enter credentials.
-
-#### Patch Changes
-
-- b3bbd42: Added `createAuth0Authenticator` factory function that accepts a `CacheService` to cache Auth0 profile API responses for 1 minute during token refreshes. This avoids hitting Auth0 rate limits on repeated page refreshes. The module now uses the cached variant by default. The existing `auth0Authenticator` export remains available for use without caching.
-
-## `@backstage/plugin-auth-node` (0.6.14 → 0.7.0)
-
-### 0.7.0
-
-#### Minor Changes
+##### Minor Changes
 
 - fa55078: **BREAKING**: Refactored `SignInResolverFactoryOptions` to use a schema-first generic pattern, following Zod's [recommended approach](https://zod.dev/library-authors?id=how-to-accept-user-defined-schemas#how-to-accept-user-defined-schemas) for writing generic functions. The type parameters changed from `<TAuthResult, TOptionsOutput, TOptionsInput>` to `<TAuthResult, TSchema extends ZodType>`.
 
@@ -374,114 +175,15 @@ Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
   + SignInResolverFactoryOptions<MyAuthResult, typeof mySchema>
   ```
 
-#### Patch Changes
+##### Patch Changes
 
 - 9244b70: Added `OAuthAuthenticatorLogoutResult` type. The `logout` method on `OAuthAuthenticator` can now optionally return `{ logoutUrl }` to trigger a browser redirect after sign-out. This allows providers like Auth0 to clear their session cookies by redirecting to their logout endpoint.
 
-## `@backstage/plugin-catalog` (2.0.1 → 2.0.2)
+### `@backstage/plugin-catalog-node` (2.1.0 → 2.2.0)
 
-### 2.0.2
+#### 2.2.0
 
-#### Patch Changes
-
-- e4804ab: Migrated the unregister entity context menu item from the deprecated `DialogApi.showModal` to the new `DialogApi.open` method.
-- d7b6077: Disabled the default page layout header for the catalog entity page in the new frontend system. The entity page already renders its own header through the `EntityHeader` extension, so the page layout header was redundant.
-- ee1531d: Exported the NFS variant of the catalog index page as `CatalogIndexPage` from the `./alpha` entry point, along with supporting types `CatalogIndexPageProps`, `CatalogTableRow`, and `CatalogTableColumnsFunc`. This allows adopters to use and customize the catalog index page within a `PageBlueprint` in the new frontend system.
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- 744f904: Fixed the catalog table briefly showing an empty loading state when changing filters. The table now keeps displaying stale results until new data arrives.
-- c193ef1: Added Kind field to the About Card. Tags moved before Type and Lifecycle, Kind placed after them. A new `aboutCard.kindField.label` translation key was added.
-- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
-
-## `@backstage/plugin-catalog-backend` (3.5.0 → 3.6.0)
-
-### 3.6.0
-
-#### Minor Changes
-
-- d16311f: Added a `location_entity_ref` column to the `locations` database table that stores the full entity ref of the corresponding `kind: Location` catalog entity for each registered location row. The value is pre-computed and persisted so that it no longer needs to be recomputed from the location's type and target on every read.
-- e5fcfcb: Added `ModelProcessor` that validates catalog entities against the compiled catalog model schemas, and integrated it into the `CatalogBuilder` and `CatalogPlugin`. This processor is only activated if you explicitly add catalog model sources to your backend; there is no functional change for regular catalog usage.
-- c384fff: Location responses now include an `entityRef` field with the stable entity reference for each location. The `entityRef` field is also filterable via `POST /locations/by-query`. Added `PUT /locations/:id` endpoint for updating the type and target of an existing location.
-
-#### Patch Changes
-
-- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
-- 7e63730: Removed deprecated `PermissionAuthorizer` support and the `createPermissionIntegrationRouter` fallback path from `CatalogBuilder`. The `permissionsRegistry` service is now required, and `permissions` is always a `PermissionsService`.
-- 056e18e: Removed the internal `addPermissions` and `addPermissionRules` methods from `CatalogBuilder`, and removed the `catalogPermissionExtensionPoint` wiring from `CatalogPlugin`. Custom permission rules and permissions should be registered via `coreServices.permissionsRegistry` directly.
-- 6884814: Improved catalog entity filter query performance by switching from `IN (subquery)` to `EXISTS (correlated subquery)` patterns. This enables PostgreSQL semi-join optimizations and fixes `NOT IN` NULL-semantics pitfalls by using `NOT EXISTS` instead.
-- 9da73bf: Reduced search table write churn during stitching by syncing only changed rows instead of doing a full delete and re-insert. On Postgres this uses a single writable CTE, on MySQL a temporary table merge with deadlock retry, and on SQLite the previous bulk replace.
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- 375b546: Fixed a deadlock in the catalog processing loop that occurred when running multiple replicas. The `getProcessableEntities` method used `SELECT ... FOR UPDATE SKIP LOCKED` to prevent concurrent processors from claiming the same rows, but the call was not wrapped in a transaction, so the row locks were released before the subsequent `UPDATE` executed. This allowed multiple replicas to select and update overlapping rows, causing PostgreSQL deadlock errors (code 40P01).
-- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
-
-## `@backstage/plugin-catalog-backend-module-azure` (0.3.15 → 0.3.16)
-
-### 0.3.16
-
-#### Patch Changes
-
-- 39d27ee: Add Azure DevOps SCM event translation layer for instant catalog reprocessing.
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.5.9 → 0.5.10)
-
-### 0.5.10
-
-#### Patch Changes
-
-- f215863: Added Bitbucket Cloud SCM event translation layer for the catalog backend module. The module now subscribes to Bitbucket Cloud webhook events and translates them into generic catalog SCM events, enabling instant catalog reprocessing when repositories are pushed to, renamed, transferred, or deleted. The `analyzeBitbucketCloudWebhookEvent` function is exported from the alpha entry point for custom integrations.
-
-## `@backstage/plugin-catalog-backend-module-github` (0.13.0 → 0.13.1)
-
-### 0.13.1
-
-#### Patch Changes
-
-- b11e338: Fixed a bug where `GithubEntityProvider` with `validateLocationsExist: true` and `filters.branch` configured would always check for the catalog file on the repository's default branch (`HEAD`) instead of the configured branch. This caused repositories to be filtered out when the catalog file only existed on the non-default branch.
-- edf465f: Removed the `type-fest` dev dependency, replacing its `PartialDeep` import with a local helper type in tests.
-- cca9fc2: Added automatic retry on temporary errors (like 5XX) to the shared GitHub GraphQL client used by `GithubOrgEntityProvider` and replaced the GraphQL client in `GithubEntityProvider` by this one as well, improving resilience against intermittent GitHub API failures.
-
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.8.1 → 0.8.2)
-
-### 0.8.2
-
-#### Patch Changes
-
-- 8df0796: Fixed GitLab project topic filtering by using correct API parameter 'topic' instead of 'topics'
-- 54a8300: Add GitLab SCM event translation layer for instant catalog reprocessing.
-
-## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.10 → 0.7.11)
-
-### 0.7.11
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/plugin-catalog-graph` (0.6.0 → 0.6.1)
-
-### 0.6.1
-
-#### Patch Changes
-
-- effa7bf: Updated `README-alpha.md` extension examples to use current APIs.
-- 0e147e8: Added `title` and `icon` to the new frontend system plugin definition.
-- 416ad45: Replaced `humanizeEntityRef` with the Catalog Presentation API in `CatalogGraphCard` and `CatalogGraphPage` components for consistent entity display.
-- d5899c2: Support configuring `showArrowHeads` on `page:catalog-graph` and `entity-card:catalog-graph/relations`.
-
-## `@backstage/plugin-catalog-import` (0.13.11 → 0.13.12)
-
-### 0.13.12
-
-#### Patch Changes
-
-- fa0593e: Added `title` and `icon` to the new frontend system plugin definition.
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
-
-## `@backstage/plugin-catalog-node` (2.1.0 → 2.2.0)
-
-### 2.2.0
-
-#### Minor Changes
+##### Minor Changes
 
 - e5fcfcb: Added `provideStaticCatalogModel` that helps provide a static catalog model at startup.
 - 056e18e: **BREAKING ALPHA**: Removed the deprecated `CatalogPermissionRuleInput`, `CatalogPermissionExtensionPoint`, and `catalogPermissionExtensionPoint` exports. Use `coreServices.permissionsRegistry` directly to register catalog entity permission rules and permissions.
@@ -493,347 +195,27 @@ Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
   - `CatalogProcessingExtensionPoint` / `catalogProcessingExtensionPoint` — use the non-alpha equivalents from `@backstage/plugin-catalog-node` instead
   - `CatalogAnalysisExtensionPoint` / `catalogAnalysisExtensionPoint` — use the non-alpha equivalents from `@backstage/plugin-catalog-node` instead
 
-## `@backstage/plugin-catalog-react` (2.1.1 → 2.1.2)
+### `@backstage/plugin-permission-react` (0.4.41 → 0.5.0)
 
-### 2.1.2
+#### 0.5.0
 
-#### Patch Changes
-
-- 540a031: Migrated alpha entity blueprints to use the new `configSchema` option with zod v4 schema values.
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- 51aacae: Fixed a UI flicker in the catalog entity list where changing a filter would briefly flash stale data before showing the new results.
-- eba2f61: Fixed `EntityInfoCard` header overflowing on narrow screens.
-- 7308885: Updated `catalogApiMock` to include the new `updateLocation` method stub, keeping it in sync with the `CatalogApi` interface.
-- 5f9a531: Deprecated `humanizeEntityRef` and `humanizeEntity` in favor of the Catalog Presentation API. Use `useEntityPresentation`, `EntityDisplayName`, or `entityPresentationApiRef` instead.
-- 0416216: Fixed entity relation cards (e.g., "Has components") only showing one entity at a time by using `paginationOptions: { type: 'none' }` instead of deriving page size from data length.
-- fa232da: Migrated `InspectEntityDialog` from Material UI to Backstage UI components. Added new translation keys: `inspectEntityDialog.overviewPage.copyAriaLabel`, `inspectEntityDialog.overviewPage.copiedStatus`, `inspectEntityDialog.overviewPage.helpLinkAriaLabel`, and `inspectEntityDialog.colocatedPage.entityListAriaLabel`.
-
-## `@backstage/plugin-catalog-unprocessed-entities` (0.2.28 → 0.2.29)
-
-### 0.2.29
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- b6f1fae: The unprocessed entities view is now primarily intended for use as a tab within the DevTools plugin. The standalone page is still available but disabled by default. To re-enable it, add the following to your `app-config.yaml`:
-
-  ```yaml
-  app:
-    extensions:
-      - page:catalog-unprocessed-entities
-  ```
-
-## `@backstage/plugin-devtools-backend` (0.5.15 → 0.5.16)
-
-### 0.5.16
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/plugin-events-backend-module-google-pubsub` (0.2.1 → 0.2.2)
-
-### 0.2.2
-
-#### Patch Changes
-
-- eacf362: Migrated internal metrics in `GooglePubSubConsumingEventPublisher` and `EventConsumingGooglePubSubPublisher` to use the new alpha `MetricsService`
-- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
-
-## `@backstage/plugin-gateway-backend` (1.1.3 → 1.1.4)
-
-### 1.1.4
-
-#### Patch Changes
-
-- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
-
-## `@backstage/plugin-kubernetes` (0.12.17 → 0.12.18)
-
-### 0.12.18
-
-#### Patch Changes
-
-- d156cf4: Added `title` and `icon` to the new frontend system plugin definition.
-
-## `@backstage/plugin-kubernetes-backend` (0.21.2 → 0.21.3)
-
-### 0.21.3
-
-#### Patch Changes
-
-- ed6b53c: Removed bare catch-and-rethrow blocks that served no purpose.
-
-## `@backstage/plugin-mcp-actions-backend` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
-
-- 282c114: Fix OAuth 2.0 Protected Resource Metadata endpoint returning internal plugin URL, preventing some MCP clients like Claude Code from authenticating
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- c6abc52: Fixed the `.well-known/oauth-protected-resource` resource URL to comply with
-  [RFC 9728 Section 7.3](https://datatracker.ietf.org/doc/html/rfc9728#name-impersonation-attacks). Enabling dynamic resource paths.
-
-## `@backstage/plugin-notifications` (0.5.15 → 0.5.16)
-
-### 0.5.16
-
-#### Patch Changes
-
-- 19a2a03: Migrated notifications plugin to use backstage UI
-- d156cf4: Added `title` and `icon` to the new frontend system plugin definition.
-
-## `@backstage/plugin-notifications-backend` (0.6.3 → 0.6.4)
-
-### 0.6.4
-
-#### Patch Changes
-
-- 4c1fd43: Added an action to get a user's notifications
-- 070af42: Fix handling of `limit=0` in `getNotifications` query to return empty results instead of all notifications
-
-## `@backstage/plugin-notifications-backend-module-email` (0.3.19 → 0.3.20)
-
-### 0.3.20
-
-#### Patch Changes
-
-- 19ef9fb: build(deps): bump `nodemailer` from 7.0.13 to 8.0.4
-
-## `@backstage/plugin-notifications-backend-module-slack` (0.4.0 → 0.4.1)
-
-### 0.4.1
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/plugin-org` (0.7.0 → 0.7.1)
-
-### 0.7.1
-
-#### Patch Changes
-
-- 64c9a20: The `MembersListCard` now prefers `metadata.title` over `metadata.name` when displaying the group membership card, similarly to the rest of the group profile cards
-- 87eb31c: Fixed `GroupProfileCard` and `UserProfileCard` content overflowing on narrow screens.
-- d156cf4: Added `title` and `icon` to the new frontend system plugin definition.
-- f1f59b1: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
-
-## `@backstage/plugin-org-react` (0.1.48 → 0.1.49)
-
-### 0.1.49
-
-#### Patch Changes
-
-- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
-
-## `@backstage/plugin-permission-react` (0.4.41 → 0.5.0)
-
-### 0.5.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 53954e1: **BREAKING**: Removed the deprecated `PermissionedRoute` component. Use `RequirePermission` instead.
 
-## `@backstage/plugin-scaffolder` (1.36.1 → 1.36.2)
+### `@backstage/plugin-signals-node` (0.1.29 → 0.2.0)
 
-### 1.36.2
+#### 0.2.0
 
-#### Patch Changes
-
-- 297302e: Fixed the NFS custom field explorer so loaded form fields render field options and previews correctly.
-- 864a799: Fix the display of the description in `GitlabRepoPicker`:
-
-  - Move `owner.description` helper text outside the `allowedOwners` conditional so it renders for both `Select` and `Autocomplete` modes.
-  - Update the `Autocomplete` label to use `fields.gitlabRepoPicker.owner.inputTitle` instead of `fields.gitlabRepoPicker.owner.title`.
-
-- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
-- 5d8112e: Migrated the actions page to use `@backstage/ui` list and search components. Actions are now presented in a sidebar list with a separate detail panel for the selected action, along with built-in search filtering. The selected action is also reflected in the URL hash, allowing deep-linking to a specific action.
-- 4cc9af2: Fixed the layout of the scaffolder plugin in the new frontend system to use the new page layout.
-- a7a14b7: Removed custom `IterableDirectoryHandle` and `WritableFileHandle` types in favor of the standard DOM `FileSystemDirectoryHandle` and `FileSystemFileHandle` types, which are now available through the `DOM.AsyncIterable` lib added to the shared TypeScript configuration.
-
-## `@backstage/plugin-scaffolder-backend` (3.3.0 → 3.4.0)
-
-### 3.4.0
-
-#### Minor Changes
-
-- 309b712: Added a new `execute-template` actions registry action that executes a scaffolder template with provided input values and returns a task ID for tracking progress.
-- 5af48e7: Migrated permission registration to use the `PermissionsRegistryService` instead of the deprecated `createPermissionIntegrationRouter`. This fixes an issue where scaffolder permissions were not visible to RBAC plugins because the `actionsRegistryServiceRef` dependency caused an empty permissions metadata router to shadow the scaffolder's actual permission metadata. The old `createPermissionIntegrationRouter` path is retained as a fallback for standalone `createRouter` usage.
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- 961e274: Migrated OpenTelemetry metrics to use the `MetricsService` from `@backstage/backend-plugin-api/alpha` instead of the raw `@opentelemetry/api` meter.
-- 8a42f77: Fix handling of `after=0` in task events endpoint
-- 4559806: Removed unnecessary empty `examples` array from actions bridged via the actions registry.
-- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
-- 3ef6078: Added support for conditional `if` filtering on output `links` and `text` items. Items where the `if` condition evaluates to false are now excluded from the task output.
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.3.4 → 0.3.5)
-
-### 0.3.5
-
-#### Patch Changes
-
-- ed6b53c: Removed bare catch-and-rethrow blocks that served no purpose.
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.19 → 0.2.20)
-
-### 0.2.20
-
-#### Patch Changes
-
-- ed6b53c: Removed bare catch-and-rethrow blocks that served no purpose.
-
-## `@backstage/plugin-scaffolder-backend-module-github` (0.9.7 → 0.9.8)
-
-### 0.9.8
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.5.19 → 0.5.20)
-
-### 0.5.20
-
-#### Patch Changes
-
-- 2905c59: Removed unused `jest-when` dev dependency.
-
-## `@backstage/plugin-scaffolder-common` (2.0.0 → 2.1.0)
-
-### 2.1.0
-
-#### Minor Changes
-
-- e5fcfcb: Added `scaffolderCatalogModelLayer`, a Template kind model layer with JSON Schema definition, serving as an example of how plugins can declare their own catalog entity kinds.
-
-#### Patch Changes
-
-- 3ef6078: Added optional `if` property to `ScaffolderOutputLink` and `ScaffolderOutputText` types, allowing template authors to conditionally include output links and text items.
-
-## `@backstage/plugin-scaffolder-node` (0.13.1 → 0.13.2)
-
-### 0.13.2
-
-#### Patch Changes
-
-- 5af48e7: Added `PermissionResourceRef` definitions for scaffolder resource types: `scaffolderTemplatePermissionResourceRef`, `scaffolderActionPermissionResourceRef`, and `scaffolderTaskPermissionResourceRef`. These are exported from `@backstage/plugin-scaffolder-node/alpha`.
-
-## `@backstage/plugin-scaffolder-react` (1.20.0 → 1.20.1)
-
-### 1.20.1
-
-#### Patch Changes
-
-- bdbbf00: build(deps): bump `flatted` from 3.4.1 to 3.4.2
-
-## `@backstage/plugin-search` (1.7.0 → 1.7.1)
-
-### 1.7.1
-
-#### Patch Changes
-
-- 34aebcc: Fixed the `SearchModal` leaving the page in a broken state by not restoring body overflow and aria-hidden attributes when closing.
-
-## `@backstage/plugin-search-backend-module-pg` (0.5.53 → 0.5.54)
-
-### 0.5.54
-
-#### Patch Changes
-
-- aa08b7f: Fix a bug in large document indexing logic by using sub-transaction rollbacks
-
-## `@backstage/plugin-search-backend-module-techdocs` (0.4.12 → 0.4.13)
-
-### 0.4.13
-
-#### Patch Changes
-
-- 5e32f77: Migrated internal usage of the deprecated `catalogServiceRef` from `@backstage/plugin-catalog-node/alpha` to the stable `catalogServiceRef` from `@backstage/plugin-catalog-node`.
-
-## `@backstage/plugin-search-backend-node` (1.4.2 → 1.4.3)
-
-### 1.4.3
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/plugin-signals` (0.0.29 → 0.0.30)
-
-### 0.0.30
-
-#### Patch Changes
-
-- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
-- d156cf4: Added `title` and `icon` to the new frontend system plugin definition.
-
-## `@backstage/plugin-signals-node` (0.1.29 → 0.2.0)
-
-### 0.2.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 8397a9c: **BREAKING**: Removed the deprecated `SignalService` and `DefaultSignalService` exports. Use `SignalsService` and `DefaultSignalsService` instead.
 
-## `@backstage/plugin-techdocs` (1.17.2 → 1.17.3)
+### `@backstage/ui` (0.13.3 → 0.14.0)
 
-### 1.17.3
+#### 0.14.0
 
-#### Patch Changes
-
-- dc3cc87: Migrated the TechDocs alpha plugin pages to use BUI components. The index page and reader page now use BUI `Header` and `Container` instead of legacy `Page`/`Content`/`ContentHeader` wrappers. Added a `SupportButton` as a plugin header action. Changed plugin title to "Documentation" and icon to `RiArticleLine`.
-- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
-
-## `@backstage/plugin-techdocs-backend` (2.1.6 → 2.1.7)
-
-### 2.1.7
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- 5e32f77: Migrated internal usage of the deprecated `catalogServiceRef` from `@backstage/plugin-catalog-node/alpha` to the stable `catalogServiceRef` from `@backstage/plugin-catalog-node`.
-
-## `@backstage/plugin-techdocs-node` (1.14.4 → 1.14.5)
-
-### 1.14.5
-
-#### Patch Changes
-
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-
-## `@backstage/repo-tools` (0.17.0 → 0.17.1)
-
-### 0.17.1
-
-#### Patch Changes
-
-- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
-- 482ceed: Migrated from `assertError` to `toError` for error handling.
-- 377de36: Fixed the `peer-deps` command to only require peer dependencies that are actually referenced by each package, rather than requiring all tracked peer dependencies for every package with any React dependency.
-- 8e9679b: Parallelized CLI report generation, reducing wall-clock time by ~4x.
-- ca2dc15: Internal code cleanup.
-- 270efef: Added support for packages that only support React 18+ in the `peer-deps` command.
-
-## `@backstage/theme` (0.7.2 → 0.7.3)
-
-### 0.7.3
-
-#### Patch Changes
-
-- a0100d4: Fixes occasional duplication of v5 class name prefix for MUI 5 components.
-
-  Documentation added to explain how to resolve missing v5 prefix in class names when using MUI 5 components in main app.
-
-## `@backstage/ui` (0.13.3 → 0.14.0)
-
-### 0.14.0
-
-#### Minor Changes
+##### Minor Changes
 
 - 8659f33: **BREAKING**: The `Header` component's `tabs` prop now uses `HeaderNavTabItem[]` instead of `HeaderTab[]`. Tabs render as a `<nav>` element with links and optional dropdown menus instead of `role="tablist"`. A new `activeTabId` prop controls which tab is highlighted.
 
@@ -871,7 +253,7 @@ Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
 
   **Affected components:** PluginHeader
 
-#### Patch Changes
+##### Patch Changes
 
 - 4032ad7: Added new `Badge` component for non-interactive labeling and categorization of content. It shares the visual appearance of `Tag` but renders as a plain DOM element with no interactive states.
 
@@ -943,11 +325,736 @@ Changes between 1.49.5 and 1.50.0 — 197 changed and 0 added packages.
 
   **Affected components:** Header
 
-## `@techdocs/cli` (1.10.6 → 1.10.7)
+## 0.x minor version bumps
 
-### 1.10.7
+### `@backstage/backend-defaults` (0.16.0 → 0.17.0)
 
-#### Patch Changes
+#### 0.17.0
+
+##### Minor Changes
+
+- c69e03c: Added support for AWS RDS IAM authentication for PostgreSQL connections. Set `connection.type: rds` along with `host`, `user`, and `region` to use short-lived IAM tokens instead of a static password. Requires the `@aws-sdk/rds-signer` package and an IAM role with `rds-db:connect` permission.
+
+##### Patch Changes
+
+- 4559806: Added support for typed `examples` on actions registered via the actions registry. Action authors can now provide examples with compile-time-checked `input` and `output` values that match their schema definitions.
+- 5cd814f: Refactored auditor severity log level mappings to use `zod/v4` with schema-driven defaults and type inference.
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- 6e2aaab: Fixed `AwsS3UrlReader` failing to read files from S3 buckets configured with custom endpoint hosts. When an integration was configured with a specific endpoint like `https://bucket-1.s3.eu-central-1.amazonaws.com`, the URL parser incorrectly fell through to the non-AWS code path, always defaulting the region to `us-east-1` instead of extracting it from the hostname.
+- 308c672: `HostDiscovery` now logs a warning when `backend.baseUrl` is set to a localhost address while `NODE_ENV` is `production`, and when `backend.baseUrl` is not a valid URL.
+- 85c5a46: DefaultActionsRegistryService: add json middleware to /.backstage/actions/ routes only
+- 547258f: Refactored the database creation retry loop to avoid an unnecessary delay after the final failed attempt.
+- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
+- f14df56: Added experimental support for using `embedded-postgres` as the database for local development. Set `backend.database.client` to `embedded-postgres` in your app config to enable this. The `embedded-postgres` package must be installed as an explicit dependency in your project.
+
+### `@backstage/cli-module-actions` (0.0.1 → 0.1.0)
+
+#### 0.1.0
+
+##### Minor Changes
+
+- c705d44: Added improved CLI output formatting and UX for the actions module. The `list` command now groups actions by plugin source with colored headers and action titles. The `execute --help` command renders full action details including markdown descriptions. Complex schema types like objects, arrays, and union types are now accepted as JSON flags. Error messages from the server are now surfaced directly. The `sources add` and `sources remove` commands accept multiple plugin IDs at once.
+
+### `@backstage/plugin-api-docs` (0.13.5 → 0.14.0)
+
+#### 0.14.0
+
+##### Minor Changes
+
+- b871d4e: Use Entity Presentation API for entity display in api-docs plugin
+
+##### Patch Changes
+
+- da17844: Update readme to add instructions for custom api base URL
+
+### `@backstage/plugin-auth-backend-module-auth0-provider` (0.3.1 → 0.4.0)
+
+#### 0.4.0
+
+##### Minor Changes
+
+- 9244b70: Sign-out now redirects the browser to Auth0's `/v2/logout` endpoint, clearing the Auth0 session cookie so that the next sign-in creates a new Auth0 session. Previously, only the Backstage session was cleared, allowing users to sign back in without going through Auth0 logout first.
+
+  Set `federatedLogout: true` in the Auth0 provider config to additionally clear the upstream IdP session (e.g. Okta, Google). This is what guarantees a full re-login across the entire SSO chain and may require users to re-enter credentials.
+
+##### Patch Changes
+
+- b3bbd42: Added `createAuth0Authenticator` factory function that accepts a `CacheService` to cache Auth0 profile API responses for 1 minute during token refreshes. This avoids hitting Auth0 rate limits on repeated page refreshes. The module now uses the cached variant by default. The existing `auth0Authenticator` export remains available for use without caching.
+
+## 0.0.x patch version bumps
+
+### `@backstage/plugin-signals` (0.0.29 → 0.0.30)
+
+#### 0.0.30
+
+##### Patch Changes
+
+- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
+- d156cf4: Added `title` and `icon` to the new frontend system plugin definition.
+
+## Other minor version bumps
+
+### `@backstage/backend-plugin-api` (1.8.0 → 1.9.0)
+
+#### 1.9.0
+
+##### Minor Changes
+
+- 4559806: Added support for typed `examples` on actions registered via the actions registry. Action authors can now provide examples with compile-time-checked `input` and `output` values that match their schema definitions.
+
+##### Patch Changes
+
+- 213ebe7: Aligned `.T` behavior between `ExtensionPoint` and `ServiceRef` to consistently return `null` instead of throwing.
+- 68c557b: Added stricter type checks in `isDatabaseConflictError`.
+
+### `@backstage/catalog-model` (1.7.7 → 1.8.0)
+
+#### 1.8.0
+
+##### Minor Changes
+
+- e5fcfcb: Added a new catalog model layer system that allows plugins to declare and extend catalog entity kinds, annotations, labels, tags, and relations using JSON Schema. The new `createCatalogModelLayer` API provides a builder for composing model definitions, and a `compileCatalogModel` function validates and merges them into a unified model. Built-in entity kinds now include model layer definitions.
+
+### `@backstage/core-app-api` (1.19.6 → 1.20.0)
+
+#### 1.20.0
+
+##### Minor Changes
+
+- 400aa23: Added `FetchMiddlewares.clarifyFailures()` which replaces the uninformative "TypeError: Failed to fetch" with a message that includes the request method and URL.
+
+##### Patch Changes
+
+- 9244b70: The default auth implementation now checks for a `logoutUrl` in the logout response body. If the auth provider returns one (e.g. Auth0 federated logout), the browser is redirected to that URL to clear the provider's session cookies. This is backward compatible — providers that return an empty response are unaffected.
+
+### `@backstage/errors` (1.2.7 → 1.3.0)
+
+#### 1.3.0
+
+##### Minor Changes
+
+- b2319ff: A new `toError` utility function is now available for converting unknown values to `ErrorLike` objects. If the value is already error-like it is returned as-is, strings are used directly as the error message, and all other values are wrapped as `unknown error '<stringified>'`. Non-error causes passed to `CustomErrorBase` are now converted and stored using `toError` rather than discarded.
+
+##### Patch Changes
+
+- 608c1e5: Simplified `assertError` to delegate to `isError` instead of duplicating the same checks.
+
+### `@backstage/plugin-catalog-backend` (3.5.0 → 3.6.0)
+
+#### 3.6.0
+
+##### Minor Changes
+
+- d16311f: Added a `location_entity_ref` column to the `locations` database table that stores the full entity ref of the corresponding `kind: Location` catalog entity for each registered location row. The value is pre-computed and persisted so that it no longer needs to be recomputed from the location's type and target on every read.
+- e5fcfcb: Added `ModelProcessor` that validates catalog entities against the compiled catalog model schemas, and integrated it into the `CatalogBuilder` and `CatalogPlugin`. This processor is only activated if you explicitly add catalog model sources to your backend; there is no functional change for regular catalog usage.
+- c384fff: Location responses now include an `entityRef` field with the stable entity reference for each location. The `entityRef` field is also filterable via `POST /locations/by-query`. Added `PUT /locations/:id` endpoint for updating the type and target of an existing location.
+
+##### Patch Changes
+
+- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
+- 7e63730: Removed deprecated `PermissionAuthorizer` support and the `createPermissionIntegrationRouter` fallback path from `CatalogBuilder`. The `permissionsRegistry` service is now required, and `permissions` is always a `PermissionsService`.
+- 056e18e: Removed the internal `addPermissions` and `addPermissionRules` methods from `CatalogBuilder`, and removed the `catalogPermissionExtensionPoint` wiring from `CatalogPlugin`. Custom permission rules and permissions should be registered via `coreServices.permissionsRegistry` directly.
+- 6884814: Improved catalog entity filter query performance by switching from `IN (subquery)` to `EXISTS (correlated subquery)` patterns. This enables PostgreSQL semi-join optimizations and fixes `NOT IN` NULL-semantics pitfalls by using `NOT EXISTS` instead.
+- 9da73bf: Reduced search table write churn during stitching by syncing only changed rows instead of doing a full delete and re-insert. On Postgres this uses a single writable CTE, on MySQL a temporary table merge with deadlock retry, and on SQLite the previous bulk replace.
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- 375b546: Fixed a deadlock in the catalog processing loop that occurred when running multiple replicas. The `getProcessableEntities` method used `SELECT ... FOR UPDATE SKIP LOCKED` to prevent concurrent processors from claiming the same rows, but the call was not wrapped in a transaction, so the row locks were released before the subsequent `UPDATE` executed. This allowed multiple replicas to select and update overlapping rows, causing PostgreSQL deadlock errors (code 40P01).
+- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
+
+### `@backstage/plugin-scaffolder-backend` (3.3.0 → 3.4.0)
+
+#### 3.4.0
+
+##### Minor Changes
+
+- 309b712: Added a new `execute-template` actions registry action that executes a scaffolder template with provided input values and returns a task ID for tracking progress.
+- 5af48e7: Migrated permission registration to use the `PermissionsRegistryService` instead of the deprecated `createPermissionIntegrationRouter`. This fixes an issue where scaffolder permissions were not visible to RBAC plugins because the `actionsRegistryServiceRef` dependency caused an empty permissions metadata router to shadow the scaffolder's actual permission metadata. The old `createPermissionIntegrationRouter` path is retained as a fallback for standalone `createRouter` usage.
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- 961e274: Migrated OpenTelemetry metrics to use the `MetricsService` from `@backstage/backend-plugin-api/alpha` instead of the raw `@opentelemetry/api` meter.
+- 8a42f77: Fix handling of `after=0` in task events endpoint
+- 4559806: Removed unnecessary empty `examples` array from actions bridged via the actions registry.
+- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
+- 3ef6078: Added support for conditional `if` filtering on output `links` and `text` items. Items where the `if` condition evaluates to false are now excluded from the task output.
+
+### `@backstage/plugin-scaffolder-common` (2.0.0 → 2.1.0)
+
+#### 2.1.0
+
+##### Minor Changes
+
+- e5fcfcb: Added `scaffolderCatalogModelLayer`, a Template kind model layer with JSON Schema definition, serving as an example of how plugins can declare their own catalog entity kinds.
+
+##### Patch Changes
+
+- 3ef6078: Added optional `if` property to `ScaffolderOutputLink` and `ScaffolderOutputText` types, allowing template authors to conditionally include output links and text items.
+
+## Other patch version bumps
+
+### `@backstage/app-defaults` (1.7.6 → 1.7.7)
+
+#### 1.7.7
+
+##### Patch Changes
+
+- 400aa23: Added `FetchMiddlewares.clarifyFailures()` to the default fetch API middleware stack.
+
+### `@backstage/backend-app-api` (1.6.0 → 1.6.1)
+
+#### 1.6.1
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/backend-dynamic-feature-service` (0.8.0 → 0.8.1)
+
+#### 0.8.1
+
+##### Patch Changes
+
+- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
+
+### `@backstage/backend-openapi-utils` (0.6.7 → 0.6.8)
+
+#### 0.6.8
+
+##### Patch Changes
+
+- 59dd9b9: Fixes a memory leak during `wrapServer` where stopped servers weren't removed from the clean up list.
+
+### `@backstage/backend-test-utils` (1.11.1 → 1.11.2)
+
+#### 1.11.2
+
+##### Patch Changes
+
+- 4559806: Added support for typed `examples` on actions registered via the actions registry. Action authors can now provide examples with compile-time-checked `input` and `output` values that match their schema definitions.
+- f44c6bd: Deduplicated internal readiness-polling helpers used by the database and cache test infrastructure.
+
+### `@backstage/cli` (0.36.0 → 0.36.1)
+
+#### 0.36.1
+
+##### Patch Changes
+
+- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- a2f0c72: Removed the unused `isDev` export from the internal version module.
+- a7a14b7: Added `DOM.AsyncIterable` to the default `lib` in the shared TypeScript configuration, enabling standard async iteration support for DOM APIs such as `FileSystemDirectoryHandle`. This aligns behavior with [TypeScript 6.0](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/#the-dom-lib-now-contains-domiterable-and-domasynciterable), where this lib is included in `DOM` by default.
+
+### `@backstage/cli-common` (0.2.0 → 0.2.1)
+
+#### 0.2.1
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- e928e73: chore(deps): bump `undici` from 7.22.0 to 7.24.0
+- 46ff470: Deprecated `bootstrapEnvProxyAgents()` in favor of Node.js built-in proxy support. Set `NODE_USE_ENV_PROXY=1` alongside your `HTTP_PROXY`/`HTTPS_PROXY` environment variables instead. See the [corporate proxy guide](https://backstage.io/docs/tutorials/corporate-proxy/) for details. This function will be removed in a future release.
+
+### `@backstage/cli-module-auth` (0.1.0 → 0.1.1)
+
+#### 0.1.1
+
+##### Patch Changes
+
+- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
+- c705d44: Fixed `auth login` clearing previously configured action sources and other instance metadata when re-authenticating.
+
+### `@backstage/cli-module-build` (0.1.0 → 0.1.1)
+
+#### 0.1.1
+
+##### Patch Changes
+
+- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
+- f1b493f: Fixed the embedded-postgres PID file being written before database initialization, which prevented the database from initializing successfully.
+- f52a296: Suppressed false-positive Module Federation warning for shared dependencies that use secondary entry points (e.g. `@mui/material/styles`). These sub-path `package.json` files lack a `version` field, causing the bundler to emit "No version specified" warnings that fail CI builds.
+- c16c508: When building dist-workspaces with --always-pack, batch `yarn pack` operations to avoid packing packages and their dependencies simultaneously.
+- f14df56: Added experimental support for using `embedded-postgres` as the database for local development. Set `backend.database.client` to `embedded-postgres` in your app config to enable this. The `embedded-postgres` package must be installed as an explicit dependency in your project.
+
+### `@backstage/cli-module-migrate` (0.1.0 → 0.1.1)
+
+#### 0.1.1
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/cli-module-new` (0.1.1 → 0.1.2)
+
+#### 0.1.2
+
+##### Patch Changes
+
+- 64a91d0: Rename the legacy `frontend-plugin` to `frontend-plugin-legacy`
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- 2b4f97a: Updated frontend-plugin template to provide a todo list visualization compatible with the backend plugin.
+
+### `@backstage/cli-module-test-jest` (0.1.0 → 0.1.1)
+
+#### 0.1.1
+
+##### Patch Changes
+
+- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
+- 6cc4811: Minor error message update
+
+### `@backstage/cli-node` (0.3.0 → 0.3.1)
+
+#### 0.3.1
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/config-loader` (1.10.9 → 1.10.10)
+
+#### 1.10.10
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/core-compat-api` (0.5.9 → 0.5.10)
+
+#### 0.5.10
+
+##### Patch Changes
+
+- 77ab7d5: Hide the default page header for pages created through the compatibility wrappers, since legacy plugins already render their own headers.
+- 49397c1: Removed unnecessary type argument from internal `createRouteRef` call.
+
+### `@backstage/core-components` (0.18.8 → 0.18.9)
+
+#### 0.18.9
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- 320eed3: Resolved DOM nesting warning in OAuthRequestDialog by rendering secondary text as block-level spans.
+- 58b9f3f: Use Backstage Link component for markdown anchor rendering to ensure consistent internal and external link behavior.
+
+### `@backstage/create-app` (0.8.1 → 0.8.2)
+
+#### 0.8.2
+
+##### Patch Changes
+
+- a2cb332: Bumped create-app version.
+- 6c10d88: Bumped create-app version.
+- e8ffac1: Various fixes for the `create-app` template: reorganizing sidebar items, removing redundant config and code, and adding a documentation example.
+- 72a493a: Added the `mcp-actions-backend` and `plugin-auth` plugins
+- 4cf9f3a: Removed the unnecessary `@backstage/cli-module-new` dependency from the `next-app` template, since it is already included through `@backstage/cli-defaults`.
+- 2541837: Renamed the built-in template directories from `next-app` to `default-app` and `default-app` to `legacy-app`.
+
+### `@backstage/eslint-plugin` (0.2.2 → 0.2.3)
+
+#### 0.2.3
+
+##### Patch Changes
+
+- df43b0e: Fixed `no-mixed-plugin-imports` rule to return `null` from non-fixable suggestion handlers and added an explicit `SuggestionReportDescriptor[]` type annotation, matching the stricter type checking in TypeScript 6.0.
+
+### `@backstage/filter-predicates` (0.1.1 → 0.1.2)
+
+#### 0.1.2
+
+##### Patch Changes
+
+- 8923d6d: Added `createZodV4FilterPredicateSchema` as a zod v4 counterpart to `createZodV3FilterPredicateSchema`.
+
+### `@backstage/frontend-app-api` (0.16.1 → 0.16.2)
+
+#### 0.16.2
+
+##### Patch Changes
+
+- 400aa23: Wrapped extension permission authorization in a try/catch to surface errors as `ForwardedError` with a clear message.
+- 364d4fe: Added `apis` to `BootstrapSpecializedApp` and `FinalizedSpecializedApp` types.
+
+### `@backstage/integration` (2.0.0 → 2.0.1)
+
+#### 2.0.1
+
+##### Patch Changes
+
+- d112499: Fixed `SingleInstanceGithubCredentialsProvider` to return app credentials when `getCredentials` is called with a bare host URL (e.g. `https://github.com`) instead of falling back to a personal access token.
+
+### `@backstage/plugin-auth` (0.1.6 → 0.1.7)
+
+#### 0.1.7
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/plugin-catalog` (2.0.1 → 2.0.2)
+
+#### 2.0.2
+
+##### Patch Changes
+
+- e4804ab: Migrated the unregister entity context menu item from the deprecated `DialogApi.showModal` to the new `DialogApi.open` method.
+- d7b6077: Disabled the default page layout header for the catalog entity page in the new frontend system. The entity page already renders its own header through the `EntityHeader` extension, so the page layout header was redundant.
+- ee1531d: Exported the NFS variant of the catalog index page as `CatalogIndexPage` from the `./alpha` entry point, along with supporting types `CatalogIndexPageProps`, `CatalogTableRow`, and `CatalogTableColumnsFunc`. This allows adopters to use and customize the catalog index page within a `PageBlueprint` in the new frontend system.
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- 744f904: Fixed the catalog table briefly showing an empty loading state when changing filters. The table now keeps displaying stale results until new data arrives.
+- c193ef1: Added Kind field to the About Card. Tags moved before Type and Lifecycle, Kind placed after them. A new `aboutCard.kindField.label` translation key was added.
+- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
+
+### `@backstage/plugin-catalog-backend-module-azure` (0.3.15 → 0.3.16)
+
+#### 0.3.16
+
+##### Patch Changes
+
+- 39d27ee: Add Azure DevOps SCM event translation layer for instant catalog reprocessing.
+
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.5.9 → 0.5.10)
+
+#### 0.5.10
+
+##### Patch Changes
+
+- f215863: Added Bitbucket Cloud SCM event translation layer for the catalog backend module. The module now subscribes to Bitbucket Cloud webhook events and translates them into generic catalog SCM events, enabling instant catalog reprocessing when repositories are pushed to, renamed, transferred, or deleted. The `analyzeBitbucketCloudWebhookEvent` function is exported from the alpha entry point for custom integrations.
+
+### `@backstage/plugin-catalog-backend-module-github` (0.13.0 → 0.13.1)
+
+#### 0.13.1
+
+##### Patch Changes
+
+- b11e338: Fixed a bug where `GithubEntityProvider` with `validateLocationsExist: true` and `filters.branch` configured would always check for the catalog file on the repository's default branch (`HEAD`) instead of the configured branch. This caused repositories to be filtered out when the catalog file only existed on the non-default branch.
+- edf465f: Removed the `type-fest` dev dependency, replacing its `PartialDeep` import with a local helper type in tests.
+- cca9fc2: Added automatic retry on temporary errors (like 5XX) to the shared GitHub GraphQL client used by `GithubOrgEntityProvider` and replaced the GraphQL client in `GithubEntityProvider` by this one as well, improving resilience against intermittent GitHub API failures.
+
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.8.1 → 0.8.2)
+
+#### 0.8.2
+
+##### Patch Changes
+
+- 8df0796: Fixed GitLab project topic filtering by using correct API parameter 'topic' instead of 'topics'
+- 54a8300: Add GitLab SCM event translation layer for instant catalog reprocessing.
+
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.10 → 0.7.11)
+
+#### 0.7.11
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/plugin-catalog-graph` (0.6.0 → 0.6.1)
+
+#### 0.6.1
+
+##### Patch Changes
+
+- effa7bf: Updated `README-alpha.md` extension examples to use current APIs.
+- 0e147e8: Added `title` and `icon` to the new frontend system plugin definition.
+- 416ad45: Replaced `humanizeEntityRef` with the Catalog Presentation API in `CatalogGraphCard` and `CatalogGraphPage` components for consistent entity display.
+- d5899c2: Support configuring `showArrowHeads` on `page:catalog-graph` and `entity-card:catalog-graph/relations`.
+
+### `@backstage/plugin-catalog-import` (0.13.11 → 0.13.12)
+
+#### 0.13.12
+
+##### Patch Changes
+
+- fa0593e: Added `title` and `icon` to the new frontend system plugin definition.
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
+
+### `@backstage/plugin-catalog-react` (2.1.1 → 2.1.2)
+
+#### 2.1.2
+
+##### Patch Changes
+
+- 540a031: Migrated alpha entity blueprints to use the new `configSchema` option with zod v4 schema values.
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- 51aacae: Fixed a UI flicker in the catalog entity list where changing a filter would briefly flash stale data before showing the new results.
+- eba2f61: Fixed `EntityInfoCard` header overflowing on narrow screens.
+- 7308885: Updated `catalogApiMock` to include the new `updateLocation` method stub, keeping it in sync with the `CatalogApi` interface.
+- 5f9a531: Deprecated `humanizeEntityRef` and `humanizeEntity` in favor of the Catalog Presentation API. Use `useEntityPresentation`, `EntityDisplayName`, or `entityPresentationApiRef` instead.
+- 0416216: Fixed entity relation cards (e.g., "Has components") only showing one entity at a time by using `paginationOptions: { type: 'none' }` instead of deriving page size from data length.
+- fa232da: Migrated `InspectEntityDialog` from Material UI to Backstage UI components. Added new translation keys: `inspectEntityDialog.overviewPage.copyAriaLabel`, `inspectEntityDialog.overviewPage.copiedStatus`, `inspectEntityDialog.overviewPage.helpLinkAriaLabel`, and `inspectEntityDialog.colocatedPage.entityListAriaLabel`.
+
+### `@backstage/plugin-catalog-unprocessed-entities` (0.2.28 → 0.2.29)
+
+#### 0.2.29
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- b6f1fae: The unprocessed entities view is now primarily intended for use as a tab within the DevTools plugin. The standalone page is still available but disabled by default. To re-enable it, add the following to your `app-config.yaml`:
+
+  ```yaml
+  app:
+    extensions:
+      - page:catalog-unprocessed-entities
+  ```
+
+### `@backstage/plugin-devtools-backend` (0.5.15 → 0.5.16)
+
+#### 0.5.16
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/plugin-events-backend-module-google-pubsub` (0.2.1 → 0.2.2)
+
+#### 0.2.2
+
+##### Patch Changes
+
+- eacf362: Migrated internal metrics in `GooglePubSubConsumingEventPublisher` and `EventConsumingGooglePubSubPublisher` to use the new alpha `MetricsService`
+- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
+
+### `@backstage/plugin-gateway-backend` (1.1.3 → 1.1.4)
+
+#### 1.1.4
+
+##### Patch Changes
+
+- 79453c0: Updated dependency `wait-for-expect` to `^4.0.0`.
+
+### `@backstage/plugin-kubernetes` (0.12.17 → 0.12.18)
+
+#### 0.12.18
+
+##### Patch Changes
+
+- d156cf4: Added `title` and `icon` to the new frontend system plugin definition.
+
+### `@backstage/plugin-kubernetes-backend` (0.21.2 → 0.21.3)
+
+#### 0.21.3
+
+##### Patch Changes
+
+- ed6b53c: Removed bare catch-and-rethrow blocks that served no purpose.
+
+### `@backstage/plugin-mcp-actions-backend` (0.1.11 → 0.1.12)
+
+#### 0.1.12
+
+##### Patch Changes
+
+- 282c114: Fix OAuth 2.0 Protected Resource Metadata endpoint returning internal plugin URL, preventing some MCP clients like Claude Code from authenticating
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- c6abc52: Fixed the `.well-known/oauth-protected-resource` resource URL to comply with
+  [RFC 9728 Section 7.3](https://datatracker.ietf.org/doc/html/rfc9728#name-impersonation-attacks). Enabling dynamic resource paths.
+
+### `@backstage/plugin-notifications` (0.5.15 → 0.5.16)
+
+#### 0.5.16
+
+##### Patch Changes
+
+- 19a2a03: Migrated notifications plugin to use backstage UI
+- d156cf4: Added `title` and `icon` to the new frontend system plugin definition.
+
+### `@backstage/plugin-notifications-backend` (0.6.3 → 0.6.4)
+
+#### 0.6.4
+
+##### Patch Changes
+
+- 4c1fd43: Added an action to get a user's notifications
+- 070af42: Fix handling of `limit=0` in `getNotifications` query to return empty results instead of all notifications
+
+### `@backstage/plugin-notifications-backend-module-email` (0.3.19 → 0.3.20)
+
+#### 0.3.20
+
+##### Patch Changes
+
+- 19ef9fb: build(deps): bump `nodemailer` from 7.0.13 to 8.0.4
+
+### `@backstage/plugin-notifications-backend-module-slack` (0.4.0 → 0.4.1)
+
+#### 0.4.1
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/plugin-org` (0.7.0 → 0.7.1)
+
+#### 0.7.1
+
+##### Patch Changes
+
+- 64c9a20: The `MembersListCard` now prefers `metadata.title` over `metadata.name` when displaying the group membership card, similarly to the rest of the group profile cards
+- 87eb31c: Fixed `GroupProfileCard` and `UserProfileCard` content overflowing on narrow screens.
+- d156cf4: Added `title` and `icon` to the new frontend system plugin definition.
+- f1f59b1: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
+
+### `@backstage/plugin-org-react` (0.1.48 → 0.1.49)
+
+#### 0.1.49
+
+##### Patch Changes
+
+- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
+
+### `@backstage/plugin-scaffolder` (1.36.1 → 1.36.2)
+
+#### 1.36.2
+
+##### Patch Changes
+
+- 297302e: Fixed the NFS custom field explorer so loaded form fields render field options and previews correctly.
+- 864a799: Fix the display of the description in `GitlabRepoPicker`:
+
+  - Move `owner.description` helper text outside the `allowedOwners` conditional so it renders for both `Select` and `Autocomplete` modes.
+  - Update the `Autocomplete` label to use `fields.gitlabRepoPicker.owner.inputTitle` instead of `fields.gitlabRepoPicker.owner.title`.
+
+- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
+- 5d8112e: Migrated the actions page to use `@backstage/ui` list and search components. Actions are now presented in a sidebar list with a separate detail panel for the selected action, along with built-in search filtering. The selected action is also reflected in the URL hash, allowing deep-linking to a specific action.
+- 4cc9af2: Fixed the layout of the scaffolder plugin in the new frontend system to use the new page layout.
+- a7a14b7: Removed custom `IterableDirectoryHandle` and `WritableFileHandle` types in favor of the standard DOM `FileSystemDirectoryHandle` and `FileSystemFileHandle` types, which are now available through the `DOM.AsyncIterable` lib added to the shared TypeScript configuration.
+
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.3.4 → 0.3.5)
+
+#### 0.3.5
+
+##### Patch Changes
+
+- ed6b53c: Removed bare catch-and-rethrow blocks that served no purpose.
+
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.19 → 0.2.20)
+
+#### 0.2.20
+
+##### Patch Changes
+
+- ed6b53c: Removed bare catch-and-rethrow blocks that served no purpose.
+
+### `@backstage/plugin-scaffolder-backend-module-github` (0.9.7 → 0.9.8)
+
+#### 0.9.8
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.5.19 → 0.5.20)
+
+#### 0.5.20
+
+##### Patch Changes
+
+- 2905c59: Removed unused `jest-when` dev dependency.
+
+### `@backstage/plugin-scaffolder-node` (0.13.1 → 0.13.2)
+
+#### 0.13.2
+
+##### Patch Changes
+
+- 5af48e7: Added `PermissionResourceRef` definitions for scaffolder resource types: `scaffolderTemplatePermissionResourceRef`, `scaffolderActionPermissionResourceRef`, and `scaffolderTaskPermissionResourceRef`. These are exported from `@backstage/plugin-scaffolder-node/alpha`.
+
+### `@backstage/plugin-scaffolder-react` (1.20.0 → 1.20.1)
+
+#### 1.20.1
+
+##### Patch Changes
+
+- bdbbf00: build(deps): bump `flatted` from 3.4.1 to 3.4.2
+
+### `@backstage/plugin-search` (1.7.0 → 1.7.1)
+
+#### 1.7.1
+
+##### Patch Changes
+
+- 34aebcc: Fixed the `SearchModal` leaving the page in a broken state by not restoring body overflow and aria-hidden attributes when closing.
+
+### `@backstage/plugin-search-backend-module-pg` (0.5.53 → 0.5.54)
+
+#### 0.5.54
+
+##### Patch Changes
+
+- aa08b7f: Fix a bug in large document indexing logic by using sub-transaction rollbacks
+
+### `@backstage/plugin-search-backend-module-techdocs` (0.4.12 → 0.4.13)
+
+#### 0.4.13
+
+##### Patch Changes
+
+- 5e32f77: Migrated internal usage of the deprecated `catalogServiceRef` from `@backstage/plugin-catalog-node/alpha` to the stable `catalogServiceRef` from `@backstage/plugin-catalog-node`.
+
+### `@backstage/plugin-search-backend-node` (1.4.2 → 1.4.3)
+
+#### 1.4.3
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/plugin-techdocs` (1.17.2 → 1.17.3)
+
+#### 1.17.3
+
+##### Patch Changes
+
+- dc3cc87: Migrated the TechDocs alpha plugin pages to use BUI components. The index page and reader page now use BUI `Header` and `Container` instead of legacy `Page`/`Content`/`ContentHeader` wrappers. Added a `SupportButton` as a plugin header action. Changed plugin title to "Documentation" and icon to `RiArticleLine`.
+- e5af44c: Replaced deprecated `humanizeEntityRef` usage with the Catalog Presentation API.
+
+### `@backstage/plugin-techdocs-backend` (2.1.6 → 2.1.7)
+
+#### 2.1.7
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- 5e32f77: Migrated internal usage of the deprecated `catalogServiceRef` from `@backstage/plugin-catalog-node/alpha` to the stable `catalogServiceRef` from `@backstage/plugin-catalog-node`.
+
+### `@backstage/plugin-techdocs-node` (1.14.4 → 1.14.5)
+
+#### 1.14.5
+
+##### Patch Changes
+
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+
+### `@backstage/repo-tools` (0.17.0 → 0.17.1)
+
+#### 0.17.1
+
+##### Patch Changes
+
+- 2e5c5f8: Bumped `glob` dependency from v7/v8/v11 to v13 to address security vulnerabilities in older versions. Bumped `rollup` from v4.27 to v4.59+ to fix a high severity path traversal vulnerability (GHSA-mw96-cpmx-2vgc).
+- 482ceed: Migrated from `assertError` to `toError` for error handling.
+- 377de36: Fixed the `peer-deps` command to only require peer dependencies that are actually referenced by each package, rather than requiring all tracked peer dependencies for every package with any React dependency.
+- 8e9679b: Parallelized CLI report generation, reducing wall-clock time by ~4x.
+- ca2dc15: Internal code cleanup.
+- 270efef: Added support for packages that only support React 18+ in the `peer-deps` command.
+
+### `@backstage/theme` (0.7.2 → 0.7.3)
+
+#### 0.7.3
+
+##### Patch Changes
+
+- a0100d4: Fixes occasional duplication of v5 class name prefix for MUI 5 components.
+
+  Documentation added to explain how to resolve missing v5 prefix in class names when using MUI 5 components in main app.
+
+### `@techdocs/cli` (1.10.6 → 1.10.7)
+
+#### 1.10.7
+
+##### Patch Changes
 
 - 980b7f5: Updated proxy documentation to recommend Node.js built-in proxy support via `NODE_USE_ENV_PROXY` instead of `global-agent`.
 

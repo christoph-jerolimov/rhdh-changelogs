@@ -2,11 +2,35 @@
 
 Changes between 1.31.3 and 1.31.4 — 19 changed and 0 added packages.
 
-## `@backstage/backend-dynamic-feature-service` (0.4.1 → 0.4.2)
+## Summary
 
-### 0.4.2
+- [Patch version bumps](#patch-version-bumps): 14 packages
 
-#### Patch Changes
+## Table of contents
+
+- [Patch version bumps](#patch-version-bumps)
+  - [`@backstage/backend-dynamic-feature-service` (0.4.1 → 0.4.2)](#backstagebackend-dynamic-feature-service-041--042)
+  - [`@backstage/plugin-scaffolder-backend` (1.25.0 → 1.25.1)](#backstageplugin-scaffolder-backend-1250--1251)
+  - [`@backstage/plugin-scaffolder-backend-module-azure` (0.2.0 → 0.2.1)](#backstageplugin-scaffolder-backend-module-azure-020--021)
+  - [`@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.0 → 0.2.1)](#backstageplugin-scaffolder-backend-module-bitbucket-server-020--021)
+  - [`@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.0 → 0.3.1)](#backstageplugin-scaffolder-backend-module-confluence-to-markdown-030--031)
+  - [`@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.0 → 0.3.1)](#backstageplugin-scaffolder-backend-module-cookiecutter-030--031)
+  - [`@backstage/plugin-scaffolder-backend-module-github` (0.5.0 → 0.5.1)](#backstageplugin-scaffolder-backend-module-github-050--051)
+  - [`@backstage/plugin-scaffolder-backend-module-gitlab` (0.5.0 → 0.5.1)](#backstageplugin-scaffolder-backend-module-gitlab-050--051)
+  - [`@backstage/plugin-scaffolder-backend-module-notifications` (0.1.0 → 0.1.1)](#backstageplugin-scaffolder-backend-module-notifications-010--011)
+  - [`@backstage/plugin-scaffolder-backend-module-rails` (0.5.0 → 0.5.1)](#backstageplugin-scaffolder-backend-module-rails-050--051)
+  - [`@backstage/plugin-scaffolder-backend-module-sentry` (0.2.0 → 0.2.1)](#backstageplugin-scaffolder-backend-module-sentry-020--021)
+  - [`@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.0 → 0.4.1)](#backstageplugin-scaffolder-backend-module-yeoman-040--041)
+  - [`@backstage/plugin-scaffolder-node` (0.4.11 → 0.4.12)](#backstageplugin-scaffolder-node-0411--0412)
+  - [`@backstage/plugin-scaffolder-node-test-utils` (0.1.12 → 0.1.13)](#backstageplugin-scaffolder-node-test-utils-0112--0113)
+
+## Patch version bumps
+
+### `@backstage/backend-dynamic-feature-service` (0.4.1 → 0.4.2)
+
+#### 0.4.2
+
+##### Patch Changes
 
 - d18d494: Enhance and simplify the activation of the dynamic plugins feature:
 
@@ -22,51 +46,51 @@ Changes between 1.31.3 and 1.31.4 — 19 changed and 0 added packages.
 - 094eaa3: Remove references to in-repo backend-common
 - 2f88f88: Updated backend installation instructions.
 
-## `@backstage/plugin-scaffolder-backend` (1.25.0 → 1.25.1)
+### `@backstage/plugin-scaffolder-backend` (1.25.0 → 1.25.1)
 
 _No changelog entries found._
 
-## `@backstage/plugin-scaffolder-backend-module-azure` (0.2.0 → 0.2.1)
+### `@backstage/plugin-scaffolder-backend-module-azure` (0.2.0 → 0.2.1)
 
-### 0.2.1
+#### 0.2.1
 
-#### Patch Changes
+##### Patch Changes
 
 - b06aa48: Updated dependency `azure-devops-node-api` to `^14.0.0`.
 
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.0 → 0.2.1)
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.0 → 0.2.1)
 
-### 0.2.1
+#### 0.2.1
 
-#### Patch Changes
+##### Patch Changes
 
 - db54c57: Add `reviewers` input parameter to `publish:bitbucketServer:pull-request`
 - 66a6b45: Use protocol from Bitbucket Server apiBaseUrl config parameter instead of hard-coded https
 
-## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.0 → 0.3.1)
+### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.0 → 0.3.1)
 
-### 0.3.1
+#### 0.3.1
 
-#### Patch Changes
+##### Patch Changes
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
 - 720a2f9: Updated dependency `git-url-parse` to `^15.0.0`.
 
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.0 → 0.3.1)
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.0 → 0.3.1)
 
-### 0.3.1
+#### 0.3.1
 
-#### Patch Changes
+##### Patch Changes
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
 
-## `@backstage/plugin-scaffolder-backend-module-github` (0.5.0 → 0.5.1)
+### `@backstage/plugin-scaffolder-backend-module-github` (0.5.0 → 0.5.1)
 
-### 0.5.1
+#### 0.5.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 8ce0c4c: Add `github:branch-protection:create` scaffolder action to set branch protection on an existing repository. Example usage:
 
@@ -87,53 +111,53 @@ _No changelog entries found._
 
 - 094eaa3: Remove references to in-repo backend-common
 
-## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.5.0 → 0.5.1)
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.5.0 → 0.5.1)
 
 _No changelog entries found._
 
-## `@backstage/plugin-scaffolder-backend-module-notifications` (0.1.0 → 0.1.1)
+### `@backstage/plugin-scaffolder-backend-module-notifications` (0.1.0 → 0.1.1)
 
-### 0.1.1
+#### 0.1.1
 
-#### Patch Changes
+##### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
 
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.5.0 → 0.5.1)
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.5.0 → 0.5.1)
 
-### 0.5.1
+#### 0.5.1
 
-#### Patch Changes
+##### Patch Changes
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
 
-## `@backstage/plugin-scaffolder-backend-module-sentry` (0.2.0 → 0.2.1)
+### `@backstage/plugin-scaffolder-backend-module-sentry` (0.2.0 → 0.2.1)
 
-### 0.2.1
+#### 0.2.1
 
-#### Patch Changes
+##### Patch Changes
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 
-## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.0 → 0.4.1)
+### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.0 → 0.4.1)
 
-### 0.4.1
+#### 0.4.1
 
-#### Patch Changes
+##### Patch Changes
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
 
-## `@backstage/plugin-scaffolder-node` (0.4.11 → 0.4.12)
+### `@backstage/plugin-scaffolder-node` (0.4.11 → 0.4.12)
 
 _No changelog entries found._
 
-## `@backstage/plugin-scaffolder-node-test-utils` (0.1.12 → 0.1.13)
+### `@backstage/plugin-scaffolder-node-test-utils` (0.1.12 → 0.1.13)
 
-### 0.1.13
+#### 0.1.13
 
-#### Patch Changes
+##### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 094eaa3: Remove references to in-repo backend-common
