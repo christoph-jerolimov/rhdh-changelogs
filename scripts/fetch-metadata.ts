@@ -229,7 +229,7 @@ const activeCount = [...lastRelease.keys()].filter((name) => mainPackages.has(na
 const removedCount = lastRelease.size - activeCount;
 
 const md: string[] = [];
-md.push("# Packages overview", "");
+md.push("# Package descriptions", "");
 md.push(
   `**${lastRelease.size} packages** overall — **${activeCount} active** on the \`main\` branch, **${removedCount} removed**.`,
   "",
@@ -242,11 +242,11 @@ for (const [name, role, description, last] of tableRows) {
   md.push(`| \`${mdCell(name!)}\` | ${mdCell(role!)} | ${mdCell(description!)} | ${mdCell(last!)} |`);
 }
 md.push("");
-writeFileIfChanged(path.join(repoRoot, "packages-overview.md"), md.join("\n"));
+writeFileIfChanged(path.join(repoRoot, "package-descriptions.md"), md.join("\n"));
 
 const csv = [TABLE_HEADER, ...tableRows].map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
-writeFileIfChanged(path.join(repoRoot, "packages-overview.csv"), csv);
-console.log(`Generated packages-overview.md/.csv (${tableRows.length} packages)`);
+writeFileIfChanged(path.join(repoRoot, "package-descriptions.csv"), csv);
+console.log(`Generated package-descriptions.md/.csv (${tableRows.length} packages)`);
 
 // Every package that ever appeared in a release manifest must have a changelog.
 const listedIn = new Map<string, string[]>();

@@ -43,7 +43,7 @@ The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every p
 - Packages that were removed from `main` (e.g. plugins moved to community repos) are fetched once from the release tag of the newest release that still listed them; existing files are never re-fetched.
 - The job fails if any package listed in any release manifest ends up without a changelog.
 
-The same workflow also reads each package's `package.json` and generates [packages-overview.md](packages-overview.md) / [packages-overview.csv](packages-overview.csv): every package that ever appeared in a release manifest with its Backstage role, description, and — for packages no longer on `main` — the last release that included it.
+The same workflow also reads each package's `package.json` and generates [package-descriptions.md](package-descriptions.md) / [package-descriptions.csv](package-descriptions.csv): every package that ever appeared in a release manifest with its Backstage role, description, and — for packages no longer on `main` — the last release that included it.
 
 ## Scripts
 
