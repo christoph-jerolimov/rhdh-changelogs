@@ -1,8 +1,8 @@
-# Backstage Release Overview
+# Backstage Release Spotter
 
-Automatically maintained mirror and analysis of the official [Backstage release manifests](https://github.com/backstage/versions).
+Automatically maintained mirror and analysis of the official Backstage release manifests from [backstage/versions](https://github.com/backstage/versions) and of the package changelogs and metadata from [backstage/backstage](https://github.com/backstage/backstage).
 
-A [GitHub workflow](.github/workflows/update-versions.yml) runs daily (and on demand via *Run workflow*), clones `backstage/versions`, regenerates everything below, and commits changes to `main`.
+Two GitHub workflows ([update-versions](.github/workflows/update-versions.yml) and [update-metadata](.github/workflows/update-metadata.yml)) run daily (and on demand via *Run workflow*), clone the upstream repositories, regenerate everything below, and commit changes to `main`.
 
 ## Package versions
 
@@ -12,7 +12,7 @@ One column per release with the version of every package, ordered `next` (if a n
 | --- | --- | --- |
 | Last 10 releases | [package-versions-last-10-releases.md](package-versions-last-10-releases.md) | [package-versions-last-10-releases.csv](package-versions-last-10-releases.csv) |
 | Last 10 minor releases | [package-versions-last-10-minor-releases.md](package-versions-last-10-minor-releases.md) | [package-versions-last-10-minor-releases.csv](package-versions-last-10-minor-releases.csv) |
-| Minor releases | [package-versions-minor-releases.md](package-versions-minor-releases.md) | [package-versions-minor-releases.csv](package-versions-minor-releases.csv) |
+| All minor releases | [package-versions-all-minor-releases.md](package-versions-all-minor-releases.md) | [package-versions-all-minor-releases.csv](package-versions-all-minor-releases.csv) |
 | All releases | [package-versions-all-releases.md](package-versions-all-releases.md) | [package-versions-all-releases.csv](package-versions-all-releases.csv) |
 
 ## Number of changed packages
@@ -22,7 +22,7 @@ One row per release (newest to oldest, incl. `next` if it exists), comparing eac
 | Number of changed packages | Markdown | CSV |
 | --- | --- | --- |
 | All releases | [number-of-changed-packages-all-releases.md](number-of-changed-packages-all-releases.md) | [number-of-changed-packages-all-releases.csv](number-of-changed-packages-all-releases.csv) |
-| Minor releases | [number-of-changed-packages-minor-releases.md](number-of-changed-packages-minor-releases.md) | [number-of-changed-packages-minor-releases.csv](number-of-changed-packages-minor-releases.csv) |
+| All minor releases | [number-of-changed-packages-all-minor-releases.md](number-of-changed-packages-all-minor-releases.md) | [number-of-changed-packages-all-minor-releases.csv](number-of-changed-packages-all-minor-releases.csv) |
 
 ## Per-release folders
 
@@ -45,11 +45,13 @@ The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every p
 
 ## Package descriptions
 
-The same workflow also reads each package's `package.json` and generates a table of every package that ever appeared in a release manifest with its Backstage role, description, and — for packages no longer on `main` — the last release that included it.
+The same workflow also reads each package's `package.json` and generates tables of every package that ever appeared in a release manifest with its Backstage role, description, and — for deprecated packages (no longer on `main`) — the last release that included it.
 
 | Package descriptions | Markdown | CSV |
 | --- | --- | --- |
-| All packages | [package-descriptions.md](package-descriptions.md) | [package-descriptions.csv](package-descriptions.csv) |
+| Active packages | [package-descriptions.md](package-descriptions.md) | [package-descriptions.csv](package-descriptions.csv) |
+| Deprecated packages | [package-descriptions-deprecated.md](package-descriptions-deprecated.md) | [package-descriptions-deprecated.csv](package-descriptions-deprecated.csv) |
+| All packages | [package-descriptions-all.md](package-descriptions-all.md) | [package-descriptions-all.csv](package-descriptions-all.csv) |
 
 ## Scripts
 

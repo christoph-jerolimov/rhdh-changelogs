@@ -228,25 +228,55 @@ const tableRows = [...lastRelease.keys()].sort(byCodepoint).map((name) => {
 const activeCount = [...lastRelease.keys()].filter((name) => mainPackages.has(name)).length;
 const removedCount = lastRelease.size - activeCount;
 
-const md: string[] = [];
-md.push("# Package descriptions", "");
-md.push(
-  `**${lastRelease.size} packages** overall — **${activeCount} active** on the \`main\` branch, **${removedCount} removed**.`,
-  "",
-  "All packages that ever appeared in a release manifest. *Last included in* is only set for removed packages.",
-  "",
-);
-md.push(`| ${TABLE_HEADER.map(mdCell).join(" | ")} |`);
-md.push(`| ${TABLE_HEADER.map(() => "---").join(" | ")} |`);
-for (const [name, role, description, last] of tableRows) {
-  md.push(`| \`${mdCell(name!)}\` | ${mdCell(role!)} | ${mdCell(description!)} | ${mdCell(last!)} |`);
-}
-md.push("");
-writeFileIfChanged(path.join(repoRoot, "package-descriptions.md"), md.join("\n"));
+function writeDescriptionTable(
+  base: string,
+  title: string,
+  summary: string,
+  rows: string[][],
+  withLastColumn: boolean,
+): void {
+  const header = withLastColumn ? TABLE_HEADER : TABLE_HEADER.slice(0, 3);
+  const cells = (row: string[]): string[] => (withLastColumn ? row : row.slice(0, 3));
 
-const csv = [TABLE_HEADER, ...tableRows].map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
-writeFileIfChanged(path.join(repoRoot, "package-descriptions.csv"), csv);
-console.log(`Generated package-descriptions.md/.csv (${tableRows.length} packages)`);
+  const md: string[] = [];
+  md.push(`# ${title}`, "");
+  md.push(summary, "");
+  md.push(`| ${header.map(mdCell).join(" | ")} |`);
+  md.push(`| ${header.map(() => "---").join(" | ")} |`);
+  for (const row of rows) {
+    const [name, ...rest] = cells(row);
+    md.push(`| \`${mdCell(name!)}\` | ${rest.map((value) => mdCell(value)).join(" | ")} |`);
+  }
+  md.push("");
+  writeFileIfChanged(path.join(repoRoot, `${base}.md`), md.join("\n"));
+
+  const csv = [header, ...rows.map(cells)].map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
+  writeFileIfChanged(path.join(repoRoot, `${base}.csv`), csv);
+  console.log(`Generated ${base}.md/.csv (${rows.length} packages)`);
+}
+
+writeDescriptionTable(
+  "package-descriptions",
+  "Package descriptions",
+  `**${activeCount} packages** active on the \`main\` branch.`,
+  tableRows.filter(([name]) => mainPackages.has(name!)),
+  false,
+);
+writeDescriptionTable(
+  "package-descriptions-deprecated",
+  "Package descriptions — deprecated",
+  `**${removedCount} packages** removed from the \`main\` branch — *Last included in* names the last release that included them.`,
+  tableRows.filter(([name]) => !mainPackages.has(name!)),
+  true,
+);
+writeDescriptionTable(
+  "package-descriptions-all",
+  "Package descriptions — all",
+  `**${lastRelease.size} packages** overall — **${activeCount} active** on the \`main\` branch, **${removedCount} removed**. ` +
+    "*Last included in* is only set for removed packages.",
+  tableRows,
+  true,
+);
 
 // Every package that ever appeared in a release manifest must have a changelog.
 const listedIn = new Map<string, string[]>();

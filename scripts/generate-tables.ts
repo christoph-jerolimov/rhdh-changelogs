@@ -38,8 +38,8 @@ interface Variant {
 const variants: Variant[] = [
   { name: "package-versions-all-releases", title: "Package versions — all releases", releases: stableDescending },
   {
-    name: "package-versions-minor-releases",
-    title: "Package versions — minor releases",
+    name: "package-versions-all-minor-releases",
+    title: "Package versions — all minor releases",
     releases: minorDescending,
     minorNote: true,
   },
