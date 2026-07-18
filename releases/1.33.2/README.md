@@ -10,6 +10,17 @@
 | --- | --- | --- | --- |
 | `@backstage/plugin-app-backend` | 0.4.0 | 0.4.1 | Patch |
 
+## Compared to 1.33.0 (first release of this minor)
+
+0 added, 0 removed, 2 upgraded, 175 unchanged.
+
+### Version bumps
+
+| Package | 1.33.0 | 1.33.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/cli` | 0.29.0 | 0.29.1 | Patch |
+| `@backstage/plugin-app-backend` | 0.4.0 | 0.4.1 | Patch |
+
 ## Compared to 1.32.6 (previous minor release)
 
 0 added, 0 removed, 153 upgraded, 24 unchanged.

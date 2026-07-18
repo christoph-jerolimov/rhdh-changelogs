@@ -10,6 +10,18 @@
 | --- | --- | --- | --- |
 | `@backstage/backend-app-api` | 0.9.1 | 0.9.2 | Patch |
 
+## Compared to 1.30.0 (first release of this minor)
+
+0 added, 0 removed, 3 upgraded, 172 unchanged.
+
+### Version bumps
+
+| Package | 1.30.0 | 1.30.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-app-api` | 0.9.0 | 0.9.2 | Patch |
+| `@backstage/backend-defaults` | 0.4.2 | 0.4.3 | Patch |
+| `@backstage/plugin-techdocs-backend` | 1.10.10 | 1.10.11 | Patch |
+
 ## Compared to 1.29.2 (previous minor release)
 
 1 added, 0 removed, 157 upgraded, 17 unchanged.

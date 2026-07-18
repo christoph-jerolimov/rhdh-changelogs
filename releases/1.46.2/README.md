@@ -10,6 +10,17 @@
 | --- | --- | --- | --- |
 | `@backstage/integration` | 1.19.0 | 1.19.1 | Patch |
 
+## Compared to 1.46.0 (first release of this minor)
+
+0 added, 0 removed, 2 upgraded, 188 unchanged.
+
+### Version bumps
+
+| Package | 1.46.0 | 1.46.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/cli` | 0.35.0 | 0.35.1 | Patch |
+| `@backstage/integration` | 1.19.0 | 1.19.1 | Patch |
+
 ## Compared to 1.45.6 (previous minor release)
 
 0 added, 0 removed, 172 upgraded, 18 unchanged.

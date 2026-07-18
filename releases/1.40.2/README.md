@@ -10,6 +10,19 @@
 | --- | --- | --- | --- |
 | `@backstage/plugin-catalog-import` | 0.13.1 | 0.13.2 | Patch |
 
+## Compared to 1.40.0 (first release of this minor)
+
+0 added, 0 removed, 4 upgraded, 183 unchanged.
+
+### Version bumps
+
+| Package | 1.40.0 | 1.40.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/plugin-catalog-import` | 0.13.1 | 0.13.2 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-cookiecutter` | 0.3.11 | 0.3.12 | Patch |
+| `@backstage/plugin-techdocs` | 1.13.0 | 1.13.1 | Patch |
+| `@backstage/plugin-techdocs-addons-test-utils` | 1.0.49 | 1.0.50 | Patch |
+
 ## Compared to 1.39.1 (previous minor release)
 
 2 added, 0 removed, 160 upgraded, 25 unchanged.

@@ -18,6 +18,25 @@
 | `@backstage/plugin-user-settings` | 0.8.9 | 0.8.10 | Patch |
 | `@backstage/test-utils` | 1.5.8 | 1.5.9 | Patch |
 
+## Compared to 1.29.0 (first release of this minor)
+
+0 added, 0 removed, 10 upgraded, 164 unchanged.
+
+### Version bumps
+
+| Package | 1.29.0 | 1.29.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/app-defaults` | 1.5.8 | 1.5.9 | Patch |
+| `@backstage/backend-defaults` | 0.4.0 | 0.4.1 | Patch |
+| `@backstage/core-app-api` | 1.14.0 | 1.14.1 | Patch |
+| `@backstage/dev-utils` | 1.0.35 | 1.0.36 | Patch |
+| `@backstage/frontend-app-api` | 0.7.3 | 0.7.4 | Patch |
+| `@backstage/frontend-test-utils` | 0.1.10 | 0.1.11 | Patch |
+| `@backstage/plugin-home` | 0.7.7 | 0.7.8 | Patch |
+| `@backstage/plugin-techdocs-addons-test-utils` | 1.0.35 | 1.0.36 | Patch |
+| `@backstage/plugin-user-settings` | 0.8.9 | 0.8.10 | Patch |
+| `@backstage/test-utils` | 1.5.8 | 1.5.9 | Patch |
+
 ## Compared to 1.28.4 (previous minor release)
 
 2 added, 0 removed, 153 upgraded, 19 unchanged.

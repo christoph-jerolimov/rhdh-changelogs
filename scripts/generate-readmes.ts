@@ -184,6 +184,10 @@ for (const release of releases) {
     lines.push(`# Backstage Release ${release}`, "");
     const prevPatch = previousPatch(release);
     if (prevPatch !== undefined) baselines.push({ version: prevPatch, label: "previous patch release" });
+    const firstOfMinor = `${semver.major(release)}.${semver.minor(release)}.0`;
+    if (semver.patch(release) > 0 && firstOfMinor !== prevPatch && stableReleases.includes(firstOfMinor)) {
+      baselines.push({ version: firstOfMinor, label: "first release of this minor" });
+    }
     const prevMinor = previousMinor(release);
     if (prevMinor !== undefined) baselines.push({ version: prevMinor, label: "previous minor release" });
   }

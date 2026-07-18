@@ -10,6 +10,82 @@
 | --- | --- | --- | --- |
 | `@backstage/backend-common` | 0.19.9 | 0.19.10 | Patch |
 
+## Compared to 1.20.0 (first release of this minor)
+
+0 added, 0 removed, 65 upgraded, 176 unchanged.
+
+⚠️ Need extra attention: 1 0.0.x patch.
+
+### Version bumps
+
+| Package | 1.20.0 | 1.20.4 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-common` | 0.19.9 | 0.19.10 | Patch |
+| `@backstage/dev-utils` | 1.0.23 | 1.0.24 | Patch |
+| `@backstage/plugin-adr` | 0.6.9 | 0.6.10 | Patch |
+| `@backstage/plugin-airbrake` | 0.3.26 | 0.3.27 | Patch |
+| `@backstage/plugin-allure` | 0.1.42 | 0.1.43 | Patch |
+| `@backstage/plugin-api-docs` | 0.10.0 | 0.10.1 | Patch |
+| `@backstage/plugin-azure-devops` | 0.3.8 | 0.3.9 | Patch |
+| `@backstage/plugin-azure-sites` | 0.1.15 | 0.1.16 | Patch |
+| `@backstage/plugin-badges` | 0.2.50 | 0.2.51 | Patch |
+| `@backstage/plugin-bazaar` | 0.2.18 | 0.2.19 | Patch |
+| `@backstage/plugin-bitrise` | 0.1.53 | 0.1.54 | Patch |
+| `@backstage/plugin-catalog` | 1.15.0 | 1.15.1 | Patch |
+| `@backstage/plugin-catalog-graph` | 0.3.0 | 0.3.1 | Patch |
+| `@backstage/plugin-catalog-import` | 0.10.2 | 0.10.3 | Patch |
+| `@backstage/plugin-catalog-react` | 1.9.0 | 1.9.1 | Patch |
+| `@backstage/plugin-cicd-statistics` | 0.1.28 | 0.1.29 | Patch |
+| `@backstage/plugin-cicd-statistics-module-gitlab` | 0.1.22 | 0.1.23 | Patch |
+| `@backstage/plugin-circleci` | 0.3.26 | 0.3.27 | Patch |
+| `@backstage/plugin-cloudbuild` | 0.3.26 | 0.3.27 | Patch |
+| `@backstage/plugin-code-climate` | 0.1.26 | 0.1.27 | Patch |
+| `@backstage/plugin-code-coverage` | 0.2.19 | 0.2.20 | Patch |
+| `@backstage/plugin-cost-insights` | 0.12.15 | 0.12.16 | Patch |
+| `@backstage/plugin-dynatrace` | 8.0.0 | 8.0.1 | Patch |
+| `@backstage/plugin-entity-feedback` | 0.2.9 | 0.2.10 | Patch |
+| `@backstage/plugin-entity-validation` | 0.1.11 | 0.1.12 | Patch |
+| `@backstage/plugin-explore` | 0.4.12 | 0.4.13 | Patch |
+| `@backstage/plugin-firehydrant` | 0.2.10 | 0.2.11 | Patch |
+| `@backstage/plugin-fossa` | 0.2.58 | 0.2.59 | Patch |
+| `@backstage/plugin-github-actions` | 0.6.7 | 0.6.8 | Patch |
+| `@backstage/plugin-github-deployments` | 0.1.57 | 0.1.58 | Patch |
+| `@backstage/plugin-github-issues` | 0.2.15 | 0.2.16 | Patch |
+| `@backstage/plugin-github-pull-requests-board` | 0.1.20 | 0.1.21 | Patch |
+| `@backstage/plugin-gocd` | 0.1.32 | 0.1.33 | Patch |
+| `@backstage/plugin-home` | 0.5.10 | 0.5.11 | Patch |
+| `@backstage/plugin-ilert` | 0.2.15 | 0.2.16 | Patch |
+| `@backstage/plugin-jenkins` | 0.9.1 | 0.9.2 | Patch |
+| `@backstage/plugin-kafka` | 0.3.26 | 0.3.27 | Patch |
+| `@backstage/plugin-kubernetes` | 0.11.1 | 0.11.2 | Patch |
+| `@backstage/plugin-kubernetes-cluster` | 0.0.2 | 0.0.3 | Patch ⚠️ |
+| `@backstage/plugin-lighthouse` | 0.4.11 | 0.4.12 | Patch |
+| `@backstage/plugin-linguist` | 0.1.11 | 0.1.12 | Patch |
+| `@backstage/plugin-newrelic-dashboard` | 0.3.1 | 0.3.2 | Patch |
+| `@backstage/plugin-nomad` | 0.1.7 | 0.1.8 | Patch |
+| `@backstage/plugin-octopus-deploy` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-org` | 0.6.16 | 0.6.17 | Patch |
+| `@backstage/plugin-org-react` | 0.1.15 | 0.1.16 | Patch |
+| `@backstage/plugin-pagerduty` | 0.6.7 | 0.6.8 | Patch |
+| `@backstage/plugin-periskop` | 0.1.24 | 0.1.25 | Patch |
+| `@backstage/plugin-playlist` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-puppetdb` | 0.1.9 | 0.1.10 | Patch |
+| `@backstage/plugin-rollbar` | 0.4.26 | 0.4.27 | Patch |
+| `@backstage/plugin-scaffolder` | 1.16.0 | 1.16.1 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 1.19.0 | 1.19.1 | Patch |
+| `@backstage/plugin-scaffolder-react` | 1.6.0 | 1.6.1 | Patch |
+| `@backstage/plugin-search` | 1.4.2 | 1.4.3 | Patch |
+| `@backstage/plugin-search-react` | 1.7.2 | 1.7.3 | Patch |
+| `@backstage/plugin-sentry` | 0.5.11 | 0.5.12 | Patch |
+| `@backstage/plugin-sonarqube` | 0.7.8 | 0.7.9 | Patch |
+| `@backstage/plugin-splunk-on-call` | 0.4.15 | 0.4.16 | Patch |
+| `@backstage/plugin-tech-insights` | 0.3.18 | 0.3.19 | Patch |
+| `@backstage/plugin-techdocs` | 1.9.0 | 1.9.1 | Patch |
+| `@backstage/plugin-techdocs-addons-test-utils` | 1.0.23 | 1.0.24 | Patch |
+| `@backstage/plugin-todo` | 0.2.30 | 0.2.31 | Patch |
+| `@backstage/plugin-user-settings` | 0.7.12 | 0.7.13 | Patch |
+| `@backstage/plugin-vault` | 0.1.21 | 0.1.22 | Patch |
+
 ## Compared to 1.19.6 (previous minor release)
 
 3 added, 0 removed, 221 upgraded, 17 unchanged.

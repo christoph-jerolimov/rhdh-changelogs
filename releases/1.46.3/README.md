@@ -11,6 +11,19 @@
 | `@backstage/plugin-catalog-graph` | 0.5.4 | 0.5.5 | Patch |
 | `@backstage/plugin-search` | 1.5.1 | 1.5.2 | Patch |
 
+## Compared to 1.46.0 (first release of this minor)
+
+0 added, 0 removed, 4 upgraded, 186 unchanged.
+
+### Version bumps
+
+| Package | 1.46.0 | 1.46.3 | Type |
+| --- | --- | --- | --- |
+| `@backstage/cli` | 0.35.0 | 0.35.1 | Patch |
+| `@backstage/integration` | 1.19.0 | 1.19.1 | Patch |
+| `@backstage/plugin-catalog-graph` | 0.5.4 | 0.5.5 | Patch |
+| `@backstage/plugin-search` | 1.5.1 | 1.5.2 | Patch |
+
 ## Compared to 1.45.6 (previous minor release)
 
 0 added, 0 removed, 172 upgraded, 18 unchanged.

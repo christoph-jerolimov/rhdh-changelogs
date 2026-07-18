@@ -10,6 +10,18 @@
 | --- | --- | --- | --- |
 | `@backstage/plugin-org` | 0.6.0 | 0.6.1 | Patch |
 
+## Compared to 1.8.0 (first release of this minor)
+
+0 added, 0 removed, 3 upgraded, 173 unchanged.
+
+### Version bumps
+
+| Package | 1.8.0 | 1.8.3 | Type |
+| --- | --- | --- | --- |
+| `@backstage/cli` | 0.21.0 | 0.21.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-github` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-org` | 0.6.0 | 0.6.1 | Patch |
+
 ## Compared to 1.7.2 (previous minor release)
 
 13 added, 0 removed, 158 upgraded, 5 unchanged.

@@ -11,6 +11,22 @@
 | `@backstage/plugin-app-visualizer` | 0.1.25 | 0.1.26 | Patch |
 | `@backstage/ui` | 0.9.1 | 0.9.2 | Patch |
 
+## Compared to 1.45.0 (first release of this minor)
+
+0 added, 0 removed, 7 upgraded, 183 unchanged.
+
+### Version bumps
+
+| Package | 1.45.0 | 1.45.6 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-defaults` | 0.13.1 | 0.13.3 | Patch |
+| `@backstage/backend-test-utils` | 1.10.0 | 1.10.1 | Patch |
+| `@backstage/cli` | 0.34.5 | 0.34.6 | Patch |
+| `@backstage/frontend-plugin-api` | 0.13.0 | 0.13.1 | Patch |
+| `@backstage/plugin-app-visualizer` | 0.1.25 | 0.1.26 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 3.0.1 | 3.0.3 | Patch |
+| `@backstage/ui` | 0.9.0 | 0.9.2 | Patch |
+
 ## Compared to 1.44.3 (previous minor release)
 
 0 added, 0 removed, 178 upgraded, 12 unchanged.

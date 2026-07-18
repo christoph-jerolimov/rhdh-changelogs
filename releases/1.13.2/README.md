@@ -11,6 +11,21 @@
 | `@backstage/plugin-home` | 0.5.0 | 0.5.1 | Patch |
 | `@backstage/plugin-stack-overflow` | 0.1.13 | 0.1.14 | Patch |
 
+## Compared to 1.13.0 (first release of this minor)
+
+0 added, 0 removed, 6 upgraded, 203 unchanged.
+
+### Version bumps
+
+| Package | 1.13.0 | 1.13.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/plugin-home` | 0.5.0 | 0.5.1 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 1.13.0 | 1.13.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` | 0.1.0 | 0.1.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-cookiecutter` | 0.2.19 | 0.2.20 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-rails` | 0.4.12 | 0.4.13 | Patch |
+| `@backstage/plugin-stack-overflow` | 0.1.13 | 0.1.14 | Patch |
+
 ## Compared to 1.12.1 (previous minor release)
 
 8 added, 0 removed, 186 upgraded, 15 unchanged.

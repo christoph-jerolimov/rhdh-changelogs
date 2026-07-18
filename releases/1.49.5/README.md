@@ -12,6 +12,31 @@
 | `@backstage/plugin-app-visualizer` | 0.2.1 | 0.2.2 | Patch |
 | `@backstage/ui` | 0.13.2 | 0.13.3 | Patch |
 
+## Compared to 1.49.0 (first release of this minor)
+
+0 added, 0 removed, 16 upgraded, 191 unchanged.
+
+### Version bumps
+
+| Package | 1.49.0 | 1.49.5 | Type |
+| --- | --- | --- | --- |
+| `@backstage/cli-module-new` | 0.1.0 | 0.1.1 | Patch |
+| `@backstage/create-app` | 0.8.0 | 0.8.1 | Patch |
+| `@backstage/frontend-app-api` | 0.16.0 | 0.16.1 | Patch |
+| `@backstage/frontend-plugin-api` | 0.15.0 | 0.15.1 | Patch |
+| `@backstage/plugin-app` | 0.4.1 | 0.4.3 | Patch |
+| `@backstage/plugin-app-visualizer` | 0.2.1 | 0.2.2 | Patch |
+| `@backstage/plugin-auth-backend` | 0.27.2 | 0.27.3 | Patch |
+| `@backstage/plugin-catalog` | 2.0.0 | 2.0.1 | Patch |
+| `@backstage/plugin-catalog-react` | 2.1.0 | 2.1.1 | Patch |
+| `@backstage/plugin-catalog-unprocessed-entities` | 0.2.27 | 0.2.28 | Patch |
+| `@backstage/plugin-mcp-actions-backend` | 0.1.10 | 0.1.11 | Patch |
+| `@backstage/plugin-scaffolder` | 1.36.0 | 1.36.1 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 3.2.0 | 3.3.0 | Minor |
+| `@backstage/plugin-scaffolder-node` | 0.13.0 | 0.13.1 | Patch |
+| `@backstage/plugin-techdocs` | 1.17.1 | 1.17.2 | Patch |
+| `@backstage/ui` | 0.13.0 | 0.13.3 | Patch |
+
 ## Compared to 1.48.6 (previous minor release)
 
 14 added, 1 removed, 176 upgraded, 17 unchanged.

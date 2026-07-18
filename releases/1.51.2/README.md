@@ -10,6 +10,20 @@
 | --- | --- | --- | --- |
 | `@backstage/plugin-catalog-backend-module-msgraph` | 0.10.1 | 0.10.2 | Patch |
 
+## Compared to 1.51.0 (first release of this minor)
+
+0 added, 0 removed, 5 upgraded, 204 unchanged.
+
+### Version bumps
+
+| Package | 1.51.0 | 1.51.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-defaults` | 0.17.1 | 0.17.2 | Patch |
+| `@backstage/catalog-client` | 1.15.1 | 1.15.2 | Patch |
+| `@backstage/frontend-plugin-api` | 0.17.0 | 0.17.1 | Patch |
+| `@backstage/plugin-catalog-backend` | 3.7.0 | 3.7.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-msgraph` | 0.10.0 | 0.10.2 | Patch |
+
 ## Compared to 1.50.4 (previous minor release)
 
 2 added, 0 removed, 198 upgraded, 9 unchanged.

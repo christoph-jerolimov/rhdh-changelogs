@@ -10,6 +10,25 @@
 | --- | --- | --- | --- |
 | `@backstage/plugin-catalog-backend-module-gitlab` | 0.3.16 | 0.3.17 | Patch |
 
+## Compared to 1.27.0 (first release of this minor)
+
+0 added, 0 removed, 10 upgraded, 160 unchanged.
+
+### Version bumps
+
+| Package | 1.27.0 | 1.27.6 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-app-api` | 0.7.3 | 0.7.5 | Patch |
+| `@backstage/cli` | 0.26.5 | 0.26.6 | Patch |
+| `@backstage/plugin-app-backend` | 0.3.66 | 0.3.67 | Patch |
+| `@backstage/plugin-catalog-backend-module-gitlab` | 0.3.16 | 0.3.17 | Patch |
+| `@backstage/plugin-scaffolder` | 1.20.0 | 1.20.1 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 1.22.6 | 1.22.7 | Patch |
+| `@backstage/plugin-scaffolder-react` | 1.8.5 | 1.8.6 | Patch |
+| `@backstage/plugin-search-backend` | 1.5.8 | 1.5.9 | Patch |
+| `@backstage/plugin-search-backend-node` | 1.2.22 | 1.2.23 | Patch |
+| `@backstage/theme` | 0.5.4 | 0.5.5 | Patch |
+
 ## Compared to 1.26.5 (previous minor release)
 
 3 added, 103 removed, 146 upgraded, 21 unchanged.

@@ -10,6 +10,24 @@
 | --- | --- | --- | --- |
 | `@techdocs/cli` | 1.9.6 | 1.9.7 | Patch |
 
+## Compared to 1.42.0 (first release of this minor)
+
+0 added, 0 removed, 9 upgraded, 178 unchanged.
+
+### Version bumps
+
+| Package | 1.42.0 | 1.42.5 | Type |
+| --- | --- | --- | --- |
+| `@backstage/cli` | 0.34.0 | 0.34.1 | Patch |
+| `@backstage/core-compat-api` | 0.5.0 | 0.5.1 | Patch |
+| `@backstage/create-app` | 0.7.2 | 0.7.3 | Patch |
+| `@backstage/plugin-catalog-react` | 1.20.0 | 1.20.1 | Patch |
+| `@backstage/plugin-kubernetes-backend` | 0.20.0 | 0.20.1 | Patch |
+| `@backstage/plugin-org` | 0.6.42 | 0.6.43 | Patch |
+| `@backstage/plugin-search-backend-module-explore` | 0.3.5 | 0.3.6 | Patch |
+| `@backstage/plugin-techdocs` | 1.14.0 | 1.14.1 | Patch |
+| `@techdocs/cli` | 1.9.6 | 1.9.7 | Patch |
+
 ## Compared to 1.41.2 (previous minor release)
 
 0 added, 1 removed, 158 upgraded, 29 unchanged.

@@ -10,6 +10,22 @@
 | --- | --- | --- | --- |
 | `@backstage/repo-tools` | 0.15.3 | 0.15.4 | Patch |
 
+## Compared to 1.44.0 (first release of this minor)
+
+0 added, 0 removed, 7 upgraded, 183 unchanged.
+
+### Version bumps
+
+| Package | 1.44.0 | 1.44.3 | Type |
+| --- | --- | --- | --- |
+| `@backstage/dev-utils` | 1.1.15 | 1.1.16 | Patch |
+| `@backstage/plugin-notifications-backend-module-email` | 0.3.14 | 0.3.15 | Patch |
+| `@backstage/plugin-techdocs` | 1.15.1 | 1.15.2 | Patch |
+| `@backstage/plugin-user-settings` | 0.8.27 | 0.8.28 | Patch |
+| `@backstage/repo-tools` | 0.15.3 | 0.15.4 | Patch |
+| `@backstage/ui` | 0.8.0 | 0.8.2 | Patch |
+| `@techdocs/cli` | 1.10.0 | 1.10.1 | Patch |
+
 ## Compared to 1.43.4 (previous minor release)
 
 1 added, 0 removed, 175 upgraded, 14 unchanged.

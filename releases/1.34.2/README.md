@@ -11,6 +11,19 @@
 | `@backstage/backend-defaults` | 0.6.1 | 0.6.2 | Patch |
 | `@backstage/plugin-catalog-backend-module-gitlab` | 0.6.0 | 0.6.1 | Patch |
 
+## Compared to 1.34.0 (first release of this minor)
+
+0 added, 0 removed, 4 upgraded, 173 unchanged.
+
+### Version bumps
+
+| Package | 1.34.0 | 1.34.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-defaults` | 0.6.0 | 0.6.2 | Patch |
+| `@backstage/config-loader` | 1.9.3 | 1.9.4 | Patch |
+| `@backstage/plugin-catalog-backend-module-gitlab` | 0.6.0 | 0.6.1 | Patch |
+| `@backstage/plugin-scaffolder` | 1.27.2 | 1.27.3 | Patch |
+
 ## Compared to 1.33.6 (previous minor release)
 
 0 added, 0 removed, 167 upgraded, 10 unchanged.

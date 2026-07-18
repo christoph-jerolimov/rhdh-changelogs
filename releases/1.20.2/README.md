@@ -10,6 +10,17 @@
 | --- | --- | --- | --- |
 | `@backstage/plugin-scaffolder-backend` | 1.19.0 | 1.19.1 | Patch |
 
+## Compared to 1.20.0 (first release of this minor)
+
+0 added, 0 removed, 2 upgraded, 239 unchanged.
+
+### Version bumps
+
+| Package | 1.20.0 | 1.20.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/plugin-scaffolder-backend` | 1.19.0 | 1.19.1 | Patch |
+| `@backstage/plugin-search-react` | 1.7.2 | 1.7.3 | Patch |
+
 ## Compared to 1.19.6 (previous minor release)
 
 3 added, 0 removed, 221 upgraded, 17 unchanged.

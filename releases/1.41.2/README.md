@@ -10,6 +10,17 @@
 | --- | --- | --- | --- |
 | `@backstage/plugin-scaffolder-backend` | 2.1.0 | 2.1.1 | Patch |
 
+## Compared to 1.41.0 (first release of this minor)
+
+0 added, 0 removed, 2 upgraded, 186 unchanged.
+
+### Version bumps
+
+| Package | 1.41.0 | 1.41.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/plugin-scaffolder-backend` | 2.1.0 | 2.1.1 | Patch |
+| `@backstage/ui` | 0.6.0 | 0.6.1 | Patch |
+
 ## Compared to 1.40.2 (previous minor release)
 
 1 added, 0 removed, 174 upgraded, 13 unchanged.

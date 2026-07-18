@@ -14,6 +14,21 @@
 | `@backstage/plugin-catalog-backend-module-openapi` | 0.1.19 | 0.1.20 | Patch |
 | `@backstage/plugin-scaffolder-backend` | 1.17.0 | 1.17.1 | Patch |
 
+## Compared to 1.18.0 (first release of this minor)
+
+0 added, 0 removed, 6 upgraded, 225 unchanged.
+
+### Version bumps
+
+| Package | 1.18.0 | 1.18.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-test-utils` | 0.2.3 | 0.2.4 | Patch |
+| `@backstage/plugin-catalog-backend` | 1.13.0 | 1.13.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-github` | 0.4.0 | 0.4.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-incremental-ingestion` | 0.4.6 | 0.4.7 | Patch |
+| `@backstage/plugin-catalog-backend-module-openapi` | 0.1.19 | 0.1.20 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 1.17.0 | 1.17.1 | Patch |
+
 ## Compared to 1.17.5 (previous minor release)
 
 10 added, 0 removed, 217 upgraded, 4 unchanged.

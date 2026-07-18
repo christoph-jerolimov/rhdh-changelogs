@@ -10,6 +10,18 @@
 | --- | --- | --- | --- |
 | `@backstage/backend-common` | 0.20.1 | 0.20.2 | Patch |
 
+## Compared to 1.22.0 (first release of this minor)
+
+0 added, 0 removed, 3 upgraded, 248 unchanged.
+
+### Version bumps
+
+| Package | 1.22.0 | 1.22.3 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-common` | 0.20.1 | 0.20.2 | Patch |
+| `@backstage/create-app` | 0.5.9 | 0.5.10 | Patch |
+| `@backstage/plugin-catalog-backend` | 1.16.1 | 1.16.2 | Patch |
+
 ## Compared to 1.21.1 (previous minor release)
 
 2 added, 0 removed, 226 upgraded, 23 unchanged.

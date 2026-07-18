@@ -28,6 +28,63 @@
 | `@backstage/plugin-scaffolder-node` | 0.4.11 | 0.4.12 | Patch |
 | `@backstage/plugin-scaffolder-node-test-utils` | 0.1.12 | 0.1.13 | Patch |
 
+## Compared to 1.31.0 (first release of this minor)
+
+0 added, 0 removed, 46 upgraded, 132 unchanged.
+
+⚠️ Need extra attention: 1 0.0.x patch.
+
+### Version bumps
+
+| Package | 1.31.0 | 1.31.4 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-dynamic-feature-service` | 0.4.0 | 0.4.2 | Patch |
+| `@backstage/create-app` | 0.5.19 | 0.5.20 | Patch |
+| `@backstage/dev-utils` | 1.1.0 | 1.1.1 | Patch |
+| `@backstage/integration-react` | 1.1.31 | 1.1.32 | Patch |
+| `@backstage/plugin-api-docs` | 0.11.9 | 0.11.10 | Patch |
+| `@backstage/plugin-app-backend` | 0.3.74 | 0.3.75 | Patch |
+| `@backstage/plugin-catalog` | 1.23.0 | 1.23.1 | Patch |
+| `@backstage/plugin-catalog-backend` | 1.26.0 | 1.26.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-github` | 0.7.3 | 0.7.4 | Patch |
+| `@backstage/plugin-catalog-backend-module-github-org` | 0.3.0 | 0.3.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-incremental-ingestion` | 0.5.3 | 0.5.4 | Patch |
+| `@backstage/plugin-catalog-backend-module-logs` | 0.1.0 | 0.1.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-openapi` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-catalog-graph` | 0.4.9 | 0.4.10 | Patch |
+| `@backstage/plugin-catalog-import` | 0.12.3 | 0.12.4 | Patch |
+| `@backstage/plugin-catalog-react` | 1.13.0 | 1.13.1 | Patch |
+| `@backstage/plugin-home` | 0.7.10 | 0.7.11 | Patch |
+| `@backstage/plugin-kubernetes` | 0.11.14 | 0.11.15 | Patch |
+| `@backstage/plugin-kubernetes-cluster` | 0.0.15 | 0.0.16 | Patch ⚠️ |
+| `@backstage/plugin-org` | 0.6.29 | 0.6.30 | Patch |
+| `@backstage/plugin-org-react` | 0.1.28 | 0.1.29 | Patch |
+| `@backstage/plugin-scaffolder` | 1.25.0 | 1.25.1 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 1.25.0 | 1.25.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-azure` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket` | 0.3.0 | 0.3.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket-server` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` | 0.3.0 | 0.3.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-cookiecutter` | 0.3.0 | 0.3.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gcp` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gerrit` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gitea` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-github` | 0.5.0 | 0.5.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gitlab` | 0.5.0 | 0.5.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-notifications` | 0.1.0 | 0.1.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-rails` | 0.5.0 | 0.5.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-sentry` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-yeoman` | 0.4.0 | 0.4.1 | Patch |
+| `@backstage/plugin-scaffolder-node` | 0.4.11 | 0.4.12 | Patch |
+| `@backstage/plugin-scaffolder-node-test-utils` | 0.1.12 | 0.1.13 | Patch |
+| `@backstage/plugin-scaffolder-react` | 1.12.0 | 1.12.1 | Patch |
+| `@backstage/plugin-search` | 1.4.16 | 1.4.17 | Patch |
+| `@backstage/plugin-techdocs` | 1.10.9 | 1.10.10 | Patch |
+| `@backstage/plugin-techdocs-addons-test-utils` | 1.0.38 | 1.0.39 | Patch |
+| `@backstage/plugin-techdocs-module-addons-contrib` | 1.1.14 | 1.1.15 | Patch |
+| `@backstage/plugin-user-settings` | 0.8.12 | 0.8.13 | Patch |
+
 ## Compared to 1.30.4 (previous minor release)
 
 4 added, 1 removed, 158 upgraded, 16 unchanged.

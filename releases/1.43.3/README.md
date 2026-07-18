@@ -12,6 +12,22 @@
 | `@backstage/config-loader` | 1.10.3 | 1.10.4 | Patch |
 | `@backstage/plugin-catalog-backend` | 3.1.0 | 3.1.1 | Patch |
 
+## Compared to 1.43.0 (first release of this minor)
+
+0 added, 0 removed, 7 upgraded, 182 unchanged.
+
+### Version bumps
+
+| Package | 1.43.0 | 1.43.3 | Type |
+| --- | --- | --- | --- |
+| `@backstage/cli` | 0.34.2 | 0.34.3 | Patch |
+| `@backstage/config` | 1.3.3 | 1.3.4 | Patch |
+| `@backstage/config-loader` | 1.10.3 | 1.10.4 | Patch |
+| `@backstage/core-components` | 0.18.0 | 0.18.1 | Patch |
+| `@backstage/plugin-catalog-backend` | 3.1.0 | 3.1.1 | Patch |
+| `@backstage/plugin-catalog-graph` | 0.5.0 | 0.5.1 | Patch |
+| `@backstage/plugin-catalog-react` | 1.21.0 | 1.21.1 | Patch |
+
 ## Compared to 1.42.5 (previous minor release)
 
 2 added, 0 removed, 162 upgraded, 25 unchanged.

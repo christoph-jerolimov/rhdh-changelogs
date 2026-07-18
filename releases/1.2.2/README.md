@@ -10,6 +10,16 @@
 | --- | --- | --- | --- |
 | `@backstage/backend-common` | 0.13.4 | 0.13.5 | Patch |
 
+## Compared to 1.2.0 (first release of this minor)
+
+0 added, 0 removed, 1 upgraded, 143 unchanged.
+
+### Version bumps
+
+| Package | 1.2.0 | 1.2.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-common` | 0.13.3 | 0.13.5 | Patch |
+
 ## Compared to 1.1.1 (previous minor release)
 
 7 added, 0 removed, 132 upgraded, 5 unchanged.

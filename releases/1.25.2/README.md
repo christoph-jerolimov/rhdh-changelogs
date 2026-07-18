@@ -11,6 +11,18 @@
 | `@backstage/backend-dynamic-feature-service` | 0.2.7 | 0.2.8 | Patch |
 | `@backstage/plugin-events-backend` | 0.3.2 | 0.3.3 | Patch |
 
+## Compared to 1.25.0 (first release of this minor)
+
+0 added, 0 removed, 3 upgraded, 264 unchanged.
+
+### Version bumps
+
+| Package | 1.25.0 | 1.25.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-dynamic-feature-service` | 0.2.7 | 0.2.8 | Patch |
+| `@backstage/plugin-events-backend` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-kubernetes-backend` | 0.16.3 | 0.16.4 | Patch |
+
 ## Compared to 1.24.2 (previous minor release)
 
 0 added, 0 removed, 225 upgraded, 42 unchanged.

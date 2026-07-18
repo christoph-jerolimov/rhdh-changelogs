@@ -14,6 +14,34 @@
 | `@backstage/plugin-catalog-unprocessed-entities` | 0.2.29 | 0.2.30 | Patch |
 | `@backstage/plugin-catalog-unprocessed-entities-common` | 0.0.14 | 0.0.15 | Patch ⚠️ |
 
+## Compared to 1.50.0 (first release of this minor)
+
+0 added, 0 removed, 17 upgraded, 190 unchanged.
+
+⚠️ Need extra attention: 1 0.0.x patch.
+
+### Version bumps
+
+| Package | 1.50.0 | 1.50.4 | Type |
+| --- | --- | --- | --- |
+| `@backstage/cli-module-build` | 0.1.1 | 0.1.2 | Patch |
+| `@backstage/frontend-plugin-api` | 0.16.0 | 0.16.2 | Patch |
+| `@backstage/plugin-app` | 0.4.3 | 0.4.5 | Patch |
+| `@backstage/plugin-app-visualizer` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-catalog` | 2.0.2 | 2.0.4 | Patch |
+| `@backstage/plugin-catalog-backend` | 3.6.0 | 3.6.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-unprocessed` | 0.6.10 | 0.6.11 | Patch |
+| `@backstage/plugin-catalog-graph` | 0.6.1 | 0.6.3 | Patch |
+| `@backstage/plugin-catalog-react` | 2.1.2 | 2.1.4 | Patch |
+| `@backstage/plugin-catalog-unprocessed-entities` | 0.2.29 | 0.2.30 | Patch |
+| `@backstage/plugin-catalog-unprocessed-entities-common` | 0.0.14 | 0.0.15 | Patch ⚠️ |
+| `@backstage/plugin-home` | 0.9.4 | 0.9.5 | Patch |
+| `@backstage/plugin-org` | 0.7.1 | 0.7.3 | Patch |
+| `@backstage/plugin-search` | 1.7.1 | 1.7.3 | Patch |
+| `@backstage/plugin-search-react` | 1.11.1 | 1.11.3 | Patch |
+| `@backstage/plugin-techdocs` | 1.17.3 | 1.17.5 | Patch |
+| `@backstage/ui` | 0.14.0 | 0.14.3 | Patch |
+
 ## Compared to 1.49.5 (previous minor release)
 
 0 added, 0 removed, 199 upgraded, 8 unchanged.

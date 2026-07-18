@@ -13,6 +13,20 @@
 | `@backstage/plugin-search-react` | 1.10.3 | 1.10.4 | Patch |
 | `@backstage/repo-tools` | 0.16.4 | 0.16.5 | Patch |
 
+## Compared to 1.48.0 (first release of this minor)
+
+0 added, 0 removed, 5 upgraded, 189 unchanged.
+
+### Version bumps
+
+| Package | 1.48.0 | 1.48.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/frontend-plugin-api` | 0.14.0 | 0.14.1 | Patch |
+| `@backstage/plugin-scaffolder` | 1.35.3 | 1.35.4 | Patch |
+| `@backstage/plugin-search` | 1.6.0 | 1.6.1 | Patch |
+| `@backstage/plugin-search-react` | 1.10.3 | 1.10.4 | Patch |
+| `@backstage/repo-tools` | 0.16.4 | 0.16.5 | Patch |
+
 ## Compared to 1.47.4 (previous minor release)
 
 2 added, 0 removed, 186 upgraded, 6 unchanged.

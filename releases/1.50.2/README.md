@@ -20,6 +20,27 @@
 | `@backstage/plugin-techdocs` | 1.17.4 | 1.17.5 | Patch |
 | `@backstage/ui` | 0.14.1 | 0.14.2 | Patch |
 
+## Compared to 1.50.0 (first release of this minor)
+
+0 added, 0 removed, 12 upgraded, 195 unchanged.
+
+### Version bumps
+
+| Package | 1.50.0 | 1.50.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/cli-module-build` | 0.1.1 | 0.1.2 | Patch |
+| `@backstage/frontend-plugin-api` | 0.16.0 | 0.16.2 | Patch |
+| `@backstage/plugin-app` | 0.4.3 | 0.4.5 | Patch |
+| `@backstage/plugin-app-visualizer` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-catalog` | 2.0.2 | 2.0.4 | Patch |
+| `@backstage/plugin-catalog-graph` | 0.6.1 | 0.6.3 | Patch |
+| `@backstage/plugin-catalog-react` | 2.1.2 | 2.1.4 | Patch |
+| `@backstage/plugin-org` | 0.7.1 | 0.7.3 | Patch |
+| `@backstage/plugin-search` | 1.7.1 | 1.7.3 | Patch |
+| `@backstage/plugin-search-react` | 1.11.1 | 1.11.3 | Patch |
+| `@backstage/plugin-techdocs` | 1.17.3 | 1.17.5 | Patch |
+| `@backstage/ui` | 0.14.0 | 0.14.2 | Patch |
+
 ## Compared to 1.49.5 (previous minor release)
 
 0 added, 0 removed, 199 upgraded, 8 unchanged.

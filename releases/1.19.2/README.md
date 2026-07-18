@@ -19,6 +19,26 @@
 | `@backstage/plugin-todo` | 0.2.28 | 0.2.29 | Patch |
 | `@backstage/plugin-user-settings-backend` | 0.2.4 | 0.2.5 | Patch |
 
+## Compared to 1.19.0 (first release of this minor)
+
+0 added, 0 removed, 11 upgraded, 227 unchanged.
+
+### Version bumps
+
+| Package | 1.19.0 | 1.19.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-app-api` | 0.5.6 | 0.5.7 | Patch |
+| `@backstage/plugin-auth-backend-module-microsoft-provider` | 0.1.0 | 0.1.1 | Patch |
+| `@backstage/plugin-bazaar-backend` | 0.3.3 | 0.3.4 | Patch |
+| `@backstage/plugin-kafka-backend` | 0.3.3 | 0.3.4 | Patch |
+| `@backstage/plugin-periskop-backend` | 0.2.3 | 0.2.4 | Patch |
+| `@backstage/plugin-proxy-backend` | 0.4.3 | 0.4.4 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 1.18.0 | 1.18.1 | Patch |
+| `@backstage/plugin-scaffolder-node` | 0.2.6 | 0.2.7 | Patch |
+| `@backstage/plugin-sonarqube` | 0.7.6 | 0.7.7 | Patch |
+| `@backstage/plugin-todo` | 0.2.28 | 0.2.29 | Patch |
+| `@backstage/plugin-user-settings-backend` | 0.2.4 | 0.2.5 | Patch |
+
 ## Compared to 1.18.5 (previous minor release)
 
 7 added, 0 removed, 221 upgraded, 10 unchanged.

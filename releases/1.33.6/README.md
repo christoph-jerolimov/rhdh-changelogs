@@ -10,6 +10,83 @@
 | --- | --- | --- | --- |
 | `@backstage/cli` | 0.29.2 | 0.29.3 | Patch |
 
+## Compared to 1.33.0 (first release of this minor)
+
+0 added, 0 removed, 66 upgraded, 111 unchanged.
+
+⚠️ Need extra attention: 2 0.0.x patch.
+
+### Version bumps
+
+| Package | 1.33.0 | 1.33.6 | Type |
+| --- | --- | --- | --- |
+| `@backstage/app-defaults` | 1.5.13 | 1.5.14 | Patch |
+| `@backstage/backend-dynamic-feature-service` | 0.5.0 | 0.5.1 | Patch |
+| `@backstage/cli` | 0.29.0 | 0.29.3 | Patch |
+| `@backstage/core-compat-api` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/core-components` | 0.16.0 | 0.16.1 | Patch |
+| `@backstage/dev-utils` | 1.1.3 | 1.1.4 | Patch |
+| `@backstage/frontend-app-api` | 0.10.1 | 0.10.2 | Patch |
+| `@backstage/frontend-defaults` | 0.1.2 | 0.1.3 | Patch |
+| `@backstage/frontend-plugin-api` | 0.9.1 | 0.9.2 | Patch |
+| `@backstage/frontend-test-utils` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-api-docs` | 0.12.0 | 0.12.1 | Patch |
+| `@backstage/plugin-app` | 0.1.2 | 0.1.3 | Patch |
+| `@backstage/plugin-app-backend` | 0.4.0 | 0.4.2 | Patch |
+| `@backstage/plugin-app-visualizer` | 0.1.12 | 0.1.13 | Patch |
+| `@backstage/plugin-auth-react` | 0.1.8 | 0.1.9 | Patch |
+| `@backstage/plugin-catalog` | 1.25.0 | 1.25.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-ldap` | 0.10.0 | 0.10.1 | Patch |
+| `@backstage/plugin-catalog-graph` | 0.4.12 | 0.4.13 | Patch |
+| `@backstage/plugin-catalog-import` | 0.12.6 | 0.12.7 | Patch |
+| `@backstage/plugin-catalog-react` | 1.14.1 | 1.14.2 | Patch |
+| `@backstage/plugin-catalog-unprocessed-entities` | 0.2.10 | 0.2.11 | Patch |
+| `@backstage/plugin-config-schema` | 0.1.61 | 0.1.62 | Patch |
+| `@backstage/plugin-devtools` | 0.1.20 | 0.1.21 | Patch |
+| `@backstage/plugin-home` | 0.8.1 | 0.8.2 | Patch |
+| `@backstage/plugin-home-react` | 0.1.19 | 0.1.20 | Patch |
+| `@backstage/plugin-kubernetes` | 0.12.0 | 0.12.1 | Patch |
+| `@backstage/plugin-kubernetes-cluster` | 0.0.18 | 0.0.19 | Patch ⚠️ |
+| `@backstage/plugin-kubernetes-react` | 0.5.0 | 0.5.1 | Patch |
+| `@backstage/plugin-notifications` | 0.4.0 | 0.4.1 | Patch |
+| `@backstage/plugin-org` | 0.6.32 | 0.6.33 | Patch |
+| `@backstage/plugin-org-react` | 0.1.31 | 0.1.32 | Patch |
+| `@backstage/plugin-scaffolder` | 1.27.0 | 1.27.1 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 1.27.0 | 1.27.2 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-azure` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket` | 0.3.2 | 0.3.4 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket-server` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-cookiecutter` | 0.3.3 | 0.3.4 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gcp` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gerrit` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gitea` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-github` | 0.5.2 | 0.5.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-gitlab` | 0.6.1 | 0.6.2 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-notifications` | 0.1.3 | 0.1.4 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-rails` | 0.5.2 | 0.5.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-sentry` | 0.2.2 | 0.2.3 | Patch |
+| `@backstage/plugin-scaffolder-backend-module-yeoman` | 0.4.3 | 0.4.4 | Patch |
+| `@backstage/plugin-scaffolder-node` | 0.6.0 | 0.6.1 | Patch |
+| `@backstage/plugin-scaffolder-node-test-utils` | 0.1.15 | 0.1.16 | Patch |
+| `@backstage/plugin-scaffolder-react` | 1.14.0 | 1.14.1 | Patch |
+| `@backstage/plugin-search` | 1.4.19 | 1.4.20 | Patch |
+| `@backstage/plugin-search-backend-module-techdocs` | 0.3.2 | 0.3.3 | Patch |
+| `@backstage/plugin-search-react` | 1.8.2 | 1.8.3 | Patch |
+| `@backstage/plugin-signals` | 0.0.12 | 0.0.13 | Patch ⚠️ |
+| `@backstage/plugin-techdocs` | 1.11.1 | 1.11.2 | Patch |
+| `@backstage/plugin-techdocs-addons-test-utils` | 1.0.41 | 1.0.42 | Patch |
+| `@backstage/plugin-techdocs-backend` | 1.11.2 | 1.11.3 | Patch |
+| `@backstage/plugin-techdocs-module-addons-contrib` | 1.1.17 | 1.1.18 | Patch |
+| `@backstage/plugin-techdocs-node` | 1.12.13 | 1.12.14 | Patch |
+| `@backstage/plugin-techdocs-react` | 1.2.10 | 1.2.11 | Patch |
+| `@backstage/plugin-user-settings` | 0.8.15 | 0.8.16 | Patch |
+| `@backstage/repo-tools` | 0.11.0 | 0.11.1 | Patch |
+| `@backstage/test-utils` | 1.7.1 | 1.7.2 | Patch |
+| `@backstage/theme` | 0.6.1 | 0.6.2 | Patch |
+| `@techdocs/cli` | 1.8.22 | 1.8.23 | Patch |
+
 ## Compared to 1.32.6 (previous minor release)
 
 0 added, 0 removed, 169 upgraded, 8 unchanged.

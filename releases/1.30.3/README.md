@@ -21,6 +21,30 @@
 | `@backstage/plugin-catalog-backend-module-logs` | 0.0.2 | 0.0.3 | Patch ⚠️ |
 | `@backstage/plugin-catalog-backend-module-openapi` | 0.1.41 | 0.1.42 | Patch |
 
+## Compared to 1.30.0 (first release of this minor)
+
+0 added, 0 removed, 13 upgraded, 162 unchanged.
+
+⚠️ Need extra attention: 1 0.0.x patch.
+
+### Version bumps
+
+| Package | 1.30.0 | 1.30.3 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-app-api` | 0.9.0 | 0.9.2 | Patch |
+| `@backstage/backend-defaults` | 0.4.2 | 0.4.3 | Patch |
+| `@backstage/backend-dynamic-feature-service` | 0.3.0 | 0.3.1 | Patch |
+| `@backstage/plugin-auth-backend` | 0.22.10 | 0.22.11 | Patch |
+| `@backstage/plugin-auth-backend-module-aws-alb-provider` | 0.1.15 | 0.1.16 | Patch |
+| `@backstage/plugin-auth-backend-module-oidc-provider` | 0.2.4 | 0.2.5 | Patch |
+| `@backstage/plugin-catalog-backend` | 1.25.0 | 1.25.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-github` | 0.7.0 | 0.7.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-github-org` | 0.2.0 | 0.2.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-incremental-ingestion` | 0.5.0 | 0.5.1 | Patch |
+| `@backstage/plugin-catalog-backend-module-logs` | 0.0.2 | 0.0.3 | Patch ⚠️ |
+| `@backstage/plugin-catalog-backend-module-openapi` | 0.1.41 | 0.1.42 | Patch |
+| `@backstage/plugin-techdocs-backend` | 1.10.10 | 1.10.11 | Patch |
+
 ## Compared to 1.29.2 (previous minor release)
 
 1 added, 0 removed, 157 upgraded, 17 unchanged.

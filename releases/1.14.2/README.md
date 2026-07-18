@@ -20,6 +20,27 @@
 | `@backstage/plugin-techdocs` | 1.6.2 | 1.6.3 | Patch |
 | `@backstage/plugin-techdocs-addons-test-utils` | 1.0.13 | 1.0.14 | Patch |
 
+## Compared to 1.14.0 (first release of this minor)
+
+0 added, 0 removed, 12 upgraded, 201 unchanged.
+
+### Version bumps
+
+| Package | 1.14.0 | 1.14.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/plugin-adr` | 0.6.0 | 0.6.1 | Patch |
+| `@backstage/plugin-api-docs` | 0.9.3 | 0.9.4 | Patch |
+| `@backstage/plugin-bazaar` | 0.2.8 | 0.2.9 | Patch |
+| `@backstage/plugin-catalog` | 1.11.0 | 1.11.1 | Patch |
+| `@backstage/plugin-explore` | 0.4.3 | 0.4.4 | Patch |
+| `@backstage/plugin-kubernetes` | 0.9.0 | 0.9.1 | Patch |
+| `@backstage/plugin-playlist` | 0.1.9 | 0.1.10 | Patch |
+| `@backstage/plugin-search` | 1.3.0 | 1.3.1 | Patch |
+| `@backstage/plugin-search-react` | 1.6.0 | 1.6.1 | Patch |
+| `@backstage/plugin-stack-overflow` | 0.1.15 | 0.1.16 | Patch |
+| `@backstage/plugin-techdocs` | 1.6.2 | 1.6.3 | Patch |
+| `@backstage/plugin-techdocs-addons-test-utils` | 1.0.13 | 1.0.14 | Patch |
+
 ## Compared to 1.13.2 (previous minor release)
 
 4 added, 0 removed, 178 upgraded, 31 unchanged.

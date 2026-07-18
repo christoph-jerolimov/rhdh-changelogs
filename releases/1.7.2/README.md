@@ -10,6 +10,17 @@
 | --- | --- | --- | --- |
 | `@backstage/plugin-tech-insights` | 0.3.1 | 0.3.2 | Patch |
 
+## Compared to 1.7.0 (first release of this minor)
+
+0 added, 0 removed, 2 upgraded, 161 unchanged.
+
+### Version bumps
+
+| Package | 1.7.0 | 1.7.2 | Type |
+| --- | --- | --- | --- |
+| `@backstage/create-app` | 0.4.32 | 0.4.33 | Patch |
+| `@backstage/plugin-tech-insights` | 0.3.1 | 0.3.2 | Patch |
+
 ## Compared to 1.6.0 (previous minor release)
 
 0 added, 0 removed, 155 upgraded, 8 unchanged.

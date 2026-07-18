@@ -10,6 +10,18 @@
 | --- | --- | --- | --- |
 | `@backstage/backend-test-utils` | 1.10.0 | 1.10.1 | Patch |
 
+## Compared to 1.45.0 (first release of this minor)
+
+0 added, 0 removed, 3 upgraded, 187 unchanged.
+
+### Version bumps
+
+| Package | 1.45.0 | 1.45.3 | Type |
+| --- | --- | --- | --- |
+| `@backstage/backend-test-utils` | 1.10.0 | 1.10.1 | Patch |
+| `@backstage/frontend-plugin-api` | 0.13.0 | 0.13.1 | Patch |
+| `@backstage/ui` | 0.9.0 | 0.9.1 | Patch |
+
 ## Compared to 1.44.3 (previous minor release)
 
 0 added, 0 removed, 178 upgraded, 12 unchanged.

@@ -11,6 +11,26 @@
 | `@backstage/plugin-auth-backend` | 0.27.0 | 0.27.1 | Patch |
 | `@backstage/plugin-scaffolder-backend` | 3.1.4 | 3.1.5 | Patch |
 
+## Compared to 1.48.0 (first release of this minor)
+
+0 added, 0 removed, 11 upgraded, 183 unchanged.
+
+### Version bumps
+
+| Package | 1.48.0 | 1.48.5 | Type |
+| --- | --- | --- | --- |
+| `@backstage/frontend-plugin-api` | 0.14.0 | 0.14.1 | Patch |
+| `@backstage/integration` | 1.20.0 | 1.20.1 | Patch |
+| `@backstage/module-federation-common` | 0.1.0 | 0.1.1 | Patch |
+| `@backstage/plugin-auth-backend` | 0.27.0 | 0.27.1 | Patch |
+| `@backstage/plugin-catalog` | 1.33.0 | 1.33.1 | Patch |
+| `@backstage/plugin-scaffolder` | 1.35.3 | 1.35.4 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 3.1.3 | 3.1.5 | Patch |
+| `@backstage/plugin-search` | 1.6.0 | 1.6.1 | Patch |
+| `@backstage/plugin-search-react` | 1.10.3 | 1.10.4 | Patch |
+| `@backstage/plugin-techdocs-node` | 1.14.2 | 1.14.3 | Patch |
+| `@backstage/repo-tools` | 0.16.4 | 0.16.5 | Patch |
+
 ## Compared to 1.47.4 (previous minor release)
 
 2 added, 0 removed, 186 upgraded, 6 unchanged.
