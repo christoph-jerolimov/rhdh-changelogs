@@ -8,10 +8,10 @@ A [GitHub workflow](.github/workflows/update-versions.yml) runs daily (and on de
 
 | Table | Markdown | CSV |
 | --- | --- | --- |
-| Last 10 releases | [last-10-releases.md](last-10-releases.md) | [last-10-releases.csv](last-10-releases.csv) |
-| Last 10 minor releases (latest patch per minor) | [last-10-minor-releases.md](last-10-minor-releases.md) | [last-10-minor-releases.csv](last-10-minor-releases.csv) |
-| All minor releases (latest patch per minor) | [minor-releases.md](minor-releases.md) | [minor-releases.csv](minor-releases.csv) |
-| All releases | [all-releases.md](all-releases.md) | [all-releases.csv](all-releases.csv) |
+| Last 10 releases | [package-versions-last-10-releases.md](package-versions-last-10-releases.md) | [package-versions-last-10-releases.csv](package-versions-last-10-releases.csv) |
+| Last 10 minor releases (latest patch per minor) | [package-versions-last-10-minor-releases.md](package-versions-last-10-minor-releases.md) | [package-versions-last-10-minor-releases.csv](package-versions-last-10-minor-releases.csv) |
+| All minor releases (latest patch per minor) | [package-versions-minor-releases.md](package-versions-minor-releases.md) | [package-versions-minor-releases.csv](package-versions-minor-releases.csv) |
+| All releases | [package-versions-all-releases.md](package-versions-all-releases.md) | [package-versions-all-releases.csv](package-versions-all-releases.csv) |
 
 Columns are ordered `next` (if a next release exists), then newest to oldest release. Rows list every package that appears in any of the shown releases. Note: the *all releases* files are large and GitHub may not render the Markdown version — use the last-10 files for browsing.
 
@@ -21,8 +21,8 @@ One row per release (newest to oldest, incl. `next` if it exists), comparing eac
 
 | Table | Markdown | CSV |
 | --- | --- | --- |
-| Changes per release | [release-changes.md](release-changes.md) | [release-changes.csv](release-changes.csv) |
-| Changes per minor release (latest patch per minor) | [minor-release-changes.md](minor-release-changes.md) | [minor-release-changes.csv](minor-release-changes.csv) |
+| Changes per release | [number-of-changed-packages-all-releases.md](number-of-changed-packages-all-releases.md) | [number-of-changed-packages-all-releases.csv](number-of-changed-packages-all-releases.csv) |
+| Changes per minor release (latest patch per minor) | [number-of-changed-packages-minor-releases.md](number-of-changed-packages-minor-releases.md) | [number-of-changed-packages-minor-releases.csv](number-of-changed-packages-minor-releases.csv) |
 
 ## Per-release folders
 
@@ -43,7 +43,7 @@ The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every p
 - Packages that were removed from `main` (e.g. plugins moved to community repos) are fetched once from the release tag of the newest release that still listed them; existing files are never re-fetched.
 - The job fails if any package listed in any release manifest ends up without a changelog.
 
-The same workflow also reads each package's `package.json` and generates [packages.md](packages.md) / [packages.csv](packages.csv): every package that ever appeared in a release manifest with its Backstage role, description, and — for packages no longer on `main` — the last release that included it.
+The same workflow also reads each package's `package.json` and generates [packages-overview.md](packages-overview.md) / [packages-overview.csv](packages-overview.csv): every package that ever appeared in a release manifest with its Backstage role, description, and — for packages no longer on `main` — the last release that included it.
 
 ## Scripts
 

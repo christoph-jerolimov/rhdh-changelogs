@@ -242,11 +242,11 @@ for (const [name, role, description, last] of tableRows) {
   md.push(`| \`${mdCell(name!)}\` | ${mdCell(role!)} | ${mdCell(description!)} | ${mdCell(last!)} |`);
 }
 md.push("");
-writeFileIfChanged(path.join(repoRoot, "packages.md"), md.join("\n"));
+writeFileIfChanged(path.join(repoRoot, "packages-overview.md"), md.join("\n"));
 
 const csv = [TABLE_HEADER, ...tableRows].map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
-writeFileIfChanged(path.join(repoRoot, "packages.csv"), csv);
-console.log(`Generated packages.md/.csv (${tableRows.length} packages)`);
+writeFileIfChanged(path.join(repoRoot, "packages-overview.csv"), csv);
+console.log(`Generated packages-overview.md/.csv (${tableRows.length} packages)`);
 
 // Every package that ever appeared in a release manifest must have a changelog.
 const listedIn = new Map<string, string[]>();
