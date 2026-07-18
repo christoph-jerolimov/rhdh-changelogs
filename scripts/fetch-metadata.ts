@@ -2,7 +2,18 @@ import { execFileSync } from "node:child_process";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import semver from "semver";
-import { hasNextRelease, listLocalStableReleases, NEXT, readManifest, repoRoot, writeFileIfChanged } from "./lib.ts";
+import { byCodepoint, hasNextRelease, listLocalStableReleases, NEXT, readManifest, repoRoot, writeFileIfChanged } from "./lib.ts";
+
+interface PackageJson {
+  name?: string;
+  description?: string;
+  backstage?: { role?: string };
+}
+
+interface PackageMeta {
+  role: string;
+  description: string;
+}
 
 const changelogsDir = path.join(repoRoot, "changelogs");
 
@@ -40,9 +51,15 @@ function writeChangelog(name: string, content: string): void {
   fs.writeFileSync(file, content);
 }
 
+function toMeta(pkg: PackageJson | undefined): PackageMeta {
+  return { role: pkg?.backstage?.role ?? "", description: pkg?.description ?? "" };
+}
+
 // Phase 1: copy the changelog of every package on the main branch (always
-// overwritten — main is the source of truth for packages that still exist).
+// overwritten — main is the source of truth for packages that still exist)
+// and collect its package.json metadata.
 const mainPackages = new Set<string>();
+const metadata = new Map<string, PackageMeta>();
 let fromMain = 0;
 for (const group of ["packages", "plugins"]) {
   const groupDir = path.join(backstageDir, group);
@@ -50,11 +67,13 @@ for (const group of ["packages", "plugins"]) {
   for (const entry of fs.readdirSync(groupDir).sort()) {
     const packageJson = path.join(groupDir, entry, "package.json");
     const changelog = path.join(groupDir, entry, "CHANGELOG.md");
-    if (!fs.existsSync(packageJson) || !fs.existsSync(changelog)) continue;
-    const name = (JSON.parse(fs.readFileSync(packageJson, "utf8")) as { name?: string }).name;
-    if (name === undefined) continue;
-    writeChangelog(name, fs.readFileSync(changelog, "utf8"));
-    mainPackages.add(name);
+    if (!fs.existsSync(packageJson)) continue;
+    const pkg = JSON.parse(fs.readFileSync(packageJson, "utf8")) as PackageJson;
+    if (pkg.name === undefined) continue;
+    mainPackages.add(pkg.name);
+    metadata.set(pkg.name, toMeta(pkg));
+    if (!fs.existsSync(changelog)) continue;
+    writeChangelog(pkg.name, fs.readFileSync(changelog, "utf8"));
     fromMain += 1;
   }
 }
@@ -76,14 +95,17 @@ function ensureTag(tag: string): boolean {
 
 const showAtTag = (tag: string, file: string): string | undefined => gitTry(["show", `${tag}:${file}`]);
 
-function packageNameIn(packageJson: string | undefined): string | undefined {
+function parsePackageJson(packageJson: string | undefined): PackageJson | undefined {
   if (packageJson === undefined) return undefined;
   try {
-    return (JSON.parse(packageJson) as { name?: string }).name;
+    return JSON.parse(packageJson) as PackageJson;
   } catch {
     return undefined;
   }
 }
+
+const packageNameIn = (packageJson: string | undefined): string | undefined =>
+  parsePackageJson(packageJson)?.name;
 
 /** Likely directories for a package, checked before falling back to a full scan. */
 function candidateDirs(name: string): string[] {
@@ -175,6 +197,51 @@ for (const [name, last] of lastRelease) {
   deprecatedCount += 1;
 }
 console.log(`Ensured deprecation warnings on ${deprecatedCount} changelogs`);
+
+// Metadata of dropped packages is re-read from their last release tag on every
+// run (immutable, so this stays deterministic without extra state files).
+for (const [name, last] of lastRelease) {
+  if (metadata.has(name)) continue;
+  const tag = `v${last}`;
+  if (!ensureTag(tag)) continue;
+  const dir = findDirAtTag(tag, name);
+  metadata.set(name, toMeta(parsePackageJson(dir === undefined ? undefined : showAtTag(tag, `${dir}/package.json`))));
+}
+
+// Overview of every package that ever appeared in a release manifest.
+const TABLE_HEADER = ["Package", "Backstage role", "Description", "Last included in"];
+const mdCell = (value: string): string => value.replaceAll("|", "\\|");
+const csvCell = (value: string): string =>
+  /[",\n]/.test(value) ? `"${value.replaceAll('"', '""')}"` : value;
+const oneLine = (value: string): string => value.replaceAll(/\s+/g, " ").trim();
+
+const tableRows = [...lastRelease.keys()].sort(byCodepoint).map((name) => {
+  const meta = metadata.get(name);
+  return [
+    name,
+    meta?.role ?? "",
+    oneLine(meta?.description ?? ""),
+    mainPackages.has(name) ? "" : lastRelease.get(name)!,
+  ];
+});
+
+const md: string[] = [];
+md.push("# Backstage packages", "");
+md.push(
+  "All packages that ever appeared in a release manifest. *Last included in* is only set for packages that are no longer part of the `main` branch.",
+  "",
+);
+md.push(`| ${TABLE_HEADER.map(mdCell).join(" | ")} |`);
+md.push(`| ${TABLE_HEADER.map(() => "---").join(" | ")} |`);
+for (const [name, role, description, last] of tableRows) {
+  md.push(`| \`${mdCell(name!)}\` | ${mdCell(role!)} | ${mdCell(description!)} | ${mdCell(last!)} |`);
+}
+md.push("");
+writeFileIfChanged(path.join(repoRoot, "packages.md"), md.join("\n"));
+
+const csv = [TABLE_HEADER, ...tableRows].map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
+writeFileIfChanged(path.join(repoRoot, "packages.csv"), csv);
+console.log(`Generated packages.md/.csv (${tableRows.length} packages)`);
 
 // Every package that ever appeared in a release manifest must have a changelog.
 const listedIn = new Map<string, string[]>();

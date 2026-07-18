@@ -9,7 +9,7 @@ on:
 permissions:
   contents: write
 
-# Shared with update-changelogs.yml — both workflows push to main and must not race.
+# Shared with update-metadata.yml — both workflows push to main and must not race.
 concurrency:
   group: update-data
   cancel-in-progress: false

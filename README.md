@@ -35,13 +35,15 @@ Each `releases/<version>/` folder contains:
 
 `0.x` and prerelease versions are ignored. `releases/next/` exists only while `backstage/versions` has a `-next` release that is newer than the latest stable release; it is removed otherwise.
 
-## Changelogs
+## Changelogs and package metadata
 
-The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every package that ever appeared in a release manifest**, stored as `changelogs/<scope>/<name>.md` (e.g. `changelogs/@backstage/plugin-scaffolder.md`). A second [GitHub workflow](.github/workflows/update-changelogs.yml) refreshes them daily (and on demand):
+The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every package that ever appeared in a release manifest**, stored as `changelogs/<scope>/<name>.md` (e.g. `changelogs/@backstage/plugin-scaffolder.md`). A second [GitHub workflow](.github/workflows/update-metadata.yml) refreshes them daily (and on demand):
 
 - Packages still present on `backstage/backstage` `main` (in `packages/*` and `plugins/*`) are copied from there on every run.
 - Packages that were removed from `main` (e.g. plugins moved to community repos) are fetched once from the release tag of the newest release that still listed them; existing files are never re-fetched.
 - The job fails if any package listed in any release manifest ends up without a changelog.
+
+The same workflow also reads each package's `package.json` and generates [packages.md](packages.md) / [packages.csv](packages.csv): every package that ever appeared in a release manifest with its Backstage role, description, and — for packages no longer on `main` — the last release that included it.
 
 ## Scripts
 
