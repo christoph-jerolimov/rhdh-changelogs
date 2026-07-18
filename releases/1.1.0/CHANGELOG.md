@@ -9,11 +9,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-permission-react@0.4.0
-  - @backstage/core-app-api@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/backend-common` (0.13.1 → 0.13.2)
 
@@ -33,9 +28,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 3ff0e79654: Tweaked the `UrlReader` multiplexer so that it uses the more helpful `NotAllowedError` messaging for all methods.
 - 12608f8ba8: Add `@types/webpack-env` to dependencies.
 - f9f512559b: Updated the visibility of database connection fields in config to be secret
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/config-loader@1.1.0
 
 ## `@backstage/backend-tasks` (0.2.1 → 0.3.0)
 
@@ -59,9 +51,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
   time to leave room for the service to settle, but _other_ workers may still
   continue to invoke the task on the regular cadence in the meantime.
 
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
-
 ## `@backstage/backend-test-utils` (0.1.22 → 0.1.23)
 
 ### 0.1.23
@@ -69,18 +58,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 0654c87cf2: `TestDatabases.create` will no longer set up an `afterAll` test handler if no databases are supported.
-- Updated dependencies
-  - @backstage/cli@0.17.0
-  - @backstage/backend-common@0.13.2
-
-## `@backstage/catalog-client` (1.0.0 → 1.0.1)
-
-### 1.0.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
 
 ## `@backstage/catalog-model` (1.0.0 → 1.0.1)
 
@@ -146,8 +123,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 948a56f401: Added a new experimental `repo list-deprecations` command, which scans the entire project for usage of deprecated APIs.
 - 4782f9e925: Fixed misleading log message during frontend plugin creation.
 - 0383cd0228: The `versions:*` commands no longer warns about duplicate plugin libraries, such as `@backstage/plugin-catalog-common`.
-- Updated dependencies
-  - @backstage/config-loader@1.1.0
 
 ## `@backstage/codemods` (0.1.36 → 0.1.37)
 
@@ -183,9 +158,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - a7bb762dab: fixed empty body issue for POST requests using FetchAPI with 'plugin://' prefix
 - 230ad0826f: Bump to using `@types/node` v16
 - c47509e1a0: Implemented changes suggested by Deepsource.io including multiple double non-null assertion operators and unexpected awaits for non-promise values.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/version-bridge@1.0.1
 
 ## `@backstage/core-components` (0.9.2 → 0.9.3)
 
@@ -203,8 +175,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - d505e43ffc: Fix highlighting of active sidebar items.
 - 72f3dfd05a: Updated ProxiedSignInPageProps docs
 - 7741e47eae: `<Sidebar />` now accepts additional props `sidebarOptions` and `submenuOptions` to allow further customization
-- Updated dependencies
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/core-plugin-api` (1.0.0 → 1.0.1)
 
@@ -215,8 +185,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/version-bridge@1.0.1
 
 ## `@backstage/create-app` (0.4.25 → 0.4.26)
 
@@ -449,15 +417,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-app-api@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/integration-react@1.0.1
-  - @backstage/test-utils@1.0.1
-  - @backstage/app-defaults@1.0.1
 
 ## `@backstage/integration` (1.0.0 → 1.1.0)
 
@@ -486,10 +445,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-airbrake` (0.3.3 → 0.3.4)
 
@@ -499,22 +454,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/dev-utils@1.0.1
-  - @backstage/test-utils@1.0.1
-
-## `@backstage/plugin-airbrake-backend` (0.2.3 → 0.2.4)
-
-### 0.2.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-allure` (0.1.19 → 0.1.20)
 
@@ -524,11 +463,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-analytics-module-ga` (0.1.14 → 0.1.15)
 
@@ -538,9 +472,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-apache-airflow` (0.1.11 → 0.1.12)
 
@@ -550,9 +481,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-api-docs` (0.8.3 → 0.8.4)
 
@@ -564,22 +492,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - ae321bd414: build(deps): bump `@asyncapi/react-component`
 - 230ad0826f: Bump to using `@types/node` v16
 - 1c8ebf7af2: Add dedicated gRPC api definition widget
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-catalog@1.1.0
-
-## `@backstage/plugin-app-backend` (0.3.30 → 0.3.31)
-
-### 0.3.31
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config-loader@1.1.0
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-auth-backend` (0.12.3 → 0.13.0)
 
@@ -717,11 +629,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - a45bce06e3: Handle trailing slashes on GitHub `enterpriseInstanceUrl` settings
 - 45f7a261c7: Bumped passport-microsoft to resolve CVE-2021-41580
 - c5aeaf339d: Added exports of the following types: `AuthProviderConfig`, `StateEncoder`, `TokenParams`, `AwsAlbResult`.
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
-  - @backstage/plugin-auth-node@0.2.0
-  - @backstage/backend-common@0.13.2
-  - @backstage/catalog-client@1.0.1
 
 ## `@backstage/plugin-auth-node` (0.1.6 → 0.2.0)
 
@@ -731,11 +638,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 15d3a3c39a: **BREAKING**: Removed the deprecated `id` and `entity` fields from `BackstageSignInResult`.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
-
 ## `@backstage/plugin-azure-devops` (0.1.19 → 0.1.20)
 
 ### 0.1.20
@@ -744,11 +646,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-azure-devops-backend` (0.3.9 → 0.3.10)
 
@@ -757,8 +654,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 236245d9f8: Stop loading all teams when plugin is initialized
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-badges` (0.2.27 → 0.2.28)
 
@@ -768,11 +663,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-badges-backend` (0.1.24 → 0.1.25)
 
@@ -781,10 +671,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 4c93fd36ee: allow overriding `DefaultBadgeBuilder.getMarkdownCode`
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
-  - @backstage/catalog-client@1.0.1
 
 ## `@backstage/plugin-bazaar` (0.1.18 → 0.1.19)
 
@@ -793,24 +679,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 69738379c7: Pass authorization header with Backstage token to backend requests.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/cli@0.17.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-catalog@1.1.0
-  - @backstage/catalog-client@1.0.1
-
-## `@backstage/plugin-bazaar-backend` (0.1.14 → 0.1.15)
-
-### 0.1.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
-  - @backstage/backend-test-utils@0.1.23
 
 ## `@backstage/plugin-bitrise` (0.1.30 → 0.1.31)
 
@@ -820,11 +688,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-catalog` (1.0.0 → 1.1.0)
 
@@ -840,15 +703,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 2a3cac4c60: Corrected replacements for depreciated FilteredEntityLayout items
 - f6d2694092: Added tableOptions property to CatalogTable and DefaultCatalogPage to support customization of the Catalog Table. Related issue #10453
 - 5d5fdbe541: Columns in CatalogTable now change depending on the entity kind, ensuring only relevant columns are displayed.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/integration-react@1.0.1
-  - @backstage/plugin-search-common@0.3.3
-  - @backstage/plugin-catalog-common@1.0.1
-  - @backstage/catalog-client@1.0.1
 
 ## `@backstage/plugin-catalog-backend` (1.0.0 → 1.1.0)
 
@@ -904,16 +758,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
   - Introduce new `CatalogPermissionRule` convenience type.
 
 - ffec894ed0: add gitlab to AnnotateScmSlugEntityProcessor
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/plugin-permission-node@0.6.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/plugin-search-common@0.3.3
-  - @backstage/backend-common@0.13.2
-  - @backstage/plugin-catalog-common@1.0.1
-  - @backstage/catalog-client@1.0.1
-  - @backstage/plugin-scaffolder-common@1.0.1
 
 ## `@backstage/plugin-catalog-backend-module-aws` (0.1.3 → 0.1.4)
 
@@ -995,24 +839,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
   ```
 
 - 776a91ea3a: Corrected title and URL to setup documentation in README
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.1.0
-  - @backstage/integration@1.1.0
-  - @backstage/backend-tasks@0.3.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
-
-## `@backstage/plugin-catalog-backend-module-azure` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.1.0
-  - @backstage/integration@1.1.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket` (0.1.1 → 0.1.2)
 
@@ -1022,35 +848,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - c47509e1a0: Implemented changes suggested by Deepsource.io including multiple double non-null assertion operators and unexpected awaits for non-promise values.
 - 9fed130139: split BitbucketClient into BitbucketCloudClient, BitbucketServerClient
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.1.0
-  - @backstage/integration@1.1.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
-
-## `@backstage/plugin-catalog-backend-module-github` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.1.0
-  - @backstage/integration@1.1.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
-
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.1.0
-  - @backstage/integration@1.1.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-catalog-backend-module-ldap` (0.4.1 → 0.4.2)
 
@@ -1059,10 +856,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - ebc0aef2c6: Changed relationship creation in LDAP data processor to leverage entityRefs instead of metadata.name
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.1.0
-  - @backstage/backend-tasks@0.3.0
-  - @backstage/catalog-model@1.0.1
 
 ## `@backstage/plugin-catalog-backend-module-msgraph` (0.3.0 → 0.3.1)
 
@@ -1072,10 +865,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 1691c6c5c2: Clarify that config locations that emit User and Group kinds now need to declare so in the `catalog.locations.[].rules`
 - 85fc53df95: Now plugin configuration accept a new optional parameter `groupSelect` which allow the client to fetch defined fields from the ms-graph api.
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.1.0
-  - @backstage/backend-tasks@0.3.0
-  - @backstage/catalog-model@1.0.1
 
 ## `@backstage/plugin-catalog-common` (1.0.0 → 1.0.1)
 
@@ -1085,9 +874,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - ada4446733: Use `createPermission` helper when creating permissions.
 - 8c8bee47f4: Add `@alpha` `CatalogEntityPermission` convenience type, available for import from `@backstage/plugin-catalog-common/alpha`.
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/search-common@0.3.3
 
 ## `@backstage/plugin-catalog-graph` (0.2.15 → 0.2.16)
 
@@ -1099,21 +885,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 77800a32dd: Added renderNode and renderLabel property to EntityRelationsGraph to support customization using CustomNode and CustomLabel components
 - 99063c39ae: Minor API report cleanup
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/catalog-client@1.0.1
-
-## `@backstage/plugin-catalog-graphql` (0.3.7 → 0.3.8)
-
-### 0.3.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
 
 ## `@backstage/plugin-catalog-import` (0.8.6 → 0.8.7)
 
@@ -1123,14 +894,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/integration-react@1.0.1
-  - @backstage/catalog-client@1.0.1
 
 ## `@backstage/plugin-catalog-react` (1.0.0 → 1.0.1)
 
@@ -1153,27 +916,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - d34900af81: Added a new `NextScaffolderRouter` which will eventually replace the exiting router
 - 99063c39ae: Minor API report cleanup
 - 4431873583: Update `usePermission` usage.
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/plugin-permission-react@0.4.0
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/version-bridge@1.0.1
-  - @backstage/plugin-catalog-common@1.0.1
-  - @backstage/catalog-client@1.0.1
-
-## `@backstage/plugin-cicd-statistics` (0.1.5 → 0.1.6)
-
-### 0.1.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-circleci` (0.3.3 → 0.3.4)
 
@@ -1183,11 +925,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-cloudbuild` (0.3.3 → 0.3.4)
 
@@ -1197,11 +934,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-code-climate` (0.1.3 → 0.1.4)
 
@@ -1211,11 +943,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-code-coverage` (0.1.30 → 0.1.31)
 
@@ -1225,23 +952,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-
-## `@backstage/plugin-code-coverage-backend` (0.1.28 → 0.1.29)
-
-### 0.1.29
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
-  - @backstage/catalog-client@1.0.1
 
 ## `@backstage/plugin-config-schema` (0.1.26 → 0.1.27)
 
@@ -1251,9 +961,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-cost-insights` (0.11.25 → 0.11.26)
 
@@ -1263,10 +970,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-explore` (0.3.34 → 0.3.35)
 
@@ -1276,12 +979,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-explore-react@0.0.16
 
 ## `@backstage/plugin-explore-react` (0.0.15 → 0.0.16)
 
@@ -1291,8 +988,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-firehydrant` (0.1.20 → 0.1.21)
 
@@ -1302,10 +997,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-fossa` (0.2.35 → 0.2.36)
 
@@ -1315,11 +1006,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-gcalendar` (0.2.0 → 0.3.0)
 
@@ -1333,9 +1019,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-gcp-projects` (0.3.22 → 0.3.23)
 
@@ -1345,9 +1028,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-git-release-manager` (0.3.16 → 0.3.17)
 
@@ -1358,10 +1038,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-github-actions` (0.5.3 → 0.5.4)
 
@@ -1371,12 +1047,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-github-deployments` (0.1.34 → 0.1.35)
 
@@ -1386,13 +1056,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/integration-react@1.0.1
 
 ## `@backstage/plugin-gitops-profiles` (0.3.21 → 0.3.22)
 
@@ -1402,9 +1065,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-gocd` (0.1.9 → 0.1.10)
 
@@ -1416,11 +1076,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 230ad0826f: Bump to using `@types/node` v16
 - 2677db7c15: Add pagination controls to GoCD build table
 - 4c6c2b2918: Add DORA metrics insights to GoCD builds page
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-graphiql` (0.2.35 → 0.2.36)
 
@@ -1431,19 +1086,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
 - 99063c39ae: Minor API report cleanup
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-
-## `@backstage/plugin-graphql-backend` (0.1.20 → 0.1.21)
-
-### 0.1.21
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
-  - @backstage/plugin-catalog-graphql@0.3.8
 
 ## `@backstage/plugin-home` (0.4.19 → 0.4.20)
 
@@ -1460,12 +1102,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 230ad0826f: Bump to using `@types/node` v16
 - 9b58775849: Updated the dependency on `@backstage/config` to `^1.0.0`.
 - 99063c39ae: Minor API report cleanup
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-stack-overflow@0.1.0
 
 ## `@backstage/plugin-ilert` (0.1.29 → 0.1.30)
 
@@ -1475,11 +1111,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-jenkins` (0.7.2 → 0.7.3)
 
@@ -1489,12 +1120,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-jenkins-common@0.1.3
 
 ## `@backstage/plugin-jenkins-backend` (0.1.19 → 0.1.20)
 
@@ -1506,13 +1131,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - b013de3f50: feature: provide access token to JenkinsInstanceConfig. It can be passed to other backend calls if authentication enabled. DefaultJenkinsInfoProvider sends always this token to catalog api if access token exists.
 - ca91107110: Fixed possible type error if jenkins response contains null values
 - 71f8708f00: Make `resourceRef` required in `JenkinsApi` to match usage.
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/plugin-auth-node@0.2.0
-  - @backstage/backend-common@0.13.2
-  - @backstage/plugin-jenkins-common@0.1.3
-  - @backstage/catalog-client@1.0.1
 
 ## `@backstage/plugin-jenkins-common` (0.1.2 → 0.1.3)
 
@@ -1521,9 +1139,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - ada4446733: Use `createPermission` helper when creating permissions.
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/plugin-catalog-common@1.0.1
 
 ## `@backstage/plugin-kafka` (0.3.3 → 0.3.4)
 
@@ -1534,11 +1149,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-kafka-backend` (0.2.23 → 0.2.24)
 
@@ -1547,9 +1157,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - f26cf63878: build(deps-dev): bump `@types/jest-when` from 2.7.2 to 3.5.0
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-kubernetes` (0.6.3 → 0.6.4)
 
@@ -1563,12 +1170,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 1023ee6353: export kubernetes components
 - 230ad0826f: Bump to using `@types/node` v16
 - f616d99f6f: Fix division by zero in currentToDeclaredResourceToPerc when pod resources weren't set
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-kubernetes-common@0.2.9
 
 ## `@backstage/plugin-kubernetes-backend` (0.4.13 → 0.5.0)
 
@@ -1637,19 +1238,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 753a20c89e: Add kubernetes namespace annotation `backstage.io/kubernetes-namespace` to allow namespaced Kubernetes resources fetches
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
-  - @backstage/plugin-kubernetes-common@0.2.9
-
-## `@backstage/plugin-kubernetes-common` (0.2.8 → 0.2.9)
-
-### 0.2.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
 
 ## `@backstage/plugin-lighthouse` (0.3.3 → 0.3.4)
 
@@ -1660,11 +1248,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-newrelic` (0.3.21 → 0.3.22)
 
@@ -1674,21 +1257,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-
-## `@backstage/plugin-newrelic-dashboard` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-org` (0.5.3 → 0.5.4)
 
@@ -1750,11 +1318,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 230ad0826f: Bump to using `@types/node` v16
 - 0bada4fc4d: Added the `metadata.description` to the bottom of each member on the MembersListCard
 - 99063c39ae: Minor API report cleanup
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-pagerduty` (0.3.30 → 0.3.31)
 
@@ -1764,11 +1327,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-periskop` (0.1.1 → 0.1.2)
 
@@ -1778,20 +1336,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-
-## `@backstage/plugin-periskop-backend` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-permission-backend` (0.5.5 → 0.5.6)
 
@@ -1802,11 +1346,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - c98d271466: Use updated types from `@backstage/plugin-permission-common`
 - 95284162d6: - Add more specific check for policies which return conditional decisions for non-resource permissions.
   - Refine permission validation in authorize endpoint to differentiate between `BasicPermission` and `ResourcePermission` instances.
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/plugin-permission-node@0.6.0
-  - @backstage/plugin-auth-node@0.2.0
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-permission-common` (0.5.3 → 0.6.0)
 
@@ -1916,10 +1455,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 90754d4fa9: Removed [strict](https://github.com/colinhacks/zod#strict) validation from `PermissionCriteria` schemas to support backward-compatible changes.
 - 8012ac46a0: Fix signature of permission rule in test suites
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/plugin-auth-node@0.2.0
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-permission-react` (0.3.4 → 0.4.0)
 
@@ -1933,18 +1468,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - c98d271466: Use updated types from `@backstage/plugin-permission-common`
 - 322b69e46a: **BREAKING:** Make `IdentityPermissionApi#authorize` typing more strict, using `AuthorizePermissionRequest` and `AuthorizePermissionResponse`.
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/core-plugin-api@1.0.1
-
-## `@backstage/plugin-proxy-backend` (0.2.24 → 0.2.25)
-
-### 0.2.25
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-rollbar` (0.4.3 → 0.4.4)
 
@@ -1955,20 +1478,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-
-## `@backstage/plugin-rollbar-backend` (0.1.27 → 0.1.28)
-
-### 0.1.28
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-scaffolder` (1.0.1 → 1.1.0)
 
@@ -1988,17 +1497,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - d34900af81: Added a new `NextScaffolderRouter` which will eventually replace the exiting router
 - 9975ff9852: Applied the fix from version 1.0.1 of this package, which is part of the v1.0.2 release of Backstage.
 - 4431873583: Update `usePermission` usage.
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/plugin-permission-react@0.4.0
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/integration-react@1.0.1
-  - @backstage/plugin-catalog-common@1.0.1
-  - @backstage/catalog-client@1.0.1
-  - @backstage/plugin-scaffolder-common@1.0.1
 
 ## `@backstage/plugin-scaffolder-backend` (1.0.0 → 1.1.0)
 
@@ -2013,24 +1511,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 64d9a031a8: build(deps): bump `isbinaryfile` from 4.0.8 to 5.0.0
 - 2f3d3a1eae: build(deps): bump `@gitbeaker/core` from 34.6.0 to 35.6.0
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.1.0
-  - @backstage/integration@1.1.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
-  - @backstage/catalog-client@1.0.1
-  - @backstage/plugin-scaffolder-common@1.0.1
-
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.5 → 0.2.6)
-
-### 0.2.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend@1.1.0
-  - @backstage/integration@1.1.0
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-scaffolder-backend-module-rails` (0.3.5 → 0.3.6)
 
@@ -2039,28 +1519,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend@1.1.0
-  - @backstage/integration@1.1.0
-  - @backstage/backend-common@0.13.2
-
-## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.3 → 0.2.4)
-
-### 0.2.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend@1.1.0
-
-## `@backstage/plugin-scaffolder-common` (1.0.0 → 1.0.1)
-
-### 1.0.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
 
 ## `@backstage/plugin-search` (0.7.4 → 0.8.0)
 
@@ -2092,14 +1550,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
   - `SearchContextProvider`
   - `useSearch`
 
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-search-react@0.1.0
-  - @backstage/plugin-search-common@0.3.3
-
 ## `@backstage/plugin-search-backend` (0.4.8 → 0.5.0)
 
 ### 0.5.0
@@ -2114,13 +1564,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 3c8cfaaa80: Use `PermissionEvaluator` instead of `PermissionAuthorizer`, which is now deprecated.
 - 62ee65422c: Use new `IndexableResultSet` type as return type of query method in `SearchEngine` implementation.
 - c98d271466: Use updated types from `@backstage/plugin-permission-common`
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/plugin-permission-node@0.6.0
-  - @backstage/plugin-auth-node@0.2.0
-  - @backstage/plugin-search-common@0.3.3
-  - @backstage/backend-common@0.13.2
-  - @backstage/plugin-search-backend-node@0.6.0
 
 ## `@backstage/plugin-search-backend-module-elasticsearch` (0.1.2 → 0.1.3)
 
@@ -2129,9 +1572,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 62ee65422c: Use new `IndexableResultSet` type as return type of query method in `SearchEngine` implementation.
-- Updated dependencies
-  - @backstage/plugin-search-common@0.3.3
-  - @backstage/plugin-search-backend-node@0.6.0
 
 ## `@backstage/plugin-search-backend-module-pg` (0.3.1 → 0.3.2)
 
@@ -2140,10 +1580,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 62ee65422c: Use new `IndexableResultSet` type as return type of query method in `SearchEngine` implementation.
-- Updated dependencies
-  - @backstage/plugin-search-common@0.3.3
-  - @backstage/backend-common@0.13.2
-  - @backstage/plugin-search-backend-node@0.6.0
 
 ## `@backstage/plugin-search-backend-node` (0.5.2 → 0.6.0)
 
@@ -2235,9 +1671,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 62ee65422c: Use new `IndexableResultSet` type as return type of query method in `SearchEngine` implementation.
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/backend-tasks@0.3.0
-  - @backstage/plugin-search-common@0.3.3
 
 ## `@backstage/plugin-search-common` (0.3.2 → 0.3.3)
 
@@ -2248,8 +1681,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - c8b295f2fb: - Introduce `SearchDocument` type. This type contains the subset of `IndexableDocument` properties relevant to the frontend, and is intended to be used for documents returned to the frontend from the search API.
   - `SearchResultSet` is now a wrapper for documents of type `SearchDocument`, and is intended to be used in the frontend. This isn't a breaking change, since `IndexableDocument`s are valid `SearchDocument`s, so the old and new types are compatible.
   - Introduce `IndexableResultSet` type, which wraps `IndexableDocument` instances in the same way as `SearchResultSet`.
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.6.0
 
 ## `@backstage/plugin-sentry` (0.3.41 → 0.3.42)
 
@@ -2260,11 +1691,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 68bb66102d: Exposed options for the material table
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-shortcuts` (0.2.4 → 0.2.5)
 
@@ -2274,9 +1700,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-sonarqube` (0.3.3 → 0.3.4)
 
@@ -2286,11 +1709,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-splunk-on-call` (0.3.27 → 0.3.28)
 
@@ -2300,11 +1718,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-tech-insights` (0.1.13 → 0.2.0)
 
@@ -2324,12 +1737,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
   - Added list of included FactRetrievers
   - Added full backend example using all included FactRetrievers
   - Added boolean scorecard example image showing results of backend example
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-tech-insights-backend` (0.2.10 → 0.3.0)
 
@@ -2363,13 +1770,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
   - Added full backend example using all included FactRetrievers
   - Added boolean scorecard example image showing results of backend example
 
-- Updated dependencies
-  - @backstage/backend-tasks@0.3.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/plugin-tech-insights-node@0.2.9
-  - @backstage/backend-common@0.13.2
-  - @backstage/catalog-client@1.0.1
-
 ## `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.14 → 0.1.15)
 
 ### 0.1.15
@@ -2378,9 +1778,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - e0a51384ac: build(deps): bump `ajv` from 7.0.3 to 8.10.0
 - ab008a0988: Removes node-cron from tech-insights to utilize backend-tasks
-- Updated dependencies
-  - @backstage/plugin-tech-insights-node@0.2.9
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-tech-insights-node` (0.2.8 → 0.2.9)
 
@@ -2389,8 +1786,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 231fee736b: Adds an optional timeout to fact retriever registrations to stop a task if it runs too long.
-- Updated dependencies
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-tech-radar` (0.5.10 → 0.5.11)
 
@@ -2401,9 +1796,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
 - f69789330a: Fix an issue where the Radar is not updated when switching between different radars
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-techdocs` (1.0.1 → 1.1.0)
 
@@ -2484,16 +1876,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
   - sidebar table of contents scroll
 
 - 3ba256c389: Fixed a bug that caused addons in the `Subheader` location to break the default TechDocs reader page layout.
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-app-api@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-search-react@0.1.0
-  - @backstage/plugin-techdocs-react@0.1.0
-  - @backstage/integration-react@1.0.1
 
 ## `@backstage/plugin-techdocs-backend` (1.0.0 → 1.1.0)
 
@@ -2516,15 +1898,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - ada4446733: Specify type of `visibilityPermission` property on collators and collator factories.
 - 7762d54200: Fixed a bug affecting those with cache enabled that would result in empty content being cached if the first attempt to load a static asset from storage were made via a `HEAD` request, rather than a `GET` request.
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/plugin-search-common@0.3.3
-  - @backstage/backend-common@0.13.2
-  - @backstage/plugin-catalog-common@1.0.1
-  - @backstage/plugin-techdocs-node@1.1.0
-  - @backstage/catalog-client@1.0.1
 
 ## `@backstage/plugin-techdocs-node` (1.0.0 → 1.1.0)
 
@@ -2537,11 +1910,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 9fa68705bf: The default container version used to generate TechDocs content is now `v1.0.2`.
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/plugin-search-common@0.3.3
-  - @backstage/backend-common@0.13.2
 
 ## `@backstage/plugin-todo` (0.2.5 → 0.2.6)
 
@@ -2551,11 +1919,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.0.1
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-todo-backend` (0.1.27 → 0.1.28)
 
@@ -2564,11 +1927,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 5da036264b: Fix method to get source-location.
-- Updated dependencies
-  - @backstage/integration@1.1.0
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
-  - @backstage/catalog-client@1.0.1
 
 ## `@backstage/plugin-user-settings` (0.4.2 → 0.4.3)
 
@@ -2584,9 +1942,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - af508a895e: Dynamically layout User Settings theme toggle container
 - 230ad0826f: Bump to using `@types/node` v16
 - 016c574b51: Added the ability to render extra setting tabs
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/plugin-xcmetrics` (0.2.23 → 0.2.24)
 
@@ -2596,27 +1951,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-
-## `@backstage/search-common` (0.3.2 → 0.3.3)
-
-### 0.3.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-search-common@0.3.3
-
-## `@backstage/techdocs-common` (0.11.13 → 0.11.14)
-
-### 0.11.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-techdocs-node@1.1.0
 
 ## `@backstage/test-utils` (1.0.0 → 1.0.1)
 
@@ -2627,11 +1961,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - c98d271466: Use updated types from `@backstage/plugin-permission-common`
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-permission-react@0.4.0
-  - @backstage/plugin-permission-common@0.6.0
-  - @backstage/core-app-api@1.0.1
-  - @backstage/core-plugin-api@1.0.1
 
 ## `@backstage/version-bridge` (1.0.0 → 1.0.1)
 
@@ -2659,10 +1988,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 230ad0826f: Bump to using `@types/node` v16
 - eb470ea54c: Adds a new flag to override the entrypoint when using a custom docker image. It could be used to reuse existing images with different entrypoints.
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
-  - @backstage/backend-common@0.13.2
-  - @backstage/plugin-techdocs-node@1.1.0
 
 ## `@backstage/plugin-cicd-statistics-module-gitlab` (new, 0.1.0)
 
@@ -2672,13 +1997,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - d3af30b47d: Created a module to extract the CI/CD statistics from a Gitlab repository.
   Read the `README.md` in the `cicd-statistics-module-gitlab` plugin folder on how to set it up.
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-cicd-statistics@0.1.6
 
 ## `@backstage/plugin-search-react` (new, 0.1.0)
 
@@ -2699,11 +2017,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
   `SearchApiProviderForStorybookProps`
 
 - e1de8526aa: Versioned search context managed through version-bridge
-- Updated dependencies
-  - @backstage/core-app-api@1.0.1
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/version-bridge@1.0.1
-  - @backstage/plugin-search-common@0.3.3
 
 ## `@backstage/plugin-stack-overflow` (new, 0.1.0)
 
@@ -2717,11 +2030,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 
 - 24254fd433: build(deps): bump `@testing-library/user-event` from 13.5.0 to 14.0.0
 - 230ad0826f: Bump to using `@types/node` v16
-- Updated dependencies
-  - @backstage/plugin-home@0.4.20
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/plugin-search-common@0.3.3
 
 ## `@backstage/plugin-stack-overflow-backend` (new, 0.1.0)
 
@@ -2730,11 +2038,6 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Minor Changes
 
 - ac323de4ad: Add stack overflow backend plugin
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-search-common@0.3.3
 
 ## `@backstage/plugin-techdocs-react` (new, 0.1.0)
 
@@ -2751,8 +2054,5 @@ Changes between 1.0.3 and 1.1.0 — 124 changed and 5 added packages.
 #### Patch Changes
 
 - 7c7919777e: build(deps-dev): bump `@testing-library/react-hooks` from 7.0.2 to 8.0.0
-- Updated dependencies
-  - @backstage/catalog-model@1.0.1
-  - @backstage/core-components@0.9.3
-  - @backstage/core-plugin-api@1.0.1
-  - @backstage/version-bridge@1.0.1
+
+_Excluded dependency updates for packages: `@backstage/catalog-client`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-app-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-github`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-code-coverage-backend`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/search-common`, `@backstage/techdocs-common`._

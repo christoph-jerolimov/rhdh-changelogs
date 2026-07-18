@@ -26,16 +26,6 @@ _No changelog entries found._
 
 _No changelog entries found._
 
-## `@backstage/backend-tasks` (0.6.0 → 0.6.1)
-
-### 0.6.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.24.1
-  - @backstage/backend-plugin-api@0.8.1
-
 ## `@backstage/backend-test-utils` (0.5.0 → 0.5.1)
 
 _No changelog entries found._
@@ -419,3 +409,5 @@ _No changelog entries found._
 ## `@techdocs/cli` (1.8.17 → 1.8.18)
 
 _No changelog entries found._
+
+_Excluded dependency updates for packages: `@backstage/backend-tasks`._

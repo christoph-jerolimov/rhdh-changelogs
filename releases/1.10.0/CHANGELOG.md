@@ -10,15 +10,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - bca8e8b393: Allow defining application level feature flags. See [Feature Flags documentation](https://backstage.io/docs/plugins/feature-flags#in-the-application) for reference.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/core-app-api@1.4.0
-  - @backstage/plugin-permission-react@0.4.9
-  - @backstage/theme@0.2.16
-
 ## `@backstage/backend-app-api` (0.2.4 → 0.3.0)
 
 ### 0.3.0
@@ -45,17 +36,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
 - 3b8fd4169b: Internal folder structure refactor.
 - 6cfd4d7073: Updated implementations for the new `RootLifecycleService`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/config@1.0.6
-  - @backstage/cli-common@0.1.11
-  - @backstage/config-loader@1.1.8
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
-  - @backstage/plugin-auth-node@0.2.9
-  - @backstage/plugin-permission-node@0.7.3
 
 ## `@backstage/backend-common` (0.17.0 → 0.18.0)
 
@@ -78,15 +58,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - d592ec4f51: Updated the logger created by `createRootLogger` to make it possible to override the default `service` log label.
 - b99c030f1b: Refactor to rely on `@backstage/backend-app-api` for the implementation of `createServiceBuilder`.
 - f23eef3aa2: Updated dependency `better-sqlite3` to `^8.0.0`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-app-api@0.3.0
-  - @backstage/config@1.0.6
-  - @backstage/cli-common@0.1.11
-  - @backstage/config-loader@1.1.8
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
 
 ## `@backstage/backend-defaults` (0.1.4 → 0.1.5)
 
@@ -100,9 +71,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 843a0a158c: Added factory for the new core identity service to the set of default service factories.
 - 5b7bcd3c5e: Added support to supply a shared environment to `createBackend`, which can be created using `createSharedEnvironment` from `@backstage/backend-plugin-api`.
 - 02b119ff93: The new root HTTP router service is now installed by default.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-app-api@0.3.0
 
 ## `@backstage/backend-plugin-api` (0.2.0 → 0.3.0)
 
@@ -179,12 +147,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 16054afdec: Documented `coreServices` an all of its members.
 - 0e63aab311: Updated the `RootLoggerService` to also have an `addRedactions` method.
 - 62b04bb865: Updates all `create*` methods to simplify their type definitions and ensure they all have configuration interfaces.
-- Updated dependencies
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/config@1.0.6
-  - @backstage/types@1.0.2
-  - @backstage/plugin-auth-node@0.2.9
-  - @backstage/plugin-permission-common@0.7.3
 
 ## `@backstage/backend-tasks` (0.4.0 → 0.4.1)
 
@@ -194,11 +156,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 3fad4ed40a: Added a new static `TaskScheduler.forPlugin` method.
 - b99c030f1b: Minor internal refactor to avoid import cycle issue.
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
 
 ## `@backstage/backend-test-utils` (0.1.31 → 0.1.32)
 
@@ -212,14 +169,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 483e907eaf: Internal updates of `createServiceFactory` from `@backstage/backend-plugin-api`.
 - 51b7a7ed07: The backend started by `startTestBackend` now has default implementations of all core services. It now also returns a `TestBackend` instance, which provides access to the underlying `server` that can be used with testing libraries such as `supertest`.
 - f23eef3aa2: Updated dependency `better-sqlite3` to `^8.0.0`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/cli@0.22.1
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-app-api@0.3.0
-  - @backstage/config@1.0.6
-  - @backstage/types@1.0.2
-  - @backstage/plugin-auth-node@0.2.9
 
 ## `@backstage/catalog-client` (1.2.0 → 1.3.0)
 
@@ -232,9 +181,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - e23f13a573: Enable the `by-refs` endpoint to receive `fields` through the POST body as well as through query parameters.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/errors@1.1.4
 
 ## `@backstage/catalog-model` (1.1.4 → 1.1.5)
 
@@ -243,10 +189,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 011bd518b7: Fixed spelling mistakes in documentation.
-- Updated dependencies
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
 
 ## `@backstage/cli` (0.22.0 → 0.22.1)
 
@@ -263,13 +205,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - d06a7890c6: Removed unused package `type-fest`
 - 7c8a974515: The `repo test`, `repo lint`, and `repo build` commands will now analyze `yarn.lock` for dependency changes when searching for changed packages. This allows you to use the `--since <ref>` flag even if you have `yarn.lock` changes.
 - e1b71e142e: Workspace ranges are no longer considered invalid by version commands.
-- Updated dependencies
-  - @backstage/config@1.0.6
-  - @backstage/cli-common@0.1.11
-  - @backstage/config-loader@1.1.8
-  - @backstage/errors@1.1.4
-  - @backstage/release-manifests@0.0.8
-  - @backstage/types@1.0.2
 
 ## `@backstage/config` (1.0.5 → 1.0.6)
 
@@ -280,20 +215,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - ba2d69ee17: Adds the ability to coerce values to their boolean representatives.
   Values such as `"true"` `1` `on` and `y` will become `true` when using `getBoolean` and the opposites `false`.
   This happens particularly when such parameters are used with environmental substitution as environment variables are always strings.
-- Updated dependencies
-  - @backstage/types@1.0.2
-
-## `@backstage/config-loader` (1.1.7 → 1.1.8)
-
-### 1.1.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config@1.0.6
-  - @backstage/cli-common@0.1.11
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
 
 ## `@backstage/core-app-api` (1.3.0 → 1.4.0)
 
@@ -302,14 +223,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Minor Changes
 
 - bca8e8b393: Allow defining application level feature flags. See [Feature Flags documentation](https://backstage.io/docs/plugins/feature-flags#in-the-application) for reference.
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
 
 ## `@backstage/core-components` (0.12.2 → 0.12.3)
 
@@ -320,12 +233,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - f2ea446de0: Applied fix from v1.9.1
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
 - f23146520e: Ensure that the "Custom User" sign-in makes use of supplied custom tokens, if any
-- Updated dependencies
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/version-bridge@1.0.3
 
 ## `@backstage/core-plugin-api` (1.2.0 → 1.3.0)
 
@@ -334,13 +241,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Minor Changes
 
 - bca8e8b393: Allow defining application level feature flags. See [Feature Flags documentation](https://backstage.io/docs/plugins/feature-flags#in-the-application) for reference.
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config@1.0.6
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
 
 ## `@backstage/create-app` (0.4.35 → 0.4.36)
 
@@ -360,36 +260,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
   + "better-sqlite3": "^8.0.0",
   ```
 
-- Updated dependencies
-  - @backstage/cli-common@0.1.11
-
-## `@backstage/dev-utils` (1.0.10 → 1.0.11)
-
-### 1.0.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/app-defaults@1.1.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/core-app-api@1.4.0
-  - @backstage/integration-react@1.1.9
-  - @backstage/test-utils@1.2.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/integration` (1.4.1 → 1.4.2)
-
-### 1.4.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-
 ## `@backstage/integration-aws-node` (0.1.0 → 0.1.1)
 
 ### 0.1.1
@@ -397,22 +267,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 89062b8ba0: Skip STS API calls where not needed, to support Minio use cases
-- Updated dependencies
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-
-## `@backstage/integration-react` (1.1.8 → 1.1.9)
-
-### 1.1.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/integration@1.4.2
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-adr` (0.2.5 → 0.3.0)
 
@@ -428,16 +282,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 21ffbdd5ee: Clarify that default ADR parsers support MADR specification v2.x
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-search-react@1.4.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/integration-react@1.1.9
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-adr-common@0.2.5
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-adr-backend` (0.2.4 → 0.2.5)
 
@@ -447,86 +291,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - aa17643a06: This plugin now exports a `createRouter` method which uses `UrlReaders` to make requests to your SCM. Please make sure you read the [install instructions](https://github.com/backstage/backstage/blob/master/plugins/adr-backend/README.md#install)
 - 21ffbdd5ee: Clarify that default ADR parsers support MADR specification v2.x
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/plugin-adr-common@0.2.5
-  - @backstage/plugin-search-common@1.2.1
-
-## `@backstage/plugin-adr-common` (0.2.4 → 0.2.5)
-
-### 0.2.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/integration@1.4.2
-  - @backstage/plugin-search-common@1.2.1
-
-## `@backstage/plugin-airbrake` (0.3.13 → 0.3.14)
-
-### 0.3.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/dev-utils@1.0.11
-  - @backstage/test-utils@1.2.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-airbrake-backend` (0.2.12 → 0.2.13)
-
-### 0.2.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-
-## `@backstage/plugin-allure` (0.1.29 → 0.1.30)
-
-### 0.1.30
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-analytics-module-ga` (0.1.24 → 0.1.25)
-
-### 0.1.25
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-apache-airflow` (0.2.6 → 0.2.7)
-
-### 0.2.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
 
 ## `@backstage/plugin-api-docs` (0.8.13 → 0.8.14)
 
@@ -535,13 +299,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-catalog@1.7.2
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-apollo-explorer` (0.1.6 → 0.1.7)
 
@@ -550,10 +307,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - e8269bca15: Updated dependency `@apollo/explorer` to `^2.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-app-backend` (0.3.39 → 0.3.40)
 
@@ -564,38 +317,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - b4ffa3bd91: The warning for missing app contents is now logged as an error instead, but only in production.
 - ecbec4ec4c: Internal refactor to match new options pattern in the experimental backend system.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/config-loader@1.1.8
-  - @backstage/types@1.0.2
-
-## `@backstage/plugin-auth-backend` (0.17.2 → 0.17.3)
-
-### 0.17.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
-  - @backstage/plugin-auth-node@0.2.9
-
-## `@backstage/plugin-auth-node` (0.2.8 → 0.2.9)
-
-### 0.2.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
 
 ## `@backstage/plugin-azure-devops` (0.2.4 → 0.2.5)
 
@@ -604,25 +325,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-azure-devops-common@0.3.0
-
-## `@backstage/plugin-azure-devops-backend` (0.3.18 → 0.3.19)
-
-### 0.3.19
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-azure-devops-common@0.3.0
 
 ## `@backstage/plugin-azure-sites` (0.1.2 → 0.1.3)
 
@@ -631,51 +333,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-azure-sites-common@0.1.0
-
-## `@backstage/plugin-azure-sites-backend` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-azure-sites-common@0.1.0
-
-## `@backstage/plugin-badges` (0.2.37 → 0.2.38)
-
-### 0.2.38
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-badges-backend` (0.1.33 → 0.1.34)
-
-### 0.1.34
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
 
 ## `@backstage/plugin-bazaar` (0.2.2 → 0.2.3)
 
@@ -689,29 +346,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 99d52523c7: Allow customisation of title and subtitle on bazaar page.
 - 27a5e90e97: Small updates to some paragraph components to ensure theme typography properties are inherited correctly.
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/cli@0.22.1
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-catalog@1.7.2
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-bazaar-backend` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-test-utils@0.1.32
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/plugin-auth-node@0.2.9
 
 ## `@backstage/plugin-bitbucket-cloud-common` (0.2.2 → 0.2.3)
 
@@ -720,21 +354,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 0358d399ad: Updated dependency `ts-morph` to `^17.0.0`.
-- Updated dependencies
-  - @backstage/integration@1.4.2
-
-## `@backstage/plugin-bitrise` (0.1.40 → 0.1.41)
-
-### 0.1.41
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-catalog` (1.7.1 → 1.7.2)
 
@@ -744,19 +363,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - cebe24ef1d: Add `EntityLabelsCard` to show the labels for an entity.
 - 5353b4df61: There is now tooltip in the entity context menu
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-search-react@1.4.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/integration-react@1.1.9
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
-  - @backstage/plugin-catalog-common@1.0.10
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-catalog-backend` (1.6.0 → 1.7.0)
 
@@ -772,21 +378,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - f23eef3aa2: Updated dependency `better-sqlite3` to `^8.0.0`.
 - d136793ff0: Fixed an issue where internal references in the catalog would stick around for longer than expected, causing entities to not be deleted or orphaned as expected.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-scaffolder-common@1.2.4
-  - @backstage/catalog-client@1.3.0
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
-  - @backstage/plugin-catalog-common@1.0.10
-  - @backstage/plugin-permission-common@0.7.3
-  - @backstage/plugin-permission-node@0.7.3
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-catalog-backend-module-aws` (0.1.12 → 0.1.13)
 
@@ -796,17 +387,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-backend-module-azure` (0.1.10 → 0.1.11)
 
@@ -816,33 +396,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
-
-## `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.6 → 0.2.7)
-
-### 0.2.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/plugin-bitbucket-cloud-common@0.2.3
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.6 → 0.1.7)
 
@@ -852,19 +405,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/plugin-bitbucket-cloud-common@0.2.3
-  - @backstage/config@1.0.6
-  - @backstage/plugin-events-node@0.2.1
-  - @backstage/integration@1.4.2
-  - @backstage/plugin-catalog-common@1.0.10
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.4 → 0.1.5)
 
@@ -874,16 +414,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
 
 ## `@backstage/plugin-catalog-backend-module-gerrit` (0.1.7 → 0.1.8)
 
@@ -893,16 +423,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
 
 ## `@backstage/plugin-catalog-backend-module-github` (0.2.2 → 0.2.3)
 
@@ -920,20 +440,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - f8d91a8810: fixed `catalogPath` option to properly glob match on received GitHub events.
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-events-node@0.2.1
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
-  - @backstage/plugin-catalog-common@1.0.10
 
 ## `@backstage/plugin-catalog-backend-module-gitlab` (0.1.10 → 0.1.11)
 
@@ -943,17 +449,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.1.0 → 0.1.1)
 
@@ -965,17 +460,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 045b66ce02: Fixed issue with sometimes trying to commit an empty array of references
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-test-utils@0.1.32
-  - @backstage/catalog-model@1.1.5
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/plugin-permission-common@0.7.3
 
 ## `@backstage/plugin-catalog-backend-module-ldap` (0.5.6 → 0.5.7)
 
@@ -984,13 +468,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 9f2b786fc9: Provide context for logged errors.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-backend-module-msgraph` (0.4.5 → 0.4.6)
 
@@ -1000,14 +477,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
 
 ## `@backstage/plugin-catalog-backend-module-openapi` (0.1.5 → 0.1.6)
 
@@ -1016,25 +485,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - f9abdb64fc: Updated internal usage of UrlReader interface.
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
-
-## `@backstage/plugin-catalog-common` (1.0.9 → 1.0.10)
-
-### 1.0.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-permission-common@0.7.3
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-catalog-graph` (0.2.25 → 0.2.26)
 
@@ -1043,42 +493,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 99f05cbc70: The link from the `CatalogGraphCard` to the `CatalogGraphPage` no longer includes an explicit `maxDepth` parameter, letting the `CatalogGraphPage` choose the initial `maxDepth` instead.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-catalog-graphql` (0.3.16 → 0.3.17)
-
-### 0.3.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/config@1.0.6
-  - @backstage/types@1.0.2
-
-## `@backstage/plugin-catalog-import` (0.9.3 → 0.9.4)
-
-### 0.9.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/integration-react@1.1.9
-  - @backstage/plugin-catalog-common@1.0.10
 
 ## `@backstage/plugin-catalog-node` (1.3.0 → 1.3.1)
 
@@ -1087,13 +501,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 483e907eaf: Internal updates of `createServiceFactory` from `@backstage/backend-plugin-api`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
-  - @backstage/plugin-catalog-common@1.0.10
 
 ## `@backstage/plugin-catalog-react` (1.2.3 → 1.2.4)
 
@@ -1104,19 +511,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 37426f6f5e: Fixed bug in `EntityTagPicker` that filtered on unavailable tags for the selected kind.
 - 516b2039b6: Add a reusable pop over `EntityPeekAheadPopover` component. It shows more details about the associated entity. See the playbook here https://backstage.io/storybook/?path=/story/catalog-entitypeekaheadpopover--default
 - 0e33627996: Remove usage of raw span
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/plugin-permission-react@0.4.9
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
-  - @backstage/plugin-catalog-common@1.0.10
-  - @backstage/plugin-permission-common@0.7.3
 
 ## `@backstage/plugin-cicd-statistics` (0.1.15 → 0.1.16)
 
@@ -1125,34 +519,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-plugin-api@1.3.0
-
-## `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.9 → 0.1.10)
-
-### 0.1.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/plugin-cicd-statistics@0.1.16
-
-## `@backstage/plugin-circleci` (0.3.13 → 0.3.14)
-
-### 0.3.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-cloudbuild` (0.3.13 → 0.3.14)
 
@@ -1161,40 +527,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 1188407632: Fixed bug in the CloudbuildClient reRunWorkflow fetch call. The method in the fetch request was not specified and defaulted to a GET. Method is now explicitly set to POST with this change.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-code-climate` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-code-coverage` (0.2.6 → 0.2.7)
-
-### 0.2.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-code-coverage-backend` (0.2.5 → 0.2.6)
 
@@ -1203,40 +535,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - dcfdaeccd3: `RouterOptions` now accepts an optional `catalogApi` argument, allowing custom catalog clients to be used. This is leveraged in the local standalone development runner to pass in a catalog client that returns fake data.
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-
-## `@backstage/plugin-codescene` (0.1.8 → 0.1.9)
-
-### 0.1.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-config-schema` (0.1.36 → 0.1.37)
-
-### 0.1.37
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-cost-insights` (0.12.2 → 0.12.3)
 
@@ -1246,27 +544,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 6a41175d70: Removed @backstage/test-utils dependency, since it was already in the devDependencies where it belongs. The main benefit is that this will exclude better-sqlite3 from the production build.
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-cost-insights-common@0.1.1
-
-## `@backstage/plugin-dynatrace` (1.0.3 → 1.0.4)
-
-### 1.0.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-events-backend` (0.2.0 → 0.2.1)
 
@@ -1276,11 +553,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 217149ae98: The default event broker will now catch and log errors thrown by the `onEvent` method of subscribers. The returned promise from `publish` method will also not resolve until all subscribers have handled the event.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-events-node@0.2.1
 
 ## `@backstage/plugin-events-backend-module-aws-sqs` (0.1.1 → 0.1.2)
 
@@ -1290,83 +562,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 9f2b786fc9: Provide context for logged errors.
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/config@1.0.6
-  - @backstage/plugin-events-node@0.2.1
-  - @backstage/types@1.0.2
-
-## `@backstage/plugin-events-backend-module-azure` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/plugin-events-node@0.2.1
-
-## `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/plugin-events-node@0.2.1
-
-## `@backstage/plugin-events-backend-module-gerrit` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/plugin-events-node@0.2.1
-
-## `@backstage/plugin-events-backend-module-github` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-events-node@0.2.1
-
-## `@backstage/plugin-events-backend-module-gitlab` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-events-node@0.2.1
-
-## `@backstage/plugin-events-backend-test-utils` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-events-node@0.2.1
-
-## `@backstage/plugin-events-node` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
 
 ## `@backstage/plugin-explore` (0.3.44 → 0.3.45)
 
@@ -1376,17 +571,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 9f9d279bd1: Updated `README.md` examples
 - d318d4f659: Makes the `GroupsDiagram` not grown on screen on its own.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-search-react@1.4.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-explore-common@0.0.1
-  - @backstage/plugin-explore-react@0.0.25
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-explore-backend` (0.0.1 → 0.0.2)
 
@@ -1396,21 +580,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 358554ff3c: Bump `msw` to `^0.49.0`
 - 9f9d279bd1: Updated `README.md` examples
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-explore-common@0.0.1
-  - @backstage/plugin-search-common@1.2.1
-
-## `@backstage/plugin-explore-react` (0.0.24 → 0.0.25)
-
-### 0.0.25
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/plugin-explore-common@0.0.1
 
 ## `@backstage/plugin-firehydrant` (0.1.30 → 0.1.31)
 
@@ -1419,11 +588,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-fossa` (0.2.45 → 0.2.46)
 
@@ -1433,25 +597,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 27a5e90e97: Small updates to some paragraph components to ensure theme typography properties are inherited correctly.
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-gcalendar` (0.3.9 → 0.3.10)
-
-### 0.3.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-gcp-projects` (0.3.32 → 0.3.33)
 
@@ -1460,10 +605,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-git-release-manager` (0.3.26 → 0.3.27)
 
@@ -1473,11 +614,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 8024341620: add exports to clear api-report messages
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/integration@1.4.2
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-github-actions` (0.5.13 → 0.5.14)
 
@@ -1486,105 +622,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 27a5e90e97: Small updates to some paragraph components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/integration@1.4.2
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-github-deployments` (0.1.44 → 0.1.45)
-
-### 0.1.45
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/integration-react@1.1.9
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-github-issues` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-github-pull-requests-board` (0.1.7 → 0.1.8)
-
-### 0.1.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/integration@1.4.2
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-gitops-profiles` (0.3.31 → 0.3.32)
-
-### 0.3.32
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-gocd` (0.1.19 → 0.1.20)
-
-### 0.1.20
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-graphiql` (0.2.45 → 0.2.46)
-
-### 0.2.46
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-graphql-backend` (0.1.29 → 0.1.30)
-
-### 0.1.30
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-catalog-graphql@0.3.17
 
 ## `@backstage/plugin-home` (0.4.29 → 0.4.30)
 
@@ -1594,14 +631,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 27a5e90e97: Small updates to some paragraph components to ensure theme typography properties are inherited correctly.
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-stack-overflow@0.1.10
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-ilert` (0.2.2 → 0.2.3)
 
@@ -1610,13 +639,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - b1279d396d: fixed error on service page not showing if historical uptime was disabled on a service
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-jenkins` (0.7.12 → 0.7.13)
 
@@ -1625,66 +647,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 27a5e90e97: Small updates to some paragraph components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-jenkins-common@0.1.12
-
-## `@backstage/plugin-jenkins-backend` (0.1.29 → 0.1.30)
-
-### 0.1.30
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/plugin-auth-node@0.2.9
-  - @backstage/plugin-jenkins-common@0.1.12
-  - @backstage/plugin-permission-common@0.7.3
-
-## `@backstage/plugin-jenkins-common` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-common@1.0.10
-  - @backstage/plugin-permission-common@0.7.3
-
-## `@backstage/plugin-kafka` (0.3.13 → 0.3.14)
-
-### 0.3.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-kafka-backend` (0.2.32 → 0.2.33)
-
-### 0.2.33
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
 
 ## `@backstage/plugin-kubernetes` (0.7.6 → 0.7.7)
 
@@ -1693,14 +655,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 27a5e90e97: Small updates to some paragraph components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-kubernetes-common@0.5.1
 
 ## `@backstage/plugin-kubernetes-backend` (0.9.0 → 0.9.1)
 
@@ -1710,24 +664,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 083bf1b9fa: fixes a bug affecting clusters that have a base path in the URL. The base path was being replaced with the resource path instead of being appended
 - c6f29bfcdc: Added the missing auth provider googleServiceAccount in config schema.
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-test-utils@0.1.32
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/plugin-auth-node@0.2.9
-  - @backstage/plugin-kubernetes-common@0.5.1
-
-## `@backstage/plugin-kubernetes-common` (0.5.0 → 0.5.1)
-
-### 0.5.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
 
 ## `@backstage/plugin-lighthouse` (0.3.13 → 0.3.14)
 
@@ -1737,140 +673,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 2f1b283de2: Fixed bug in Lighthouse Plugin where audit list item and create audit button navigated to a wrong URL.
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-newrelic` (0.3.31 → 0.3.32)
-
-### 0.3.32
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-newrelic-dashboard` (0.2.6 → 0.2.7)
-
-### 0.2.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-
-## `@backstage/plugin-org` (0.6.3 → 0.6.4)
-
-### 0.6.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-org-react` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-pagerduty` (0.5.6 → 0.5.7)
-
-### 0.5.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-periskop` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-periskop-backend` (0.1.10 → 0.1.11)
-
-### 0.1.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-
-## `@backstage/plugin-permission-backend` (0.5.14 → 0.5.15)
-
-### 0.5.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/plugin-auth-node@0.2.9
-  - @backstage/plugin-permission-common@0.7.3
-  - @backstage/plugin-permission-node@0.7.3
-
-## `@backstage/plugin-permission-common` (0.7.2 → 0.7.3)
-
-### 0.7.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
-
-## `@backstage/plugin-permission-node` (0.7.2 → 0.7.3)
-
-### 0.7.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/plugin-auth-node@0.2.9
-  - @backstage/plugin-permission-common@0.7.3
 
 ## `@backstage/plugin-permission-react` (0.4.8 → 0.4.9)
 
@@ -1879,10 +681,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 1a53a735b7: Updated dependency `swr` to `^2.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-permission-common@0.7.3
 
 ## `@backstage/plugin-playlist` (0.1.4 → 0.1.5)
 
@@ -1891,78 +689,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 1a53a735b7: Updated dependency `swr` to `^2.0.0`.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-search-react@1.4.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/plugin-permission-react@0.4.9
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-catalog-common@1.0.10
-  - @backstage/plugin-permission-common@0.7.3
-  - @backstage/plugin-playlist-common@0.1.4
-
-## `@backstage/plugin-playlist-backend` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-test-utils@0.1.32
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/plugin-auth-node@0.2.9
-  - @backstage/plugin-permission-common@0.7.3
-  - @backstage/plugin-permission-node@0.7.3
-  - @backstage/plugin-playlist-common@0.1.4
-
-## `@backstage/plugin-playlist-common` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.3
-
-## `@backstage/plugin-proxy-backend` (0.2.33 → 0.2.34)
-
-### 0.2.34
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-
-## `@backstage/plugin-rollbar` (0.4.13 → 0.4.14)
-
-### 0.4.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-rollbar-backend` (0.1.36 → 0.1.37)
-
-### 0.1.37
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
 
 ## `@backstage/plugin-scaffolder` (1.9.1 → 1.10.0)
 
@@ -2051,22 +777,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 659c92a1dc: Updated dependency `use-immer` to `^0.8.0`.
 - 489935d625: Show action example yaml on the scaffolder actions documentation page.
 - b8269de9f1: Explicitly declaring children as optional props to facilitate react 18 changes
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-scaffolder-common@1.2.4
-  - @backstage/catalog-client@1.3.0
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-scaffolder-react@1.0.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/plugin-permission-react@0.4.9
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/integration-react@1.1.9
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
-  - @backstage/plugin-catalog-common@1.0.10
 
 ## `@backstage/plugin-scaffolder-backend` (1.9.0 → 1.10.0)
 
@@ -2181,20 +891,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
     ```
 
 - 8e06f3cf00: Switched imports of `loggerToWinstonLogger` to `@backstage/backend-common`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.3.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-scaffolder-common@1.2.4
-  - @backstage/catalog-client@1.3.0
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/plugin-catalog-node@1.3.1
-  - @backstage/plugin-catalog-backend@1.7.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
-  - @backstage/plugin-auth-node@0.2.9
 
 ## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.14 → 0.2.15)
 
@@ -2231,14 +927,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
           - kind: Group
             spec.type: team
     ```
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend@1.10.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-scaffolder-backend-module-rails` (0.4.7 → 0.4.8)
 
@@ -2278,14 +966,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
             spec.type: team
     ```
 
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend@1.10.0
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/types@1.0.2
-
 ## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.12 → 0.2.13)
 
 ### 0.2.13
@@ -2322,11 +1002,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
             spec.type: team
     ```
 
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend@1.10.0
-  - @backstage/config@1.0.6
-  - @backstage/types@1.0.2
-
 ## `@backstage/plugin-scaffolder-common` (1.2.3 → 1.2.4)
 
 ### 1.2.4
@@ -2334,9 +1009,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 011bd518b7: Fixed spelling mistakes in documentation.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-search` (1.0.6 → 1.0.7)
 
@@ -2346,18 +1018,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - a24387c6de: When the search modal is opened, the focus is placed on the search bar input field.
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-search-react@1.4.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-search-backend` (1.2.0 → 1.2.1)
 
@@ -2366,16 +1026,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - bfd66b0478: Allow max page limit for search results to be configurable
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/plugin-search-backend-node@1.1.1
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
-  - @backstage/plugin-auth-node@0.2.9
-  - @backstage/plugin-permission-common@0.7.3
-  - @backstage/plugin-permission-node@0.7.3
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-search-backend-module-elasticsearch` (1.1.0 → 1.1.1)
 
@@ -2388,22 +1038,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 2a49ffbcb3: Improved documentation on the `ElasticSearchSearchEngine.newClient()` method.
 - 56633804dd: Fixed a bug that could cause the backstage backend to unexpectedly terminate when client errors were encountered during the indexing process.
 - aa33a06894: Improved index throughput by optimizing when and how many documents were made available to the bulk client.
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.1.1
-  - @backstage/config@1.0.6
-  - @backstage/plugin-search-common@1.2.1
-
-## `@backstage/plugin-search-backend-module-pg` (0.5.0 → 0.5.1)
-
-### 0.5.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/plugin-search-backend-node@1.1.1
-  - @backstage/config@1.0.6
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-search-backend-node` (1.1.0 → 1.1.1)
 
@@ -2412,23 +1046,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 011bd518b7: Fixed spelling mistakes in documentation.
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/plugin-permission-common@0.7.3
-  - @backstage/plugin-search-common@1.2.1
-
-## `@backstage/plugin-search-common` (1.2.0 → 1.2.1)
-
-### 1.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/types@1.0.2
-  - @backstage/plugin-permission-common@0.7.3
 
 ## `@backstage/plugin-search-react` (1.3.1 → 1.4.0)
 
@@ -2470,38 +1087,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
-  - @backstage/plugin-search-common@1.2.1
-
-## `@backstage/plugin-sentry` (0.4.6 → 0.4.7)
-
-### 0.4.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-shortcuts` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-sonarqube` (0.6.1 → 0.6.2)
 
@@ -2510,47 +1095,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-sonarqube-react@0.1.1
-
-## `@backstage/plugin-sonarqube-backend` (0.1.4 → 0.1.5)
-
-### 0.1.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-
-## `@backstage/plugin-sonarqube-react` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/core-plugin-api@1.3.0
-
-## `@backstage/plugin-splunk-on-call` (0.4.2 → 0.4.3)
-
-### 0.4.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-stack-overflow` (0.1.9 → 0.1.10)
 
@@ -2559,14 +1103,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 27a5e90e97: Small updates to some paragraph components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-home@0.4.30
-  - @backstage/plugin-search-react@1.4.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-stack-overflow-backend` (0.1.8 → 0.1.9)
 
@@ -2575,26 +1111,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 06f6a4f0f1: Enable configuration override for StackOverflow backend plugin when instantiating the search indexer. This makes it possible to set different configuration for frontend and backend of the plugin.
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/plugin-search-common@1.2.1
-
-## `@backstage/plugin-tech-insights` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
-  - @backstage/plugin-tech-insights-common@0.2.9
 
 ## `@backstage/plugin-tech-insights-backend` (0.5.5 → 0.5.6)
 
@@ -2606,42 +1122,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - 44c18b4d3f: Expose optional `persistenceContext` on `TechInsights` construction to enable integrators to provide their own database implementations for fact handling.
 - b48317cfc6: Modifies database cleanup to remove all facts for entities instead of hand-picked ones only. Improves query execution a lot in large datasets.
   Changes semantics of the lifecycle deletion logic slightly for cases were historical entities/facts, that are , not present in the application anymore, were kept forever instead of being cleaned up. The new implementation is more along the expected lines.
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
-  - @backstage/plugin-tech-insights-common@0.2.9
-  - @backstage/plugin-tech-insights-node@0.3.8
-
-## `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.23 → 0.1.24)
-
-### 0.1.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/plugin-tech-insights-common@0.2.9
-  - @backstage/plugin-tech-insights-node@0.3.8
-
-## `@backstage/plugin-tech-insights-node` (0.3.7 → 0.3.8)
-
-### 0.3.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/config@1.0.6
-  - @backstage/types@1.0.2
-  - @backstage/plugin-tech-insights-common@0.2.9
 
 ## `@backstage/plugin-tech-radar` (0.5.20 → 0.6.0)
 
@@ -2655,10 +1135,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 27a5e90e97: Small updates to some paragraph components to ensure theme typography properties are inherited correctly.
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/theme@0.2.16
 
 ## `@backstage/plugin-techdocs` (1.4.2 → 1.4.3)
 
@@ -2669,84 +1145,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - a74dd61534: Fix sizing of build log component to render all lines
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
 - 7115c7389b: Updated dependency `jss` to `~10.9.0`.
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-search-react@1.4.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/plugin-techdocs-react@1.1.2
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/integration-react@1.1.9
-  - @backstage/theme@0.2.16
-  - @backstage/plugin-search-common@1.2.1
-
-## `@backstage/plugin-techdocs-addons-test-utils` (1.0.8 → 1.0.9)
-
-### 1.0.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/plugin-techdocs@1.4.3
-  - @backstage/plugin-catalog@1.7.2
-  - @backstage/plugin-search-react@1.4.0
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/core-app-api@1.4.0
-  - @backstage/plugin-techdocs-react@1.1.2
-  - @backstage/integration-react@1.1.9
-  - @backstage/test-utils@1.2.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-techdocs-backend` (1.5.0 → 1.5.1)
-
-### 1.5.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/plugin-catalog-common@1.0.10
-  - @backstage/plugin-permission-common@0.7.3
-  - @backstage/plugin-search-common@1.2.1
-  - @backstage/plugin-techdocs-node@1.4.4
-
-## `@backstage/plugin-techdocs-module-addons-contrib` (1.0.8 → 1.0.9)
-
-### 1.0.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/plugin-techdocs-react@1.1.2
-  - @backstage/integration@1.4.2
-  - @backstage/integration-react@1.1.9
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-techdocs-node` (1.4.3 → 1.4.4)
-
-### 1.4.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/integration-aws-node@0.1.1
-  - @backstage/catalog-model@1.1.5
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-  - @backstage/plugin-search-common@1.2.1
 
 ## `@backstage/plugin-techdocs-react` (1.1.1 → 1.1.2)
 
@@ -2756,40 +1154,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 7115c7389b: Updated dependency `jss` to `~10.9.0`.
 - b8269de9f1: Explicitly declaring children as optional props to facilitate react 18 changes
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/version-bridge@1.0.3
-
-## `@backstage/plugin-todo` (0.2.15 → 0.2.16)
-
-### 0.2.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-todo-backend` (0.1.36 → 0.1.37)
-
-### 0.1.37
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/catalog-client@1.3.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
 
 ## `@backstage/plugin-user-settings` (0.6.1 → 0.6.2)
 
@@ -2801,54 +1165,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - d61f622db8: Refactor for the feature flag filter functionality
 - 80ce4e8c29: Small updates to some components to ensure theme typography properties are inherited correctly.
 - bca8e8b393: Feature flags now accept a description property.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/core-app-api@1.4.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
-
-## `@backstage/plugin-user-settings-backend` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/errors@1.1.4
-  - @backstage/types@1.0.2
-  - @backstage/plugin-auth-node@0.2.9
-
-## `@backstage/plugin-vault` (0.1.7 → 0.1.8)
-
-### 0.1.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-
-## `@backstage/plugin-vault-backend` (0.2.5 → 0.2.6)
-
-### 0.2.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/backend-test-utils@0.1.32
-  - @backstage/backend-tasks@0.4.1
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
 
 ## `@backstage/plugin-xcmetrics` (0.2.33 → 0.2.34)
 
@@ -2857,11 +1173,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 27a5e90e97: Small updates to some paragraph components to ensure theme typography properties are inherited correctly.
-- Updated dependencies
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
 
 ## `@backstage/repo-tools` (0.1.0 → 0.1.1)
 
@@ -2874,24 +1185,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 - d48cf39f2a: fix glob on windows os
 - 75275b0b0b: Updated dependency `@microsoft/tsdoc-config` to `0.16.2`.
 - 76fc6f7ec8: Updates Api-extractor and api-documenter version
-- Updated dependencies
-  - @backstage/cli-common@0.1.11
-  - @backstage/errors@1.1.4
-
-## `@backstage/test-utils` (1.2.3 → 1.2.4)
-
-### 1.2.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/core-app-api@1.4.0
-  - @backstage/plugin-permission-react@0.4.9
-  - @backstage/config@1.0.6
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
-  - @backstage/plugin-permission-common@0.7.3
 
 ## `@techdocs/cli` (1.2.4 → 1.3.0)
 
@@ -2904,12 +1197,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 #### Patch Changes
 
 - 9f2b786fc9: Provide context for logged errors.
-- Updated dependencies
-  - @backstage/backend-common@0.18.0
-  - @backstage/catalog-model@1.1.5
-  - @backstage/config@1.0.6
-  - @backstage/cli-common@0.1.11
-  - @backstage/plugin-techdocs-node@1.4.4
 
 ## `@backstage/plugin-scaffolder-backend-module-sentry` (new, 0.1.0)
 
@@ -2919,14 +1206,6 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - 66ff367af6: Add Sentry "Create Project" Scaffolder as new package
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend@1.10.0
-  - @backstage/config@1.0.6
-  - @backstage/errors@1.1.4
-  - @backstage/integration@1.4.2
-
 ## `@backstage/plugin-scaffolder-react` (new, 1.0.0)
 
 ### 1.0.0
@@ -2935,16 +1214,4 @@ Changes between 1.9.1 and 1.10.0 — 169 changed and 2 added packages.
 
 - b4955ed7b9: Re-home some of the common types, components, hooks and `scaffolderApiRef` for the `@backstage/plugin-scaffolder` to this package for easy re-use across things that want to interact with the `scaffolder`.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.1.5
-  - @backstage/plugin-scaffolder-common@1.2.4
-  - @backstage/catalog-client@1.3.0
-  - @backstage/plugin-catalog-react@1.2.4
-  - @backstage/core-components@0.12.3
-  - @backstage/core-plugin-api@1.3.0
-  - @backstage/errors@1.1.4
-  - @backstage/theme@0.2.16
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
+_Excluded dependency updates for packages: `@backstage/config-loader`, `@backstage/dev-utils`, `@backstage/integration`, `@backstage/integration-react`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-allure`, `@backstage/plugin-analytics-module-ga`, `@backstage/plugin-apache-airflow`, `@backstage/plugin-auth-backend`, `@backstage/plugin-auth-node`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-badges`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-bitrise`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-graphql`, `@backstage/plugin-catalog-import`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-circleci`, `@backstage/plugin-code-climate`, `@backstage/plugin-code-coverage`, `@backstage/plugin-codescene`, `@backstage/plugin-config-schema`, `@backstage/plugin-dynatrace`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-react`, `@backstage/plugin-gcalendar`, `@backstage/plugin-github-deployments`, `@backstage/plugin-github-issues`, `@backstage/plugin-github-pull-requests-board`, `@backstage/plugin-gitops-profiles`, `@backstage/plugin-gocd`, `@backstage/plugin-graphiql`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-jenkins-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kafka`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-newrelic`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-org`, `@backstage/plugin-org-react`, `@backstage/plugin-pagerduty`, `@backstage/plugin-periskop`, `@backstage/plugin-periskop-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-common`, `@backstage/plugin-permission-node`, `@backstage/plugin-playlist-backend`, `@backstage/plugin-playlist-common`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-rollbar`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-common`, `@backstage/plugin-sentry`, `@backstage/plugin-shortcuts`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-splunk-on-call`, `@backstage/plugin-tech-insights`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-techdocs-node`, `@backstage/plugin-todo`, `@backstage/plugin-todo-backend`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault`, `@backstage/plugin-vault-backend`, `@backstage/test-utils`._

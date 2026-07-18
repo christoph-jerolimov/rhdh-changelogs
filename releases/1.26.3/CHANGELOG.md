@@ -9,8 +9,6 @@ Changes between 1.26.2 and 1.26.3 — 6 changed and 0 added packages.
 #### Patch Changes
 
 - 3905997: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-linguist-common@0.1.3
 
 ## `@backstage/plugin-linguist-backend` (0.5.15 → 0.5.16)
 
@@ -19,8 +17,6 @@ Changes between 1.26.2 and 1.26.3 — 6 changed and 0 added packages.
 #### Patch Changes
 
 - 3905997: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-linguist-common@0.1.3
 
 ## `@backstage/plugin-linguist-common` (0.1.2 → 0.1.3)
 

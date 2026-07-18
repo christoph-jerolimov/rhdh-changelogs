@@ -9,12 +9,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-app-api@1.12.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/plugin-permission-react@0.4.22
 
 ## `@backstage/backend-app-api` (0.6.2 → 0.7.0)
 
@@ -43,18 +37,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 25ea3d2: Minor internal restructuring
 - d62bc51: Add support for limited user tokens by using user identity proof provided by the auth backend.
 - c884b9a: Automatically creates a get and delete cookie endpoint when a `user-cookie` policy is added.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/config-loader@1.8.0
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/cli-node@0.2.5
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/backend-common` (0.21.6 → 0.21.7)
 
@@ -68,28 +50,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - e31bacc: Added `pullOptions` to `DockerContainerRunner#runContainer` method to pass down options when pulling an image.
 - 7b11422: Add AWS CodeCommit URL Reader/Integration
 - 75a53b8: KubernetesContainerRunner.runContainer no longer closes the `logStream` it receives as input.
-- Updated dependencies
-  - @backstage/config-loader@1.8.0
-  - @backstage/backend-app-api@0.7.0
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/integration@1.10.0
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/backend-dev-utils@0.1.4
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
-## `@backstage/backend-defaults` (0.2.16 → 0.2.17)
-
-### 0.2.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-app-api@0.7.0
 
 ## `@backstage/backend-dynamic-feature-service` (0.2.8 → 0.2.9)
 
@@ -98,37 +58,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 82ff03e: Use `PackageRole` type explicitly
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/config-loader@1.8.0
-  - @backstage/backend-app-api@0.7.0
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/plugin-catalog-backend@1.21.1
-  - @backstage/plugin-events-backend@0.3.4
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-node@1.2.21
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/cli-node@0.2.5
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/plugin-app-node@0.1.17
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-search-common@1.2.11
-
-## `@backstage/backend-openapi-utils` (0.1.9 → 0.1.10)
-
-### 0.1.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/errors@1.2.4
 
 ## `@backstage/backend-plugin-api` (0.6.16 → 0.6.17)
 
@@ -139,12 +68,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 007e7ea: Added a new required `listPublicServiceKeys` to `AuthService`.
 - 54f2ac8: Added `initialization` option to `createServiceFactory` which defines the initialization strategy for the service. The default strategy mimics the current behavior where plugin scoped services are initialized lazily by default and root scoped services are initialized eagerly.
 - 4fecffc: The credentials passed to the `issueUserCookie` method of the `HttpAuthService` are no longer required to represent a user principal.
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/backend-tasks` (0.5.21 → 0.5.22)
 
@@ -153,12 +76,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/backend-test-utils` (0.3.6 → 0.3.7)
 
@@ -168,14 +85,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 3256f14: `startTestBackend` will now add placeholder plugins when a modules are provided without their parent plugin.
 - 007e7ea: Added mock of the new `listPublicServiceKeys` method for `AuthService`.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-app-api@0.7.0
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/catalog-client` (1.6.3 → 1.6.4)
 
@@ -184,9 +93,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - dad7505: Fix the `CatalogClient::getEntities` method to only sort the resulting entities in case no `order`-parameter is provided.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/cli` (0.26.2 → 0.26.3)
 
@@ -203,17 +109,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 6b5ddbe: Fix the backend plugin to use correct plugin id
 - 4fecffc: When building the frontend app public assets are now also copied to the public dist directory when in use.
 - ed9260f: Added `versions:migrate` command to help move packages to the new `@backstage-community` namespace
-- Updated dependencies
-  - @backstage/eslint-plugin@0.1.7
-  - @backstage/config-loader@1.8.0
-  - @backstage/integration@1.10.0
-  - @backstage/cli-node@0.2.5
-  - @backstage/catalog-model@1.4.5
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/release-manifests@0.0.11
-  - @backstage/types@1.1.1
 
 ## `@backstage/cli-node` (0.2.4 → 0.2.5)
 
@@ -222,10 +117,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - ed9260f: Added `versions:migrate` command to help move packages to the new `@backstage-community` namespace
-- Updated dependencies
-  - @backstage/cli-common@0.1.13
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/config-loader` (1.7.0 → 1.8.0)
 
@@ -245,14 +136,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 99bab65: Support parameter substitution for environment variables
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
 ## `@backstage/core-app-api` (1.12.3 → 1.12.4)
 
 ### 1.12.4
@@ -262,11 +145,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - c884b9a: The app is now aware of if it is being served from the `app-backend` with a separate public and protected bundles. When in protected mode the app will now continuously refresh the session cookie, as well as clear the cookie if the user signs out.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/version-bridge@1.0.8
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/core-compat-api` (0.2.3 → 0.2.4)
 
@@ -276,10 +154,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - d05d4bd: Moved `@backstage/core-app-api` to dev dependencies.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/version-bridge@1.0.8
 
 ## `@backstage/core-components` (0.14.3 → 0.14.4)
 
@@ -291,12 +165,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - f546e38: Added Link component in `TabUI` providing functionality like copy link or open in new tab.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/version-bridge@1.0.8
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/core-plugin-api` (1.9.1 → 1.9.2)
 
@@ -306,11 +174,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/version-bridge@1.0.8
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/create-app` (0.5.13 → 0.5.14)
 
@@ -321,8 +184,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 366cf07: Bumped create-app version.
 - 036b9b3: Bumped create-app version.
 - 2e1218c: Fix docs reference
-- Updated dependencies
-  - @backstage/cli-common@0.1.13
 
 ## `@backstage/dev-utils` (1.0.30 → 1.0.31)
 
@@ -334,15 +195,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - 995f66b: add @backstage/no-top-level-material-ui-4-imports lint rule
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-app-api@1.12.4
-  - @backstage/app-defaults@1.5.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/integration-react@1.1.26
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/eslint-plugin` (0.1.6 → 0.1.7)
 
@@ -364,16 +216,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - c884b9a: The app is now aware of if it is being served from the `app-backend` with a separate public and protected bundles. When in protected mode the app will now continuously refresh the session cookie, as well as clear the cookie if the user signs out.
 - 7ef7cc8: Fix duplicated subpath on routes resolved by the `useRouteRef` hook.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-app-api@1.12.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/theme@0.5.3
-  - @backstage/version-bridge@1.0.8
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/frontend-plugin-api` (0.6.3 → 0.6.4)
 
@@ -383,11 +225,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - 35452b3: Fixed the type for `useRouteRef`, which wasn't handling optional external route refs correctly.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/version-bridge@1.0.8
-  - @backstage/types@1.1.1
 
 ## `@backstage/frontend-test-utils` (0.1.5 → 0.1.6)
 
@@ -396,11 +233,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/frontend-app-api@0.6.4
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/test-utils@1.5.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/integration` (1.9.1 → 1.10.0)
 
@@ -410,12 +242,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 7b11422: Add AWS CodeCommit URL Reader/Integration
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
 ## `@backstage/integration-react` (1.1.25 → 1.1.26)
 
 ### 1.1.26
@@ -423,10 +249,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration@1.10.0
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-adr` (0.6.16 → 0.6.17)
 
@@ -436,16 +258,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-search-react@1.7.10
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/integration-react@1.1.26
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-adr-common@0.2.22
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-adr-backend` (0.4.13 → 0.4.14)
 
@@ -454,27 +266,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-adr-common@0.2.22
-  - @backstage/plugin-search-common@1.2.11
-
-## `@backstage/plugin-adr-common` (0.2.21 → 0.2.22)
-
-### 0.2.22
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-airbrake` (0.3.33 → 0.3.34)
 
@@ -484,13 +275,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/dev-utils@1.0.31
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/test-utils@1.5.4
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-airbrake-backend` (0.3.13 → 0.3.14)
 
@@ -500,10 +284,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
 - e5a2ccc: Updated dependency `@types/http-proxy-middleware` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-allure` (0.1.49 → 0.1.50)
 
@@ -513,11 +293,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-analytics-module-ga` (0.2.3 → 0.2.4)
 
@@ -527,11 +302,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-analytics-module-ga4` (0.2.3 → 0.2.4)
 
@@ -541,11 +311,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-analytics-module-newrelic-browser` (0.1.3 → 0.1.4)
 
@@ -554,11 +319,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-apache-airflow` (0.2.23 → 0.2.24)
 
@@ -568,9 +328,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-api-docs` (0.11.3 → 0.11.4)
 
@@ -580,16 +337,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog@1.19.0
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-catalog-common@1.0.22
 
 ## `@backstage/plugin-apollo-explorer` (0.1.23 → 0.2.0)
 
@@ -603,9 +350,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-app-backend` (0.3.64 → 0.3.65)
 
@@ -615,36 +359,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
 - c884b9a: Track assets namespace in the cache store, implement a cookie authentication for when the public entry is enabled and used with the new auth services.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/config-loader@1.8.0
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/plugin-app-node@0.1.17
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-app-node` (0.1.16 → 0.1.17)
-
-### 0.1.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config-loader@1.8.0
-  - @backstage/backend-plugin-api@0.6.17
-
-## `@backstage/plugin-app-visualizer` (0.1.4 → 0.1.5)
-
-### 0.1.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
 
 ## `@backstage/plugin-auth-backend` (0.22.3 → 0.22.4)
 
@@ -657,30 +371,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - ba763b6: Migrate the Bitbucket auth provider to the new `@backstage/plugin-auth-backend-module-bitbucket-provider` module package.
 - bf4d71a: Initial implementation of the `/v1/userinfo` endpoint, which is now able to parse and return the `sub` and `ent` claims from a Backstage user token.
 - c26218d: Deprecated some of the Cloudflare Access types and used the implementation from `@backstage/plugin-auth-backend-module-cloudflare-access-provider`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-auth-backend-module-atlassian-provider@0.1.9
-  - @backstage/plugin-auth-backend-module-cloudflare-access-provider@0.1.0
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-backend-module-bitbucket-provider@0.1.0
-  - @backstage/plugin-auth-backend-module-aws-alb-provider@0.1.9
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/plugin-auth-backend-module-oidc-provider@0.1.8
-  - @backstage/plugin-auth-backend-module-gcp-iap-provider@0.2.12
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-auth-backend-module-azure-easyauth-provider@0.1.0
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-backend-module-github-provider@0.1.14
-  - @backstage/plugin-auth-backend-module-gitlab-provider@0.1.14
-  - @backstage/plugin-auth-backend-module-google-provider@0.1.14
-  - @backstage/plugin-auth-backend-module-microsoft-provider@0.1.12
-  - @backstage/plugin-auth-backend-module-oauth2-provider@0.1.14
-  - @backstage/plugin-auth-backend-module-oauth2-proxy-provider@0.1.10
-  - @backstage/plugin-auth-backend-module-okta-provider@0.0.10
 
 ## `@backstage/plugin-auth-backend-module-atlassian-provider` (0.1.8 → 0.1.9)
 
@@ -689,9 +379,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 269b4c1: Read scopes from config and pass to AtlassianProvider as they are required
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
 
 ## `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.8 → 0.1.9)
 
@@ -704,13 +391,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
   It can now be used like this in your backend: `backend.add(import('@backstage/plugin-auth-backend-module-aws-alb-provider'));`
 
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-auth-backend@0.22.4
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/errors@1.2.4
-
 ## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.11 → 0.2.12)
 
 ### 0.2.12
@@ -718,85 +398,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - e0ed31c: Add user id annotation sign-in resolver
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-auth-backend-module-github-provider` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-
-## `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-
-## `@backstage/plugin-auth-backend-module-google-provider` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-
-## `@backstage/plugin-auth-backend-module-guest-provider` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-
-## `@backstage/plugin-auth-backend-module-oauth2-provider` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-
-## `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.9 → 0.1.10)
-
-### 0.1.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-auth-backend-module-oidc-provider` (0.1.7 → 0.1.8)
 
@@ -805,43 +406,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 28eb473: Support revoke refresh token to oidc logout function
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-auth-backend@0.22.4
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-
-## `@backstage/plugin-auth-backend-module-okta-provider` (0.0.9 → 0.0.10)
-
-### 0.0.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-
-## `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.10 → 0.1.11)
-
-### 0.1.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/config@1.2.0
-
-## `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.1.8 → 0.1.9)
-
-### 0.1.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-auth-node` (0.4.11 → 0.4.12)
 
@@ -850,14 +414,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d62bc51: Add `tokenTypes` export with constants for various Backstage token types.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-auth-react` (0.0.3 → 0.1.0)
 
@@ -872,10 +428,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-azure-devops` (0.4.2 → 0.4.3)
 
@@ -890,16 +442,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 4d895b3: Fixed bug in EntityPageAzurePipeline component where build definition annotation used for viewing pipelines
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-azure-devops-common@0.4.1
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-azure-devops-backend` (0.6.3 → 0.6.4)
 
@@ -913,19 +455,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
 - c7c4053: Fixed a bug where the `azureDevOps.token` was not truly optional
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-azure-devops-common@0.4.1
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-azure-devops-common` (0.4.0 → 0.4.1)
 
@@ -937,10 +466,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
   `pullRequestOptions` have been equipped with `teamsLimit` so that the property can be used with `getAllTeams`
 
-- Updated dependencies
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
-
 ## `@backstage/plugin-azure-sites` (0.1.22 → 0.1.23)
 
 ### 0.1.23
@@ -950,15 +475,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - cdb5ffa: Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-azure-sites-common@0.1.3
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-azure-sites-backend` (0.3.3 → 0.3.4)
 
@@ -967,16 +483,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-azure-sites-common@0.1.3
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-badges` (0.2.57 → 0.2.58)
 
@@ -985,12 +491,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 93c1d9c: Update README to fix invalid import command
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-badges-backend` (0.3.13 → 0.4.0)
 
@@ -1003,28 +503,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-bazaar` (0.2.25 → 0.2.26)
-
-### 0.2.26
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-bazaar-backend` (0.3.14 → 0.3.15)
 
@@ -1033,20 +511,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/config@1.2.0
-
-## `@backstage/plugin-bitbucket-cloud-common` (0.2.17 → 0.2.18)
-
-### 0.2.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.10.0
 
 ## `@backstage/plugin-bitrise` (0.1.60 → 0.1.61)
 
@@ -1056,11 +520,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-catalog` (1.18.2 → 1.19.0)
 
@@ -1077,22 +536,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - 7495b36: Fixed sorting of columns created with `CatalogTable.columns.createLabelColumn`.
-- Updated dependencies
-  - @backstage/plugin-search-react@1.7.10
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/integration-react@1.1.26
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-scaffolder-common@1.5.1
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-catalog-backend` (1.21.0 → 1.21.1)
 
@@ -1136,24 +579,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
   });
   ```
 
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/plugin-search-backend-module-catalog@0.1.22
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/backend-openapi-utils@0.1.10
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
-
 ## `@backstage/plugin-catalog-backend-module-aws` (0.3.11 → 0.3.12)
 
 ### 0.3.12
@@ -1161,18 +586,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/integration@1.10.0
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-kubernetes-common@0.7.5
 
 ## `@backstage/plugin-catalog-backend-module-azure` (0.1.36 → 0.1.37)
 
@@ -1181,14 +594,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/config@1.2.0
-  - @backstage/plugin-catalog-common@1.0.22
 
 ## `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.1.10 → 0.2.0)
 
@@ -1201,33 +606,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 58763e8: Use direct access of openapi.json files and not external route
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/backend-openapi-utils@0.1.10
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.2.3 → 0.2.4)
-
-### 0.2.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/plugin-bitbucket-cloud-common@0.2.18
-  - @backstage/plugin-catalog-common@1.0.22
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.30 → 0.1.31)
 
@@ -1236,15 +614,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-catalog-backend-module-gcp` (0.1.17 → 0.1.18)
 
@@ -1253,14 +622,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/plugin-kubernetes-common@0.7.5
 
 ## `@backstage/plugin-catalog-backend-module-gerrit` (0.1.33 → 0.1.34)
 
@@ -1269,14 +630,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-catalog-backend-module-github` (0.5.7 → 0.6.0)
 
@@ -1304,18 +657,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
 - 469e87f: Properly instantiate `GithubMultiOrgEntityProvider` and `GithubOrgEntityProvider` with `EventsService` if defined
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-catalog-backend@1.21.1
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/plugin-catalog-common@1.0.22
 
 ## `@backstage/plugin-catalog-backend-module-github-org` (0.1.11 → 0.1.12)
 
@@ -1324,14 +665,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-catalog-backend-module-github@0.6.0
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-catalog-backend-module-gitlab` (0.3.14 → 0.3.15)
 
@@ -1340,14 +673,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.21 → 0.4.22)
 
@@ -1356,32 +681,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-catalog-backend@1.21.1
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-permission-common@0.7.13
-
-## `@backstage/plugin-catalog-backend-module-ldap` (0.5.32 → 0.5.33)
-
-### 0.5.33
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.22
 
 ## `@backstage/plugin-catalog-backend-module-msgraph` (0.5.24 → 0.5.25)
 
@@ -1391,31 +690,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 9b6320f: Retry msgraph API calls, due to frequent ETIMEDOUT errors. Also allow disabling fetching user photos.
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/plugin-catalog-common@1.0.22
-
-## `@backstage/plugin-catalog-backend-module-openapi` (0.1.34 → 0.1.35)
-
-### 0.1.35
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-catalog-backend@1.21.1
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.22
 
 ## `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.22 → 0.1.23)
 
@@ -1424,44 +698,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.14 → 0.1.15)
-
-### 0.1.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-scaffolder-common@1.5.1
-
-## `@backstage/plugin-catalog-backend-module-unprocessed` (0.4.3 → 0.4.4)
-
-### 0.4.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-unprocessed-entities-common@0.0.1
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-catalog-graph` (0.4.3 → 0.4.4)
 
@@ -1471,15 +707,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-catalog-import` (0.10.9 → 0.10.10)
 
@@ -1489,35 +716,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/integration-react@1.1.26
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.0.22
-
-## `@backstage/plugin-catalog-node` (1.11.0 → 1.11.1)
-
-### 1.11.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-catalog-react` (1.11.2 → 1.11.3)
 
@@ -1529,19 +727,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - b863830: Change behavior in EntityAutoCompletePicker to only hide filter if there are no available options. Previously the filter was hidden if there were <= 1 available options.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/version-bridge@1.0.8
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/integration-react@1.1.26
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-catalog-unprocessed-entities` (0.2.2 → 0.2.3)
 
@@ -1550,11 +735,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-cicd-statistics` (0.1.35 → 0.1.36)
 
@@ -1563,33 +743,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 72f0622: Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-
-## `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.29 → 0.1.30)
-
-### 0.1.30
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-cicd-statistics@0.1.36
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-
-## `@backstage/plugin-circleci` (0.3.33 → 0.3.34)
-
-### 0.3.34
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-cloudbuild` (0.5.0 → 0.5.1)
 
@@ -1600,11 +753,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 4be6335: Changed the column that serves as a hyperlink from SOURCE to BUILD.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-code-climate` (0.1.33 → 0.1.34)
 
@@ -1614,11 +762,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-code-coverage` (0.2.26 → 0.2.27)
 
@@ -1628,12 +771,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-code-coverage-backend` (0.2.30 → 0.2.31)
 
@@ -1642,14 +779,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-codescene` (0.1.25 → 0.1.26)
 
@@ -1659,14 +788,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-config-schema` (0.1.53 → 0.1.54)
 
@@ -1677,11 +798,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - c43315a: Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-cost-insights` (0.12.22 → 0.12.23)
 
@@ -1692,29 +808,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - 43ca784: Updated dependency `@types/yup` to `^0.32.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/plugin-cost-insights-common@0.1.2
-
-## `@backstage/plugin-devtools` (0.1.12 → 0.1.13)
-
-### 0.1.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-devtools-common@0.1.9
 
 ## `@backstage/plugin-devtools-backend` (0.3.2 → 0.3.3)
 
@@ -1723,17 +816,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/config-loader@1.8.0
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-devtools-common@0.1.9
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-dynatrace` (10.0.2 → 10.0.3)
 
@@ -1743,11 +825,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-entity-feedback` (0.2.16 → 0.2.17)
 
@@ -1757,13 +834,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-entity-feedback-common@0.1.3
 
 ## `@backstage/plugin-entity-feedback-backend` (0.2.13 → 0.2.14)
 
@@ -1772,15 +842,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-entity-feedback-common@0.1.3
 
 ## `@backstage/plugin-entity-validation` (0.1.18 → 0.1.19)
 
@@ -1790,14 +851,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.0.22
 
 ## `@backstage/plugin-events-backend` (0.3.3 → 0.3.4)
 
@@ -1806,95 +859,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 7899e55: Allow unauthenticated requests for HTTP ingress.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/config@1.2.0
-
-## `@backstage/plugin-events-backend-module-aws-sqs` (0.3.2 → 0.3.3)
-
-### 0.3.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-events-backend-module-azure` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-events-node@0.3.3
-
-## `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-events-node@0.3.3
-
-## `@backstage/plugin-events-backend-module-gerrit` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-events-node@0.3.3
-
-## `@backstage/plugin-events-backend-module-github` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/config@1.2.0
-
-## `@backstage/plugin-events-backend-module-gitlab` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/config@1.2.0
-
-## `@backstage/plugin-events-backend-test-utils` (0.1.26 → 0.1.27)
-
-### 0.1.27
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-events-node@0.3.3
-
-## `@backstage/plugin-events-node` (0.3.2 → 0.3.3)
-
-### 0.3.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
 
 ## `@backstage/plugin-explore` (0.4.19 → 0.4.20)
 
@@ -1904,17 +868,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-search-react@1.7.10
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/plugin-explore-react@0.0.38
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-explore-common@0.0.2
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-explore-backend` (0.0.26 → 0.0.27)
 
@@ -1923,13 +876,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-module-explore@0.1.21
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-explore-common@0.0.2
 
 ## `@backstage/plugin-explore-react` (0.0.37 → 0.0.38)
 
@@ -1939,9 +885,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-explore-common@0.0.2
 
 ## `@backstage/plugin-firehydrant` (0.2.17 → 0.2.18)
 
@@ -1951,11 +894,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-fossa` (0.2.65 → 0.2.66)
 
@@ -1965,12 +903,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-gcalendar` (0.3.26 → 0.3.27)
 
@@ -1980,10 +912,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-gcp-projects` (0.3.49 → 0.3.50)
 
@@ -1993,9 +921,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-git-release-manager` (0.3.45 → 0.3.46)
 
@@ -2005,10 +930,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration@1.10.0
 
 ## `@backstage/plugin-github-actions` (0.6.14 → 0.6.15)
 
@@ -2019,13 +940,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 76320a7: Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration-react@1.1.26
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-github-deployments` (0.1.64 → 0.1.65)
 
@@ -2035,14 +949,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration-react@1.1.26
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-github-issues` (0.4.0 → 0.4.1)
 
@@ -2052,13 +958,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-github-pull-requests-board` (0.1.27 → 0.2.0)
 
@@ -2073,12 +972,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - 617faf0: Handle null values returned from GitHub for the statusCheckRollup value on the commit object
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-gitops-profiles` (0.3.48 → 0.3.49)
 
@@ -2088,9 +981,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-gocd` (0.1.39 → 0.1.40)
 
@@ -2101,12 +991,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - b9d7c57: Updated README
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-graphiql` (0.3.6 → 0.3.7)
 
@@ -2117,11 +1001,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - d137034: Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
 
 ## `@backstage/plugin-graphql-voyager` (0.1.15 → 0.1.16)
 
@@ -2131,9 +1010,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-home` (0.7.2 → 0.7.3)
 
@@ -2143,18 +1019,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/plugin-home-react@0.1.12
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-app-api@1.12.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/theme@0.5.3
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-home-react` (0.1.11 → 0.1.12)
 
@@ -2163,9 +1027,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 293347f: Added ESLint rule `no-top-level-material-ui-4-imports` in the `home-react` plugin to migrate the Material UI imports.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-ilert` (0.2.22 → 0.2.23)
 
@@ -2176,12 +1037,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - 7a3789a: Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-jenkins` (0.9.8 → 0.9.9)
 
@@ -2192,13 +1047,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - 20f01d6: Updated dependency `@types/testing-library__jest-dom` to `^6.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-jenkins-common@0.1.25
 
 ## `@backstage/plugin-jenkins-backend` (0.4.3 → 0.4.4)
 
@@ -2207,17 +1055,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-jenkins-common@0.1.25
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-kafka` (0.3.33 → 0.3.34)
 
@@ -2227,11 +1064,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-kafka-backend` (0.3.14 → 0.3.15)
 
@@ -2240,11 +1072,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-kubernetes` (0.11.8 → 0.11.9)
 
@@ -2254,13 +1081,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-kubernetes-react@0.3.4
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-kubernetes-common@0.7.5
 
 ## `@backstage/plugin-kubernetes-backend` (0.16.4 → 0.17.0)
 
@@ -2277,21 +1097,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - dd269e9: Fixed a bug where the proxy handler did not properly handle a missing header
 - 9d89aed: Fixed a crash reading `credentials` from `undefined`.
 - e5a2ccc: Updated dependency `@types/http-proxy-middleware` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/plugin-kubernetes-node@0.1.11
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-kubernetes-common@0.7.5
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-kubernetes-cluster` (0.0.9 → 0.0.10)
 
@@ -2301,13 +1106,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-kubernetes-react@0.3.4
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-kubernetes-common@0.7.5
 
 ## `@backstage/plugin-kubernetes-node` (0.1.10 → 0.1.11)
 
@@ -2316,11 +1114,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - f5cec55: Fixing issue where `BackstageCredentials` were not properly forwarded for all calls
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-model@1.4.5
-  - @backstage/types@1.1.1
-  - @backstage/plugin-kubernetes-common@0.7.5
 
 ## `@backstage/plugin-kubernetes-react` (0.3.3 → 0.3.4)
 
@@ -2331,13 +1124,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - e6d474f: Fixed ResourceUtilization component for POD Memory Limits
 - 58800ba: Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-kubernetes-common@0.7.5
 
 ## `@backstage/plugin-lighthouse` (0.4.18 → 0.4.19)
 
@@ -2347,12 +1133,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-lighthouse-common@0.1.5
 
 ## `@backstage/plugin-lighthouse-backend` (0.4.9 → 0.4.10)
 
@@ -2361,32 +1141,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-lighthouse-common@0.1.5
-
-## `@backstage/plugin-linguist` (0.1.18 → 0.1.19)
-
-### 0.1.19
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-linguist-common@0.1.2
 
 ## `@backstage/plugin-linguist-backend` (0.5.14 → 0.5.15)
 
@@ -2395,17 +1149,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-linguist-common@0.1.2
 
 ## `@backstage/plugin-microsoft-calendar` (0.1.15 → 0.1.16)
 
@@ -2415,10 +1158,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-newrelic` (0.3.48 → 0.3.49)
 
@@ -2428,22 +1167,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-
-## `@backstage/plugin-newrelic-dashboard` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-nomad` (0.1.14 → 0.1.15)
 
@@ -2452,11 +1175,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-nomad-backend` (0.1.18 → 0.1.19)
 
@@ -2465,11 +1183,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-notifications` (0.1.2 → 0.2.0)
 
@@ -2485,14 +1198,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - 9a41a7b: Migrate signals and notifications to the new backend in local development
 - 939b4ec: The severity icons now get their colors from the theme.
-- Updated dependencies
-  - @backstage/plugin-notifications-common@0.0.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/plugin-signals-react@0.0.3
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-notifications-backend` (0.1.2 → 0.2.0)
 
@@ -2512,18 +1217,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 9a41a7b: Migrate signals and notifications to the new backend in local development
 - 9987066: fix: retrieve relations and children when mapping group entities for notifications
 - 6206039: Fix entity owner resolution in notifications
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-notifications-common@0.0.3
-  - @backstage/plugin-notifications-node@0.1.3
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/plugin-signals-node@0.1.3
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-notifications-common` (0.0.2 → 0.0.3)
 
@@ -2545,13 +1238,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 0d99528: Notification processor functions are now renamed to `preProcess` and `postProcess`.
   Additionally, processor name is now required to be returned by `getName`.
   A new processor functionality `processOptions` was added to process options before sending the notification.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-notifications-common@0.0.3
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-signals-node@0.1.3
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-octopus-deploy` (0.2.15 → 0.2.16)
 
@@ -2561,22 +1247,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-scaffolder-react@1.8.4
-  - @backstage/catalog-model@1.4.5
-
-## `@backstage/plugin-opencost` (0.2.8 → 0.2.9)
-
-### 0.2.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-org` (0.6.23 → 0.6.24)
 
@@ -2586,14 +1256,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-catalog-common@1.0.22
 
 ## `@backstage/plugin-org-react` (0.1.22 → 0.1.23)
 
@@ -2604,12 +1266,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - cfb2b78: Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-pagerduty` (0.7.5 → 0.7.6)
 
@@ -2619,13 +1275,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/plugin-home-react@0.1.12
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-periskop` (0.1.31 → 0.1.32)
 
@@ -2635,12 +1284,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-periskop-backend` (0.2.14 → 0.2.15)
 
@@ -2649,10 +1292,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-permission-backend` (0.5.40 → 0.5.41)
 
@@ -2661,26 +1300,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-permission-common@0.7.13
-
-## `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-permission-node` (0.7.27 → 0.7.28)
 
@@ -2689,13 +1308,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 29fa05b: Fixed an issue causing `ServerPermissionClient` to generate an invalid token for authorizing permissions against the permission backend.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-permission-react` (0.4.21 → 0.4.22)
 
@@ -2704,10 +1316,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/config@1.2.0
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-playlist` (0.2.7 → 0.2.8)
 
@@ -2717,17 +1325,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-search-react@1.7.10
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-playlist-common@0.1.15
 
 ## `@backstage/plugin-playlist-backend` (0.3.20 → 0.3.21)
 
@@ -2736,17 +1333,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-playlist-common@0.1.15
 
 ## `@backstage/plugin-proxy-backend` (0.4.14 → 0.4.15)
 
@@ -2756,10 +1342,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - e5a2ccc: Updated dependency `@types/http-proxy-middleware` to `^1.0.0`.
 - 43ca784: Updated dependency `@types/yup` to `^0.32.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-puppetdb` (0.1.16 → 0.1.17)
 
@@ -2768,12 +1350,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-rollbar` (0.4.33 → 0.4.34)
 
@@ -2783,21 +1359,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-
-## `@backstage/plugin-rollbar-backend` (0.1.61 → 0.1.62)
-
-### 0.1.62
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-scaffolder` (1.19.2 → 1.19.3)
 
@@ -2811,22 +1372,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 87d2eb8: Updated dependency `json-schema-library` to `^9.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
 - 419e948: Don't show login prompt if token is set in the state
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/plugin-scaffolder-react@1.8.4
-  - @backstage/integration-react@1.1.26
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-scaffolder-common@1.5.1
 
 ## `@backstage/plugin-scaffolder-backend` (1.22.3 → 1.22.4)
 
@@ -2835,31 +1380,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - f34a9b1: The `catalog:write` action now automatically adds a `backstage.io/template-source` annotation, indicating which Scaffolder template was used to create the entity.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-cloud@0.1.7
-  - @backstage/plugin-scaffolder-backend-module-gitlab@0.3.3
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-server@0.1.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-scaffolder-backend-module-github@0.2.7
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/plugin-scaffolder-backend-module-gerrit@0.1.9
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-scaffolder-backend-module-bitbucket@0.2.7
-  - @backstage/plugin-scaffolder-backend-module-azure@0.1.9
-  - @backstage/plugin-scaffolder-backend-module-gitea@0.1.7
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-backend-module-scaffolder-entity-model@0.1.15
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-scaffolder-common@1.5.1
 
 ## `@backstage/plugin-scaffolder-backend-module-azure` (0.1.8 → 0.1.9)
 
@@ -2868,12 +1388,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 33f958a: Improve examples to ensure consistency across all publish actions
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.6 → 0.2.7)
 
@@ -2882,14 +1396,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 33f958a: Improve examples to ensure consistency across all publish actions
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-cloud@0.1.7
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-server@0.1.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.6 → 0.1.7)
 
@@ -2899,12 +1405,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 8dd33a1: Added examples for publish:bitbucketCloud actions
 - 33f958a: Improve examples to ensure consistency across all publish actions
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.6 → 0.1.7)
 
@@ -2913,41 +1413,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 4a15c86: Add examples for `publish:bitbucketServer` scaffolder action & improve related tests
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.17 → 0.2.18)
-
-### 0.2.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.40 → 0.2.41)
-
-### 0.2.41
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.8 → 0.1.9)
 
@@ -2956,12 +1421,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 0fb178e: Add examples for `publish:gerrit:review` scaffolder action & improve related tests
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-gitea` (0.1.6 → 0.1.7)
 
@@ -2970,12 +1429,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 33f958a: Improve examples to ensure consistency across all publish actions
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-github` (0.2.6 → 0.2.7)
 
@@ -2985,13 +1438,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
 - 33f958a: Improve examples to ensure consistency across all publish actions
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.3.2 → 0.3.3)
 
@@ -3003,40 +1449,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 52f40ea: Add examples for `gitlab:group:ensureExists` scaffolder action & improve related tests
 - 33f958a: Improve examples to ensure consistency across all publish actions
 - d112225: Add examples for `gitlab:projectDeployToken:create` scaffolder action & improve related tests
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.4.33 → 0.4.34)
-
-### 0.4.34
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.24 → 0.1.25)
-
-### 0.1.25
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.37 → 0.3.0)
 
@@ -3045,41 +1457,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Minor Changes
 
 - fae9638: Add examples for `run:yeoman` scaffolder action.
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/plugin-scaffolder-node-test-utils@0.1.3
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-scaffolder-node` (0.4.2 → 0.4.3)
-
-### 0.4.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-scaffolder-common@1.5.1
-
-## `@backstage/plugin-scaffolder-node-test-utils` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-test-utils@0.3.7
-  - @backstage/plugin-scaffolder-node@0.4.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-scaffolder-react` (1.8.3 → 1.8.4)
 
@@ -3095,17 +1472,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
   Note: the `create` event is now captured in the `<Workflow>` component. If you are directly making use of the alpha-exported `<Stepper>` component, an analytics `create` event will no longer be captured on your behalf.
 
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/version-bridge@1.0.8
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/types@1.1.1
-  - @backstage/plugin-scaffolder-common@1.5.1
-
 ## `@backstage/plugin-search` (1.4.9 → 1.4.10)
 
 ### 1.4.10
@@ -3114,17 +1480,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-search-react@1.7.10
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/version-bridge@1.0.8
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-search-backend` (1.5.6 → 1.5.7)
 
@@ -3134,38 +1489,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 2bd291e: Allow reserved characters in requests.
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/repo-tools@0.8.0
-  - @backstage/plugin-permission-node@0.7.28
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-node@1.2.21
-  - @backstage/backend-openapi-utils@0.1.10
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-search-common@1.2.11
-
-## `@backstage/plugin-search-backend-module-catalog` (0.1.21 → 0.1.22)
-
-### 0.1.22
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-node@1.2.21
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-search-backend-module-elasticsearch` (1.3.19 → 1.4.0)
 
@@ -3175,16 +1498,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 4d754e3: When using the New Backend System, the Elasticsearch provider will only be added if the `search.elasticsearch` config section exists.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-node@1.2.21
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/config@1.2.0
-  - @backstage/plugin-search-common@1.2.11
-
 ## `@backstage/plugin-search-backend-module-explore` (0.1.20 → 0.1.21)
 
 ### 0.1.21
@@ -3192,14 +1505,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-node@1.2.21
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/config@1.2.0
-  - @backstage/plugin-explore-common@0.0.2
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-search-backend-module-pg` (0.5.25 → 0.5.26)
 
@@ -3211,13 +1516,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
   Also pass logger to the service
 
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-node@1.2.21
-  - @backstage/config@1.2.0
-  - @backstage/plugin-search-common@1.2.11
-
 ## `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.9 → 0.1.10)
 
 ### 0.1.10
@@ -3225,13 +1523,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-node@1.2.21
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/config@1.2.0
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-search-backend-module-techdocs` (0.1.21 → 0.1.22)
 
@@ -3240,19 +1531,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-techdocs-node@1.12.3
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-node@1.2.21
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-search-backend-node` (1.2.20 → 1.2.21)
 
@@ -3261,14 +1539,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-search-react` (1.7.9 → 1.7.10)
 
@@ -3279,14 +1549,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - 8d50bd3: add mui imports eslint rule
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/theme@0.5.3
-  - @backstage/version-bridge@1.0.8
-  - @backstage/types@1.1.1
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-sentry` (0.5.18 → 0.5.19)
 
@@ -3296,11 +1558,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-shortcuts` (0.3.22 → 0.3.23)
 
@@ -3310,11 +1567,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-signals` (0.0.4 → 0.0.5)
 
@@ -3325,12 +1577,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - 9a41a7b: Migrate signals and notifications to the new backend in local development
 - f06458c: fixed typo in docs
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/plugin-signals-react@0.0.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-signals-backend` (0.1.2 → 0.1.3)
 
@@ -3340,28 +1586,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 5f9877b: Fix unauthorized signals connection by allowing unauthenticated requests
 - 9a41a7b: Migrate signals and notifications to the new backend in local development
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/plugin-signals-node@0.1.3
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-signals-node` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/plugin-events-node@0.3.3
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-signals-react` (0.0.2 → 0.0.3)
 
@@ -3371,9 +1595,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - f06458c: fixed typo in docs
-- Updated dependencies
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-sonarqube` (0.7.15 → 0.7.16)
 
@@ -3383,12 +1604,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-sonarqube-react@0.1.15
 
 ## `@backstage/plugin-sonarqube-backend` (0.2.18 → 0.2.19)
 
@@ -3397,21 +1612,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-sonarqube-react` (0.1.14 → 0.1.15)
-
-### 0.1.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-splunk-on-call` (0.4.22 → 0.4.23)
 
@@ -3421,11 +1621,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
 
 ## `@backstage/plugin-stack-overflow` (0.1.28 → 0.1.29)
 
@@ -3435,23 +1630,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-search-react@1.7.10
-  - @backstage/plugin-home-react@0.1.12
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/config@1.2.0
-  - @backstage/plugin-search-common@1.2.11
-
-## `@backstage/plugin-stack-overflow-backend` (0.2.20 → 0.2.21)
-
-### 0.2.21
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-search-backend-module-stack-overflow-collator@0.1.10
 
 ## `@backstage/plugin-stackstorm` (0.1.14 → 0.1.15)
 
@@ -3461,10 +1639,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-tech-insights` (0.3.25 → 0.3.26)
 
@@ -3474,14 +1648,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-tech-insights-common@0.2.12
 
 ## `@backstage/plugin-tech-insights-backend` (0.5.30 → 0.5.31)
 
@@ -3490,17 +1656,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-tech-insights-node@0.6.0
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-tech-insights-common@0.2.12
 
 ## `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.48 → 0.1.49)
 
@@ -3509,14 +1664,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-tech-insights-node@0.6.0
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-tech-insights-common@0.2.12
 
 ## `@backstage/plugin-tech-insights-node` (0.5.2 → 0.6.0)
 
@@ -3526,15 +1673,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 5dd8177: **BREAKING** Winston logger has been replaced with `LoggerService`
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-tech-insights-common@0.2.12
-
 ## `@backstage/plugin-tech-radar` (0.7.2 → 0.7.3)
 
 ### 0.7.3
@@ -3543,11 +1681,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
 
 ## `@backstage/plugin-techdocs` (1.10.3 → 1.10.4)
 
@@ -3557,22 +1690,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-techdocs-react@1.2.3
-  - @backstage/plugin-search-react@1.7.10
-  - @backstage/plugin-auth-react@0.1.0
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/theme@0.5.3
-  - @backstage/integration-react@1.1.26
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-techdocs-addons-test-utils` (1.0.30 → 1.0.31)
 
@@ -3582,16 +1699,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog@1.19.0
-  - @backstage/plugin-techdocs-react@1.2.3
-  - @backstage/plugin-search-react@1.7.10
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-app-api@1.12.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/test-utils@1.5.4
-  - @backstage/plugin-techdocs@1.10.4
-  - @backstage/integration-react@1.1.26
 
 ## `@backstage/plugin-techdocs-backend` (1.10.3 → 1.10.4)
 
@@ -3601,18 +1708,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 8e28c88: Allow overriding default techdocs preparers with new `TechdocsPreparerExtensionPoint`
 - c884b9a: Use the default cookie endpoints added automatically when a cookie policy is set.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-techdocs-node@1.12.3
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-search-backend-module-techdocs@0.1.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration@1.10.0
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.8 → 1.1.9)
 
@@ -3622,12 +1717,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-techdocs-react@1.2.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration-react@1.1.26
-  - @backstage/integration@1.10.0
 
 ## `@backstage/plugin-techdocs-node` (1.12.2 → 1.12.3)
 
@@ -3636,15 +1725,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - 8e28c88: Allow overriding default techdocs preparers with new `TechdocsPreparerExtensionPoint`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/integration@1.10.0
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-techdocs-react` (1.2.2 → 1.2.3)
 
@@ -3654,12 +1734,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - b450af3: Added ESLint rule `no-top-level-material-ui-4-imports` in the Techdocs-react plugin to migrate the Material UI imports.
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/version-bridge@1.0.8
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-todo` (0.2.37 → 0.2.38)
 
@@ -3669,12 +1743,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-todo-backend` (0.3.15 → 0.3.16)
 
@@ -3684,16 +1752,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - 2bd291e: Allow reserved characters in requests.
 - d5a1fe1: Replaced winston logger with `LoggerService`
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/backend-openapi-utils@0.1.10
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-user-settings` (0.8.4 → 0.8.5)
 
@@ -3703,30 +1761,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-app-api@1.12.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/theme@0.5.3
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-user-settings-backend` (0.2.15 → 0.2.16)
-
-### 0.2.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-vault` (0.1.28 → 0.1.29)
 
@@ -3736,35 +1770,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-vault-backend` (0.4.9 → 0.4.10)
-
-### 0.4.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-vault-node@0.1.10
-
-## `@backstage/plugin-vault-node` (0.1.9 → 0.1.10)
-
-### 0.1.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
 
 ## `@backstage/plugin-xcmetrics` (0.2.51 → 0.2.52)
 
@@ -3774,10 +1779,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 - cb1e3b0: Updated dependency `@testing-library/dom` to `^10.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
 
 ## `@backstage/repo-tools` (0.7.2 → 0.8.0)
 
@@ -3802,16 +1803,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - cfdc5e7: Adds two new commands, `repo schema openapi fuzz` and `package schema openapi fuzz` for fuzzing your plugins documented with OpenAPI. This can help find bugs in your application code through the use of auto-generated schema-compliant inputs. For more information on the underlying library this leverages, take a look at [the docs](https://schemathesis.readthedocs.io/en/stable/index.html).
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/config-loader@1.8.0
-  - @backstage/cli-node@0.2.5
-  - @backstage/catalog-model@1.4.5
-  - @backstage/cli-common@0.1.13
-  - @backstage/errors@1.2.4
-
 ## `@backstage/test-utils` (1.5.3 → 1.5.4)
 
 ### 1.5.4
@@ -3819,14 +1810,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Patch Changes
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-app-api@1.12.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/theme` (0.5.2 → 0.5.3)
 
@@ -3844,19 +1827,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - abfbcfc: Updated dependency `@testing-library/react` to `^15.0.0`.
 
-## `@techdocs/cli` (1.8.8 → 1.8.9)
-
-### 1.8.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/plugin-techdocs-node@1.12.3
-  - @backstage/catalog-model@1.4.5
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.2.0
-
 ## `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (new, 0.1.0)
 
 ### 0.1.0
@@ -3864,14 +1834,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 #### Minor Changes
 
 - 06a6725: New auth backend module to add `azure-easyauth` provider. Note that as part of this change the default provider ID has been changed from `easyAuth` to `azureEasyAuth`, which means that if you switch to this new module you need to update your app config as well as the `provider` prop of the `ProxiedSignInPage` in the frontend.
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/catalog-model@1.4.5
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-auth-backend-module-bitbucket-provider` (new, 0.1.0)
 
@@ -3881,12 +1843,6 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - ba763b6: Migrate the Bitbucket auth provider to the new `@backstage/plugin-auth-backend-module-bitbucket-provider` module package.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-
 ## `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (new, 0.1.0)
 
 ### 0.1.0
@@ -3895,10 +1851,4 @@ Changes between 1.25.2 and 1.26.0 — 240 changed and 3 added packages.
 
 - c26218d: Created a separate module for the Cloudflare Access auth provider
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
+_Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/backend-openapi-utils`, `@backstage/plugin-adr-common`, `@backstage/plugin-app-node`, `@backstage/plugin-app-visualizer`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-bazaar`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-node`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-circleci`, `@backstage/plugin-devtools`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-linguist`, `@backstage/plugin-newrelic-dashboard`, `@backstage/plugin-opencost`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-signals-node`, `@backstage/plugin-sonarqube-react`, `@backstage/plugin-stack-overflow-backend`, `@backstage/plugin-user-settings-backend`, `@backstage/plugin-vault-backend`, `@backstage/plugin-vault-node`, `@techdocs/cli`._

@@ -9,12 +9,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-permission-react@0.4.17
-  - @backstage/core-app-api@1.11.1
-  - @backstage/theme@0.4.4
 
 ## `@backstage/backend-app-api` (0.5.7 → 0.5.8)
 
@@ -23,18 +17,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - bc9a18d5ec: Added a workaround for double `default` wrapping when dynamically importing CommonJS modules with default exports.
-- Updated dependencies
-  - @backstage/config-loader@1.5.3
-  - @backstage/cli-node@0.2.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-permission-node@0.7.18
 
 ## `@backstage/backend-common` (0.19.8 → 0.19.9)
 
@@ -45,28 +27,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - aa13482090: Limit the database creation concurrency to one, defensively
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
 - 3d043526f4: Updated dependency `aws-sdk-client-mock` to `^3.0.0`.
-- Updated dependencies
-  - @backstage/config-loader@1.5.3
-  - @backstage/integration@1.7.2
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/integration-aws-node@0.1.8
-  - @backstage/backend-app-api@0.5.8
-  - @backstage/backend-dev-utils@0.1.2
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-
-## `@backstage/backend-defaults` (0.2.6 → 0.2.7)
-
-### 0.2.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-app-api@0.5.8
 
 ## `@backstage/backend-openapi-utils` (0.0.5 → 0.1.0)
 
@@ -79,10 +39,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6694b369a3: Adds a new function `wrapInOpenApiTestServer` that allows for proxied requests at runtime. This will support the new `yarn backstage-repo-tools schema openapi test` command.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/backend-plugin-api` (0.6.6 → 0.6.7)
 
@@ -91,12 +47,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/backend-tasks` (0.5.11 → 0.5.12)
 
@@ -105,11 +55,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/backend-test-utils` (0.2.7 → 0.2.8)
 
@@ -119,14 +64,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
 - bb688f7b3b: Ensure recursive deletion of temporary directories in tests
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-app-api@0.5.8
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/catalog-client` (1.4.5 → 1.4.6)
 
@@ -135,9 +72,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/cli` (0.23.1 → 0.24.0)
 
@@ -157,17 +91,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6bf7561d3c: The experimental package detection will now ignore packages that don't make `package.json` available.
 - e14cbf563d: Added `EXPERIMENTAL_VITE` flag for using [vite](https://vitejs.dev) as dev server instead of Webpack
 - 7cd34392f5: Ignore `stdin` when spawning backend child process for the `start` command. Fixing an issue where backend startup would hang.
-- Updated dependencies
-  - @backstage/config-loader@1.5.3
-  - @backstage/cli-node@0.2.0
-  - @backstage/integration@1.7.2
-  - @backstage/release-manifests@0.0.11
-  - @backstage/catalog-model@1.4.3
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/eslint-plugin@0.1.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/cli-node` (0.1.5 → 0.2.0)
 
@@ -177,13 +100,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 8db5c3cd7a: Removed support for the `publishConfig.alphaTypes` and `.betaTypes` fields that were used together with `--experimental-type-build` to generate `/alpha` and `/beta` entry points. Use the `exports` field to achieve this instead.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.1.13
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-
 ## `@backstage/config-loader` (1.5.2 → 1.5.3)
 
 ### 1.5.3
@@ -192,11 +108,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 22ca64f117: Correctly resolve config targets into absolute paths
 - 087bab5b42: Updated dependency `typescript-json-schema` to `^0.62.0`.
-- Updated dependencies
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/core-app-api` (1.11.0 → 1.11.1)
 
@@ -207,11 +118,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 89d13e5618: Add current and default scopes when refreshing session
 - 9ab0572217: Add component data `core.type` marker for `AppRouter` and `FlatRoutes`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/version-bridge@1.0.7
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
 
 ## `@backstage/core-components` (0.13.7 → 0.13.8)
 
@@ -237,12 +143,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 4b7d341746: Updated dependency `linkify-react` to `4.1.2`.
 - 0ef24425c1: Updated dependency `linkifyjs` to `4.1.2`.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/version-bridge@1.0.7
-  - @backstage/theme@0.4.4
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/core-plugin-api` (1.7.0 → 1.8.0)
 
@@ -258,10 +158,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - cb6db75bc2: Deprecated several types related to the routing system that are scheduled to be removed, as well as several fields on the route ref types themselves.
 - 68fc9dc60e: Added a new `/alpha` export `convertLegacyRouteRef`, which is a temporary utility to allow existing route refs to be used with the new experimental packages.
-- Updated dependencies
-  - @backstage/version-bridge@1.0.7
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
 
 ## `@backstage/create-app` (0.5.6 → 0.5.7)
 
@@ -288,8 +184,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - ae1602e54d: If create app installs dependencies, don't suggest to user that they also need to do it.
 - e6b7ab8d2b: Added missing node-gyp dependency to fix Docker image build
-- Updated dependencies
-  - @backstage/cli-common@0.1.13
 
 ## `@backstage/dev-utils` (1.0.22 → 1.0.23)
 
@@ -299,15 +193,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 67cc85bb14: Switched the conditional `react-dom/client` import to use `import(...)` rather than `require(...)`.
 - 38cda52746: Added support for React 18. The new `createRoot` API from `react-dom/client` will now be used if present.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/app-defaults@1.4.5
-  - @backstage/core-app-api@1.11.1
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/frontend-app-api` (0.2.0 → 0.3.0)
 
@@ -330,16 +215,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - fe6d09953d: Fix for app node output IDs not being serialized correctly.
 - 77f009b35d: Internal updates to match changes in the experimental `@backstage/frontend-plugin-api`.
 - 4d6fa921db: Internal refactor to rename the app graph to app tree
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/plugin-graphiql@0.3.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/version-bridge@1.0.7
-  - @backstage/core-app-api@1.11.1
-  - @backstage/theme@0.4.4
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
 
 ## `@backstage/frontend-plugin-api` (0.2.0 → 0.3.0)
 
@@ -355,11 +230,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 733bd95746: Add new `AppTreeApi`.
 - 6af88a05ff: Improve the extension boundary component and create a default extension suspense component.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/version-bridge@1.0.7
-  - @backstage/types@1.1.1
 
 ## `@backstage/integration` (1.7.1 → 1.7.2)
 
@@ -369,8 +239,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 243c655a68: JSDoc and Error message updates to handle `Azure Active Directory` re-brand to `Entra ID`
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/config@1.1.1
 
 ## `@backstage/integration-aws-node` (0.1.7 → 0.1.8)
 
@@ -380,9 +248,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 20d97d28a3: Updated dependency `aws-sdk-client-mock-jest` to `^3.0.0`.
 - 3d043526f4: Updated dependency `aws-sdk-client-mock` to `^3.0.0`.
-- Updated dependencies
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/integration-react` (1.1.20 → 1.1.21)
 
@@ -391,10 +256,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/integration@1.7.2
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-adr` (0.6.8 → 0.6.9)
 
@@ -405,17 +266,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-search-react@1.7.2
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/plugin-adr-common@0.2.17
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-adr-backend` (0.4.3 → 0.4.4)
 
@@ -424,27 +274,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 68f8a55622: Updated dependency `@types/marked` to `^5.0.0`.
-- Updated dependencies
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-adr-common@0.2.17
-  - @backstage/plugin-search-common@1.2.8
-
-## `@backstage/plugin-adr-common` (0.2.16 → 0.2.17)
-
-### 0.2.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.7.2
-  - @backstage/catalog-model@1.4.3
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-airbrake` (0.3.25 → 0.3.26)
 
@@ -454,25 +283,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/test-utils@1.4.5
-  - @backstage/theme@0.4.4
-  - @backstage/dev-utils@1.0.23
-  - @backstage/catalog-model@1.4.3
-
-## `@backstage/plugin-airbrake-backend` (0.3.3 → 0.3.4)
-
-### 0.3.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-allure` (0.1.41 → 0.1.42)
 
@@ -482,12 +292,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-analytics-module-ga` (0.1.34 → 0.1.35)
 
@@ -496,11 +300,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-analytics-module-ga4` (0.1.5 → 0.1.6)
 
@@ -510,11 +309,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 504614d313: Updated dependency `@types/jest` to `^29.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-analytics-module-newrelic-browser` (0.0.3 → 0.0.4)
 
@@ -523,10 +317,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-apache-airflow` (0.2.16 → 0.2.17)
 
@@ -536,9 +326,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
 
 ## `@backstage/plugin-api-docs` (0.9.12 → 0.10.0)
 
@@ -556,13 +343,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 613a55911f: Updated dependency `graphiql` to `3.0.9`.
 - 4ad15278e6: Updated dependency `@graphiql/react` to `^0.20.0`.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/plugin-catalog@1.15.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-api-docs-module-protoc-gen-doc` (0.1.4 → 0.1.5)
 
@@ -579,10 +359,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
 
 ## `@backstage/plugin-app-backend` (0.3.54 → 0.3.55)
 
@@ -591,22 +367,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/config-loader@1.5.3
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
-  - @backstage/plugin-app-node@0.1.7
-
-## `@backstage/plugin-app-node` (0.1.6 → 0.1.7)
-
-### 0.1.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
 
 ## `@backstage/plugin-auth-backend` (0.19.4 → 0.20.0)
 
@@ -622,44 +382,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
 - f2fc5acca6: Added an optional `additionalScopes` configuration parameter to `okta` providers, that lets you add additional scopes on top of the default ones.
 - 96c4f54bf6: Reverted the Microsoft auth provider to the previous implementation.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/plugin-auth-backend-module-gitlab-provider@0.1.4
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-backend-module-gcp-iap-provider@0.2.1
-  - @backstage/plugin-auth-backend-module-github-provider@0.1.4
-  - @backstage/plugin-auth-backend-module-google-provider@0.1.4
-  - @backstage/plugin-auth-backend-module-oauth2-provider@0.1.4
-  - @backstage/plugin-auth-node@0.4.1
-
-## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-
-## `@backstage/plugin-auth-backend-module-github-provider` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.3 → 0.1.4)
 
@@ -668,20 +390,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - a3236ad0ca: Fix link to the repository in `README.md`.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-auth-node@0.4.1
-
-## `@backstage/plugin-auth-backend-module-google-provider` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.1 → 0.1.2)
 
@@ -699,21 +407,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 5aeb14f035: Correctly mark the client secret in configuration as secret
 - 2817115d09: Removed `prompt=consent` from start method to fix #20641
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-auth-node@0.4.1
-
-## `@backstage/plugin-auth-backend-module-oauth2-provider` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.0 → 0.1.1)
 
@@ -722,26 +415,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - a8f6afda4a: Introduced metadata cache for the `pinniped` provider.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-
-## `@backstage/plugin-auth-node` (0.4.0 → 0.4.1)
-
-### 0.4.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-azure-devops` (0.3.7 → 0.3.8)
 
@@ -752,26 +425,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - ce9e59cbb3: Refactored the error handling for some of the hooks
 - 361bb34d8e: Consolidated getting the annotation values into a single function to help with future changes
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-azure-devops-common@0.3.1
-
-## `@backstage/plugin-azure-devops-backend` (0.4.3 → 0.4.4)
-
-### 0.4.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/plugin-azure-devops-common@0.3.1
 
 ## `@backstage/plugin-azure-sites` (0.1.14 → 0.1.15)
 
@@ -781,24 +434,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/plugin-azure-sites-common@0.1.1
-
-## `@backstage/plugin-azure-sites-backend` (0.1.16 → 0.1.17)
-
-### 0.1.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/config@1.1.1
-  - @backstage/plugin-azure-sites-common@0.1.1
 
 ## `@backstage/plugin-badges` (0.2.49 → 0.2.50)
 
@@ -807,13 +442,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-badges-backend` (0.3.3 → 0.3.4)
 
@@ -823,14 +451,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/plugin-bazaar` (0.2.17 → 0.2.18)
 
@@ -846,15 +466,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - b3acba9091: Added alert popup in the bazaar plugin
 - 1a40159acb: Removed unnecessary dependency on `@backstage/cli`.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/plugin-catalog@1.15.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-bazaar-backend` (0.3.4 → 0.3.5)
 
@@ -864,12 +475,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
 - 8613ba3928: Switched to using `"exports"` field for `/alpha` subpath export.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/plugin-bitbucket-cloud-common` (0.2.13 → 0.2.14)
 
@@ -878,8 +483,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/integration@1.7.2
 
 ## `@backstage/plugin-bitrise` (0.1.52 → 0.1.53)
 
@@ -889,12 +492,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-catalog` (1.14.0 → 1.15.0)
 
@@ -925,21 +522,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 69c14904b6: Use `EntityRefLinks` with `hideIcons` property to avoid double icons
 - 62b5922916: Internal theme type updates
 - 77f009b35d: Internal updates to match changes in the experimental `@backstage/frontend-plugin-api`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/plugin-scaffolder-common@1.4.3
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-search-react@1.7.2
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-catalog-backend` (1.14.0 → 1.15.0)
 
@@ -965,24 +547,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6694b369a3: Update the OpenAPI spec with more complete error responses and request bodies using Optic. Also, updates the test cases to use the new `supertest` pass through from `@backstage/backend-openapi-utils`.
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/backend-openapi-utils@0.1.0
-  - @backstage/plugin-search-backend-module-catalog@0.1.11
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-catalog-common@1.0.18
-  - @backstage/plugin-events-node@0.2.16
-  - @backstage/plugin-permission-node@0.7.18
 
 ## `@backstage/plugin-catalog-backend-module-aws` (0.3.0 → 0.3.1)
 
@@ -992,88 +556,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 20d97d28a3: Updated dependency `aws-sdk-client-mock-jest` to `^3.0.0`.
 - 3d043526f4: Updated dependency `aws-sdk-client-mock` to `^3.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/plugin-kubernetes-common@0.7.1
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/integration-aws-node@0.1.8
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
-
-## `@backstage/plugin-catalog-backend-module-azure` (0.1.25 → 0.1.26)
-
-### 0.1.26
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
-
-## `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.21 → 0.2.22)
-
-### 0.2.22
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/plugin-bitbucket-cloud-common@0.2.14
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.21 → 0.1.22)
-
-### 0.1.22
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-bitbucket-cloud-common@0.2.14
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.19 → 0.1.20)
-
-### 0.1.20
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-catalog-backend-module-gcp` (0.1.6 → 0.1.7)
 
@@ -1082,30 +564,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 62180df4ee: Allow integration with kubernetes dashboard
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/plugin-kubernetes-common@0.7.1
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-
-## `@backstage/plugin-catalog-backend-module-gerrit` (0.1.22 → 0.1.23)
-
-### 0.1.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-catalog-backend-module-github` (0.4.4 → 0.4.5)
 
@@ -1114,32 +572,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 88b673aa76: Import `AnalyzeOptions` and `ScmLocationAnalyzer` types from `@backstage/plugin-catalog-node`
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.15.0
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-catalog-backend-module-github-org` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/plugin-catalog-backend-module-github@0.4.5
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-catalog-backend-module-gitlab` (0.3.3 → 0.3.4)
 
@@ -1149,14 +581,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - d732f17610: Added try catch around fetching gitlab group users to prevent refresh from failing completely while only a select number of groups might not be able to load correctly.
 - 0873a43ac1: Resolved a bug affecting the retrieval of users from group members. By appending '/all' to the API call, we now include members from all inherited groups, as per Gitlab's API specifications. This change is reflected in the listSaaSUsers function.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.10 → 0.4.11)
 
@@ -1165,32 +589,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.15.0
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-catalog-backend-module-ldap` (0.5.21 → 0.5.22)
-
-### 0.5.22
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
 
 ## `@backstage/plugin-catalog-backend-module-msgraph` (0.5.13 → 0.5.14)
 
@@ -1200,60 +598,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 224aa6f64c: export the function to read ms graph provider config
 - 243c655a68: JSDoc and Error message updates to handle `Azure Active Directory` re-brand to `Entra ID`
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
-
-## `@backstage/plugin-catalog-backend-module-openapi` (0.1.23 → 0.1.24)
-
-### 0.1.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.15.0
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
-
-## `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/plugin-scaffolder-common@1.4.3
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-model@1.4.3
-  - @backstage/plugin-catalog-common@1.0.18
 
 ## `@backstage/plugin-catalog-backend-module-unprocessed` (0.3.3 → 0.3.4)
 
@@ -1262,21 +606,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-model@1.4.3
-  - @backstage/plugin-auth-node@0.4.1
-
-## `@backstage/plugin-catalog-common` (1.0.17 → 1.0.18)
-
-### 1.0.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-catalog-graph` (0.2.37 → 0.3.0)
 
@@ -1301,14 +630,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-catalog-graphql` (0.4.0 → 0.4.1)
 
@@ -1317,10 +638,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-catalog-import` (0.10.1 → 0.10.2)
 
@@ -1332,18 +649,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - dee1f39fcc: Fix missing children key warning on the default catalog import page.
 - 71c97e7d73: The `app.title` configuration is now properly required to be a string.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/integration@1.7.2
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-catalog-common@1.0.18
 
 ## `@backstage/plugin-catalog-node` (1.4.7 → 1.5.0)
 
@@ -1352,16 +657,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Minor Changes
 
 - e5bf3749ad: Support adding location analyzers in new catalog analysis extension point and move `AnalyzeOptions` and `ScmLocationAnalyzer` types to `@backstage/plugin-catalog-node`
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
 
 ## `@backstage/plugin-catalog-react` (1.8.5 → 1.9.0)
 
@@ -1400,20 +695,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 69c14904b6: Move the `EntityRefLink` icon to the left hand side as per Material-UI guidelines
 - 000dcd01af: Removed unnecessary `@backstage/integration` dependency, replaced by `@backstage/integration-react`.
 - 6c357184e2: Export `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react`
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-permission-react@0.4.17
-  - @backstage/version-bridge@1.0.7
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
 
 ## `@backstage/plugin-catalog-unprocessed-entities` (0.1.4 → 0.1.5)
 
@@ -1423,12 +704,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - a11cdb9200: Added filtering and sorting to unprocessed entities tables.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-cicd-statistics` (0.1.27 → 0.1.28)
 
@@ -1437,10 +712,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.21 → 0.1.22)
 
@@ -1449,10 +720,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-cicd-statistics@0.1.28
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-circleci` (0.3.25 → 0.3.26)
 
@@ -1463,12 +730,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-cloudbuild` (0.3.25 → 0.3.26)
 
@@ -1480,12 +741,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-code-climate` (0.1.25 → 0.1.26)
 
@@ -1496,12 +751,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 62b5922916: Internal theme type updates
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-code-coverage` (0.2.18 → 0.2.19)
 
@@ -1512,14 +761,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 71c97e7d73: The warning for missing code coverage will now render the entity as a reference.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-code-coverage-backend` (0.2.20 → 0.2.21)
 
@@ -1529,15 +770,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 11f671eaa9: Added support for new backend system
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/plugin-codescene` (0.1.18 → 0.1.19)
 
@@ -1546,12 +778,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-config-schema` (0.1.46 → 0.1.47)
 
@@ -1560,13 +786,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-cost-insights` (0.12.14 → 0.12.15)
 
@@ -1580,14 +799,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - 7da799d5b7: Updated dependency `@types/pluralize` to `^0.0.32`.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/plugin-cost-insights-common@0.1.2
 
 ## `@backstage/plugin-devtools` (0.1.5 → 0.1.6)
 
@@ -1597,43 +808,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-permission-react@0.4.17
-  - @backstage/theme@0.4.4
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-devtools-common@0.1.6
-
-## `@backstage/plugin-devtools-backend` (0.2.3 → 0.2.4)
-
-### 0.2.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config-loader@1.5.3
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-devtools-common@0.1.6
-  - @backstage/plugin-permission-node@0.7.18
-
-## `@backstage/plugin-devtools-common` (0.1.5 → 0.1.6)
-
-### 0.1.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-dynatrace` (7.0.5 → 8.0.0)
 
@@ -1643,12 +817,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-entity-feedback` (0.2.8 → 0.2.9)
 
@@ -1657,14 +825,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-entity-feedback-common@0.1.3
 
 ## `@backstage/plugin-entity-feedback-backend` (0.2.3 → 0.2.4)
 
@@ -1673,14 +833,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-entity-feedback-common@0.1.3
 
 ## `@backstage/plugin-entity-validation` (0.1.10 → 0.1.11)
 
@@ -1689,27 +841,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-catalog-common@1.0.18
-
-## `@backstage/plugin-events-backend` (0.2.15 → 0.2.16)
-
-### 0.2.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/plugin-events-node@0.2.16
 
 ## `@backstage/plugin-events-backend-module-aws-sqs` (0.2.9 → 0.2.10)
 
@@ -1718,83 +849,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 3d043526f4: Updated dependency `aws-sdk-client-mock` to `^3.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-events-backend-module-azure` (0.1.16 → 0.1.17)
-
-### 0.1.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.1.16 → 0.1.17)
-
-### 0.1.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-events-backend-module-gerrit` (0.1.16 → 0.1.17)
-
-### 0.1.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-events-backend-module-github` (0.1.16 → 0.1.17)
-
-### 0.1.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-events-backend-module-gitlab` (0.1.16 → 0.1.17)
-
-### 0.1.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-events-backend-test-utils` (0.1.16 → 0.1.17)
-
-### 0.1.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-events-node@0.2.16
-
-## `@backstage/plugin-events-node` (0.2.15 → 0.2.16)
-
-### 0.2.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
 
 ## `@backstage/plugin-explore` (0.4.11 → 0.4.12)
 
@@ -1805,32 +859,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-explore-react@0.0.33
-  - @backstage/plugin-search-react@1.7.2
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-explore-common@0.0.2
-  - @backstage/plugin-search-common@1.2.8
-
-## `@backstage/plugin-explore-backend` (0.0.16 → 0.0.17)
-
-### 0.0.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
-  - @backstage/plugin-explore-common@0.0.2
-  - @backstage/plugin-search-backend-module-explore@0.1.11
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-explore-react` (0.0.32 → 0.0.33)
 
@@ -1840,9 +868,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-explore-common@0.0.2
 
 ## `@backstage/plugin-firehydrant` (0.2.9 → 0.2.10)
 
@@ -1851,12 +876,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-fossa` (0.2.57 → 0.2.58)
 
@@ -1867,13 +886,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-gcalendar` (0.3.19 → 0.3.20)
 
@@ -1884,11 +896,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-gcp-projects` (0.3.42 → 0.3.43)
 
@@ -1898,10 +905,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
 
 ## `@backstage/plugin-git-release-manager` (0.3.38 → 0.3.39)
 
@@ -1910,11 +913,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/integration@1.7.2
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
 
 ## `@backstage/plugin-github-actions` (0.6.6 → 0.6.7)
 
@@ -1926,14 +924,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
 - ee0c44ce62: Fixed an issue that was preventing the sorting of workflow runs by their status.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/integration@1.7.2
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-github-deployments` (0.1.56 → 0.1.57)
 
@@ -1943,15 +933,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/integration@1.7.2
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-github-issues` (0.2.14 → 0.2.15)
 
@@ -1960,14 +941,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/integration@1.7.2
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-github-pull-requests-board` (0.1.19 → 0.1.20)
 
@@ -1976,13 +949,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/integration@1.7.2
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-gitops-profiles` (0.3.41 → 0.3.42)
 
@@ -1992,11 +958,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-gocd` (0.1.31 → 0.1.32)
 
@@ -2006,13 +967,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-graphiql` (0.2.55 → 0.3.0)
 
@@ -2028,22 +982,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - 77f009b35d: Internal updates to match changes in the experimental `@backstage/frontend-plugin-api`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-
-## `@backstage/plugin-graphql-backend` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/plugin-catalog-graphql@0.4.1
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-graphql-voyager` (0.1.8 → 0.1.9)
 
@@ -2052,10 +990,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
 
 ## `@backstage/plugin-home` (0.5.9 → 0.5.10)
 
@@ -2091,19 +1025,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
   See the [storybook examples](https://backstage.io/storybook/?path=/story/plugins-home-components-featureddocs--default)
 
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/core-app-api@1.11.1
-  - @backstage/plugin-home-react@0.1.5
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
-
 ## `@backstage/plugin-home-react` (0.1.4 → 0.1.5)
 
 ### 0.1.5
@@ -2116,9 +1037,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
   Updated dependency `@rjsf/material-ui` to `5.13.6`.
   Updated dependency `@rjsf/validator-ajv8` to `5.13.6`.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
 
 ## `@backstage/plugin-ilert` (0.2.14 → 0.2.15)
 
@@ -2127,13 +1045,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-jenkins` (0.9.0 → 0.9.1)
 
@@ -2144,14 +1055,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-jenkins-common@0.1.21
 
 ## `@backstage/plugin-jenkins-backend` (0.3.0 → 0.3.1)
 
@@ -2160,28 +1063,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 4bfb878807: Updated dependency `@types/jenkins` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-jenkins-common@0.1.21
-  - @backstage/plugin-permission-node@0.7.18
-
-## `@backstage/plugin-jenkins-common` (0.1.20 → 0.1.21)
-
-### 0.1.21
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/plugin-catalog-common@1.0.18
 
 ## `@backstage/plugin-kafka` (0.3.25 → 0.3.26)
 
@@ -2191,13 +1072,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-kafka-backend` (0.3.4 → 0.3.5)
 
@@ -2206,12 +1080,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 8613ba3928: Switched to using `"exports"` field for `/alpha` subpath export.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-kubernetes` (0.11.0 → 0.11.1)
 
@@ -2221,17 +1089,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/plugin-kubernetes-common@0.7.1
-  - @backstage/plugin-kubernetes-react@0.1.1
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-kubernetes-backend` (0.13.0 → 0.13.1)
 
@@ -2241,21 +1098,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 62180df4ee: Allow storing dashboard parameters for kubernetes in catalog
 - df40b067e1: Fixed the lack of `resourcequotas` as part of the Default Objects to fetch from the kubernetes api
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/plugin-kubernetes-common@0.7.1
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/integration-aws-node@0.1.8
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-kubernetes-node@0.1.1
-  - @backstage/plugin-permission-node@0.7.18
 
 ## `@backstage/plugin-kubernetes-cluster` (0.0.1 → 0.0.2)
 
@@ -2265,16 +1107,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/plugin-kubernetes-common@0.7.1
-  - @backstage/plugin-kubernetes-react@0.1.1
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-kubernetes-common` (0.7.0 → 0.7.1)
 
@@ -2284,23 +1116,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 62180df4ee: Allow storing dashboard parameters for kubernetes in catalog
 - df40b067e1: Fixed the lack of `resourcequotas` as part of the Default Objects to fetch from the kubernetes api
-- Updated dependencies
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-kubernetes-node` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-kubernetes-common@0.7.1
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-kubernetes-react` (0.1.0 → 0.1.1)
 
@@ -2315,14 +1130,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
   Some types have been moved to this new package but the export was missing, so they were not available anymore for developers.
 
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/plugin-kubernetes-common@0.7.1
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-
 ## `@backstage/plugin-lighthouse` (0.4.10 → 0.4.11)
 
 ### 0.4.11
@@ -2331,31 +1138,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/plugin-lighthouse-common@0.1.4
-
-## `@backstage/plugin-lighthouse-backend` (0.3.3 → 0.3.4)
-
-### 0.3.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
-  - @backstage/plugin-lighthouse-common@0.1.4
 
 ## `@backstage/plugin-linguist` (0.1.10 → 0.1.11)
 
@@ -2364,14 +1146,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-linguist-common@0.1.2
 
 ## `@backstage/plugin-linguist-backend` (0.5.3 → 0.5.4)
 
@@ -2380,18 +1154,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-linguist-common@0.1.2
 
 ## `@backstage/plugin-microsoft-calendar` (0.1.8 → 0.1.9)
 
@@ -2401,11 +1163,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-newrelic` (0.3.41 → 0.3.42)
 
@@ -2415,10 +1172,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
 
 ## `@backstage/plugin-newrelic-dashboard` (0.3.0 → 0.3.1)
 
@@ -2428,12 +1181,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-nomad` (0.1.6 → 0.1.7)
 
@@ -2444,25 +1191,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-
-## `@backstage/plugin-nomad-backend` (0.1.8 → 0.1.9)
-
-### 0.1.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-octopus-deploy` (0.2.7 → 0.2.8)
 
@@ -2472,12 +1200,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4d2f72c572: Added Deep link into Octopus Deploy project from the Release Table.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-opencost` (0.2.1 → 0.2.2)
 
@@ -2487,10 +1209,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
 
 ## `@backstage/plugin-org` (0.6.15 → 0.6.16)
 
@@ -2500,12 +1218,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-org-react` (0.1.14 → 0.1.15)
 
@@ -2515,13 +1227,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-pagerduty` (0.6.6 → 0.6.7)
 
@@ -2530,14 +1235,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-home-react@0.1.5
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-periskop` (0.1.23 → 0.1.24)
 
@@ -2546,13 +1243,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-periskop-backend` (0.2.4 → 0.2.5)
 
@@ -2561,38 +1251,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 8613ba3928: Switched to using `"exports"` field for `/alpha` subpath export.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-
-## `@backstage/plugin-permission-backend` (0.5.29 → 0.5.30)
-
-### 0.5.30
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-permission-node@0.7.18
-
-## `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-permission-node@0.7.18
 
 ## `@backstage/plugin-permission-common` (0.7.9 → 0.7.10)
 
@@ -2601,24 +1259,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-permission-node` (0.7.17 → 0.7.18)
-
-### 0.7.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/plugin-permission-react` (0.4.16 → 0.4.17)
 
@@ -2628,10 +1268,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-playlist` (0.1.17 → 0.2.0)
 
@@ -2658,18 +1294,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 69ee8d75f4: Remove `button` prop from used MaterialUI `MenuItem` component fixing incompatibility with MaterialUI v5.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-permission-react@0.4.17
-  - @backstage/plugin-search-react@1.7.2
-  - @backstage/theme@0.4.4
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-catalog-common@1.0.18
-  - @backstage/plugin-playlist-common@0.1.12
 
 ## `@backstage/plugin-playlist-backend` (0.3.10 → 0.3.11)
 
@@ -2678,26 +1302,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-permission-node@0.7.18
-  - @backstage/plugin-playlist-common@0.1.12
-
-## `@backstage/plugin-playlist-common` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.10
 
 ## `@backstage/plugin-proxy-backend` (0.4.4 → 0.4.5)
 
@@ -2706,10 +1310,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 8613ba3928: Switched to using `"exports"` field for `/alpha` subpath export.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-puppetdb` (0.1.8 → 0.1.9)
 
@@ -2719,13 +1319,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-rollbar` (0.4.25 → 0.4.26)
 
@@ -2736,22 +1329,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-
-## `@backstage/plugin-rollbar-backend` (0.1.51 → 0.1.52)
-
-### 0.1.52
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-scaffolder` (1.15.1 → 1.16.0)
 
@@ -2779,22 +1356,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 26e4d916d5: Title and description in RepoUrlPicker are now correctly displayed.
 - 69c14904b6: Use `EntityRefLinks` with `hideIcons` property to avoid double icons
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/plugin-scaffolder-common@1.4.3
-  - @backstage/integration@1.7.2
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-permission-react@0.4.17
-  - @backstage/plugin-scaffolder-react@1.6.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
 
 ## `@backstage/plugin-scaffolder-backend` (1.18.1 → 1.19.0)
 
@@ -2823,53 +1384,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 2be3922eb8: Add examples for `github:deployKey:create` scaffolder action & improve related tests
 - 76d07da66a: Make it possible to define control buttons text (Back, Create, Review) per template
 - f8727ad228: Add examples for `publish:github:pull-request` scaffolder action & improve related tests
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.15.0
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/plugin-scaffolder-common@1.4.3
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/plugin-scaffolder-node@0.2.8
-  - @backstage/plugin-catalog-backend-module-scaffolder-entity-model@0.1.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-catalog-common@1.0.18
-  - @backstage/plugin-permission-node@0.7.18
-
-## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.7 → 0.2.8)
-
-### 0.2.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/plugin-scaffolder-node@0.2.8
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.30 → 0.2.31)
-
-### 0.2.31
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/plugin-scaffolder-node@0.2.8
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.2.9 → 0.2.10)
 
@@ -2878,47 +1392,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 26ca97ebaa: Add examples for `gitlab:projectAccessToken:create` scaffolder action & improve related tests
-- Updated dependencies
-  - @backstage/integration@1.7.2
-  - @backstage/plugin-scaffolder-node@0.2.8
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.4.23 → 0.4.24)
-
-### 0.4.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/plugin-scaffolder-node@0.2.8
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.14 → 0.1.15)
-
-### 0.1.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.2.8
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-
-## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.27 → 0.2.28)
-
-### 0.2.28
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.2.8
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-scaffolder-common` (1.4.2 → 1.4.3)
 
@@ -2928,10 +1401,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 2e0cef42ab: Add missing required property `type` in `Template.v1beta3.schema.json` schema
 - 76d07da66a: Make it possible to define control buttons text (Back, Create, Review) per template
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-scaffolder-node` (0.2.7 → 0.2.8)
 
@@ -2940,14 +1409,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 8613ba3928: Switched to using `"exports"` field for `/alpha` subpath export.
-- Updated dependencies
-  - @backstage/plugin-scaffolder-common@1.4.3
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-scaffolder-react` (1.5.6 → 1.6.0)
 
@@ -2975,17 +1436,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 62b5922916: Internal theme type updates
 - dda56ae265: Preserve step's time execution for a non-running task.
 - 76d07da66a: Make it possible to define control buttons text (Back, Create, Review) per template
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/plugin-scaffolder-common@1.4.3
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/version-bridge@1.0.7
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-search` (1.4.1 → 1.4.2)
 
@@ -2998,19 +1448,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 62b5922916: Internal theme type updates
 - fa11120050: Fixed incorrect plugin ID in `/alpha` export.
 - 71c97e7d73: Minor internal code cleanup.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/version-bridge@1.0.7
-  - @backstage/plugin-search-react@1.7.2
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-search-backend` (1.4.6 → 1.4.7)
 
@@ -3019,38 +1456,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6694b369a3: Update the OpenAPI spec with more complete error responses and request bodies using Optic. Also, updates the test cases to use the new `supertest` pass through from `@backstage/backend-openapi-utils`.
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.2.11
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/backend-openapi-utils@0.1.0
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
-  - @backstage/plugin-permission-node@0.7.18
-  - @backstage/plugin-search-common@1.2.8
-
-## `@backstage/plugin-search-backend-module-catalog` (0.1.10 → 0.1.11)
-
-### 0.1.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/plugin-search-backend-node@1.2.11
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-catalog-common@1.0.18
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-search-backend-module-elasticsearch` (1.3.9 → 1.3.10)
 
@@ -3059,28 +1464,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 006df4a581: Support AWS OpenSearch Serverless search backend. Does not support `_refresh` endpoint.
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.2.11
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/integration-aws-node@0.1.8
-  - @backstage/config@1.1.1
-  - @backstage/plugin-search-common@1.2.8
-
-## `@backstage/plugin-search-backend-module-explore` (0.1.10 → 0.1.11)
-
-### 0.1.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.2.11
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/config@1.1.1
-  - @backstage/plugin-explore-common@0.0.2
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-search-backend-module-pg` (0.5.15 → 0.5.16)
 
@@ -3090,12 +1473,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 2b4cd1ccae: Optimize outdated documents deletion logic in PgSearchEngine DatabaseDocumentStore which significantly reduces cost on large tables
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.2.11
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-search-backend-module-techdocs` (0.1.10 → 0.1.11)
 
@@ -3104,19 +1481,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - c437253b7a: The process of adding or modifying fields in the techdocs search index has been simplified. For more details, see [How to customize fields in the Software Catalog or TechDocs index](https://backstage.io/docs/features/search/how-to-guides.md#how-to-customize-fields-in-the-software-catalog-or-techdocs-index).
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/plugin-techdocs-node@1.10.0
-  - @backstage/plugin-search-backend-node@1.2.11
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/plugin-catalog-common@1.0.18
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-search-backend-node` (1.2.10 → 1.2.11)
 
@@ -3125,24 +1489,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - b168d7e7ea: Fix highlighting for non-string fields on the `Lunr` search engine implementation.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-search-common@1.2.8
-
-## `@backstage/plugin-search-common` (1.2.7 → 1.2.8)
-
-### 1.2.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-search-react` (1.7.1 → 1.7.2)
 
@@ -3157,15 +1503,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - a539643cba: Minor refactor of search bar analytics capture
 - 71c97e7d73: The filter options passed to `SearchResultGroupLayout` are now always explicitly rendered as strings by default.
 - e7c09c4f4b: Use default extensions boundary and suspense on the alpha declarative `createSearchResultListItem` extension factory.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/frontend-app-api@0.3.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/version-bridge@1.0.7
-  - @backstage/theme@0.4.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-sentry` (0.5.10 → 0.5.11)
 
@@ -3176,12 +1513,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-shortcuts` (0.3.15 → 0.3.16)
 
@@ -3191,11 +1522,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 55725922a5: Ensure that shortcuts aren't duplicate-checked against themselves
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-sonarqube` (0.7.7 → 0.7.8)
 
@@ -3208,25 +1534,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 62b5922916: Internal theme type updates
 - 8613ba3928: Switched to using `"exports"` field for `/alpha` subpath export.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-sonarqube-react@0.1.10
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-
-## `@backstage/plugin-sonarqube-backend` (0.2.8 → 0.2.9)
-
-### 0.2.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-sonarqube-react` (0.1.9 → 0.1.10)
 
@@ -3235,9 +1542,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-splunk-on-call` (0.4.14 → 0.4.15)
 
@@ -3247,12 +1551,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
 
 ## `@backstage/plugin-stack-overflow` (0.1.21 → 0.1.22)
 
@@ -3263,15 +1561,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 6c2b872153: Add official support for React 18.
 - b168d7e7ea: Migrate package to the new Frontend system, the new module is distributed with a `/alpha` subpath.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-search-react@1.7.2
-  - @backstage/plugin-home-react@0.1.5
-  - @backstage/theme@0.4.4
-  - @backstage/config@1.1.1
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-stack-overflow-backend` (0.2.10 → 0.2.11)
 
@@ -3283,12 +1572,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
   The search collator `requestParams` option is optional now, so its default value is `{ order: 'desc', sort: 'activity', site: 'stackoverflow' }` as defined in the `Try It` section on the [official Stack Overflow API documentation](https://api.stackexchange.com/docs/questions).
 
-- Updated dependencies
-  - @backstage/plugin-search-backend-module-stack-overflow-collator@0.1.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/config@1.1.1
-  - @backstage/plugin-search-common@1.2.8
-
 ## `@backstage/plugin-stackstorm` (0.1.7 → 0.1.8)
 
 ### 0.1.8
@@ -3296,11 +1579,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-tech-insights` (0.3.17 → 0.3.18)
 
@@ -3310,15 +1588,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-tech-insights-common@0.2.12
 
 ## `@backstage/plugin-tech-insights-backend` (0.5.20 → 0.5.21)
 
@@ -3328,42 +1597,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
 - 193ad022bb: Add `factRetrieverId` to the fact retriever's logger metadata.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/catalog-client@1.4.6
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-tech-insights-common@0.2.12
-  - @backstage/plugin-tech-insights-node@0.4.13
-
-## `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.38 → 0.1.39)
-
-### 0.1.39
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-tech-insights-common@0.2.12
-  - @backstage/plugin-tech-insights-node@0.4.13
-
-## `@backstage/plugin-tech-insights-node` (0.4.12 → 0.4.13)
-
-### 0.4.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
-  - @backstage/plugin-tech-insights-common@0.2.12
 
 ## `@backstage/plugin-tech-radar` (0.6.9 → 0.6.10)
 
@@ -3374,11 +1607,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 68fc9dc60e: Updated alpha exports according to routing changes in `@backstage/frontend-plugin-api`.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
 
 ## `@backstage/plugin-techdocs` (1.8.0 → 1.9.0)
 
@@ -3400,20 +1628,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
 - 38cda52746: Added support for React 18. The new `createRoot` API from `react-dom/client` will now be used if present.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/integration@1.7.2
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-techdocs-react@1.1.13
-  - @backstage/plugin-search-react@1.7.2
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-techdocs-addons-test-utils` (1.0.22 → 1.0.23)
 
@@ -3422,17 +1636,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/plugin-catalog@1.15.0
-  - @backstage/plugin-techdocs@1.9.0
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-techdocs-react@1.1.13
-  - @backstage/core-app-api@1.11.1
-  - @backstage/plugin-search-react@1.7.2
-  - @backstage/test-utils@1.4.5
-  - @backstage/theme@0.4.4
 
 ## `@backstage/plugin-techdocs-backend` (1.8.0 → 1.9.0)
 
@@ -3447,19 +1650,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - c3c5c7e514: Add info about the entity when tech docs fail to build
 - 48a61bfdca: Fix potential memory leak by not creating a build log transport if not given via `RouterOptions`.
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
-- Updated dependencies
-  - @backstage/plugin-techdocs-node@1.10.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/plugin-search-backend-module-techdocs@0.1.11
-  - @backstage/catalog-client@1.4.6
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-catalog-common@1.0.18
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.1 → 1.1.2)
 
@@ -3470,13 +1660,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 4728b3960d: Fixed navigation bug that caused users to not be scrolled to the top of a new page. Fixed navigation bug where using backwards and forwards browser navigation did not scroll users to the correct place on the TechDoc page.
 - 6c2b872153: Add official support for React 18.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/integration@1.7.2
-  - @backstage/integration-react@1.1.21
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-techdocs-react@1.1.13
-  - @backstage/theme@0.4.4
 
 ## `@backstage/plugin-techdocs-node` (1.9.0 → 1.10.0)
 
@@ -3490,15 +1673,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - e61a975f61: Switch to `@smithy/node-http-handler` instead of the `@aws-sdk/node-http-handler`
 - 3d043526f4: Updated dependency `aws-sdk-client-mock` to `^3.0.0`.
-- Updated dependencies
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/integration-aws-node@0.1.8
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-techdocs-react` (1.1.12 → 1.1.13)
 
@@ -3507,12 +1681,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 6c2b872153: Add official support for React 18.
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/version-bridge@1.0.7
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
 
 ## `@backstage/plugin-todo` (0.2.29 → 0.2.30)
 
@@ -3522,30 +1690,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 8613ba3928: Switched to using `"exports"` field for `/alpha` subpath export.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
-
-## `@backstage/plugin-todo-backend` (0.3.4 → 0.3.5)
-
-### 0.3.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/integration@1.7.2
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-client@1.4.6
-  - @backstage/backend-openapi-utils@0.1.0
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-user-settings` (0.7.11 → 0.7.12)
 
@@ -3556,15 +1700,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 68fc9dc60e: Updated alpha exports according to routing changes in `@backstage/frontend-plugin-api`.
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/frontend-plugin-api@0.3.0
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/core-app-api@1.11.1
-  - @backstage/theme@0.4.4
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-user-settings-backend` (0.2.5 → 0.2.6)
 
@@ -3575,14 +1710,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - dd0350379b: Added dependency on `@backstage/config`
 - 013611b42e: `knex` has been bumped to major version 3 and `better-sqlite3` to major version 9, which deprecate node 16 support.
 - 8613ba3928: Switched to using `"exports"` field for `/alpha` subpath export.
-- Updated dependencies
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-node@0.4.1
 
 ## `@backstage/plugin-vault` (0.1.20 → 0.1.21)
 
@@ -3592,13 +1719,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - fdb5e23602: Import `MissingAnnotationEmptyState` from `@backstage/plugin-catalog-react` to remove the cyclical dependency
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.9.0
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/catalog-model@1.4.3
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-vault-backend` (0.3.11 → 0.4.0)
 
@@ -3636,16 +1756,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
   **DEPRECATIONS**: The interface `VaultApi` and the type `VaultSecret` are now deprecated. Import them from `@backstage/plugin-vault-node`.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-vault-node@0.1.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
-
 ## `@backstage/plugin-xcmetrics` (0.2.44 → 0.2.45)
 
 ### 0.2.45
@@ -3654,11 +1764,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 62b5922916: Internal theme type updates
-- Updated dependencies
-  - @backstage/core-components@0.13.8
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/theme@0.4.4
-  - @backstage/errors@1.2.3
 
 ## `@backstage/release-manifests` (0.0.10 → 0.0.11)
 
@@ -3679,14 +1784,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
   To use this new command, you will have to run `yarn add @useoptic/optic` in the root of your repo.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-node@0.2.0
-  - @backstage/catalog-model@1.4.3
-  - @backstage/cli-common@0.1.13
-  - @backstage/errors@1.2.3
-
 ## `@backstage/test-utils` (1.4.4 → 1.4.5)
 
 ### 1.4.5
@@ -3695,14 +1792,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 6c2b872153: Add official support for React 18.
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.8.0
-  - @backstage/plugin-permission-react@0.4.17
-  - @backstage/core-app-api@1.11.1
-  - @backstage/theme@0.4.4
-  - @backstage/plugin-permission-common@0.7.10
-  - @backstage/config@1.1.1
-  - @backstage/types@1.1.1
 
 ## `@backstage/theme` (0.4.3 → 0.4.4)
 
@@ -3728,15 +1817,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 
 - 8600b86820: validate Docker status before running mkdocs server
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-techdocs-node@1.10.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/catalog-model@1.4.3
-  - @backstage/cli-common@0.1.13
-  - @backstage/config@1.1.1
-
 ## `@backstage/plugin-catalog-backend-module-backstage-openapi` (new, 0.1.0)
 
 ### 0.1.0
@@ -3748,15 +1828,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Patch Changes
 
 - 4aa43f62aa: Updated dependency `cross-fetch` to `^4.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.5.0
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/backend-openapi-utils@0.1.0
-  - @backstage/catalog-model@1.4.3
-  - @backstage/config@1.1.1
-  - @backstage/errors@1.2.3
 
 ## `@backstage/plugin-search-backend-module-stack-overflow-collator` (new, 0.1.0)
 
@@ -3765,16 +1836,6 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 #### Minor Changes
 
 - 46f0f1700e: Extract a package for the Stack Overflow new backend system plugin.
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.2.11
-  - @backstage/backend-common@0.19.9
-  - @backstage/backend-plugin-api@0.6.7
-  - @backstage/backend-tasks@0.5.12
-  - @backstage/config@1.1.1
-  - @backstage/plugin-search-common@1.2.8
 
 ## `@backstage/plugin-vault-node` (new, 0.1.0)
 
@@ -3785,7 +1846,4 @@ Changes between 1.19.6 and 1.20.0 — 221 changed and 3 added packages.
 - 7a41bcf2af: Initial version of the `plugin-vault-node`` package. It contains the extension point definitions
   for the vault backend, as well as some types that will be deprecated in the backend plugin.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.7
+_Excluded dependency updates for packages: `@backstage/backend-defaults`, `@backstage/plugin-adr-common`, `@backstage/plugin-airbrake-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-node`, `@backstage/plugin-azure-devops-backend`, `@backstage/plugin-azure-sites-backend`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-bitbucket`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-common`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-explore-backend`, `@backstage/plugin-graphql-backend`, `@backstage/plugin-jenkins-common`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-lighthouse-backend`, `@backstage/plugin-nomad-backend`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-node`, `@backstage/plugin-playlist-common`, `@backstage/plugin-rollbar-backend`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-common`, `@backstage/plugin-sonarqube-backend`, `@backstage/plugin-tech-insights-backend-module-jsonfc`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-todo-backend`._

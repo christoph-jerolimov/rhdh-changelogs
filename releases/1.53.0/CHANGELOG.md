@@ -2,29 +2,6 @@
 
 Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
-## `@backstage/app-defaults` (1.7.9 → 1.7.10)
-
-### 1.7.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/core-components@0.18.12
-  - @backstage/core-app-api@1.20.3
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-permission-react@0.5.3
-
-## `@backstage/backend-app-api` (1.7.1 → 1.7.2)
-
-### 1.7.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/connections@0.2.0
-  - @backstage/backend-plugin-api@1.9.3
-
 ## `@backstage/backend-defaults` (0.17.4 → 0.17.5)
 
 ### 0.17.5
@@ -35,36 +12,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 - d62c384: Fixed a bug where scheduled tasks that were initially registered with a manual trigger and later re-registered with a duration or cron cadence would never be scheduled to run.
 - 8419f51: Added support for AWS PrivateLink for Amazon S3.
 - a624fa3: The `connection` config option for the Redis cache store now accepts either a string URL or an object with additional connection options that are passed directly to the underlying client. The object form is only supported when `backend.cache.store` is `redis`; other stores require a plain string. This allows configuring options like `pingInterval` without needing dedicated config fields. For clustered Redis, the connection object properties are merged into cluster defaults. Fixes https://github.com/backstage/backstage/issues/31813, https://github.com/backstage/backstage/issues/31742.
-- Updated dependencies
-  - @backstage/config-loader@1.11.0
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-app-api@1.7.2
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/cli-node@0.3.4
-  - @backstage/plugin-events-node@0.4.24
-  - @backstage/plugin-permission-node@0.11.2
-
-## `@backstage/backend-dynamic-feature-service` (0.8.3 → 0.8.4)
-
-### 0.8.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-defaults@0.17.5
-  - @backstage/config-loader@1.11.0
-  - @backstage/backend-openapi-utils@0.7.0
-  - @backstage/cli-common@0.3.0
-  - @backstage/plugin-catalog-backend@3.8.1
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/cli-node@0.3.4
-  - @backstage/plugin-app-node@0.1.47
-  - @backstage/plugin-events-backend@0.6.4
-  - @backstage/plugin-events-node@0.4.24
-  - @backstage/plugin-permission-node@0.11.2
-  - @backstage/plugin-scaffolder-node@0.13.5
-  - @backstage/plugin-search-backend-node@1.4.6
 
 ## `@backstage/backend-openapi-utils` (0.6.10 → 0.7.0)
 
@@ -74,22 +21,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - 84171b3: **BREAKING**: Removed `wrapInOpenApiTestServer`. This function redirected test traffic through the Optic `capture` proxy via the `OPTIC_PROXY` environment variable. Since the Optic dependency has been removed, this function no longer serves a purpose. Use `wrapServer` instead for OpenAPI spec validation in tests.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/backend-plugin-api` (1.9.2 → 1.9.3)
-
-### 1.9.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/plugin-permission-node@0.11.2
-
 ## `@backstage/backend-test-utils` (1.11.4 → 1.11.5)
 
 ### 1.11.5
@@ -97,21 +28,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 41c56b3: Fixed MySQL test database failures by pinning the Docker image from the floating `mysql:8` tag to `mysql:8.4` and replacing a startup flag that was removed in MySQL 8.4. Connection pool reduced from 50 to 5 per test database, idle connections are now reaped after 5 seconds, and container connection limits raised to 1000 for both MySQL and Postgres to handle parallel Jest workers on high-core machines.
-- Updated dependencies
-  - @backstage/backend-defaults@0.17.5
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-app-api@1.7.2
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/catalog-client` (1.16.0 → 1.16.1)
-
-### 1.16.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/filter-predicates@0.1.4
 
 ## `@backstage/cli` (0.36.3 → 0.36.4)
 
@@ -120,12 +36,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 61d4881: The shared ESLint configuration now reports unused imports in `config.d.ts` configuration schema files. These declaration files are not covered by the TypeScript compiler's unused-variable checks, which previously allowed a stray import to slip through. Such an import can resolve during local development but break configuration schema loading for consumers of the published package, so it is now caught at lint time.
-- Updated dependencies
-  - @backstage/cli-module-build@0.1.5
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-defaults@0.1.4
-  - @backstage/cli-module-test-jest@0.1.4
-  - @backstage/cli-node@0.3.4
 
 ## `@backstage/cli-common` (0.2.2 → 0.3.0)
 
@@ -134,44 +44,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Minor Changes
 
 - 39deda4: **BREAKING**: Removed the deprecated `bootstrapEnvProxyAgents` export along with the `global-agent` and `undici` dependencies. Use Node.js built-in proxy support by setting `NODE_USE_ENV_PROXY=1` alongside your `HTTP_PROXY`/`HTTPS_PROXY`/`NO_PROXY` environment variables instead. See the [corporate proxy guide](https://backstage.io/docs/tutorials/corporate-proxy/) for details.
-
-## `@backstage/cli-defaults` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-module-build@0.1.5
-  - @backstage/cli-module-migrate@0.2.0
-  - @backstage/cli-module-new@0.1.5
-  - @backstage/cli-module-actions@0.1.3
-  - @backstage/cli-module-auth@0.1.4
-  - @backstage/cli-module-config@0.1.4
-  - @backstage/cli-module-github@0.1.4
-  - @backstage/cli-module-info@0.1.4
-  - @backstage/cli-module-lint@0.1.4
-  - @backstage/cli-module-maintenance@0.1.4
-  - @backstage/cli-module-test-jest@0.1.4
-  - @backstage/cli-module-translations@0.1.4
-
-## `@backstage/cli-module-actions` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/cli-module-auth` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-node@0.3.4
 
 ## `@backstage/cli-module-build` (0.1.4 → 0.1.5)
 
@@ -183,61 +55,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 - 853bcba: Improved caching for Module Federation remote builds by extracting dependencies into separate content-hashed chunks.
 - 3cce70f: Increase generated frontend static asset filename hashes to 12 characters to reduce the chance of collisions across long-lived cached builds.
 - da820d1: Added support for passing custom flags to the embedded postgres processes via `backend.database.connection.flags.postgres` and `backend.database.connection.flags.initdb` configuration properties.
-- Updated dependencies
-  - @backstage/config-loader@1.11.0
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/cli-module-config` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config-loader@1.11.0
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/cli-module-github` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/cli-module-info` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/cli-module-lint` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/cli-module-maintenance` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
 
 ## `@backstage/cli-module-migrate` (0.1.3 → 0.2.0)
 
@@ -247,12 +64,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - 39deda4: **BREAKING**: The `versions:bump` command no longer bootstraps legacy proxy agents. Use Node.js built-in proxy support by setting `NODE_USE_ENV_PROXY=1` alongside your `HTTP_PROXY`/`HTTPS_PROXY`/`NO_PROXY` environment variables instead.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
-
 ## `@backstage/cli-module-new` (0.1.4 → 0.1.5)
 
 ### 0.1.5
@@ -260,47 +71,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 28c1c1c: Synced zod-validation-error versions between packages
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/cli-module-test-jest` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/cli-module-translations` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/cli-node` (0.3.3 → 0.3.4)
-
-### 0.3.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-
-## `@backstage/codemods` (0.1.57 → 0.1.58)
-
-### 0.1.58
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
 
 ## `@backstage/config-loader` (1.10.12 → 1.11.0)
 
@@ -313,8 +83,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 005458a: Added support for comma-separated values in the `BACKSTAGE_ENV` environment variable, allowing multiple environment-specific configuration files to be loaded and stacked at startup. For example, setting `BACKSTAGE_ENV=e2e-test,production` will load `app-config.e2e-test.yaml` and `app-config.production.yaml` in addition to the base `app-config.yaml`, with later environments taking priority. Local override files (`.local.yaml`) are always loaded after all non-local files.
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
 
 ## `@backstage/connections` (0.1.0 → 0.2.0)
 
@@ -327,8 +95,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - ec96761: Added a default implementation for the connections service so backend modules can depend on it without requiring apps to explicitly install the connections service factory.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
 
 ## `@backstage/core-app-api` (1.20.2 → 1.20.3)
 
@@ -338,22 +104,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - 3ef5974: Added support for wildcard plugin entries in frontend discovery endpoints, matching the backend discovery behavior.
 - 6172725: Fixed the default fetch API to support discovery endpoints that only define an internal target.
-- Updated dependencies
-  - @backstage/ui@0.17.0
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/core-compat-api` (0.5.12 → 0.5.13)
-
-### 0.5.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/filter-predicates@0.1.4
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-app-react@0.2.5
 
 ## `@backstage/core-components` (0.18.11 → 0.18.12)
 
@@ -364,18 +114,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 - 120e7c3: chore(deps): bump `js-yaml` from 4.1.1 to 4.2.0
 - 9efce7d: Fixed the table filters sidebar rendering a stray `0` when no filters are configured.
 - 7ceeaad: Migrated CopyTextButton component from Material-UI to Backstage UI (BUI). Replaced MUI IconButton and Tooltip with BUI ButtonIcon and TooltipTrigger/Tooltip components. This is an internal refactoring that maintains backward compatibility - the component API remains unchanged.
-- Updated dependencies
-  - @backstage/ui@0.17.0
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/core-plugin-api` (1.12.7 → 1.12.8)
-
-### 1.12.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
 
 ## `@backstage/create-app` (0.8.4 → 0.9.0)
 
@@ -392,23 +130,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 - e2b3472: Updated generated app configurations to use the stable Client ID Metadata Documents setting and stop advertising deprecated Dynamic Client Registration.
 - 3acdf87: Pinned `@types/node` to `22.20.0` in the seed lockfile to prevent yarn from resolving the `*` wildcard (from `@jest/environment-jsdom-abstract`) to `@types/node@26.0.0`, which breaks `tsc:full` due to incompatible `EventEmitter` types in `tarn`.
 - 3a9ab3f: Fixed an issue where two "Notifications" links were displayed in the sidebar.
-- Updated dependencies
-  - @backstage/cli-common@0.3.0
-
-## `@backstage/dev-utils` (1.1.24 → 1.1.25)
-
-### 1.1.25
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-app-api@1.20.3
-  - @backstage/app-defaults@1.7.10
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/integration-react@1.2.20
 
 ## `@backstage/filter-predicates` (0.1.3 → 0.1.4)
 
@@ -426,36 +147,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - 74fbcd7: Extension `if` predicates now support specifying an `action` attribute in the permission reference. When a permission name contains a `#` separator (e.g. `catalog.entity.read#read`), the part after `#` is used as `attributes.action` when evaluating the permission. This removes the need to configure action attributes separately for basic permissions.
 - 6ea6d31: Internal refactor of the specialized app sign-in runtime to initialize it once instead of reassigning it.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/core-app-api@1.20.3
-  - @backstage/filter-predicates@0.1.4
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/frontend-defaults@0.5.4
-
-## `@backstage/frontend-defaults` (0.5.3 → 0.5.4)
-
-### 0.5.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/plugin-app@0.5.1
-  - @backstage/core-components@0.18.12
-  - @backstage/frontend-app-api@0.16.6
-
-## `@backstage/frontend-dev-utils` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/plugin-app@0.5.1
-  - @backstage/ui@0.17.0
-  - @backstage/frontend-defaults@0.5.4
 
 ## `@backstage/frontend-dynamic-feature-loader` (0.1.13 → 0.1.14)
 
@@ -464,8 +155,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - a5e35e9: Added package installation and import instructions to the README file.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
 
 ## `@backstage/frontend-plugin-api` (0.17.2 → 0.17.3)
 
@@ -479,50 +168,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
   - `PageBlueprint` automatically wraps each sub-page route element with `BreadcrumbEntry`, so sub-pages contribute to the PluginHeader breadcrumb trail without extra wiring.
   - Plugin authors who need breadcrumbs for internal routes within a sub-page can wrap their route content with `BreadcrumbEntry` manually.
     - `plugin-scaffolder` internal routes have been wrapped as an example
-
-- Updated dependencies
-  - @backstage/filter-predicates@0.1.4
-
-## `@backstage/frontend-test-utils` (0.6.1 → 0.6.2)
-
-### 0.6.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/plugin-app@0.5.1
-  - @backstage/core-app-api@1.20.3
-  - @backstage/frontend-app-api@0.16.6
-  - @backstage/filter-predicates@0.1.4
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/test-utils@1.7.20
-  - @backstage/plugin-app-react@0.2.5
-  - @backstage/plugin-permission-react@0.5.3
-
-## `@backstage/integration-react` (1.2.19 → 1.2.20)
-
-### 1.2.20
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-api-docs` (0.14.2 → 0.14.3)
-
-### 0.14.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog@2.0.7
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-permission-react@0.5.3
 
 ## `@backstage/plugin-app` (0.5.0 → 0.5.1)
 
@@ -539,69 +184,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - 3ef5974: Added support for wildcard plugin entries in frontend discovery endpoints, matching the backend discovery behavior.
 - 6172725: Fixed the default fetch API to support discovery endpoints that only define an internal target.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/core-components@0.18.12
-  - @backstage/filter-predicates@0.1.4
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/integration-react@1.2.20
-  - @backstage/plugin-app-react@0.2.5
-  - @backstage/plugin-permission-react@0.5.3
-
-## `@backstage/plugin-app-backend` (0.5.15 → 0.5.16)
-
-### 0.5.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config-loader@1.11.0
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-app-node@0.1.47
-
-## `@backstage/plugin-app-node` (0.1.46 → 0.1.47)
-
-### 0.1.47
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config-loader@1.11.0
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-app-react` (0.2.4 → 0.2.5)
-
-### 0.2.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-app-visualizer` (0.2.5 → 0.2.6)
-
-### 0.2.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-auth` (0.1.9 → 0.1.10)
-
-### 0.1.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
 
 ## `@backstage/plugin-auth-backend` (0.29.1 → 0.29.2)
 
@@ -611,20 +193,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - e2b3472: Promoted Client ID Metadata Documents (CIMD) to the stable `auth.clientIdMetadataDocuments` configuration. The previous `auth.experimentalClientIdMetadataDocuments` key remains supported as a deprecated alias. Dynamic Client Registration now logs a deprecation warning when enabled and users should migrate to CIMD.
 - 2aeb246: Added token revocation support for clients using client ID metadata documents (CIMD). The `/v1/revoke` endpoint is now available whenever dynamic client registration or client ID metadata documents are enabled, and is advertised through `revocation_endpoint` in the OpenID provider configuration.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-auth-backend-module-atlassian-provider` (0.4.16 → 0.4.17)
-
-### 0.4.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
 
 ## `@backstage/plugin-auth-backend-module-auth0-provider` (0.4.2 → 0.4.3)
 
@@ -640,201 +208,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
   are forwarded to Auth0's `/authorize` endpoint. This allows callers to guide
   users to the signup or login screen (`screen_hint=signup`) and pre-fill the
   email field (`login_hint=user@example.com`) during invitation flows.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.4.17 → 0.4.18)
-
-### 0.4.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-backend@0.29.2
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.2.21 → 0.2.22)
-
-### 0.2.22
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.3.16 → 0.3.17)
-
-### 0.3.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-bitbucket-server-provider` (0.2.16 → 0.2.17)
-
-### 0.2.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.4.16 → 0.4.17)
-
-### 0.4.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.4.16 → 0.4.17)
-
-### 0.4.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-github-provider` (0.5.4 → 0.5.5)
-
-### 0.5.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-gitlab-provider` (0.4.4 → 0.4.5)
-
-### 0.4.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-google-provider` (0.3.16 → 0.3.17)
-
-### 0.3.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-guest-provider` (0.2.20 → 0.2.21)
-
-### 0.2.21
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-microsoft-provider` (0.3.16 → 0.3.17)
-
-### 0.3.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-oauth2-provider` (0.4.16 → 0.4.17)
-
-### 0.4.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.3.0 → 0.3.1)
-
-### 0.3.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-oidc-provider` (0.4.17 → 0.4.18)
-
-### 0.4.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-backend@0.29.2
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-okta-provider` (0.2.16 → 0.2.17)
-
-### 0.2.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-onelogin-provider` (0.3.16 → 0.3.17)
-
-### 0.3.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-openshift-provider` (0.1.8 → 0.1.9)
-
-### 0.1.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-pinniped-provider` (0.3.15 → 0.3.16)
-
-### 0.3.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.5.15 → 0.5.16)
-
-### 0.5.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
 
 ## `@backstage/plugin-auth-node` (0.7.2 → 0.7.3)
 
@@ -843,19 +216,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 28c1c1c: Synced zod-validation-error versions between packages
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/catalog-client@1.16.1
-
-## `@backstage/plugin-auth-react` (0.1.28 → 0.1.29)
-
-### 0.1.29
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
 
 ## `@backstage/plugin-catalog` (2.0.6 → 2.0.7)
 
@@ -879,18 +239,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - a00547f: Fix crash when exporting the catalog with unset filters.
 - 1217673: Fixed a crash in the catalog export when an entity list filter is `undefined`, which could occur if optional filters were not set.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/plugin-techdocs-react@1.3.13
-  - @backstage/catalog-client@1.16.1
-  - @backstage/core-compat-api@0.5.13
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/integration-react@1.2.20
-  - @backstage/plugin-permission-react@0.5.3
-  - @backstage/plugin-search-react@1.11.6
 
 ## `@backstage/plugin-catalog-backend` (3.8.0 → 3.8.1)
 
@@ -899,190 +247,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 28c1c1c: Synced zod-validation-error versions between packages
-- Updated dependencies
-  - @backstage/backend-openapi-utils@0.7.0
-  - @backstage/filter-predicates@0.1.4
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/catalog-client@1.16.1
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-  - @backstage/plugin-permission-node@0.11.2
-
-## `@backstage/plugin-catalog-backend-module-ai-model` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-aws` (0.4.24 → 0.4.25)
-
-### 0.4.25
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-defaults@0.17.5
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-azure` (0.3.18 → 0.3.19)
-
-### 0.3.19
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.5.15 → 0.5.16)
-
-### 0.5.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-openapi-utils@0.7.0
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.5.12 → 0.5.13)
-
-### 0.5.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.5.12 → 0.5.13)
-
-### 0.5.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-catalog-backend-module-gcp` (0.3.20 → 0.3.21)
-
-### 0.3.21
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-gerrit` (0.3.15 → 0.3.16)
-
-### 0.3.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-gitea` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-github` (0.13.3 → 0.13.4)
-
-### 0.13.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-catalog-backend-module-github-org` (0.3.23 → 0.3.24)
-
-### 0.3.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-backend-module-github@0.13.4
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.8.4 → 0.8.5)
-
-### 0.8.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-defaults@0.17.5
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-catalog-backend-module-gitlab-org` (0.2.22 → 0.2.23)
-
-### 0.2.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-backend-module-gitlab@0.8.5
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.13 → 0.7.14)
-
-### 0.7.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-defaults@0.17.5
-  - @backstage/plugin-catalog-backend@3.8.1
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-catalog-backend-module-ldap` (0.12.6 → 0.12.7)
-
-### 0.12.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-logs` (0.1.23 → 0.1.24)
-
-### 0.1.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@3.8.1
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
 
 ## `@backstage/plugin-catalog-backend-module-msgraph` (0.10.3 → 0.10.4)
 
@@ -1091,102 +255,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 06bf22e: Configuring `userGroupMember.path` together with `user.filter` is now rejected with a configuration error, as the two options are mutually exclusive. This matches the existing validation for `userGroupMember.filter` and `userGroupMember.search`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-msgraph-incremental` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend-module-msgraph@0.10.4
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-backend-module-incremental-ingestion@0.7.14
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-openapi` (0.2.23 → 0.2.24)
-
-### 0.2.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-puppetdb` (0.2.23 → 0.2.24)
-
-### 0.2.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.2.21 → 0.2.22)
-
-### 0.2.22
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-backend-module-unprocessed` (0.6.13 → 0.6.14)
-
-### 0.6.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-catalog-graph` (0.6.5 → 0.6.6)
-
-### 0.6.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/catalog-client@1.16.1
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-catalog-import` (0.13.14 → 0.13.15)
-
-### 0.13.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/catalog-client@1.16.1
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/integration-react@1.2.20
-  - @backstage/plugin-permission-react@0.5.3
-
-## `@backstage/plugin-catalog-node` (2.2.2 → 2.2.3)
-
-### 2.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/catalog-client@1.16.1
-  - @backstage/plugin-permission-node@0.11.2
 
 ## `@backstage/plugin-catalog-react` (3.1.0 → 3.2.0)
 
@@ -1207,96 +275,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 8a500d5: Fixed a regression where `EntityTypePicker`'s `initialFilter` prop was being cleared when used alongside `EntityKindPicker` inside `EntityListProvider`. The type filter is now correctly preserved after the available types load for the selected kind.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/core-components@0.18.12
-  - @backstage/filter-predicates@0.1.4
-  - @backstage/catalog-client@1.16.1
-  - @backstage/core-compat-api@0.5.13
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/integration-react@1.2.20
-  - @backstage/plugin-permission-react@0.5.3
-
-## `@backstage/plugin-catalog-unprocessed-entities` (0.2.32 → 0.2.33)
-
-### 0.2.33
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-compat-api@0.5.13
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-config-schema` (0.1.81 → 0.1.82)
-
-### 0.1.82
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-devtools` (0.1.40 → 0.1.41)
-
-### 0.1.41
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-compat-api@0.5.13
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-permission-react@0.5.3
-
-## `@backstage/plugin-devtools-backend` (0.5.18 → 0.5.19)
-
-### 0.5.19
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config-loader@1.11.0
-  - @backstage/cli-common@0.3.0
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-permission-node@0.11.2
-
-## `@backstage/plugin-devtools-react` (0.2.3 → 0.2.4)
-
-### 0.2.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-events-backend` (0.6.3 → 0.6.4)
-
-### 0.6.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-openapi-utils@0.7.0
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-backend-module-aws-sqs` (0.4.23 → 0.4.24)
-
-### 0.4.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
 
 ## `@backstage/plugin-events-backend-module-azure` (0.2.32 → 0.2.33)
 
@@ -1305,107 +283,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 9d23b9e: Added HTTP POST webhook ingress endpoint for Azure DevOps events, matching the pattern established by the GitHub events module. The ingress endpoint is only registered when `events.modules.azureDevOps.webhookSecret` is configured; without it, no route is exposed. Incoming requests are validated against the `x-ado-webhook-secret` custom header using timing-safe comparison.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.32 → 0.2.33)
-
-### 0.2.33
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-backend-module-bitbucket-server` (0.1.13 → 0.1.14)
-
-### 0.1.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-backend-module-gerrit` (0.2.32 → 0.2.33)
-
-### 0.2.33
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-backend-module-github` (0.4.13 → 0.4.14)
-
-### 0.4.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-backend-module-gitlab` (0.3.13 → 0.3.14)
-
-### 0.3.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-backend-module-google-pubsub` (0.2.4 → 0.2.5)
-
-### 0.2.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/filter-predicates@0.1.4
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-backend-module-kafka` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-backend-test-utils` (0.1.56 → 0.1.57)
-
-### 0.1.57
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-events-node` (0.4.23 → 0.4.24)
-
-### 0.4.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-gateway-backend` (1.1.6 → 1.1.7)
-
-### 1.1.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
 
 ## `@backstage/plugin-home` (0.9.7 → 0.9.8)
 
@@ -1414,76 +291,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - e9776b0: Optionally prevent duplicate widget additions via prop and added empty state for Add Widget dialog
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-app-api@1.20.3
-  - @backstage/catalog-client@1.16.1
-  - @backstage/core-compat-api@0.5.13
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-home-react@0.1.40
-
-## `@backstage/plugin-home-react` (0.1.39 → 0.1.40)
-
-### 0.1.40
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/core-components@0.18.12
-  - @backstage/core-compat-api@0.5.13
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-kubernetes` (0.12.20 → 0.12.21)
-
-### 0.12.21
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/plugin-kubernetes-react@0.5.22
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-permission-react@0.5.3
-
-## `@backstage/plugin-kubernetes-backend` (0.21.5 → 0.21.6)
-
-### 0.21.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/catalog-client@1.16.1
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-kubernetes-node@0.4.6
-  - @backstage/plugin-permission-node@0.11.2
-
-## `@backstage/plugin-kubernetes-cluster` (0.0.38 → 0.0.39)
-
-### 0.0.39
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/plugin-kubernetes-react@0.5.22
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-permission-react@0.5.3
-
-## `@backstage/plugin-kubernetes-node` (0.4.5 → 0.4.6)
-
-### 0.4.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
 
 ## `@backstage/plugin-kubernetes-react` (0.5.21 → 0.5.22)
 
@@ -1493,9 +300,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - 120e7c3: chore(deps): bump `js-yaml` from 4.1.1 to 4.2.0
 - 2ed90cd: Fixed the published configuration schema so that it no longer references a file that is excluded from the package. This previously caused configuration schema extraction to fail in apps that depend on this plugin.
-- Updated dependencies
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
 
 ## `@backstage/plugin-mcp-actions-backend` (0.1.14 → 0.2.0)
 
@@ -1508,21 +312,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - e2b3472: Updated OAuth discovery to use the stable `auth.clientIdMetadataDocuments` configuration while retaining compatibility with the deprecated experimental key.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/catalog-client@1.16.1
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-mui-to-bui` (0.2.8 → 0.2.9)
-
-### 0.2.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/core-plugin-api@1.12.8
 
 ## `@backstage/plugin-notifications` (0.5.18 → 0.5.19)
 
@@ -1531,48 +320,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 73ea4d7: Migrated tests to msw version 2.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-signals-react@0.0.24
-
-## `@backstage/plugin-notifications-backend` (0.6.6 → 0.6.7)
-
-### 0.6.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-openapi-utils@0.7.0
-  - @backstage/plugin-notifications-node@0.2.28
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-signals-node@0.2.3
-
-## `@backstage/plugin-notifications-backend-module-email` (0.3.22 → 0.3.23)
-
-### 0.3.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-notifications-node@0.2.28
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/catalog-client@1.16.1
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-notifications-backend-module-slack` (0.4.3 → 0.4.4)
-
-### 0.4.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-notifications-node@0.2.28
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
 
 ## `@backstage/plugin-notifications-node` (0.2.27 → 0.2.28)
 
@@ -1581,8 +328,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 73ea4d7: Migrated tests to msw version 2.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
 
 ## `@backstage/plugin-org` (0.7.5 → 0.7.6)
 
@@ -1591,83 +336,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 9585e44: Fixed the ownership card emitting duplicate React key warnings when different entity kinds share the same type.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-org-react` (0.1.51 → 0.1.52)
-
-### 0.1.52
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/catalog-client@1.16.1
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-permission-backend` (0.7.13 → 0.7.14)
-
-### 0.7.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-permission-node@0.11.2
-
-## `@backstage/plugin-permission-backend-module-allow-all-policy` (0.2.20 → 0.2.21)
-
-### 0.2.21
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-permission-node@0.11.2
-
-## `@backstage/plugin-permission-node` (0.11.1 → 0.11.2)
-
-### 0.11.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-permission-react` (0.5.2 → 0.5.3)
-
-### 0.5.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-proxy-backend` (0.6.14 → 0.6.15)
-
-### 0.6.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-proxy-node@0.1.17
-
-## `@backstage/plugin-proxy-node` (0.1.16 → 0.1.17)
-
-### 0.1.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
 
 ## `@backstage/plugin-scaffolder` (1.38.0 → 1.38.1)
 
@@ -1683,18 +351,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
     - `plugin-scaffolder` internal routes have been wrapped as an example
 
 - c32e636: Fixed an issue where Bitbucket Cloud and Bitbucket Server hosts would not render the correct repository and branch picker fields in the Scaffolder.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/plugin-techdocs-react@1.3.13
-  - @backstage/filter-predicates@0.1.4
-  - @backstage/catalog-client@1.16.1
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/integration-react@1.2.20
-  - @backstage/plugin-permission-react@0.5.3
-  - @backstage/plugin-scaffolder-react@2.0.2
 
 ## `@backstage/plugin-scaffolder-backend` (4.0.1 → 4.0.2)
 
@@ -1703,145 +359,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 55902bb: Fixed `DatabaseTaskStore.list` returning `totalTasks` as a string on PostgreSQL. knex returns a `COUNT(*)` aggregate as a string on PostgreSQL (the column is a bigint) while better-sqlite3 returns a number, so the count is now coerced with `Number(...)` and guarded with `Number.isSafeInteger(...)`. This in turn fixes the `list-scaffolder-tasks` action, whose output schema declares `totalTasks: z.number()` and previously failed validation in production with `Invalid output ... totalTasks: Expected number, received string`.
-- Updated dependencies
-  - @backstage/backend-openapi-utils@0.7.0
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-events-node@0.4.24
-  - @backstage/plugin-permission-node@0.11.2
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-azure` (0.2.22 → 0.2.23)
-
-### 0.2.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.3.7 → 0.3.8)
-
-### 0.3.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.22 → 0.2.23)
-
-### 0.2.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.22 → 0.3.23)
-
-### 0.3.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.24 → 0.3.25)
-
-### 0.3.25
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-gcp` (0.2.22 → 0.2.23)
-
-### 0.2.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.22 → 0.2.23)
-
-### 0.2.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-gitea` (0.2.22 → 0.2.23)
-
-### 0.2.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-github` (0.9.10 → 0.9.11)
-
-### 0.9.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.11.7 → 0.11.8)
-
-### 0.11.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-notifications` (0.1.23 → 0.1.24)
-
-### 0.1.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-notifications-node@0.2.28
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.5.22 → 0.5.23)
-
-### 0.5.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-backend-module-sentry` (0.3.5 → 0.3.6)
-
-### 0.3.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
 
 ## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.23 → 0.4.24)
 
@@ -1850,46 +367,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 5e92512: Fixed compatibility with yeoman-environment v4+, which is ESM-only. The previous require() call throws ERR_REQUIRE_ESM; replaced with dynamic import() and updated registration to match the v4+ API.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-  - @backstage/plugin-scaffolder-node-test-utils@0.3.13
-
-## `@backstage/plugin-scaffolder-node` (0.13.4 → 0.13.5)
-
-### 0.13.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-permission-node@0.11.2
-
-## `@backstage/plugin-scaffolder-node-test-utils` (0.3.12 → 0.3.13)
-
-### 0.3.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-test-utils@1.11.5
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-scaffolder-node@0.13.5
-
-## `@backstage/plugin-scaffolder-react` (2.0.1 → 2.0.2)
-
-### 2.0.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/catalog-client@1.16.1
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-permission-react@0.5.3
 
 ## `@backstage/plugin-search` (1.7.5 → 1.7.6)
 
@@ -1899,152 +376,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - b8db4fe: The Search page no longer shows the Documentation result type unless it is provided by an installed plugin.
 - 0103d8e: Include custom catalog entity kinds in the search page kind filter.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-search-react@1.11.6
-
-## `@backstage/plugin-search-backend` (2.1.3 → 2.1.4)
-
-### 2.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-openapi-utils@0.7.0
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-permission-node@0.11.2
-  - @backstage/plugin-search-backend-node@1.4.6
-
-## `@backstage/plugin-search-backend-module-catalog` (0.3.16 → 0.3.17)
-
-### 0.3.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/catalog-client@1.16.1
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-search-backend-node@1.4.6
-
-## `@backstage/plugin-search-backend-module-elasticsearch` (1.8.4 → 1.8.5)
-
-### 1.8.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-search-backend-node@1.4.6
-
-## `@backstage/plugin-search-backend-module-explore` (0.3.15 → 0.3.16)
-
-### 0.3.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-search-backend-node@1.4.6
-
-## `@backstage/plugin-search-backend-module-pg` (0.5.56 → 0.5.57)
-
-### 0.5.57
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-search-backend-node@1.4.6
-
-## `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.3.21 → 0.3.22)
-
-### 0.3.22
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-search-backend-node@1.4.6
-
-## `@backstage/plugin-search-backend-module-techdocs` (0.4.15 → 0.4.16)
-
-### 0.4.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-techdocs-node@1.15.2
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/catalog-client@1.16.1
-  - @backstage/plugin-catalog-node@2.2.3
-  - @backstage/plugin-search-backend-node@1.4.6
-
-## `@backstage/plugin-search-backend-node` (1.4.5 → 1.4.6)
-
-### 1.4.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-
-## `@backstage/plugin-search-react` (1.11.5 → 1.11.6)
-
-### 1.11.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-signals` (0.0.32 → 0.0.33)
-
-### 0.0.33
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-signals-react@0.0.24
-
-## `@backstage/plugin-signals-backend` (0.3.16 → 0.3.17)
-
-### 0.3.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-  - @backstage/plugin-signals-node@0.2.3
-
-## `@backstage/plugin-signals-node` (0.2.2 → 0.2.3)
-
-### 0.2.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-events-node@0.4.24
-
-## `@backstage/plugin-signals-react` (0.0.23 → 0.0.24)
-
-### 0.0.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.8
 
 ## `@backstage/plugin-techdocs` (1.17.7 → 1.17.8)
 
@@ -2057,59 +388,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 - b8db4fe: The TechDocs plugin now adds the Documentation result type to the Search page when it is installed.
 - 65c7f98: Fixed duplicate React key warnings when documentation entities share a name across different namespaces or kinds.
 - 9459c14: Fixed TechDocs pages sometimes rendering blank due to sanitizer hooks registered by other plugins.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/plugin-techdocs-react@1.3.13
-  - @backstage/catalog-client@1.16.1
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/integration-react@1.2.20
-  - @backstage/plugin-auth-react@0.1.29
-  - @backstage/plugin-search-react@1.11.6
-
-## `@backstage/plugin-techdocs-addons-test-utils` (2.0.6 → 2.0.7)
-
-### 2.0.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog@2.0.7
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/plugin-techdocs@1.17.8
-  - @backstage/core-app-api@1.20.3
-  - @backstage/plugin-techdocs-react@1.3.13
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/integration-react@1.2.20
-  - @backstage/test-utils@1.7.20
-  - @backstage/plugin-search-react@1.11.6
-
-## `@backstage/plugin-techdocs-backend` (2.2.1 → 2.2.2)
-
-### 2.2.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-techdocs-node@1.15.2
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/catalog-client@1.16.1
-  - @backstage/plugin-catalog-node@2.2.3
-
-## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.37 → 1.1.38)
-
-### 1.1.38
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/core-components@0.18.12
-  - @backstage/plugin-techdocs-react@1.3.13
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/integration-react@1.2.20
 
 ## `@backstage/plugin-techdocs-node` (1.15.1 → 1.15.2)
 
@@ -2118,8 +396,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 120e7c3: chore(deps): bump `js-yaml` from 4.1.1 to 4.2.0
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.9.3
 
 ## `@backstage/plugin-techdocs-react` (1.3.12 → 1.3.13)
 
@@ -2128,36 +404,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 0b02d4c: Fixed the TechDocs reader requesting the documentation metadata in a tight loop when the request fails permanently (for example when the metadata returns a 404). The reader now stops after a failed request, which previously flooded the backend with requests and caused the page to flicker.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/core-components@0.18.12
-  - @backstage/core-plugin-api@1.12.8
-
-## `@backstage/plugin-user-settings` (0.9.4 → 0.9.5)
-
-### 0.9.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/ui@0.17.0
-  - @backstage/plugin-catalog-react@3.2.0
-  - @backstage/core-components@0.18.12
-  - @backstage/core-app-api@1.20.3
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-signals-react@0.0.24
-
-## `@backstage/plugin-user-settings-backend` (0.4.4 → 0.4.5)
-
-### 0.4.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.7.3
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/plugin-signals-node@0.2.3
 
 ## `@backstage/repo-tools` (0.17.3 → 0.18.0)
 
@@ -2178,22 +424,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 #### Patch Changes
 
 - 120e7c3: chore(deps): bump `js-yaml` from 4.1.1 to 4.2.0
-- Updated dependencies
-  - @backstage/config-loader@1.11.0
-  - @backstage/cli-common@0.3.0
-  - @backstage/backend-plugin-api@1.9.3
-  - @backstage/cli-node@0.3.4
-
-## `@backstage/test-utils` (1.7.19 → 1.7.20)
-
-### 1.7.20
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-app-api@1.20.3
-  - @backstage/core-plugin-api@1.12.8
-  - @backstage/plugin-permission-react@0.5.3
 
 ## `@backstage/ui` (0.16.0 → 0.17.0)
 
@@ -2220,17 +450,6 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - 066c7ac: Added a new `TextAreaField` component for multi-line text input, following the same conventions as `TextField` with support for a label, secondary label, and description.
 
-## `@techdocs/cli` (1.11.1 → 1.11.2)
-
-### 1.11.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-defaults@0.17.5
-  - @backstage/plugin-techdocs-node@1.15.2
-  - @backstage/cli-common@0.3.0
-
 ## `@backstage/plugin-app-module-user-settings` (new, 0.1.0)
 
 ### 0.1.0
@@ -2239,9 +458,4 @@ Changes between 1.52.1 and 1.53.0 — 185 changed and 1 added packages.
 
 - c8a06d5: Added new frontend module that provides database-backed user settings storage. When installed, it overrides the default browser local storage with the user settings backend, enabling settings to persist across devices and sessions.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.17.3
-  - @backstage/plugin-signals-react@0.0.24
-  - @backstage/plugin-user-settings@0.9.5
+_Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-app-api`, `@backstage/backend-dynamic-feature-service`, `@backstage/backend-plugin-api`, `@backstage/catalog-client`, `@backstage/cli-defaults`, `@backstage/cli-module-actions`, `@backstage/cli-module-auth`, `@backstage/cli-module-config`, `@backstage/cli-module-github`, `@backstage/cli-module-info`, `@backstage/cli-module-lint`, `@backstage/cli-module-maintenance`, `@backstage/cli-module-test-jest`, `@backstage/cli-module-translations`, `@backstage/cli-node`, `@backstage/codemods`, `@backstage/core-compat-api`, `@backstage/core-plugin-api`, `@backstage/dev-utils`, `@backstage/frontend-defaults`, `@backstage/frontend-dev-utils`, `@backstage/frontend-test-utils`, `@backstage/integration-react`, `@backstage/plugin-api-docs`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-app-react`, `@backstage/plugin-app-visualizer`, `@backstage/plugin-auth`, `@backstage/plugin-auth-backend-module-atlassian-provider`, `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-cloudflare-access-provider`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-oidc-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-auth-backend-module-openshift-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-catalog-backend-module-ai-model`, `@backstage/plugin-catalog-backend-module-aws`, `@backstage/plugin-catalog-backend-module-azure`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-gitea`, `@backstage/plugin-catalog-backend-module-github`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-incremental-ingestion`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-msgraph-incremental`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-catalog-import`, `@backstage/plugin-catalog-node`, `@backstage/plugin-catalog-unprocessed-entities`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools`, `@backstage/plugin-devtools-backend`, `@backstage/plugin-devtools-react`, `@backstage/plugin-events-backend`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-module-google-pubsub`, `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-home-react`, `@backstage/plugin-kubernetes`, `@backstage/plugin-kubernetes-backend`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-kubernetes-node`, `@backstage/plugin-mui-to-bui`, `@backstage/plugin-notifications-backend`, `@backstage/plugin-notifications-backend-module-email`, `@backstage/plugin-notifications-backend-module-slack`, `@backstage/plugin-org-react`, `@backstage/plugin-permission-backend`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-node`, `@backstage/plugin-permission-react`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-github`, `@backstage/plugin-scaffolder-backend-module-gitlab`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-scaffolder-node-test-utils`, `@backstage/plugin-scaffolder-react`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-elasticsearch`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-react`, `@backstage/plugin-signals`, `@backstage/plugin-signals-backend`, `@backstage/plugin-signals-node`, `@backstage/plugin-signals-react`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-backend`, `@backstage/plugin-techdocs-module-addons-contrib`, `@backstage/plugin-user-settings`, `@backstage/plugin-user-settings-backend`, `@backstage/test-utils`, `@techdocs/cli`._

@@ -13,12 +13,3 @@ _No changelog entries found._
 #### Patch Changes
 
 - a70377d: Added events support for `GitlabDiscoveryEntityProvider` and `GitlabOrgDiscoveryEntityProvider`.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.12.0
-  - @backstage/catalog-model@1.5.0
-  - @backstage/backend-common@0.22.0
-  - @backstage/backend-plugin-api@0.6.18
-  - @backstage/backend-tasks@0.5.23
-  - @backstage/plugin-events-node@0.3.4
-  - @backstage/integration@1.11.0
-  - @backstage/plugin-catalog-common@1.0.23

@@ -21,26 +21,6 @@ Changes between 1.31.3 and 1.31.4 — 19 changed and 0 added packages.
 - 4c89e47: Allow passing an async module loader in the `DynamicPluginsFeatureLoaderOptions`.
 - 094eaa3: Remove references to in-repo backend-common
 - 2f88f88: Updated backend installation instructions.
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/cli-node@0.2.9
-  - @backstage/backend-app-api@1.0.1
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-search-backend-node@1.3.3
-  - @backstage/plugin-catalog-backend@1.27.0
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/plugin-events-backend@0.3.13
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/cli-common@0.1.14
-  - @backstage/config@1.2.0
-  - @backstage/config-loader@1.9.1
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-app-node@0.1.26
-  - @backstage/plugin-permission-common@0.8.1
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-scaffolder-backend` (1.25.0 → 1.25.1)
 
@@ -53,41 +33,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - b06aa48: Updated dependency `azure-devops-node-api` to `^14.0.0`.
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.0 → 0.3.1)
-
-### 0.3.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-server@0.2.1
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-cloud@0.2.1
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-bitbucket-cloud-common@0.2.24
 
 ## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.0 → 0.2.1)
 
@@ -97,12 +42,6 @@ _No changelog entries found._
 
 - db54c57: Add `reviewers` input parameter to `publish:bitbucketServer:pull-request`
 - 66a6b45: Use protocol from Bitbucket Server apiBaseUrl config parameter instead of hard-coded https
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.0 → 0.3.1)
 
@@ -113,12 +52,6 @@ _No changelog entries found._
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
 - 720a2f9: Updated dependency `git-url-parse` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.0 → 0.3.1)
 
@@ -128,53 +61,6 @@ _No changelog entries found._
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-scaffolder-backend-module-gcp` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-scaffolder-backend-module-gitea` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-github` (0.5.0 → 0.5.1)
 
@@ -200,14 +86,6 @@ _No changelog entries found._
   ```
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.5.0 → 0.5.1)
 
@@ -220,11 +98,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/plugin-notifications-node@0.2.7
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/plugin-notifications-common@0.0.5
 
 ## `@backstage/plugin-scaffolder-backend-module-rails` (0.5.0 → 0.5.1)
 
@@ -234,13 +107,6 @@ _No changelog entries found._
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-scaffolder-backend-module-sentry` (0.2.0 → 0.2.1)
 
@@ -249,11 +115,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.0 → 0.4.1)
 
@@ -263,11 +124,6 @@ _No changelog entries found._
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/plugin-scaffolder-node-test-utils@0.1.13
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-scaffolder-node` (0.4.11 → 0.4.12)
 
@@ -281,7 +137,5 @@ _No changelog entries found._
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/backend-test-utils@1.0.1
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/types@1.1.1
+
+_Excluded dependency updates for packages: `@backstage/plugin-scaffolder-backend-module-bitbucket`, `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`._

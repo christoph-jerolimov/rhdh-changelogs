@@ -2,19 +2,6 @@
 
 Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
-## `@backstage/app-defaults` (1.2.0 → 1.2.1)
-
-### 1.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/core-app-api@1.6.0
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-permission-react@0.4.11
-
 ## `@backstage/backend-app-api` (0.4.0 → 0.4.1)
 
 ### 0.4.1
@@ -24,17 +11,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 482dae5de1c: Updated link to docs.
 - 915e46622cf: Add support for `NotImplementedError`, properly returning 501 as status code.
-- Updated dependencies
-  - @backstage/plugin-permission-node@0.7.6
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/config-loader@1.1.9
-  - @backstage/cli-common@0.1.12
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/backend-common` (0.18.2 → 0.18.3)
 
@@ -63,17 +39,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 87f0bbec175: AwsS3UrlReader upgraded to use aws-sdk v3
 - c1ee073a82b: Added `lastModifiedAt` field on `UrlReaderService` responses and a `lastModifiedAfter` option to `UrlReaderService.readUrl`.
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/backend-app-api@0.4.1
-  - @backstage/config-loader@1.1.9
-  - @backstage/integration@1.4.3
-  - @backstage/backend-dev-utils@0.1.1
-  - @backstage/cli-common@0.1.12
-  - @backstage/config@1.0.7
-  - @backstage/integration-aws-node@0.1.2
-  - @backstage/types@1.0.2
 
 ## `@backstage/backend-defaults` (0.1.7 → 0.1.8)
 
@@ -84,10 +49,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 482dae5de1c: Updated link to docs.
 - 5d0693edc09: Added a workaround for the cyclic dependency bug across `@backstage/backend-common` and `@backstage/backend-app-api`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/backend-app-api@0.4.1
 
 ## `@backstage/backend-dev-utils` (0.1.0 → 0.1.1)
 
@@ -109,12 +70,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/backend-tasks` (0.4.3 → 0.5.0)
 
@@ -128,11 +83,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - f0685193efa: Added the adapted query to mysql and sqlite3 databases to not returning warning on logs
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/backend-test-utils` (0.1.34 → 0.1.35)
 
@@ -143,13 +93,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/backend-app-api@0.4.1
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/catalog-client` (1.3.1 → 1.4.0)
 
@@ -163,9 +106,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - c630360631f: Ensure that `getEntitiesByRefs` returns `undefined` instead of `null` for missing items
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
 
 ## `@backstage/catalog-model` (1.2.0 → 1.2.1)
 
@@ -174,10 +114,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/cli` (0.22.3 → 0.22.4)
 
@@ -196,14 +132,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - a11b9a23f5a: Keep custom exports entry points in package.json
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/eslint-plugin@0.1.2
-  - @backstage/errors@1.1.5
-  - @backstage/config-loader@1.1.9
-  - @backstage/release-manifests@0.0.9
-  - @backstage/cli-common@0.1.12
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/cli-common` (0.1.11 → 0.1.12)
 
@@ -220,8 +148,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/cli-common@0.1.12
 
 ## `@backstage/config` (1.0.6 → 1.0.7)
 
@@ -230,8 +156,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/types@1.0.2
 
 ## `@backstage/config-loader` (1.1.8 → 1.1.9)
 
@@ -241,11 +165,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/cli-common@0.1.12
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/core-app-api` (1.5.0 → 1.6.0)
 
@@ -271,11 +190,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
 
 ## `@backstage/core-components` (0.12.4 → 0.12.5)
 
@@ -292,12 +206,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - e1aae2f5a0c: Updated the `aria-label` of the `HeaderTabs` component.
 - 6a51a49a810: Fix bug where `<Table />` component would not take into account header styles defined in `columns[*].headerStyle`.
 - fa004f66871: Use media queries to change layout instead of `isMobile` prop in `BackstagePage` component
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/version-bridge@1.0.3
 
 ## `@backstage/core-plugin-api` (1.4.0 → 1.5.0)
 
@@ -311,10 +219,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
 
 ## `@backstage/create-app` (0.4.37 → 0.4.38)
 
@@ -326,8 +230,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 0eceadb9502: Bumped create-app version.
 - 482dae5de1c: Updated link to docs.
 - 6ace2dd2c58: Added to the template `packages/app/.eslintignore` file to packages to ignore the contents of `packages/app/public`.
-- Updated dependencies
-  - @backstage/cli-common@0.1.12
 
 ## `@backstage/dev-utils` (1.0.12 → 1.0.13)
 
@@ -336,16 +238,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/test-utils@1.2.6
-  - @backstage/core-app-api@1.6.0
-  - @backstage/integration-react@1.1.11
-  - @backstage/theme@0.2.18
-  - @backstage/app-defaults@1.2.1
 
 ## `@backstage/errors` (1.1.4 → 1.1.5)
 
@@ -354,8 +246,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 3bf83a2aabf: Added `NotImplementedError`, which can be used when the server does not recognize the request method and is incapable of supporting it for any resource.
-- Updated dependencies
-  - @backstage/types@1.0.2
 
 ## `@backstage/eslint-plugin` (0.1.1 → 0.1.2)
 
@@ -372,19 +262,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
-
-## `@backstage/integration-aws-node` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
 
 ## `@backstage/integration-react` (1.1.10 → 1.1.11)
 
@@ -393,12 +270,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-adr` (0.4.0 → 0.4.1)
 
@@ -408,16 +279,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - d293f4aaf83: Updated readme instructions
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/plugin-search-react@1.5.1
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration-react@1.1.11
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-adr-common@0.2.7
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-adr-backend` (0.3.0 → 0.3.1)
 
@@ -428,26 +289,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 2a73ded3861: Support MADR v3 format
 - 8bf24946c66: Adjust express dependencies to be the same as the rest of the project
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/plugin-adr-common@0.2.7
-  - @backstage/plugin-search-common@1.2.2
-
-## `@backstage/plugin-adr-common` (0.2.6 → 0.2.7)
-
-### 0.2.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-airbrake` (0.3.15 → 0.3.16)
 
@@ -456,14 +297,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/test-utils@1.2.6
-  - @backstage/dev-utils@1.0.13
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-airbrake-backend` (0.2.15 → 0.2.16)
 
@@ -472,9 +305,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-allure` (0.1.31 → 0.1.32)
 
@@ -483,12 +313,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-analytics-module-ga` (0.1.26 → 0.1.27)
 
@@ -497,11 +321,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-apache-airflow` (0.2.8 → 0.2.9)
 
@@ -510,9 +329,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
 
 ## `@backstage/plugin-api-docs` (0.9.0 → 0.9.1)
 
@@ -524,13 +340,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 8bc7dcec820: Fix dark theme Swagger's clear button font color.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 9820eb5d24f: Add a `columns` prop to certain components that use the `EntityTable` for easier extensibility.
-- Updated dependencies
-  - @backstage/plugin-catalog@1.9.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-apollo-explorer` (0.1.8 → 0.1.9)
 
@@ -539,10 +348,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-app-backend` (0.3.42 → 0.3.43)
 
@@ -552,12 +357,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/config-loader@1.1.9
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-auth-backend` (0.18.0 → 0.18.1)
 
@@ -569,14 +368,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 86cece2c1fb: Updated dependency `@types/passport-microsoft` to `^1.0.0`.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 529de8c4211: Added authentication provider for Azure Easy Authentication.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-auth-node` (0.2.11 → 0.2.12)
 
@@ -586,10 +377,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 65454876fb2: Minor API report tweaks
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-azure-devops` (0.2.6 → 0.2.7)
 
@@ -598,14 +385,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-azure-devops-common@0.3.0
 
 ## `@backstage/plugin-azure-devops-backend` (0.3.21 → 0.3.22)
 
@@ -614,10 +393,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/config@1.0.7
-  - @backstage/plugin-azure-devops-common@0.3.0
 
 ## `@backstage/plugin-azure-sites` (0.1.4 → 0.1.5)
 
@@ -627,13 +402,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-azure-sites-common@0.1.0
 
 ## `@backstage/plugin-azure-sites-backend` (0.1.4 → 0.1.5)
 
@@ -642,10 +410,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/config@1.0.7
-  - @backstage/plugin-azure-sites-common@0.1.0
 
 ## `@backstage/plugin-badges` (0.2.39 → 0.2.40)
 
@@ -654,56 +418,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
-
-## `@backstage/plugin-badges-backend` (0.1.36 → 0.1.37)
-
-### 0.1.37
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-
-## `@backstage/plugin-bazaar` (0.2.5 → 0.2.6)
-
-### 0.2.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog@1.9.0
-  - @backstage/catalog-client@1.4.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/cli@0.22.4
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
-
-## `@backstage/plugin-bazaar-backend` (0.2.5 → 0.2.6)
-
-### 0.2.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-bitbucket-cloud-common` (0.2.3 → 0.2.4)
 
@@ -712,8 +426,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/integration@1.4.3
 
 ## `@backstage/plugin-bitrise` (0.1.42 → 0.1.43)
 
@@ -722,12 +434,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-catalog` (1.8.0 → 1.9.0)
 
@@ -766,19 +472,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - dbbde6ed353: fix entity switch rendering when there is no default case
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/plugin-search-react@1.5.1
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/integration-react@1.1.11
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-catalog-backend` (1.7.2 → 1.8.0)
 
@@ -820,21 +513,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - f093ce83d58: Fix a bug where the batch fetch by ref endpoint did not work in conjunction with filtering (e.g. if authorization was enabled).
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/plugin-permission-node@0.7.6
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/integration@1.4.3
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-scaffolder-common@1.2.6
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-catalog-backend-module-aws` (0.1.16 → 0.1.17)
 
@@ -847,18 +525,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 87f0bbec175: AwsS3UrlReader upgraded to use aws-sdk v3
 - bf611cf019a: Fix missing `dependencies` in `package.json`
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-kubernetes-common@0.6.1
 
 ## `@backstage/plugin-catalog-backend-module-azure` (0.1.13 → 0.1.14)
 
@@ -872,16 +538,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket` (0.2.9 → 0.2.10)
 
@@ -891,15 +547,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/plugin-bitbucket-cloud-common@0.2.4
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.9 → 0.1.10)
 
@@ -911,18 +558,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/plugin-events-node@0.2.4
-  - @backstage/integration@1.4.3
-  - @backstage/plugin-bitbucket-cloud-common@0.2.4
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.7 → 0.1.8)
 
@@ -934,15 +569,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-catalog-backend-module-gerrit` (0.1.10 → 0.1.11)
 
@@ -954,15 +580,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-catalog-backend-module-github` (0.2.5 → 0.2.6)
 
@@ -975,20 +592,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.8.0
-  - @backstage/catalog-client@1.4.0
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/plugin-events-node@0.2.4
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-backend-module-gitlab` (0.1.13 → 0.1.14)
 
@@ -1004,16 +607,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
   It will be reused in future release to enforce a concrete branch to be used in catalog file discovery.
   To migrate to the new configuration value, rename `branch` to `fallbackBranch`.
 - be129f8f3cd: filter gitlab groups by prefix
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.2.1 → 0.3.0)
 
@@ -1030,17 +623,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - bf611cf019a: Fix missing `dependencies` in `package.json`
 - 6e612b58577: Move `@backstage/backend-defaults` to `devDependencies`
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.8.0
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-events-node@0.2.4
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-catalog-backend-module-ldap` (0.5.9 → 0.5.10)
 
@@ -1049,13 +631,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-backend-module-msgraph` (0.5.1 → 0.5.2)
 
@@ -1070,28 +645,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 2c234a89325: properly support custom graph api URL
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-
-## `@backstage/plugin-catalog-backend-module-openapi` (0.1.8 → 0.1.9)
-
-### 0.1.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.8.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-common` (1.0.11 → 1.0.12)
 
@@ -1100,24 +653,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/plugin-search-common@1.2.2
-
-## `@backstage/plugin-catalog-graph` (0.2.27 → 0.2.28)
-
-### 0.2.28
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-catalog-graphql` (0.3.18 → 0.3.19)
 
@@ -1130,10 +665,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
   Updated dependency `@graphql-codegen/typescript` to `^3.0.0`.
   Updated dependency `@graphql-codegen/typescript-resolvers` to `^3.0.0`.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-import` (0.9.5 → 0.9.6)
 
@@ -1142,17 +673,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/integration-react@1.1.11
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-catalog-node` (1.3.3 → 1.3.4)
 
@@ -1162,13 +682,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - e675f902980: Added `locationSpecToMetadataName` and `locationSpecToLocationEntity` as their new home, moved over from the backend package where they now are marked as deprecated.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-catalog-react` (1.3.0 → 1.4.0)
 
@@ -1183,41 +696,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 65454876fb2: Minor API report tweaks
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 24916d23494: Do not close `Autocomplete` powered multiple-selection filters when checking boxes
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/core-components@0.12.5
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/integration@1.4.3
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
-  - @backstage/plugin-permission-react@0.4.11
-
-## `@backstage/plugin-cicd-statistics` (0.1.17 → 0.1.18)
-
-### 0.1.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-
-## `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-cicd-statistics@0.1.18
 
 ## `@backstage/plugin-circleci` (0.3.15 → 0.3.16)
 
@@ -1227,12 +705,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-cloudbuild` (0.3.15 → 0.3.16)
 
@@ -1241,12 +713,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-code-climate` (0.1.15 → 0.1.16)
 
@@ -1256,12 +722,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-code-coverage` (0.2.8 → 0.2.9)
 
@@ -1271,14 +731,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-code-coverage-backend` (0.2.8 → 0.2.9)
 
@@ -1287,13 +739,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-codescene` (0.1.10 → 0.1.11)
 
@@ -1302,12 +747,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-config-schema` (0.1.38 → 0.1.39)
 
@@ -1316,13 +755,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-cost-insights` (0.12.4 → 0.12.5)
 
@@ -1332,14 +764,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-cost-insights-common@0.1.1
 
 ## `@backstage/plugin-dynatrace` (2.0.0 → 3.0.0)
 
@@ -1348,12 +772,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-entity-feedback` (0.1.0 → 0.1.1)
 
@@ -1362,14 +780,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-entity-feedback-common@0.1.0
 
 ## `@backstage/plugin-entity-feedback-backend` (0.1.0 → 0.1.1)
 
@@ -1378,13 +788,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/plugin-entity-feedback-common@0.1.0
 
 ## `@backstage/plugin-entity-validation` (0.1.0 → 0.1.1)
 
@@ -1395,15 +798,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 47d246691ac: Fixed bug in EntityVaidation plugin where string in text box was unable to be updated.
 - c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-events-backend` (0.2.3 → 0.2.4)
 
@@ -1413,11 +807,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - a5de745ac17: Updated README instructions
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/plugin-events-node@0.2.4
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-events-backend-module-aws-sqs` (0.1.4 → 0.1.5)
 
@@ -1427,13 +816,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - a5de745ac17: Renamed `awsSqsConsumingEventPublisherEventsModule` to `eventsModuleAwsSqsConsumingEventPublisher` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/plugin-events-node@0.2.4
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-events-backend-module-azure` (0.1.4 → 0.1.5)
 
@@ -1443,9 +825,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - a5de745ac17: Renamed `azureDevOpsEventRouterEventsModule` to `eventsModuleAzureDevOpsEventRouter` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/plugin-events-node@0.2.4
 
 ## `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.1.4 → 0.1.5)
 
@@ -1455,9 +834,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - a5de745ac17: Renamed `bitbucketCloudEventRouterEventsModule` to `eventsModuleBitbucketCloudEventRouter` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/plugin-events-node@0.2.4
 
 ## `@backstage/plugin-events-backend-module-gerrit` (0.1.4 → 0.1.5)
 
@@ -1467,9 +843,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - a5de745ac17: Renamed `gerritEventRouterEventsModule` to `eventsModuleGerritEventRouter` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/plugin-events-node@0.2.4
 
 ## `@backstage/plugin-events-backend-module-github` (0.1.4 → 0.1.5)
 
@@ -1479,10 +852,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - a5de745ac17: Renamed `githubEventRouterEventsModule` to `eventsModuleGithubEventRouter` and `githubWebhookEventsModule` to `eventsModuleGithubWebhook`, to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/plugin-events-node@0.2.4
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-events-backend-module-gitlab` (0.1.4 → 0.1.5)
 
@@ -1492,19 +861,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - a5de745ac17: Renamed `gitlabEventRouterEventsModule` to `eventsModuleGitlabEventRouter` and `gitlabWebhookEventsModule` to `eventsModuleGitlabWebhook` to match the [recommended naming patterns](https://backstage.io/docs/backend-system/architecture/naming-patterns).
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/plugin-events-node@0.2.4
-  - @backstage/config@1.0.7
-
-## `@backstage/plugin-events-backend-test-utils` (0.1.4 → 0.1.5)
-
-### 0.1.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-events-node@0.2.4
 
 ## `@backstage/plugin-events-node` (0.2.3 → 0.2.4)
 
@@ -1513,8 +869,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.5.0
 
 ## `@backstage/plugin-explore` (0.4.0 → 0.4.1)
 
@@ -1527,17 +881,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 3f75b7607ca: Add ability to pass icon as function to have ability to customize it by search item
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/plugin-search-react@1.5.1
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-explore-react@0.0.27
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-explore-common@0.0.1
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-explore-backend` (0.0.4 → 0.0.5)
 
@@ -1546,11 +889,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/config@1.0.7
-  - @backstage/plugin-explore-common@0.0.1
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-explore-react` (0.0.26 → 0.0.27)
 
@@ -1559,9 +897,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/plugin-explore-common@0.0.1
 
 ## `@backstage/plugin-firehydrant` (0.1.32 → 0.2.0)
 
@@ -1575,12 +910,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-fossa` (0.2.47 → 0.2.48)
 
@@ -1589,13 +918,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-gcalendar` (0.3.11 → 0.3.12)
 
@@ -1605,11 +927,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-gcp-projects` (0.3.34 → 0.3.35)
 
@@ -1618,10 +935,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-git-release-manager` (0.3.28 → 0.3.29)
 
@@ -1631,11 +944,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/integration@1.4.3
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-github-actions` (0.5.15 → 0.5.16)
 
@@ -1644,13 +952,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-github-deployments` (0.1.46 → 0.1.47)
 
@@ -1659,15 +960,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration-react@1.1.11
-  - @backstage/integration@1.4.3
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-github-issues` (0.2.4 → 0.2.5)
 
@@ -1676,14 +968,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-github-pull-requests-board` (0.1.9 → 0.1.10)
 
@@ -1692,13 +976,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-gitops-profiles` (0.3.33 → 0.3.34)
 
@@ -1707,10 +984,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-gocd` (0.1.21 → 0.1.22)
 
@@ -1719,13 +992,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-graphiql` (0.2.47 → 0.2.48)
 
@@ -1734,10 +1000,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-graphql-backend` (0.1.32 → 0.1.33)
 
@@ -1746,10 +1008,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/plugin-catalog-graphql@0.3.19
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-graphql-voyager` (0.1.0 → 0.1.1)
 
@@ -1758,10 +1016,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-home` (0.4.31 → 0.4.32)
 
@@ -1770,13 +1024,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-ilert` (0.2.4 → 0.2.5)
 
@@ -1786,13 +1033,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-jenkins` (0.7.14 → 0.7.15)
 
@@ -1802,14 +1042,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-jenkins-common@0.1.14
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-jenkins-backend` (0.1.32 → 0.1.33)
 
@@ -1818,15 +1050,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-jenkins-common@0.1.14
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-jenkins-common` (0.1.13 → 0.1.14)
 
@@ -1835,9 +1058,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
-- Updated dependencies
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/plugin-permission-common@0.7.4
 
 ## `@backstage/plugin-kafka` (0.3.15 → 0.3.16)
 
@@ -1846,26 +1066,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-
-## `@backstage/plugin-kafka-backend` (0.2.35 → 0.2.36)
-
-### 0.2.36
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-kubernetes` (0.7.8 → 0.7.9)
 
@@ -1876,14 +1076,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 8adeb19b37d: GitLab can now be used as an `oidcTokenProvider` for Kubernetes clusters
 - c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-kubernetes-common@0.6.1
 
 ## `@backstage/plugin-kubernetes-backend` (0.9.3 → 0.9.4)
 
@@ -1892,23 +1084,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/plugin-kubernetes-common@0.6.1
-
-## `@backstage/plugin-kubernetes-common` (0.6.0 → 0.6.1)
-
-### 0.6.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.2.1
 
 ## `@backstage/plugin-lighthouse` (0.4.0 → 0.4.1)
 
@@ -1917,14 +1092,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-lighthouse-common@0.1.1
 
 ## `@backstage/plugin-lighthouse-backend` (0.1.0 → 0.1.1)
 
@@ -1933,23 +1100,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 46829bc2f0e: Update README.md; typo with plugin name & removed unneeded "import { Router } from 'express';"
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-lighthouse-common@0.1.1
-
-## `@backstage/plugin-lighthouse-common` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-linguist` (0.1.0 → 0.1.1)
 
@@ -1959,14 +1109,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - ab997ce243f: Updated `README.md` to removed images with refresh button as this feature was not implemented in the current version
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-linguist-common@0.1.0
 
 ## `@backstage/plugin-linguist-backend` (0.1.0 → 0.2.0)
 
@@ -1987,17 +1129,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
   return createRouter({ schedule: schedule, kind: ['Component'] }, { ...env });
   ```
 
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-linguist-common@0.1.0
-
 ## `@backstage/plugin-microsoft-calendar` (0.1.0 → 0.1.1)
 
 ### 0.1.1
@@ -2006,11 +1137,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-newrelic` (0.3.33 → 0.3.34)
 
@@ -2020,10 +1146,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 66fdf05a1ef: Updated installation instructions
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-newrelic-dashboard` (0.2.8 → 0.2.9)
 
@@ -2032,12 +1154,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - cb8ec97cdeb: Change black & white colors to be theme aware
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
 
 ## `@backstage/plugin-org` (0.6.5 → 0.6.6)
 
@@ -2049,12 +1165,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 36bccb5252f: Fix small UI-glitch in MemberListCard
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - a06fcac4040: Add styling to the `MembersListCard` and `ComponentsGrid` to handle overflow text.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-org-react` (0.1.4 → 0.1.5)
 
@@ -2063,13 +1173,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-pagerduty` (0.5.8 → 0.5.9)
 
@@ -2079,13 +1182,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 9c08ecbaa4b: Update readme link for discord channel
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-periskop` (0.1.13 → 0.1.14)
 
@@ -2094,13 +1190,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-periskop-backend` (0.1.13 → 0.1.14)
 
@@ -2109,10 +1198,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-permission-backend` (0.5.17 → 0.5.18)
 
@@ -2121,13 +1206,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/plugin-permission-node@0.7.6
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-permission-common` (0.7.3 → 0.7.4)
 
@@ -2136,10 +1214,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-permission-node` (0.7.5 → 0.7.6)
 
@@ -2151,23 +1225,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 37e9215c793: Update the service-to-service auth docs URL in error message.
   ``
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
-
-## `@backstage/plugin-permission-react` (0.4.10 → 0.4.11)
-
-### 0.4.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-playlist` (0.1.6 → 0.1.7)
 
@@ -2178,18 +1235,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - c10384a9235: Switch to using `LinkButton` instead of the deprecated `Button`
 - 122a37a880e: Internal update to work with newer versions of react-router
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/plugin-search-react@1.5.1
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-permission-react@0.4.11
-  - @backstage/plugin-playlist-common@0.1.5
 
 ## `@backstage/plugin-playlist-backend` (0.2.5 → 0.2.6)
 
@@ -2198,25 +1243,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/plugin-permission-node@0.7.6
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
-  - @backstage/plugin-playlist-common@0.1.5
-
-## `@backstage/plugin-playlist-common` (0.1.4 → 0.1.5)
-
-### 0.1.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.4
 
 ## `@backstage/plugin-proxy-backend` (0.2.36 → 0.2.37)
 
@@ -2239,10 +1265,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
   ```
 
 - 4acd93dae1d: Ensure that `@backstage/plugin-proxy-backend` logs the requests that it proxies when log level is set to `debug`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-rollbar` (0.4.15 → 0.4.16)
 
@@ -2251,12 +1273,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-rollbar-backend` (0.1.39 → 0.1.40)
 
@@ -2265,9 +1281,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-scaffolder` (1.11.0 → 1.12.0)
 
@@ -2289,22 +1302,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 0aae4596296: Fix the scaffolder validator for arrays when the item is a field in the object
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-scaffolder-react@1.2.0
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/integration-react@1.1.11
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
-  - @backstage/plugin-permission-react@0.4.11
-  - @backstage/plugin-scaffolder-common@1.2.6
 
 ## `@backstage/plugin-scaffolder-backend` (1.11.0 → 1.12.0)
 
@@ -2323,21 +1320,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 7af12854970: Extended scaffolder action `catalog:fetch` to fetch multiple catalog entities by entity references.
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.8.0
-  - @backstage/catalog-client@1.4.0
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-scaffolder-common@1.2.6
-  - @backstage/plugin-scaffolder-node@0.1.1
 
 ## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.17 → 0.2.18)
 
@@ -2347,73 +1329,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 62414770ead: allow container runner to be undefined in cookiecutter plugin
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend@1.12.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-scaffolder-node@0.1.1
-
-## `@backstage/plugin-scaffolder-backend-module-rails` (0.4.10 → 0.4.11)
-
-### 0.4.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend@1.12.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-scaffolder-node@0.1.1
-
-## `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.2 → 0.1.3)
-
-### 0.1.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
-  - @backstage/plugin-scaffolder-node@0.1.1
-
-## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.15 → 0.2.16)
-
-### 0.2.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-scaffolder-node@0.1.1
-
-## `@backstage/plugin-scaffolder-common` (1.2.5 → 1.2.6)
-
-### 1.2.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.2.1
-  - @backstage/types@1.0.2
-
-## `@backstage/plugin-scaffolder-node` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/types@1.0.2
-  - @backstage/plugin-scaffolder-common@1.2.6
 
 ## `@backstage/plugin-scaffolder-react` (1.1.0 → 1.2.0)
 
@@ -2434,17 +1349,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - cc418d652a7: scaffolder/next: Added the ability to get the fields definition in the schema in the validation function
 - d4100d0ec42: Fix alignment bug for owners on `TemplateCard`
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
-  - @backstage/plugin-scaffolder-common@1.2.6
 
 ## `@backstage/plugin-search` (1.1.0 → 1.1.1)
 
@@ -2454,35 +1358,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 65454876fb2: Minor API report tweaks
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/plugin-search-react@1.5.1
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
-  - @backstage/plugin-search-common@1.2.2
-
-## `@backstage/plugin-search-backend` (1.2.3 → 1.2.4)
-
-### 1.2.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-node@0.7.6
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-search-backend-node@1.1.4
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-search-backend-module-elasticsearch` (1.1.3 → 1.1.4)
 
@@ -2491,46 +1366,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 65454876fb2: Minor API report tweaks
-- Updated dependencies
-  - @backstage/config@1.0.7
-  - @backstage/plugin-search-backend-node@1.1.4
-  - @backstage/plugin-search-common@1.2.2
-
-## `@backstage/plugin-search-backend-module-pg` (0.5.3 → 0.5.4)
-
-### 0.5.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/config@1.0.7
-  - @backstage/plugin-search-backend-node@1.1.4
-  - @backstage/plugin-search-common@1.2.2
-
-## `@backstage/plugin-search-backend-node` (1.1.3 → 1.1.4)
-
-### 1.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
-  - @backstage/plugin-search-common@1.2.2
-
-## `@backstage/plugin-search-common` (1.2.1 → 1.2.2)
-
-### 1.2.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-search-react` (1.5.0 → 1.5.1)
 
@@ -2540,13 +1375,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 65454876fb2: Minor API report tweaks
 - 553f3c95011: Correctly disable next button in `SearchPagination` on last page
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
-  - @backstage/version-bridge@1.0.3
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-sentry` (0.5.0 → 0.5.1)
 
@@ -2555,12 +1383,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-shortcuts` (0.3.7 → 0.3.8)
 
@@ -2574,11 +1396,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
   Refactored LocalStoredShortcuts client to listen to `storageApi` updates to ensure that local state is always up to date.
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-sonarqube` (0.6.4 → 0.6.5)
 
@@ -2591,13 +1408,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 8ae65a0bc1d: Moved imports from `/alpha` to main public exports.
 - d3d624e8e8d: Show a more appropriate icon if there are no code smells and/or vulnerabilities.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/plugin-sonarqube-react@0.1.4
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-sonarqube-backend` (0.1.7 → 0.1.8)
 
@@ -2606,10 +1416,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-sonarqube-react` (0.1.3 → 0.1.4)
 
@@ -2619,9 +1425,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 8ae65a0bc1d: Moved imports from `/alpha` to main public exports.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
 
 ## `@backstage/plugin-splunk-on-call` (0.4.4 → 0.4.5)
 
@@ -2631,12 +1434,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 65454876fb2: Minor API report tweaks
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-stack-overflow` (0.1.11 → 0.1.12)
 
@@ -2646,14 +1443,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 3ef5fb09ca5: Export api ref and StackOverflowApi type
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-search-react@1.5.1
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/plugin-home@0.4.32
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-stack-overflow-backend` (0.1.11 → 0.1.12)
 
@@ -2662,10 +1451,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/config@1.0.7
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-tech-insights` (0.3.7 → 0.3.8)
 
@@ -2675,15 +1460,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 65454876fb2: Minor API report tweaks
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
-  - @backstage/plugin-tech-insights-common@0.2.10
 
 ## `@backstage/plugin-tech-insights-backend` (0.5.8 → 0.5.9)
 
@@ -2692,16 +1468,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - f244b589163: Add DB index to improve latency of latest fact query
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-tech-insights-common@0.2.10
-  - @backstage/plugin-tech-insights-node@0.4.1
 
 ## `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.26 → 0.1.27)
 
@@ -2710,25 +1476,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 65454876fb2: Minor API report tweaks
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
-  - @backstage/plugin-tech-insights-common@0.2.10
-  - @backstage/plugin-tech-insights-node@0.4.1
-
-## `@backstage/plugin-tech-insights-node` (0.4.0 → 0.4.1)
-
-### 0.4.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
-  - @backstage/plugin-tech-insights-common@0.2.10
 
 ## `@backstage/plugin-tech-radar` (0.6.1 → 0.6.2)
 
@@ -2739,10 +1486,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - e14dcfa4994: Update colors to match Zalando's tech radar, also add coloring on title and legend to match ring color.
 - cb8ec97cdeb: Change black & white colors to be theme aware
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-techdocs` (1.5.0 → 1.6.0)
 
@@ -2762,19 +1505,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 8adfda60ae1: Updated dependency `jss` to `~10.10.0`.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 238cf657c09: Copy to clipboard now works in a not secure context.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-techdocs-react@1.1.4
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/plugin-search-react@1.5.1
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration-react@1.1.11
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-techdocs-addons-test-utils` (1.0.10 → 1.0.11)
 
@@ -2784,17 +1514,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 2b00d8a225c: Fix bug/problem with test helper
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog@1.9.0
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-techdocs-react@1.1.4
-  - @backstage/plugin-search-react@1.5.1
-  - @backstage/plugin-techdocs@1.6.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/test-utils@1.2.6
-  - @backstage/core-app-api@1.6.0
-  - @backstage/integration-react@1.1.11
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-techdocs-backend` (1.5.3 → 1.6.0)
 
@@ -2809,18 +1528,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 40298b02778: Techdocs backend explains a bit more about what might have caused the docs not being found when building techdocs.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/plugin-techdocs-node@1.6.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/plugin-catalog-common@1.0.12
-  - @backstage/integration@1.4.3
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-techdocs-module-addons-contrib` (1.0.10 → 1.0.11)
 
@@ -2830,13 +1537,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 37cf85fb85c: Fixed bug in IssueLink component where the URL was not generated properly when the repository was located inside a Gitlab subgroup
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-techdocs-react@1.1.4
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/integration-react@1.1.11
-  - @backstage/integration@1.4.3
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-techdocs-node` (1.5.0 → 1.6.0)
 
@@ -2851,14 +1551,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 65454876fb2: Minor API report tweaks
 - bf493710f50: Update to a newer version of `@trendyol-js/openstack-swift-sdk`
 - bfe350ef4ce: Fixed bug that prevented deletion of stale files when non-empty directories where tried to be deleted as well.
-- Updated dependencies
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
-  - @backstage/integration-aws-node@0.1.2
-  - @backstage/plugin-search-common@1.2.2
 
 ## `@backstage/plugin-techdocs-react` (1.1.3 → 1.1.4)
 
@@ -2869,12 +1561,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 65454876fb2: Minor API report tweaks
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 8adfda60ae1: Updated dependency `jss` to `~10.10.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/version-bridge@1.0.3
 
 ## `@backstage/plugin-todo` (0.2.17 → 0.2.18)
 
@@ -2883,13 +1569,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-todo-backend` (0.1.39 → 0.1.40)
 
@@ -2899,15 +1578,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 4120513412a: todo-backend is now exposed as a plugin which uses the new plugin system
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/catalog-client@1.4.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/integration@1.4.3
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-user-settings` (0.7.0 → 0.7.1)
 
@@ -2916,28 +1586,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/core-app-api@1.6.0
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
-
-## `@backstage/plugin-user-settings-backend` (0.1.6 → 0.1.7)
-
-### 0.1.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.2.12
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-vault` (0.1.9 → 0.1.10)
 
@@ -2946,13 +1594,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-vault-backend` (0.2.9 → 0.2.10)
 
@@ -2962,11 +1603,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 66b3a3956b8: Ignore the `eslint` error
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/config@1.0.7
 
 ## `@backstage/plugin-xcmetrics` (0.2.35 → 0.2.36)
 
@@ -2975,11 +1611,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
 
 ## `@backstage/release-manifests` (0.0.8 → 0.0.9)
 
@@ -2997,9 +1628,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 32a4a05838c: Tweaked type dependency check to trim wildcard type imports.
 - 6ba8faf22ac: The API report generation process is now able to detect and generate reports for additional entry points declared in the package `"exports"` field.
-- Updated dependencies
-  - @backstage/errors@1.1.5
-  - @backstage/cli-common@0.1.12
 
 ## `@backstage/test-utils` (1.2.5 → 1.2.6)
 
@@ -3010,14 +1638,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 928a12a9b3e: Internal refactor of `/alpha` exports.
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
 - 482dae5de1c: Updated link to docs.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/core-app-api@1.6.0
-  - @backstage/plugin-permission-common@0.7.4
-  - @backstage/config@1.0.7
-  - @backstage/theme@0.2.18
-  - @backstage/types@1.0.2
-  - @backstage/plugin-permission-react@0.4.11
 
 ## `@backstage/theme` (0.2.17 → 0.2.18)
 
@@ -3036,15 +1656,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 - 8e465ce52e2: Running `@techdocs/cli generate` with the `--verbose` flag will now print the mkdocs output.
 - ea2bbef1b16: Added support for an HTTPS proxy for techdocs AWS S3 requests
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-techdocs-node@1.6.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/catalog-model@1.2.1
-  - @backstage/cli-common@0.1.12
-  - @backstage/config@1.0.7
-
 ## `@backstage/plugin-catalog-backend-module-puppetdb` (new, 0.1.0)
 
 ### 0.1.0
@@ -3057,15 +1668,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - 561ce41191d: Added a `catalogModulePuppetDbEntityProvider` alpha export for the new backend system
 - e675f902980: Make sure to not use deprecated exports from `@backstage/plugin-catalog-backend`
-- Updated dependencies
-  - @backstage/backend-tasks@0.5.0
-  - @backstage/backend-common@0.18.3
-  - @backstage/errors@1.1.5
-  - @backstage/plugin-catalog-node@1.3.4
-  - @backstage/backend-plugin-api@0.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/config@1.0.7
-  - @backstage/types@1.0.2
 
 ## `@backstage/plugin-octopus-deploy` (new, 0.1.0)
 
@@ -3079,12 +1681,6 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 
 - cb0fc15a992: Added Octopus Deploy logo
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/plugin-catalog-react@1.4.0
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/catalog-model@1.2.1
-  - @backstage/theme@0.2.18
 
 ## `@backstage/plugin-stackstorm` (new, 0.1.0)
 
@@ -3097,8 +1693,5 @@ Changes between 1.11.1 and 1.12.0 — 188 changed and 3 added packages.
 #### Patch Changes
 
 - 52b0022dab7: Updated dependency `msw` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.12.5
-  - @backstage/errors@1.1.5
-  - @backstage/core-plugin-api@1.5.0
-  - @backstage/theme@0.2.18
+
+_Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/integration-aws-node`, `@backstage/plugin-adr-common`, `@backstage/plugin-badges-backend`, `@backstage/plugin-bazaar`, `@backstage/plugin-bazaar-backend`, `@backstage/plugin-catalog-backend-module-openapi`, `@backstage/plugin-catalog-graph`, `@backstage/plugin-cicd-statistics`, `@backstage/plugin-cicd-statistics-module-gitlab`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-kafka-backend`, `@backstage/plugin-kubernetes-common`, `@backstage/plugin-lighthouse-common`, `@backstage/plugin-permission-react`, `@backstage/plugin-playlist-common`, `@backstage/plugin-scaffolder-backend-module-rails`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-scaffolder-node`, `@backstage/plugin-search-backend`, `@backstage/plugin-search-backend-module-pg`, `@backstage/plugin-search-backend-node`, `@backstage/plugin-search-common`, `@backstage/plugin-tech-insights-node`, `@backstage/plugin-user-settings-backend`._

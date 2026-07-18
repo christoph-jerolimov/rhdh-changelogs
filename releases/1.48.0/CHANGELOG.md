@@ -9,12 +9,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/core-app-api@1.19.5
-  - @backstage/theme@0.7.2
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-permission-react@0.4.40
 
 ## `@backstage/backend-app-api` (1.4.1 → 1.5.0)
 
@@ -27,8 +21,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 6bb2f21: Fixed memory leak by properly cleaning up process event listeners on backend shutdown.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
 
 ## `@backstage/backend-defaults` (0.15.1 → 0.15.2)
 
@@ -42,17 +34,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 5dd683f: `createRateLimitMiddleware` is now exported from `@backstage/backend-defaults/httpRouter`
 - 8dd518a: Support `connection.type: azure` in database client to use Microsoft Entra authentication with Azure database for PostgreSQL
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-app-api@1.5.0
-  - @backstage/integration@1.20.0
-  - @backstage/integration-aws-node@0.1.20
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/backend-dev-utils@0.1.7
-  - @backstage/config-loader@1.10.8
-  - @backstage/cli-node@0.2.18
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-permission-node@0.10.10
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/backend-dev-utils` (0.1.6 → 0.1.7)
 
@@ -71,23 +52,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - fdbd404: Updated `@module-federation/enhanced`, `@module-federation/runtime`, and `@module-federation/sdk` dependencies from `^0.9.0` to `^0.21.6`.
 - 9b4c414: Updated README for backend-dynamic-feature-service
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@3.4.0
-  - @backstage/backend-openapi-utils@0.6.6
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-backend-node@1.4.1
-  - @backstage/backend-defaults@0.15.2
-  - @backstage/plugin-scaffolder-node@0.12.5
-  - @backstage/config-loader@1.10.8
-  - @backstage/plugin-events-backend@0.5.11
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/cli-common@0.1.18
-  - @backstage/cli-node@0.2.18
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-app-node@0.1.42
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/backend-openapi-utils` (0.6.5 → 0.6.6)
 
@@ -96,8 +60,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
 
 ## `@backstage/backend-plugin-api` (1.6.2 → 1.7.0)
 
@@ -114,11 +76,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/cli-common@0.1.18
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
 
 ## `@backstage/backend-test-utils` (1.10.4 → 1.11.0)
 
@@ -134,13 +91,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - 68eb322: Added `@types/jest` as an optional peer dependency, since jest types are exposed in the public API surface.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-app-api@1.5.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/backend-defaults@0.15.2
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/catalog-client` (1.12.1 → 1.13.0)
 
@@ -153,8 +103,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 9cf6762: Improved the `InMemoryCatalogClient` test utility to support ordering, pagination, full-text search, and field projection for entity query methods. Also fixed `getEntityFacets` to correctly handle multi-valued fields.
-- Updated dependencies
-  - @backstage/filter-predicates@0.1.0
 
 ## `@backstage/cli` (0.35.3 → 0.35.4)
 
@@ -176,13 +124,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 122d39c: Completely removed support for the deprecated `app.experimental.packages` configuration. Replace existing usage directly with `app.packages`.
 - 73351c2: Updated dependency `webpack` to `~5.104.0`.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/config-loader@1.10.8
-  - @backstage/eslint-plugin@0.2.1
-  - @backstage/cli-common@0.1.18
-  - @backstage/cli-node@0.2.18
-  - @backstage/module-federation-common@0.1.0
 
 ## `@backstage/cli-common` (0.1.17 → 0.1.18)
 
@@ -201,8 +142,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - 5e3ef57: Added support for the new `peerModules` metadata field in `package.json`. This field allows plugin packages to declare modules that should be installed alongside them for cross-plugin integrations. The field is validated by `backstage-cli repo fix --publish`.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/cli-common@0.1.18
 
 ## `@backstage/codemods` (0.1.53 → 0.1.54)
 
@@ -211,8 +150,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/cli-common@0.1.18
 
 ## `@backstage/config-loader` (1.10.7 → 1.10.8)
 
@@ -221,8 +158,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/cli-common@0.1.18
 
 ## `@backstage/core-app-api` (1.19.4 → 1.19.5)
 
@@ -233,9 +168,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 5a71e7a: Fixed memory leak caused by duplicate `AppThemeSelector` instances and missing cleanup in `AppThemeSelector` and `AppLanguageSelector`. Added `dispose()` method to both selectors for proper resource cleanup.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/core-compat-api` (0.5.7 → 0.5.8)
 
@@ -248,12 +180,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 53b6549: Plugins in the new frontend system now have a `pluginId` field rather than `id` to better align with naming conventions used throughout the frontend and backend systems. The old field is still present but marked as deprecated. All internal code has been updated to prefer `pluginId` while maintaining backward compatibility by falling back to `id` when needed.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/plugin-app-react@0.2.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/core-components` (0.18.6 → 0.18.7)
 
@@ -265,10 +191,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - cebfea7: Removed link styles from LinkButton to avoid styling inconsistencies related to import order.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/theme@0.7.2
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/core-plugin-api` (1.12.2 → 1.12.3)
 
@@ -279,9 +201,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 53b6549: Plugins in the new frontend system now have a `pluginId` field rather than `id` to better align with naming conventions used throughout the frontend and backend systems. The old field is still present but marked as deprecated. All internal code has been updated to prefer `pluginId` while maintaining backward compatibility by falling back to `id` when needed.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/create-app` (0.7.8 → 0.7.9)
 
@@ -295,8 +214,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 65ba820: Updated the app template sidebar to use the new `NavContentBlueprint` API for page-based navigation.
 - 7455dae: Use node prefix on native imports
 - c38b74d: Switched `next-app` template to use blueprint from `@backstage/plugin-app-react`.
-- Updated dependencies
-  - @backstage/cli-common@0.1.18
 
 ## `@backstage/dev-utils` (1.1.19 → 1.1.20)
 
@@ -305,15 +222,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/ui@0.12.0
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/core-app-api@1.19.5
-  - @backstage/theme@0.7.2
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/integration-react@1.2.15
-  - @backstage/app-defaults@1.7.5
 
 ## `@backstage/e2e-test-utils` (0.1.1 → 0.1.2)
 
@@ -367,12 +275,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 09032d7: Internal update to simplify testing utility implementations.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/frontend-defaults@0.4.0
-  - @backstage/core-app-api@1.19.5
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/frontend-defaults` (0.3.6 → 0.4.0)
 
@@ -388,11 +290,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - c38b74d: Dependency update for tests.
 - 53b6549: Plugins in the new frontend system now have a `pluginId` field rather than `id` to better align with naming conventions used throughout the frontend and backend systems. The old field is still present but marked as deprecated. All internal code has been updated to prefer `pluginId` while maintaining backward compatibility by falling back to `id` when needed.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/frontend-app-api@0.15.0
-  - @backstage/core-components@0.18.7
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/plugin-app@0.4.0
 
 ## `@backstage/frontend-dynamic-feature-loader` (0.1.8 → 0.1.9)
 
@@ -403,9 +300,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - fdbd404: Updated module federation integration to use `@module-federation/enhanced/runtime` `createInstance` API and the new `loadModuleFederationHostShared` from `@backstage/module-federation-common` for loading shared dependencies. Also added support for passing a pre-created `ModuleFederation` instance via the `moduleFederation.instance` option.
 - fdbd404: Updated `@module-federation/enhanced`, `@module-federation/runtime`, and `@module-federation/sdk` dependencies from `^0.9.0` to `^0.21.6`.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/module-federation-common@0.1.0
 
 ## `@backstage/frontend-plugin-api` (0.13.4 → 0.14.0)
 
@@ -442,8 +336,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 53b6549: Plugins in the new frontend system now have a `pluginId` field rather than `id` to better align with naming conventions used throughout the frontend and backend systems. The old field is still present but marked as deprecated. All internal code has been updated to prefer `pluginId` while maintaining backward compatibility by falling back to `id` when needed.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/frontend-test-utils` (0.4.5 → 0.5.0)
 
@@ -526,17 +418,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - d7dd5bd: Fixed Router deprecation warning and switched to using new `RouterBlueprint` from `@backstage/plugin-app-api`.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/frontend-app-api@0.15.0
-  - @backstage/core-app-api@1.19.5
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/plugin-app-react@0.2.0
-  - @backstage/plugin-app@0.4.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/version-bridge@1.0.12
-  - @backstage/test-utils@1.7.15
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/integration` (1.19.2 → 1.20.0)
 
@@ -566,9 +447,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-api-docs` (0.13.3 → 0.13.4)
 
@@ -584,14 +462,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 018ca87: Added `title` and `icon` to the plugin definition for the new frontend system.
 - 629c3ec: Add `tableOptions` and `title` to Components cards of APIs
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/plugin-catalog@1.33.0
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-api-docs-module-protoc-gen-doc` (0.1.10 → 0.1.11)
 
@@ -623,16 +493,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - a2133be: Added new `NavContentNavItem`, `NavContentNavItems`, and `navItems` prop to `NavContentComponentProps` for auto-discovering navigation items from page extensions. The new `navItems` collection supports `take(id)` and `rest()` methods for placing specific items in custom sidebar positions, as well as `withComponent(Component)` which returns a `NavContentNavItemsWithComponent` for rendering items directly as elements. The existing `items` prop is now deprecated in favor of `navItems`.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/ui@0.12.0
-  - @backstage/core-components@0.18.7
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/plugin-app-react@0.2.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/integration-react@1.2.15
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/plugin-app-backend` (0.5.10 → 0.5.11)
 
@@ -641,11 +501,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/config-loader@1.10.8
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-app-node@0.1.42
 
 ## `@backstage/plugin-app-node` (0.1.41 → 0.1.42)
 
@@ -654,9 +509,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/config-loader@1.10.8
 
 ## `@backstage/plugin-app-react` (0.1.0 → 0.2.0)
 
@@ -670,9 +522,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - ef6916e: Added `IconElement` type as a replacement for the deprecated `IconComponent`. The `IconsApi` now has a new `icon()` method that returns `IconElement`, while the existing `getIcon()` method is deprecated. The `IconBundleBlueprint` now accepts both `IconComponent` and `IconElement` values.
 - 409af72: Internal refactor to move implementation of blueprints from `@backstage/frontend-plugin-api` to this package.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-app-visualizer` (0.1.28 → 0.2.0)
 
@@ -689,11 +538,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 4137a43: Updated CSS token references to use renamed `--bui-border-2` token.
 - 4d50e1f: Improved rendering performance of the details page.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/ui@0.12.0
-  - @backstage/core-components@0.18.7
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-auth` (0.1.4 → 0.1.5)
 
@@ -702,10 +546,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
 
 ## `@backstage/plugin-auth-backend` (0.26.0 → 0.27.0)
 
@@ -759,10 +599,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
   ```
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-atlassian-provider` (0.4.11 → 0.4.12)
 
@@ -771,9 +607,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-auth0-provider` (0.2.10 → 0.3.0)
 
@@ -786,9 +619,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 867c905: Add support for organizational invites in auth0 strategy
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.4.12 → 0.4.13)
 
@@ -798,10 +628,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/plugin-auth-backend@0.27.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.2.16 → 0.2.17)
 
@@ -811,9 +637,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.3.11 → 0.3.12)
 
@@ -822,9 +645,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-bitbucket-server-provider` (0.2.11 → 0.2.12)
 
@@ -833,9 +653,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.4.11 → 0.4.12)
 
@@ -844,9 +661,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.4.11 → 0.4.12)
 
@@ -855,9 +669,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-github-provider` (0.4.1 → 0.5.0)
 
@@ -870,9 +681,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-gitlab-provider` (0.3.11 → 0.4.0)
 
@@ -885,9 +693,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-google-provider` (0.3.11 → 0.3.12)
 
@@ -896,19 +701,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
-
-## `@backstage/plugin-auth-backend-module-guest-provider` (0.2.15 → 0.2.16)
-
-### 0.2.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-microsoft-provider` (0.3.11 → 0.3.12)
 
@@ -917,9 +709,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-oauth2-provider` (0.4.11 → 0.4.12)
 
@@ -928,9 +717,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.2.16 → 0.2.17)
 
@@ -940,9 +726,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-oidc-provider` (0.4.12 → 0.4.13)
 
@@ -952,10 +735,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/plugin-auth-backend@0.27.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-okta-provider` (0.2.11 → 0.2.12)
 
@@ -965,9 +744,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 08aea95: Added a validation check that rejects `audience` configuration values that are not absolute URLs (i.e. missing `https://` or `http://` prefix).
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-onelogin-provider` (0.3.11 → 0.3.12)
 
@@ -976,19 +752,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
-
-## `@backstage/plugin-auth-backend-module-openshift-provider` (0.1.3 → 0.1.4)
-
-### 0.1.4
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-backend-module-pinniped-provider` (0.3.10 → 0.3.11)
 
@@ -997,19 +760,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
-
-## `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.5.10 → 0.5.11)
-
-### 0.5.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
 
 ## `@backstage/plugin-auth-node` (0.6.12 → 0.6.13)
 
@@ -1019,9 +769,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/catalog-client@1.13.0
 
 ## `@backstage/plugin-auth-react` (0.1.23 → 0.1.24)
 
@@ -1030,9 +777,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-bitbucket-cloud-common` (0.3.6 → 0.3.7)
 
@@ -1041,8 +785,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
 
 ## `@backstage/plugin-catalog` (1.32.2 → 1.33.0)
 
@@ -1069,22 +811,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - e8258d0: The default entity content layout still supports rendering summary cards at runtime for backward compatibility, but logs a console warning when they are detected to help identify where migration is needed.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 75ac651: Migrated `EntityRelationWarning` and `EntityProcessingErrorsPanel` components from Material UI to Backstage UI.
-- Updated dependencies
-  - @backstage/ui@0.12.0
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/core-compat-api@0.5.8
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-techdocs-react@1.3.8
-  - @backstage/integration-react@1.2.15
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/version-bridge@1.0.12
-  - @backstage/plugin-search-react@1.10.3
-  - @backstage/plugin-catalog-common@1.1.8
-  - @backstage/plugin-scaffolder-common@1.7.6
 
 ## `@backstage/plugin-catalog-backend` (3.3.2 → 3.4.0)
 
@@ -1131,17 +857,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 08a5813: Fixed O(n²) performance bottleneck in `buildEntitySearch` `traverse()` by replacing `Array.some()` linear scan with a `Set` for O(1) duplicate path key detection.
 - 1e669cc: Migrate audit events reference docs to http://backstage.io/docs.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-openapi-utils@0.6.6
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/filter-predicates@0.1.0
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
-  - @backstage/plugin-catalog-common@1.1.8
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-catalog-backend-module-aws` (0.4.19 → 0.4.20)
 
@@ -1151,14 +866,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/integration-aws-node@0.1.20
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/backend-defaults@0.15.2
-  - @backstage/plugin-kubernetes-common@0.9.10
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-catalog-backend-module-azure` (0.3.13 → 0.3.14)
 
@@ -1169,11 +876,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - cc6206e: Added support for `{org}.visualstudio.com` domains used by Azure DevOps
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
 - 6c8a464: Added missing `branch` field to the `azureDevOps` provider config schema.
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.5.10 → 0.5.11)
 
@@ -1182,10 +884,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-openapi-utils@0.6.6
-  - @backstage/backend-plugin-api@1.7.0
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.5.7 → 0.5.8)
 
@@ -1194,13 +892,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/plugin-bitbucket-cloud-common@0.3.7
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.5.7 → 0.5.8)
 
@@ -1209,12 +900,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-catalog-backend-module-gcp` (0.3.15 → 0.3.16)
 
@@ -1223,10 +908,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-kubernetes-common@0.9.10
 
 ## `@backstage/plugin-catalog-backend-module-gerrit` (0.3.10 → 0.3.11)
 
@@ -1236,11 +917,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-catalog-backend-module-gitea` (0.1.8 → 0.1.9)
 
@@ -1249,11 +925,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-catalog-backend-module-github` (0.12.1 → 0.12.2)
 
@@ -1264,12 +935,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
 - 7455dae: Use node prefix on native imports
 - 34cc520: Implemented translation of webhook events into `catalogScmEventsServiceRef` events.
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-catalog-backend-module-github-org` (0.3.18 → 0.3.19)
 
@@ -1278,11 +943,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/plugin-catalog-backend-module-github@0.12.2
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-catalog-backend-module-gitlab` (0.7.7 → 0.8.0)
 
@@ -1298,13 +958,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
 - 7455dae: Use node prefix on native imports
 - 7e6b5e5: Fixed GitLab search API scope parameter from `'blob'` to `'blobs'`, resolving 400 errors in discovery provider.
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/backend-defaults@0.15.2
-  - @backstage/plugin-catalog-common@1.1.8
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-catalog-backend-module-gitlab-org` (0.2.17 → 0.2.18)
 
@@ -1313,11 +966,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/plugin-catalog-backend-module-gitlab@0.8.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.8 → 0.7.9)
 
@@ -1327,13 +975,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@3.4.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/backend-defaults@0.15.2
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-catalog-backend-module-ldap` (0.12.1 → 0.12.2)
 
@@ -1343,21 +984,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
-
-## `@backstage/plugin-catalog-backend-module-logs` (0.1.18 → 0.1.19)
-
-### 0.1.19
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@3.4.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-catalog-backend-module-msgraph` (0.8.4 → 0.9.0)
 
@@ -1370,10 +996,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-catalog-backend-module-openapi` (0.2.18 → 0.2.19)
 
@@ -1383,11 +1005,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-catalog-backend-module-puppetdb` (0.2.18 → 0.2.19)
 
@@ -1396,9 +1013,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
 
 ## `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.2.16 → 0.2.17)
 
@@ -1407,34 +1021,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - cfd8103: Updated imports to use stable catalog extension points from `@backstage/plugin-catalog-node` instead of the deprecated alpha exports.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-catalog-common@1.1.8
-  - @backstage/plugin-scaffolder-common@1.7.6
-
-## `@backstage/plugin-catalog-backend-module-unprocessed` (0.6.7 → 0.6.8)
-
-### 0.6.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-catalog-unprocessed-entities-common@0.0.13
-
-## `@backstage/plugin-catalog-common` (1.1.7 → 1.1.8)
-
-### 1.1.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/plugin-catalog-graph` (0.5.6 → 0.5.7)
 
@@ -1447,12 +1033,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7feb83b: Adjusted to use the new `@backstage/filter-predicates` types for predicate expressions.
 - 4183614: Updated usage of deprecated APIs in the new frontend system.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-catalog-import` (0.13.9 → 0.13.10)
 
@@ -1461,16 +1041,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/integration@1.20.0
-  - @backstage/core-components@0.18.7
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/integration-react@1.2.15
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-catalog-node` (1.20.1 → 2.0.0)
 
@@ -1495,13 +1065,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 42abfb1: Updated `catalogServiceMock.mock` to use `createServiceMock` from `@backstage/backend-test-utils`, replacing the internal copy of `simpleMock`. Added `@backstage/backend-test-utils` as an optional peer dependency.
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-test-utils@1.11.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-catalog-react` (1.21.6 → 2.0.0)
 
@@ -1544,20 +1107,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 88dbd5e: fixed bug in `UserListPicker` by getting the `kindParamater` from the `filters` rather than from the `queryParameters`
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/ui@0.12.0
-  - @backstage/frontend-test-utils@0.5.0
-  - @backstage/core-components@0.18.7
-  - @backstage/core-compat-api@0.5.8
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/integration-react@1.2.15
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/version-bridge@1.0.12
-  - @backstage/filter-predicates@0.1.0
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-catalog-unprocessed-entities` (0.2.25 → 0.2.26)
 
@@ -1567,22 +1116,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 018ca87: Added `title` and `icon` to the plugin definition for the new frontend system.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/core-compat-api@0.5.8
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/plugin-devtools-react@0.1.1
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-catalog-unprocessed-entities-common@0.0.13
-
-## `@backstage/plugin-catalog-unprocessed-entities-common` (0.0.12 → 0.0.13)
-
-### 0.0.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/plugin-config-schema` (0.1.76 → 0.1.77)
 
@@ -1591,9 +1124,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-devtools` (0.1.35 → 0.1.36)
 
@@ -1604,14 +1134,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 018ca87: Added `title` and `icon` to the plugin definition for the new frontend system.
 - f2612c2: Fixes an issue where a user lacking permission to schedule tasks can now easily see the issue through a custom icon + tooltip.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/core-compat-api@0.5.8
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/plugin-devtools-react@0.1.1
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/plugin-devtools-common@0.1.22
 
 ## `@backstage/plugin-devtools-backend` (0.5.13 → 0.5.14)
 
@@ -1621,22 +1143,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 8148621: Moved `@backstage/backend-defaults` from `dependencies` to `devDependencies`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/config-loader@1.10.8
-  - @backstage/cli-common@0.1.18
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
-  - @backstage/plugin-devtools-common@0.1.22
-
-## `@backstage/plugin-devtools-common` (0.1.21 → 0.1.22)
-
-### 0.1.22
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/plugin-devtools-react` (0.1.0 → 0.1.1)
 
@@ -1645,9 +1151,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 9fbb270: Updated dependency `@testing-library/react` to `^16.0.0`.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-events-backend` (0.5.10 → 0.5.11)
 
@@ -1656,81 +1159,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-openapi-utils@0.6.6
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-backend-module-aws-sqs` (0.4.18 → 0.4.19)
-
-### 0.4.19
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-backend-module-azure` (0.2.27 → 0.2.28)
-
-### 0.2.28
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.27 → 0.2.28)
-
-### 0.2.28
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-backend-module-bitbucket-server` (0.1.8 → 0.1.9)
-
-### 0.1.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-backend-module-gerrit` (0.2.27 → 0.2.28)
-
-### 0.2.28
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-backend-module-github` (0.4.8 → 0.4.9)
-
-### 0.4.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-backend-module-gitlab` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-events-backend-module-google-pubsub` (0.1.7 → 0.2.0)
 
@@ -1739,50 +1167,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Minor Changes
 
 - 80905b3: Added an optional `filter` property to PubSub consumers/publishers
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/filter-predicates@0.1.0
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-backend-module-kafka` (0.3.0 → 0.3.1)
-
-### 0.3.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-backend-test-utils` (0.1.51 → 0.1.52)
-
-### 0.1.52
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.19
-
-## `@backstage/plugin-events-node` (0.4.18 → 0.4.19)
-
-### 0.4.19
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-
-## `@backstage/plugin-gateway-backend` (1.1.1 → 1.1.2)
-
-### 1.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
 
 ## `@backstage/plugin-home` (0.9.1 → 0.9.2)
 
@@ -1794,16 +1178,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 90956a6: Support new frontend system in the homepage plugin
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/core-app-api@1.19.5
-  - @backstage/core-compat-api@0.5.8
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-home-react@0.1.35
 
 ## `@backstage/plugin-home-react` (0.1.34 → 0.1.35)
 
@@ -1813,11 +1187,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 90956a6: Support new frontend system in the homepage plugin
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/core-compat-api@0.5.8
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-kubernetes` (0.12.15 → 0.12.16)
 
@@ -1829,14 +1198,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 491a06c: Add the ability to show icons for the tabs on the entity page (new frontend)
 - 4183614: Updated usage of deprecated APIs in the new frontend system.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/plugin-kubernetes-react@0.5.16
-  - @backstage/plugin-kubernetes-common@0.9.10
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-permission-react@0.4.40
 
 ## `@backstage/plugin-kubernetes-backend` (0.21.0 → 0.21.1)
 
@@ -1846,15 +1207,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - ce3639c: Add PersistentVolume and PersistentVolumeClaims Rendering
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/integration-aws-node@0.1.20
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-kubernetes-node@0.4.1
-  - @backstage/plugin-kubernetes-common@0.9.10
-  - @backstage/catalog-client@1.13.0
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
 
 ## `@backstage/plugin-kubernetes-cluster` (0.0.33 → 0.0.34)
 
@@ -1863,13 +1215,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/plugin-kubernetes-react@0.5.16
-  - @backstage/plugin-kubernetes-common@0.9.10
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-permission-react@0.4.40
 
 ## `@backstage/plugin-kubernetes-common` (0.9.9 → 0.9.10)
 
@@ -1878,8 +1223,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - ce3639c: Add PersistentVolume and PersistentVolumeClaims Rendering
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/plugin-kubernetes-node` (0.4.0 → 0.4.1)
 
@@ -1889,9 +1232,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - ce3639c: Add PersistentVolume and PersistentVolumeClaims Rendering
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-kubernetes-common@0.9.10
 
 ## `@backstage/plugin-kubernetes-react` (0.5.15 → 0.5.16)
 
@@ -1904,10 +1244,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - d56542c: Updated dependency `@xterm/addon-attach` to `^0.12.0`.
   Updated dependency `@xterm/addon-fit` to `^0.11.0`.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/plugin-kubernetes-common@0.9.10
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-mcp-actions-backend` (0.1.8 → 0.1.9)
 
@@ -1921,10 +1257,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 8148621: Moved `@backstage/backend-defaults` from `dependencies` to `devDependencies`.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/catalog-client@1.13.0
 
 ## `@backstage/plugin-mui-to-bui` (0.2.3 → 0.2.4)
 
@@ -1945,11 +1277,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
   The converter now generates tokens that match the updated BUI design system structure, with clear distinction between status colors for standalone use vs. use on colored backgrounds.
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/ui@0.12.0
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-notifications` (0.5.13 → 0.5.14)
 
@@ -1959,13 +1286,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 8005286: Added `renderItem` prop to `NotificationsSidebarItem` component, allowing custom UI rendering while retaining all built-in notification logic (unread count, snackbar, signals, web notifications).
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/plugin-notifications-common@0.2.1
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-signals-react@0.0.19
 
 ## `@backstage/plugin-notifications-backend` (0.6.1 → 0.6.2)
 
@@ -1976,12 +1296,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - 5e3ef57: Added `peerModules` metadata declaring recommended modules for cross-plugin integrations.
 - e9eb400: Allow configuring included topics for email notifications.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-notifications-common@0.2.1
-  - @backstage/plugin-notifications-node@0.2.23
-  - @backstage/plugin-signals-node@0.1.28
 
 ## `@backstage/plugin-notifications-backend-module-email` (0.3.17 → 0.3.18)
 
@@ -1990,25 +1304,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - e9eb400: Allow configuring included topics for email notifications.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/integration-aws-node@0.1.20
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/plugin-notifications-common@0.2.1
-  - @backstage/plugin-notifications-node@0.2.23
-
-## `@backstage/plugin-notifications-backend-module-slack` (0.3.0 → 0.3.1)
-
-### 0.3.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-notifications-common@0.2.1
-  - @backstage/plugin-notifications-node@0.2.23
 
 ## `@backstage/plugin-notifications-common` (0.2.0 → 0.2.1)
 
@@ -2017,18 +1312,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - e9eb400: Allow configuring included topics for email notifications.
-
-## `@backstage/plugin-notifications-node` (0.2.22 → 0.2.23)
-
-### 0.2.23
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/plugin-notifications-common@0.2.1
-  - @backstage/plugin-signals-node@0.1.28
 
 ## `@backstage/plugin-org` (0.6.48 → 0.6.49)
 
@@ -2041,12 +1324,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 4183614: Updated usage of deprecated APIs in the new frontend system.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 1dee6de: Add search functionality in MembersListCard
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-org-react` (0.1.46 → 0.1.47)
 
@@ -2055,11 +1332,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/catalog-client@1.13.0
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-permission-backend` (0.7.8 → 0.7.9)
 
@@ -2069,23 +1341,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
-
-## `@backstage/plugin-permission-backend-module-allow-all-policy` (0.2.15 → 0.2.16)
-
-### 0.2.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
 
 ## `@backstage/plugin-permission-common` (0.9.5 → 0.9.6)
 
@@ -2102,10 +1357,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/plugin-permission-react` (0.4.39 → 0.4.40)
 
@@ -2114,9 +1365,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/plugin-proxy-backend` (0.6.9 → 0.6.10)
 
@@ -2125,18 +1373,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-proxy-node@0.1.12
-
-## `@backstage/plugin-proxy-node` (0.1.11 → 0.1.12)
-
-### 0.1.12
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
 
 ## `@backstage/plugin-scaffolder` (1.35.2 → 1.35.3)
 
@@ -2158,19 +1394,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - b9d90a7: Added `@backstage/frontend-test-utils` as a dev dependency for mock API usage in tests.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/integration@1.20.0
-  - @backstage/core-components@0.18.7
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/plugin-scaffolder-react@1.19.7
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-techdocs-react@1.3.8
-  - @backstage/integration-react@1.2.15
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/plugin-catalog-common@1.1.8
-  - @backstage/plugin-scaffolder-common@1.7.6
 
 ## `@backstage/plugin-scaffolder-backend` (3.1.2 → 3.1.3)
 
@@ -2185,38 +1408,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 8148621: Moved `@backstage/backend-defaults` from `dependencies` to `devDependencies`.
 - 1e669cc: Migrate audit events reference docs to http://backstage.io/docs.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend-module-gitlab@0.11.3
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-backend-module-scaffolder-entity-model@0.2.17
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-cloud@0.3.3
-  - @backstage/plugin-scaffolder-backend-module-bitbucket@0.3.19
-  - @backstage/plugin-scaffolder-backend-module-gerrit@0.2.18
-  - @backstage/plugin-scaffolder-backend-module-github@0.9.6
-  - @backstage/plugin-scaffolder-backend-module-gitea@0.2.18
-  - @backstage/backend-openapi-utils@0.6.6
-  - @backstage/plugin-bitbucket-cloud-common@0.3.7
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
-  - @backstage/plugin-events-node@0.4.19
-  - @backstage/plugin-scaffolder-backend-module-azure@0.2.18
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-server@0.2.18
-  - @backstage/plugin-scaffolder-common@1.7.6
-
-## `@backstage/plugin-scaffolder-backend-module-azure` (0.2.17 → 0.2.18)
-
-### 0.2.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.18 → 0.3.19)
 
@@ -2225,12 +1416,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-cloud@0.3.3
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-server@0.2.18
 
 ## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.3.2 → 0.3.3)
 
@@ -2241,22 +1426,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - 14741e2: Fully enable API token functionality for Bitbucket-Cloud.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-bitbucket-cloud-common@0.3.7
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.17 → 0.2.18)
-
-### 0.2.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.17 → 0.3.18)
 
@@ -2265,10 +1434,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.19 → 0.3.20)
 
@@ -2277,22 +1442,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/backend-defaults@0.15.2
-  - @backstage/plugin-scaffolder-node@0.12.5
-
-## `@backstage/plugin-scaffolder-backend-module-gcp` (0.2.17 → 0.2.18)
-
-### 0.2.18
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.17 → 0.2.18)
 
@@ -2301,10 +1450,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-backend-module-gitea` (0.2.17 → 0.2.18)
 
@@ -2313,10 +1458,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-backend-module-github` (0.9.5 → 0.9.6)
 
@@ -2329,11 +1470,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 672b972: Updated dependency `libsodium-wrappers` to `^0.8.0`.
   Updated dependency `@types/libsodium-wrappers` to `^0.8.0`.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.11.2 → 0.11.3)
 
@@ -2346,22 +1482,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - f0f9403: Changed `gitlab:group:ensureExists` action to use `Groups.show` API instead of `Groups.search` for checking if a group path exists. This is more efficient as it directly retrieves the group by path rather than searching and filtering results.
 - 32c51c0: Added new `gitlab:user:info` scaffolder action that retrieves information about a GitLab user. The action can fetch either the current authenticated user or a specific user by ID.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
-
-## `@backstage/plugin-scaffolder-backend-module-notifications` (0.1.18 → 0.1.19)
-
-### 0.1.19
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
-  - @backstage/plugin-notifications-common@0.2.1
-  - @backstage/plugin-notifications-node@0.2.23
 
 ## `@backstage/plugin-scaffolder-backend-module-rails` (0.5.17 → 0.5.18)
 
@@ -2370,10 +1490,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-backend-module-sentry` (0.3.0 → 0.3.1)
 
@@ -2382,9 +1498,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.18 → 0.4.19)
 
@@ -2393,20 +1506,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node-test-utils@0.3.8
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
-
-## `@backstage/plugin-scaffolder-common` (1.7.5 → 1.7.6)
-
-### 1.7.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/plugin-scaffolder-node` (0.12.4 → 0.12.5)
 
@@ -2417,11 +1516,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - 4fc7bf0: Bump to tar v7
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-scaffolder-common@1.7.6
 
 ## `@backstage/plugin-scaffolder-node-test-utils` (0.3.7 → 0.3.8)
 
@@ -2431,10 +1525,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/backend-test-utils@1.11.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-scaffolder-node@0.12.5
 
 ## `@backstage/plugin-scaffolder-react` (1.19.6 → 1.19.7)
 
@@ -2453,16 +1543,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - b9d90a7: Added `@backstage/frontend-test-utils` as a dev dependency for mock API usage in tests.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/version-bridge@1.0.12
-  - @backstage/plugin-scaffolder-common@1.7.6
 
 ## `@backstage/plugin-search` (1.5.3 → 1.6.0)
 
@@ -2476,14 +1556,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 018ca87: Added `title` and `icon` to the plugin definition for the new frontend system.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/version-bridge@1.0.12
-  - @backstage/plugin-search-react@1.10.3
 
 ## `@backstage/plugin-search-backend` (2.0.11 → 2.0.12)
 
@@ -2494,13 +1566,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - 8148621: Moved `@backstage/backend-defaults` from `dependencies` to `devDependencies`.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-openapi-utils@0.6.6
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-backend-node@1.4.1
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-permission-node@0.10.10
 
 ## `@backstage/plugin-search-backend-module-catalog` (0.3.11 → 0.3.12)
 
@@ -2509,14 +1574,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-backend-node@1.4.1
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/catalog-client@1.13.0
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-search-backend-module-elasticsearch` (1.7.9 → 1.8.0)
 
@@ -2530,11 +1587,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 7021165: Fixed bulk indexing to refresh only the target index instead of all indexes, improving performance in multi-index deployments.
-- Updated dependencies
-  - @backstage/integration-aws-node@0.1.20
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-backend-node@1.4.1
-  - @backstage/plugin-search-common@1.2.22
 
 ## `@backstage/plugin-search-backend-module-explore` (0.3.10 → 0.3.11)
 
@@ -2544,10 +1596,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - df27350: Updated dependency `@backstage-community/plugin-explore-common` to `^0.12.0`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-backend-node@1.4.1
-  - @backstage/plugin-search-common@1.2.22
 
 ## `@backstage/plugin-search-backend-module-pg` (0.5.51 → 0.5.52)
 
@@ -2557,10 +1605,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 2ee354a: Return `numberOfResults` count with search query responses
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-backend-node@1.4.1
-  - @backstage/plugin-search-common@1.2.22
 
 ## `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.3.16 → 0.3.17)
 
@@ -2569,10 +1613,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-backend-node@1.4.1
-  - @backstage/plugin-search-common@1.2.22
 
 ## `@backstage/plugin-search-backend-module-techdocs` (0.4.10 → 0.4.11)
 
@@ -2581,15 +1621,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-backend-node@1.4.1
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/plugin-techdocs-node@1.14.2
-  - @backstage/catalog-client@1.13.0
-  - @backstage/plugin-permission-common@0.9.6
-  - @backstage/plugin-catalog-common@1.1.8
 
 ## `@backstage/plugin-search-backend-node` (1.4.0 → 1.4.1)
 
@@ -2598,10 +1629,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/plugin-search-common` (1.2.21 → 1.2.22)
 
@@ -2610,8 +1637,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/plugin-search-react` (1.10.2 → 1.10.3)
 
@@ -2620,13 +1645,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/plugin-signals` (0.0.27 → 0.0.28)
 
@@ -2635,12 +1653,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-signals-react@0.0.19
 
 ## `@backstage/plugin-signals-backend` (0.3.11 → 0.3.12)
 
@@ -2649,21 +1661,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 7455dae: Use node prefix on native imports
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-events-node@0.4.19
-  - @backstage/plugin-signals-node@0.1.28
-
-## `@backstage/plugin-signals-node` (0.1.27 → 0.1.28)
-
-### 0.1.28
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-events-node@0.4.19
 
 ## `@backstage/plugin-signals-react` (0.0.18 → 0.0.19)
 
@@ -2672,8 +1669,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.3
 
 ## `@backstage/plugin-techdocs` (1.16.2 → 1.17.0)
 
@@ -2703,19 +1698,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 22dce2b: TechDocs addons in the new frontend system now use a Utility API pattern instead of multiple attachment points. The `AddonBlueprint` now uses this new approach, and while addons created with older versions still work, they will produce a deprecation warning and will stop working in a future release.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 0a88779: Added title prop to OffsetPaginatedDocsTable for proper display
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/integration@1.20.0
-  - @backstage/core-components@0.18.7
-  - @backstage/plugin-search-common@1.2.22
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/catalog-client@1.13.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-techdocs-react@1.3.8
-  - @backstage/integration-react@1.2.15
-  - @backstage/plugin-search-react@1.10.3
-  - @backstage/plugin-auth-react@0.1.24
 
 ## `@backstage/plugin-techdocs-addons-test-utils` (2.0.1 → 2.0.2)
 
@@ -2725,16 +1707,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/plugin-catalog@1.33.0
-  - @backstage/core-app-api@1.19.5
-  - @backstage/plugin-techdocs@1.17.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-techdocs-react@1.3.8
-  - @backstage/integration-react@1.2.15
-  - @backstage/plugin-search-react@1.10.3
-  - @backstage/test-utils@1.7.15
 
 ## `@backstage/plugin-techdocs-backend` (2.1.4 → 2.1.5)
 
@@ -2745,12 +1717,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - 5e3ef57: Added `peerModules` metadata declaring recommended modules for cross-plugin integrations.
 - 8148621: Moved `@backstage/backend-defaults` from `dependencies` to `devDependencies`.
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/plugin-catalog-node@2.0.0
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-techdocs-node@1.14.2
-  - @backstage/catalog-client@1.13.0
 
 ## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.32 → 1.1.33)
 
@@ -2759,13 +1725,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/core-components@0.18.7
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-techdocs-react@1.3.8
-  - @backstage/integration-react@1.2.15
 
 ## `@backstage/plugin-techdocs-node` (1.14.1 → 1.14.2)
 
@@ -2775,11 +1734,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 7455dae: Use node prefix on native imports
 - 3c455d4: Some security fixes
-- Updated dependencies
-  - @backstage/integration@1.20.0
-  - @backstage/integration-aws-node@0.1.20
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-search-common@1.2.22
 
 ## `@backstage/plugin-techdocs-react` (1.3.7 → 1.3.8)
 
@@ -2792,11 +1746,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
   As part of this change, the `techDocsAddonDataRef` alpha export was removed.
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/core-components@0.18.7
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/plugin-user-settings` (0.8.31 → 0.9.0)
 
@@ -2810,15 +1759,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - 018ca87: Added `title` and `icon` to the plugin definition for the new frontend system.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
-- Updated dependencies
-  - @backstage/plugin-catalog-react@2.0.0
-  - @backstage/core-components@0.18.7
-  - @backstage/core-app-api@1.19.5
-  - @backstage/theme@0.7.2
-  - @backstage/frontend-plugin-api@0.14.0
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-user-settings-common@0.1.0
-  - @backstage/plugin-signals-react@0.0.19
 
 ## `@backstage/plugin-user-settings-backend` (0.3.10 → 0.4.0)
 
@@ -2831,11 +1771,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Patch Changes
 
 - 8148621: Moved `@backstage/backend-defaults` from `dependencies` to `devDependencies`.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/plugin-auth-node@0.6.13
-  - @backstage/plugin-user-settings-common@0.1.0
-  - @backstage/plugin-signals-node@0.1.28
 
 ## `@backstage/plugin-user-settings-common` (0.0.1 → 0.1.0)
 
@@ -2859,11 +1794,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - df59ee6: The `type-deps` command now follows relative imports and re-exports into declaration chunk files, and detects ambient global types such as the `jest` namespace.
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 69d880e: Bump to latest zod to ensure it has the latest features
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.7.0
-  - @backstage/config-loader@1.10.8
-  - @backstage/cli-common@0.1.18
-  - @backstage/cli-node@0.2.18
 
 ## `@backstage/test-utils` (1.7.14 → 1.7.15)
 
@@ -2873,12 +1803,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 
 - a7e0d50: Updated `react-router-dom` peer dependency to `^6.30.2` and explicitly disabled v7 future flags to suppress deprecation warnings.
 - 68eb322: Added `@types/jest` as an optional peer dependency, since jest types are exposed in the public API surface.
-- Updated dependencies
-  - @backstage/core-app-api@1.19.5
-  - @backstage/theme@0.7.2
-  - @backstage/core-plugin-api@1.12.3
-  - @backstage/plugin-permission-react@0.4.40
-  - @backstage/plugin-permission-common@0.9.6
 
 ## `@backstage/theme` (0.7.1 → 0.7.2)
 
@@ -3249,8 +2173,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
   **Affected components:** Switch
 
 - 20131c5: Migrated to use the standard `backstage-cli package build` for CSS bundling instead of a custom build script.
-- Updated dependencies
-  - @backstage/version-bridge@1.0.12
 
 ## `@backstage/version-bridge` (1.0.11 → 1.0.12)
 
@@ -3269,10 +2191,6 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 - 7455dae: Use node prefix on native imports
 - 27798df: Migrate the Techdocs CLI embedded app to the New Frontend System (NFS)
 - 508d127: Updated dependency `find-process` to `^2.0.0`.
-- Updated dependencies
-  - @backstage/backend-defaults@0.15.2
-  - @backstage/plugin-techdocs-node@1.14.2
-  - @backstage/cli-common@0.1.18
 
 ## `@backstage/filter-predicates` (new, 0.1.0)
 
@@ -3289,3 +2207,5 @@ Changes between 1.47.4 and 1.48.0 — 186 changed and 2 added packages.
 #### Minor Changes
 
 - ce12dec: Added new `@backstage/module-federation-common` package that provides shared types, default configurations, and runtime utilities for module federation. It includes `loadModuleFederationHostShared` for loading shared dependencies in parallel at runtime, `defaultHostSharedDependencies` and `defaultRemoteSharedDependencies` for consistent dependency configuration, and types such as `HostSharedDependencies`, `RemoteSharedDependencies`, and `RuntimeSharedDependenciesGlobal`.
+
+_Excluded dependency updates for packages: `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-openshift-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-unprocessed`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-unprocessed-entities-common`, `@backstage/plugin-devtools-common`, `@backstage/plugin-events-backend-module-aws-sqs`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-module-kafka`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-events-node`, `@backstage/plugin-gateway-backend`, `@backstage/plugin-notifications-backend-module-slack`, `@backstage/plugin-notifications-node`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-gcp`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-signals-node`._

@@ -11,12 +11,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - e969dc7: Move `@types/react` to a peer dependency.
 - 46b5a20: Added `externalLink` to icon defaults
 - 8c40e55: Updated the `bitbucket-server-auth` default API to set its environment based on the `auth.environment` config option instead of being hardcoded to `development`.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-permission-react@0.4.27
-  - @backstage/core-app-api@1.15.1
-  - @backstage/theme@0.6.0
 
 ## `@backstage/backend-app-api` (1.0.0 → 1.0.1)
 
@@ -30,16 +24,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 04af116: The backend will no longer exit immediately if any plugin or modules fails to initialize. Instead, the backend will wait for all plugins and modules to either start up successfully or throw, and then shut down the backend if there were any initialization errors.
 
   This fixes an issue where backend initialization errors in adjacent plugins during database schema migration could cause the database migrations to be stuck in a locked state.
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/cli-common@0.1.14
-  - @backstage/config@1.2.0
-  - @backstage/config-loader@1.9.1
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/backend-defaults` (0.5.0 → 0.5.1)
 
@@ -67,22 +51,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
   }
   ```
 
-- Updated dependencies
-  - @backstage/cli-node@0.2.9
-  - @backstage/backend-app-api@1.0.1
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/integration@1.15.1
-  - @backstage/backend-dev-utils@0.1.5
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/cli-common@0.1.14
-  - @backstage/config@1.2.0
-  - @backstage/config-loader@1.9.1
-  - @backstage/errors@1.2.4
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/types@1.1.1
-
 ## `@backstage/backend-openapi-utils` (0.1.18 → 0.2.0)
 
 ### 0.2.0
@@ -90,27 +58,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Minor Changes
 
 - 66af016: Improved support for OpenAPI validation during Jest tests. Now, OpenAPI validation can happen as you are writing your Jest tests - you no longer have to run `repo schema openapi test`.
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
-## `@backstage/backend-plugin-api` (1.0.0 → 1.0.1)
-
-### 1.0.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/cli-common@0.1.14
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/backend-test-utils` (1.0.0 → 1.0.1)
 
@@ -121,15 +68,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - fd6e6f4: build(deps): bump `cookie` from 0.6.0 to 0.7.0
 - a19ce00: The `createMockDirectory` cleanup strategy has been changed, no longer requiring it to be called outside individual tests.
 - 9cc7dd6: Minor doc string changes
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/backend-app-api@1.0.1
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/catalog-client` (1.7.0 → 1.7.1)
 
@@ -138,9 +76,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 0040632: Add missing doc string to API
-- Updated dependencies
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/cli` (0.27.1 → 0.28.0)
 
@@ -185,17 +120,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 55b8b84: The Jest configuration will now search for a `src/setupTests.*` file with any valid script extension, not only `.ts`.
 - 79ba5a8: The `LEGACY_BACKEND_START` flag is now deprecated.
 - f0514c7: Disabled parsing of input source maps in the SWC transform for Jest.
-- Updated dependencies
-  - @backstage/cli-node@0.2.9
-  - @backstage/eslint-plugin@0.1.10
-  - @backstage/integration@1.15.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/cli-common@0.1.14
-  - @backstage/config@1.2.0
-  - @backstage/config-loader@1.9.1
-  - @backstage/errors@1.2.4
-  - @backstage/release-manifests@0.0.11
-  - @backstage/types@1.1.1
 
 ## `@backstage/cli-node` (0.2.8 → 0.2.9)
 
@@ -204,10 +128,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - fec7278: Added new `lockfile.getDependencyTreeHash(name)` utility.
-- Updated dependencies
-  - @backstage/cli-common@0.1.14
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/codemods` (0.1.50 → 0.1.51)
 
@@ -216,8 +136,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - c06b7f1: Updated dependency `@types/jscodeshift` to `^0.12.0`.
-- Updated dependencies
-  - @backstage/cli-common@0.1.14
 
 ## `@backstage/core-app-api` (1.15.0 → 1.15.1)
 
@@ -226,11 +144,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/version-bridge@1.0.10
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/core-compat-api` (0.3.0 → 0.3.1)
 
@@ -240,10 +153,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 4a5ba19: Internal update to remove deprecated `BackstagePlugin` type and move to `FrontendPlugin`
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/version-bridge@1.0.10
 
 ## `@backstage/core-components` (0.15.0 → 0.15.1)
 
@@ -257,12 +166,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 83e2887: Fixed a bug in the `SidebarSubmenu` core component that caused the nested menu to overlap with the sidebar when the user hovers over the pinned sidebar.
 - 46b5a20: `Link` component now accepts `externalLinkIcon` prop
 - e4ad29a: Fix authentication error handling using redirect flow via `enableExperimentalRedirectFlow` config. If an error is caught during authentication, the user is redirected back to app origin with `error` query parameter containing the error message.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/version-bridge@1.0.10
-  - @backstage/theme@0.6.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/core-plugin-api` (1.9.4 → 1.10.0)
 
@@ -278,11 +181,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 39001f4: Fixing issue with types for `ParamKeys` leading to type mismatches across versions
-- Updated dependencies
-  - @backstage/version-bridge@1.0.10
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/create-app` (0.5.20 → 0.5.21)
 
@@ -295,8 +193,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - a7674d6: Fixed lack of `.yarnrc.yml` in the template.
 - ab89e45: Remove some dependencies that aren't required anymore
 - b452088: Tweak `Dockerfile` to fix deprecated syntax.
-- Updated dependencies
-  - @backstage/cli-common@0.1.14
 
 ## `@backstage/dev-utils` (1.1.1 → 1.1.2)
 
@@ -305,15 +201,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/integration-react@1.2.0
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/app-defaults@1.5.12
-  - @backstage/core-app-api@1.15.1
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/theme@0.6.0
-  - @backstage/catalog-model@1.7.0
 
 ## `@backstage/eslint-plugin` (0.1.9 → 0.1.10)
 
@@ -335,28 +222,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/version-bridge@1.0.10
-  - @backstage/core-app-api@1.15.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/frontend-defaults@0.1.1
-  - @backstage/types@1.1.1
-
-## `@backstage/frontend-defaults` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/frontend-app-api@0.10.0
-  - @backstage/plugin-app@0.1.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/frontend-plugin-api` (0.8.0 → 0.9.0)
 
@@ -405,12 +270,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
   The provided parameters will be merged with the original parameters of the extension.
 
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/version-bridge@1.0.10
-  - @backstage/types@1.1.1
-
 ## `@backstage/frontend-test-utils` (0.2.0 → 0.2.1)
 
 ### 0.2.1
@@ -431,15 +290,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
   - Deprecated `MockStorageApi`, please use `mockApis.storage` instead.
   - Deprecated `MockTranslationApi`, please use `mockApis.translation` instead.
 
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/frontend-app-api@0.10.0
-  - @backstage/version-bridge@1.0.10
-  - @backstage/test-utils@1.7.0
-  - @backstage/plugin-app@0.1.1
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-
 ## `@backstage/integration` (1.15.0 → 1.15.1)
 
 ### 1.15.1
@@ -449,9 +299,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 720a2f9: Updated dependency `git-url-parse` to `^15.0.0`.
 - 920004b: Updating error message for getProjectId when fetching Gitlab project from its url to be more accurate
 - 090e49a: Updated functions parseHarnessUrl, getHarnessLatestCommitUrl, getHarnessFileContentsUrl and getHarnessArchiveUrl to fix parsing of urls
-- Updated dependencies
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/integration-react` (1.1.32 → 1.2.0)
 
@@ -465,10 +312,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 3dbac17: Revert of change #26430
-- Updated dependencies
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/integration@1.15.1
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-api-docs` (0.11.10 → 0.11.11)
 
@@ -478,16 +321,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 46b5a20: Empty states updated with external link icon for learn more links
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/plugin-catalog@1.24.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-permission-react@0.4.27
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/catalog-model@1.7.0
-  - @backstage/plugin-catalog-common@1.1.0
 
 ## `@backstage/plugin-api-docs-module-protoc-gen-doc` (0.1.7 → 0.1.8)
 
@@ -504,13 +337,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - b36be7a: Added missing default `SignInPageExtension` which by default uses guest auth, missing `ApiExtensions` for `scmAuth`
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/integration-react@1.2.0
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-permission-react@0.4.27
-  - @backstage/theme@0.6.0
 
 ## `@backstage/plugin-app-backend` (0.3.75 → 0.3.76)
 
@@ -521,24 +347,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 2c4ee26: Fixed unexpected behaviour where configuration supplied with `APP_CONFIG_*` environment variables where not filtered by the configuration schema.
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/config-loader@1.9.1
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-app-node@0.1.26
-
-## `@backstage/plugin-app-node` (0.1.25 → 0.1.26)
-
-### 0.1.26
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config-loader@1.9.1
 
 ## `@backstage/plugin-app-visualizer` (0.1.10 → 0.1.11)
 
@@ -547,10 +355,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-plugin-api@1.10.0
 
 ## `@backstage/plugin-auth-backend` (0.23.0 → 0.23.1)
 
@@ -559,32 +363,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-auth-backend-module-cloudflare-access-provider@0.3.1
-  - @backstage/plugin-auth-backend-module-atlassian-provider@0.3.1
-  - @backstage/plugin-auth-backend-module-bitbucket-provider@0.2.1
-  - @backstage/plugin-auth-backend-module-microsoft-provider@0.2.1
-  - @backstage/plugin-auth-backend-module-onelogin-provider@0.2.1
-  - @backstage/plugin-auth-backend-module-aws-alb-provider@0.2.1
-  - @backstage/plugin-auth-backend-module-gcp-iap-provider@0.3.1
-  - @backstage/plugin-auth-backend-module-github-provider@0.2.1
-  - @backstage/plugin-auth-backend-module-gitlab-provider@0.2.1
-  - @backstage/plugin-auth-backend-module-google-provider@0.2.1
-  - @backstage/plugin-auth-backend-module-oauth2-provider@0.3.1
-  - @backstage/plugin-auth-backend-module-oidc-provider@0.3.1
-  - @backstage/plugin-auth-backend-module-okta-provider@0.1.1
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-auth-backend-module-auth0-provider@0.1.1
-  - @backstage/plugin-auth-backend-module-azure-easyauth-provider@0.2.1
-  - @backstage/plugin-auth-backend-module-bitbucket-server-provider@0.1.1
-  - @backstage/plugin-auth-backend-module-oauth2-proxy-provider@0.2.1
 
 ## `@backstage/plugin-auth-backend-module-atlassian-provider` (0.3.0 → 0.3.1)
 
@@ -593,19 +371,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-
-## `@backstage/plugin-auth-backend-module-auth0-provider` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.2.0 → 0.2.1)
 
@@ -615,23 +380,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-auth-backend@0.23.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.2.0 → 0.2.1)
 
@@ -640,19 +388,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-
-## `@backstage/plugin-auth-backend-module-bitbucket-server-provider` (0.1.0 → 0.1.1)
-
-### 0.1.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.3.0 → 0.3.1)
 
@@ -661,11 +396,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.3.0 → 0.3.1)
 
@@ -674,11 +404,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-auth-backend-module-github-provider` (0.2.0 → 0.2.1)
 
@@ -687,9 +412,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-auth-backend-module-gitlab-provider` (0.2.0 → 0.2.1)
 
@@ -698,9 +420,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-auth-backend-module-google-provider` (0.2.0 → 0.2.1)
 
@@ -709,9 +428,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-auth-backend-module-guest-provider` (0.2.0 → 0.2.1)
 
@@ -720,11 +436,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-auth-backend-module-microsoft-provider` (0.2.0 → 0.2.1)
 
@@ -734,9 +445,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
 - daa02d6: Add `skipUserProfile` config flag to Microsoft authenticator
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-auth-backend-module-oauth2-provider` (0.3.0 → 0.3.1)
 
@@ -745,20 +453,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-
-## `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-auth-backend-module-oidc-provider` (0.3.0 → 0.3.1)
 
@@ -768,10 +462,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-auth-backend@0.23.1
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-auth-backend-module-okta-provider` (0.1.0 → 0.1.1)
 
@@ -780,9 +470,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-auth-backend-module-onelogin-provider` (0.2.0 → 0.2.1)
 
@@ -791,20 +478,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-
-## `@backstage/plugin-auth-backend-module-pinniped-provider` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.3.0 → 0.4.0)
 
@@ -817,10 +490,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 217458a: Updated configuration schema to include the new `allowedDomains` option for the `emailLocalPartMatchingUserEntityName` sign-in resolver.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
 
 ## `@backstage/plugin-auth-node` (0.5.2 → 0.5.3)
 
@@ -831,13 +500,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 217458a: Added a new `allowedDomains` option for the common `emailLocalPartMatchingUserEntityName` sign-in resolver.
 - 094eaa3: Remove references to in-repo backend-common
 - e4ad29a: Fix authentication error handling using redirect flow via `enableExperimentalRedirectFlow` config. If an error is caught during authentication, the user is redirected back to app origin with `error` query parameter containing the error message.
-- Updated dependencies
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-auth-react` (0.1.6 → 0.1.7)
 
@@ -846,19 +508,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-bitbucket-cloud-common` (0.2.23 → 0.2.24)
-
-### 0.2.24
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.15.1
 
 ## `@backstage/plugin-catalog` (1.23.1 → 1.24.0)
 
@@ -873,22 +522,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 46b5a20: Empty states updated with external link icon for learn more links
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/integration-react@1.2.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-permission-react@0.4.27
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/plugin-search-react@1.8.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-scaffolder-common@1.5.6
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-catalog-backend` (1.26.1 → 1.27.0)
 
@@ -909,21 +542,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - d1cf90a: Adds the ability to disable catalog processing `catalog.processingInterval: false` in `app-config`
 - f1cab41: Update catalog search table in transaction
 - 8206f49: Fix a bug where etags were expiring too soon in the URL reader
-- Updated dependencies
-  - @backstage/plugin-search-backend-module-catalog@0.2.3
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/backend-openapi-utils@0.2.0
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/plugin-catalog-backend-module-aws` (0.4.2 → 0.4.3)
 
@@ -932,17 +550,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-kubernetes-common@0.8.3
 
 ## `@backstage/plugin-catalog-backend-module-azure` (0.2.2 → 0.2.3)
 
@@ -951,26 +558,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/plugin-catalog-common@1.1.0
-
-## `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.4.0 → 0.4.1)
-
-### 0.4.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/backend-openapi-utils@0.2.0
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.3.2 → 0.4.0)
 
@@ -1008,16 +595,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/plugin-bitbucket-cloud-common@0.2.24
-  - @backstage/plugin-catalog-common@1.1.0
 
 ## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.2.2 → 0.2.3)
 
@@ -1026,26 +603,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-
-## `@backstage/plugin-catalog-backend-module-gcp` (0.3.0 → 0.3.1)
-
-### 0.3.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/plugin-kubernetes-common@0.8.3
 
 ## `@backstage/plugin-catalog-backend-module-gerrit` (0.2.2 → 0.2.3)
 
@@ -1055,12 +612,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 5b6edf1: Fixed an issue preventing the provider's `schedule` config from being applied."
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-catalog-backend-module-github` (0.7.4 → 0.7.5)
 
@@ -1071,29 +622,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
 - 720a2f9: Updated dependency `git-url-parse` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.27.0
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/plugin-catalog-common@1.1.0
-
-## `@backstage/plugin-catalog-backend-module-github-org` (0.3.1 → 0.3.2)
-
-### 0.3.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend-module-github@0.7.5
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-catalog-backend-module-gitlab` (0.4.2 → 0.4.3)
 
@@ -1102,15 +630,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/plugin-catalog-common@1.1.0
 
 ## `@backstage/plugin-catalog-backend-module-gitlab-org` (0.2.0 → 0.2.1)
 
@@ -1119,11 +638,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/plugin-catalog-backend-module-gitlab@0.4.3
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.5.4 → 0.5.5)
 
@@ -1135,41 +649,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
 - 2107965: Turn down the logging level on most "all is well" type log messages
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.27.0
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-permission-common@0.8.1
-
-## `@backstage/plugin-catalog-backend-module-ldap` (0.9.0 → 0.9.1)
-
-### 0.9.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.1.0
-
-## `@backstage/plugin-catalog-backend-module-logs` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.27.0
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-catalog-backend-module-msgraph` (0.6.2 → 0.6.3)
 
@@ -1179,12 +658,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 4b60e0c: Remove extension points from `/alpha` export, they're available from the main package already
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/plugin-catalog-common@1.1.0
 
 ## `@backstage/plugin-catalog-backend-module-openapi` (0.2.1 → 0.2.2)
 
@@ -1193,15 +666,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@1.27.0
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.1.0
 
 ## `@backstage/plugin-catalog-backend-module-puppetdb` (0.2.2 → 0.2.3)
 
@@ -1210,26 +674,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 4b60e0c: Small tweaks to API reports to make them valid
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
-## `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-scaffolder-common@1.5.6
 
 ## `@backstage/plugin-catalog-backend-module-unprocessed` (0.5.0 → 0.5.1)
 
@@ -1238,14 +682,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-unprocessed-entities-common@0.0.4
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/plugin-catalog-graph` (0.4.10 → 0.4.11)
 
@@ -1261,16 +697,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
   <CatalogGraphCard action={action} />
   ```
 
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/catalog-client@1.7.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/types@1.1.1
-
 ## `@backstage/plugin-catalog-import` (0.12.4 → 0.12.5)
 
 ### 0.12.5
@@ -1279,19 +705,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 720a2f9: Updated dependency `git-url-parse` to `^15.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/integration-react@1.2.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/integration@1.15.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.1.0
 
 ## `@backstage/plugin-catalog-node` (1.13.0 → 1.13.1)
 
@@ -1300,15 +713,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 0801db6: Documentation for the `testUtils` named export
-- Updated dependencies
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/plugin-catalog-react` (1.13.1 → 1.14.0)
 
@@ -1325,21 +729,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/frontend-test-utils@0.2.1
-  - @backstage/integration-react@1.2.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-permission-react@0.4.27
-  - @backstage/version-bridge@1.0.10
-  - @backstage/catalog-client@1.7.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/plugin-catalog-unprocessed-entities` (0.2.8 → 0.2.9)
 
@@ -1348,11 +737,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-config-schema` (0.1.59 → 0.1.60)
 
@@ -1361,11 +745,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-devtools` (0.1.18 → 0.1.19)
 
@@ -1374,14 +753,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-permission-react@0.4.27
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-devtools-common@0.1.12
 
 ## `@backstage/plugin-devtools-backend` (0.4.0 → 0.4.1)
 
@@ -1390,16 +761,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/cli-common@0.1.14
-  - @backstage/config@1.2.0
-  - @backstage/config-loader@1.9.1
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-devtools-common@0.1.12
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/plugin-events-backend` (0.3.12 → 0.3.13)
 
@@ -1415,14 +776,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
   The default `EventsService` implementation from `@backstage/plugin-events-node` has also been updated to use the new events bus.
 
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-openapi-utils@0.2.0
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-
 ## `@backstage/plugin-events-backend-module-aws-sqs` (0.4.2 → 0.4.3)
 
 ### 0.4.3
@@ -1431,11 +784,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-events-backend-module-azure` (0.2.11 → 0.2.12)
 
@@ -1444,9 +792,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.11 → 0.2.12)
 
@@ -1455,9 +800,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-events-backend-module-gerrit` (0.2.11 → 0.2.12)
 
@@ -1466,9 +808,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
 
 ## `@backstage/plugin-events-backend-module-github` (0.2.11 → 0.2.12)
 
@@ -1477,10 +816,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 2f88f88: Updated backend installation instructions.
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-events-backend-module-gitlab` (0.2.11 → 0.2.12)
 
@@ -1489,19 +824,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 2f88f88: Updated backend installation instructions.
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-
-## `@backstage/plugin-events-backend-test-utils` (0.1.35 → 0.1.36)
-
-### 0.1.36
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.1
 
 ## `@backstage/plugin-events-node` (0.4.0 → 0.4.1)
 
@@ -1512,10 +834,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 094eaa3: Remove references to in-repo backend-common
 - 2f88f88: Updated backend installation instructions.
 - a90ce4a: The default implementation of the `EventsService` now uses the new event bus for distributing events across multiple backend instances if the events backend plugin is installed.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-home` (0.7.11 → 0.8.0)
 
@@ -1532,18 +850,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
   Updated dependency `@rjsf/core` to `5.21.2`.
   Updated dependency `@rjsf/material-ui` to `5.21.2`.
   Updated dependency `@rjsf/validator-ajv8` to `5.21.2`.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/core-app-api@1.15.1
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/plugin-home-react@0.1.18
-  - @backstage/theme@0.6.0
-  - @backstage/catalog-client@1.7.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-home-react` (0.1.17 → 0.1.18)
 
@@ -1556,9 +862,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
   Updated dependency `@rjsf/core` to `5.21.2`.
   Updated dependency `@rjsf/material-ui` to `5.21.2`.
   Updated dependency `@rjsf/validator-ajv8` to `5.21.2`.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
 
 ## `@backstage/plugin-kubernetes` (0.11.15 → 0.11.16)
 
@@ -1569,15 +872,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - e969dc7: Move `@types/react` to a peer dependency.
 - 605e0bb: Updated dependency `@kubernetes-models/base` to `^5.0.0`.
 - 276cd3d: Updated dependency `@kubernetes-models/apimachinery` to `^2.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-kubernetes-react@0.4.4
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/catalog-model@1.7.0
-  - @backstage/plugin-kubernetes-common@0.8.3
 
 ## `@backstage/plugin-kubernetes-backend` (0.18.6 → 0.18.7)
 
@@ -1587,20 +881,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-kubernetes-node@0.1.20
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/types@1.1.1
-  - @backstage/plugin-kubernetes-common@0.8.3
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/plugin-kubernetes-cluster` (0.0.16 → 0.0.17)
 
@@ -1611,13 +891,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - e969dc7: Move `@types/react` to a peer dependency.
 - 605e0bb: Updated dependency `@kubernetes-models/base` to `^5.0.0`.
 - 276cd3d: Updated dependency `@kubernetes-models/apimachinery` to `^2.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-kubernetes-react@0.4.4
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/catalog-model@1.7.0
-  - @backstage/plugin-kubernetes-common@0.8.3
 
 ## `@backstage/plugin-kubernetes-node` (0.1.19 → 0.1.20)
 
@@ -1626,11 +899,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-kubernetes-common@0.8.3
 
 ## `@backstage/plugin-kubernetes-react` (0.4.3 → 0.4.4)
 
@@ -1641,13 +909,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - e969dc7: Move `@types/react` to a peer dependency.
 - 605e0bb: Updated dependency `@kubernetes-models/base` to `^5.0.0`.
 - 276cd3d: Updated dependency `@kubernetes-models/apimachinery` to `^2.0.0`.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-kubernetes-common@0.8.3
 
 ## `@backstage/plugin-notifications` (0.3.1 → 0.3.2)
 
@@ -1656,14 +917,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/plugin-signals-react@0.0.6
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/theme@0.6.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-notifications-common@0.0.5
 
 ## `@backstage/plugin-notifications-backend` (0.4.0 → 0.4.1)
 
@@ -1672,18 +925,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-notifications-node@0.2.7
-  - @backstage/plugin-signals-node@0.1.12
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-notifications-common@0.0.5
 
 ## `@backstage/plugin-notifications-backend-module-email` (0.3.0 → 0.3.1)
 
@@ -1692,16 +933,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-notifications-node@0.2.7
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/types@1.1.1
-  - @backstage/plugin-notifications-common@0.0.5
 
 ## `@backstage/plugin-notifications-node` (0.2.6 → 0.2.7)
 
@@ -1710,12 +941,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-signals-node@0.1.12
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/plugin-notifications-common@0.0.5
 
 ## `@backstage/plugin-org` (0.6.30 → 0.6.31)
 
@@ -1724,14 +949,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/catalog-model@1.7.0
-  - @backstage/plugin-catalog-common@1.1.0
 
 ## `@backstage/plugin-org-react` (0.1.29 → 0.1.30)
 
@@ -1740,12 +957,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/catalog-client@1.7.1
-  - @backstage/catalog-model@1.7.0
 
 ## `@backstage/plugin-permission-backend` (0.5.49 → 0.5.50)
 
@@ -1755,25 +966,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-permission-common@0.8.1
-
-## `@backstage/plugin-permission-backend-module-allow-all-policy` (0.2.0 → 0.2.1)
-
-### 0.2.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/plugin-permission-node` (0.8.3 → 0.8.4)
 
@@ -1782,12 +974,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/plugin-permission-react` (0.4.26 → 0.4.27)
 
@@ -1796,10 +982,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/config@1.2.0
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/plugin-proxy-backend` (0.5.6 → 0.5.7)
 
@@ -1809,10 +991,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-scaffolder` (1.25.1 → 1.26.0)
 
@@ -1853,22 +1031,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 11e0752: Make it possible to manually retry the scaffolder template from the step it failed
 - 09fcd95: Update the Scaffolder template editor to quickly access installed custom fields and actions when editing a template.
 - c18d925: Add tests for the `TemplateEditorToolbarFilesMenu` component.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/plugin-scaffolder-react@1.13.0
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/integration-react@1.2.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-permission-react@0.4.27
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/integration@1.15.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-scaffolder-common@1.5.6
 
 ## `@backstage/plugin-scaffolder-backend` (1.25.1 → 1.26.0)
 
@@ -1900,31 +1062,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 094eaa3: Remove references to in-repo backend-common
 - 8f0898b: Updated dependency `esbuild` to `^0.24.0`.
 - 11e0752: Make it possible to manually retry the scaffolder template from the step it failed
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/plugin-scaffolder-backend-module-github@0.5.1
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/plugin-scaffolder-backend-module-gitlab@0.6.0
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-server@0.2.1
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/integration@1.15.1
-  - @backstage/plugin-scaffolder-backend-module-azure@0.2.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-bitbucket-cloud-common@0.2.24
-  - @backstage/plugin-catalog-backend-module-scaffolder-entity-model@0.2.1
-  - @backstage/plugin-permission-common@0.8.1
-  - @backstage/plugin-scaffolder-backend-module-bitbucket@0.3.1
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-cloud@0.2.1
-  - @backstage/plugin-scaffolder-backend-module-gerrit@0.2.1
-  - @backstage/plugin-scaffolder-backend-module-gitea@0.2.1
-  - @backstage/plugin-scaffolder-common@1.5.6
 
 ## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.5.1 → 0.6.0)
 
@@ -1940,12 +1077,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
 - f2f68cf: Updated `gitlab:group:ensureExists` action to instead use oauth client.
-- Updated dependencies
-  - @backstage/plugin-scaffolder-node@0.5.0
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-scaffolder-node` (0.4.12 → 0.5.0)
 
@@ -1960,13 +1091,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 094eaa3: Remove references to in-repo backend-common
 - 11e0752: Make it possible to manually retry the scaffolder template from the step it failed
 - d7a736c: Use `branch` function instead of `checkout` function when creating branch
-- Updated dependencies
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-scaffolder-common@1.5.6
 
 ## `@backstage/plugin-scaffolder-react` (1.12.1 → 1.13.0)
 
@@ -1989,18 +1113,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
   Updated dependency `@rjsf/material-ui` to `5.21.2`.
   Updated dependency `@rjsf/validator-ajv8` to `5.21.2`.
 - 11e0752: Make it possible to manually retry the scaffolder template from the step it failed
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-permission-react@0.4.27
-  - @backstage/version-bridge@1.0.10
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/theme@0.6.0
-  - @backstage/catalog-client@1.7.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-scaffolder-common@1.5.6
 
 ## `@backstage/plugin-search` (1.4.17 → 1.4.18)
 
@@ -2010,17 +1122,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 88d03d8: Updated the default SearchType.Accordion behavior to remain open after result type selection. This is a UX improvement to reduce the number of clicks needed when toggling result type filters.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/version-bridge@1.0.10
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/plugin-search-react@1.8.1
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-search-backend` (1.5.17 → 1.6.0)
 
@@ -2034,17 +1135,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 66af016: Fix to schema to allow arbitrary query parameters.
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/plugin-search-backend-node@1.3.3
-  - @backstage/plugin-permission-node@0.8.4
-  - @backstage/backend-openapi-utils@0.2.0
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-permission-common@0.8.1
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-search-backend-module-catalog` (0.2.2 → 0.2.3)
 
@@ -2056,17 +1146,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
 - 2f88f88: Updated backend installation instructions.
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.3.3
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-permission-common@0.8.1
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-search-backend-module-elasticsearch` (1.5.6 → 1.6.0)
 
@@ -2081,12 +1160,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - d78b07c: Align the configuration schema with the docs and actual behavior of the code
 - 4b60e0c: Remove extension points from `/alpha` export, they're available from the main package already
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.3.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-search-backend-module-explore` (0.2.2 → 0.2.3)
 
@@ -2098,11 +1171,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
 - c052931: Updated dependency `@backstage-community/plugin-explore-common` to `^0.0.6`.
 - 2f88f88: Updated backend installation instructions.
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.3.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-search-backend-module-pg` (0.5.35 → 0.5.36)
 
@@ -2112,11 +1180,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.3.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.3.0 → 0.3.1)
 
@@ -2126,11 +1189,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - bc71718: Updated installation instructions in README to not include `/alpha`.
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.3.3
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-search-backend-module-techdocs` (0.2.2 → 0.3.0)
 
@@ -2146,17 +1204,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 094eaa3: Remove references to in-repo backend-common
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
 - 2f88f88: Updated backend installation instructions.
-- Updated dependencies
-  - @backstage/plugin-search-backend-node@1.3.3
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/plugin-techdocs-node@1.12.12
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-permission-common@0.8.1
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-search-backend-node` (1.3.2 → 1.3.3)
 
@@ -2165,13 +1212,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-permission-common@0.8.1
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-search-react` (1.8.0 → 1.8.1)
 
@@ -2180,14 +1220,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/version-bridge@1.0.10
-  - @backstage/theme@0.6.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-search-common@1.2.14
 
 ## `@backstage/plugin-signals` (0.0.10 → 0.0.11)
 
@@ -2196,12 +1228,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/plugin-signals-react@0.0.6
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/theme@0.6.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-signals-backend` (0.2.0 → 0.2.1)
 
@@ -2210,13 +1236,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-signals-node@0.1.12
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-signals-node` (0.1.11 → 0.1.12)
 
@@ -2225,12 +1244,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 094eaa3: Remove references to in-repo backend-common
-- Updated dependencies
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-events-node@0.4.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-signals-react` (0.0.5 → 0.0.6)
 
@@ -2239,9 +1252,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-techdocs` (1.10.10 → 1.11.0)
 
@@ -2259,23 +1269,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - e918061: Add support for mkdocs material palette conditional hashes.
 - 720a2f9: Updated dependency `git-url-parse` to `^15.0.0`.
 - e8b4966: Use more of the available space for the navigation sidebar.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/integration-react@1.2.0
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-techdocs-react@1.2.9
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/plugin-search-react@1.8.1
-  - @backstage/plugin-auth-react@0.1.7
-  - @backstage/theme@0.6.0
-  - @backstage/integration@1.15.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-search-common@1.2.14
-  - @backstage/plugin-techdocs-common@0.1.0
 
 ## `@backstage/plugin-techdocs-addons-test-utils` (1.0.39 → 1.0.40)
 
@@ -2284,16 +1277,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/plugin-catalog@1.24.0
-  - @backstage/integration-react@1.2.0
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-techdocs-react@1.2.9
-  - @backstage/core-app-api@1.15.1
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/plugin-search-react@1.8.1
-  - @backstage/test-utils@1.7.0
-  - @backstage/plugin-techdocs@1.11.0
 
 ## `@backstage/plugin-techdocs-backend` (1.10.13 → 1.11.0)
 
@@ -2307,19 +1290,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - 094eaa3: Remove references to in-repo backend-common
 - fbdc631: Allow to pass StorageOptions to GCS Publisher
-- Updated dependencies
-  - @backstage/plugin-search-backend-module-techdocs@0.3.0
-  - @backstage/plugin-catalog-node@1.13.1
-  - @backstage/plugin-techdocs-node@1.12.12
-  - @backstage/integration@1.15.1
-  - @backstage/catalog-client@1.7.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.1.0
-  - @backstage/plugin-permission-common@0.8.1
-  - @backstage/plugin-techdocs-common@0.1.0
 
 ## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.15 → 1.1.16)
 
@@ -2330,12 +1300,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - e969dc7: Move `@types/react` to a peer dependency.
 - 720a2f9: Updated dependency `git-url-parse` to `^15.0.0`.
 - e8b4966: Use more of the available space for the navigation sidebar.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/integration-react@1.2.0
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-techdocs-react@1.2.9
-  - @backstage/integration@1.15.1
 
 ## `@backstage/plugin-techdocs-node` (1.12.11 → 1.12.12)
 
@@ -2346,15 +1310,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 - 7774828: Updated dependency `@smithy/node-http-handler` to `^3.0.0`.
 - 720a2f9: Updated dependency `git-url-parse` to `^15.0.0`.
 - fbdc631: Allow to pass StorageOptions to GCS Publisher
-- Updated dependencies
-  - @backstage/integration@1.15.1
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/integration-aws-node@0.1.12
-  - @backstage/plugin-search-common@1.2.14
-  - @backstage/plugin-techdocs-common@0.1.0
 
 ## `@backstage/plugin-techdocs-react` (1.2.8 → 1.2.9)
 
@@ -2363,12 +1318,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/version-bridge@1.0.10
-  - @backstage/catalog-model@1.7.0
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-user-settings` (0.8.13 → 0.8.14)
 
@@ -2378,19 +1327,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 - 0040632: `useUserProfile` will now use the user's picture stored in the catalog as a fallback if the identity provider doesn't return a picture.
-- Updated dependencies
-  - @backstage/core-components@0.15.1
-  - @backstage/frontend-plugin-api@0.9.0
-  - @backstage/plugin-signals-react@0.0.6
-  - @backstage/core-compat-api@0.3.1
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/core-app-api@1.15.1
-  - @backstage/plugin-catalog-react@1.14.0
-  - @backstage/theme@0.6.0
-  - @backstage/catalog-model@1.7.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-user-settings-common@0.0.1
 
 ## `@backstage/plugin-user-settings-backend` (0.2.24 → 0.2.25)
 
@@ -2399,15 +1335,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - 3109c24: The export for the new backend system at the `/alpha` export is now also available via the main entry point, which means that you can remove the `/alpha` suffix from the import.
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/plugin-auth-node@0.5.3
-  - @backstage/plugin-signals-node@0.1.12
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-user-settings-common@0.0.1
 
 ## `@backstage/repo-tools` (0.9.7 → 0.10.0)
 
@@ -2428,13 +1355,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
   these can be ignored using the `-o` option, for example, `backstage-repo-tools api-reports -o ae-undocumented,ae-wrong-input-file-type`.
 
 - 248793e: Updated dependency `@useoptic/optic` to `^1.0.0`.
-- Updated dependencies
-  - @backstage/cli-node@0.2.9
-  - @backstage/backend-plugin-api@1.0.1
-  - @backstage/catalog-model@1.7.0
-  - @backstage/cli-common@0.1.14
-  - @backstage/config-loader@1.9.1
-  - @backstage/errors@1.2.4
 
 ## `@backstage/test-utils` (1.6.0 → 1.7.0)
 
@@ -2455,14 +1375,6 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 #### Patch Changes
 
 - e969dc7: Move `@types/react` to a peer dependency.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.10.0
-  - @backstage/plugin-permission-react@0.4.27
-  - @backstage/core-app-api@1.15.1
-  - @backstage/theme@0.6.0
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-permission-common@0.8.1
 
 ## `@backstage/theme` (0.5.7 → 0.6.0)
 
@@ -2484,15 +1396,4 @@ Changes between 1.31.4 and 1.32.0 — 141 changed and 0 added packages.
 
 - e969dc7: Move `@types/react` to a peer dependency.
 
-## `@techdocs/cli` (1.8.19 → 1.8.20)
-
-### 1.8.20
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-defaults@0.5.1
-  - @backstage/plugin-techdocs-node@1.12.12
-  - @backstage/catalog-model@1.7.0
-  - @backstage/cli-common@0.1.14
-  - @backstage/config@1.2.0
+_Excluded dependency updates for packages: `@backstage/backend-plugin-api`, `@backstage/frontend-defaults`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-bitbucket-cloud-common`, `@backstage/plugin-catalog-backend-module-backstage-openapi`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-github-org`, `@backstage/plugin-catalog-backend-module-ldap`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@techdocs/cli`._

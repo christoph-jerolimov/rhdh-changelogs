@@ -2,18 +2,6 @@
 
 Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
-## `@backstage/app-defaults` (1.7.1 → 1.7.2)
-
-### 1.7.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/core-app-api@1.19.2
-  - @backstage/plugin-permission-react@0.4.38
-
 ## `@backstage/backend-app-api` (1.2.8 → 1.3.0)
 
 ### 1.3.0
@@ -25,9 +13,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
 
 ## `@backstage/backend-defaults` (0.13.0 → 0.13.1)
 
@@ -50,17 +35,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
 - b2f6a5a: Fix #31348 issue where BitbucketUrlReader ignored provided token and instead always used integration credentials
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/backend-app-api@1.3.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config-loader@1.10.6
-  - @backstage/config@1.3.6
-  - @backstage/cli-node@0.2.15
-  - @backstage/integration-aws-node@0.1.19
-  - @backstage/plugin-permission-node@0.10.6
 
 ## `@backstage/backend-dynamic-feature-service` (0.7.5 → 0.7.6)
 
@@ -69,32 +43,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/plugin-catalog-backend@3.2.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-search-backend-node@1.3.17
-  - @backstage/plugin-events-backend@0.5.8
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config-loader@1.10.6
-  - @backstage/config@1.3.6
-  - @backstage/cli-node@0.2.15
-  - @backstage/plugin-scaffolder-node@0.12.1
-  - @backstage/backend-openapi-utils@0.6.3
-  - @backstage/plugin-app-node@0.1.39
-  - @backstage/plugin-permission-node@0.10.6
-  - @backstage/plugin-search-common@1.2.21
-
-## `@backstage/backend-openapi-utils` (0.6.2 → 0.6.3)
-
-### 0.6.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
 
 ## `@backstage/backend-plugin-api` (1.4.4 → 1.5.0)
 
@@ -104,14 +52,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - a17d9df: Promote `instanceMetadata` service to main entrypoint.
 - 62fc2de: Explicitly mark `coreServices.rootInstanceMetadata` as a root service.
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
-  - @backstage/plugin-permission-node@0.10.6
 
 ## `@backstage/backend-test-utils` (1.9.1 → 1.10.0)
 
@@ -127,23 +67,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - f3001fd: Tweak some of the mock services to have more precise types
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/backend-app-api@1.3.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
-
-## `@backstage/catalog-client` (1.12.0 → 1.12.1)
-
-### 1.12.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/catalog-model` (1.7.5 → 1.7.6)
 
@@ -165,13 +88,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
 - 279279c: Fixes an issue where using the `backstage-cli new --scope` command with a scope that already includes the `@` symbol (e.g., `@backstage-community`) would result in a double `@@` prefix in the generated package name, causing invalid `package.json` files.
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/eslint-plugin@0.2.0
-  - @backstage/config-loader@1.10.6
-  - @backstage/config@1.3.6
-  - @backstage/cli-node@0.2.15
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/cli-node` (0.2.14 → 0.2.15)
 
@@ -196,8 +112,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/config@1.3.6
 
 ## `@backstage/core-app-api` (1.19.1 → 1.19.2)
 
@@ -207,9 +121,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/config@1.3.6
 
 ## `@backstage/core-compat-api` (0.5.3 → 0.5.4)
 
@@ -218,10 +129,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 4d03f08: Internal refactor of route reference implementations with minor updates to the `toString` implementations.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-plugin-api@1.12.0
 
 ## `@backstage/core-components` (0.18.2 → 0.18.3)
 
@@ -234,9 +141,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 - 96ad674: Line numbers in LogViewer will not be selectable in UI anymore
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/config@1.3.6
 
 ## `@backstage/core-plugin-api` (1.11.1 → 1.12.0)
 
@@ -250,8 +154,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/config@1.3.6
 
 ## `@backstage/create-app` (0.7.5 → 0.7.6)
 
@@ -271,15 +173,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - b29a856: Fixed styling of the dev app by adding a lazy import of `@backstage/ui/css/styles.css`.
-- Updated dependencies
-  - @backstage/ui@0.9.0
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/core-app-api@1.19.2
-  - @backstage/catalog-model@1.7.6
-  - @backstage/app-defaults@1.7.2
-  - @backstage/integration-react@1.2.12
 
 ## `@backstage/eslint-plugin` (0.1.12 → 0.2.0)
 
@@ -297,35 +190,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 4d03f08: Internal refactor of route reference implementations with minor updates to the `toString` implementations.
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/core-app-api@1.19.2
-  - @backstage/config@1.3.6
-  - @backstage/frontend-defaults@0.3.3
-
-## `@backstage/frontend-defaults` (0.3.2 → 0.3.3)
-
-### 0.3.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/frontend-app-api@0.13.2
-  - @backstage/core-components@0.18.3
-  - @backstage/config@1.3.6
-  - @backstage/plugin-app@0.3.2
-
-## `@backstage/frontend-dynamic-feature-loader` (0.1.6 → 0.1.7)
-
-### 0.1.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/config@1.3.6
 
 ## `@backstage/frontend-plugin-api` (0.12.1 → 0.13.0)
 
@@ -354,22 +218,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 878c251: Updated to `ExtensionInput` to make all type parameters optional.
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-
-## `@backstage/frontend-test-utils` (0.4.0 → 0.4.1)
-
-### 0.4.1
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/frontend-app-api@0.13.2
-  - @backstage/config@1.3.6
-  - @backstage/plugin-app@0.3.2
-  - @backstage/test-utils@1.7.13
 
 ## `@backstage/integration` (1.18.1 → 1.18.2)
 
@@ -389,8 +237,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
   ```
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/config@1.3.6
 
 ## `@backstage/integration-aws-node` (0.1.18 → 0.1.19)
 
@@ -399,19 +245,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/config@1.3.6
-
-## `@backstage/integration-react` (1.2.11 → 1.2.12)
-
-### 1.2.12
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/config@1.3.6
 
 ## `@backstage/plugin-api-docs` (0.13.0 → 0.13.1)
 
@@ -420,52 +253,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 7c281a5: Add i18n support for Raw tab title and an error message
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-catalog@1.32.0
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
-
-## `@backstage/plugin-app` (0.3.1 → 0.3.2)
-
-### 0.3.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/integration-react@1.2.12
-
-## `@backstage/plugin-app-backend` (0.5.7 → 0.5.8)
-
-### 0.5.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config-loader@1.10.6
-  - @backstage/config@1.3.6
-  - @backstage/plugin-app-node@0.1.39
-
-## `@backstage/plugin-app-node` (0.1.38 → 0.1.39)
-
-### 0.1.39
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config-loader@1.10.6
 
 ## `@backstage/plugin-app-visualizer` (0.1.24 → 0.1.25)
 
@@ -475,11 +262,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - e81b3f0: Improve tree visualizer to use a horizontal layout and fill the content space.
 - 722e2df: Migrated to use `@backstage/ui`.
-- Updated dependencies
-  - @backstage/ui@0.9.0
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
 
 ## `@backstage/plugin-auth` (0.1.1 → 0.1.2)
 
@@ -488,9 +270,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 1609e79: Authentication content screen now uses application title.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-components@0.18.3
 
 ## `@backstage/plugin-auth-backend` (0.25.5 → 0.25.6)
 
@@ -504,75 +283,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
   Maximum expiration for the DCR token is 24 hours. Default expiration is 1 hour.
 
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-
-## `@backstage/plugin-auth-backend-module-atlassian-provider` (0.4.8 → 0.4.9)
-
-### 0.4.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-auth0-provider` (0.2.8 → 0.2.9)
-
-### 0.2.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.4.8 → 0.4.9)
-
-### 0.4.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-backend@0.25.6
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (0.2.13 → 0.2.14)
-
-### 0.2.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/catalog-model@1.7.6
-
-## `@backstage/plugin-auth-backend-module-bitbucket-provider` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-bitbucket-server-provider` (0.2.8 → 0.2.9)
-
-### 0.2.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
 ## `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (0.4.8 → 0.4.9)
 
 ### 0.4.9
@@ -580,156 +290,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.4.8 → 0.4.9)
-
-### 0.4.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-github-provider` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-gitlab-provider` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-google-provider` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-guest-provider` (0.2.13 → 0.2.14)
-
-### 0.2.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/catalog-model@1.7.6
-
-## `@backstage/plugin-auth-backend-module-microsoft-provider` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-oauth2-provider` (0.4.8 → 0.4.9)
-
-### 0.4.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.2.13 → 0.2.14)
-
-### 0.2.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-oidc-provider` (0.4.8 → 0.4.9)
-
-### 0.4.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-backend@0.25.6
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-auth-backend-module-okta-provider` (0.2.8 → 0.2.9)
-
-### 0.2.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-onelogin-provider` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-
-## `@backstage/plugin-auth-backend-module-openshift-provider` (0.1.1 → 0.1.2)
-
-### 0.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/catalog-model@1.7.6
-
-## `@backstage/plugin-auth-backend-module-pinniped-provider` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.5.8 → 0.5.9)
-
-### 0.5.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-auth-node` (0.6.8 → 0.6.9)
 
@@ -738,21 +298,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
-
-## `@backstage/plugin-auth-react` (0.1.20 → 0.1.21)
-
-### 0.1.21
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
 
 ## `@backstage/plugin-bitbucket-cloud-common` (0.3.3 → 0.3.4)
 
@@ -772,8 +317,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
   ```
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/integration@1.18.2
 
 ## `@backstage/plugin-catalog` (1.31.4 → 1.32.0)
 
@@ -788,21 +331,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 - b500bcc: Fix React warnings for elements not having stable keys.
 - a87c0a5: Fixed responsiveness issues with catalog entity content layout using the new frontend system.
 - aff04d3: Fixed missing margins for entity warning content area on catalog entity page in NFS.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-search-react@1.10.0
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-techdocs-react@1.3.5
-  - @backstage/catalog-client@1.12.1
-  - @backstage/integration-react@1.2.12
-  - @backstage/plugin-catalog-common@1.1.7
-  - @backstage/plugin-scaffolder-common@1.7.3
-  - @backstage/plugin-search-common@1.2.21
 
 ## `@backstage/plugin-catalog-backend` (3.1.2 → 3.2.0)
 
@@ -817,18 +345,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/backend-openapi-utils@0.6.3
-  - @backstage/catalog-client@1.12.1
-  - @backstage/plugin-catalog-common@1.1.7
-  - @backstage/plugin-permission-node@0.10.6
 
 ## `@backstage/plugin-catalog-backend-module-aws` (0.4.16 → 0.4.17)
 
@@ -837,16 +353,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-kubernetes-common@0.9.8
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/integration-aws-node@0.1.19
-  - @backstage/plugin-catalog-common@1.1.7
 
 ## `@backstage/plugin-catalog-backend-module-azure` (0.3.10 → 0.3.11)
 
@@ -855,12 +361,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-catalog-common@1.1.7
 
 ## `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.5.7 → 0.5.8)
 
@@ -869,82 +369,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/backend-openapi-utils@0.6.3
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.5.4 → 0.5.5)
-
-### 0.5.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/plugin-bitbucket-cloud-common@0.3.4
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
-
-## `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.5.4 → 0.5.5)
-
-### 0.5.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
-
-## `@backstage/plugin-catalog-backend-module-gcp` (0.3.13 → 0.3.14)
-
-### 0.3.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-kubernetes-common@0.9.8
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-
-## `@backstage/plugin-catalog-backend-module-gerrit` (0.3.7 → 0.3.8)
-
-### 0.3.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-catalog-common@1.1.7
-
-## `@backstage/plugin-catalog-backend-module-gitea` (0.1.5 → 0.1.6)
-
-### 0.1.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-catalog-common@1.1.7
 
 ## `@backstage/plugin-catalog-backend-module-github` (0.11.1 → 0.11.2)
 
@@ -953,14 +377,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 999d1c1: Added configurable `pageSizes` for GitHub GraphQL API queries to prevent `RESOURCE_LIMITS_EXCEEDED` errors with organizations with large number of repositories. Please see the [GitHub Discovery documentation](https://backstage.io/docs/integrations/github/discovery#configuration) for new configuration options.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
 
 ## `@backstage/plugin-catalog-backend-module-github-org` (0.3.15 → 0.3.16)
 
@@ -969,40 +385,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 999d1c1: Added configurable `pageSizes` for GitHub GraphQL API queries to prevent `RESOURCE_LIMITS_EXCEEDED` errors with organizations with large number of teams and members. Please see the [GitHub Org Data documentation](https://backstage.io/docs/integrations/github/org#configuration-details) for new configuration options.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-catalog-backend-module-github@0.11.2
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-catalog-backend-module-gitlab` (0.7.4 → 0.7.5)
-
-### 0.7.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
-
-## `@backstage/plugin-catalog-backend-module-gitlab-org` (0.2.14 → 0.2.15)
-
-### 0.2.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/plugin-catalog-backend-module-gitlab@0.7.5
 
 ## `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.5 → 0.7.6)
 
@@ -1011,15 +393,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 70745c5: Correctly handle entity removal computation when DB count query returns string
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/plugin-catalog-backend@3.2.0
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-catalog-backend-module-ldap` (0.11.10 → 0.12.0)
 
@@ -1097,23 +470,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
-
-## `@backstage/plugin-catalog-backend-module-logs` (0.1.15 → 0.1.16)
-
-### 0.1.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-backend@3.2.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
 
 ## `@backstage/plugin-catalog-backend-module-msgraph` (0.8.1 → 0.8.2)
 
@@ -1122,12 +478,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
 
 ## `@backstage/plugin-catalog-backend-module-openapi` (0.2.15 → 0.2.16)
 
@@ -1136,37 +486,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - a5bcb2a: fix wrong dereferencing for AsyncApi 3 documents
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
-
-## `@backstage/plugin-catalog-backend-module-puppetdb` (0.2.15 → 0.2.16)
-
-### 0.2.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-
-## `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.2.13 → 0.2.14)
-
-### 0.2.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
-  - @backstage/plugin-scaffolder-common@1.7.3
 
 ## `@backstage/plugin-catalog-backend-module-unprocessed` (0.6.5 → 0.6.6)
 
@@ -1175,24 +494,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-unprocessed-entities-common@0.0.11
-
-## `@backstage/plugin-catalog-common` (1.1.6 → 1.1.7)
-
-### 1.1.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-search-common@1.2.21
 
 ## `@backstage/plugin-catalog-graph` (0.5.2 → 0.5.3)
 
@@ -1204,14 +505,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 - 1c7e1ce: - Revert `viewbox` back to old values.
   - Added `fullScreen` prop to `EntityCatalogGraphCard`
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
 
 ## `@backstage/plugin-catalog-import` (0.13.6 → 0.13.7)
 
@@ -1221,19 +514,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - f987bfd: Fixed missing `catalog.entity.create` permission authorization in the default page extension.
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/integration@1.18.2
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
-  - @backstage/integration-react@1.2.12
-  - @backstage/plugin-catalog-common@1.1.7
 
 ## `@backstage/plugin-catalog-node` (1.19.1 → 1.20.0)
 
@@ -1243,16 +523,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 9d3ec06: Make YAML merge (<<:) support configurable in the Backstage Catalog instead of always being enabled
 - 8c26af4: Enable YAML merge keys in yamlPlaceholderResolver
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
-  - @backstage/plugin-catalog-common@1.1.7
-  - @backstage/plugin-permission-node@0.10.6
 
 ## `@backstage/plugin-catalog-react` (1.21.2 → 1.21.3)
 
@@ -1264,18 +534,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 - 2b7924b: Apply default ordering of templates
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
 - 904d136: Fixed catalog filter "all" not appearing as selected when set as the initially selected filter.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/catalog-model@1.7.6
-  - @backstage/frontend-test-utils@0.4.1
-  - @backstage/catalog-client@1.12.1
-  - @backstage/integration-react@1.2.12
-  - @backstage/plugin-catalog-common@1.1.7
 
 ## `@backstage/plugin-catalog-unprocessed-entities` (0.2.22 → 0.2.23)
 
@@ -1284,45 +542,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/catalog-model@1.7.6
-
-## `@backstage/plugin-catalog-unprocessed-entities-common` (0.0.10 → 0.0.11)
-
-### 0.0.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.3
-
-## `@backstage/plugin-config-schema` (0.1.73 → 0.1.74)
-
-### 0.1.74
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-
-## `@backstage/plugin-devtools` (0.1.32 → 0.1.33)
-
-### 0.1.33
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-devtools-common@0.1.19
-  - @backstage/plugin-permission-react@0.4.38
 
 ## `@backstage/plugin-devtools-backend` (0.5.10 → 0.5.11)
 
@@ -1331,14 +550,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-devtools-common@0.1.19
-  - @backstage/config-loader@1.10.6
-  - @backstage/config@1.3.6
-  - @backstage/plugin-permission-node@0.10.6
 
 ## `@backstage/plugin-devtools-common` (0.1.18 → 0.1.19)
 
@@ -1347,8 +558,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.3
 
 ## `@backstage/plugin-events-backend` (0.5.7 → 0.5.8)
 
@@ -1357,11 +566,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-  - @backstage/backend-openapi-utils@0.6.3
 
 ## `@backstage/plugin-events-backend-module-aws-sqs` (0.4.16 → 0.4.17)
 
@@ -1370,84 +574,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-events-backend-module-azure` (0.2.25 → 0.2.26)
-
-### 0.2.26
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-
-## `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.2.25 → 0.2.26)
-
-### 0.2.26
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-
-## `@backstage/plugin-events-backend-module-bitbucket-server` (0.1.6 → 0.1.7)
-
-### 0.1.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-
-## `@backstage/plugin-events-backend-module-gerrit` (0.2.25 → 0.2.26)
-
-### 0.2.26
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-
-## `@backstage/plugin-events-backend-module-github` (0.4.5 → 0.4.6)
-
-### 0.4.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-events-backend-module-gitlab` (0.3.6 → 0.3.7)
-
-### 0.3.7
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-events-backend-module-google-pubsub` (0.1.5 → 0.1.6)
-
-### 0.1.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
 
 ## `@backstage/plugin-events-backend-module-kafka` (0.1.4 → 0.1.5)
 
@@ -1456,19 +582,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-events-backend-test-utils` (0.1.49 → 0.1.50)
-
-### 0.1.50
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-events-node@0.4.17
 
 ## `@backstage/plugin-events-node` (0.4.16 → 0.4.17)
 
@@ -1477,8 +590,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
 
 ## `@backstage/plugin-gateway-backend` (1.0.6 → 1.1.0)
 
@@ -1489,11 +600,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 - 229f63e: Added hop count tracking to prevent proxy loops. The gateway now tracks the number of proxy hops using the `backstage-gateway-hops` header and rejects requests that exceed 3 hops with a 508 Loop Detected error.
 - a17d9df: Update usage of the `instanceMetadata` service.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-
 ## `@backstage/plugin-home` (0.8.13 → 0.8.14)
 
 ### 0.8.14
@@ -1501,45 +607,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 2ac5d29: Allow customization of `VisitList` by adding optional `enrichVisit`, `transformPathname`, `canSave` functions to `VisitsStorageApi`, along with `VisitDisplayProvider` for colors, labels
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/core-app-api@1.19.2
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-home-react@0.1.32
-  - @backstage/catalog-client@1.12.1
-
-## `@backstage/plugin-home-react` (0.1.31 → 0.1.32)
-
-### 0.1.32
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-
-## `@backstage/plugin-kubernetes` (0.12.12 → 0.12.13)
-
-### 0.12.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/plugin-kubernetes-common@0.9.8
-  - @backstage/plugin-kubernetes-react@0.5.13
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-kubernetes-backend` (0.20.3 → 0.20.4)
 
@@ -1550,32 +617,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 - 71c22f3: Removed/moved unused dependencies
 - 1906d37: Updated dependency `@kubernetes/client-node` to `1.4.0`.
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-kubernetes-common@0.9.8
-  - @backstage/plugin-kubernetes-node@0.3.6
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/integration-aws-node@0.1.19
-  - @backstage/catalog-client@1.12.1
-  - @backstage/plugin-permission-node@0.10.6
-
-## `@backstage/plugin-kubernetes-cluster` (0.0.30 → 0.0.31)
-
-### 0.0.31
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/plugin-kubernetes-common@0.9.8
-  - @backstage/plugin-kubernetes-react@0.5.13
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-kubernetes-common` (0.9.7 → 0.9.8)
 
@@ -1584,9 +625,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 1906d37: Updated dependency `@kubernetes/client-node` to `1.4.0`.
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-kubernetes-node` (0.3.5 → 0.3.6)
 
@@ -1596,10 +634,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 1906d37: Updated dependency `@kubernetes/client-node` to `1.4.0`.
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-kubernetes-common@0.9.8
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-kubernetes-react` (0.5.12 → 0.5.13)
 
@@ -1609,11 +643,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 1906d37: Updated dependency `@kubernetes/client-node` to `1.4.0`.
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/core-components@0.18.3
-  - @backstage/plugin-kubernetes-common@0.9.8
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-mcp-actions-backend` (0.1.4 → 0.1.5)
 
@@ -1622,11 +651,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/catalog-client@1.12.1
 
 ## `@backstage/plugin-mui-to-bui` (0.2.0 → 0.2.1)
 
@@ -1635,25 +659,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 5c614ff: Updated BUI checkbox preview example to align with new component API.
-- Updated dependencies
-  - @backstage/ui@0.9.0
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/core-plugin-api@1.12.0
-
-## `@backstage/plugin-notifications` (0.5.10 → 0.5.11)
-
-### 0.5.11
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-notifications-common@0.2.0
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-signals-react@0.0.17
 
 ## `@backstage/plugin-notifications-backend` (0.5.11 → 0.6.0)
 
@@ -1676,14 +681,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
   allowing users to customize their preferences immediately.
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/plugin-notifications-common@0.2.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-notifications-node@0.2.21
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-signals-node@0.1.26
 
 ## `@backstage/plugin-notifications-backend-module-email` (0.3.15 → 0.3.16)
 
@@ -1693,15 +690,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 22a5362: Updated `AWS SES` client to version 2 to support `nodemailer` version 7.
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/plugin-notifications-common@0.2.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-notifications-node@0.2.21
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/integration-aws-node@0.1.19
-  - @backstage/catalog-client@1.12.1
 
 ## `@backstage/plugin-notifications-backend-module-slack` (0.2.0 → 0.2.1)
 
@@ -1710,13 +698,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - d959bec: When an error message is logged due to inability to send a message with the Slack SDK, include the Slack Channel ID in the message to aid debugging.
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/plugin-notifications-common@0.2.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-notifications-node@0.2.21
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-notifications-common` (0.1.1 → 0.2.0)
 
@@ -1729,11 +710,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
   This will be handy if you want to use a "opt-in" strategy.
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/config@1.3.6
-
 ## `@backstage/plugin-notifications-node` (0.2.20 → 0.2.21)
 
 ### 0.2.21
@@ -1741,12 +717,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/plugin-notifications-common@0.2.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
-  - @backstage/plugin-signals-node@0.1.26
 
 ## `@backstage/plugin-org` (0.6.45 → 0.6.46)
 
@@ -1755,27 +725,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 6db9e7e: Improved responsiveness of GroupProfileCard component
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-catalog-common@1.1.7
-
-## `@backstage/plugin-org-react` (0.1.43 → 0.1.44)
-
-### 0.1.44
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
 
 ## `@backstage/plugin-permission-backend` (0.7.5 → 0.7.6)
 
@@ -1784,24 +733,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
-  - @backstage/plugin-permission-node@0.10.6
-
-## `@backstage/plugin-permission-backend-module-allow-all-policy` (0.2.13 → 0.2.14)
-
-### 0.2.14
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/plugin-permission-node@0.10.6
 
 ## `@backstage/plugin-permission-common` (0.9.2 → 0.9.3)
 
@@ -1810,20 +741,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
-- Updated dependencies
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-permission-node` (0.10.5 → 0.10.6)
-
-### 0.10.6
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
 
 ## `@backstage/plugin-permission-react` (0.4.37 → 0.4.38)
 
@@ -1832,29 +749,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-proxy-backend` (0.6.7 → 0.6.8)
-
-### 0.6.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-proxy-node@0.1.10
-
-## `@backstage/plugin-proxy-node` (0.1.9 → 0.1.10)
-
-### 0.1.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
 
 ## `@backstage/plugin-scaffolder` (1.34.2 → 1.34.3)
 
@@ -1863,21 +757,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/integration@1.18.2
-  - @backstage/plugin-scaffolder-react@1.19.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-techdocs-react@1.3.5
-  - @backstage/catalog-client@1.12.1
-  - @backstage/integration-react@1.2.12
-  - @backstage/plugin-catalog-common@1.1.7
-  - @backstage/plugin-scaffolder-common@1.7.3
 
 ## `@backstage/plugin-scaffolder-backend` (3.0.0 → 3.0.1)
 
@@ -1886,42 +765,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-cloud@0.2.15
-  - @backstage/plugin-scaffolder-backend-module-bitbucket@0.3.16
-  - @backstage/plugin-bitbucket-cloud-common@0.3.4
-  - @backstage/integration@1.18.2
-  - @backstage/plugin-scaffolder-backend-module-gitlab@0.10.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-  - @backstage/backend-openapi-utils@0.6.3
-  - @backstage/plugin-catalog-backend-module-scaffolder-entity-model@0.2.14
-  - @backstage/plugin-permission-node@0.10.6
-  - @backstage/plugin-scaffolder-backend-module-azure@0.2.15
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-server@0.2.15
-  - @backstage/plugin-scaffolder-backend-module-gerrit@0.2.15
-  - @backstage/plugin-scaffolder-backend-module-gitea@0.2.15
-  - @backstage/plugin-scaffolder-backend-module-github@0.9.2
-  - @backstage/plugin-scaffolder-common@1.7.3
-
-## `@backstage/plugin-scaffolder-backend-module-azure` (0.2.14 → 0.2.15)
-
-### 0.2.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
 
 ## `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.3.15 → 0.3.16)
 
@@ -1940,14 +783,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
         token: my-token
   ```
 
-- Updated dependencies
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-cloud@0.2.15
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-  - @backstage/plugin-scaffolder-backend-module-bitbucket-server@0.2.15
-
 ## `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.2.14 → 0.2.15)
 
 ### 0.2.15
@@ -1965,50 +800,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
         token: my-token
   ```
 
-- Updated dependencies
-  - @backstage/plugin-bitbucket-cloud-common@0.3.4
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.2.14 → 0.2.15)
-
-### 0.2.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.3.14 → 0.3.15)
-
-### 0.3.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.3.16 → 0.3.17)
-
-### 0.3.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
 ## `@backstage/plugin-scaffolder-backend-module-gcp` (0.2.14 → 0.2.15)
 
 ### 0.2.15
@@ -2016,49 +807,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-backend-module-gerrit` (0.2.14 → 0.2.15)
-
-### 0.2.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-backend-module-gitea` (0.2.14 → 0.2.15)
-
-### 0.2.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-backend-module-github` (0.9.1 → 0.9.2)
-
-### 0.9.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-scaffolder-node@0.12.1
 
 ## `@backstage/plugin-scaffolder-backend-module-gitlab` (0.9.6 → 0.10.0)
 
@@ -2071,23 +819,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-backend-module-notifications` (0.1.15 → 0.1.16)
-
-### 0.1.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-notifications-common@0.2.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-notifications-node@0.2.21
-  - @backstage/plugin-scaffolder-node@0.12.1
 
 ## `@backstage/plugin-scaffolder-backend-module-rails` (0.5.14 → 0.5.15)
 
@@ -2096,44 +827,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-backend-module-sentry` (0.2.14 → 0.2.15)
-
-### 0.2.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.15 → 0.4.16)
-
-### 0.4.16
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-scaffolder-node-test-utils@0.3.5
-  - @backstage/plugin-scaffolder-node@0.12.1
-
-## `@backstage/plugin-scaffolder-common` (1.7.2 → 1.7.3)
-
-### 1.7.3
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-scaffolder-node` (0.12.0 → 0.12.1)
 
@@ -2142,12 +835,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-scaffolder-common@1.7.3
 
 ## `@backstage/plugin-scaffolder-node-test-utils` (0.3.4 → 0.3.5)
 
@@ -2156,10 +843,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-test-utils@1.10.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-scaffolder-node@0.12.1
 
 ## `@backstage/plugin-scaffolder-react` (1.19.2 → 1.19.3)
 
@@ -2169,15 +852,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 886a8a1: Fixed a bug in the Scaffolder's template parsing in the `useTemplateSchema` hook by removing the title instead of setting it to `undefined`
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
-  - @backstage/plugin-scaffolder-common@1.7.3
 
 ## `@backstage/plugin-search` (1.4.31 → 1.5.0)
 
@@ -2187,17 +861,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - a521911: Add support for customizable icons in `SearchResultListItemBlueprint` and related components
 
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-search-react@1.10.0
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-search-common@1.2.21
-
 ## `@backstage/plugin-search-backend` (2.0.7 → 2.0.8)
 
 ### 2.0.8
@@ -2206,32 +869,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - b2bef92: Convert all enums to erasable-syntax compliant patterns
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-search-backend-node@1.3.17
-  - @backstage/config@1.3.6
-  - @backstage/backend-openapi-utils@0.6.3
-  - @backstage/plugin-permission-node@0.10.6
-  - @backstage/plugin-search-common@1.2.21
-
-## `@backstage/plugin-search-backend-module-catalog` (0.3.9 → 0.3.10)
-
-### 0.3.10
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-search-backend-node@1.3.17
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
-  - @backstage/plugin-catalog-common@1.1.7
-  - @backstage/plugin-search-common@1.2.21
 
 ## `@backstage/plugin-search-backend-module-elasticsearch` (1.7.7 → 1.7.8)
 
@@ -2241,24 +878,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 71c22f3: Removed/moved unused dependencies
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-search-backend-node@1.3.17
-  - @backstage/config@1.3.6
-  - @backstage/integration-aws-node@0.1.19
-  - @backstage/plugin-search-common@1.2.21
-
-## `@backstage/plugin-search-backend-module-explore` (0.3.8 → 0.3.9)
-
-### 0.3.9
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-search-backend-node@1.3.17
-  - @backstage/config@1.3.6
-  - @backstage/plugin-search-common@1.2.21
 
 ## `@backstage/plugin-search-backend-module-pg` (0.5.49 → 0.5.50)
 
@@ -2267,41 +886,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-search-backend-node@1.3.17
-  - @backstage/config@1.3.6
-  - @backstage/plugin-search-common@1.2.21
-
-## `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.3.14 → 0.3.15)
-
-### 0.3.15
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-search-backend-node@1.3.17
-  - @backstage/config@1.3.6
-  - @backstage/plugin-search-common@1.2.21
-
-## `@backstage/plugin-search-backend-module-techdocs` (0.4.7 → 0.4.8)
-
-### 0.4.8
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/plugin-search-backend-node@1.3.17
-  - @backstage/plugin-techdocs-node@1.13.9
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
-  - @backstage/plugin-catalog-common@1.1.7
-  - @backstage/plugin-search-common@1.2.21
 
 ## `@backstage/plugin-search-backend-node` (1.3.16 → 1.3.17)
 
@@ -2310,20 +894,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/config@1.3.6
-  - @backstage/plugin-search-common@1.2.21
-
-## `@backstage/plugin-search-common` (1.2.20 → 1.2.21)
-
-### 1.2.21
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.9.3
 
 ## `@backstage/plugin-search-react` (1.9.5 → 1.10.0)
 
@@ -2336,11 +906,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-search-common@1.2.21
 
 ## `@backstage/plugin-signals` (0.0.24 → 0.0.25)
 
@@ -2351,12 +916,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 - 71c22f3: Removed/moved unused dependencies
 - f0f006e: Fixes a bug where the `SignalClient` would try to subscribe to the same channel twice after an error, instead of just once.
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-signals-react@0.0.17
 
 ## `@backstage/plugin-signals-backend` (0.3.9 → 0.3.10)
 
@@ -2365,32 +924,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 71c22f3: Removed/moved unused dependencies
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/config@1.3.6
-  - @backstage/plugin-signals-node@0.1.26
-
-## `@backstage/plugin-signals-node` (0.1.25 → 0.1.26)
-
-### 0.1.26
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-events-node@0.4.17
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/config@1.3.6
-
-## `@backstage/plugin-signals-react` (0.0.16 → 0.0.17)
-
-### 0.0.17
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.0
 
 ## `@backstage/plugin-techdocs` (1.15.2 → 1.16.0)
 
@@ -2404,38 +937,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 71c22f3: Removed/moved unused dependencies
 - a4d4a70: Fixed an issue where the entire TechDocs page would re-render when navigating between pages within the same entity's documentation.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-search-react@1.10.0
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/integration@1.18.2
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-techdocs-react@1.3.5
-  - @backstage/catalog-client@1.12.1
-  - @backstage/integration-react@1.2.12
-  - @backstage/plugin-auth-react@0.1.21
-  - @backstage/plugin-search-common@1.2.21
-
-## `@backstage/plugin-techdocs-addons-test-utils` (1.1.1 → 1.1.2)
-
-### 1.1.2
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/plugin-techdocs@1.16.0
-  - @backstage/plugin-search-react@1.10.0
-  - @backstage/plugin-catalog@1.32.0
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/core-app-api@1.19.2
-  - @backstage/plugin-techdocs-react@1.3.5
-  - @backstage/integration-react@1.2.12
-  - @backstage/test-utils@1.7.13
 
 ## `@backstage/plugin-techdocs-backend` (2.1.1 → 2.1.2)
 
@@ -2444,15 +945,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 71c22f3: Removed/moved unused dependencies
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/plugin-catalog-node@1.20.0
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-techdocs-node@1.13.9
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/catalog-client@1.12.1
 
 ## `@backstage/plugin-techdocs-module-addons-contrib` (1.1.29 → 1.1.30)
 
@@ -2461,13 +953,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 6929480: ExpandableCollapse Techdocs Addon was breaking native sidebar collapse on Firefox
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/integration@1.18.2
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-techdocs-react@1.3.5
-  - @backstage/integration-react@1.2.12
 
 ## `@backstage/plugin-techdocs-node` (1.13.8 → 1.13.9)
 
@@ -2476,26 +961,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/integration@1.18.2
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
-  - @backstage/integration-aws-node@0.1.19
-  - @backstage/plugin-search-common@1.2.21
-
-## `@backstage/plugin-techdocs-react` (1.3.4 → 1.3.5)
-
-### 1.3.5
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
 
 ## `@backstage/plugin-user-settings` (0.8.28 → 0.8.29)
 
@@ -2505,15 +970,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 2b6fda3: Revert `storageApiRef` implementation
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/frontend-plugin-api@0.13.0
-  - @backstage/core-compat-api@0.5.4
-  - @backstage/plugin-catalog-react@1.21.3
-  - @backstage/core-components@0.18.3
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/core-app-api@1.19.2
-  - @backstage/catalog-model@1.7.6
-  - @backstage/plugin-signals-react@0.0.17
 
 ## `@backstage/plugin-user-settings-backend` (0.3.7 → 0.3.8)
 
@@ -2522,11 +978,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/plugin-auth-node@0.6.9
-  - @backstage/plugin-signals-node@0.1.26
 
 ## `@backstage/repo-tools` (0.15.4 → 0.16.0)
 
@@ -2540,24 +991,6 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 
 - 8f56eae: Updated knip-reports to detect dependencies in dev/alpha pattern
 - 05f60e1: Refactored constructor parameter properties to explicit property declarations for compatibility with TypeScript's `erasableSyntaxOnly` setting. This internal refactoring maintains all existing functionality while ensuring TypeScript compilation compatibility.
-- Updated dependencies
-  - @backstage/backend-plugin-api@1.5.0
-  - @backstage/config-loader@1.10.6
-  - @backstage/cli-node@0.2.15
-  - @backstage/catalog-model@1.7.6
-
-## `@backstage/test-utils` (1.7.12 → 1.7.13)
-
-### 1.7.13
-
-#### Patch Changes
-
-- Updated dependencies
-  - @backstage/core-plugin-api@1.12.0
-  - @backstage/plugin-permission-common@0.9.3
-  - @backstage/core-app-api@1.19.2
-  - @backstage/plugin-permission-react@0.4.38
-  - @backstage/config@1.3.6
 
 ## `@backstage/ui` (0.8.2 → 0.9.0)
 
@@ -2781,8 +1214,5 @@ Changes between 1.44.3 and 1.45.0 — 178 changed and 0 added packages.
 #### Patch Changes
 
 - c2a2017: Fix for missing styles due to move to BUI.
-- Updated dependencies
-  - @backstage/backend-defaults@0.13.1
-  - @backstage/plugin-techdocs-node@1.13.9
-  - @backstage/config@1.3.6
-  - @backstage/catalog-model@1.7.6
+
+_Excluded dependency updates for packages: `@backstage/app-defaults`, `@backstage/backend-openapi-utils`, `@backstage/catalog-client`, `@backstage/frontend-defaults`, `@backstage/frontend-dynamic-feature-loader`, `@backstage/frontend-test-utils`, `@backstage/integration-react`, `@backstage/plugin-app`, `@backstage/plugin-app-backend`, `@backstage/plugin-app-node`, `@backstage/plugin-auth-backend-module-atlassian-provider`, `@backstage/plugin-auth-backend-module-auth0-provider`, `@backstage/plugin-auth-backend-module-aws-alb-provider`, `@backstage/plugin-auth-backend-module-azure-easyauth-provider`, `@backstage/plugin-auth-backend-module-bitbucket-provider`, `@backstage/plugin-auth-backend-module-bitbucket-server-provider`, `@backstage/plugin-auth-backend-module-gcp-iap-provider`, `@backstage/plugin-auth-backend-module-github-provider`, `@backstage/plugin-auth-backend-module-gitlab-provider`, `@backstage/plugin-auth-backend-module-google-provider`, `@backstage/plugin-auth-backend-module-guest-provider`, `@backstage/plugin-auth-backend-module-microsoft-provider`, `@backstage/plugin-auth-backend-module-oauth2-provider`, `@backstage/plugin-auth-backend-module-oauth2-proxy-provider`, `@backstage/plugin-auth-backend-module-oidc-provider`, `@backstage/plugin-auth-backend-module-okta-provider`, `@backstage/plugin-auth-backend-module-onelogin-provider`, `@backstage/plugin-auth-backend-module-openshift-provider`, `@backstage/plugin-auth-backend-module-pinniped-provider`, `@backstage/plugin-auth-backend-module-vmware-cloud-provider`, `@backstage/plugin-auth-react`, `@backstage/plugin-catalog-backend-module-bitbucket-cloud`, `@backstage/plugin-catalog-backend-module-bitbucket-server`, `@backstage/plugin-catalog-backend-module-gcp`, `@backstage/plugin-catalog-backend-module-gerrit`, `@backstage/plugin-catalog-backend-module-gitea`, `@backstage/plugin-catalog-backend-module-gitlab`, `@backstage/plugin-catalog-backend-module-gitlab-org`, `@backstage/plugin-catalog-backend-module-logs`, `@backstage/plugin-catalog-backend-module-puppetdb`, `@backstage/plugin-catalog-backend-module-scaffolder-entity-model`, `@backstage/plugin-catalog-common`, `@backstage/plugin-catalog-unprocessed-entities-common`, `@backstage/plugin-config-schema`, `@backstage/plugin-devtools`, `@backstage/plugin-events-backend-module-azure`, `@backstage/plugin-events-backend-module-bitbucket-cloud`, `@backstage/plugin-events-backend-module-bitbucket-server`, `@backstage/plugin-events-backend-module-gerrit`, `@backstage/plugin-events-backend-module-github`, `@backstage/plugin-events-backend-module-gitlab`, `@backstage/plugin-events-backend-module-google-pubsub`, `@backstage/plugin-events-backend-test-utils`, `@backstage/plugin-home-react`, `@backstage/plugin-kubernetes`, `@backstage/plugin-kubernetes-cluster`, `@backstage/plugin-notifications`, `@backstage/plugin-org-react`, `@backstage/plugin-permission-backend-module-allow-all-policy`, `@backstage/plugin-permission-node`, `@backstage/plugin-proxy-backend`, `@backstage/plugin-proxy-node`, `@backstage/plugin-scaffolder-backend-module-azure`, `@backstage/plugin-scaffolder-backend-module-bitbucket-server`, `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown`, `@backstage/plugin-scaffolder-backend-module-cookiecutter`, `@backstage/plugin-scaffolder-backend-module-gerrit`, `@backstage/plugin-scaffolder-backend-module-gitea`, `@backstage/plugin-scaffolder-backend-module-github`, `@backstage/plugin-scaffolder-backend-module-notifications`, `@backstage/plugin-scaffolder-backend-module-sentry`, `@backstage/plugin-scaffolder-backend-module-yeoman`, `@backstage/plugin-scaffolder-common`, `@backstage/plugin-search-backend-module-catalog`, `@backstage/plugin-search-backend-module-explore`, `@backstage/plugin-search-backend-module-stack-overflow-collator`, `@backstage/plugin-search-backend-module-techdocs`, `@backstage/plugin-search-common`, `@backstage/plugin-signals-node`, `@backstage/plugin-signals-react`, `@backstage/plugin-techdocs-addons-test-utils`, `@backstage/plugin-techdocs-react`, `@backstage/test-utils`._

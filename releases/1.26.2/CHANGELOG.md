@@ -13,16 +13,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-adr-common@0.2.23
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/integration-react@1.1.26
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/plugin-search-common@1.2.11
-  - @backstage/plugin-search-react@1.7.10
 
 ## `@backstage/plugin-adr-backend` (0.4.14 → 0.4.15)
 
@@ -31,16 +21,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-adr-common@0.2.23
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-adr-common` (0.2.22 → 0.2.23)
 
@@ -49,10 +29,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-search-common@1.2.11
 
 ## `@backstage/plugin-airbrake` (0.3.34 → 0.3.35)
 
@@ -61,13 +37,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/dev-utils@1.0.31
-  - @backstage/test-utils@1.5.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-airbrake-backend` (0.3.14 → 0.3.15)
 
@@ -76,10 +45,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-allure` (0.1.50 → 0.1.51)
 
@@ -88,11 +53,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-analytics-module-ga` (0.2.4 → 0.2.5)
 
@@ -101,11 +61,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/config@1.2.0
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
 
 ## `@backstage/plugin-analytics-module-ga4` (0.2.4 → 0.2.5)
 
@@ -114,11 +69,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/config@1.2.0
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
 
 ## `@backstage/plugin-analytics-module-newrelic-browser` (0.1.4 → 0.1.5)
 
@@ -127,11 +77,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/config@1.2.0
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
 
 ## `@backstage/plugin-apache-airflow` (0.2.24 → 0.2.25)
 
@@ -140,9 +85,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-apollo-explorer` (0.2.0 → 0.2.1)
 
@@ -151,9 +93,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-azure-devops` (0.4.3 → 0.4.4)
 
@@ -162,16 +101,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-azure-devops-common@0.4.2
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/plugin-permission-react@0.4.22
 
 ## `@backstage/plugin-azure-devops-backend` (0.6.4 → 0.6.5)
 
@@ -180,19 +109,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-azure-devops-common@0.4.2
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-permission-node@0.7.28
 
 ## `@backstage/plugin-azure-devops-common` (0.4.1 → 0.4.2)
 
@@ -201,9 +117,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-azure-sites` (0.1.23 → 0.1.24)
 
@@ -212,15 +125,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-azure-sites-common@0.1.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-permission-react@0.4.22
 
 ## `@backstage/plugin-azure-sites-backend` (0.3.4 → 0.3.5)
 
@@ -229,16 +133,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-azure-sites-common@0.1.4
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-permission-node@0.7.28
 
 ## `@backstage/plugin-azure-sites-common` (0.1.3 → 0.1.4)
 
@@ -247,10 +141,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-badges` (0.2.58 → 0.2.59)
 
@@ -259,12 +149,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-badges-backend` (0.4.0 → 0.4.1)
 
@@ -273,14 +157,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-auth-node@0.4.12
 
 ## `@backstage/plugin-bazaar` (0.2.26 → 0.2.27)
 
@@ -289,13 +165,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-bazaar-backend` (0.3.15 → 0.3.16)
 
@@ -304,11 +173,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/plugin-auth-node@0.4.12
 
 ## `@backstage/plugin-bitrise` (0.1.61 → 0.1.62)
 
@@ -317,11 +181,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-cicd-statistics` (0.1.36 → 0.1.37)
 
@@ -330,10 +189,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.30 → 0.1.31)
 
@@ -342,10 +197,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-cicd-statistics@0.1.37
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-circleci` (0.3.34 → 0.3.35)
 
@@ -354,11 +205,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: This package has been deprecated in favour of the [Circle-CI](https://github.com/CircleCI-Public/backstage-plugin) plugin. Please migrate to that plugin instead.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-cloudbuild` (0.5.1 → 0.5.2)
 
@@ -367,11 +213,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-code-climate` (0.1.34 → 0.1.35)
 
@@ -380,11 +221,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-code-coverage` (0.2.27 → 0.2.28)
 
@@ -393,12 +229,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-code-coverage-backend` (0.2.31 → 0.2.32)
 
@@ -407,14 +237,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/integration@1.10.0
 
 ## `@backstage/plugin-codescene` (0.1.26 → 0.1.27)
 
@@ -423,14 +245,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/theme@0.5.3
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-cost-insights` (0.12.23 → 0.12.24)
 
@@ -439,14 +253,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-cost-insights-common@0.1.3
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-cost-insights-common` (0.1.2 → 0.1.3)
 
@@ -463,11 +269,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-entity-feedback` (0.2.17 → 0.2.18)
 
@@ -476,13 +277,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-entity-feedback-common@0.1.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-entity-feedback-backend` (0.2.14 → 0.2.15)
 
@@ -491,15 +285,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-entity-feedback-common@0.1.4
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-auth-node@0.4.12
 
 ## `@backstage/plugin-entity-feedback-common` (0.1.3 → 0.1.4)
 
@@ -516,14 +301,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-explore` (0.4.20 → 0.4.21)
 
@@ -532,17 +309,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-explore-common@0.0.3
-  - @backstage/plugin-explore-react@0.0.39
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/plugin-search-common@1.2.11
-  - @backstage/plugin-search-react@1.7.10
 
 ## `@backstage/plugin-explore-backend` (0.0.27 → 0.0.28)
 
@@ -551,13 +317,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-explore-common@0.0.3
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-search-backend-module-explore@0.1.22
 
 ## `@backstage/plugin-explore-common` (0.0.2 → 0.0.3)
 
@@ -574,9 +333,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-explore-common@0.0.3
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-firehydrant` (0.2.18 → 0.2.19)
 
@@ -585,11 +341,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-fossa` (0.2.66 → 0.2.67)
 
@@ -598,12 +349,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-gcalendar` (0.3.27 → 0.3.28)
 
@@ -612,10 +357,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-gcp-projects` (0.3.50 → 0.3.51)
 
@@ -624,9 +365,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-git-release-manager` (0.3.46 → 0.3.47)
 
@@ -635,10 +373,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration@1.10.0
 
 ## `@backstage/plugin-github-actions` (0.6.15 → 0.6.16)
 
@@ -647,13 +381,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration@1.10.0
-  - @backstage/integration-react@1.1.26
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-github-deployments` (0.1.65 → 0.1.66)
 
@@ -662,14 +389,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/integration@1.10.0
-  - @backstage/integration-react@1.1.26
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-github-issues` (0.4.1 → 0.4.2)
 
@@ -678,13 +397,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-github-pull-requests-board` (0.2.0 → 0.2.1)
 
@@ -693,12 +405,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/integration@1.10.0
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-gitops-profiles` (0.3.49 → 0.3.50)
 
@@ -707,9 +413,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-gocd` (0.1.40 → 0.1.41)
 
@@ -718,12 +421,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-graphiql` (0.3.7 → 0.3.8)
 
@@ -732,11 +429,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
 
 ## `@backstage/plugin-graphql-voyager` (0.1.16 → 0.1.17)
 
@@ -745,9 +437,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-ilert` (0.2.23 → 0.2.24)
 
@@ -756,12 +445,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-jenkins` (0.9.9 → 0.9.10)
 
@@ -770,13 +453,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-jenkins-common@0.1.26
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-jenkins-backend` (0.4.4 → 0.4.5)
 
@@ -785,17 +461,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-jenkins-common@0.1.26
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-node@1.11.1
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-permission-node@0.7.28
 
 ## `@backstage/plugin-jenkins-common` (0.1.25 → 0.1.26)
 
@@ -804,9 +469,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-kafka` (0.3.34 → 0.3.35)
 
@@ -815,11 +477,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-kafka-backend` (0.3.15 → 0.3.16)
 
@@ -828,11 +485,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-lighthouse` (0.4.19 → 0.4.20)
 
@@ -841,12 +493,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-lighthouse-common@0.1.6
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-lighthouse-backend` (0.4.10 → 0.4.11)
 
@@ -855,16 +501,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-lighthouse-common@0.1.6
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-node@1.11.1
 
 ## `@backstage/plugin-lighthouse-common` (0.1.5 → 0.1.6)
 
@@ -873,8 +509,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-microsoft-calendar` (0.1.16 → 0.1.17)
 
@@ -883,10 +517,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-newrelic` (0.3.49 → 0.3.50)
 
@@ -895,9 +525,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-newrelic-dashboard` (0.3.9 → 0.3.10)
 
@@ -906,12 +533,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-octopus-deploy` (0.2.16 → 0.2.17)
 
@@ -920,12 +541,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/plugin-scaffolder-react@1.8.4
 
 ## `@backstage/plugin-opencost` (0.2.9 → 0.2.10)
 
@@ -934,9 +549,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-periskop` (0.1.32 → 0.1.33)
 
@@ -945,12 +557,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-periskop-backend` (0.2.15 → 0.2.16)
 
@@ -959,10 +565,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-playlist` (0.2.8 → 0.2.9)
 
@@ -971,17 +573,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-playlist-common@0.1.16
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-common@1.0.22
-  - @backstage/plugin-catalog-react@1.11.3
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-permission-react@0.4.22
-  - @backstage/plugin-search-react@1.7.10
 
 ## `@backstage/plugin-playlist-backend` (0.3.21 → 0.3.22)
 
@@ -990,17 +581,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-playlist-common@0.1.16
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-auth-node@0.4.12
-  - @backstage/plugin-permission-common@0.7.13
-  - @backstage/plugin-permission-node@0.7.28
 
 ## `@backstage/plugin-playlist-common` (0.1.15 → 0.1.16)
 
@@ -1009,8 +589,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-permission-common@0.7.13
 
 ## `@backstage/plugin-puppetdb` (0.1.17 → 0.1.18)
 
@@ -1019,12 +597,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-rollbar` (0.4.34 → 0.4.35)
 
@@ -1033,11 +605,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-rollbar-backend` (0.1.62 → 0.1.63)
 
@@ -1046,9 +613,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/config@1.2.0
 
 ## `@backstage/plugin-search-backend-module-explore` (0.1.21 → 0.1.22)
 
@@ -1061,11 +625,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-shortcuts` (0.3.23 → 0.3.24)
 
@@ -1074,11 +633,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/theme@0.5.3
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-sonarqube` (0.7.16 → 0.7.17)
 
@@ -1087,12 +641,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-sonarqube-react@0.1.16
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-sonarqube-backend` (0.2.19 → 0.2.20)
 
@@ -1101,11 +649,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-sonarqube-react` (0.1.15 → 0.1.16)
 
@@ -1114,9 +657,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-plugin-api@1.9.2
 
 ## `@backstage/plugin-splunk-on-call` (0.4.23 → 0.4.24)
 
@@ -1125,11 +665,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-stack-overflow` (0.1.29 → 0.1.30)
 
@@ -1138,14 +673,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/config@1.2.0
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
-  - @backstage/plugin-home-react@0.1.12
-  - @backstage/plugin-search-common@1.2.11
-  - @backstage/plugin-search-react@1.7.10
 
 ## `@backstage/plugin-stack-overflow-backend` (0.2.21 → 0.2.22)
 
@@ -1154,8 +681,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-search-backend-module-stack-overflow-collator@0.1.10
 
 ## `@backstage/plugin-stackstorm` (0.1.15 → 0.1.16)
 
@@ -1164,10 +689,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-tech-insights` (0.3.26 → 0.3.27)
 
@@ -1176,14 +697,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-tech-insights-common@0.2.13
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-tech-insights-backend` (0.5.31 → 0.5.32)
 
@@ -1192,17 +705,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-tech-insights-common@0.2.13
-  - @backstage/plugin-tech-insights-node@0.6.1
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/catalog-client@1.6.4
-  - @backstage/catalog-model@1.4.5
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.49 → 0.1.50)
 
@@ -1211,14 +713,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-tech-insights-common@0.2.13
-  - @backstage/plugin-tech-insights-node@0.6.1
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-tech-insights-common` (0.2.12 → 0.2.13)
 
@@ -1227,8 +721,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-tech-insights-node` (0.6.0 → 0.6.1)
 
@@ -1237,12 +729,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-tech-insights-common@0.2.13
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/config@1.2.0
-  - @backstage/types@1.1.1
 
 ## `@backstage/plugin-tech-radar` (0.7.3 → 0.7.4)
 
@@ -1251,11 +737,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-compat-api@0.2.4
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/frontend-plugin-api@0.6.4
 
 ## `@backstage/plugin-vault` (0.1.29 → 0.1.30)
 
@@ -1264,12 +745,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/catalog-model@1.4.5
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
-  - @backstage/plugin-catalog-react@1.11.3
 
 ## `@backstage/plugin-vault-backend` (0.4.10 → 0.4.11)
 
@@ -1278,13 +753,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/plugin-vault-node@0.1.11
-  - @backstage/backend-common@0.21.7
-  - @backstage/backend-plugin-api@0.6.17
-  - @backstage/backend-tasks@0.5.22
-  - @backstage/config@1.2.0
-  - @backstage/errors@1.2.4
 
 ## `@backstage/plugin-vault-node` (0.1.10 → 0.1.11)
 
@@ -1293,8 +761,6 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/backend-plugin-api@0.6.17
 
 ## `@backstage/plugin-xcmetrics` (0.2.52 → 0.2.53)
 
@@ -1303,7 +769,3 @@ _No changelog entries found._
 #### Patch Changes
 
 - c2112f2: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
-- Updated dependencies
-  - @backstage/core-components@0.14.4
-  - @backstage/core-plugin-api@1.9.2
-  - @backstage/errors@1.2.4
