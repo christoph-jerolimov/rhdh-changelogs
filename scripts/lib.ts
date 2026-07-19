@@ -14,12 +14,12 @@ export interface Manifest {
 
 export function upstreamDir(): string {
   const dir = path.resolve(
-    process.env.UPSTREAM_DIR ?? process.argv[2] ?? path.join(repoRoot, ".upstream", "versions"),
+    process.env.VERSIONS_DIR ?? process.argv[2] ?? path.join(repoRoot, ".upstream", "versions"),
   );
   if (!fs.existsSync(path.join(dir, "v1", "releases"))) {
     throw new Error(
       `Upstream clone not found at ${dir} (expected v1/releases inside). ` +
-        `Clone https://github.com/backstage/versions there or set UPSTREAM_DIR.`,
+        `Clone https://github.com/backstage/versions there or set VERSIONS_DIR.`,
     );
   }
   return dir;

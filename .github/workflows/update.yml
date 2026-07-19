@@ -45,7 +45,7 @@ jobs:
       - name: Generate release data
         run: npm run update
         env:
-          UPSTREAM_DIR: ${{ runner.temp }}/backstage-versions
+          VERSIONS_DIR: ${{ runner.temp }}/backstage-versions
           BACKSTAGE_DIR: ${{ runner.temp }}/backstage
 
       - name: Commit and push changes
