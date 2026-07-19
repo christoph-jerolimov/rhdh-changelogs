@@ -31,9 +31,6 @@ jobs:
 
       - run: npm run typecheck
 
-      - name: Clone backstage/versions
-        run: git clone --depth 1 https://github.com/backstage/versions.git "$RUNNER_TEMP/backstage-versions"
-
       # Blob-less sparse clone: the monorepo is huge, but only packages/ and
       # plugins/ are needed; later tag fetches inherit the blob filter, so a
       # tag costs trees only and git show lazily pulls individual files.
@@ -42,11 +39,14 @@ jobs:
           git clone --depth 1 --filter=blob:none --sparse https://github.com/backstage/backstage.git "$RUNNER_TEMP/backstage"
           git -C "$RUNNER_TEMP/backstage" sparse-checkout set packages plugins
 
+      - name: Clone backstage/versions
+        run: git clone --depth 1 https://github.com/backstage/versions.git "$RUNNER_TEMP/backstage-versions"
+
       - name: Generate release data
         run: npm run update
         env:
-          VERSIONS_DIR: ${{ runner.temp }}/backstage-versions
           BACKSTAGE_DIR: ${{ runner.temp }}/backstage
+          VERSIONS_DIR: ${{ runner.temp }}/backstage-versions
 
       - name: Commit and push changes
         run: |
