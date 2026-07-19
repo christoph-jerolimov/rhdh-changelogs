@@ -3,8 +3,8 @@ name: Update Backstage metadata
 on:
   workflow_dispatch:
   schedule:
-    # Daily, one hour before the update-versions workflow (UTC, best-effort timing).
-    - cron: "47 6 * * *"
+    # Daily, 30 minutes before the update-versions workflow (UTC, best-effort timing).
+    - cron: "17 6 * * *"
 
 permissions:
   contents: write

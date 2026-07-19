@@ -3,8 +3,8 @@ name: Update Backstage versions
 on:
   workflow_dispatch:
   schedule:
-    # Daily, one hour after the update-metadata workflow (UTC, best-effort timing).
-    - cron: "47 7 * * *"
+    # Daily, 30 minutes after the update-metadata workflow (UTC, best-effort timing).
+    - cron: "47 6 * * *"
 
 permissions:
   contents: write
