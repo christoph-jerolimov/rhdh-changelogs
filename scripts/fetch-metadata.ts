@@ -2,7 +2,7 @@ import { execFileSync } from "node:child_process";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import semver from "semver";
-import { byCodepoint, hasNextRelease, listLocalStableReleases, NEXT, readManifest, repoRoot, writeFileIfChanged } from "./lib.ts";
+import { byCodepoint, hasNextRelease, listLocalStableReleases, NEXT, readManifest, repoRoot, tablesDir, writeFileIfChanged } from "./lib.ts";
 
 interface PackageJson {
   name?: string;
@@ -248,10 +248,10 @@ function writeDescriptionTable(
     md.push(`| \`${mdCell(name!)}\` | ${rest.map((value) => mdCell(value)).join(" | ")} |`);
   }
   md.push("");
-  writeFileIfChanged(path.join(repoRoot, `${base}.md`), md.join("\n"));
+  writeFileIfChanged(path.join(tablesDir, `${base}.md`), md.join("\n"));
 
   const csv = [header, ...rows.map(cells)].map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
-  writeFileIfChanged(path.join(repoRoot, `${base}.csv`), csv);
+  writeFileIfChanged(path.join(tablesDir, `${base}.csv`), csv);
   console.log(`Generated ${base}.md/.csv (${rows.length} packages)`);
 }
 
