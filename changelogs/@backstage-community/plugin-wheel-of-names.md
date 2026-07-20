@@ -1,0 +1,65 @@
+# @backstage-community/plugin-wheel-of-names
+
+## 0.8.0
+
+### Minor Changes
+
+- e5948db: Backstage version bump to v1.49.2
+
+## 0.7.0
+
+### Minor Changes
+
+- 3d395e6: Backstage version bump to v1.45.2
+
+## 0.6.0
+
+### Minor Changes
+
+- f70cce3: Added support for new Frontend
+
+### Patch Changes
+
+- 5d7bc2d: Update to modern JSX transform (react-jsx)
+
+## 0.5.0
+
+### Minor Changes
+
+- 5a28929: Backstage version bump to v1.44.0
+
+## 0.4.0
+
+### Minor Changes
+
+- e9987bf: Backstage version bump to v1.43.2
+
+## 0.3.1
+
+### Patch Changes
+
+- 6b0772e: Updated installation instructions
+
+## 0.3.0
+
+### Minor Changes
+
+- c8eca9d: Backstage version bump to v1.42.3
+
+## 0.2.2
+
+### Patch Changes
+
+- fc8493f: Correct looking up a group member's name as participant
+
+## 0.2.1
+
+### Patch Changes
+
+- aa80b78: Downgrade react-router-dom dependency to avoid duplicate instances of react-router
+
+## 0.2.0
+
+### Minor Changes
+
+- 5467fb0: Initial release of the @backstage-community/plugin-wheel-of-names plugin

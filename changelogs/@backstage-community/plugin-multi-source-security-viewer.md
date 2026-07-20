@@ -1,0 +1,381 @@
+# @backstage-community/plugin-multi-source-security-viewer
+
+## 0.17.1
+
+### Patch Changes
+
+- 0c2526c: Updated dependency `@backstage-community/plugin-jenkins` to `^0.32.0`.
+- ea6e9a0: Updated dependency `@backstage-community/plugin-azure-devops-common` to `^0.23.0`.
+- d47abdd: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.31.0`.
+
+## 0.17.0
+
+### Minor Changes
+
+- 6a61be0: Backstage version bump to v1.51.0
+
+### Patch Changes
+
+- Updated dependencies [6a61be0]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.15.0
+
+## 0.16.0
+
+### Minor Changes
+
+- 7d45b9d: Backstage version bump to v1.50.4
+
+### Patch Changes
+
+- Updated dependencies [7d45b9d]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.14.0
+
+## 0.15.3
+
+### Patch Changes
+
+- 58cda68: Updated dependency `@immobiliarelabs/backstage-plugin-gitlab` to `^7.0.0`.
+
+## 0.15.2
+
+### Patch Changes
+
+- 33fff24: Updated dependency `@backstage-community/plugin-azure-devops-common` to `^0.21.0`.
+
+## 0.15.1
+
+### Patch Changes
+
+- 29371ff: Updated dependency `@backstage-community/plugin-jenkins` to `^0.30.0`.
+- 4e630e4: Updated dependency `@backstage-community/plugin-github-actions` to `^0.22.0`.
+- edbdf1a: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.29.0`.
+
+## 0.15.0
+
+### Minor Changes
+
+- 179f726: Backstage version bump to v1.49.2
+
+### Patch Changes
+
+- Updated dependencies [179f726]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.13.0
+
+## 0.14.1
+
+### Patch Changes
+
+- 0467b33: Updated dependency `@testing-library/react` to `^16.0.0`.
+  Updated dependency `@testing-library/dom` to `10.4.1`.
+  Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- a7cbd3f: Backstage version bump to v1.48.5
+- Updated dependencies [a7cbd3f]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.12.1
+
+## 0.14.0
+
+### Minor Changes
+
+- d9a66c5: Backstage version bump to v1.48.4
+
+### Patch Changes
+
+- 39da154: Updated dependency `@backstage-community/plugin-github-actions` to `^0.21.0`.
+- f38f7ba: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.28.0`.
+- 73fd985: Updated dependency `@backstage-community/plugin-azure-devops-common` to `^0.20.0`.
+- Updated dependencies [d9a66c5]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.12.0
+
+## 0.13.1
+
+### Patch Changes
+
+- 4ff4586: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.26.0`.
+
+## 0.13.0
+
+### Minor Changes
+
+- 0e8efcd: Backstage version bump to v1.47.2
+
+### Patch Changes
+
+- 30425e7: Updated dependency `@backstage-community/plugin-jenkins` to `^0.28.0`.
+- 7c6e7b4: Updated dependency `@backstage-community/plugin-github-actions` to `^0.20.0`.
+- Updated dependencies [0e8efcd]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.11.0
+
+## 0.12.2
+
+### Patch Changes
+
+- 4b2575b: Updated dependency `@backstage-community/plugin-azure-devops-common` to `^0.19.0`.
+
+## 0.12.1
+
+### Patch Changes
+
+- fcd0d52: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.24.0`.
+- 202c077: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.25.0`.
+
+## 0.12.0
+
+### Minor Changes
+
+- 3338247: Create the Multi Source Security Viewer backend plugin. This will enhance the RBAC UX by allowing users to configure the MSSV permissions in the RBAC plugin UI.
+
+### Patch Changes
+
+- Updated dependencies [3338247]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.10.0
+
+## 0.11.0
+
+### Minor Changes
+
+- 04d24c5: Backstage version bump to v1.46.3
+
+### Patch Changes
+
+- Updated dependencies [04d24c5]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.9.0
+
+## 0.10.1
+
+### Patch Changes
+
+- fa9e3e2: Updated dependency `@backstage-community/plugin-jenkins` to `^0.26.0`.
+- 8c74b83: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.23.0`.
+- 6efdc5b: Updated dependency `@backstage-community/plugin-github-actions` to `^0.18.0`.
+- 921b0e0: Updated dependency `@backstage-community/plugin-azure-devops-common` to `^0.17.0`.
+
+## 0.10.0
+
+### Minor Changes
+
+- d62613f: Backstage version bump to v1.45.3
+
+### Patch Changes
+
+- Updated dependencies [d62613f]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.8.0
+
+## 0.9.0
+
+### Minor Changes
+
+- 148f96d: Backstage version bump to v1.44.0
+
+### Patch Changes
+
+- Updated dependencies [148f96d]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.7.0
+
+## 0.8.2
+
+### Patch Changes
+
+- 35dde18: Updated dependency `@backstage-community/plugin-azure-devops-common` to `^0.16.0`.
+- 9226a44: Updated dependency `@backstage-community/plugin-jenkins` to `^0.25.0`.
+- 2c38540: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.21.0`.
+- e173cc0: Updated dependency `@backstage-community/plugin-github-actions` to `^0.16.0`.
+
+## 0.8.1
+
+### Patch Changes
+
+- 60dfa96: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.20.0`.
+
+## 0.8.0
+
+### Minor Changes
+
+- 36c3b7a: Backstage version bump to v1.43.2
+
+### Patch Changes
+
+- Updated dependencies [36c3b7a]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.6.0
+
+## 0.7.2
+
+### Patch Changes
+
+- 35a44d1: Updated dependency `@backstage-community/plugin-github-actions` to `^0.14.0`.
+
+## 0.7.1
+
+### Patch Changes
+
+- 4c61e72: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.19.0`.
+
+## 0.7.0
+
+### Minor Changes
+
+- cf083dd: Backstage version bump to v1.42.3
+
+### Patch Changes
+
+- b356ce3: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.18.0`.
+- 5725c6d: Updated dependency `@backstage-community/plugin-azure-devops-common` to `^0.14.0`.
+- eaf3dd0: Updated dependency `@backstage-community/plugin-jenkins` to `^0.23.0`.
+- Updated dependencies [cf083dd]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.5.0
+
+## 0.6.1
+
+### Patch Changes
+
+- 34aa972: Updated dependency `@mui/icons-material` to `5.18.0`.
+  Updated dependency `@mui/material` to `5.18.0`.
+  Updated dependency `@mui/styles` to `5.18.0`.
+  Updated dependency `@mui/lab` to `5.0.0-alpha.177`.
+
+## 0.6.0
+
+### Minor Changes
+
+- 237d0ce: Add isMultiCIAvaibleAndEnabled to display the plugin when the CI provider is defined and set as enabled in the annotation.
+
+### Patch Changes
+
+- Updated dependencies [237d0ce]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.4.0
+
+## 0.5.5
+
+### Patch Changes
+
+- 490b55b: Updated dependency `@backstage-community/plugin-jenkins` to `^0.21.0`.
+- eaedbb2: Updated dependency `@backstage-community/plugin-github-actions` to `^0.12.0`.
+- f9f35a4: Updated dependency `@backstage-community/plugin-azure-devops-common` to `^0.12.0`.
+- 1d7d0ce: remove product theme from dev dependencies and dev app
+
+## 0.5.4
+
+### Patch Changes
+
+- eaa39a4: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.17.0`.
+
+## 0.5.3
+
+### Patch Changes
+
+- 2564b07: Set all tooltip placements to left
+- 28e2aa1: Fixes disabled sbom link when step is present
+- b21ffcd: Updated dependency `@backstage-community/plugin-github-actions` to `^0.11.0`.
+
+## 0.5.2
+
+### Patch Changes
+
+- cfaaf7e: Updated dependency `@backstage-community/plugin-jenkins` to `^0.20.0`.
+
+## 0.5.1
+
+### Patch Changes
+
+- c8e1803: Use getAnnotationValuesFromEntity from azure-devops-common
+- 5ac4c60: Replaced `downloadLogFile` from `@janus-idp/shared-react` with a local version based on PatternFly’s `CodeEditor`, so the plugin no longer depends on `shared-react` for this utility.
+
+## 0.5.0
+
+### Minor Changes
+
+- 2284286: Bump version to 1.39.1
+
+### Patch Changes
+
+- Updated dependencies [2284286]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.3.0
+
+## 0.4.3
+
+### Patch Changes
+
+- bec7d2b: Updated dependency `@backstage-community/plugin-jenkins` to `^0.19.0`.
+
+## 0.4.2
+
+### Patch Changes
+
+- ca224e7: Updated dependency `@backstage-community/plugin-azure-devops-common` to `^0.10.0`.
+
+## 0.4.1
+
+### Patch Changes
+
+- ea85387: Updated dependency `@backstage-community/plugin-azure-devops` to `^0.14.0`.
+- 496aa2f: Updated dependency `@backstage-community/plugin-github-actions` to `^0.10.0`.
+
+## 0.4.0
+
+### Minor Changes
+
+- 682570b: URL encode the repository slug
+
+## 0.3.2
+
+### Patch Changes
+
+- d346a7e: Include Azure Pipelines pre-requisite link
+
+## 0.3.1
+
+### Patch Changes
+
+- d4061d7: Fix issue where patternfly overrides plugin css
+
+## 0.3.0
+
+### Minor Changes
+
+- 5477f85: Bump backstage version to v1.38.1
+
+### Patch Changes
+
+- Updated dependencies [5477f85]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.2.0
+
+## 0.2.3
+
+### Patch Changes
+
+- 4b13a33: Fix installation documentation
+
+## 0.2.2
+
+### Patch Changes
+
+- bb1d492: Updated dependency `@backstage-community/plugin-jenkins` to `^0.18.0`.
+
+## 0.2.1
+
+### Patch Changes
+
+- 262f9d9: Updated dependency `@backstage-community/plugin-github-actions` to `^0.9.0`.
+
+## 0.2.0
+
+### Minor Changes
+
+- 764e6f3: Support Azure pipelines
+
+## 0.1.2
+
+### Patch Changes
+
+- 9d793ea: Updated dependency `@backstage-community/plugin-github-actions` to `^0.8.0`.
+- 1343e8f: Updated dependency `@backstage-community/plugin-jenkins` to `^0.17.0`.
+
+## 0.1.1
+
+### Patch Changes
+
+- fda8237: Add multi-source security viewer plugin
+
+  - displays security information for github actions, jenkins, and gitlab.
+
+- Updated dependencies [fda8237]
+  - @backstage-community/plugin-multi-source-security-viewer-common@0.1.1

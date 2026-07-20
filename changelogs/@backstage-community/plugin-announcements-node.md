@@ -1,0 +1,302 @@
+# @backstage-community/plugin-announcements-node
+
+## 0.20.0
+
+### Minor Changes
+
+- fa4b770: Backstage version bump to v1.52.0
+
+### Patch Changes
+
+- Updated dependencies [fa4b770]
+  - @backstage-community/plugin-announcements-common@0.22.0
+
+## 0.19.0
+
+### Minor Changes
+
+- ea738a2: Backstage version bump to v1.51.0
+
+### Patch Changes
+
+- Updated dependencies [ea738a2]
+  - @backstage-community/plugin-announcements-common@0.21.0
+
+## 0.18.0
+
+### Minor Changes
+
+- 510c863: Backstage version bump to v1.50.2
+
+### Patch Changes
+
+- Updated dependencies [510c863]
+  - @backstage-community/plugin-announcements-common@0.20.0
+
+## 0.17.0
+
+### Minor Changes
+
+- e0c2eb4: Backstage version bump to v1.49.2
+
+### Patch Changes
+
+- Updated dependencies [e0c2eb4]
+  - @backstage-community/plugin-announcements-common@0.19.0
+
+## 0.16.0
+
+### Minor Changes
+
+- 8b42b6b: Backstage version bump to v1.48.2
+
+### Patch Changes
+
+- Updated dependencies [8b42b6b]
+  - @backstage-community/plugin-announcements-common@0.18.0
+
+## 0.15.0
+
+### Minor Changes
+
+- 99b4b52: Backstage version bump to v1.47.2
+
+### Patch Changes
+
+- Updated dependencies [99b4b52]
+  - @backstage-community/plugin-announcements-common@0.17.0
+
+## 0.14.0
+
+### Minor Changes
+
+- c299df2: Backstage version bump to v1.47.1
+
+### Patch Changes
+
+- Updated dependencies [c299df2]
+  - @backstage-community/plugin-announcements-common@0.16.0
+
+## 0.13.0
+
+### Minor Changes
+
+- b9c2943: Backstage version bump to v1.46.1
+
+### Patch Changes
+
+- Updated dependencies [b9c2943]
+  - @backstage-community/plugin-announcements-common@0.15.0
+
+## 0.12.0
+
+### Minor Changes
+
+- 411e4c6: Backstage version bump to v1.46.0.
+  This release includes fix for frontend error `Package subpath './' is not defined by "exports"`.
+
+### Patch Changes
+
+- Updated dependencies [411e4c6]
+  - @backstage-community/plugin-announcements-common@0.14.0
+
+## 0.11.0
+
+### Minor Changes
+
+- bda0481: Backstage version bump to v1.45.1
+
+### Patch Changes
+
+- Updated dependencies [bda0481]
+  - @backstage-community/plugin-announcements-common@0.13.0
+
+## 0.10.1
+
+### Patch Changes
+
+- Updated dependencies [95470f7]
+  - @backstage-community/plugin-announcements-common@0.12.1
+
+## 0.10.0
+
+### Minor Changes
+
+- cd040b2: Backstage version bump to v1.44.0
+
+### Patch Changes
+
+- Updated dependencies [cd040b2]
+  - @backstage-community/plugin-announcements-common@0.12.0
+
+## 0.9.1
+
+### Patch Changes
+
+- Updated dependencies [d34e875]
+  - @backstage-community/plugin-announcements-common@0.11.0
+
+## 0.9.0
+
+### Minor Changes
+
+- 2d1724c: Backstage version bump to v1.43.2
+
+### Patch Changes
+
+- Updated dependencies [2d1724c]
+  - @backstage-community/plugin-announcements-common@0.10.0
+
+## 0.8.2
+
+### Patch Changes
+
+- Updated dependencies [2007a96]
+  - @backstage-community/plugin-announcements-common@0.9.1
+
+## 0.8.1
+
+### Patch Changes
+
+- Updated dependencies [4a3e603]
+- Updated dependencies [4a89fd8]
+  - @backstage-community/plugin-announcements-common@0.9.0
+
+## 0.8.0
+
+### Minor Changes
+
+- e121abb: Backstage version bump to v1.42.3
+
+### Patch Changes
+
+- Updated dependencies [e121abb]
+  - @backstage-community/plugin-announcements-common@0.8.0
+
+## 0.7.0
+
+### Minor Changes
+
+- 220cc20: Backstage version bump to v1.41.1
+
+### Patch Changes
+
+- Updated dependencies [220cc20]
+  - @backstage-community/plugin-announcements-common@0.7.0
+
+## 0.6.0
+
+### Minor Changes
+
+- 1a231d9: Potentially BREAKING CHANGES for those who were still using the deprecated code.
+
+  - Removes code related to deprecated search collator from `@backstage-community/plugin-announcements-backend` (import from `@backstage-community/plugin-search-backend-module-announcements`)
+  - Removes code related to deprecated `announcementsService` from `@backstage-community/plugin-announcements-node` in favor of `announcementsServiceRef`
+
+## 0.5.0
+
+### Minor Changes
+
+- 775d236: Backstage version bump to v1.40.2
+
+### Patch Changes
+
+- Updated dependencies [775d236]
+  - @backstage-community/plugin-announcements-common@0.6.0
+
+## 0.4.1
+
+### Patch Changes
+
+- Updated dependencies [8c803d8]
+  - @backstage-community/plugin-announcements-common@0.5.1
+
+## 0.4.0
+
+### Minor Changes
+
+- 7e38fa0: Backstage version bump to v1.39.1
+
+### Patch Changes
+
+- Updated dependencies [7e38fa0]
+  - @backstage-community/plugin-announcements-common@0.5.0
+
+## 0.3.4
+
+### Patch Changes
+
+- Updated dependencies [9c94358]
+  - @backstage-community/plugin-announcements-common@0.4.0
+
+## 0.3.3
+
+### Patch Changes
+
+- 11be6bb: chore(deps): Upgrade to Backstage 1.38
+- Updated dependencies [11be6bb]
+  - @backstage-community/plugin-announcements-common@0.3.2
+
+## 0.3.2
+
+### Patch Changes
+
+- 1f34951: Upgraded to Backstage release 1.37.
+- Updated dependencies [1f34951]
+  - @backstage-community/plugin-announcements-common@0.3.1
+
+## 0.3.1
+
+### Patch Changes
+
+- Updated dependencies [22d99d3]
+  - @backstage-community/plugin-announcements-common@0.3.0
+
+## 0.3.0
+
+### Minor Changes
+
+- f253ff9: **breaking** - replace `discoveryApi` param with `discovery` in `DefaultAnnouncementsService.create({})`. This better aligns with Backstage naming conventions.
+
+  ```diff
+  const announcementsService = DefaultAnnouncementsService.create({
+  -   discoveryApi: discoveryServiceRef,
+  +   discovery: discoveryServiceRef,
+  });
+  ```
+
+  This does not impact most users, but if you are using the `DefaultAnnouncementsService` in a custom service, you will need to update your code.
+
+## 0.2.0
+
+### Minor Changes
+
+- e06ffa0: Backstage version bump to v1.35.1
+
+### Patch Changes
+
+- Updated dependencies [e06ffa0]
+  - @backstage-community/plugin-announcements-common@0.2.0
+
+## 0.1.3
+
+### Patch Changes
+
+- Updated dependencies [e282a2d]
+  - @backstage-community/plugin-announcements-common@0.1.3
+
+## 0.1.2
+
+### Patch Changes
+
+- 126b459: Minor bump to fix release process - this should kick off the first release of the announcements plugins under the @backstage-community scope.
+- Updated dependencies [126b459]
+  - @backstage-community/plugin-announcements-common@0.1.2
+
+## 0.1.1
+
+### Patch Changes
+
+- 48094fc: Bump all dependencies to be in line with Backstage v1.34.2. This is the first versioned release of the announcement plugins under the `@backstage-community` scope.
+- Updated dependencies [48094fc]
+  - @backstage-community/plugin-announcements-common@0.1.1

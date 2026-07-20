@@ -1,0 +1,71 @@
+# @backstage-community/plugin-kiali-common
+
+## 0.11.1
+
+### Patch Changes
+
+- e9247c7: Bumped Backstage dependencies to 1.49.4 for Red Hat Developer Hub 1.10 compatibility.
+
+## 0.11.0
+
+### Minor Changes
+
+- 9ae7745: Adapt Ambient changes
+
+## 0.10.0
+
+### Minor Changes
+
+- 93d62a4: Fix JS error. Update dependencies
+
+## 0.9.0
+
+### Minor Changes
+
+- 6de187e: Dependency upgrade: react-icons, supertest, monorepo
+
+## 0.8.0
+
+### Minor Changes
+
+- f1697c9: Fix header styles for OpenShift. Use new cluster metrics API.
+
+## 0.7.0
+
+### Minor Changes
+
+- 2312f93: Improved namespace selector usability, update certs API call to the backend
+
+## 0.6.0
+
+### Minor Changes
+
+- 5e4b727: Backstage update to 1.44.1
+
+## 0.5.0
+
+### Minor Changes
+
+- 6de7980: Fix for issue: Could not fetch health
+  Fix for: The Istio Config drawer is blank
+  Fix Incorrect column names in the resources tables (All are named config)
+  Improve header styles
+  Backstage version update (1.42.5 -> 1.43.3)
+
+## 0.4.0
+
+### Minor Changes
+
+- d0926d5: Upgrade backstage 1.42.5
+
+## 0.3.0
+
+### Minor Changes
+
+- 1c08f79: Upgrade backstage to 1.39.1
+
+## 0.2.0
+
+### Minor Changes
+
+- 8cb76ee: Migrate types to kiali-common

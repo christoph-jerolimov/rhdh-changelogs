@@ -1,0 +1,188 @@
+# @backstage-community/plugin-servicenow
+
+## 1.13.0
+
+### Minor Changes
+
+- 2603949: Backstage version bump to v1.51.0
+- 2e296d0: Backstage version bump to v1.52.0
+
+### Patch Changes
+
+- fc0ec09: Migrate ServiceNow frontend plugin from Material UI v4 to Material UI v5, replacing `makeStyles` with `sx` props and removing `@material-ui/*` imports.
+- Updated dependencies [2603949]
+- Updated dependencies [2e296d0]
+  - @backstage-community/plugin-servicenow-common@1.12.0
+
+## 1.12.0
+
+### Minor Changes
+
+- 5399656: Backstage version bump to v1.50.4
+
+### Patch Changes
+
+- Updated dependencies [5399656]
+  - @backstage-community/plugin-servicenow-common@1.11.0
+
+## 1.11.1
+
+### Patch Changes
+
+- 69b9fd3: Translations updated for de/es/fr/it/ja
+
+## 1.11.0
+
+### Minor Changes
+
+- 8754ccb: Backstage version bump to v1.50.2
+
+### Patch Changes
+
+- Updated dependencies [8754ccb]
+  - @backstage-community/plugin-servicenow-common@1.10.0
+
+## 1.10.0
+
+### Minor Changes
+
+- a229130: Backstage version bump to v1.49.2
+
+### Patch Changes
+
+- 0467b33: Updated dependency `@testing-library/react` to `^16.0.0`.
+  Updated dependency `@testing-library/dom` to `10.4.1`.
+  Updated dependency `@testing-library/jest-dom` to `^6.0.0`.
+- Updated dependencies [a229130]
+  - @backstage-community/plugin-servicenow-common@1.9.0
+
+## 1.9.0
+
+### Minor Changes
+
+- d578507: Backstage version bump to v1.48.4
+
+### Patch Changes
+
+- 1d15595: Translation updated for German and Spanish
+- Updated dependencies [d578507]
+  - @backstage-community/plugin-servicenow-common@1.8.0
+
+## 1.8.0
+
+### Minor Changes
+
+- 5a2919f: Backstage version bump to v1.47.3
+
+### Patch Changes
+
+- Updated dependencies [5a2919f]
+  - @backstage-community/plugin-servicenow-common@1.7.0
+
+## 1.7.0
+
+### Minor Changes
+
+- 5f5fdf1: Backstage version bump to v1.46.2
+
+### Patch Changes
+
+- Updated dependencies [5f5fdf1]
+  - @backstage-community/plugin-servicenow-common@1.6.0
+
+## 1.6.0
+
+### Minor Changes
+
+- 8472540: Support custom ServiceNow incident table fields in entity annotations
+
+## 1.5.1
+
+### Patch Changes
+
+- 40b4d6c: - Added internationalization (i18n) support with translations for German, French, Spanish, Italian, and Japanese
+
+## 1.5.0
+
+### Minor Changes
+
+- 8907942: Backstage version bump to v1.45.1
+
+### Patch Changes
+
+- Updated dependencies [8907942]
+  - @backstage-community/plugin-servicenow-common@1.5.0
+
+## 1.4.0
+
+### Minor Changes
+
+- 5525f41: Backstage version bump to v1.43.2
+
+### Patch Changes
+
+- Updated dependencies [5525f41]
+  - @backstage-community/plugin-servicenow-common@1.4.0
+
+## 1.3.0
+
+### Minor Changes
+
+- 39c3ef0: Backstage version bump to v1.42.5
+
+### Patch Changes
+
+- Updated dependencies [39c3ef0]
+  - @backstage-community/plugin-servicenow-common@1.3.0
+
+## 1.2.0
+
+### Minor Changes
+
+- 0d3e031: Added support for the new frontend system.
+
+  The plugin automatically adds a "ServiceNow" tab to a software catalog entity if the entity has an `servicenow.com/entity-id` annotation.
+
+  It does not add the "My ServiceNow Tickets" tab to the user entity for now.
+
+- 6be0265: Export the catalog entity tab content as `EntityServicenowContent` instead of `ServicenowPage` to align it with the Backstage naming conventions.
+
+  The `ServicenowPage` is still exported for now, but marked as **deprecated**. It might be removed or replaced in a future release.
+
+### Patch Changes
+
+- 6be0265: Create and export new catalog entity filter function isServicenowAvailable
+- Updated dependencies [6be0265]
+- Updated dependencies [6be0265]
+  - @backstage-community/plugin-servicenow-common@1.2.0
+
+## 1.1.1
+
+### Patch Changes
+
+- 34aa972: Updated dependency `@mui/icons-material` to `5.18.0`.
+  Updated dependency `@mui/material` to `5.18.0`.
+  Updated dependency `@mui/styles` to `5.18.0`.
+  Updated dependency `@mui/lab` to `5.0.0-alpha.177`.
+
+## 1.1.0
+
+### Minor Changes
+
+- cbfb5c5: Backstage version bump to v1.41.1
+
+### Patch Changes
+
+- Updated dependencies [cbfb5c5]
+  - @backstage-community/plugin-servicenow-common@1.1.0
+
+## 1.0.0
+
+### Major Changes
+
+- 3d708ba: First version of ServiceNow plugin
+
+### Patch Changes
+
+- Updated dependencies [3d708ba]
+  - @backstage-community/plugin-servicenow-common@1.0.0

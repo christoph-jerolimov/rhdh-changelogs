@@ -1,0 +1,107 @@
+# @backstage-community/plugin-blackduck-common
+
+## 0.12.0
+
+### Minor Changes
+
+- 6165717: Backstage version bump to v1.48.2
+
+### Patch Changes
+
+- 9bfbe5e: Backstage version bump to v1.48.4
+
+## 0.11.0
+
+### Minor Changes
+
+- 213aa21: Backstage version bump to v1.47.2
+
+## 0.10.0
+
+### Minor Changes
+
+- 21edd83: Backstage version bump to v1.46.2
+
+## 0.9.0
+
+### Minor Changes
+
+- e95e193: Backstage version bump to v1.45.1
+
+## 0.8.0
+
+### Minor Changes
+
+- 9fb289a: Backstage version bump to v1.44.0
+
+## 0.7.0
+
+### Minor Changes
+
+- 65f6e45: Backstage version bump to v1.43.2
+
+## 0.6.0
+
+### Minor Changes
+
+- 851ed92: Backstage version bump to v1.41.1
+
+## 0.5.0
+
+### Minor Changes
+
+- bbc534f: Backstage version bump to v1.40.2
+
+## 0.4.0
+
+### Minor Changes
+
+- 549723f: Backstage version bump to v1.38.1
+
+## 0.3.0
+
+### Minor Changes
+
+- 30c6a18: Backstage version bump to v1.37.0
+
+## 0.2.1
+
+### Patch Changes
+
+- 638b35b: Implemented blackduck scaffolder - project creation action.
+
+## 0.2.0
+
+### Minor Changes
+
+- 09a4282: Backstage version bump to v1.35.1
+
+## 0.1.0
+
+### Minor Changes
+
+- a1470d8: Backstage version bump to v1.34.1
+
+## 0.0.4
+
+### Patch Changes
+
+- 4876ff1: Backstage version bump to v1.32.2
+
+## 0.0.3
+
+### Patch Changes
+
+- d86bc62: Backstage version bump to v1.31.1
+
+## 0.0.2
+
+### Patch Changes
+
+- 28c1d5f: Backstage version bump to v1.30.2
+
+## 0.0.1
+
+### Patch Changes
+
+- 96e67dc: BlackDuck plugin migrated to @backstage-community plugins

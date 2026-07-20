@@ -1,0 +1,248 @@
+## @backstage-community/plugin-rbac-node [1.4.0](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.3.1...@backstage-community/plugin-rbac-node@1.4.0) (2024-07-26)
+
+## 1.23.0
+
+### Minor Changes
+
+- 845383a: Backstage version bump to v1.52.0
+
+### Patch Changes
+
+- Updated dependencies [845383a]
+  - @backstage-community/plugin-rbac-common@1.29.0
+
+## 1.22.0
+
+### Minor Changes
+
+- 091ec86: Backstage version bump to v1.51.0.
+
+  The RBAC backend plugin now resolves user identity through Backstage's `UserInfoService` when evaluating conditional permissions, as part of aligning with the Backstage 1.51 permission framework. **No action is required** if you install RBAC with `backend.add(import('@backstage-community/plugin-rbac-backend'))` and manage access through app-config as documented.
+
+  If you extend RBAC at a lower level (for example by constructing `PolicyBuilder` directly), ensure `UserInfoService` is wired through your backend integration.
+
+### Patch Changes
+
+- Updated dependencies [091ec86]
+  - @backstage-community/plugin-rbac-common@1.28.0
+
+## 1.21.0
+
+### Minor Changes
+
+- 6a916a1: Backstage version bump to v1.50.4
+
+### Patch Changes
+
+- Updated dependencies [6a916a1]
+  - @backstage-community/plugin-rbac-common@1.27.0
+
+## 1.20.1
+
+### Patch Changes
+
+- 170f85d: Migrate to Jest 30 and fix backend test assertion compatibility
+- Updated dependencies [170f85d]
+  - @backstage-community/plugin-rbac-common@1.26.1
+
+## 1.20.0
+
+### Minor Changes
+
+- 8993474: Backstage version bump to v1.49.2
+
+### Patch Changes
+
+- Updated dependencies [8993474]
+  - @backstage-community/plugin-rbac-common@1.26.0
+
+## 1.19.1
+
+### Patch Changes
+
+- Updated dependencies [50e194d]
+  - @backstage-community/plugin-rbac-common@1.25.0
+
+## 1.19.0
+
+### Minor Changes
+
+- 133eae6: Add support for loading conditional permissions from a remote provider (fix #6412)
+
+## 1.18.1
+
+### Patch Changes
+
+- d737494: Backstage version bump to v1.48.5
+
+## 1.18.0
+
+### Minor Changes
+
+- 843bbe2: Backstage version bump to v1.48.4
+
+## 1.17.0
+
+### Minor Changes
+
+- e6dbf70: Backstage version bump to v1.47.2
+
+## 1.16.0
+
+### Minor Changes
+
+- e2d17e1: Backstage version bump to v1.45.1
+
+## 1.15.0
+
+### Minor Changes
+
+- 2d1f63f: Backstage version bump to v1.44.2
+
+## 1.14.0
+
+### Minor Changes
+
+- 232a84d: Backstage version bump to v1.42.5
+
+## 1.13.0
+
+### Minor Changes
+
+- 2f4d9ff: Backstage version bump to v1.41.1
+
+## 1.12.0
+
+### Minor Changes
+
+- 4b58a1d: Backstage version bump to v1.39.0
+
+### Patch Changes
+
+- 6a59fcf: remove support and lifecycle keywords in package.json
+
+## 1.11.1
+
+### Patch Changes
+
+- 658c51c: chore: Remove usage of @spotify/prettier-config
+
+## 1.11.0
+
+### Minor Changes
+
+- e8755f6: Backstage version bump to v1.38.1
+
+## 1.10.1
+
+### Patch Changes
+
+- f84ad73: chore: remove homepage field from package.json
+
+## 1.10.0
+
+### Minor Changes
+
+- 0253db6: Backstage version bump to v1.36.1
+
+## 1.9.1
+
+### Patch Changes
+
+- 973a5ef: remove prettier from devDevpendencies
+
+## 1.9.0
+
+### Minor Changes
+
+- 5d5c02a: Backstage version bump to v1.35.0
+
+## 1.8.4
+
+### Patch Changes
+
+- 0f5c451: Updated dependency `prettier` to `3.4.2`.
+
+## 1.8.3
+
+### Patch Changes
+
+- 4b3653a: Clean up api report warnings and remove unnecessary files
+
+## 1.8.2
+
+### Patch Changes
+
+- b7c2fa1: Updated supported-versions to ^1.28.4.
+
+## 1.8.1
+
+### Patch Changes
+
+- 019f010: Migrated from [janus-idp/backstage-plugins](https://github.com/janus-idp/backstage-plugins).
+
+## 1.8.0
+
+### Minor Changes
+
+- 8244f28: chore(deps): update to backstage 1.32
+
+## 1.7.0
+
+### Minor Changes
+
+- d9551ae: feat(deps): update to backstage 1.31
+
+### Patch Changes
+
+- d9551ae: upgrade to yarn v3
+
+### Features
+
+- **deps:** update to backstage 1.29 ([#1900](https://github.com/janus-idp/backstage-plugins/issues/1900)) ([f53677f](https://github.com/janus-idp/backstage-plugins/commit/f53677fb02d6df43a9de98c43a9f101a6db76802))
+
+## @backstage-community/plugin-rbac-node [1.3.1](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.3.0...@backstage-community/plugin-rbac-node@1.3.1) (2024-07-24)
+
+### Bug Fixes
+
+- **deps:** rollback unreleased plugins ([#1951](https://github.com/janus-idp/backstage-plugins/issues/1951)) ([8b77969](https://github.com/janus-idp/backstage-plugins/commit/8b779694f02f8125587296305276b84cdfeeaebe))
+
+## @backstage-community/plugin-rbac-node [1.3.0](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.2.0...@backstage-community/plugin-rbac-node@1.3.0) (2024-07-23)
+
+### Features
+
+- **deps:** update to backstage 1.28 ([#1891](https://github.com/janus-idp/backstage-plugins/issues/1891)) ([1ba1108](https://github.com/janus-idp/backstage-plugins/commit/1ba11088e0de60e90d138944267b83600dc446e5))
+
+## @backstage-community/plugin-rbac-node [1.2.0](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.1.2...@backstage-community/plugin-rbac-node@1.2.0) (2024-06-13)
+
+### Features
+
+- **deps:** update to backstage 1.27 ([#1683](https://github.com/janus-idp/backstage-plugins/issues/1683)) ([a14869c](https://github.com/janus-idp/backstage-plugins/commit/a14869c3f4177049cb8d6552b36c3ffd17e7997d))
+
+## @backstage-community/plugin-rbac-node [1.1.2](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.1.1...@backstage-community/plugin-rbac-node@1.1.2) (2024-06-04)
+
+## @backstage-community/plugin-rbac-node [1.1.1](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.1.0...@backstage-community/plugin-rbac-node@1.1.1) (2024-05-09)
+
+## @backstage-community/plugin-rbac-node [1.1.0](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.0.6...@backstage-community/plugin-rbac-node@1.1.0) (2024-04-15)
+
+### Features
+
+- checkPluginVersion.sh bump plugins for 1.2.0 release ([#1511](https://github.com/janus-idp/backstage-plugins/issues/1511)) ([73c6588](https://github.com/janus-idp/backstage-plugins/commit/73c6588adb7e8c20907b06f2a8ef248cfd4332e4))
+
+## @backstage-community/plugin-rbac-node [1.0.6](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.0.5...@backstage-community/plugin-rbac-node@1.0.6) (2024-04-09)
+
+## @backstage-community/plugin-rbac-node [1.0.5](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.0.4...@backstage-community/plugin-rbac-node@1.0.5) (2024-04-08)
+
+## @backstage-community/plugin-rbac-node [1.0.4](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.0.3...@backstage-community/plugin-rbac-node@1.0.4) (2024-03-29)
+
+## @backstage-community/plugin-rbac-node [1.0.3](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.0.2...@backstage-community/plugin-rbac-node@1.0.3) (2024-03-04)
+
+## @backstage-community/plugin-rbac-node [1.0.2](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.0.1...@backstage-community/plugin-rbac-node@1.0.2) (2024-02-27)
+
+## @backstage-community/plugin-rbac-node [1.0.1](https://github.com/janus-idp/backstage-plugins/compare/@backstage-community/plugin-rbac-node@1.0.0...@backstage-community/plugin-rbac-node@1.0.1) (2024-02-21)
+
+## @backstage-community/plugin-rbac-node 1.0.0 (2024-02-08)
+
+### Features
+
+- add support for the new backend system to the `rbac-backend` plugin ([#1179](https://github.com/janus-idp/backstage-plugins/issues/1179)) ([d625cb2](https://github.com/janus-idp/backstage-plugins/commit/d625cb2470513862027e048c70944275043ce70a))

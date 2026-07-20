@@ -39,6 +39,14 @@ jobs:
           git clone --depth 1 --filter=blob:none --sparse https://github.com/backstage/backstage.git "$RUNNER_TEMP/backstage"
           git -C "$RUNNER_TEMP/backstage" sparse-checkout set packages plugins
 
+      # Only the package.json and CHANGELOG.md files of the workspaces are
+      # needed — the sparse patterns keep the clone tiny.
+      - name: Clone backstage/community-plugins
+        run: |
+          git clone --depth 1 --filter=blob:none --no-checkout https://github.com/backstage/community-plugins.git "$RUNNER_TEMP/community-plugins"
+          git -C "$RUNNER_TEMP/community-plugins" sparse-checkout set --no-cone '/workspaces/**/package.json' '/workspaces/**/CHANGELOG.md'
+          git -C "$RUNNER_TEMP/community-plugins" checkout
+
       - name: Clone backstage/versions
         run: git clone --depth 1 https://github.com/backstage/versions.git "$RUNNER_TEMP/backstage-versions"
 
@@ -46,6 +54,7 @@ jobs:
         run: npm run update
         env:
           BACKSTAGE_DIR: ${{ runner.temp }}/backstage
+          COMMUNITY_DIR: ${{ runner.temp }}/community-plugins
           VERSIONS_DIR: ${{ runner.temp }}/backstage-versions
 
       - name: Commit and push changes

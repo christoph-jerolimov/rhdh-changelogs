@@ -1,0 +1,86 @@
+# @backstage-community/plugin-servicenow-common
+
+## 1.12.0
+
+### Minor Changes
+
+- 2603949: Backstage version bump to v1.51.0
+- 2e296d0: Backstage version bump to v1.52.0
+
+## 1.11.0
+
+### Minor Changes
+
+- 5399656: Backstage version bump to v1.50.4
+
+## 1.10.0
+
+### Minor Changes
+
+- 8754ccb: Backstage version bump to v1.50.2
+
+## 1.9.0
+
+### Minor Changes
+
+- a229130: Backstage version bump to v1.49.2
+
+## 1.8.0
+
+### Minor Changes
+
+- d578507: Backstage version bump to v1.48.4
+
+## 1.7.0
+
+### Minor Changes
+
+- 5a2919f: Backstage version bump to v1.47.3
+
+## 1.6.0
+
+### Minor Changes
+
+- 5f5fdf1: Backstage version bump to v1.46.2
+
+## 1.5.0
+
+### Minor Changes
+
+- 8907942: Backstage version bump to v1.45.1
+
+## 1.4.0
+
+### Minor Changes
+
+- 5525f41: Backstage version bump to v1.43.2
+
+## 1.3.0
+
+### Minor Changes
+
+- 39c3ef0: Backstage version bump to v1.42.5
+
+## 1.2.0
+
+### Minor Changes
+
+- 6be0265: Export the catalog entity tab content as `EntityServicenowContent` instead of `ServicenowPage` to align it with the Backstage naming conventions.
+
+  The `ServicenowPage` is still exported for now, but marked as **deprecated**. It might be removed or replaced in a future release.
+
+### Patch Changes
+
+- 6be0265: Create and export new catalog entity filter function isServicenowAvailable
+
+## 1.1.0
+
+### Minor Changes
+
+- cbfb5c5: Backstage version bump to v1.41.1
+
+## 1.0.0
+
+### Major Changes
+
+- 3d708ba: First version of ServiceNow plugin

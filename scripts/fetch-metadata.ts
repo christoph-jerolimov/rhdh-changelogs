@@ -6,6 +6,7 @@ import { byCodepoint, hasNextRelease, listLocalStableReleases, NEXT, readManifes
 
 interface PackageJson {
   name?: string;
+  private?: boolean;
   description?: string;
   backstage?: { role?: string };
 }
@@ -24,6 +25,14 @@ if (!fs.existsSync(path.join(backstageDir, ".git"))) {
   throw new Error(
     `Backstage clone not found at ${backstageDir}. ` +
       `Clone https://github.com/backstage/backstage there or set BACKSTAGE_DIR.`,
+  );
+}
+
+const communityDir = path.resolve(process.env.COMMUNITY_DIR ?? path.join(repoRoot, ".upstream", "community-plugins"));
+if (!fs.existsSync(path.join(communityDir, ".git"))) {
+  throw new Error(
+    `Community plugins clone not found at ${communityDir}. ` +
+      `Clone https://github.com/backstage/community-plugins there or set COMMUNITY_DIR.`,
   );
 }
 
@@ -78,6 +87,26 @@ for (const group of ["packages", "plugins"]) {
   }
 }
 console.log(`Copied ${fromMain} changelogs from the main branch`);
+
+// Community plugins live in per-workspace monorepos: workspaces/<ws>/{plugins,packages}/<pkg>.
+let fromCommunity = 0;
+const workspacesDir = path.join(communityDir, "workspaces");
+for (const workspace of fs.existsSync(workspacesDir) ? fs.readdirSync(workspacesDir).sort() : []) {
+  for (const group of ["plugins", "packages"]) {
+    const groupDir = path.join(workspacesDir, workspace, group);
+    if (!fs.existsSync(groupDir)) continue;
+    for (const entry of fs.readdirSync(groupDir).sort()) {
+      const packageJson = path.join(groupDir, entry, "package.json");
+      const changelog = path.join(groupDir, entry, "CHANGELOG.md");
+      if (!fs.existsSync(packageJson) || !fs.existsSync(changelog)) continue;
+      const pkg = JSON.parse(fs.readFileSync(packageJson, "utf8")) as PackageJson;
+      if (pkg.name === undefined || pkg.private === true) continue;
+      writeChangelog(pkg.name, fs.readFileSync(changelog, "utf8"));
+      fromCommunity += 1;
+    }
+  }
+}
+console.log(`Copied ${fromCommunity} changelogs from community-plugins workspaces`);
 
 // Phase 2: packages from the release manifests that are gone from main are
 // picked up from the release tag of the newest release that still listed them.

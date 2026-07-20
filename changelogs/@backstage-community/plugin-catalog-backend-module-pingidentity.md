@@ -1,0 +1,126 @@
+# @backstage-community/plugin-catalog-backend-module-pingidentity
+
+## 0.13.0
+
+### Minor Changes
+
+- 80c0e9e: Backstage version bump to v1.52.0
+
+## 0.12.0
+
+### Minor Changes
+
+- 1ae0fc8: Added a new PingFederate auth provider.
+- 881caae: Backstage version bump to v1.51.0
+
+### Patch Changes
+
+- a3f35d7: Added contributor development guides and dev harness `app-config.yaml` files for both plugins. Expanded automated test coverage for PingFederate sign-in resolvers and auth module wiring, and for PingOne catalog module extension points and entity provider registration.
+
+## 0.11.1
+
+### Patch Changes
+
+- 170f85d: Migrate to Jest 30
+
+## 0.11.0
+
+### Minor Changes
+
+- 1a8dad8: Backstage version bump to v1.49.3
+
+## 0.10.0
+
+### Minor Changes
+
+- 74486ec: Backstage version bump to v1.47.3
+
+## 0.9.0
+
+### Minor Changes
+
+- 411a2b8: Backstage version bump to v1.45.3
+
+## 0.8.0
+
+### Minor Changes
+
+- 0503c54: Backstage version bump to v1.44.1
+
+## 0.7.0
+
+### Minor Changes
+
+- 104dc2d: Backstage version bump to v1.42.5
+
+## 0.6.0
+
+### Minor Changes
+
+- d7b0b77: Backstage version bump to v1.41.1
+
+## 0.5.0
+
+### Minor Changes
+
+- abb042b: Backstage version bump to v1.39.0
+
+## 0.4.0
+
+### Minor Changes
+
+- e391a85: Backstage version bump to v1.38.1
+
+## 0.3.0
+
+### Minor Changes
+
+- 4e6df64: Backstage version bump to v1.36.1
+
+## 0.2.1
+
+### Patch Changes
+
+- 1894560: removed unused dependency @backstage/backend-common
+
+## 0.2.0
+
+### Minor Changes
+
+- c328f9c: Backstage version bump to v1.35.0
+
+## 0.1.6
+
+### Patch Changes
+
+- a6e850f: Updated dependency `msw` to `1.3.5`.
+
+## 0.1.5
+
+### Patch Changes
+
+- cf437a2: Removed `export-dynamic` script and Janus IDP cli from the build process and npm release.
+
+## 0.1.4
+
+### Patch Changes
+
+- bdd62a4: Backstage version bump to v1.32.2
+
+## 0.1.3
+
+### Patch Changes
+
+- dab3f66: Backstage version bump to v1.31.2
+
+## 0.1.2
+
+### Patch Changes
+
+- 065deca: regenerate dist-dynamic and move @janus-idp/cli to devDependency
+
+## 0.1.1
+
+### Patch Changes
+
+- b0e8a58: Corrected API Reports
