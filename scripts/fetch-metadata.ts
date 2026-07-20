@@ -6,6 +6,7 @@ import { byCodepoint, hasNextRelease, listLocalStableReleases, NEXT, readManifes
 
 interface PackageJson {
   name?: string;
+  private?: boolean;
   description?: string;
   backstage?: { role?: string };
 }
@@ -99,7 +100,7 @@ for (const workspace of fs.existsSync(workspacesDir) ? fs.readdirSync(workspaces
       const changelog = path.join(groupDir, entry, "CHANGELOG.md");
       if (!fs.existsSync(packageJson) || !fs.existsSync(changelog)) continue;
       const pkg = JSON.parse(fs.readFileSync(packageJson, "utf8")) as PackageJson;
-      if (pkg.name === undefined) continue;
+      if (pkg.name === undefined || pkg.private === true) continue;
       writeChangelog(pkg.name, fs.readFileSync(changelog, "utf8"));
       fromCommunity += 1;
     }
