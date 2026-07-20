@@ -8,7 +8,7 @@ import {
   NEXT,
   readManifest,
   releasesDir,
-  repoRoot,
+  tablesDir,
   writeFileIfChanged,
 } from "./lib.ts";
 
@@ -90,7 +90,7 @@ for (const variant of variants) {
     md.push(`| \`${mdCell(name)}\` | ${cells.join(" | ")} |`);
   }
   md.push("");
-  writeFileIfChanged(path.join(repoRoot, `${variant.name}.md`), md.join("\n"));
+  writeFileIfChanged(path.join(tablesDir, `${variant.name}.md`), md.join("\n"));
 
   const csv: string[] = [];
   csv.push(["Package", ...shown.map(({ release }) => release)].map(csvCell).join(","));
@@ -98,7 +98,7 @@ for (const variant of variants) {
     csv.push([name, ...shown.map(({ packages }) => packages.get(name) ?? "")].map(csvCell).join(","));
   }
   csv.push("");
-  writeFileIfChanged(path.join(repoRoot, `${variant.name}.csv`), csv.join("\n"));
+  writeFileIfChanged(path.join(tablesDir, `${variant.name}.csv`), csv.join("\n"));
 
   console.log(`Generated ${variant.name}.md/.csv (${shown.length} columns, ${packageNames.length} packages)`);
 }

@@ -10,10 +10,10 @@ One column per release with the version of every package, ordered `next` (if a n
 
 | Package versions | Markdown | CSV |
 | --- | --- | --- |
-| Last 10 releases | [package-versions-last-10-releases.md](package-versions-last-10-releases.md) | [package-versions-last-10-releases.csv](package-versions-last-10-releases.csv) |
-| Last 10 minor releases | [package-versions-last-10-minor-releases.md](package-versions-last-10-minor-releases.md) | [package-versions-last-10-minor-releases.csv](package-versions-last-10-minor-releases.csv) |
-| All minor releases | [package-versions-all-minor-releases.md](package-versions-all-minor-releases.md) | [package-versions-all-minor-releases.csv](package-versions-all-minor-releases.csv) |
-| All releases | [package-versions-all-releases.md](package-versions-all-releases.md) | [package-versions-all-releases.csv](package-versions-all-releases.csv) |
+| Last 10 releases | [package-versions-last-10-releases.md](tables/package-versions-last-10-releases.md) | [package-versions-last-10-releases.csv](tables/package-versions-last-10-releases.csv) |
+| Last 10 minor releases | [package-versions-last-10-minor-releases.md](tables/package-versions-last-10-minor-releases.md) | [package-versions-last-10-minor-releases.csv](tables/package-versions-last-10-minor-releases.csv) |
+| All minor releases | [package-versions-all-minor-releases.md](tables/package-versions-all-minor-releases.md) | [package-versions-all-minor-releases.csv](tables/package-versions-all-minor-releases.csv) |
+| All releases | [package-versions-all-releases.md](tables/package-versions-all-releases.md) | [package-versions-all-releases.csv](tables/package-versions-all-releases.csv) |
 
 ## Number of changed packages
 
@@ -21,8 +21,8 @@ One row per release (newest to oldest, incl. `next` if it exists), comparing eac
 
 | Number of changed packages | Markdown | CSV |
 | --- | --- | --- |
-| All releases | [number-of-changed-packages-all-releases.md](number-of-changed-packages-all-releases.md) | [number-of-changed-packages-all-releases.csv](number-of-changed-packages-all-releases.csv) |
-| All minor releases | [number-of-changed-packages-all-minor-releases.md](number-of-changed-packages-all-minor-releases.md) | [number-of-changed-packages-all-minor-releases.csv](number-of-changed-packages-all-minor-releases.csv) |
+| All releases | [number-of-changed-packages-all-releases.md](tables/number-of-changed-packages-all-releases.md) | [number-of-changed-packages-all-releases.csv](tables/number-of-changed-packages-all-releases.csv) |
+| All minor releases | [number-of-changed-packages-all-minor-releases.md](tables/number-of-changed-packages-all-minor-releases.md) | [number-of-changed-packages-all-minor-releases.csv](tables/number-of-changed-packages-all-minor-releases.csv) |
 
 ## Per-release folders
 
@@ -50,6 +50,6 @@ The same workflow also reads each package's `package.json` and generates tables 
 
 | Package descriptions | Markdown | CSV |
 | --- | --- | --- |
-| Active packages | [package-descriptions.md](package-descriptions.md) | [package-descriptions.csv](package-descriptions.csv) |
-| Deprecated packages | [package-descriptions-deprecated.md](package-descriptions-deprecated.md) | [package-descriptions-deprecated.csv](package-descriptions-deprecated.csv) |
-| All packages | [package-descriptions-all.md](package-descriptions-all.md) | [package-descriptions-all.csv](package-descriptions-all.csv) |
+| Active packages | [package-descriptions.md](tables/package-descriptions.md) | [package-descriptions.csv](tables/package-descriptions.csv) |
+| Deprecated packages | [package-descriptions-deprecated.md](tables/package-descriptions-deprecated.md) | [package-descriptions-deprecated.csv](tables/package-descriptions-deprecated.csv) |
+| All packages | [package-descriptions-all.md](tables/package-descriptions-all.md) | [package-descriptions-all.csv](tables/package-descriptions-all.csv) |

@@ -10,7 +10,7 @@ import {
   NEXT,
   readManifest,
   releasesDir,
-  repoRoot,
+  tablesDir,
   writeFileIfChanged,
 } from "./lib.ts";
 
@@ -107,10 +107,10 @@ for (const variant of variants) {
     md.push(`| ${row.map(mdCell).join(" | ")} |`);
   }
   md.push("");
-  writeFileIfChanged(path.join(repoRoot, `${variant.name}.md`), md.join("\n"));
+  writeFileIfChanged(path.join(tablesDir, `${variant.name}.md`), md.join("\n"));
 
   const csv = [HEADER, ...rows].map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
-  writeFileIfChanged(path.join(repoRoot, `${variant.name}.csv`), csv);
+  writeFileIfChanged(path.join(tablesDir, `${variant.name}.csv`), csv);
 
   console.log(`Generated ${variant.name}.md/.csv (${rows.length} rows)`);
 }

@@ -5,6 +5,7 @@ import semver from "semver";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 export const releasesDir = path.join(repoRoot, "releases");
+export const tablesDir = path.join(repoRoot, "tables");
 export const NEXT = "next";
 
 export interface Manifest {
