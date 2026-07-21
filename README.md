@@ -6,7 +6,7 @@ A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and o
 
 ## RHDH releases
 
-[`config.yaml`](config.yaml) maps each Red Hat Developer Hub (RHDH) release to the Backstage release it is based on. For every entry there is a root folder named after the RHDH release (e.g. [`1.9/`](1.9), [`1.10/`](1.10)) containing:
+[`config.yaml`](config.yaml) maps each Red Hat Developer Hub (RHDH) release to the Backstage release it is based on. For every entry there is a folder named after the RHDH release (e.g. [`releases/1.9/`](releases/1.9), [`releases/1.10/`](releases/1.10)) containing:
 
 - `manifest.json` — the manifest of the mapped Backstage release, copied verbatim from `backstage/versions` (`v1/releases/<backstage-version>/`)
 - `README.md` — diff summary against the Backstage version of the **previous RHDH release** (e.g. `1.9/` compares Backstage 1.42.5 of RHDH 1.8 with Backstage 1.45.3 of RHDH 1.9), highlighting ⚠️ major version bumps, 🆕 added and ❌ removed packages
