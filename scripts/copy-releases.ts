@@ -3,7 +3,7 @@ import * as path from "node:path";
 import semver from "semver";
 import { isStableRelease, NEXT, releasesDir, upstreamDir } from "./lib.ts";
 
-const RELEASE_FILES = ["manifest.json", "yarn-plugin"];
+const RELEASE_FILES = ["manifest.json"];
 
 function copyReleaseFiles(sourceDir: string, targetDir: string): void {
   fs.mkdirSync(targetDir, { recursive: true });
@@ -35,7 +35,7 @@ const latestNext = nextVersions.at(-1);
 const latestStable = stableVersions.at(-1)!;
 const nextDir = path.join(releasesDir, NEXT);
 
-// Wipe first in both cases so stale files (old README, dropped yarn-plugin) never survive.
+// Wipe first in both cases so stale files (e.g. an old README) never survive.
 fs.rmSync(nextDir, { recursive: true, force: true });
 if (latestNext !== undefined && semver.gt(latestNext, latestStable)) {
   copyReleaseFiles(path.join(upstreamReleasesDir, latestNext), nextDir);

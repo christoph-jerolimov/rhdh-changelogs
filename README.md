@@ -29,7 +29,6 @@ One row per release (newest to oldest, incl. `next` if it exists), comparing eac
 Each `releases/<version>/` folder contains:
 
 - `manifest.json` — copied verbatim from `backstage/versions` (`v1/releases/<version>/`)
-- `yarn-plugin` — copied verbatim, for releases that ship one
 - `README.md` — generated diff against the previous patch release (if any) and the previous minor release (highest patch of the previous minor line), highlighting ⚠️ major version bumps, 🆕 added and ❌ removed packages
 - `resolutions.json` — the manifest transformed into a package.json-style `{ "resolutions": { "<package>": "<version>" } }` map
 - `CHANGELOG.md` — the changelog sections of all packages changed or added since the direct previous release, sliced from [`changelogs/`](changelogs) to the versions after the previous release (exclusive) up to this release (inclusive). `@backstage/*` dependency-update entries are excluded by default (packages that only had such updates are listed at the end); can be built for any release pair with `npm run changelog -- <from> <to> [--dep-updates include|exclude-backstage|exclude-all]`
