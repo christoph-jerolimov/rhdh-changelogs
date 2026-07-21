@@ -1,4 +1,4 @@
-# RHDH / Backstage Changelogs 🎧
+# RHDH and Backstage Changelogs 🎧
 
 Automatically maintained mirror and analysis of the official Backstage package changelogs and metadata from [backstage/backstage](https://github.com/backstage/backstage), [backstage/community-plugins](https://github.com/backstage/community-plugins), and [redhat-developer/rhdh-plugins](https://github.com/redhat-developer/rhdh-plugins), and of the release manifests from [backstage/versions](https://github.com/backstage/versions).
 
