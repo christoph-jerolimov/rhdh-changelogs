@@ -1,0 +1,220 @@
+# @red-hat-developer-hub/backstage-plugin-quickstart
+
+## 1.12.0
+
+### Minor Changes
+
+- 60460f4: Backstage version bump to v1.52.1
+
+## 1.11.1
+
+### Patch Changes
+
+- cf89b92: Fix scalprum `QuickstartPlugin` exposed module path from `./src/index.ts` to `./src/index.tsx`.
+
+## 1.11.0
+
+### Minor Changes
+
+- 033a0b5: Graduate the New Frontend System (NFS) plugin from the `./alpha` export to the primary `./` entry point. OFS (legacy) exports are now available at `./legacy`. Translations remain at `./alpha`.
+
+### Patch Changes
+
+- 6d0a82b: Bump `@red-hat-developer-hub/backstage-plugin-theme` to `^0.14.11` to fix broken `config.d.ts` in earlier versions.
+
+## 1.10.0
+
+### Minor Changes
+
+- 8479da8: Rebrand Lightspeed quickstart steps to Intelligent Assistant: replace custom SVG icon with PatternFly RhUiAiChatbotIcon, update all English and localized i18n strings, and add test coverage for the Lightspeed icon.
+
+## 1.9.7
+
+### Patch Changes
+
+- 88f7bb7: Replace Material UI v4 with MUI v5 and scope JSS class names to prevent style collisions.
+
+## 1.9.6
+
+### Patch Changes
+
+- 4c130c1: Fixed dynamic plugin export failure for the Lightspeed quickstart icon by inlining SVG assets as data URIs instead of file imports that are not emitted into the ESM `dist` output.
+
+## 1.9.5
+
+### Patch Changes
+
+- 4b07772: Translations updated for de/es/fr/it/ja
+
+## 1.9.4
+
+### Patch Changes
+
+- 498beb5: add react-router-dom in devDependencies
+- 6b8046b: Updated dependency `@red-hat-developer-hub/backstage-plugin-app-react` to `^0.0.5`.
+
+## 1.9.3
+
+### Patch Changes
+
+- 5148408: Migrated to Jest 30 as required by @backstage/cli 0.36.0.
+
+## 1.9.2
+
+### Patch Changes
+
+- 200133a: add Lightspeed intro to the quickstarts
+
+## 1.9.1
+
+### Patch Changes
+
+- 351d260: Added quick start menu item to help dropdown in global header
+
+## 1.9.0
+
+### Minor Changes
+
+- 0502c77: Added support for NFS
+
+## 1.8.5
+
+### Patch Changes
+
+- 14d6bcb: Localize the Quickstart help snackbar message.
+
+## 1.8.4
+
+### Patch Changes
+
+- afd7a1e: Update translations for Quickstart.
+
+## 1.8.3
+
+### Patch Changes
+
+- f6d5102: Translation updated for German and Spanish
+- b6f1568: updated plugin readme
+- 6bea432: Moved the `CustomDrawer` component from `packages/app` to `plugins/quickstart/dev` to resolve workspace accessibility issues during development.
+
+## 1.8.2
+
+### Patch Changes
+
+- bb8ef80: Added drawer state management utilities for integration with application drawers.
+
+## 1.8.1
+
+### Patch Changes
+
+- f74564d: Added 'it' and 'ja' i18n support and updated 'fr' translation strings.
+- 98abe8b: Updated dependency `@red-hat-developer-hub/backstage-plugin-theme` to `^0.11.0`.
+- 04630bf: Updated dependency `@red-hat-developer-hub/backstage-plugin-theme` to `^0.12.0`.
+
+## 1.8.0
+
+### Minor Changes
+
+- 8e269d3: Backstage version bump to v1.45.2
+
+### Patch Changes
+
+- c6c029b: allow base64 image in quickstart icons
+
+## 1.7.0
+
+### Minor Changes
+
+- e9adef8: Backstage version bump to v1.44.2
+
+## 1.6.2
+
+### Patch Changes
+
+- f1b0f1a: Add package.json exports configuration for alpha module support.
+
+  - Add exports field to support importing from alpha module
+  - Add typesVersions configuration for TypeScript support
+
+## 1.6.1
+
+### Patch Changes
+
+- def4673: Fixes the issue where the quickstart drawer was reserving space for users with no eligible items
+
+  - Centralize role determination at provider level to avoid re-fetching on drawer open/close
+  - Add multi-layer protection to prevent empty drawer space when user has no eligible quickstart items
+  - Remove complex caching logic from useQuickstartRole hook for cleaner implementation
+  - Update components to use role from context instead of calling hook directly
+  - Fix test mocks to work with new context-based architecture
+
+  This resolves the issue where the quickstart drawer would open an empty space when the current user has no quickstart items configured for their role.
+
+## 1.6.0
+
+### Minor Changes
+
+- dcda8f3: Adding localization support for quickstart steps.
+
+### Patch Changes
+
+- b887a58: French translation updated
+
+## 1.5.1
+
+### Patch Changes
+
+- 9057587: Fix Quickstart drawer re-opening on close by scoping drawer flags per user, caching resolved role per session, and filtering items only when the drawer is open; preserves first-time auto-open and respects manual close.
+
+## 1.5.0
+
+### Minor Changes
+
+- d49b252: Backstage version bump to v1.42.5
+
+### Patch Changes
+
+- e8cc528: Updated dependency `@red-hat-developer-hub/backstage-plugin-theme` to `^0.10.0` and move it from plugin dependencies to devDependencies.
+
+## 1.4.0
+
+### Minor Changes
+
+- 47fd25f: Enabled Quickstart items for developer role.
+
+## 1.3.0
+
+### Minor Changes
+
+- bc88e5f: Add internationalization (i18n) support with German, French and Spanish translations in quickstart.
+
+## 1.2.0
+
+### Minor Changes
+
+- 0e0f2f5: Backstage version bump to v1.41.2
+
+### Patch Changes
+
+- f89f72f: Updated dependency `@mui/icons-material` to `5.18.0`.
+  Updated dependency `@mui/material` to `5.18.0`.
+
+## 1.1.1
+
+### Patch Changes
+
+- 0c449b8: Fix to set quickstart-open local-storage key to true on first user visit.
+
+## 1.1.0
+
+### Minor Changes
+
+- 7eb9524: - Add QuickstartButton to use context and remove localstorage logic for opening/closing of drawer.
+  - Add a custom class `.quickstart-drawer-open` on document.body that can be used to adjust styles across the app.
+  - Update QuickstartDrawer styles to handle header height.
+
+## 1.0.0
+
+### Major Changes
+
+- 4f8249b: First version of quickstart plugin

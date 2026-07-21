@@ -1,0 +1,281 @@
+# @red-hat-developer-hub/backstage-plugin-theme
+
+## 0.14.11
+
+### Patch Changes
+
+- a3302ac: prevent overlapping scrollbars on TechDocs pages
+
+## 0.14.10
+
+### Patch Changes
+
+- 9342bf0: Inline ThemeConfig types in config.d.ts to avoid importing from the package entry point, which pulls in @mui/material types that crash ts-json-schema-generator on `typeof window.matchMedia`.
+
+## 0.14.9
+
+### Patch Changes
+
+- eed88f3: Fix broken `config.d.ts` import path: change `import { ThemeConfig } from './src'` to `'./'` so the published package resolves correctly during config schema validation.
+
+## 0.14.8
+
+### Patch Changes
+
+- 6a1b1f0: Replace Material UI v4 imports with MUI v5 and add workspace ESLint restrictions to prevent v4 regressions.
+
+## 0.14.7
+
+### Patch Changes
+
+- 4d80582: fix(RHDHBUGS-2291): use `&.Mui-selected` syntax for MuiBottomNavigationAction to resolve CSS specificity console warning
+
+## 0.14.6
+
+### Patch Changes
+
+- bb01e90: Removed the box shadow from the AppBar component
+
+## 0.14.5
+
+### Patch Changes
+
+- 82cc47d: Fixed the background color of myGroup sidebar submenu in light theme
+
+## 0.14.4
+
+### Patch Changes
+
+- 5148408: Migrated to Jest 30 as required by @backstage/cli 0.36.0.
+
+## 0.14.3
+
+### Patch Changes
+
+- 54b7c9e: style the active sidebar nav link (a[aria-current="page"]) so selected colors match the resolved navigation shell
+
+## 0.14.2
+
+### Patch Changes
+
+- ee1def6: Align the navigation sidebar with merged `palette.navigation` and `rhdh.general` colors, including submenu rows and selected/active `BackstageSidebarItem` states. Add `rhdh.general.pageInsetBackgroundColor` so the page inset shell can use its own color (defaults match the previous app bar fill; falls back to `appBarBackgroundColor` when unset). Main content area remains on `mainSectionBackgroundColor`.
+
+## 0.14.1
+
+### Patch Changes
+
+- 8d1eee2: Add missing font css reference so that the Red Hat font is used again.
+
+## 0.14.0
+
+### Minor Changes
+
+- 0b7c442: Add and export RHDH logo components as LogoFull and LogoIcon
+- 0b7c442: Backstage version bump to v1.49.2
+
+## 0.13.0
+
+### Minor Changes
+
+- 9476d25: Added NFS support.
+
+## 0.12.1
+
+### Patch Changes
+
+- 29042bc: Fixing the inconsitent edges of filter section on catalog page
+
+## 0.12.0
+
+### Minor Changes
+
+- f66ba99: Backstage version bump to v1.45.3
+
+## 0.11.0
+
+### Minor Changes
+
+- 11029f6: Backstage version bump to v1.44.2
+
+## 0.10.2
+
+### Patch Changes
+
+- 374d565: Scope TechDocs subheader toolbar to use `background.paper`, fixing the gray strip under the page header. Adds a `MuiCssBaseline` rule targeting `[class*="BackstageHeader-header-"] + [class*="MuiToolbar-root"]` so other toolbars remain unaffected.
+
+## 0.10.1
+
+### Patch Changes
+
+- fe339e6: Release all themes and test packages together to resolve build issues
+
+## 0.10.0
+
+### Minor Changes
+
+- 37b8b27: Backstage version bump to v1.42.5
+
+## 0.9.1
+
+### Patch Changes
+
+- 8e33ca2: Use `id` instead of `class` to select components due to differences in classNames in production
+
+## 0.9.0
+
+### Minor Changes
+
+- c353c97: Bump to backstage version 1.39.1
+
+## 0.8.3
+
+### Patch Changes
+
+- 142818d: Added `theme.rhdh.general.pageInset` option for easier customizability. Removed broken global header styles.
+
+## 0.8.2
+
+### Patch Changes
+
+- 275d8b1: Support above-sidebar postiion for global header
+
+## 0.8.1
+
+### Patch Changes
+
+- cf40352: Add CSS for global header
+
+## 0.8.0
+
+### Minor Changes
+
+- 8f9be66: Add support to load the theme as dynamic plugin
+
+## 0.7.0
+
+### Minor Changes
+
+- 7db4caa: Align BackstageHeader, Backstage/MUI Breadcrumbs, BackstageSidebar, and BackstagePage with PF6
+- 7db4caa: **Breaking change**: remove deprecated general.sideBarBackgroundColor
+- 33b6dd1: Align primary color, buttons and tabs styling with PatternFly 6. Add styling for :focus-visible on the tabs.
+
+## 0.6.0
+
+### Minor Changes
+
+- 97ffc75: Backstage version bump to v1.36.1
+
+### Patch Changes
+
+- b1fc395: Some UI bug fix.
+
+## 0.5.0
+
+### Minor Changes
+
+- a571f32: Upgrade Backstage from 0.32.0 to 1.35.0
+
+### Patch Changes
+
+- 106b3d0: Fixing fontColor error while customizing rhdh appearance
+
+## 0.4.9
+
+### Patch Changes
+
+- b6efba4: fix font loading after migrating theme
+
+## 0.4.8
+
+### Patch Changes
+
+- 370d9b1: move the mui v5 package to a peer dependency to ensure that we don't load it twice
+- 67de15b: added a workaround so that `defaultProps` are also picked up from MUI v5 components (like Button disabledRipple or Grid spacing)
+
+## 0.4.7
+
+### Patch Changes
+
+- 5ff9b79: add missing shadow to action menus/dropdowns that uses the Popover component
+
+## 0.4.6
+
+### Patch Changes
+
+- 715c448: add workaround for `style-inject`(ion) issue with the published package
+
+## 0.4.5
+
+### Patch Changes
+
+- 15aa207: add workaround for `style-inject`(ion) issue with the published package
+
+## 0.4.4
+
+### Patch Changes
+
+- f2fad21: removes all drop shadow from MUI v4 Papers and add missing border for MUI v5 Papers
+- f2fad21: fix/remove different paper background colors/shades in MUI v5
+- a62d5b8: Add hover style to tabs, move vertical tabs indicator to left to match PF style.
+
+## 0.4.3
+
+### Patch Changes
+
+- 1de5006: fix `sideEffect` typo to load Red Hat font
+
+## 0.4.2
+
+### Patch Changes
+
+- 93b7ee8: align disabled tabs background color more with patternfly (5 for now)
+- d92dc06: remove bottom border and vertical padding from vertical tabs
+
+## 0.4.1
+
+### Patch Changes
+
+- 037324e: fixed that all disabled elements used a disable background color instead of just disabled tabs
+- ee1085e: Fixed Mui v5 outlined button missing outline and causes other buttons move on hover issue.
+
+## 0.4.0
+
+### Minor Changes
+
+- b1a511a: Migrate the 0.4.x theme that was already released as @redhat-developer/red-hat-developer-hub-theme@0.4.0. It is based on the latest changes in https://github.com/redhat-developer/red-hat-developer-hub-theme/tree/10cdcbe60dea6e60aca4550a88fab8c30536c295/src/themes/rhdh.
+
+## 0.3.0
+
+### Minor Changes
+
+- cecd842: Migrate the 0.3.x theme with the 1.3.x RHDH theme. It's based on @redhat-developer/red-hat-developer-hub-theme@0.3.0 and the sourcecode is migrated from https://github.com/redhat-developer/red-hat-developer-hub-theme/tree/1cd29db2abb807f94a2edb09688157b316bf6ff8/src/themes/rhdh and aligned with linter and prettier rules in rhdh-plugins.
+
+## 0.2.2
+
+### Patch Changes
+
+- 4cd05dd: Add `sideEffects` configuration to allow the plugin to load the Red Hat font.
+
+## 0.2.1
+
+### Patch Changes
+
+- 9d6e7b2: Migrate the 0.2.x theme with the latest 1.2.x RHDH theme. It's based on @redhat-developer/red-hat-developer-hub-theme@0.1.7 and the sourcecode is migrated from https://github.com/redhat-developer/red-hat-developer-hub-theme/tree/147ec09221a4440177e1bf89260c188041de7a79/src/themes/rhdh and aligned with linter and prettier rules in rhdh-plugins.
+
+## 0.2.0
+
+### Minor Changes
+
+- bf40004: This version contains the initial theme from RHDH 1.2
+
+## 0.1.0
+
+### Minor Changes
+
+- 5692219: This version contains the initial theme from RHDH 1.1 https://github.com/janus-idp/backstage-showcase/tree/v1.1.0/packages/app/src/themes
+
+## 0.0.1
+
+### Patch Changes
+
+- 8be31d3: This version contains the initial theme from RHDH 1.0 https://github.com/janus-idp/backstage-showcase/tree/v1.0.0/packages/app/src/themes
