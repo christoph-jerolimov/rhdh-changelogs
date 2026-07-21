@@ -1,4 +1,4 @@
-name: Update Backstage data
+name: Update changelogs
 
 on:
   workflow_dispatch:
@@ -72,6 +72,6 @@ jobs:
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "chore: update Backstage data"
+            git commit -m "Update changelogs"
             git push origin HEAD:main
           fi

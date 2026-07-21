@@ -6,13 +6,34 @@ A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and o
 
 ## RHDH releases
 
-[`config.yaml`](config.yaml) maps each Red Hat Developer Hub (RHDH) release to the Backstage release it is based on. For every entry there is a folder named after the RHDH release (e.g. [`releases/1.9/`](releases/1.9), [`releases/1.10/`](releases/1.10)) containing:
-
-- `manifest.json` — the manifest of the mapped Backstage release, copied verbatim from `backstage/versions` (`v1/releases/<backstage-version>/`)
-- `README.md` — diff summary against the Backstage version of the **previous RHDH release** (e.g. `1.9/` compares Backstage 1.42.5 of RHDH 1.8 with Backstage 1.45.3 of RHDH 1.9), highlighting ⚠️ major version bumps, 🆕 added and ❌ removed packages
-- `CHANGELOG.md` — the changelog sections of all packages changed or added over the same span, sliced from [`changelogs/`](changelogs) to the versions after the previous release's Backstage version (exclusive) up to this release's Backstage version (inclusive). `@backstage/*` dependency-update entries are excluded (packages that only had such updates are listed at the end)
+[`config.yaml`](config.yaml) maps each Red Hat Developer Hub (RHDH) release to the Backstage release it is based on. For every entry there is a folder named after the RHDH release (e.g. [`releases/1.9/`](releases/1.9), [`releases/1.10/`](releases/1.10)) — see [Per-release folders](#per-release-folders) for their contents.
 
 New RHDH releases are picked up by adding an entry to `config.yaml`; folders of entries removed from the config are deleted on the next run.
+
+## Package versions
+
+One column per RHDH release with the version of every package of its mapped Backstage release, ordered newest to oldest. Note: the *all releases* files are large and GitHub may not render the Markdown version — use the last-3 files for browsing.
+
+| Package versions | Markdown | CSV |
+| --- | --- | --- |
+| Last 3 releases | [package-versions-last-3-releases.md](tables/package-versions-last-3-releases.md) | [package-versions-last-3-releases.csv](tables/package-versions-last-3-releases.csv) |
+| All releases | [package-versions-all-releases.md](tables/package-versions-all-releases.md) | [package-versions-all-releases.csv](tables/package-versions-all-releases.csv) |
+
+## Number of changed packages
+
+One row per RHDH release (newest to oldest), comparing the Backstage packages of each release with those of the direct previous RHDH release: counts of added, removed, upgraded, and unchanged packages, plus the bumps that need extra attention (major, `0.x` minor, `0.0.x` patch).
+
+| Number of changed packages | Markdown | CSV |
+| --- | --- | --- |
+| All releases | [number-of-changed-packages.md](tables/number-of-changed-packages.md) | [number-of-changed-packages.csv](tables/number-of-changed-packages.csv) |
+
+## Per-release folders
+
+Each `releases/<rhdh-version>/` folder contains:
+
+- `manifest.json` — the manifest of the mapped Backstage release, copied verbatim from `backstage/versions` (`v1/releases/<backstage-version>/`)
+- `README.md` — generated diff against the Backstage version of the **previous RHDH release** (e.g. `releases/1.9/` compares Backstage 1.42.5 of RHDH 1.8 with 1.45.3 of RHDH 1.9), highlighting ⚠️ major version bumps, 🆕 added and ❌ removed packages
+- `CHANGELOG.md` — the changelog sections of all packages changed or added over the same span, sliced from [`changelogs/`](changelogs) to the versions after the previous release's Backstage version (exclusive) up to this release's Backstage version (inclusive). `@backstage/*` dependency-update entries are excluded (packages that only had such updates are listed at the end)
 
 ## Changelogs
 
