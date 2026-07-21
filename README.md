@@ -14,6 +14,23 @@ A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and o
 
 New RHDH releases are picked up by adding an entry to `config.yaml`; folders of entries removed from the config are deleted on the next run.
 
+## Package versions
+
+One column per RHDH release with the version of every package of its mapped Backstage release, ordered newest to oldest. Note: the *all releases* files are large and GitHub may not render the Markdown version — use the last-3 files for browsing.
+
+| Package versions | Markdown | CSV |
+| --- | --- | --- |
+| Last 3 releases | [package-versions-last-3-releases.md](tables/package-versions-last-3-releases.md) | [package-versions-last-3-releases.csv](tables/package-versions-last-3-releases.csv) |
+| All releases | [package-versions-all-releases.md](tables/package-versions-all-releases.md) | [package-versions-all-releases.csv](tables/package-versions-all-releases.csv) |
+
+## Number of changed packages
+
+One row per RHDH release (newest to oldest), comparing the Backstage packages of each release with those of the direct previous RHDH release: counts of added, removed, upgraded, and unchanged packages, plus the bumps that need extra attention (major, `0.x` minor, `0.0.x` patch).
+
+| Number of changed packages | Markdown | CSV |
+| --- | --- | --- |
+| All releases | [number-of-changed-packages.md](tables/number-of-changed-packages.md) | [number-of-changed-packages.csv](tables/number-of-changed-packages.csv) |
+
 ## Changelogs
 
 The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every package that appears in a mapped Backstage release manifest**, stored as `changelogs/<scope>/<name>.md` (e.g. `changelogs/@backstage/plugin-scaffolder.md`). They are refreshed on every workflow run:

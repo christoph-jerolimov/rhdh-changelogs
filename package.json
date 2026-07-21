@@ -6,7 +6,9 @@
   "scripts": {
     "rhdh": "tsx scripts/generate-rhdh-releases.ts",
     "metadata": "tsx scripts/fetch-metadata.ts",
-    "update": "npm run metadata && npm run rhdh",
+    "tables": "tsx scripts/generate-tables.ts",
+    "changes": "tsx scripts/generate-changes.ts",
+    "update": "npm run metadata && npm run rhdh && npm run tables && npm run changes",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
