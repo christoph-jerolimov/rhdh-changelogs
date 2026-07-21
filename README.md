@@ -1,6 +1,6 @@
 # RHDH / Backstage Changelogs 🎧
 
-Automatically maintained mirror and analysis of the official Backstage package changelogs and metadata from [backstage/backstage](https://github.com/backstage/backstage) and [backstage/community-plugins](https://github.com/backstage/community-plugins), and of the release manifests from [backstage/versions](https://github.com/backstage/versions).
+Automatically maintained mirror and analysis of the official Backstage package changelogs and metadata from [backstage/backstage](https://github.com/backstage/backstage), [backstage/community-plugins](https://github.com/backstage/community-plugins), and [redhat-developer/rhdh-plugins](https://github.com/redhat-developer/rhdh-plugins), and of the release manifests from [backstage/versions](https://github.com/backstage/versions).
 
 A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and on demand via *Run workflow*), clones both upstream repositories, regenerates everything below, and commits changes to `main` in a single commit.
 
@@ -42,6 +42,7 @@ The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every p
 
 - Packages still present on `backstage/backstage` `main` (in `packages/*` and `plugins/*`) are copied from there on every run.
 - `@backstage-community/*` packages are copied from all workspaces of `backstage/community-plugins` (in `workspaces/*/plugins/*` and `workspaces/*/packages/*`) on every run.
+- RHDH plugin packages (e.g. `@red-hat-developer-hub/*`) are copied from all workspaces of `redhat-developer/rhdh-plugins` (same `workspaces/*/plugins/*` and `workspaces/*/packages/*` layout) on every run.
 - Packages that were removed from `main` (e.g. plugins moved to community repos) are fetched once from the release tag of the newest release that still listed them; existing files are never re-fetched.
 - The job fails if any package listed in any release manifest ends up without a changelog.
 

@@ -47,6 +47,12 @@ jobs:
           git -C "$RUNNER_TEMP/community-plugins" sparse-checkout set --no-cone '/workspaces/**/package.json' '/workspaces/**/CHANGELOG.md'
           git -C "$RUNNER_TEMP/community-plugins" checkout
 
+      - name: Clone redhat-developer/rhdh-plugins
+        run: |
+          git clone --depth 1 --filter=blob:none --no-checkout https://github.com/redhat-developer/rhdh-plugins.git "$RUNNER_TEMP/rhdh-plugins"
+          git -C "$RUNNER_TEMP/rhdh-plugins" sparse-checkout set --no-cone '/workspaces/**/package.json' '/workspaces/**/CHANGELOG.md'
+          git -C "$RUNNER_TEMP/rhdh-plugins" checkout
+
       - name: Clone backstage/versions
         run: git clone --depth 1 https://github.com/backstage/versions.git "$RUNNER_TEMP/backstage-versions"
 
@@ -55,6 +61,7 @@ jobs:
         env:
           BACKSTAGE_DIR: ${{ runner.temp }}/backstage
           COMMUNITY_DIR: ${{ runner.temp }}/community-plugins
+          RHDH_PLUGINS_DIR: ${{ runner.temp }}/rhdh-plugins
           VERSIONS_DIR: ${{ runner.temp }}/backstage-versions
 
       - name: Commit and push changes
