@@ -1,7 +1,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import semver from "semver";
-import { bumpLevel, byCodepoint, diffManifests, manifestToMap, readManifest, repoRoot } from "./lib.ts";
+import { bumpLevel, byCodepoint, diffManifests, type Manifest, manifestToMap, repoRoot } from "./lib.ts";
 
 const changelogsDir = path.join(repoRoot, "changelogs");
 
@@ -38,9 +38,9 @@ const demoteHeadings = (lines: string[], levels: number): string[] =>
 const slug = (heading: string): string =>
   heading.toLowerCase().replaceAll(/[^\p{L}\p{N} _-]/gu, "").replaceAll(" ", "-");
 
-/** Link from releases/<version>/CHANGELOG.md to a version headline of a copied changelog. */
-const changelogVersionLink = (name: string, version: string): string =>
-  `../../changelogs/${name}.md#${slug(version)}`;
+/** Link from a generated CHANGELOG.md to a version headline of a copied changelog. */
+const changelogVersionLink = (changelogsPath: string, name: string, version: string): string =>
+  `${changelogsPath}/${name}.md#${slug(version)}`;
 
 /** Link the leading 7-char commit sha of changeset bullets to backstage/backstage. */
 const linkCommitShas = (lines: string[]): string[] =>
@@ -157,25 +157,37 @@ function sectionsInRange(
   return { kind: "content", lines: trimBlankEdges(lines) };
 }
 
+export interface ChangelogRenderOptions {
+  /** H1 text; defaults to `Backstage Release <to> changelog`. */
+  title?: string;
+  /** Labels for the two releases in the summary line; default to the release versions. */
+  fromLabel?: string;
+  toLabel?: string;
+  /** Relative path from the generated file to the changelogs/ folder. */
+  changelogsPath?: string;
+}
+
+const DEFAULT_CHANGELOGS_PATH = "../changelogs";
+
 /**
- * Build an aggregated changelog between two releases (folder names under
- * releases/, e.g. "1.52.1", "1.53.0", or "next"): all changed or added
- * packages with their changelog sections after the from version (exclusive)
- * up to the to version (inclusive).
+ * Build an aggregated changelog between two release manifests: all changed or
+ * added packages with their changelog sections after the from version
+ * (exclusive) up to the to version (inclusive).
  */
 export function buildChangelog(
-  fromRelease: string,
-  toRelease: string,
+  fromManifest: Manifest,
+  toManifest: Manifest,
   mode: DepUpdatesMode = "exclude-backstage",
+  options: ChangelogRenderOptions = {},
 ): string {
-  const fromManifest = readManifest(fromRelease);
-  const toManifest = readManifest(toRelease);
+  const changelogsPath = options.changelogsPath ?? DEFAULT_CHANGELOGS_PATH;
   const diff = diffManifests(manifestToMap(fromManifest), manifestToMap(toManifest));
 
   const changed = [...diff.majorBumps, ...diff.otherBumps].sort((a, b) => byCodepoint(a.name, b.name));
   const added = [...diff.added].sort((a, b) => byCodepoint(a.name, b.name));
 
-  const versionLink = (name: string, version: string): string => `[${version}](${changelogVersionLink(name, version)})`;
+  const versionLink = (name: string, version: string): string =>
+    `[${version}](${changelogVersionLink(changelogsPath, name, version)})`;
   const candidates = [
     ...added.map(({ name, version }) => ({
       name,
@@ -274,9 +286,10 @@ export function buildChangelog(
   ].filter(({ entries, items }) => (entries?.length ?? 0) > 0 || (items?.length ?? 0) > 0);
 
   const lines: string[] = [];
-  lines.push(`# Backstage Release ${toManifest.releaseVersion} changelog`, "");
+  lines.push(`# ${options.title ?? `Backstage Release ${toManifest.releaseVersion} changelog`}`, "");
   lines.push(
-    `Changes between ${fromManifest.releaseVersion} and ${toManifest.releaseVersion} — ` +
+    `Changes between ${options.fromLabel ?? fromManifest.releaseVersion} and ` +
+      `${options.toLabel ?? toManifest.releaseVersion} — ` +
       `${added.length} added, ${removed.length} removed, ${changed.length} upgraded, ` +
       `${diff.unchanged} unchanged packages.`,
     "",

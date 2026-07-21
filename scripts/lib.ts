@@ -2,11 +2,31 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 import semver from "semver";
+import { parse as parseYaml } from "yaml";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-export const releasesDir = path.join(repoRoot, "releases");
 export const tablesDir = path.join(repoRoot, "tables");
-export const NEXT = "next";
+
+export interface RhdhRelease {
+  rhdh: string;
+  backstage: string;
+}
+
+/** The RHDH releases from config.yaml with their Backstage versions, in file order. */
+export function listRhdhReleases(): RhdhRelease[] {
+  const file = path.join(repoRoot, "config.yaml");
+  const config = parseYaml(fs.readFileSync(file, "utf8")) as { releases?: unknown };
+  if (!Array.isArray(config.releases)) {
+    throw new Error(`Expected a releases array in ${file}`);
+  }
+  return config.releases.map((entry, index) => {
+    const { rhdh, backstage } = entry as Partial<RhdhRelease>;
+    if (typeof rhdh !== "string" || typeof backstage !== "string" || semver.valid(backstage) === null) {
+      throw new Error(`Invalid releases[${index}] in ${file}: ${JSON.stringify(entry)}`);
+    }
+    return { rhdh, backstage };
+  });
+}
 
 export interface Manifest {
   releaseVersion: string;
@@ -14,9 +34,7 @@ export interface Manifest {
 }
 
 export function upstreamDir(): string {
-  const dir = path.resolve(
-    process.env.VERSIONS_DIR ?? process.argv[2] ?? path.join(repoRoot, ".upstream", "versions"),
-  );
+  const dir = path.resolve(process.env.VERSIONS_DIR ?? path.join(repoRoot, ".upstream", "versions"));
   if (!fs.existsSync(path.join(dir, "v1", "releases"))) {
     throw new Error(
       `Upstream clone not found at ${dir} (expected v1/releases inside). ` +
@@ -26,23 +44,17 @@ export function upstreamDir(): string {
   return dir;
 }
 
-export function isStableRelease(version: string): boolean {
-  return semver.valid(version) !== null && semver.major(version) >= 1 && semver.prerelease(version) === null;
+/** Raw manifest.json content of a Backstage release in the backstage/versions clone. */
+export function readUpstreamManifestRaw(version: string): string {
+  const file = path.join(upstreamDir(), "v1", "releases", version, "manifest.json");
+  if (!fs.existsSync(file)) {
+    throw new Error(`Backstage release ${version} not found in the backstage/versions clone (${file})`);
+  }
+  return fs.readFileSync(file, "utf8");
 }
 
-/** Stable (>=1.0.0, non-prerelease) versions in this repo's releases/ folder, sorted ascending. */
-export function listLocalStableReleases(): string[] {
-  if (!fs.existsSync(releasesDir)) return [];
-  return fs.readdirSync(releasesDir).filter(isStableRelease).sort(semver.compare);
-}
-
-export function hasNextRelease(): boolean {
-  return fs.existsSync(path.join(releasesDir, NEXT, "manifest.json"));
-}
-
-export function readManifest(release: string): Manifest {
-  const file = path.join(releasesDir, release, "manifest.json");
-  return JSON.parse(fs.readFileSync(file, "utf8")) as Manifest;
+export function readUpstreamManifest(version: string): Manifest {
+  return JSON.parse(readUpstreamManifestRaw(version)) as Manifest;
 }
 
 export function manifestToMap(manifest: Manifest): Map<string, string> {
@@ -66,10 +78,6 @@ export function writeFileIfChanged(file: string, content: string): void {
   if (fs.existsSync(file) && fs.readFileSync(file, "utf8") === content) return;
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, content);
-}
-
-export function toJson(value: unknown): string {
-  return JSON.stringify(value, null, 2) + "\n";
 }
 
 export interface Diff {

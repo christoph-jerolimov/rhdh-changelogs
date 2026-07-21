@@ -1,20 +1,20 @@
 # Package descriptions — all
 
-**323 packages** overall — **211 active** on the `main` branch, **112 removed**. *Last included in* is only set for removed packages.
+**317 packages** overall — **207 active** on the `main` branch, **110 removed**. *Last included in* is only set for removed packages.
 
 | Package | Backstage role | Description | Last included in |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | web-library | Provides the default wiring of a Backstage App |  |
 | `@backstage/backend-app-api` | node-library | Core API used by Backstage backend apps |  |
-| `@backstage/backend-common` | node-library | Common functionality library for Backstage backends | 1.31.4 |
+| `@backstage/backend-common` | node-library | Common functionality library for Backstage backends | 1.29.2 |
 | `@backstage/backend-defaults` | node-library | Backend defaults used by Backstage backend apps |  |
 | `@backstage/backend-dev-utils` | node-library |  |  |
 | `@backstage/backend-dynamic-feature-service` | node-library | Backstage dynamic feature service |  |
 | `@backstage/backend-openapi-utils` | node-library | OpenAPI typescript support. |  |
 | `@backstage/backend-plugin-api` | node-library | Core API used by Backstage backend plugins |  |
-| `@backstage/backend-tasks` | node-library | Common distributed task management library for Backstage backends | 1.30.4 |
+| `@backstage/backend-tasks` | node-library | Common distributed task management library for Backstage backends | 1.29.2 |
 | `@backstage/backend-test-utils` | node-library | Test helpers library for Backstage backends |  |
-| `@backstage/canon` | web-library |  | 1.41.2 |
+| `@backstage/canon` | web-library |  | 1.39.1 |
 | `@backstage/catalog-client` | common-library | An isomorphic client for the catalog backend |  |
 | `@backstage/catalog-model` | common-library | Types and validators that help describe the model of a Backstage Catalog |  |
 | `@backstage/cli` | cli | CLI for developing Backstage plugins and apps |  |
@@ -36,7 +36,6 @@
 | `@backstage/codemods` | cli | A collection of codemods for Backstage projects |  |
 | `@backstage/config` | common-library | Config API used by Backstage core, backend, and CLI |  |
 | `@backstage/config-loader` | node-library | Config loading functionality used by Backstage backend, and CLI |  |
-| `@backstage/connections` | common-library | Connections framework used by Backstage to better manage external connections used by integrations and plugins |  |
 | `@backstage/core-app-api` | web-library | Core app API used by Backstage apps |  |
 | `@backstage/core-compat-api` | web-library |  |  |
 | `@backstage/core-components` | web-library | Core components used by Backstage plugins and apps |  |
@@ -72,7 +71,6 @@
 | `@backstage/plugin-apollo-explorer` | frontend-plugin |  | 1.26.5 |
 | `@backstage/plugin-app` | frontend-plugin |  |  |
 | `@backstage/plugin-app-backend` | backend-plugin | A Backstage backend plugin that serves the Backstage frontend app |  |
-| `@backstage/plugin-app-module-user-settings` | frontend-plugin-module | Registers user-settings features into the app. |  |
 | `@backstage/plugin-app-node` | node-library | Node.js library for the app plugin |  |
 | `@backstage/plugin-app-react` | web-library | Web library for the app plugin |  |
 | `@backstage/plugin-app-visualizer` | frontend-plugin | Visualizes the Backstage app structure |  |
@@ -115,11 +113,10 @@
 | `@backstage/plugin-bitrise` | frontend-plugin | A Backstage plugin that integrates towards Bitrise | 1.26.5 |
 | `@backstage/plugin-catalog` | frontend-plugin | The Backstage plugin for browsing the Backstage catalog |  |
 | `@backstage/plugin-catalog-backend` | backend-plugin | The Backstage backend plugin that provides the Backstage catalog |  |
-| `@backstage/plugin-catalog-backend-module-ai-model` | backend-plugin-module | Adds support for the AiResource entity kind to the catalog backend plugin. |  |
 | `@backstage/plugin-catalog-backend-module-aws` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards AWS |  |
 | `@backstage/plugin-catalog-backend-module-azure` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards Azure |  |
 | `@backstage/plugin-catalog-backend-module-backstage-openapi` | backend-plugin-module |  |  |
-| `@backstage/plugin-catalog-backend-module-bitbucket` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards Bitbucket | 1.22.3 |
+| `@backstage/plugin-catalog-backend-module-bitbucket` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards Bitbucket | 1.19.6 |
 | `@backstage/plugin-catalog-backend-module-bitbucket-cloud` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards Bitbucket Cloud |  |
 | `@backstage/plugin-catalog-backend-module-bitbucket-server` | backend-plugin-module |  |  |
 | `@backstage/plugin-catalog-backend-module-gcp` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards GCP |  |
@@ -133,14 +130,13 @@
 | `@backstage/plugin-catalog-backend-module-ldap` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards LDAP |  |
 | `@backstage/plugin-catalog-backend-module-logs` | backend-plugin-module | A module that subscribes to catalog related events and logs them. |  |
 | `@backstage/plugin-catalog-backend-module-msgraph` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards Microsoft Graph |  |
-| `@backstage/plugin-catalog-backend-module-msgraph-incremental` | backend-plugin-module | A Backstage catalog backend module that incrementally ingests users and groups from Microsoft Graph |  |
 | `@backstage/plugin-catalog-backend-module-openapi` | backend-plugin-module | A Backstage catalog backend module that helps with OpenAPI specifications |  |
 | `@backstage/plugin-catalog-backend-module-puppetdb` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards PuppetDB |  |
 | `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` | backend-plugin-module | Adds support for the scaffolder specific entity model (e.g. the Template kind) to the catalog backend plugin. |  |
 | `@backstage/plugin-catalog-backend-module-unprocessed` | backend-plugin-module | Backstage Catalog module to view unprocessed entities |  |
 | `@backstage/plugin-catalog-common` | common-library | Common functionalities for the catalog plugin |  |
 | `@backstage/plugin-catalog-graph` | frontend-plugin |  |  |
-| `@backstage/plugin-catalog-graphql` | backend-plugin | Deprecated, consider using @frontside/backstage-plugin-graphql-backend instead | 1.20.4 |
+| `@backstage/plugin-catalog-graphql` | backend-plugin | Deprecated, consider using @frontside/backstage-plugin-graphql-backend instead | 1.19.6 |
 | `@backstage/plugin-catalog-import` | frontend-plugin | A Backstage plugin the helps you import entities into your catalog |  |
 | `@backstage/plugin-catalog-node` | node-library | The plugin-catalog-node module for @backstage/plugin-catalog-backend |  |
 | `@backstage/plugin-catalog-react` | web-library | A frontend library that helps other Backstage plugins interact with the catalog |  |
@@ -195,7 +191,7 @@
 | `@backstage/plugin-gitops-profiles` | frontend-plugin | A Backstage plugin that helps you manage GitOps profiles | 1.26.5 |
 | `@backstage/plugin-gocd` | frontend-plugin | A Backstage plugin that integrates towards GoCD | 1.26.5 |
 | `@backstage/plugin-graphiql` | frontend-plugin | Backstage plugin for browsing GraphQL APIs | 1.26.5 |
-| `@backstage/plugin-graphql-backend` | backend-plugin | Deprecated, consider using @frontside/backstage-plugin-graphql-backend instead | 1.20.4 |
+| `@backstage/plugin-graphql-backend` | backend-plugin | Deprecated, consider using @frontside/backstage-plugin-graphql-backend instead | 1.19.6 |
 | `@backstage/plugin-graphql-voyager` | frontend-plugin | Backstage plugin for GraphQL Voyager | 1.26.5 |
 | `@backstage/plugin-home` | frontend-plugin | A Backstage plugin that helps you build a home page |  |
 | `@backstage/plugin-home-react` | web-library | A Backstage plugin that contains react components helps you build a home page |  |
@@ -253,7 +249,7 @@
 | `@backstage/plugin-scaffolder` | frontend-plugin | The Backstage plugin that helps you create new things |  |
 | `@backstage/plugin-scaffolder-backend` | backend-plugin | The Backstage backend plugin that helps you create new things |  |
 | `@backstage/plugin-scaffolder-backend-module-azure` | backend-plugin-module | The azure module for @backstage/plugin-scaffolder-backend |  |
-| `@backstage/plugin-scaffolder-backend-module-bitbucket` | backend-plugin-module | The bitbucket module for @backstage/plugin-scaffolder-backend | 1.48.6 |
+| `@backstage/plugin-scaffolder-backend-module-bitbucket` | backend-plugin-module | The bitbucket module for @backstage/plugin-scaffolder-backend | 1.45.3 |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` | backend-plugin-module | The Bitbucket Cloud module for @backstage/plugin-scaffolder-backend |  |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket-server` | backend-plugin-module | The Bitbucket Server module for @backstage/plugin-scaffolder-backend |  |
 | `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` | backend-plugin-module | The confluence-to-markdown module for @backstage/plugin-scaffolder-backend |  |
@@ -319,8 +315,6 @@
 | `@backstage/plugin-xcmetrics` | frontend-plugin | A Backstage plugin that shows XCode build metrics for your components | 1.26.5 |
 | `@backstage/release-manifests` | common-library | Helper library for receiving release manifests |  |
 | `@backstage/repo-tools` | cli | CLI for Backstage repo tooling |  |
-| `@backstage/search-common` | common-library | No longer maintained. Use @backstage/plugin-search-common instead. | 1.2.2 |
-| `@backstage/techdocs-common` | node-library | No longer maintained. Use @backstage/plugin-techdocs-node instead. | 1.2.2 |
 | `@backstage/test-utils` | web-library | Utilities to test Backstage plugins and apps. |  |
 | `@backstage/theme` | web-library | material-ui theme for use with Backstage. |  |
 | `@backstage/types` | common-library | Common TypeScript types used within Backstage |  |

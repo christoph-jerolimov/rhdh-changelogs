@@ -2,7 +2,7 @@ import { execFileSync } from "node:child_process";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import semver from "semver";
-import { byCodepoint, hasNextRelease, listLocalStableReleases, NEXT, readManifest, repoRoot, tablesDir, writeFileIfChanged } from "./lib.ts";
+import { byCodepoint, listRhdhReleases, type Manifest, readUpstreamManifest, repoRoot, tablesDir, writeFileIfChanged } from "./lib.ts";
 
 interface PackageJson {
   name?: string;
@@ -178,12 +178,14 @@ function findDirAtTag(tag: string, name: string): string | undefined {
   return map.get(name);
 }
 
-const releases = [...(hasNextRelease() ? [NEXT] : []), ...listLocalStableReleases().sort(semver.rcompare)];
-// Newest release that lists each package (releases are iterated newest first).
+// Manifests of the Backstage releases mapped in config.yaml, newest first.
+const manifests: Manifest[] = listRhdhReleases()
+  .map(({ backstage }) => readUpstreamManifest(backstage))
+  .sort((a, b) => semver.rcompare(a.releaseVersion, b.releaseVersion));
+// Newest release that lists each package (manifests are iterated newest first).
 const lastRelease = new Map<string, string>();
 let fromTags = 0;
-for (const release of releases) {
-  const manifest = readManifest(release);
+for (const manifest of manifests) {
   for (const pkg of manifest.packages) {
     if (!lastRelease.has(pkg.name)) lastRelease.set(pkg.name, manifest.releaseVersion);
   }
@@ -322,8 +324,7 @@ writeDescriptionTable(
 
 // Every package that ever appeared in a release manifest must have a changelog.
 const listedIn = new Map<string, string[]>();
-for (const release of releases) {
-  const manifest = readManifest(release);
+for (const manifest of manifests) {
   for (const pkg of manifest.packages) {
     if (!fs.existsSync(targetFile(pkg.name))) {
       listedIn.set(pkg.name, [...(listedIn.get(pkg.name) ?? []), manifest.releaseVersion]);
