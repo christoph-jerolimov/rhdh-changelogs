@@ -167,7 +167,7 @@ export interface ChangelogRenderOptions {
   changelogsPath?: string;
 }
 
-const DEFAULT_CHANGELOGS_PATH = "../changelogs";
+const DEFAULT_CHANGELOGS_PATH = "../../changelogs";
 
 /**
  * Build an aggregated changelog between two release manifests: all changed or

@@ -277,7 +277,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 ## Newly added packages
 
-### `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (new, [0.1.0](../changelogs/@backstage/plugin-auth-backend-module-azure-easyauth-provider.md#010))
+### `@backstage/plugin-auth-backend-module-azure-easyauth-provider` (new, [0.1.0](../../changelogs/@backstage/plugin-auth-backend-module-azure-easyauth-provider.md#010))
 
 #### 0.1.0
 
@@ -285,7 +285,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`06a6725`](https://github.com/backstage/backstage/commit/06a6725): New auth backend module to add `azure-easyauth` provider. Note that as part of this change the default provider ID has been changed from `easyAuth` to `azureEasyAuth`, which means that if you switch to this new module you need to update your app config as well as the `provider` prop of the `ProxiedSignInPage` in the frontend.
 
-### `@backstage/plugin-auth-backend-module-bitbucket-provider` (new, [0.1.0](../changelogs/@backstage/plugin-auth-backend-module-bitbucket-provider.md#010))
+### `@backstage/plugin-auth-backend-module-bitbucket-provider` (new, [0.1.0](../../changelogs/@backstage/plugin-auth-backend-module-bitbucket-provider.md#010))
 
 #### 0.1.0
 
@@ -293,7 +293,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`ba763b6`](https://github.com/backstage/backstage/commit/ba763b6): Migrate the Bitbucket auth provider to the new `@backstage/plugin-auth-backend-module-bitbucket-provider` module package.
 
-### `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (new, [0.1.0](../changelogs/@backstage/plugin-auth-backend-module-cloudflare-access-provider.md#010))
+### `@backstage/plugin-auth-backend-module-cloudflare-access-provider` (new, [0.1.0](../../changelogs/@backstage/plugin-auth-backend-module-cloudflare-access-provider.md#010))
 
 #### 0.1.0
 
@@ -301,7 +301,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c26218d`](https://github.com/backstage/backstage/commit/c26218d): Created a separate module for the Cloudflare Access auth provider
 
-### `@backstage/plugin-auth-backend-module-guest-provider` (new, [0.1.3](../changelogs/@backstage/plugin-auth-backend-module-guest-provider.md#013))
+### `@backstage/plugin-auth-backend-module-guest-provider` (new, [0.1.3](../../changelogs/@backstage/plugin-auth-backend-module-guest-provider.md#013))
 
 #### 0.1.2
 
@@ -338,7 +338,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`72dd380`](https://github.com/backstage/backstage/commit/72dd380): Ensure that the config schema is present
 - [`50a331b`](https://github.com/backstage/backstage/commit/50a331b): Fix issue for issuing a token when `guest` user does not exist in catalog
 
-### `@backstage/plugin-auth-react` (new, [0.1.1](../changelogs/@backstage/plugin-auth-react.md#011))
+### `@backstage/plugin-auth-react` (new, [0.1.1](../../changelogs/@backstage/plugin-auth-react.md#011))
 
 #### 0.1.0
 
@@ -358,7 +358,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`62bcaf8`](https://github.com/backstage/backstage/commit/62bcaf8): Create a generic React component for refreshing user cookie.
 
-### `@backstage/plugin-catalog-unprocessed-entities-common` (new, [0.0.1](../changelogs/@backstage/plugin-catalog-unprocessed-entities-common.md#001))
+### `@backstage/plugin-catalog-unprocessed-entities-common` (new, [0.0.1](../../changelogs/@backstage/plugin-catalog-unprocessed-entities-common.md#001))
 
 #### 0.0.1
 
@@ -387,7 +387,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   Adds the ability to delete an unprocessed entity from the `refresh_state` table. This change requires enabling permissions for your Backstage instance.
 
-### `@backstage/plugin-scaffolder-node-test-utils` (new, [0.1.3](../changelogs/@backstage/plugin-scaffolder-node-test-utils.md#013))
+### `@backstage/plugin-scaffolder-node-test-utils` (new, [0.1.3](../../changelogs/@backstage/plugin-scaffolder-node-test-utils.md#013))
 
 #### 0.1.0
 
@@ -406,7 +406,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 ## Breaking changes
 
-### `@backstage/backend-app-api` (0.5.14 → [0.7.2](../changelogs/@backstage/backend-app-api.md#072))
+### `@backstage/backend-app-api` (0.5.14 → [0.7.2](../../changelogs/@backstage/backend-app-api.md#072))
 
 #### 0.7.0
 
@@ -466,7 +466,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`f235ca7`](https://github.com/backstage/backstage/commit/f235ca7): Make sure to not filter out schemas in `createConfigSecretEnumerator`
 - [`af5f7a6`](https://github.com/backstage/backstage/commit/af5f7a6): The experimental feature discovery service exported at the `/alpha` sub-path will no longer attempt to load packages that are not Backstage backend packages.
 
-### `@backstage/cli` (0.25.2 → [0.26.4](../changelogs/@backstage/cli.md#0264))
+### `@backstage/cli` (0.25.2 → [0.26.4](../../changelogs/@backstage/cli.md#0264))
 
 #### 0.26.3
 
@@ -526,7 +526,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`f4404e5`](https://github.com/backstage/backstage/commit/f4404e5): Add .ico import support
 - [`f39dfd3`](https://github.com/backstage/backstage/commit/f39dfd3): Tweak the descriptions of the CLI templates
 
-### `@backstage/plugin-auth-backend` (0.21.3 → [0.22.4](../changelogs/@backstage/plugin-auth-backend.md#0224))
+### `@backstage/plugin-auth-backend` (0.21.3 → [0.22.4](../../changelogs/@backstage/plugin-auth-backend.md#0224))
 
 #### 0.22.4
 
@@ -561,7 +561,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`fa7ea3f`](https://github.com/backstage/backstage/commit/fa7ea3f): Internal refactor to break out how the router is constructed
 
-### `@backstage/plugin-azure-devops` (0.3.12 → [0.4.4](../changelogs/@backstage/plugin-azure-devops.md#044))
+### `@backstage/plugin-azure-devops` (0.3.12 → [0.4.4](../../changelogs/@backstage/plugin-azure-devops.md#044))
 
 #### 0.4.4
 
@@ -618,7 +618,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`b7b0466`](https://github.com/backstage/backstage/commit/b7b0466): Remove the use of the deprecated `customStyles` for `Avatar`
 - [`9f19476`](https://github.com/backstage/backstage/commit/9f19476): Updated README
 
-### `@backstage/plugin-azure-sites-backend` (0.2.3 → [0.3.5](../changelogs/@backstage/plugin-azure-sites-backend.md#035))
+### `@backstage/plugin-azure-sites-backend` (0.2.3 → [0.3.5](../../changelogs/@backstage/plugin-azure-sites-backend.md#035))
 
 #### 0.3.5
 
@@ -645,7 +645,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`4467036`](https://github.com/backstage/backstage/commit/4467036): Allow unauthenticated access to health check endpoint.
 - [`85db926`](https://github.com/backstage/backstage/commit/85db926): Added new backend system for the Azure Sites backend plugin
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.28 → [0.2.4](../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-cloud.md#024))
+### `@backstage/plugin-catalog-backend-module-bitbucket-cloud` (0.1.28 → [0.2.4](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-cloud.md#024))
 
 #### 0.2.0
 
@@ -693,7 +693,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-github` (0.5.3 → [0.6.0](../changelogs/@backstage/plugin-catalog-backend-module-github.md#060))
+### `@backstage/plugin-catalog-backend-module-github` (0.5.3 → [0.6.0](../../changelogs/@backstage/plugin-catalog-backend-module-github.md#060))
 
 #### 0.6.0
 
@@ -780,7 +780,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`9eab52a`](https://github.com/backstage/backstage/commit/9eab52a): Add location analyzer when installing the module
 
-### `@backstage/plugin-catalog-backend-module-unprocessed` (0.3.10 → [0.4.4](../changelogs/@backstage/plugin-catalog-backend-module-unprocessed.md#044))
+### `@backstage/plugin-catalog-backend-module-unprocessed` (0.3.10 → [0.4.4](../../changelogs/@backstage/plugin-catalog-backend-module-unprocessed.md#044))
 
 #### 0.4.3
 
@@ -831,7 +831,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2bd1410`](https://github.com/backstage/backstage/commit/2bd1410): Removed unused dependencies
 
-### `@backstage/plugin-catalog-unprocessed-entities` (0.1.8 → [0.2.3](../changelogs/@backstage/plugin-catalog-unprocessed-entities.md#023))
+### `@backstage/plugin-catalog-unprocessed-entities` (0.1.8 → [0.2.3](../../changelogs/@backstage/plugin-catalog-unprocessed-entities.md#023))
 
 #### 0.2.3
 
@@ -882,7 +882,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2b397fe`](https://github.com/backstage/backstage/commit/2b397fe): Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
 
-### `@backstage/plugin-devtools-backend` (0.2.10 → [0.3.3](../changelogs/@backstage/plugin-devtools-backend.md#033))
+### `@backstage/plugin-devtools-backend` (0.2.10 → [0.3.3](../../changelogs/@backstage/plugin-devtools-backend.md#033))
 
 #### 0.3.3
 
@@ -902,7 +902,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`4467036`](https://github.com/backstage/backstage/commit/4467036): Allow unauthenticated access to health check endpoint.
 - [`8b0026d`](https://github.com/backstage/backstage/commit/8b0026d): Removed unused `devDependencies` identified in Knip Report
 
-### `@backstage/plugin-events-backend` (0.2.22 → [0.3.4](../changelogs/@backstage/plugin-events-backend.md#034))
+### `@backstage/plugin-events-backend` (0.2.22 → [0.3.4](../../changelogs/@backstage/plugin-events-backend.md#034))
 
 #### 0.3.4
 
@@ -982,7 +982,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   The `DefaultEventBroker` implementation is deprecated and wraps the new `DefaultEventsService` implementation.
   Optionally, an instance can be passed as argument to allow mixed setups to operate alongside.
 
-### `@backstage/plugin-events-backend-module-aws-sqs` (0.2.16 → [0.3.3](../changelogs/@backstage/plugin-events-backend-module-aws-sqs.md#033))
+### `@backstage/plugin-events-backend-module-aws-sqs` (0.2.16 → [0.3.3](../../changelogs/@backstage/plugin-events-backend-module-aws-sqs.md#033))
 
 #### 0.3.2
 
@@ -1029,7 +1029,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   `eventsModuleAwsSqsConsumingEventPublisher` uses the `eventsServiceRef` as dependency,
   instead of `eventsExtensionPoint`.
 
-### `@backstage/plugin-events-backend-module-azure` (0.1.23 → [0.2.3](../changelogs/@backstage/plugin-events-backend-module-azure.md#023))
+### `@backstage/plugin-events-backend-module-azure` (0.1.23 → [0.2.3](../../changelogs/@backstage/plugin-events-backend-module-azure.md#023))
 
 #### 0.2.0
 
@@ -1103,7 +1103,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
     }
   ```
 
-### `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.1.23 → [0.2.3](../changelogs/@backstage/plugin-events-backend-module-bitbucket-cloud.md#023))
+### `@backstage/plugin-events-backend-module-bitbucket-cloud` (0.1.23 → [0.2.3](../../changelogs/@backstage/plugin-events-backend-module-bitbucket-cloud.md#023))
 
 #### 0.2.0
 
@@ -1177,159 +1177,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
     }
   ```
 
-### `@backstage/plugin-events-backend-module-gerrit` (0.1.23 → [0.2.3](../changelogs/@backstage/plugin-events-backend-module-gerrit.md#023))
-
-#### 0.2.0
-
-##### Minor Changes
-
-- [`eff3ca9`](https://github.com/backstage/backstage/commit/eff3ca9): BREAKING CHANGE: Migrate `EventRouter` implementations from `EventBroker` to `EventsService`.
-
-  `EventRouter` uses the new `EventsService` instead of the `EventBroker` now,
-  causing a breaking change to its signature.
-
-  All of its extensions and implementations got adjusted accordingly.
-  (`SubTopicEventRouter`, `AzureDevOpsEventRouter`, `BitbucketCloudEventRouter`,
-  `GerritEventRouter`, `GithubEventRouter`, `GitlabEventRouter`)
-
-  Required adjustments were made to all backend modules for the new backend system,
-  now also making use of the `eventsServiceRef` instead of the `eventsExtensionPoint`.
-
-  **Migration:**
-
-  Example for implementations of `SubTopicEventRouter`:
-
-  ```diff
-    import {
-      EventParams,
-  +   EventsService,
-      SubTopicEventRouter,
-    } from '@backstage/plugin-events-node';
-
-    export class GithubEventRouter extends SubTopicEventRouter {
-  -   constructor() {
-  -     super('github');
-  +   constructor(options: { events: EventsService }) {
-  +     super({
-  +       events: options.events,
-  +       topic: 'github',
-  +     });
-      }
-
-  +   protected getSubscriberId(): string {
-  +     return 'GithubEventRouter';
-  +   }
-  +
-      // ...
-    }
-  ```
-
-  Example for a direct extension of `EventRouter`:
-
-  ```diff
-    class MyEventRouter extends EventRouter {
-  -   constructor(/* ... */) {
-  +   constructor(options: {
-  +     events: EventsService;
-  +     // ...
-  +   }) {
-  -     super();
-        // ...
-  +     super({
-  +       events: options.events,
-  +       topics: topics,
-  +     });
-      }
-  +
-  +   protected getSubscriberId(): string {
-  +     return 'MyEventRouter';
-  +   }
-  -
-  -   supportsEventTopics(): string[] {
-  -     return this.topics;
-  -   }
-    }
-  ```
-
-##### Patch Changes
-
-- [`2bd1410`](https://github.com/backstage/backstage/commit/2bd1410): Removed unused dependencies
-
-### `@backstage/plugin-events-backend-module-github` (0.1.23 → [0.2.3](../changelogs/@backstage/plugin-events-backend-module-github.md#023))
-
-#### 0.2.0
-
-##### Minor Changes
-
-- [`eff3ca9`](https://github.com/backstage/backstage/commit/eff3ca9): BREAKING CHANGE: Migrate `EventRouter` implementations from `EventBroker` to `EventsService`.
-
-  `EventRouter` uses the new `EventsService` instead of the `EventBroker` now,
-  causing a breaking change to its signature.
-
-  All of its extensions and implementations got adjusted accordingly.
-  (`SubTopicEventRouter`, `AzureDevOpsEventRouter`, `BitbucketCloudEventRouter`,
-  `GerritEventRouter`, `GithubEventRouter`, `GitlabEventRouter`)
-
-  Required adjustments were made to all backend modules for the new backend system,
-  now also making use of the `eventsServiceRef` instead of the `eventsExtensionPoint`.
-
-  **Migration:**
-
-  Example for implementations of `SubTopicEventRouter`:
-
-  ```diff
-    import {
-      EventParams,
-  +   EventsService,
-      SubTopicEventRouter,
-    } from '@backstage/plugin-events-node';
-
-    export class GithubEventRouter extends SubTopicEventRouter {
-  -   constructor() {
-  -     super('github');
-  +   constructor(options: { events: EventsService }) {
-  +     super({
-  +       events: options.events,
-  +       topic: 'github',
-  +     });
-      }
-
-  +   protected getSubscriberId(): string {
-  +     return 'GithubEventRouter';
-  +   }
-  +
-      // ...
-    }
-  ```
-
-  Example for a direct extension of `EventRouter`:
-
-  ```diff
-    class MyEventRouter extends EventRouter {
-  -   constructor(/* ... */) {
-  +   constructor(options: {
-  +     events: EventsService;
-  +     // ...
-  +   }) {
-  -     super();
-        // ...
-  +     super({
-  +       events: options.events,
-  +       topics: topics,
-  +     });
-      }
-  +
-  +   protected getSubscriberId(): string {
-  +     return 'MyEventRouter';
-  +   }
-  -
-  -   supportsEventTopics(): string[] {
-  -     return this.topics;
-  -   }
-    }
-  ```
-
-### `@backstage/plugin-events-backend-module-gitlab` (0.1.23 → [0.2.3](../changelogs/@backstage/plugin-events-backend-module-gitlab.md#023))
+### `@backstage/plugin-events-backend-module-gerrit` (0.1.23 → [0.2.3](../../changelogs/@backstage/plugin-events-backend-module-gerrit.md#023))
 
 #### 0.2.0
 
@@ -1407,7 +1255,159 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2bd1410`](https://github.com/backstage/backstage/commit/2bd1410): Removed unused dependencies
 
-### `@backstage/plugin-events-node` (0.2.22 → [0.3.3](../changelogs/@backstage/plugin-events-node.md#033))
+### `@backstage/plugin-events-backend-module-github` (0.1.23 → [0.2.3](../../changelogs/@backstage/plugin-events-backend-module-github.md#023))
+
+#### 0.2.0
+
+##### Minor Changes
+
+- [`eff3ca9`](https://github.com/backstage/backstage/commit/eff3ca9): BREAKING CHANGE: Migrate `EventRouter` implementations from `EventBroker` to `EventsService`.
+
+  `EventRouter` uses the new `EventsService` instead of the `EventBroker` now,
+  causing a breaking change to its signature.
+
+  All of its extensions and implementations got adjusted accordingly.
+  (`SubTopicEventRouter`, `AzureDevOpsEventRouter`, `BitbucketCloudEventRouter`,
+  `GerritEventRouter`, `GithubEventRouter`, `GitlabEventRouter`)
+
+  Required adjustments were made to all backend modules for the new backend system,
+  now also making use of the `eventsServiceRef` instead of the `eventsExtensionPoint`.
+
+  **Migration:**
+
+  Example for implementations of `SubTopicEventRouter`:
+
+  ```diff
+    import {
+      EventParams,
+  +   EventsService,
+      SubTopicEventRouter,
+    } from '@backstage/plugin-events-node';
+
+    export class GithubEventRouter extends SubTopicEventRouter {
+  -   constructor() {
+  -     super('github');
+  +   constructor(options: { events: EventsService }) {
+  +     super({
+  +       events: options.events,
+  +       topic: 'github',
+  +     });
+      }
+
+  +   protected getSubscriberId(): string {
+  +     return 'GithubEventRouter';
+  +   }
+  +
+      // ...
+    }
+  ```
+
+  Example for a direct extension of `EventRouter`:
+
+  ```diff
+    class MyEventRouter extends EventRouter {
+  -   constructor(/* ... */) {
+  +   constructor(options: {
+  +     events: EventsService;
+  +     // ...
+  +   }) {
+  -     super();
+        // ...
+  +     super({
+  +       events: options.events,
+  +       topics: topics,
+  +     });
+      }
+  +
+  +   protected getSubscriberId(): string {
+  +     return 'MyEventRouter';
+  +   }
+  -
+  -   supportsEventTopics(): string[] {
+  -     return this.topics;
+  -   }
+    }
+  ```
+
+### `@backstage/plugin-events-backend-module-gitlab` (0.1.23 → [0.2.3](../../changelogs/@backstage/plugin-events-backend-module-gitlab.md#023))
+
+#### 0.2.0
+
+##### Minor Changes
+
+- [`eff3ca9`](https://github.com/backstage/backstage/commit/eff3ca9): BREAKING CHANGE: Migrate `EventRouter` implementations from `EventBroker` to `EventsService`.
+
+  `EventRouter` uses the new `EventsService` instead of the `EventBroker` now,
+  causing a breaking change to its signature.
+
+  All of its extensions and implementations got adjusted accordingly.
+  (`SubTopicEventRouter`, `AzureDevOpsEventRouter`, `BitbucketCloudEventRouter`,
+  `GerritEventRouter`, `GithubEventRouter`, `GitlabEventRouter`)
+
+  Required adjustments were made to all backend modules for the new backend system,
+  now also making use of the `eventsServiceRef` instead of the `eventsExtensionPoint`.
+
+  **Migration:**
+
+  Example for implementations of `SubTopicEventRouter`:
+
+  ```diff
+    import {
+      EventParams,
+  +   EventsService,
+      SubTopicEventRouter,
+    } from '@backstage/plugin-events-node';
+
+    export class GithubEventRouter extends SubTopicEventRouter {
+  -   constructor() {
+  -     super('github');
+  +   constructor(options: { events: EventsService }) {
+  +     super({
+  +       events: options.events,
+  +       topic: 'github',
+  +     });
+      }
+
+  +   protected getSubscriberId(): string {
+  +     return 'GithubEventRouter';
+  +   }
+  +
+      // ...
+    }
+  ```
+
+  Example for a direct extension of `EventRouter`:
+
+  ```diff
+    class MyEventRouter extends EventRouter {
+  -   constructor(/* ... */) {
+  +   constructor(options: {
+  +     events: EventsService;
+  +     // ...
+  +   }) {
+  -     super();
+        // ...
+  +     super({
+  +       events: options.events,
+  +       topics: topics,
+  +     });
+      }
+  +
+  +   protected getSubscriberId(): string {
+  +     return 'MyEventRouter';
+  +   }
+  -
+  -   supportsEventTopics(): string[] {
+  -     return this.topics;
+  -   }
+    }
+  ```
+
+##### Patch Changes
+
+- [`2bd1410`](https://github.com/backstage/backstage/commit/2bd1410): Removed unused dependencies
+
+### `@backstage/plugin-events-node` (0.2.22 → [0.3.3](../../changelogs/@backstage/plugin-events-node.md#033))
 
 #### 0.3.0
 
@@ -1517,7 +1517,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   The `DefaultEventBroker` implementation is deprecated and wraps the new `DefaultEventsService` implementation.
   Optionally, an instance can be passed as argument to allow mixed setups to operate alongside.
 
-### `@backstage/plugin-jenkins-backend` (0.3.7 → [0.4.5](../changelogs/@backstage/plugin-jenkins-backend.md#045))
+### `@backstage/plugin-jenkins-backend` (0.3.7 → [0.4.5](../../changelogs/@backstage/plugin-jenkins-backend.md#045))
 
 #### 0.4.5
 
@@ -1549,7 +1549,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2bd1410`](https://github.com/backstage/backstage/commit/2bd1410): Removed unused dependencies
 
-### `@backstage/plugin-kubernetes-backend` (0.15.3 → [0.17.0](../changelogs/@backstage/plugin-kubernetes-backend.md#0170))
+### `@backstage/plugin-kubernetes-backend` (0.15.3 → [0.17.0](../../changelogs/@backstage/plugin-kubernetes-backend.md#0170))
 
 #### 0.17.0
 
@@ -1588,7 +1588,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`b9a0888`](https://github.com/backstage/backstage/commit/b9a0888): Fixed a bug in the proxy endpoint. Now when the `serviceAccount` strategy is used and no `serviceAccountToken` has been provided, the proxy endpoint assumes backstage is running on Kubernetes and gets the URL and CA from the Pod instance.
 - [`69d0217`](https://github.com/backstage/backstage/commit/69d0217): Pass user credentials when calling catalog get entities api.
 
-### `@backstage/plugin-lighthouse-backend` (0.4.5 → [0.4.11](../changelogs/@backstage/plugin-lighthouse-backend.md#0411))
+### `@backstage/plugin-lighthouse-backend` (0.4.5 → [0.4.11](../../changelogs/@backstage/plugin-lighthouse-backend.md#0411))
 
 #### 0.4.11
 
@@ -1608,7 +1608,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`9f9ba70`](https://github.com/backstage/backstage/commit/9f9ba70): **BREAKING**: The `createScheduler` function now requires the `discovery` service to be forwarded from the plugin environment. This is part of the migration to support new auth services.
 
-### `@backstage/plugin-notifications-backend` (0.0.4 → [0.2.0](../changelogs/@backstage/plugin-notifications-backend.md#020))
+### `@backstage/plugin-notifications-backend` (0.0.4 → [0.2.0](../../changelogs/@backstage/plugin-notifications-backend.md#020))
 
 #### 0.2.0
 
@@ -1655,7 +1655,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`84af361`](https://github.com/backstage/backstage/commit/84af361): Migrated to using the new auth services.
 - [`6d84ee6`](https://github.com/backstage/backstage/commit/6d84ee6): Changed to use the refactored signal service naming
 
-### `@backstage/plugin-signals-backend` (0.0.4 → [0.1.3](../changelogs/@backstage/plugin-signals-backend.md#013))
+### `@backstage/plugin-signals-backend` (0.0.4 → [0.1.3](../../changelogs/@backstage/plugin-signals-backend.md#013))
 
 #### 0.1.3
 
@@ -1683,7 +1683,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`6d84ee6`](https://github.com/backstage/backstage/commit/6d84ee6): Changed to use the refactored signal service naming
 - [`df45710`](https://github.com/backstage/backstage/commit/df45710): Improved error logging and fixed authentication
 
-### `@backstage/plugin-signals-node` (0.0.4 → [0.1.3](../changelogs/@backstage/plugin-signals-node.md#013))
+### `@backstage/plugin-signals-node` (0.0.4 → [0.1.3](../../changelogs/@backstage/plugin-signals-node.md#013))
 
 #### 0.1.0
 
@@ -1703,7 +1703,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-tech-insights-node` (0.4.19 → [0.6.1](../changelogs/@backstage/plugin-tech-insights-node.md#061))
+### `@backstage/plugin-tech-insights-node` (0.4.19 → [0.6.1](../../changelogs/@backstage/plugin-tech-insights-node.md#061))
 
 #### 0.6.1
 
@@ -1725,7 +1725,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 ## Major version bumps
 
-### `@backstage/plugin-dynatrace` (9.0.0 → [10.0.4](../changelogs/@backstage/plugin-dynatrace.md#1004))
+### `@backstage/plugin-dynatrace` (9.0.0 → [10.0.4](../../changelogs/@backstage/plugin-dynatrace.md#1004))
 
 #### 10.0.4
 
@@ -1760,7 +1760,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 ## 0.x minor version bumps
 
-### `@backstage/plugin-apollo-explorer` (0.1.20 → [0.2.1](../changelogs/@backstage/plugin-apollo-explorer.md#021))
+### `@backstage/plugin-apollo-explorer` (0.1.20 → [0.2.1](../../changelogs/@backstage/plugin-apollo-explorer.md#021))
 
 #### 0.2.1
 
@@ -1785,7 +1785,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`bb9e31e`](https://github.com/backstage/backstage/commit/bb9e31e): Added an optional ESLint rule - no-top-level-material-ui-4-imports -in apollo-explorer plugin which has an auto fix function to migrate the imports and used it to migrate the Material UI imports for plugins/apollo-explorer.
 
-### `@backstage/plugin-azure-devops-backend` (0.5.5 → [0.6.5](../changelogs/@backstage/plugin-azure-devops-backend.md#065))
+### `@backstage/plugin-azure-devops-backend` (0.5.5 → [0.6.5](../../changelogs/@backstage/plugin-azure-devops-backend.md#065))
 
 #### 0.6.5
 
@@ -1825,7 +1825,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`4467036`](https://github.com/backstage/backstage/commit/4467036): Allow unauthenticated access to health check endpoint.
 - [`2f77e24`](https://github.com/backstage/backstage/commit/2f77e24): The `azureDevOps` configuration section is now optional and the `azureDevOps.token` has been deprecated. Use `integrations.azure` instead, see the [Azure DevOps Locations](https://backstage.io/docs/integrations/azure/locations) documentation for more details.
 
-### `@backstage/plugin-azure-devops-common` (0.3.2 → [0.4.2](../changelogs/@backstage/plugin-azure-devops-common.md#042))
+### `@backstage/plugin-azure-devops-common` (0.3.2 → [0.4.2](../../changelogs/@backstage/plugin-azure-devops-common.md#042))
 
 #### 0.4.2
 
@@ -1859,7 +1859,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`3270b1b`](https://github.com/backstage/backstage/commit/3270b1b): Azure DevOps plugin is now integrated with permission framework for its core features, see the https://github.com/backstage/backstage/blob/master/plugins/azure-devops/README.md#permission-framework for more details.
 
-### `@backstage/plugin-badges-backend` (0.3.10 → [0.4.1](../changelogs/@backstage/plugin-badges-backend.md#041))
+### `@backstage/plugin-badges-backend` (0.3.10 → [0.4.1](../../changelogs/@backstage/plugin-badges-backend.md#041))
 
 #### 0.4.1
 
@@ -1883,7 +1883,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`29a1f91`](https://github.com/backstage/backstage/commit/29a1f91): Migrated to support new auth services.
 
-### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.1.6 → [0.2.0](../changelogs/@backstage/plugin-catalog-backend-module-backstage-openapi.md#020))
+### `@backstage/plugin-catalog-backend-module-backstage-openapi` (0.1.6 → [0.2.0](../../changelogs/@backstage/plugin-catalog-backend-module-backstage-openapi.md#020))
 
 #### 0.2.0
 
@@ -1902,7 +1902,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`2bd1410`](https://github.com/backstage/backstage/commit/2bd1410): Removed unused dependencies
 - [`43a9ae1`](https://github.com/backstage/backstage/commit/43a9ae1): Migrated to use new auth service.
 
-### `@backstage/plugin-cloudbuild` (0.4.0 → [0.5.2](../changelogs/@backstage/plugin-cloudbuild.md#052))
+### `@backstage/plugin-cloudbuild` (0.4.0 → [0.5.2](../../changelogs/@backstage/plugin-cloudbuild.md#052))
 
 #### 0.5.2
 
@@ -1940,7 +1940,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`7a5e933`](https://github.com/backstage/backstage/commit/7a5e933): Added an optional ESLint rule - no-top-level-material-ui-4-imports -in cloudbuild plugin which has an auto fix function to migrate the imports and used it to migrate the Material UI imports for plugins/cloudbuild.
 
-### `@backstage/plugin-github-issues` (0.2.19 → [0.4.2](../changelogs/@backstage/plugin-github-issues.md#042))
+### `@backstage/plugin-github-issues` (0.2.19 → [0.4.2](../../changelogs/@backstage/plugin-github-issues.md#042))
 
 #### 0.4.2
 
@@ -1975,7 +1975,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-github-pull-requests-board` (0.1.24 → [0.2.1](../changelogs/@backstage/plugin-github-pull-requests-board.md#021))
+### `@backstage/plugin-github-pull-requests-board` (0.1.24 → [0.2.1](../../changelogs/@backstage/plugin-github-pull-requests-board.md#021))
 
 #### 0.2.1
 
@@ -2002,7 +2002,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`3c2d7c0`](https://github.com/backstage/backstage/commit/3c2d7c0): The `CardHeader` component in the `github-pull-requests-board` plugin will show the status for the PR
 - [`402d991`](https://github.com/backstage/backstage/commit/402d991): Align `p-limit` dependency version to v3
 
-### `@backstage/plugin-home` (0.6.2 → [0.7.3](../changelogs/@backstage/plugin-home.md#073))
+### `@backstage/plugin-home` (0.6.2 → [0.7.3](../../changelogs/@backstage/plugin-home.md#073))
 
 #### 0.7.3
 
@@ -2037,7 +2037,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@rjsf/validator-ajv8` to `5.17.1`.
 - [`2e17681`](https://github.com/backstage/backstage/commit/2e17681): Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
 
-### `@backstage/plugin-notifications` (0.0.1 → [0.2.0](../changelogs/@backstage/plugin-notifications.md#020))
+### `@backstage/plugin-notifications` (0.0.1 → [0.2.0](../../changelogs/@backstage/plugin-notifications.md#020))
 
 #### 0.2.0
 
@@ -2081,7 +2081,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`75f2d84`](https://github.com/backstage/backstage/commit/75f2d84): the user can newly mark notifications as "Saved" for their better visibility in the future
 - [`5d9c5ba`](https://github.com/backstage/backstage/commit/5d9c5ba): The Notifications can be newly filtered based on the Created Date.
 
-### `@backstage/plugin-notifications-node` (0.0.4 → [0.1.3](../changelogs/@backstage/plugin-notifications-node.md#013))
+### `@backstage/plugin-notifications-node` (0.0.4 → [0.1.3](../../changelogs/@backstage/plugin-notifications-node.md#013))
 
 #### 0.1.3
 
@@ -2104,7 +2104,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.2.16 → [0.3.3](../changelogs/@backstage/plugin-scaffolder-backend-module-gitlab.md#033))
+### `@backstage/plugin-scaffolder-backend-module-gitlab` (0.2.16 → [0.3.3](../../changelogs/@backstage/plugin-scaffolder-backend-module-gitlab.md#033))
 
 #### 0.3.3
 
@@ -2127,7 +2127,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.34 → [0.3.0](../changelogs/@backstage/plugin-scaffolder-backend-module-yeoman.md#030))
+### `@backstage/plugin-scaffolder-backend-module-yeoman` (0.2.34 → [0.3.0](../../changelogs/@backstage/plugin-scaffolder-backend-module-yeoman.md#030))
 
 #### 0.3.0
 
@@ -2143,7 +2143,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-node` (0.3.3 → [0.4.3](../changelogs/@backstage/plugin-scaffolder-node.md#043))
+### `@backstage/plugin-scaffolder-node` (0.3.3 → [0.4.3](../../changelogs/@backstage/plugin-scaffolder-node.md#043))
 
 #### 0.4.0
 
@@ -2159,7 +2159,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`c6b132e`](https://github.com/backstage/backstage/commit/c6b132e): Introducing checkpoints for scaffolder task action idempotency
 - [`bbd1fe1`](https://github.com/backstage/backstage/commit/bbd1fe1): Made "checkpoint" on scaffolder action context non-optional
 
-### `@backstage/plugin-tech-radar` (0.6.13 → [0.7.4](../changelogs/@backstage/plugin-tech-radar.md#074))
+### `@backstage/plugin-tech-radar` (0.6.13 → [0.7.4](../../changelogs/@backstage/plugin-tech-radar.md#074))
 
 #### 0.7.4
 
@@ -2198,7 +2198,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`a2327ac`](https://github.com/backstage/backstage/commit/a2327ac): Fixed an issue with the "moved in direction" table header cell getting squished and becoming unreadable if a timeline description is too long
 
-### `@backstage/repo-tools` (0.6.3 → [0.8.0](../changelogs/@backstage/repo-tools.md#080))
+### `@backstage/repo-tools` (0.6.3 → [0.8.0](../../changelogs/@backstage/repo-tools.md#080))
 
 #### 0.8.0
 
@@ -2234,7 +2234,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 ## 0.0.x patch version bumps
 
-### `@backstage/plugin-explore-backend` (0.0.23 → [0.0.28](../changelogs/@backstage/plugin-explore-backend.md#0028))
+### `@backstage/plugin-explore-backend` (0.0.23 → [0.0.28](../../changelogs/@backstage/plugin-explore-backend.md#0028))
 
 #### 0.0.28
 
@@ -2248,7 +2248,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`d5a1fe1`](https://github.com/backstage/backstage/commit/d5a1fe1): Replaced winston logger with `LoggerService`
 
-### `@backstage/plugin-explore-common` (0.0.2 → [0.0.3](../changelogs/@backstage/plugin-explore-common.md#003))
+### `@backstage/plugin-explore-common` (0.0.2 → [0.0.3](../../changelogs/@backstage/plugin-explore-common.md#003))
 
 #### 0.0.3
 
@@ -2256,7 +2256,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-explore-react` (0.0.36 → [0.0.39](../changelogs/@backstage/plugin-explore-react.md#0039))
+### `@backstage/plugin-explore-react` (0.0.36 → [0.0.39](../../changelogs/@backstage/plugin-explore-react.md#0039))
 
 #### 0.0.39
 
@@ -2271,7 +2271,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 - [`cb1e3b0`](https://github.com/backstage/backstage/commit/cb1e3b0): Updated dependency `@testing-library/dom` to `^10.0.0`.
 
-### `@backstage/plugin-kubernetes-cluster` (0.0.6 → [0.0.10](../changelogs/@backstage/plugin-kubernetes-cluster.md#0010))
+### `@backstage/plugin-kubernetes-cluster` (0.0.6 → [0.0.10](../../changelogs/@backstage/plugin-kubernetes-cluster.md#0010))
 
 #### 0.0.10
 
@@ -2294,7 +2294,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 - [`1c1140e`](https://github.com/backstage/backstage/commit/1c1140e): Added ESLint rule `no-top-level-material-ui-4-imports` in the `kubernetes-cluster` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-notifications-common` (0.0.1 → [0.0.3](../changelogs/@backstage/plugin-notifications-common.md#003))
+### `@backstage/plugin-notifications-common` (0.0.1 → [0.0.3](../../changelogs/@backstage/plugin-notifications-common.md#003))
 
 #### 0.0.3
 
@@ -2313,7 +2313,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`a790a3d`](https://github.com/backstage/backstage/commit/a790a3d): Move notification origin resolving to backend with new auth
 - [`758f2a4`](https://github.com/backstage/backstage/commit/758f2a4): The Notifications frontend has been redesigned towards list view with condensed row details. The 'done' attribute has been removed to keep the Notifications aligned with the idea of a messaging system instead of a task manager.
 
-### `@backstage/plugin-signals` (0.0.1 → [0.0.5](../changelogs/@backstage/plugin-signals.md#005))
+### `@backstage/plugin-signals` (0.0.1 → [0.0.5](../../changelogs/@backstage/plugin-signals.md#005))
 
 #### 0.0.5
 
@@ -2331,7 +2331,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`72df7c6`](https://github.com/backstage/backstage/commit/72df7c6): Added ESLint rule `no-top-level-material-ui-4-imports` in the `signals` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-signals-react` (0.0.1 → [0.0.3](../changelogs/@backstage/plugin-signals-react.md#003))
+### `@backstage/plugin-signals-react` (0.0.1 → [0.0.3](../../changelogs/@backstage/plugin-signals-react.md#003))
 
 #### 0.0.3
 
@@ -2342,7 +2342,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 ## 0.x patch version bumps
 
-### `@backstage/backend-common` (0.21.3 → [0.21.7](../changelogs/@backstage/backend-common.md#0217))
+### `@backstage/backend-common` (0.21.3 → [0.21.7](../../changelogs/@backstage/backend-common.md#0217))
 
 #### 0.21.7
 
@@ -2384,7 +2384,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   See the [Auth Service Migration tutorial](https://backstage.io/docs/tutorials/auth-service-migration) for more information on the usage of this adapter.
 
-### `@backstage/backend-defaults` (0.2.13 → [0.2.17](../changelogs/@backstage/backend-defaults.md#0217))
+### `@backstage/backend-defaults` (0.2.13 → [0.2.17](../../changelogs/@backstage/backend-defaults.md#0217))
 
 #### 0.2.14
 
@@ -2392,7 +2392,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`7cbb760`](https://github.com/backstage/backstage/commit/7cbb760): Added support for the new auth services, which are now installed by default. See the [migration guide](https://backstage.io/docs/tutorials/auth-service-migration) for details.
 
-### `@backstage/backend-dynamic-feature-service` (0.2.3 → [0.2.9](../changelogs/@backstage/backend-dynamic-feature-service.md#029))
+### `@backstage/backend-dynamic-feature-service` (0.2.3 → [0.2.9](../../changelogs/@backstage/backend-dynamic-feature-service.md#029))
 
 #### 0.2.9
 
@@ -2406,7 +2406,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`5247909`](https://github.com/backstage/backstage/commit/5247909): Add `events: EventsService` to `LegacyPluginEnvironment`.
 
-### `@backstage/backend-openapi-utils` (0.1.6 → [0.1.10](../changelogs/@backstage/backend-openapi-utils.md#0110))
+### `@backstage/backend-openapi-utils` (0.1.6 → [0.1.10](../../changelogs/@backstage/backend-openapi-utils.md#0110))
 
 #### 0.1.7
 
@@ -2414,7 +2414,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`85ec23e`](https://github.com/backstage/backstage/commit/85ec23e): Updated dependency `json-schema-to-ts` to `^3.0.0`.
 
-### `@backstage/backend-plugin-api` (0.6.13 → [0.6.17](../changelogs/@backstage/backend-plugin-api.md#0617))
+### `@backstage/backend-plugin-api` (0.6.13 → [0.6.17](../../changelogs/@backstage/backend-plugin-api.md#0617))
 
 #### 0.6.17
 
@@ -2436,7 +2436,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`0502d82`](https://github.com/backstage/backstage/commit/0502d82): Updated the `PermissionsService` methods to accept `BackstageCredentials` through options.
 
-### `@backstage/backend-tasks` (0.5.18 → [0.5.22](../changelogs/@backstage/backend-tasks.md#0522))
+### `@backstage/backend-tasks` (0.5.18 → [0.5.22](../../changelogs/@backstage/backend-tasks.md#0522))
 
 #### 0.5.22
 
@@ -2451,7 +2451,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/backend-test-utils` (0.3.3 → [0.3.7](../changelogs/@backstage/backend-test-utils.md#037))
+### `@backstage/backend-test-utils` (0.3.3 → [0.3.7](../../changelogs/@backstage/backend-test-utils.md#037))
 
 #### 0.3.7
 
@@ -2474,7 +2474,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/cli-node` (0.2.3 → [0.2.5](../changelogs/@backstage/cli-node.md#025))
+### `@backstage/cli-node` (0.2.3 → [0.2.5](../../changelogs/@backstage/cli-node.md#025))
 
 #### 0.2.5
 
@@ -2482,7 +2482,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`ed9260f`](https://github.com/backstage/backstage/commit/ed9260f): Added `versions:migrate` command to help move packages to the new `@backstage-community` namespace
 
-### `@backstage/codemods` (0.1.47 → [0.1.48](../changelogs/@backstage/codemods.md#0148))
+### `@backstage/codemods` (0.1.47 → [0.1.48](../../changelogs/@backstage/codemods.md#0148))
 
 #### 0.1.48
 
@@ -2490,7 +2490,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`1bd4596`](https://github.com/backstage/backstage/commit/1bd4596): Removed the `ts-node` dev dependency.
 
-### `@backstage/core-compat-api` (0.2.0 → [0.2.4](../changelogs/@backstage/core-compat-api.md#024))
+### `@backstage/core-compat-api` (0.2.0 → [0.2.4](../../changelogs/@backstage/core-compat-api.md#024))
 
 #### 0.2.4
 
@@ -2499,7 +2499,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`d05d4bd`](https://github.com/backstage/backstage/commit/d05d4bd): Moved `@backstage/core-app-api` to dev dependencies.
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 
-### `@backstage/core-components` (0.14.0 → [0.14.6](../changelogs/@backstage/core-components.md#0146))
+### `@backstage/core-components` (0.14.0 → [0.14.6](../../changelogs/@backstage/core-components.md#0146))
 
 #### 0.14.4
 
@@ -2539,7 +2539,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0a8a1e9`](https://github.com/backstage/backstage/commit/0a8a1e9): Fix a spacing issue for the SidebarSubmenu in case a SidebarScrollWrapper is used that made it hard to reach the SidebarSubmenu
 - [`aa1c88d`](https://github.com/backstage/backstage/commit/aa1c88d): Deprecate the `customStyles` prop for the `Avatar` component in favour of the `classes` prop.
 
-### `@backstage/create-app` (0.5.11 → [0.5.14](../changelogs/@backstage/create-app.md#0514))
+### `@backstage/create-app` (0.5.11 → [0.5.14](../../changelogs/@backstage/create-app.md#0514))
 
 #### 0.5.14
 
@@ -2565,7 +2565,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`1bd4596`](https://github.com/backstage/backstage/commit/1bd4596): Removed the `ts-node` dev dependency.
 - [`829a249`](https://github.com/backstage/backstage/commit/829a249): Migrated the backend of the create app template to use the new backend system. For information on how to migrate your existing backend, see the [migration guide](https://backstage.io/docs/backend-system/building-backends/migrating).
 
-### `@backstage/eslint-plugin` (0.1.5 → [0.1.7](../changelogs/@backstage/eslint-plugin.md#017))
+### `@backstage/eslint-plugin` (0.1.5 → [0.1.7](../../changelogs/@backstage/eslint-plugin.md#017))
 
 #### 0.1.7
 
@@ -2581,7 +2581,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`999224f`](https://github.com/backstage/backstage/commit/999224f): Bump dependency `minimatch` to v9
 
-### `@backstage/frontend-app-api` (0.6.0 → [0.6.4](../changelogs/@backstage/frontend-app-api.md#064))
+### `@backstage/frontend-app-api` (0.6.0 → [0.6.4](../../changelogs/@backstage/frontend-app-api.md#064))
 
 #### 0.6.4
 
@@ -2598,7 +2598,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`48d6628`](https://github.com/backstage/backstage/commit/48d6628): Add `loadingComponent` parameter to `createApp()`
 
-### `@backstage/frontend-plugin-api` (0.6.0 → [0.6.4](../changelogs/@backstage/frontend-plugin-api.md#064))
+### `@backstage/frontend-plugin-api` (0.6.0 → [0.6.4](../../changelogs/@backstage/frontend-plugin-api.md#064))
 
 #### 0.6.4
 
@@ -2607,7 +2607,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 - [`35452b3`](https://github.com/backstage/backstage/commit/35452b3): Fixed the type for `useRouteRef`, which wasn't handling optional external route refs correctly.
 
-### `@backstage/frontend-test-utils` (0.1.2 → [0.1.6](../changelogs/@backstage/frontend-test-utils.md#016))
+### `@backstage/frontend-test-utils` (0.1.2 → [0.1.6](../../changelogs/@backstage/frontend-test-utils.md#016))
 
 #### 0.1.6
 
@@ -2615,7 +2615,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 
-### `@backstage/integration-aws-node` (0.1.9 → [0.1.12](../changelogs/@backstage/integration-aws-node.md#0112))
+### `@backstage/integration-aws-node` (0.1.9 → [0.1.12](../../changelogs/@backstage/integration-aws-node.md#0112))
 
 #### 0.1.12
 
@@ -2631,7 +2631,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`81a995f`](https://github.com/backstage/backstage/commit/81a995f): Updated dependency `aws-sdk-client-mock` to `^4.0.0`.
 - [`823cf8e`](https://github.com/backstage/backstage/commit/823cf8e): Updated dependency `aws-sdk-client-mock-jest` to `^4.0.0`.
 
-### `@backstage/plugin-adr` (0.6.13 → [0.6.18](../changelogs/@backstage/plugin-adr.md#0618))
+### `@backstage/plugin-adr` (0.6.13 → [0.6.18](../../changelogs/@backstage/plugin-adr.md#0618))
 
 #### 0.6.18
 
@@ -2666,7 +2666,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`669efc6`](https://github.com/backstage/backstage/commit/669efc6): Remove unused package dependencies
 - [`38b92a0`](https://github.com/backstage/backstage/commit/38b92a0): Added ESLint rule `no-top-level-material-ui-4-imports` in the ADR plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-adr-backend` (0.4.10 → [0.4.15](../changelogs/@backstage/plugin-adr-backend.md#0415))
+### `@backstage/plugin-adr-backend` (0.4.10 → [0.4.15](../../changelogs/@backstage/plugin-adr-backend.md#0415))
 
 #### 0.4.15
 
@@ -2687,7 +2687,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`334c5fe`](https://github.com/backstage/backstage/commit/334c5fe): Updated dependency `marked` to `^12.0.0`.
 - [`c8fdd83`](https://github.com/backstage/backstage/commit/c8fdd83): Migrated `DefaultAdrCollatorFactory` to support new auth services.
 
-### `@backstage/plugin-adr-common` (0.2.20 → [0.2.23](../changelogs/@backstage/plugin-adr-common.md#0223))
+### `@backstage/plugin-adr-common` (0.2.20 → [0.2.23](../../changelogs/@backstage/plugin-adr-common.md#0223))
 
 #### 0.2.23
 
@@ -2701,7 +2701,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`5335634`](https://github.com/backstage/backstage/commit/5335634): Fixed Azure DevOps ADR file path reading
 
-### `@backstage/plugin-airbrake` (0.3.30 → [0.3.35](../changelogs/@backstage/plugin-airbrake.md#0335))
+### `@backstage/plugin-airbrake` (0.3.30 → [0.3.35](../../changelogs/@backstage/plugin-airbrake.md#0335))
 
 #### 0.3.35
 
@@ -2734,7 +2734,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`31d58ae`](https://github.com/backstage/backstage/commit/31d58ae): Added an optional ESLint rule - no-top-level-material-ui-4-imports - which has an auto fix function to migrate the imports and using it migrated the imports.
 
-### `@backstage/plugin-airbrake-backend` (0.3.10 → [0.3.15](../changelogs/@backstage/plugin-airbrake-backend.md#0315))
+### `@backstage/plugin-airbrake-backend` (0.3.10 → [0.3.15](../../changelogs/@backstage/plugin-airbrake-backend.md#0315))
 
 #### 0.3.15
 
@@ -2755,7 +2755,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`4467036`](https://github.com/backstage/backstage/commit/4467036): Allow unauthenticated access to health check endpoint.
 
-### `@backstage/plugin-allure` (0.1.46 → [0.1.51](../changelogs/@backstage/plugin-allure.md#0151))
+### `@backstage/plugin-allure` (0.1.46 → [0.1.51](../../changelogs/@backstage/plugin-allure.md#0151))
 
 #### 0.1.51
 
@@ -2782,7 +2782,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-analytics-module-ga` (0.2.0 → [0.2.5](../changelogs/@backstage/plugin-analytics-module-ga.md#025))
+### `@backstage/plugin-analytics-module-ga` (0.2.0 → [0.2.5](../../changelogs/@backstage/plugin-analytics-module-ga.md#025))
 
 #### 0.2.5
 
@@ -2797,7 +2797,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 - [`cb1e3b0`](https://github.com/backstage/backstage/commit/cb1e3b0): Updated dependency `@testing-library/dom` to `^10.0.0`.
 
-### `@backstage/plugin-analytics-module-ga4` (0.2.0 → [0.2.5](../changelogs/@backstage/plugin-analytics-module-ga4.md#025))
+### `@backstage/plugin-analytics-module-ga4` (0.2.0 → [0.2.5](../../changelogs/@backstage/plugin-analytics-module-ga4.md#025))
 
 #### 0.2.5
 
@@ -2812,7 +2812,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 - [`cb1e3b0`](https://github.com/backstage/backstage/commit/cb1e3b0): Updated dependency `@testing-library/dom` to `^10.0.0`.
 
-### `@backstage/plugin-analytics-module-newrelic-browser` (0.1.0 → [0.1.5](../changelogs/@backstage/plugin-analytics-module-newrelic-browser.md#015))
+### `@backstage/plugin-analytics-module-newrelic-browser` (0.1.0 → [0.1.5](../../changelogs/@backstage/plugin-analytics-module-newrelic-browser.md#015))
 
 #### 0.1.5
 
@@ -2826,7 +2826,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 
-### `@backstage/plugin-apache-airflow` (0.2.20 → [0.2.25](../changelogs/@backstage/plugin-apache-airflow.md#0225))
+### `@backstage/plugin-apache-airflow` (0.2.20 → [0.2.25](../../changelogs/@backstage/plugin-apache-airflow.md#0225))
 
 #### 0.2.25
 
@@ -2859,7 +2859,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`161114f`](https://github.com/backstage/backstage/commit/161114f): added an optional ESLint rule - no-top-level-material-ui-4-imports - which has an auto fix function to migrate the imports and used it to migrate the imports for plugins/apache-airflow
 
-### `@backstage/plugin-api-docs` (0.11.0 → [0.11.4](../changelogs/@backstage/plugin-api-docs.md#0114))
+### `@backstage/plugin-api-docs` (0.11.0 → [0.11.4](../../changelogs/@backstage/plugin-api-docs.md#0114))
 
 #### 0.11.4
 
@@ -2877,7 +2877,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`2be27b9`](https://github.com/backstage/backstage/commit/2be27b9): Updated dependency `graphiql` to `3.1.1`.
 - [`efba3d2`](https://github.com/backstage/backstage/commit/efba3d2): Updated dependency `@asyncapi/react-component` to `1.3.1`.
 
-### `@backstage/plugin-app-backend` (0.3.61 → [0.3.65](../changelogs/@backstage/plugin-app-backend.md#0365))
+### `@backstage/plugin-app-backend` (0.3.61 → [0.3.65](../../changelogs/@backstage/plugin-app-backend.md#0365))
 
 #### 0.3.65
 
@@ -2892,7 +2892,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`52e43f2`](https://github.com/backstage/backstage/commit/52e43f2): Disable default auth policy, allowing unauthenticated access to app bundle.
 
-### `@backstage/plugin-auth-backend-module-atlassian-provider` (0.1.5 → [0.1.9](../changelogs/@backstage/plugin-auth-backend-module-atlassian-provider.md#019))
+### `@backstage/plugin-auth-backend-module-atlassian-provider` (0.1.5 → [0.1.9](../../changelogs/@backstage/plugin-auth-backend-module-atlassian-provider.md#019))
 
 #### 0.1.9
 
@@ -2906,7 +2906,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c511186`](https://github.com/backstage/backstage/commit/c511186): Addressed OAuth flow issue in Atlassian auth module
 
-### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.4 → [0.1.9](../changelogs/@backstage/plugin-auth-backend-module-aws-alb-provider.md#019))
+### `@backstage/plugin-auth-backend-module-aws-alb-provider` (0.1.4 → [0.1.9](../../changelogs/@backstage/plugin-auth-backend-module-aws-alb-provider.md#019))
 
 #### 0.1.9
 
@@ -2924,7 +2924,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`2af5354`](https://github.com/backstage/backstage/commit/2af5354): Bump dependency `jose` to v5
 - [`b1b012d`](https://github.com/backstage/backstage/commit/b1b012d): Fix issue with `providerInfo` not being set properly for some proxy providers, by making `providerInfo` an explicit optional return from `authenticate`
 
-### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.8 → [0.2.12](../changelogs/@backstage/plugin-auth-backend-module-gcp-iap-provider.md#0212))
+### `@backstage/plugin-auth-backend-module-gcp-iap-provider` (0.2.8 → [0.2.12](../../changelogs/@backstage/plugin-auth-backend-module-gcp-iap-provider.md#0212))
 
 #### 0.2.12
 
@@ -2939,7 +2939,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`38af71a`](https://github.com/backstage/backstage/commit/38af71a): Updated dependency `google-auth-library` to `^9.0.0`.
 - [`b1b012d`](https://github.com/backstage/backstage/commit/b1b012d): Fix issue with `providerInfo` not being set properly for some proxy providers, by making `providerInfo` an explicit optional return from `authenticate`
 
-### `@backstage/plugin-auth-backend-module-google-provider` (0.1.10 → [0.1.14](../changelogs/@backstage/plugin-auth-backend-module-google-provider.md#0114))
+### `@backstage/plugin-auth-backend-module-google-provider` (0.1.10 → [0.1.14](../../changelogs/@backstage/plugin-auth-backend-module-google-provider.md#0114))
 
 #### 0.1.11
 
@@ -2947,7 +2947,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`38af71a`](https://github.com/backstage/backstage/commit/38af71a): Updated dependency `google-auth-library` to `^9.0.0`.
 
-### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.8 → [0.1.12](../changelogs/@backstage/plugin-auth-backend-module-microsoft-provider.md#0112))
+### `@backstage/plugin-auth-backend-module-microsoft-provider` (0.1.8 → [0.1.12](../../changelogs/@backstage/plugin-auth-backend-module-microsoft-provider.md#0112))
 
 #### 0.1.9
 
@@ -2955,7 +2955,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2af5354`](https://github.com/backstage/backstage/commit/2af5354): Bump dependency `jose` to v5
 
-### `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.6 → [0.1.10](../changelogs/@backstage/plugin-auth-backend-module-oauth2-proxy-provider.md#0110))
+### `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` (0.1.6 → [0.1.10](../../changelogs/@backstage/plugin-auth-backend-module-oauth2-proxy-provider.md#0110))
 
 #### 0.1.7
 
@@ -2965,7 +2965,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`e77d7a9`](https://github.com/backstage/backstage/commit/e77d7a9): Internal refactor to avoid deprecated method.
 - [`b1b012d`](https://github.com/backstage/backstage/commit/b1b012d): Fix issue with `providerInfo` not being set properly for some proxy providers, by making `providerInfo` an explicit optional return from `authenticate`
 
-### `@backstage/plugin-auth-backend-module-oidc-provider` (0.1.3 → [0.1.8](../changelogs/@backstage/plugin-auth-backend-module-oidc-provider.md#018))
+### `@backstage/plugin-auth-backend-module-oidc-provider` (0.1.3 → [0.1.8](../../changelogs/@backstage/plugin-auth-backend-module-oidc-provider.md#018))
 
 #### 0.1.8
 
@@ -2980,7 +2980,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`74b1dc9`](https://github.com/backstage/backstage/commit/74b1dc9): Increased HTTP request timeout used by OIDC authenticator.
 - [`2af5354`](https://github.com/backstage/backstage/commit/2af5354): Bump dependency `jose` to v5
 
-### `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.7 → [0.1.11](../changelogs/@backstage/plugin-auth-backend-module-pinniped-provider.md#0111))
+### `@backstage/plugin-auth-backend-module-pinniped-provider` (0.1.7 → [0.1.11](../../changelogs/@backstage/plugin-auth-backend-module-pinniped-provider.md#0111))
 
 #### 0.1.8
 
@@ -2988,7 +2988,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2af5354`](https://github.com/backstage/backstage/commit/2af5354): Bump dependency `jose` to v5
 
-### `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.1.5 → [0.1.9](../changelogs/@backstage/plugin-auth-backend-module-vmware-cloud-provider.md#019))
+### `@backstage/plugin-auth-backend-module-vmware-cloud-provider` (0.1.5 → [0.1.9](../../changelogs/@backstage/plugin-auth-backend-module-vmware-cloud-provider.md#019))
 
 #### 0.1.6
 
@@ -2996,7 +2996,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2af5354`](https://github.com/backstage/backstage/commit/2af5354): Bump dependency `jose` to v5
 
-### `@backstage/plugin-auth-node` (0.4.8 → [0.4.12](../changelogs/@backstage/plugin-auth-node.md#0412))
+### `@backstage/plugin-auth-node` (0.4.8 → [0.4.12](../../changelogs/@backstage/plugin-auth-node.md#0412))
 
 #### 0.4.12
 
@@ -3020,7 +3020,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`b1b012d`](https://github.com/backstage/backstage/commit/b1b012d): Fix issue with `providerInfo` not being set properly for some proxy providers, by making `providerInfo` an explicit optional return from `authenticate`
 
-### `@backstage/plugin-azure-sites` (0.1.19 → [0.1.24](../changelogs/@backstage/plugin-azure-sites.md#0124))
+### `@backstage/plugin-azure-sites` (0.1.19 → [0.1.24](../../changelogs/@backstage/plugin-azure-sites.md#0124))
 
 #### 0.1.24
 
@@ -3054,7 +3054,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`8679bda`](https://github.com/backstage/backstage/commit/8679bda): Modified azure table to only show loading UI on initial load. Sorted tags in table is their order from the api is indeterminate, and they would randomly shuffle on each load
 
-### `@backstage/plugin-azure-sites-common` (0.1.2 → [0.1.4](../changelogs/@backstage/plugin-azure-sites-common.md#014))
+### `@backstage/plugin-azure-sites-common` (0.1.2 → [0.1.4](../../changelogs/@backstage/plugin-azure-sites-common.md#014))
 
 #### 0.1.4
 
@@ -3062,7 +3062,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-badges` (0.2.54 → [0.2.59](../changelogs/@backstage/plugin-badges.md#0259))
+### `@backstage/plugin-badges` (0.2.54 → [0.2.59](../../changelogs/@backstage/plugin-badges.md#0259))
 
 #### 0.2.59
 
@@ -3094,7 +3094,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`944de94`](https://github.com/backstage/backstage/commit/944de94): Added ESLint rule `no-top-level-material-ui-4-imports` to aid with the migration to Material UI v5.
 
-### `@backstage/plugin-bazaar` (0.2.22 → [0.2.27](../changelogs/@backstage/plugin-bazaar.md#0227))
+### `@backstage/plugin-bazaar` (0.2.22 → [0.2.27](../../changelogs/@backstage/plugin-bazaar.md#0227))
 
 #### 0.2.27
 
@@ -3121,7 +3121,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`b7b0466`](https://github.com/backstage/backstage/commit/b7b0466): Remove the use of the deprecated `customStyles` for `Avatar`
 - [`cb64381`](https://github.com/backstage/backstage/commit/cb64381): Added an optional ESLint rule - no-top-level-material-ui-4-imports - in bazaar plugin which has an auto fix function to migrate the imports and used it to migrate the Material UI imports for plugins/bazaar
 
-### `@backstage/plugin-bazaar-backend` (0.3.11 → [0.3.16](../changelogs/@backstage/plugin-bazaar-backend.md#0316))
+### `@backstage/plugin-bazaar-backend` (0.3.11 → [0.3.16](../../changelogs/@backstage/plugin-bazaar-backend.md#0316))
 
 #### 0.3.16
 
@@ -3135,7 +3135,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`d5a1fe1`](https://github.com/backstage/backstage/commit/d5a1fe1): Replaced winston logger with `LoggerService`
 
-### `@backstage/plugin-bitrise` (0.1.57 → [0.1.62](../changelogs/@backstage/plugin-bitrise.md#0162))
+### `@backstage/plugin-bitrise` (0.1.57 → [0.1.62](../../changelogs/@backstage/plugin-bitrise.md#0162))
 
 #### 0.1.62
 
@@ -3168,7 +3168,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`afdee56`](https://github.com/backstage/backstage/commit/afdee56): Added the `no-top-level-material-ui-4-import` ESLint rule to the Bitrise plugin to aid with the migration to Material UI v5.
 
-### `@backstage/plugin-catalog-backend-module-aws` (0.3.7 → [0.3.12](../changelogs/@backstage/plugin-catalog-backend-module-aws.md#0312))
+### `@backstage/plugin-catalog-backend-module-aws` (0.3.7 → [0.3.12](../../changelogs/@backstage/plugin-catalog-backend-module-aws.md#0312))
 
 #### 0.3.12
 
@@ -3197,7 +3197,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-azure` (0.1.32 → [0.1.37](../changelogs/@backstage/plugin-catalog-backend-module-azure.md#0137))
+### `@backstage/plugin-catalog-backend-module-azure` (0.1.32 → [0.1.37](../../changelogs/@backstage/plugin-catalog-backend-module-azure.md#0137))
 
 #### 0.1.37
 
@@ -3212,7 +3212,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.26 → [0.1.31](../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-server.md#0131))
+### `@backstage/plugin-catalog-backend-module-bitbucket-server` (0.1.26 → [0.1.31](../../changelogs/@backstage/plugin-catalog-backend-module-bitbucket-server.md#0131))
 
 #### 0.1.31
 
@@ -3227,7 +3227,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-gcp` (0.1.13 → [0.1.18](../changelogs/@backstage/plugin-catalog-backend-module-gcp.md#0118))
+### `@backstage/plugin-catalog-backend-module-gcp` (0.1.13 → [0.1.18](../../changelogs/@backstage/plugin-catalog-backend-module-gcp.md#0118))
 
 #### 0.1.18
 
@@ -3235,7 +3235,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`d5a1fe1`](https://github.com/backstage/backstage/commit/d5a1fe1): Replaced winston logger with `LoggerService`
 
-### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.29 → [0.1.34](../changelogs/@backstage/plugin-catalog-backend-module-gerrit.md#0134))
+### `@backstage/plugin-catalog-backend-module-gerrit` (0.1.29 → [0.1.34](../../changelogs/@backstage/plugin-catalog-backend-module-gerrit.md#0134))
 
 #### 0.1.34
 
@@ -3250,7 +3250,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-github-org` (0.1.7 → [0.1.12](../changelogs/@backstage/plugin-catalog-backend-module-github-org.md#0112))
+### `@backstage/plugin-catalog-backend-module-github-org` (0.1.7 → [0.1.12](../../changelogs/@backstage/plugin-catalog-backend-module-github-org.md#0112))
 
 #### 0.1.12
 
@@ -3291,7 +3291,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   - env.eventBroker.subscribe(githubMultiOrgProvider);
   ```
 
-### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.10 → [0.3.15](../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#0315))
+### `@backstage/plugin-catalog-backend-module-gitlab` (0.3.10 → [0.3.15](../../changelogs/@backstage/plugin-catalog-backend-module-gitlab.md#0315))
 
 #### 0.3.15
 
@@ -3307,7 +3307,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`9f5b8bc`](https://github.com/backstage/backstage/commit/9f5b8bc): Add GitLab `visibility` to group entity annotations.
 
-### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.17 → [0.4.22](../changelogs/@backstage/plugin-catalog-backend-module-incremental-ingestion.md#0422))
+### `@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.4.17 → [0.4.22](../../changelogs/@backstage/plugin-catalog-backend-module-incremental-ingestion.md#0422))
 
 #### 0.4.22
 
@@ -3322,7 +3322,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-ldap` (0.5.28 → [0.5.33](../changelogs/@backstage/plugin-catalog-backend-module-ldap.md#0533))
+### `@backstage/plugin-catalog-backend-module-ldap` (0.5.28 → [0.5.33](../../changelogs/@backstage/plugin-catalog-backend-module-ldap.md#0533))
 
 #### 0.5.29
 
@@ -3332,7 +3332,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.20 → [0.5.25](../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#0525))
+### `@backstage/plugin-catalog-backend-module-msgraph` (0.5.20 → [0.5.25](../../changelogs/@backstage/plugin-catalog-backend-module-msgraph.md#0525))
 
 #### 0.5.25
 
@@ -3348,7 +3348,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.18 → [0.1.23](../changelogs/@backstage/plugin-catalog-backend-module-puppetdb.md#0123))
+### `@backstage/plugin-catalog-backend-module-puppetdb` (0.1.18 → [0.1.23](../../changelogs/@backstage/plugin-catalog-backend-module-puppetdb.md#0123))
 
 #### 0.1.23
 
@@ -3363,7 +3363,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-catalog-graph` (0.4.0 → [0.4.4](../changelogs/@backstage/plugin-catalog-graph.md#044))
+### `@backstage/plugin-catalog-graph` (0.4.0 → [0.4.4](../../changelogs/@backstage/plugin-catalog-graph.md#044))
 
 #### 0.4.4
 
@@ -3390,7 +3390,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`d4ff0bb`](https://github.com/backstage/backstage/commit/d4ff0bb): Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
 
-### `@backstage/plugin-catalog-import` (0.10.6 → [0.10.10](../changelogs/@backstage/plugin-catalog-import.md#01010))
+### `@backstage/plugin-catalog-import` (0.10.6 → [0.10.10](../../changelogs/@backstage/plugin-catalog-import.md#01010))
 
 #### 0.10.10
 
@@ -3419,7 +3419,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`75f686b`](https://github.com/backstage/backstage/commit/75f686b): Fixed an issue generating a wrong entity link at the end of the import process
 - [`adc0414`](https://github.com/backstage/backstage/commit/adc0414): fix related to component name not adhering to kubernetes valid object name.
 
-### `@backstage/plugin-cicd-statistics` (0.1.32 → [0.1.37](../changelogs/@backstage/plugin-cicd-statistics.md#0137))
+### `@backstage/plugin-cicd-statistics` (0.1.32 → [0.1.37](../../changelogs/@backstage/plugin-cicd-statistics.md#0137))
 
 #### 0.1.37
 
@@ -3445,7 +3445,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.26 → [0.1.31](../changelogs/@backstage/plugin-cicd-statistics-module-gitlab.md#0131))
+### `@backstage/plugin-cicd-statistics-module-gitlab` (0.1.26 → [0.1.31](../../changelogs/@backstage/plugin-cicd-statistics-module-gitlab.md#0131))
 
 #### 0.1.31
 
@@ -3459,7 +3459,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`402d991`](https://github.com/backstage/backstage/commit/402d991): Align `p-limit` dependency version to v3
 
-### `@backstage/plugin-circleci` (0.3.30 → [0.3.35](../changelogs/@backstage/plugin-circleci.md#0335))
+### `@backstage/plugin-circleci` (0.3.30 → [0.3.35](../../changelogs/@backstage/plugin-circleci.md#0335))
 
 #### 0.3.35
 
@@ -3485,7 +3485,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`88878a4`](https://github.com/backstage/backstage/commit/88878a4): Added an optional ESLint rule - no-top-level-material-ui-4-imports - in CircleCI plugin which has an auto fix function to migrate the imports and used it to migrate the Material UI imports for `plugins/circleci`.
 
-### `@backstage/plugin-code-climate` (0.1.30 → [0.1.35](../changelogs/@backstage/plugin-code-climate.md#0135))
+### `@backstage/plugin-code-climate` (0.1.30 → [0.1.35](../../changelogs/@backstage/plugin-code-climate.md#0135))
 
 #### 0.1.35
 
@@ -3518,7 +3518,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`875c594`](https://github.com/backstage/backstage/commit/875c594): Added ESLint rule `no-top-level-material-ui-4-imports` in the Code-Climate plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-code-coverage` (0.2.23 → [0.2.28](../changelogs/@backstage/plugin-code-coverage.md#0228))
+### `@backstage/plugin-code-coverage` (0.2.23 → [0.2.28](../../changelogs/@backstage/plugin-code-coverage.md#0228))
 
 #### 0.2.28
 
@@ -3551,7 +3551,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`eca0835`](https://github.com/backstage/backstage/commit/eca0835): Added ESLint rule `no-top-level-material-ui-4-imports` in the Code-Coverage plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-code-coverage-backend` (0.2.27 → [0.2.32](../changelogs/@backstage/plugin-code-coverage-backend.md#0232))
+### `@backstage/plugin-code-coverage-backend` (0.2.27 → [0.2.32](../../changelogs/@backstage/plugin-code-coverage-backend.md#0232))
 
 #### 0.2.32
 
@@ -3577,7 +3577,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`1914e2a`](https://github.com/backstage/backstage/commit/1914e2a): Updated README
 
-### `@backstage/plugin-codescene` (0.1.22 → [0.1.27](../changelogs/@backstage/plugin-codescene.md#0127))
+### `@backstage/plugin-codescene` (0.1.22 → [0.1.27](../../changelogs/@backstage/plugin-codescene.md#0127))
 
 #### 0.1.27
 
@@ -3611,7 +3611,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`e477ec4`](https://github.com/backstage/backstage/commit/e477ec4): Extending code scene plugin in Entity page.
 - [`f2d3ea0`](https://github.com/backstage/backstage/commit/f2d3ea0): Added ESLint rule `no-top-level-material-ui-4-imports` in the Codescene plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-config-schema` (0.1.50 → [0.1.54](../changelogs/@backstage/plugin-config-schema.md#0154))
+### `@backstage/plugin-config-schema` (0.1.50 → [0.1.54](../../changelogs/@backstage/plugin-config-schema.md#0154))
 
 #### 0.1.54
 
@@ -3633,7 +3633,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-cost-insights` (0.12.19 → [0.12.24](../changelogs/@backstage/plugin-cost-insights.md#01224))
+### `@backstage/plugin-cost-insights` (0.12.19 → [0.12.24](../../changelogs/@backstage/plugin-cost-insights.md#01224))
 
 #### 0.12.24
 
@@ -3668,7 +3668,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`083ba28`](https://github.com/backstage/backstage/commit/083ba28): Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
 - [`1b4fd09`](https://github.com/backstage/backstage/commit/1b4fd09): Updated dependency `yup` to `^1.0.0`.
 
-### `@backstage/plugin-cost-insights-common` (0.1.2 → [0.1.3](../changelogs/@backstage/plugin-cost-insights-common.md#013))
+### `@backstage/plugin-cost-insights-common` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-cost-insights-common.md#013))
 
 #### 0.1.3
 
@@ -3676,7 +3676,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-devtools` (0.1.9 → [0.1.13](../changelogs/@backstage/plugin-devtools.md#0113))
+### `@backstage/plugin-devtools` (0.1.9 → [0.1.13](../../changelogs/@backstage/plugin-devtools.md#0113))
 
 #### 0.1.12
 
@@ -3697,7 +3697,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`a0e3393`](https://github.com/backstage/backstage/commit/a0e3393): Updated to use `fetchApi` as per [ADR013](https://backstage.io/docs/architecture-decisions/adrs-adr013)
 - [`8b0026d`](https://github.com/backstage/backstage/commit/8b0026d): Removed unused `devDependencies` identified in Knip Report
 
-### `@backstage/plugin-entity-feedback` (0.2.13 → [0.2.18](../changelogs/@backstage/plugin-entity-feedback.md#0218))
+### `@backstage/plugin-entity-feedback` (0.2.13 → [0.2.18](../../changelogs/@backstage/plugin-entity-feedback.md#0218))
 
 #### 0.2.18
 
@@ -3732,7 +3732,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`96adf78`](https://github.com/backstage/backstage/commit/96adf78): Remove empty Chip in `FeedbackResponseTable.tsx` when there is no response, and fix typo in Feedback Dialog Box.
 
-### `@backstage/plugin-entity-feedback-backend` (0.2.10 → [0.2.15](../changelogs/@backstage/plugin-entity-feedback-backend.md#0215))
+### `@backstage/plugin-entity-feedback-backend` (0.2.10 → [0.2.15](../../changelogs/@backstage/plugin-entity-feedback-backend.md#0215))
 
 #### 0.2.15
 
@@ -3753,7 +3753,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`45115fd`](https://github.com/backstage/backstage/commit/45115fd): Add in description for 400 response when encountering an invalid rating request
 - [`4f8ecd6`](https://github.com/backstage/backstage/commit/4f8ecd6): Migrated to support new auth services.
 
-### `@backstage/plugin-entity-feedback-common` (0.1.3 → [0.1.4](../changelogs/@backstage/plugin-entity-feedback-common.md#014))
+### `@backstage/plugin-entity-feedback-common` (0.1.3 → [0.1.4](../../changelogs/@backstage/plugin-entity-feedback-common.md#014))
 
 #### 0.1.4
 
@@ -3761,7 +3761,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-entity-validation` (0.1.15 → [0.1.20](../changelogs/@backstage/plugin-entity-validation.md#0120))
+### `@backstage/plugin-entity-validation` (0.1.15 → [0.1.20](../../changelogs/@backstage/plugin-entity-validation.md#0120))
 
 #### 0.1.20
 
@@ -3790,7 +3790,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 - [`2ec4a8d`](https://github.com/backstage/backstage/commit/2ec4a8d): Added ESLint rule `no-top-level-material-ui-4-imports` in the `entity-validation` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-events-backend-test-utils` (0.1.23 → [0.1.27](../changelogs/@backstage/plugin-events-backend-test-utils.md#0127))
+### `@backstage/plugin-events-backend-test-utils` (0.1.23 → [0.1.27](../../changelogs/@backstage/plugin-events-backend-test-utils.md#0127))
 
 #### 0.1.24
 
@@ -3830,7 +3830,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   The `DefaultEventBroker` implementation is deprecated and wraps the new `DefaultEventsService` implementation.
   Optionally, an instance can be passed as argument to allow mixed setups to operate alongside.
 
-### `@backstage/plugin-explore` (0.4.16 → [0.4.21](../changelogs/@backstage/plugin-explore.md#0421))
+### `@backstage/plugin-explore` (0.4.16 → [0.4.21](../../changelogs/@backstage/plugin-explore.md#0421))
 
 #### 0.4.21
 
@@ -3863,7 +3863,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`053d43f`](https://github.com/backstage/backstage/commit/053d43f): Added an optional ESLint rule - no-top-level-material-ui-4-imports -in explore plugin which has an auto fix function to migrate the imports and used it to migrate the Material UI imports for plugins/explore.
 
-### `@backstage/plugin-firehydrant` (0.2.14 → [0.2.19](../changelogs/@backstage/plugin-firehydrant.md#0219))
+### `@backstage/plugin-firehydrant` (0.2.14 → [0.2.19](../../changelogs/@backstage/plugin-firehydrant.md#0219))
 
 #### 0.2.19
 
@@ -3891,7 +3891,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-fossa` (0.2.62 → [0.2.67](../changelogs/@backstage/plugin-fossa.md#0267))
+### `@backstage/plugin-fossa` (0.2.62 → [0.2.67](../../changelogs/@backstage/plugin-fossa.md#0267))
 
 #### 0.2.67
 
@@ -3924,7 +3924,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`89cdfad`](https://github.com/backstage/backstage/commit/89cdfad): Adjusted MUI imports for better tree shaking
 
-### `@backstage/plugin-gcalendar` (0.3.23 → [0.3.28](../changelogs/@backstage/plugin-gcalendar.md#0328))
+### `@backstage/plugin-gcalendar` (0.3.23 → [0.3.28](../../changelogs/@backstage/plugin-gcalendar.md#0328))
 
 #### 0.3.28
 
@@ -3957,7 +3957,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`9c9e0a1`](https://github.com/backstage/backstage/commit/9c9e0a1): Added ESLint rule `no-top-level-material-ui-4-imports` in the `gcalendar` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-gcp-projects` (0.3.46 → [0.3.51](../changelogs/@backstage/plugin-gcp-projects.md#0351))
+### `@backstage/plugin-gcp-projects` (0.3.46 → [0.3.51](../../changelogs/@backstage/plugin-gcp-projects.md#0351))
 
 #### 0.3.51
 
@@ -3984,7 +3984,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`7dad59c`](https://github.com/backstage/backstage/commit/7dad59c): Added ESLint rule `no-top-level-material-ui-4-imports` in the `gcp-projects` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-git-release-manager` (0.3.42 → [0.3.47](../changelogs/@backstage/plugin-git-release-manager.md#0347))
+### `@backstage/plugin-git-release-manager` (0.3.42 → [0.3.47](../../changelogs/@backstage/plugin-git-release-manager.md#0347))
 
 #### 0.3.47
 
@@ -4011,7 +4011,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-github-actions` (0.6.11 → [0.6.16](../changelogs/@backstage/plugin-github-actions.md#0616))
+### `@backstage/plugin-github-actions` (0.6.11 → [0.6.16](../../changelogs/@backstage/plugin-github-actions.md#0616))
 
 #### 0.6.16
 
@@ -4046,7 +4046,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`8ab3218`](https://github.com/backstage/backstage/commit/8ab3218): Fixed bug in WorkflowRunStatus component where skipped and cancelled workflow runs appeared as success
 - [`692316d`](https://github.com/backstage/backstage/commit/692316d): Fixed bug in WorkflowRunStatus component where status description of skipped and cancelled workflow runs appeared as success
 
-### `@backstage/plugin-github-deployments` (0.1.61 → [0.1.66](../changelogs/@backstage/plugin-github-deployments.md#0166))
+### `@backstage/plugin-github-deployments` (0.1.61 → [0.1.66](../../changelogs/@backstage/plugin-github-deployments.md#0166))
 
 #### 0.1.66
 
@@ -4075,7 +4075,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 - [`a1ddc8d`](https://github.com/backstage/backstage/commit/a1ddc8d): Added ESLint rule `no-top-level-material-ui-4-imports` in the `github-deployments` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-gitops-profiles` (0.3.45 → [0.3.50](../changelogs/@backstage/plugin-gitops-profiles.md#0350))
+### `@backstage/plugin-gitops-profiles` (0.3.45 → [0.3.50](../../changelogs/@backstage/plugin-gitops-profiles.md#0350))
 
 #### 0.3.50
 
@@ -4104,7 +4104,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`1a22254`](https://github.com/backstage/backstage/commit/1a22254): Added ESLint rule `no-top-level-material-ui-4-imports` in the `gitops-profiles` plugin to migrate the Material UI imports.
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-gocd` (0.1.36 → [0.1.41](../changelogs/@backstage/plugin-gocd.md#0141))
+### `@backstage/plugin-gocd` (0.1.36 → [0.1.41](../../changelogs/@backstage/plugin-gocd.md#0141))
 
 #### 0.1.41
 
@@ -4134,7 +4134,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 - [`4166b10`](https://github.com/backstage/backstage/commit/4166b10): Added an optional ESLint rule - no-top-level-material-ui-4-imports - which has an auto fix function to migrate the imports and used it to migrate the Material UI imports.
 
-### `@backstage/plugin-graphiql` (0.3.3 → [0.3.8](../changelogs/@backstage/plugin-graphiql.md#038))
+### `@backstage/plugin-graphiql` (0.3.3 → [0.3.8](../../changelogs/@backstage/plugin-graphiql.md#038))
 
 #### 0.3.8
 
@@ -4162,7 +4162,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-graphql-voyager` (0.1.12 → [0.1.17](../changelogs/@backstage/plugin-graphql-voyager.md#0117))
+### `@backstage/plugin-graphql-voyager` (0.1.12 → [0.1.17](../../changelogs/@backstage/plugin-graphql-voyager.md#0117))
 
 #### 0.1.17
 
@@ -4191,7 +4191,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`813f99d`](https://github.com/backstage/backstage/commit/813f99d): Added ESLint rule `no-top-level-material-ui-4-imports` in the `graphql-voyager` plugin to migrate the Material UI imports.
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-home-react` (0.1.8 → [0.1.12](../changelogs/@backstage/plugin-home-react.md#0112))
+### `@backstage/plugin-home-react` (0.1.8 → [0.1.12](../../changelogs/@backstage/plugin-home-react.md#0112))
 
 #### 0.1.12
 
@@ -4208,7 +4208,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@rjsf/material-ui` to `5.17.1`.
   Updated dependency `@rjsf/validator-ajv8` to `5.17.1`.
 
-### `@backstage/plugin-ilert` (0.2.19 → [0.2.24](../changelogs/@backstage/plugin-ilert.md#0224))
+### `@backstage/plugin-ilert` (0.2.19 → [0.2.24](../../changelogs/@backstage/plugin-ilert.md#0224))
 
 #### 0.2.24
 
@@ -4236,7 +4236,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-jenkins` (0.9.5 → [0.9.10](../changelogs/@backstage/plugin-jenkins.md#0910))
+### `@backstage/plugin-jenkins` (0.9.5 → [0.9.10](../../changelogs/@backstage/plugin-jenkins.md#0910))
 
 #### 0.9.10
 
@@ -4270,7 +4270,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`75277ab`](https://github.com/backstage/backstage/commit/75277ab): Added ESLint rule `no-top-level-material-ui-4-imports` in the Jenkins plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-jenkins-common` (0.1.24 → [0.1.26](../changelogs/@backstage/plugin-jenkins-common.md#0126))
+### `@backstage/plugin-jenkins-common` (0.1.24 → [0.1.26](../../changelogs/@backstage/plugin-jenkins-common.md#0126))
 
 #### 0.1.26
 
@@ -4278,7 +4278,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-kafka` (0.3.30 → [0.3.35](../changelogs/@backstage/plugin-kafka.md#0335))
+### `@backstage/plugin-kafka` (0.3.30 → [0.3.35](../../changelogs/@backstage/plugin-kafka.md#0335))
 
 #### 0.3.35
 
@@ -4311,7 +4311,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`3913fd8`](https://github.com/backstage/backstage/commit/3913fd8): Added ESLint rule `no-top-level-material-ui-4-imports` in the Kafka plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-kafka-backend` (0.3.11 → [0.3.16](../changelogs/@backstage/plugin-kafka-backend.md#0316))
+### `@backstage/plugin-kafka-backend` (0.3.11 → [0.3.16](../../changelogs/@backstage/plugin-kafka-backend.md#0316))
 
 #### 0.3.16
 
@@ -4325,7 +4325,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`d5a1fe1`](https://github.com/backstage/backstage/commit/d5a1fe1): Replaced winston logger with `LoggerService`
 
-### `@backstage/plugin-kubernetes` (0.11.5 → [0.11.9](../changelogs/@backstage/plugin-kubernetes.md#0119))
+### `@backstage/plugin-kubernetes` (0.11.5 → [0.11.9](../../changelogs/@backstage/plugin-kubernetes.md#0119))
 
 #### 0.11.9
 
@@ -4340,7 +4340,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`0e1941b`](https://github.com/backstage/backstage/commit/0e1941b): Added an optional ESLint rule - no-top-level-material-ui-4-imports -in kubernetes plugin which has an auto fix function to migrate the imports and used it to migrate the Material UI imports for plugins/kubernetes.
 
-### `@backstage/plugin-kubernetes-common` (0.7.4 → [0.7.5](../changelogs/@backstage/plugin-kubernetes-common.md#075))
+### `@backstage/plugin-kubernetes-common` (0.7.4 → [0.7.5](../../changelogs/@backstage/plugin-kubernetes-common.md#075))
 
 #### 0.7.5
 
@@ -4348,7 +4348,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`4642cb7`](https://github.com/backstage/backstage/commit/4642cb7): Add support to fetch data for Daemon Sets and display an accordion in the same way as with Deployments
 
-### `@backstage/plugin-kubernetes-node` (0.1.7 → [0.1.11](../changelogs/@backstage/plugin-kubernetes-node.md#0111))
+### `@backstage/plugin-kubernetes-node` (0.1.7 → [0.1.11](../../changelogs/@backstage/plugin-kubernetes-node.md#0111))
 
 #### 0.1.11
 
@@ -4362,7 +4362,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`69d0217`](https://github.com/backstage/backstage/commit/69d0217): Accept auth credentials to get kubernetes clusters
 
-### `@backstage/plugin-kubernetes-react` (0.3.0 → [0.3.4](../changelogs/@backstage/plugin-kubernetes-react.md#034))
+### `@backstage/plugin-kubernetes-react` (0.3.0 → [0.3.4](../../changelogs/@backstage/plugin-kubernetes-react.md#034))
 
 #### 0.3.4
 
@@ -4390,7 +4390,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`4642cb7`](https://github.com/backstage/backstage/commit/4642cb7): Add support to fetch data for Daemon Sets and display an accordion in the same way as with Deployments
 
-### `@backstage/plugin-lighthouse` (0.4.15 → [0.4.20](../changelogs/@backstage/plugin-lighthouse.md#0420))
+### `@backstage/plugin-lighthouse` (0.4.15 → [0.4.20](../../changelogs/@backstage/plugin-lighthouse.md#0420))
 
 #### 0.4.20
 
@@ -4423,7 +4423,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c4c8476`](https://github.com/backstage/backstage/commit/c4c8476): Added ESLint rule `no-top-level-material-ui-4-imports` in the Lighthouse plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-lighthouse-common` (0.1.4 → [0.1.6](../changelogs/@backstage/plugin-lighthouse-common.md#016))
+### `@backstage/plugin-lighthouse-common` (0.1.4 → [0.1.6](../../changelogs/@backstage/plugin-lighthouse-common.md#016))
 
 #### 0.1.6
 
@@ -4431,7 +4431,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-linguist` (0.1.15 → [0.1.20](../changelogs/@backstage/plugin-linguist.md#0120))
+### `@backstage/plugin-linguist` (0.1.15 → [0.1.20](../../changelogs/@backstage/plugin-linguist.md#0120))
 
 #### 0.1.20
 
@@ -4460,7 +4460,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`786c9c4`](https://github.com/backstage/backstage/commit/786c9c4): Updated dependency `luxon` to `^3.0.0`.
 - [`051fda1`](https://github.com/backstage/backstage/commit/051fda1): Removed unused `dependencies` and `devDependencies` identified in Knip Report
 
-### `@backstage/plugin-linguist-backend` (0.5.10 → [0.5.16](../changelogs/@backstage/plugin-linguist-backend.md#0516))
+### `@backstage/plugin-linguist-backend` (0.5.10 → [0.5.16](../../changelogs/@backstage/plugin-linguist-backend.md#0516))
 
 #### 0.5.16
 
@@ -4485,7 +4485,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`051fda1`](https://github.com/backstage/backstage/commit/051fda1): Removed unused `dependencies` and `devDependencies` identified in Knip Report
 
-### `@backstage/plugin-linguist-common` (0.1.2 → [0.1.3](../changelogs/@backstage/plugin-linguist-common.md#013))
+### `@backstage/plugin-linguist-common` (0.1.2 → [0.1.3](../../changelogs/@backstage/plugin-linguist-common.md#013))
 
 #### 0.1.3
 
@@ -4493,7 +4493,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`3905997`](https://github.com/backstage/backstage/commit/3905997): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-microsoft-calendar` (0.1.12 → [0.1.17](../changelogs/@backstage/plugin-microsoft-calendar.md#0117))
+### `@backstage/plugin-microsoft-calendar` (0.1.12 → [0.1.17](../../changelogs/@backstage/plugin-microsoft-calendar.md#0117))
 
 #### 0.1.17
 
@@ -4522,7 +4522,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`4bba771`](https://github.com/backstage/backstage/commit/4bba771): Added ESLint rule `no-top-level-material-ui-4-imports` in the `microsoft-calender` plugin to migrate the Material UI imports.
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-newrelic` (0.3.45 → [0.3.50](../changelogs/@backstage/plugin-newrelic.md#0350))
+### `@backstage/plugin-newrelic` (0.3.45 → [0.3.50](../../changelogs/@backstage/plugin-newrelic.md#0350))
 
 #### 0.3.50
 
@@ -4551,7 +4551,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`f38f7d8`](https://github.com/backstage/backstage/commit/f38f7d8): Added an optional ESLint rule - no-top-level-material-ui-4-imports -in cloudbuild plugin which has an auto fix function to migrate the imports and used it to migrate the Material UI imports for plugins/newrelic.
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-newrelic-dashboard` (0.3.5 → [0.3.10](../changelogs/@backstage/plugin-newrelic-dashboard.md#0310))
+### `@backstage/plugin-newrelic-dashboard` (0.3.5 → [0.3.10](../../changelogs/@backstage/plugin-newrelic-dashboard.md#0310))
 
 #### 0.3.10
 
@@ -4573,7 +4573,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`1d81cdd`](https://github.com/backstage/backstage/commit/1d81cdd): Added an optional ESLint rule - no-top-level-material-ui-4-imports -in new relic plugin which has an auto fix function to migrate the imports and used it to migrate the Material UI imports for plugins/newrelic-dashboard
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-nomad` (0.1.11 → [0.1.16](../changelogs/@backstage/plugin-nomad.md#0116))
+### `@backstage/plugin-nomad` (0.1.11 → [0.1.16](../../changelogs/@backstage/plugin-nomad.md#0116))
 
 #### 0.1.16
 
@@ -4601,7 +4601,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`c116096`](https://github.com/backstage/backstage/commit/c116096): Added an optional ESLint rule - no-top-level-material-ui-4-imports -in nomad plugin which has an auto fix function to migrate the imports and used it to migrate the Material UI imports for plugins/nomad.
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-nomad-backend` (0.1.15 → [0.1.20](../changelogs/@backstage/plugin-nomad-backend.md#0120))
+### `@backstage/plugin-nomad-backend` (0.1.15 → [0.1.20](../../changelogs/@backstage/plugin-nomad-backend.md#0120))
 
 #### 0.1.20
 
@@ -4621,7 +4621,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`4467036`](https://github.com/backstage/backstage/commit/4467036): Allow unauthenticated access to health check endpoint.
 
-### `@backstage/plugin-octopus-deploy` (0.2.12 → [0.2.17](../changelogs/@backstage/plugin-octopus-deploy.md#0217))
+### `@backstage/plugin-octopus-deploy` (0.2.12 → [0.2.17](../../changelogs/@backstage/plugin-octopus-deploy.md#0217))
 
 #### 0.2.17
 
@@ -4656,7 +4656,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`a207927`](https://github.com/backstage/backstage/commit/a207927): Added dropdown field extension for Octopus Deploy project groups
 
-### `@backstage/plugin-opencost` (0.2.5 → [0.2.10](../changelogs/@backstage/plugin-opencost.md#0210))
+### `@backstage/plugin-opencost` (0.2.5 → [0.2.10](../../changelogs/@backstage/plugin-opencost.md#0210))
 
 #### 0.2.10
 
@@ -4676,7 +4676,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`f21ef8c`](https://github.com/backstage/backstage/commit/f21ef8c): Added ESLint rule `no-top-level-material-ui-4-imports` in the `opencost` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-org` (0.6.20 → [0.6.24](../changelogs/@backstage/plugin-org.md#0624))
+### `@backstage/plugin-org` (0.6.20 → [0.6.24](../../changelogs/@backstage/plugin-org.md#0624))
 
 #### 0.6.24
 
@@ -4709,7 +4709,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   This can be used to display an aggregated user list for groups by default.
 - [`a767aaa`](https://github.com/backstage/backstage/commit/a767aaa): Fixed an issue where the `OwnershipCard` component failed to scroll properly when used alongside `react-grid-layout`.
 
-### `@backstage/plugin-org-react` (0.1.19 → [0.1.23](../changelogs/@backstage/plugin-org-react.md#0123))
+### `@backstage/plugin-org-react` (0.1.19 → [0.1.23](../../changelogs/@backstage/plugin-org-react.md#0123))
 
 #### 0.1.23
 
@@ -4731,7 +4731,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-pagerduty` (0.7.2 → [0.7.7](../changelogs/@backstage/plugin-pagerduty.md#077))
+### `@backstage/plugin-pagerduty` (0.7.2 → [0.7.7](../../changelogs/@backstage/plugin-pagerduty.md#077))
 
 #### 0.7.7
 
@@ -4760,7 +4760,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`2b43144`](https://github.com/backstage/backstage/commit/2b43144): Added ESLint rule `no-top-level-material-ui-4-imports` in the `pagerduty` plugin to migrate the Material UI imports.
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-periskop` (0.1.28 → [0.1.33](../changelogs/@backstage/plugin-periskop.md#0133))
+### `@backstage/plugin-periskop` (0.1.28 → [0.1.33](../../changelogs/@backstage/plugin-periskop.md#0133))
 
 #### 0.1.33
 
@@ -4787,7 +4787,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-periskop-backend` (0.2.11 → [0.2.16](../changelogs/@backstage/plugin-periskop-backend.md#0216))
+### `@backstage/plugin-periskop-backend` (0.2.11 → [0.2.16](../../changelogs/@backstage/plugin-periskop-backend.md#0216))
 
 #### 0.2.16
 
@@ -4807,7 +4807,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`4467036`](https://github.com/backstage/backstage/commit/4467036): Allow unauthenticated access to health check endpoint.
 
-### `@backstage/plugin-permission-backend` (0.5.36 → [0.5.41](../changelogs/@backstage/plugin-permission-backend.md#0541))
+### `@backstage/plugin-permission-backend` (0.5.36 → [0.5.41](../../changelogs/@backstage/plugin-permission-backend.md#0541))
 
 #### 0.5.41
 
@@ -4842,7 +4842,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   The `createRouter` function now accepts `auth`, `httpAuth` and `userInfo` options. Theses are used internally to support the new backend system, and can be ignored.
 
-### `@backstage/plugin-permission-common` (0.7.12 → [0.7.13](../changelogs/@backstage/plugin-permission-common.md#0713))
+### `@backstage/plugin-permission-common` (0.7.12 → [0.7.13](../../changelogs/@backstage/plugin-permission-common.md#0713))
 
 #### 0.7.13
 
@@ -4852,7 +4852,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-permission-node` (0.7.24 → [0.7.28](../changelogs/@backstage/plugin-permission-node.md#0728))
+### `@backstage/plugin-permission-node` (0.7.24 → [0.7.28](../../changelogs/@backstage/plugin-permission-node.md#0728))
 
 #### 0.7.28
 
@@ -4866,7 +4866,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`0502d82`](https://github.com/backstage/backstage/commit/0502d82): The `ServerPermissionClient` has been migrated to implement the `PermissionsService` interface, now accepting the new `BackstageCredentials` object in addition to the `token` option, which is now deprecated. It now also optionally depends on the new `AuthService`.
 
-### `@backstage/plugin-permission-react` (0.4.20 → [0.4.22](../changelogs/@backstage/plugin-permission-react.md#0422))
+### `@backstage/plugin-permission-react` (0.4.20 → [0.4.22](../../changelogs/@backstage/plugin-permission-react.md#0422))
 
 #### 0.4.22
 
@@ -4874,7 +4874,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 
-### `@backstage/plugin-playlist` (0.2.4 → [0.2.9](../changelogs/@backstage/plugin-playlist.md#029))
+### `@backstage/plugin-playlist` (0.2.4 → [0.2.9](../../changelogs/@backstage/plugin-playlist.md#029))
 
 #### 0.2.9
 
@@ -4907,7 +4907,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`fbb705c`](https://github.com/backstage/backstage/commit/fbb705c): Adjusted MUI imports for better tree shaking.
 
-### `@backstage/plugin-playlist-backend` (0.3.17 → [0.3.22](../changelogs/@backstage/plugin-playlist-backend.md#0322))
+### `@backstage/plugin-playlist-backend` (0.3.17 → [0.3.22](../../changelogs/@backstage/plugin-playlist-backend.md#0322))
 
 #### 0.3.22
 
@@ -4929,7 +4929,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-playlist-common` (0.1.14 → [0.1.16](../changelogs/@backstage/plugin-playlist-common.md#0116))
+### `@backstage/plugin-playlist-common` (0.1.14 → [0.1.16](../../changelogs/@backstage/plugin-playlist-common.md#0116))
 
 #### 0.1.16
 
@@ -4937,7 +4937,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-proxy-backend` (0.4.11 → [0.4.15](../changelogs/@backstage/plugin-proxy-backend.md#0415))
+### `@backstage/plugin-proxy-backend` (0.4.11 → [0.4.15](../../changelogs/@backstage/plugin-proxy-backend.md#0415))
 
 #### 0.4.15
 
@@ -4960,7 +4960,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-puppetdb` (0.1.13 → [0.1.18](../changelogs/@backstage/plugin-puppetdb.md#0118))
+### `@backstage/plugin-puppetdb` (0.1.13 → [0.1.18](../../changelogs/@backstage/plugin-puppetdb.md#0118))
 
 #### 0.1.18
 
@@ -4988,7 +4988,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 - [`8754b0e`](https://github.com/backstage/backstage/commit/8754b0e): Added ESLint rule `no-top-level-material-ui-4-imports` in the `puppetdb` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-rollbar` (0.4.30 → [0.4.35](../changelogs/@backstage/plugin-rollbar.md#0435))
+### `@backstage/plugin-rollbar` (0.4.30 → [0.4.35](../../changelogs/@backstage/plugin-rollbar.md#0435))
 
 #### 0.4.35
 
@@ -5021,7 +5021,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2481d8a`](https://github.com/backstage/backstage/commit/2481d8a): Adjusted MUI imports for better tree shaking.
 
-### `@backstage/plugin-rollbar-backend` (0.1.58 → [0.1.63](../changelogs/@backstage/plugin-rollbar-backend.md#0163))
+### `@backstage/plugin-rollbar-backend` (0.1.58 → [0.1.63](../../changelogs/@backstage/plugin-rollbar-backend.md#0163))
 
 #### 0.1.63
 
@@ -5029,7 +5029,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-scaffolder-backend-module-azure` (0.1.5 → [0.1.9](../changelogs/@backstage/plugin-scaffolder-backend-module-azure.md#019))
+### `@backstage/plugin-scaffolder-backend-module-azure` (0.1.5 → [0.1.9](../../changelogs/@backstage/plugin-scaffolder-backend-module-azure.md#019))
 
 #### 0.1.9
 
@@ -5046,7 +5046,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.3 → [0.2.7](../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket.md#027))
+### `@backstage/plugin-scaffolder-backend-module-bitbucket` (0.2.3 → [0.2.7](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket.md#027))
 
 #### 0.2.7
 
@@ -5063,7 +5063,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.3 → [0.1.7](../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket-cloud.md#017))
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` (0.1.3 → [0.1.7](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket-cloud.md#017))
 
 #### 0.1.7
 
@@ -5081,7 +5081,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.3 → [0.1.7](../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket-server.md#017))
+### `@backstage/plugin-scaffolder-backend-module-bitbucket-server` (0.1.3 → [0.1.7](../../changelogs/@backstage/plugin-scaffolder-backend-module-bitbucket-server.md#017))
 
 #### 0.1.7
 
@@ -5099,7 +5099,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.14 → [0.2.18](../changelogs/@backstage/plugin-scaffolder-backend-module-confluence-to-markdown.md#0218))
+### `@backstage/plugin-scaffolder-backend-module-confluence-to-markdown` (0.2.14 → [0.2.18](../../changelogs/@backstage/plugin-scaffolder-backend-module-confluence-to-markdown.md#0218))
 
 #### 0.2.15
 
@@ -5109,7 +5109,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.37 → [0.2.41](../changelogs/@backstage/plugin-scaffolder-backend-module-cookiecutter.md#0241))
+### `@backstage/plugin-scaffolder-backend-module-cookiecutter` (0.2.37 → [0.2.41](../../changelogs/@backstage/plugin-scaffolder-backend-module-cookiecutter.md#0241))
 
 #### 0.2.38
 
@@ -5120,7 +5120,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.5 → [0.1.9](../changelogs/@backstage/plugin-scaffolder-backend-module-gerrit.md#019))
+### `@backstage/plugin-scaffolder-backend-module-gerrit` (0.1.5 → [0.1.9](../../changelogs/@backstage/plugin-scaffolder-backend-module-gerrit.md#019))
 
 #### 0.1.9
 
@@ -5136,7 +5136,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-backend-module-gitea` (0.1.3 → [0.1.7](../changelogs/@backstage/plugin-scaffolder-backend-module-gitea.md#017))
+### `@backstage/plugin-scaffolder-backend-module-gitea` (0.1.3 → [0.1.7](../../changelogs/@backstage/plugin-scaffolder-backend-module-gitea.md#017))
 
 #### 0.1.7
 
@@ -5154,7 +5154,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`9f19476`](https://github.com/backstage/backstage/commit/9f19476): Updated README
 
-### `@backstage/plugin-scaffolder-backend-module-github` (0.2.3 → [0.2.7](../changelogs/@backstage/plugin-scaffolder-backend-module-github.md#027))
+### `@backstage/plugin-scaffolder-backend-module-github` (0.2.3 → [0.2.7](../../changelogs/@backstage/plugin-scaffolder-backend-module-github.md#027))
 
 #### 0.2.7
 
@@ -5174,7 +5174,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`35fe005`](https://github.com/backstage/backstage/commit/35fe005): Export `getOctokitOptions` for easy re-use of Octokit configuration handling
 - [`1753898`](https://github.com/backstage/backstage/commit/1753898): Updated dependency `octokit-plugin-create-pull-request` to `^5.0.0`.
 
-### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.30 → [0.4.34](../changelogs/@backstage/plugin-scaffolder-backend-module-rails.md#0434))
+### `@backstage/plugin-scaffolder-backend-module-rails` (0.4.30 → [0.4.34](../../changelogs/@backstage/plugin-scaffolder-backend-module-rails.md#0434))
 
 #### 0.4.31
 
@@ -5185,7 +5185,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.21 → [0.1.25](../changelogs/@backstage/plugin-scaffolder-backend-module-sentry.md#0125))
+### `@backstage/plugin-scaffolder-backend-module-sentry` (0.1.21 → [0.1.25](../../changelogs/@backstage/plugin-scaffolder-backend-module-sentry.md#0125))
 
 #### 0.1.22
 
@@ -5195,7 +5195,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
   It will help to maintain tests in a long run during structural changes of action context.
 
-### `@backstage/plugin-search-backend-module-catalog` (0.1.17 → [0.1.23](../changelogs/@backstage/plugin-search-backend-module-catalog.md#0123))
+### `@backstage/plugin-search-backend-module-catalog` (0.1.17 → [0.1.23](../../changelogs/@backstage/plugin-search-backend-module-catalog.md#0123))
 
 #### 0.1.18
 
@@ -5203,7 +5203,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`bb368a5`](https://github.com/backstage/backstage/commit/bb368a5): Migrated to support new auth services.
 
-### `@backstage/plugin-search-backend-module-explore` (0.1.17 → [0.1.23](../changelogs/@backstage/plugin-search-backend-module-explore.md#0123))
+### `@backstage/plugin-search-backend-module-explore` (0.1.17 → [0.1.23](../../changelogs/@backstage/plugin-search-backend-module-explore.md#0123))
 
 #### 0.1.21
 
@@ -5217,7 +5217,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`bb368a5`](https://github.com/backstage/backstage/commit/bb368a5): Migrated to support new auth services.
 
-### `@backstage/plugin-search-backend-module-pg` (0.5.22 → [0.5.26](../changelogs/@backstage/plugin-search-backend-module-pg.md#0526))
+### `@backstage/plugin-search-backend-module-pg` (0.5.22 → [0.5.26](../../changelogs/@backstage/plugin-search-backend-module-pg.md#0526))
 
 #### 0.5.26
 
@@ -5235,7 +5235,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.6 → [0.1.10](../changelogs/@backstage/plugin-search-backend-module-stack-overflow-collator.md#0110))
+### `@backstage/plugin-search-backend-module-stack-overflow-collator` (0.1.6 → [0.1.10](../../changelogs/@backstage/plugin-search-backend-module-stack-overflow-collator.md#0110))
 
 #### 0.1.10
 
@@ -5243,7 +5243,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`d5a1fe1`](https://github.com/backstage/backstage/commit/d5a1fe1): Replaced winston logger with `LoggerService`
 
-### `@backstage/plugin-search-backend-module-techdocs` (0.1.17 → [0.1.22](../changelogs/@backstage/plugin-search-backend-module-techdocs.md#0122))
+### `@backstage/plugin-search-backend-module-techdocs` (0.1.17 → [0.1.22](../../changelogs/@backstage/plugin-search-backend-module-techdocs.md#0122))
 
 #### 0.1.22
 
@@ -5257,7 +5257,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`bb368a5`](https://github.com/backstage/backstage/commit/bb368a5): Migrated to support new auth services.
 
-### `@backstage/plugin-sentry` (0.5.15 → [0.5.20](../changelogs/@backstage/plugin-sentry.md#0520))
+### `@backstage/plugin-sentry` (0.5.15 → [0.5.20](../../changelogs/@backstage/plugin-sentry.md#0520))
 
 #### 0.5.20
 
@@ -5290,7 +5290,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2df7265`](https://github.com/backstage/backstage/commit/2df7265): Added ESLint rule `no-top-level-material-ui-4-imports` in the `sentry` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-shortcuts` (0.3.19 → [0.3.24](../changelogs/@backstage/plugin-shortcuts.md#0324))
+### `@backstage/plugin-shortcuts` (0.3.19 → [0.3.24](../../changelogs/@backstage/plugin-shortcuts.md#0324))
 
 #### 0.3.24
 
@@ -5325,7 +5325,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-sonarqube` (0.7.12 → [0.7.17](../changelogs/@backstage/plugin-sonarqube.md#0717))
+### `@backstage/plugin-sonarqube` (0.7.12 → [0.7.17](../../changelogs/@backstage/plugin-sonarqube.md#0717))
 
 #### 0.7.17
 
@@ -5358,7 +5358,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e38b29c`](https://github.com/backstage/backstage/commit/e38b29c): Added ESLint rule `no-top-level-material-ui-4-imports` in the `sonarqube` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-sonarqube-backend` (0.2.15 → [0.2.20](../changelogs/@backstage/plugin-sonarqube-backend.md#0220))
+### `@backstage/plugin-sonarqube-backend` (0.2.15 → [0.2.20](../../changelogs/@backstage/plugin-sonarqube-backend.md#0220))
 
 #### 0.2.20
 
@@ -5372,7 +5372,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`d5a1fe1`](https://github.com/backstage/backstage/commit/d5a1fe1): Replaced winston logger with `LoggerService`
 
-### `@backstage/plugin-sonarqube-react` (0.1.13 → [0.1.16](../changelogs/@backstage/plugin-sonarqube-react.md#0116))
+### `@backstage/plugin-sonarqube-react` (0.1.13 → [0.1.16](../../changelogs/@backstage/plugin-sonarqube-react.md#0116))
 
 #### 0.1.16
 
@@ -5380,7 +5380,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-splunk-on-call` (0.4.19 → [0.4.24](../changelogs/@backstage/plugin-splunk-on-call.md#0424))
+### `@backstage/plugin-splunk-on-call` (0.4.19 → [0.4.24](../../changelogs/@backstage/plugin-splunk-on-call.md#0424))
 
 #### 0.4.24
 
@@ -5413,7 +5413,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`51f814b`](https://github.com/backstage/backstage/commit/51f814b): Added ESLint rule `no-top-level-material-ui-4-imports` in the `splunk-on-call` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-stack-overflow` (0.1.25 → [0.1.30](../changelogs/@backstage/plugin-stack-overflow.md#0130))
+### `@backstage/plugin-stack-overflow` (0.1.25 → [0.1.30](../../changelogs/@backstage/plugin-stack-overflow.md#0130))
 
 #### 0.1.30
 
@@ -5447,7 +5447,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`c6779ac`](https://github.com/backstage/backstage/commit/c6779ac): fix: fix decode issues in title and author fields in `StackOverflowSearchResultListItem`
 - [`6429213`](https://github.com/backstage/backstage/commit/6429213): Added ESLint rule `no-top-level-material-ui-4-imports` in the `stack-overflow` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-stack-overflow-backend` (0.2.17 → [0.2.22](../changelogs/@backstage/plugin-stack-overflow-backend.md#0222))
+### `@backstage/plugin-stack-overflow-backend` (0.2.17 → [0.2.22](../../changelogs/@backstage/plugin-stack-overflow-backend.md#0222))
 
 #### 0.2.22
 
@@ -5455,7 +5455,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-stackstorm` (0.1.11 → [0.1.16](../changelogs/@backstage/plugin-stackstorm.md#0116))
+### `@backstage/plugin-stackstorm` (0.1.11 → [0.1.16](../../changelogs/@backstage/plugin-stackstorm.md#0116))
 
 #### 0.1.16
 
@@ -5488,7 +5488,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`b8234ce`](https://github.com/backstage/backstage/commit/b8234ce): Added ESLint rule `no-top-level-material-ui-4-imports` in the `stackstorm` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-tech-insights` (0.3.22 → [0.3.27](../changelogs/@backstage/plugin-tech-insights.md#0327))
+### `@backstage/plugin-tech-insights` (0.3.22 → [0.3.27](../../changelogs/@backstage/plugin-tech-insights.md#0327))
 
 #### 0.3.27
 
@@ -5522,7 +5522,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`6aec725`](https://github.com/backstage/backstage/commit/6aec725): Added ESLint rule `no-top-level-material-ui-4-imports` in the `tech-insights` plugin to migrate the Material UI imports.
 - [`aa66ae0`](https://github.com/backstage/backstage/commit/aa66ae0): Added `onlyFailed` prop to `ScorecardsCard`, and `isFailed` to each check type.
 
-### `@backstage/plugin-tech-insights-backend` (0.5.27 → [0.5.32](../changelogs/@backstage/plugin-tech-insights-backend.md#0532))
+### `@backstage/plugin-tech-insights-backend` (0.5.27 → [0.5.32](../../changelogs/@backstage/plugin-tech-insights-backend.md#0532))
 
 #### 0.5.32
 
@@ -5544,7 +5544,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`d621468`](https://github.com/backstage/backstage/commit/d621468): Added support for the new `AuthService`.
 
-### `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.45 → [0.1.50](../changelogs/@backstage/plugin-tech-insights-backend-module-jsonfc.md#0150))
+### `@backstage/plugin-tech-insights-backend-module-jsonfc` (0.1.45 → [0.1.50](../../changelogs/@backstage/plugin-tech-insights-backend-module-jsonfc.md#0150))
 
 #### 0.1.50
 
@@ -5564,7 +5564,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`6ce8c0b`](https://github.com/backstage/backstage/commit/6ce8c0b): Fixes an invalid line in the schema that was causing AJV to complain.
 
-### `@backstage/plugin-tech-insights-common` (0.2.12 → [0.2.13](../changelogs/@backstage/plugin-tech-insights-common.md#0213))
+### `@backstage/plugin-tech-insights-common` (0.2.12 → [0.2.13](../../changelogs/@backstage/plugin-tech-insights-common.md#0213))
 
 #### 0.2.13
 
@@ -5572,7 +5572,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-todo` (0.2.34 → [0.2.39](../changelogs/@backstage/plugin-todo.md#0239))
+### `@backstage/plugin-todo` (0.2.34 → [0.2.39](../../changelogs/@backstage/plugin-todo.md#0239))
 
 #### 0.2.39
 
@@ -5587,7 +5587,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 - [`cb1e3b0`](https://github.com/backstage/backstage/commit/cb1e3b0): Updated dependency `@testing-library/dom` to `^10.0.0`.
 
-### `@backstage/plugin-todo-backend` (0.3.11 → [0.3.17](../changelogs/@backstage/plugin-todo-backend.md#0317))
+### `@backstage/plugin-todo-backend` (0.3.11 → [0.3.17](../../changelogs/@backstage/plugin-todo-backend.md#0317))
 
 #### 0.3.17
 
@@ -5608,7 +5608,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`b65788b`](https://github.com/backstage/backstage/commit/b65788b): Move @backstage/repo-tools to dev dependencies
 
-### `@backstage/plugin-user-settings` (0.8.1 → [0.8.5](../changelogs/@backstage/plugin-user-settings.md#085))
+### `@backstage/plugin-user-settings` (0.8.1 → [0.8.5](../../changelogs/@backstage/plugin-user-settings.md#085))
 
 #### 0.8.5
 
@@ -5635,7 +5635,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`ee584af`](https://github.com/backstage/backstage/commit/ee584af): Added ESLint rule `no-top-level-material-ui-4-imports` in the `user-settings` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-vault` (0.1.25 → [0.1.30](../changelogs/@backstage/plugin-vault.md#0130))
+### `@backstage/plugin-vault` (0.1.25 → [0.1.30](../../changelogs/@backstage/plugin-vault.md#0130))
 
 #### 0.1.30
 
@@ -5668,7 +5668,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e780d3a`](https://github.com/backstage/backstage/commit/e780d3a): Added ESLint rule `no-top-level-material-ui-4-imports` in the `vault` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-vault-backend` (0.4.6 → [0.4.11](../changelogs/@backstage/plugin-vault-backend.md#0411))
+### `@backstage/plugin-vault-backend` (0.4.6 → [0.4.11](../../changelogs/@backstage/plugin-vault-backend.md#0411))
 
 #### 0.4.11
 
@@ -5683,7 +5683,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`7277fe2`](https://github.com/backstage/backstage/commit/7277fe2): Removed lock inside recursion to avoid deadlocks
 - [`4467036`](https://github.com/backstage/backstage/commit/4467036): Allow unauthenticated access to health check endpoint.
 
-### `@backstage/plugin-vault-node` (0.1.6 → [0.1.11](../changelogs/@backstage/plugin-vault-node.md#0111))
+### `@backstage/plugin-vault-node` (0.1.6 → [0.1.11](../../changelogs/@backstage/plugin-vault-node.md#0111))
 
 #### 0.1.11
 
@@ -5691,7 +5691,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`c2112f2`](https://github.com/backstage/backstage/commit/c2112f2): These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
 
-### `@backstage/plugin-xcmetrics` (0.2.48 → [0.2.53](../changelogs/@backstage/plugin-xcmetrics.md#0253))
+### `@backstage/plugin-xcmetrics` (0.2.48 → [0.2.53](../../changelogs/@backstage/plugin-xcmetrics.md#0253))
 
 #### 0.2.53
 
@@ -5725,7 +5725,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`7984d1e`](https://github.com/backstage/backstage/commit/7984d1e): Fixed bug in XcMetricsClient where it was not including parameter for excludeCI, which is now a required parameter for XCMetrics.
 - [`9daf301`](https://github.com/backstage/backstage/commit/9daf301): Added ESLint rule `no-top-level-material-ui-4-imports` in the `xcmetrics` plugin to migrate the Material UI imports.
 
-### `@backstage/theme` (0.5.1 → [0.5.3](../changelogs/@backstage/theme.md#053))
+### `@backstage/theme` (0.5.1 → [0.5.3](../../changelogs/@backstage/theme.md#053))
 
 #### 0.5.3
 
@@ -5741,7 +5741,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 ## Other minor version bumps
 
-### `@backstage/config` (1.1.1 → [1.2.0](../changelogs/@backstage/config.md#120))
+### `@backstage/config` (1.1.1 → [1.2.0](../../changelogs/@backstage/config.md#120))
 
 #### 1.2.0
 
@@ -5749,7 +5749,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`50cf9df`](https://github.com/backstage/backstage/commit/50cf9df): The `ConfigReader` now treats `null` values as present but explicitly undefined, meaning it will not fall back to the next level of configuration.
 
-### `@backstage/config-loader` (1.6.2 → [1.8.0](../changelogs/@backstage/config-loader.md#180))
+### `@backstage/config-loader` (1.6.2 → [1.8.0](../../changelogs/@backstage/config-loader.md#180))
 
 #### 1.8.0
 
@@ -5773,7 +5773,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`db8358d`](https://github.com/backstage/backstage/commit/db8358d): Forward `null` values read from configuration files in configuration data, rather than treating them as an absence of config.
 
-### `@backstage/integration` (1.9.0 → [1.10.0](../changelogs/@backstage/integration.md#1100))
+### `@backstage/integration` (1.9.0 → [1.10.0](../../changelogs/@backstage/integration.md#1100))
 
 #### 1.10.0
 
@@ -5787,7 +5787,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`0386fa7`](https://github.com/backstage/backstage/commit/0386fa7): Fixed an issue with resolution of SCM URLs against a base URL with a trailing slash.
 
-### `@backstage/plugin-catalog` (1.17.0 → [1.19.0](../changelogs/@backstage/plugin-catalog.md#1190))
+### `@backstage/plugin-catalog` (1.17.0 → [1.19.0](../../changelogs/@backstage/plugin-catalog.md#1190))
 
 #### 1.19.0
 
@@ -5831,7 +5831,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`298953b`](https://github.com/backstage/backstage/commit/298953b): Added support for providing an `initiallySelectedNamespaces` which accepts an array of Namespaces to have selected by default
 - [`6727665`](https://github.com/backstage/backstage/commit/6727665): Allow the `spec.target` field to be searchable in the catalog table for locations. Previously, only the `spec.targets` field was be searchable. This makes locations generated by providers such as the `GithubEntityProvider` searchable in the catalog table. [#23098](https://github.com/backstage/backstage/issues/23098)
 
-### `@backstage/plugin-catalog-backend` (1.17.3 → [1.21.1](../changelogs/@backstage/plugin-catalog-backend.md#1211))
+### `@backstage/plugin-catalog-backend` (1.17.3 → [1.21.1](../../changelogs/@backstage/plugin-catalog-backend.md#1211))
 
 #### 1.21.1
 
@@ -5909,7 +5909,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`280edeb`](https://github.com/backstage/backstage/commit/280edeb): Add index for original value in search table for faster entity facet response
 - [`dad018f`](https://github.com/backstage/backstage/commit/dad018f): Do not fail on stitching when the entity contains `null` values associated to deeply nested or long keys.
 
-### `@backstage/plugin-catalog-node` (1.7.3 → [1.11.1](../changelogs/@backstage/plugin-catalog-node.md#1111))
+### `@backstage/plugin-catalog-node` (1.7.3 → [1.11.1](../../changelogs/@backstage/plugin-catalog-node.md#1111))
 
 #### 1.11.0
 
@@ -5935,7 +5935,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`df12231`](https://github.com/backstage/backstage/commit/df12231): Allow setting EntityDataParser using CatalogModelExtensionPoint
 
-### `@backstage/plugin-catalog-react` (1.10.0 → [1.11.3](../changelogs/@backstage/plugin-catalog-react.md#1113))
+### `@backstage/plugin-catalog-react` (1.10.0 → [1.11.3](../../changelogs/@backstage/plugin-catalog-react.md#1113))
 
 #### 1.11.3
 
@@ -5972,7 +5972,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`a6e237f`](https://github.com/backstage/backstage/commit/a6e237f): Added `DefaultFilters` component
 - [`298953b`](https://github.com/backstage/backstage/commit/298953b): Added support for providing an `initiallySelectedNamespaces` which accepts an array of Namespaces to have selected by default
 
-### `@backstage/plugin-scaffolder` (1.18.0 → [1.19.3](../changelogs/@backstage/plugin-scaffolder.md#1193))
+### `@backstage/plugin-scaffolder` (1.18.0 → [1.19.3](../../changelogs/@backstage/plugin-scaffolder.md#1193))
 
 #### 1.19.3
 
@@ -6011,7 +6011,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@rjsf/validator-ajv8` to `5.17.1`.
 - [`a7e6fb3`](https://github.com/backstage/backstage/commit/a7e6fb3): Added the `no-top-level-material-ui-4-imports` ESLint rule to aid with the migration to Material UI v5
 
-### `@backstage/plugin-scaffolder-backend` (1.21.3 → [1.22.5](../changelogs/@backstage/plugin-scaffolder-backend.md#1225))
+### `@backstage/plugin-scaffolder-backend` (1.21.3 → [1.22.5](../../changelogs/@backstage/plugin-scaffolder-backend.md#1225))
 
 #### 1.22.4
 
@@ -6046,7 +6046,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`bbd1fe1`](https://github.com/backstage/backstage/commit/bbd1fe1): Made "checkpoint" on scaffolder action context non-optional
 
-### `@backstage/plugin-search-backend-module-elasticsearch` (1.3.16 → [1.4.0](../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#140))
+### `@backstage/plugin-search-backend-module-elasticsearch` (1.3.16 → [1.4.0](../../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#140))
 
 #### 1.4.0
 
@@ -6063,7 +6063,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`0fb419b`](https://github.com/backstage/backstage/commit/0fb419b): Updated dependency `uuid` to `^9.0.0`.
   Updated dependency `@types/uuid` to `^9.0.0`.
 
-### `@backstage/plugin-techdocs-backend` (1.9.6 → [1.10.4](../changelogs/@backstage/plugin-techdocs-backend.md#1104))
+### `@backstage/plugin-techdocs-backend` (1.9.6 → [1.10.4](../../changelogs/@backstage/plugin-techdocs-backend.md#1104))
 
 #### 1.10.4
 
@@ -6082,7 +6082,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`3f14e9f`](https://github.com/backstage/backstage/commit/3f14e9f): Migrate plugin to use the new auth services.
 
-### `@backstage/plugin-techdocs-node` (1.11.5 → [1.12.3](../changelogs/@backstage/plugin-techdocs-node.md#1123))
+### `@backstage/plugin-techdocs-node` (1.11.5 → [1.12.3](../../changelogs/@backstage/plugin-techdocs-node.md#1123))
 
 #### 1.12.3
 
@@ -6112,7 +6112,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`5b4f565`](https://github.com/backstage/backstage/commit/5b4f565): Fix handling of default plugins that have configuration
 
-### `@backstage/plugin-techdocs-react` (1.1.16 → [1.2.3](../changelogs/@backstage/plugin-techdocs-react.md#123))
+### `@backstage/plugin-techdocs-react` (1.1.16 → [1.2.3](../../changelogs/@backstage/plugin-techdocs-react.md#123))
 
 #### 1.2.3
 
@@ -6141,7 +6141,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 ## Other patch version bumps
 
-### `@backstage/app-defaults` (1.5.0 → [1.5.4](../changelogs/@backstage/app-defaults.md#154))
+### `@backstage/app-defaults` (1.5.0 → [1.5.4](../../changelogs/@backstage/app-defaults.md#154))
 
 #### 1.5.4
 
@@ -6149,7 +6149,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 
-### `@backstage/catalog-client` (1.6.0 → [1.6.4](../changelogs/@backstage/catalog-client.md#164))
+### `@backstage/catalog-client` (1.6.0 → [1.6.4](../../changelogs/@backstage/catalog-client.md#164))
 
 #### 1.6.4
 
@@ -6175,7 +6175,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`6f830bb`](https://github.com/backstage/backstage/commit/6f830bb): Allow passing optional filter to `getEntitiesByRefs`
 
-### `@backstage/core-app-api` (1.12.0 → [1.12.4](../changelogs/@backstage/core-app-api.md#1124))
+### `@backstage/core-app-api` (1.12.0 → [1.12.4](../../changelogs/@backstage/core-app-api.md#1124))
 
 #### 1.12.4
 
@@ -6197,7 +6197,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/core-plugin-api` (1.9.0 → [1.9.2](../changelogs/@backstage/core-plugin-api.md#192))
+### `@backstage/core-plugin-api` (1.9.0 → [1.9.2](../../changelogs/@backstage/core-plugin-api.md#192))
 
 #### 1.9.2
 
@@ -6206,7 +6206,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 - [`cb1e3b0`](https://github.com/backstage/backstage/commit/cb1e3b0): Updated dependency `@testing-library/dom` to `^10.0.0`.
 
-### `@backstage/dev-utils` (1.0.27 → [1.0.31](../changelogs/@backstage/dev-utils.md#1031))
+### `@backstage/dev-utils` (1.0.27 → [1.0.31](../../changelogs/@backstage/dev-utils.md#1031))
 
 #### 1.0.31
 
@@ -6229,7 +6229,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/errors` (1.2.3 → [1.2.4](../changelogs/@backstage/errors.md#124))
+### `@backstage/errors` (1.2.3 → [1.2.4](../../changelogs/@backstage/errors.md#124))
 
 #### 1.2.4
 
@@ -6237,7 +6237,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`2636075`](https://github.com/backstage/backstage/commit/2636075): Fixed an issue that was causing ResponseError not to report the HTTP status from the provided response.
 
-### `@backstage/integration-react` (1.1.24 → [1.1.26](../changelogs/@backstage/integration-react.md#1126))
+### `@backstage/integration-react` (1.1.24 → [1.1.26](../../changelogs/@backstage/integration-react.md#1126))
 
 #### 1.1.26
 
@@ -6251,7 +6251,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`b38dc55`](https://github.com/backstage/backstage/commit/b38dc55): Updated `microsoftAuthApi` scopes for Azure DevOps to be fully qualified.
 
-### `@backstage/plugin-scaffolder-react` (1.8.0 → [1.8.4](../changelogs/@backstage/plugin-scaffolder-react.md#184))
+### `@backstage/plugin-scaffolder-react` (1.8.0 → [1.8.4](../../changelogs/@backstage/plugin-scaffolder-react.md#184))
 
 #### 1.8.4
 
@@ -6288,7 +6288,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@rjsf/material-ui` to `5.17.1`.
   Updated dependency `@rjsf/validator-ajv8` to `5.17.1`.
 
-### `@backstage/plugin-search` (1.4.6 → [1.4.10](../changelogs/@backstage/plugin-search.md#1410))
+### `@backstage/plugin-search` (1.4.6 → [1.4.10](../../changelogs/@backstage/plugin-search.md#1410))
 
 #### 1.4.10
 
@@ -6317,7 +6317,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`f0464b0`](https://github.com/backstage/backstage/commit/f0464b0): Removes ADR from the default set of search filters
 - [`cd872b9`](https://github.com/backstage/backstage/commit/cd872b9): Added ESLint rule `no-top-level-material-ui-4-imports` in the `search` plugin to migrate the Material UI imports.
 
-### `@backstage/plugin-search-backend` (1.5.3 → [1.5.7](../changelogs/@backstage/plugin-search-backend.md#157))
+### `@backstage/plugin-search-backend` (1.5.3 → [1.5.7](../../changelogs/@backstage/plugin-search-backend.md#157))
 
 #### 1.5.7
 
@@ -6333,7 +6333,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`2bd1410`](https://github.com/backstage/backstage/commit/2bd1410): Removed unused dependencies
 - [`744c0cb`](https://github.com/backstage/backstage/commit/744c0cb): Update the router to use the new `auth` services, it now accepts an optional discovery service option to get credentials for the permission service.
 
-### `@backstage/plugin-search-backend-node` (1.2.17 → [1.2.21](../changelogs/@backstage/plugin-search-backend-node.md#1221))
+### `@backstage/plugin-search-backend-node` (1.2.17 → [1.2.21](../../changelogs/@backstage/plugin-search-backend-node.md#1221))
 
 #### 1.2.21
 
@@ -6349,7 +6349,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
   Updated dependency `@types/uuid` to `^9.0.0`.
 - [`744c0cb`](https://github.com/backstage/backstage/commit/744c0cb): Exports `QueryTranslator`, `QueryRequestOptions` and `SearchEngine` types. These new types were extracted from the `@backstage/plugin-search-common` package and the `token` property was deprecated in favor of the a new credentials one.
 
-### `@backstage/plugin-search-common` (1.2.10 → [1.2.11](../changelogs/@backstage/plugin-search-common.md#1211))
+### `@backstage/plugin-search-common` (1.2.10 → [1.2.11](../../changelogs/@backstage/plugin-search-common.md#1211))
 
 #### 1.2.11
 
@@ -6357,7 +6357,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`744c0cb`](https://github.com/backstage/backstage/commit/744c0cb): Deprecate `QueryTranslator`, `QueryRequestOptions` and `SearchEngine` in favor of the types exported from `@backstage/plugin-search-backend-node`.
 
-### `@backstage/plugin-search-react` (1.7.6 → [1.7.10](../changelogs/@backstage/plugin-search-react.md#1710))
+### `@backstage/plugin-search-react` (1.7.6 → [1.7.10](../../changelogs/@backstage/plugin-search-react.md#1710))
 
 #### 1.7.10
 
@@ -6379,7 +6379,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`e8f026a`](https://github.com/backstage/backstage/commit/e8f026a): Use ESM exports of react-use library
 
-### `@backstage/plugin-techdocs` (1.10.0 → [1.10.4](../changelogs/@backstage/plugin-techdocs.md#1104))
+### `@backstage/plugin-techdocs` (1.10.0 → [1.10.4](../../changelogs/@backstage/plugin-techdocs.md#1104))
 
 #### 1.10.4
 
@@ -6409,7 +6409,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`62bcaf8`](https://github.com/backstage/backstage/commit/62bcaf8): Use the new generic refresh user cookie provider.
 - [`28f27f0`](https://github.com/backstage/backstage/commit/28f27f0): Added ESLint rule `no-top-level-material-ui-4-imports` to aid with the migration to Material UI v5.
 
-### `@backstage/plugin-techdocs-addons-test-utils` (1.0.27 → [1.0.31](../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#1031))
+### `@backstage/plugin-techdocs-addons-test-utils` (1.0.27 → [1.0.31](../../changelogs/@backstage/plugin-techdocs-addons-test-utils.md#1031))
 
 #### 1.0.31
 
@@ -6425,7 +6425,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`3f14e9f`](https://github.com/backstage/backstage/commit/3f14e9f): Mock the new issue user cookie api method.
 - [`62bcaf8`](https://github.com/backstage/backstage/commit/62bcaf8): Use the new generic refresh user cookie provider.
 
-### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.5 → [1.1.9](../changelogs/@backstage/plugin-techdocs-module-addons-contrib.md#119))
+### `@backstage/plugin-techdocs-module-addons-contrib` (1.1.5 → [1.1.9](../../changelogs/@backstage/plugin-techdocs-module-addons-contrib.md#119))
 
 #### 1.1.9
 
@@ -6434,7 +6434,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 - [`cb1e3b0`](https://github.com/backstage/backstage/commit/cb1e3b0): Updated dependency `@testing-library/dom` to `^10.0.0`.
 
-### `@backstage/test-utils` (1.5.0 → [1.5.4](../changelogs/@backstage/test-utils.md#154))
+### `@backstage/test-utils` (1.5.0 → [1.5.4](../../changelogs/@backstage/test-utils.md#154))
 
 #### 1.5.4
 
@@ -6442,7 +6442,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 
-### `@backstage/version-bridge` (1.0.7 → [1.0.8](../changelogs/@backstage/version-bridge.md#108))
+### `@backstage/version-bridge` (1.0.7 → [1.0.8](../../changelogs/@backstage/version-bridge.md#108))
 
 #### 1.0.8
 
@@ -6450,7 +6450,7 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 - [`abfbcfc`](https://github.com/backstage/backstage/commit/abfbcfc): Updated dependency `@testing-library/react` to `^15.0.0`.
 
-### `@techdocs/cli` (1.8.5 → [1.8.10](../changelogs/@techdocs/cli.md#1810))
+### `@techdocs/cli` (1.8.5 → [1.8.10](../../changelogs/@techdocs/cli.md#1810))
 
 #### 1.8.8
 
@@ -6466,18 +6466,18 @@ Changes between Backstage 1.23.4 (RHDH 1.1) and Backstage 1.26.5 (RHDH 1.2) — 
 
 ## Excluded dependency updates
 
-- `@backstage/catalog-model` (1.4.4 → [1.4.5](../changelogs/@backstage/catalog-model.md#145))
-- `@backstage/plugin-app-node` (0.1.13 → [0.1.17](../changelogs/@backstage/plugin-app-node.md#0117))
-- `@backstage/plugin-app-visualizer` (0.1.1 → [0.1.5](../changelogs/@backstage/plugin-app-visualizer.md#015))
-- `@backstage/plugin-auth-backend-module-github-provider` (0.1.10 → [0.1.14](../changelogs/@backstage/plugin-auth-backend-module-github-provider.md#0114))
-- `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.10 → [0.1.14](../changelogs/@backstage/plugin-auth-backend-module-gitlab-provider.md#0114))
-- `@backstage/plugin-auth-backend-module-oauth2-provider` (0.1.10 → [0.1.14](../changelogs/@backstage/plugin-auth-backend-module-oauth2-provider.md#0114))
-- `@backstage/plugin-auth-backend-module-okta-provider` (0.0.6 → [0.0.10](../changelogs/@backstage/plugin-auth-backend-module-okta-provider.md#0010))
-- `@backstage/plugin-bitbucket-cloud-common` (0.2.16 → [0.2.18](../changelogs/@backstage/plugin-bitbucket-cloud-common.md#0218))
-- `@backstage/plugin-catalog-backend-module-openapi` (0.1.30 → [0.1.35](../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#0135))
-- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.10 → [0.1.15](../changelogs/@backstage/plugin-catalog-backend-module-scaffolder-entity-model.md#0115))
-- `@backstage/plugin-catalog-common` (1.0.21 → [1.0.22](../changelogs/@backstage/plugin-catalog-common.md#1022))
-- `@backstage/plugin-devtools-common` (0.1.8 → [0.1.9](../changelogs/@backstage/plugin-devtools-common.md#019))
-- `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.10 → [0.1.14](../changelogs/@backstage/plugin-permission-backend-module-allow-all-policy.md#0114))
-- `@backstage/plugin-scaffolder-common` (1.5.0 → [1.5.1](../changelogs/@backstage/plugin-scaffolder-common.md#151))
-- `@backstage/plugin-user-settings-backend` (0.2.12 → [0.2.16](../changelogs/@backstage/plugin-user-settings-backend.md#0216))
+- `@backstage/catalog-model` (1.4.4 → [1.4.5](../../changelogs/@backstage/catalog-model.md#145))
+- `@backstage/plugin-app-node` (0.1.13 → [0.1.17](../../changelogs/@backstage/plugin-app-node.md#0117))
+- `@backstage/plugin-app-visualizer` (0.1.1 → [0.1.5](../../changelogs/@backstage/plugin-app-visualizer.md#015))
+- `@backstage/plugin-auth-backend-module-github-provider` (0.1.10 → [0.1.14](../../changelogs/@backstage/plugin-auth-backend-module-github-provider.md#0114))
+- `@backstage/plugin-auth-backend-module-gitlab-provider` (0.1.10 → [0.1.14](../../changelogs/@backstage/plugin-auth-backend-module-gitlab-provider.md#0114))
+- `@backstage/plugin-auth-backend-module-oauth2-provider` (0.1.10 → [0.1.14](../../changelogs/@backstage/plugin-auth-backend-module-oauth2-provider.md#0114))
+- `@backstage/plugin-auth-backend-module-okta-provider` (0.0.6 → [0.0.10](../../changelogs/@backstage/plugin-auth-backend-module-okta-provider.md#0010))
+- `@backstage/plugin-bitbucket-cloud-common` (0.2.16 → [0.2.18](../../changelogs/@backstage/plugin-bitbucket-cloud-common.md#0218))
+- `@backstage/plugin-catalog-backend-module-openapi` (0.1.30 → [0.1.35](../../changelogs/@backstage/plugin-catalog-backend-module-openapi.md#0135))
+- `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` (0.1.10 → [0.1.15](../../changelogs/@backstage/plugin-catalog-backend-module-scaffolder-entity-model.md#0115))
+- `@backstage/plugin-catalog-common` (1.0.21 → [1.0.22](../../changelogs/@backstage/plugin-catalog-common.md#1022))
+- `@backstage/plugin-devtools-common` (0.1.8 → [0.1.9](../../changelogs/@backstage/plugin-devtools-common.md#019))
+- `@backstage/plugin-permission-backend-module-allow-all-policy` (0.1.10 → [0.1.14](../../changelogs/@backstage/plugin-permission-backend-module-allow-all-policy.md#0114))
+- `@backstage/plugin-scaffolder-common` (1.5.0 → [1.5.1](../../changelogs/@backstage/plugin-scaffolder-common.md#151))
+- `@backstage/plugin-user-settings-backend` (0.2.12 → [0.2.16](../../changelogs/@backstage/plugin-user-settings-backend.md#0216))
