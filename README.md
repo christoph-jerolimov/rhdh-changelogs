@@ -8,56 +8,25 @@ A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and o
 
 [`config.yaml`](config.yaml) maps each Red Hat Developer Hub (RHDH) release to the Backstage release it is based on. For every entry there is a root folder named after the RHDH release (e.g. [`1.9/`](1.9), [`1.10/`](1.10)) containing:
 
-- `manifest.json` — the manifest of the mapped Backstage release, copied from `releases/<backstage-version>/`
+- `manifest.json` — the manifest of the mapped Backstage release, copied verbatim from `backstage/versions` (`v1/releases/<backstage-version>/`)
 - `README.md` — diff summary against the Backstage version of the **previous RHDH release** (e.g. `1.9/` compares Backstage 1.42.5 of RHDH 1.8 with Backstage 1.45.3 of RHDH 1.9), highlighting ⚠️ major version bumps, 🆕 added and ❌ removed packages
-- `CHANGELOG.md` — the aggregated package changelogs over the same span, in the format described under [Per-release folders](#per-release-folders)
+- `CHANGELOG.md` — the changelog sections of all packages changed or added over the same span, sliced from [`changelogs/`](changelogs) to the versions after the previous release's Backstage version (exclusive) up to this release's Backstage version (inclusive). `@backstage/*` dependency-update entries are excluded (packages that only had such updates are listed at the end)
 
 New RHDH releases are picked up by adding an entry to `config.yaml`; folders of entries removed from the config are deleted on the next run.
 
-## Package versions
-
-One column per release with the version of every package, ordered `next` (if a next release exists), then newest to oldest release. Minor releases are represented by the latest patch of their minor line. Note: the *all releases* files are large and GitHub may not render the Markdown version — use the last-10 files for browsing.
-
-| Package versions | Markdown | CSV |
-| --- | --- | --- |
-| Last 10 releases | [package-versions-last-10-releases.md](tables/package-versions-last-10-releases.md) | [package-versions-last-10-releases.csv](tables/package-versions-last-10-releases.csv) |
-| Last 10 minor releases | [package-versions-last-10-minor-releases.md](tables/package-versions-last-10-minor-releases.md) | [package-versions-last-10-minor-releases.csv](tables/package-versions-last-10-minor-releases.csv) |
-| All minor releases | [package-versions-all-minor-releases.md](tables/package-versions-all-minor-releases.md) | [package-versions-all-minor-releases.csv](tables/package-versions-all-minor-releases.csv) |
-| All releases | [package-versions-all-releases.md](tables/package-versions-all-releases.md) | [package-versions-all-releases.csv](tables/package-versions-all-releases.csv) |
-
-## Number of changed packages
-
-One row per release (newest to oldest, incl. `next` if it exists), comparing each release with the direct previous one: counts of added, removed, upgraded, and unchanged packages, plus the bumps that need extra attention (major, `0.x` minor, `0.0.x` patch).
-
-| Number of changed packages | Markdown | CSV |
-| --- | --- | --- |
-| All releases | [number-of-changed-packages-all-releases.md](tables/number-of-changed-packages-all-releases.md) | [number-of-changed-packages-all-releases.csv](tables/number-of-changed-packages-all-releases.csv) |
-| All minor releases | [number-of-changed-packages-all-minor-releases.md](tables/number-of-changed-packages-all-minor-releases.md) | [number-of-changed-packages-all-minor-releases.csv](tables/number-of-changed-packages-all-minor-releases.csv) |
-
-## Per-release folders
-
-Each `releases/<version>/` folder contains:
-
-- `manifest.json` — copied verbatim from `backstage/versions` (`v1/releases/<version>/`)
-- `README.md` — generated diff against the previous patch release (if any) and the previous minor release (highest patch of the previous minor line), highlighting ⚠️ major version bumps, 🆕 added and ❌ removed packages
-- `resolutions.json` — the manifest transformed into a package.json-style `{ "resolutions": { "<package>": "<version>" } }` map
-- `CHANGELOG.md` — the changelog sections of all packages changed or added since the direct previous release, sliced from [`changelogs/`](changelogs) to the versions after the previous release (exclusive) up to this release (inclusive). `@backstage/*` dependency-update entries are excluded by default (packages that only had such updates are listed at the end); can be built for any release pair with `npm run changelog -- <from> <to> [--dep-updates include|exclude-backstage|exclude-all]`
-
-`0.x` and prerelease versions are ignored. `releases/next/` exists only while `backstage/versions` has a `-next` release that is newer than the latest stable release; it is removed otherwise.
-
 ## Changelogs
 
-The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every package that ever appeared in a release manifest**, stored as `changelogs/<scope>/<name>.md` (e.g. `changelogs/@backstage/plugin-scaffolder.md`). They are refreshed on every workflow run:
+The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every package that appears in a mapped Backstage release manifest**, stored as `changelogs/<scope>/<name>.md` (e.g. `changelogs/@backstage/plugin-scaffolder.md`). They are refreshed on every workflow run:
 
 - Packages still present on `backstage/backstage` `main` (in `packages/*` and `plugins/*`) are copied from there on every run.
 - `@backstage-community/*` packages are copied from all workspaces of `backstage/community-plugins` (in `workspaces/*/plugins/*` and `workspaces/*/packages/*`) on every run.
 - RHDH plugin packages (e.g. `@red-hat-developer-hub/*`) are copied from all workspaces of `redhat-developer/rhdh-plugins` (same `workspaces/*/plugins/*` and `workspaces/*/packages/*` layout) on every run.
-- Packages that were removed from `main` (e.g. plugins moved to community repos) are fetched once from the release tag of the newest release that still listed them; existing files are never re-fetched.
-- The job fails if any package listed in any release manifest ends up without a changelog.
+- Packages that were removed from `main` (e.g. plugins moved to community repos) are fetched once from the release tag of the newest mapped release that still listed them; existing files are never re-fetched.
+- The job fails if any package listed in any mapped release manifest ends up without a changelog.
 
 ## Package descriptions
 
-The same workflow also reads each package's `package.json` and generates tables of every package that ever appeared in a release manifest with its Backstage role, description, and — for deprecated packages (no longer on `main`) — the last release that included it.
+The same workflow also reads each package's `package.json` and generates tables of every package that appears in a mapped Backstage release manifest with its Backstage role, description, and — for deprecated packages (no longer on `main`) — the last mapped release that included it.
 
 | Package descriptions | Markdown | CSV |
 | --- | --- | --- |

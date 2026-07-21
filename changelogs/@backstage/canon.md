@@ -2,7 +2,7 @@
 
 > [!WARNING]
 > **DEPRECATED**: This package is no longer part of the Backstage `main` branch.
-> The last Backstage release that included it was **1.41.2**.
+> The last Backstage release that included it was **1.39.1**.
 
 ## 0.6.0
 

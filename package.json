@@ -4,16 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "copy": "tsx scripts/copy-releases.ts",
-    "readmes": "tsx scripts/generate-readmes.ts",
-    "resolutions": "tsx scripts/generate-resolutions.ts",
-    "tables": "tsx scripts/generate-tables.ts",
-    "changes": "tsx scripts/generate-changes.ts",
-    "changelog": "tsx scripts/build-changelog.ts",
-    "changelogs": "tsx scripts/generate-changelogs.ts",
     "rhdh": "tsx scripts/generate-rhdh-releases.ts",
     "metadata": "tsx scripts/fetch-metadata.ts",
-    "update": "npm run copy && npm run metadata && npm run readmes && npm run resolutions && npm run tables && npm run changes && npm run changelogs && npm run rhdh",
+    "update": "npm run metadata && npm run rhdh",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

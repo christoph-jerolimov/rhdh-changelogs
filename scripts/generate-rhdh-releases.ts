@@ -1,15 +1,23 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { buildChangelog } from "./changelog-lib.ts";
-import { diffManifests, listRhdhReleases, manifestToMap, readManifest, releasesDir, repoRoot, writeFileIfChanged } from "./lib.ts";
+import {
+  diffManifests,
+  listRhdhReleases,
+  type Manifest,
+  manifestToMap,
+  readUpstreamManifest,
+  readUpstreamManifestRaw,
+  repoRoot,
+  writeFileIfChanged,
+} from "./lib.ts";
 import { renderComparisonSection } from "./readme-lib.ts";
 
 const rhdhReleases = listRhdhReleases();
 
-for (const { rhdh, backstage } of rhdhReleases) {
-  if (!fs.existsSync(path.join(releasesDir, backstage, "manifest.json"))) {
-    throw new Error(`Backstage release ${backstage} (RHDH ${rhdh}) not found under releases/`);
-  }
+const manifests = new Map<string, Manifest>();
+for (const { backstage } of rhdhReleases) {
+  manifests.set(backstage, readUpstreamManifest(backstage));
 }
 
 // Each RHDH release gets a root folder named after it (e.g. 1.9/) with the
@@ -19,10 +27,7 @@ for (const [index, { rhdh, backstage }] of rhdhReleases.entries()) {
   const previous = index > 0 ? rhdhReleases[index - 1]! : undefined;
   const targetDir = path.join(repoRoot, rhdh);
 
-  writeFileIfChanged(
-    path.join(targetDir, "manifest.json"),
-    fs.readFileSync(path.join(releasesDir, backstage, "manifest.json"), "utf8"),
-  );
+  writeFileIfChanged(path.join(targetDir, "manifest.json"), readUpstreamManifestRaw(backstage));
 
   const readme: string[] = [];
   readme.push(`# RHDH Release ${rhdh} (Backstage ${backstage})`, "");
@@ -33,7 +38,7 @@ for (const [index, { rhdh, backstage }] of rhdhReleases.entries()) {
       renderComparisonSection(
         { version: previous.backstage, label: `RHDH ${previous.rhdh}` },
         backstage,
-        diffManifests(manifestToMap(readManifest(previous.backstage)), manifestToMap(readManifest(backstage))),
+        diffManifests(manifestToMap(manifests.get(previous.backstage)!), manifestToMap(manifests.get(backstage)!)),
       ),
     );
   }
@@ -43,11 +48,10 @@ for (const [index, { rhdh, backstage }] of rhdhReleases.entries()) {
     previous === undefined
       ? `# RHDH Release ${rhdh} changelog\n\n` +
         "This is the first RHDH release — there is no previous release to compare against.\n"
-      : buildChangelog(previous.backstage, backstage, "exclude-backstage", {
+      : buildChangelog(manifests.get(previous.backstage)!, manifests.get(backstage)!, "exclude-backstage", {
           title: `RHDH Release ${rhdh} changelog`,
           fromLabel: `Backstage ${previous.backstage} (RHDH ${previous.rhdh})`,
           toLabel: `Backstage ${backstage} (RHDH ${rhdh})`,
-          changelogsPath: "../changelogs",
         });
   writeFileIfChanged(path.join(targetDir, "CHANGELOG.md"), changelog);
 }
