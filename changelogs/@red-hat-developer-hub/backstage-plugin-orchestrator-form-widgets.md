@@ -1,0 +1,566 @@
+# @red-hat-developer-hub/backstage-plugin-orchestrator-form-widgets
+
+## 1.11.3
+
+### Patch Changes
+
+- eade824: update the header to be consistent with the code base.
+- ea8563b: Enable backward navigation in multi-step workflow forms by clicking completed stepper steps, while keeping the current and future steps display-only.
+- Updated dependencies [eade824]
+- Updated dependencies [ea8563b]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.7.3
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.9.3
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.8.3
+
+## 1.11.2
+
+### Patch Changes
+
+- 19f7643: Clear async validation errors when the user edits a workflow form field after clicking Next. Only the changed field's error is removed; other field errors remain until that field is edited or the step is validated again. Also handle empty or non-JSON validation responses without breaking the form.
+- Updated dependencies [19f7643]
+- Updated dependencies [b2307f3]
+- Updated dependencies [e1a86f0]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.9.2
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.7.2
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.8.2
+
+## 1.11.1
+
+### Patch Changes
+
+- Updated dependencies [43e0722]
+- Updated dependencies [7c2f5d2]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.7.1
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.8.1
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.9.1
+
+## 1.11.0
+
+### Minor Changes
+
+- bd80b86: Backstage version bump to v1.51.1
+
+### Patch Changes
+
+- 3f96765: Replace Material UI v4 imports with MUI v5 and scope JSS class names to prevent style collisions.
+- 611bd81: detect GitHub SAML SSO session expiry and prompt users to re-authorize
+- Updated dependencies [03ef10a]
+- Updated dependencies [a195695]
+- Updated dependencies [3f96765]
+- Updated dependencies [611bd81]
+- Updated dependencies [bbcdc56]
+- Updated dependencies [bd80b86]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.9.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.8.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.7.0
+
+## 1.10.8
+
+### Patch Changes
+
+- 06ac2d0: detect GitHub SAML SSO session expiry and prompt users to re-authorize
+- Updated dependencies [06ac2d0]
+- Updated dependencies [06ac2d0]
+- Updated dependencies [06ac2d0]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.8.5
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.7.4
+
+## 1.10.7
+
+### Patch Changes
+
+- a034e0e: Make fetch-driven form widgets resilient to invalid or partial JSONata and dynamic selector input so the UI no longer crashes while users edit fields.
+
+## 1.10.6
+
+### Patch Changes
+
+- acfcb4c: Evaluate `${{…}}` placeholders in `fetch:response:value`, `fetch:response:autocomplete`, `fetch:response:label`, and `fetch:response:value` (dropdown) before applying JSONata to the fetch response, consistent with other fetch template fields. Align `ActiveDropdown` and `ActiveTextInput` autocomplete with `ActiveMultiSelect` by treating undefined selector results as empty string arrays when building options, so invalid paths while editing do not surface as hard errors.
+
+## 1.10.5
+
+### Patch Changes
+
+- f47b22f: Replace values in ActiveMultiSelect when clearOnRetrigger is enabled
+- 646c581: Fix type errors in orchestrator form widgets
+
+## 1.10.4
+
+### Patch Changes
+
+- 5148408: Migrated to Jest 30 as required by @backstage/cli 0.36.0.
+- Updated dependencies [5148408]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.4
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.7.3
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.8.4
+
+## 1.10.3
+
+### Patch Changes
+
+- Updated dependencies [dfd28b3]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.3
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.7.2
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.8.3
+
+## 1.10.2
+
+### Patch Changes
+
+- 4aec634: Fix multi-step workflow forms dropping or misplacing async validation errors and deep nested field paths.
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-widgets: Fix safeSet deep paths and sequential async validation in getExtraErrors.
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react: Wrap extraErrors with the active step key so RJSF matches the root schema.
+
+- Updated dependencies [652fac0]
+- Updated dependencies [4aec634]
+- Updated dependencies [d85bf56]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.8.2
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.2
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.7.1
+
+## 1.10.1
+
+### Patch Changes
+
+- f96e4f2: fix: updating lodash for cve fixes
+- Updated dependencies [f96e4f2]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.8.1
+
+## 1.10.0
+
+### Minor Changes
+
+- f45fe5a: Add custom review page API support
+
+  **Custom Review Page API:**
+  - Add `ReviewComponentProps` type to define props for custom review components
+  - Add optional `getReviewComponent()` method to `OrchestratorFormApi` interface
+  - Update `OrchestratorForm` to support custom review page components from plugins
+  - Add `CustomReviewPage` example component in orchestrator-form-widgets plugin (aligned with `ReviewStep`: `generateReviewTableData`, hidden-fields toggle, `NestedReviewTable`)
+  - Export `generateReviewTableData`, `schemaHasUiHiddenFields`, and `NestedReviewTable` from orchestrator-form-react for custom review implementations
+  - Falls back to default review page when `getReviewComponent()` returns `undefined`
+
+  **Documentation:**
+  - Update `extensibleForm.md` with custom review page implementation guide
+  - Add example showing how to implement and use custom review components
+
+### Patch Changes
+
+- Updated dependencies [f45fe5a]
+- Updated dependencies [16d41c2]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.7.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-react@2.8.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.1
+
+## 1.9.0
+
+### Minor Changes
+
+- 2212e8d: Backstage version bump to v1.49.3
+
+### Patch Changes
+
+- Updated dependencies [665a75c]
+- Updated dependencies [2212e8d]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.6.0
+
+## 1.8.0
+
+### Minor Changes
+
+- 775f8f9: Add NFS support in orchestrator and orchestarator-form-widget plugins
+
+### Patch Changes
+
+- 315239c: Scope SchemaUpdater replacements to the originating step and improve scope resolution.
+- 514b83c: add configurable retry options for widget fetch requests
+- Updated dependencies [5a9d9d8]
+- Updated dependencies [315239c]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.5.3
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.5.3
+
+## 1.7.3
+
+### Patch Changes
+
+- Updated dependencies [309547d]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.5.2
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.5.2
+
+## 1.7.2
+
+### Patch Changes
+
+- d6dff3b: Show ActiveText spinner immediately on retrigger changes to avoid stale text during debounce. Add fetch:clearOnRetrigger to clear widget values when dependencies change.
+
+## 1.7.1
+
+### Patch Changes
+
+- b7f8a3c: Updated dependency `@janus-idp/cli` to `3.7.0`.
+  Updated dependency `@openapitools/openapi-generator-cli` to `2.28.3`.
+  Updated dependency `@red-hat-developer-hub/backstage-plugin-theme` to `^0.12.0`.
+- Updated dependencies [b7f8a3c]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.5.1
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.5.1
+
+## 1.7.0
+
+### Minor Changes
+
+- 3648a62: Backstage version bump to v1.47.3
+
+### Patch Changes
+
+- Updated dependencies [3648a62]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.5.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.5.0
+
+## 1.6.3
+
+### Patch Changes
+
+- 546ccb2: Show ActiveText spinner immediately on retrigger changes to avoid stale text during debounce. Add fetch:clearOnRetrigger to clear widget values when dependencies change.
+- Updated dependencies [546ccb2]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.4.2
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.4.4
+
+## 1.6.2
+
+### Patch Changes
+
+- db243d1: Allow ActiveDropdown fetch selectors to reference current form data via the combined response/current context.
+- bb02bdb: Allow ActiveDropdown fetch:response:default to be a JSONata selector evaluated against the fetch response.
+- 8fabecd: Clarify ActiveText retrigger loading by showing a spinner while dependencies resolve.
+- 2adc3d8: Add fetch:error:silent support to suppress fetch errors in widgets.
+- e6987f1: Fixed ActiveMultiSelect Enter key behavior when `ui:allowNewItems` is enabled. Pressing Enter now adds a new chip instead of submitting the form to the next step.
+- 6877513: Evaluate JSONata expressions in fetch/validate request bodies on the client before sending.
+- 490d0a3: Add fetch:skipInitialValue to keep fields empty until user input and treat empty-string defaults as valid.
+- Updated dependencies [858963d]
+- Updated dependencies [9c17c36]
+- Updated dependencies [aaac497]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.4.1
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.4.3
+
+## 1.6.1
+
+### Patch Changes
+
+- c51d980: Fix ActiveTextInput not clearing field when API returns empty string
+- Updated dependencies [3e2c3f7]
+- Updated dependencies [f1b43c5]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.4.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.4.2
+
+## 1.6.0
+
+### Minor Changes
+
+- c35d07c: Add fetch:error:ignoreUnready and fetch:response:default options for form widgets
+
+  **Feature 1: fetch:error:ignoreUnready**
+
+  When using widgets with `fetch:retrigger` dependencies, the initial fetch often fails because dependent fields don't have values yet. This results in HTTP errors being displayed during initial load.
+  - Add `fetch:error:ignoreUnready` option to suppress fetch error display until all `fetch:retrigger` dependencies have non-empty values
+  - Errors are only suppressed when dependencies are empty; once filled, real errors are shown
+  - Supported by: ActiveTextInput, ActiveDropdown, ActiveMultiSelect, SchemaUpdater
+
+  **Feature 2: fetch:response:default**
+
+  Widgets previously required `fetch:response:value` for defaults, meaning fetch must succeed. This adds static fallback defaults.
+  - Add `fetch:response:default` option for static default values applied immediately on form initialization
+  - Defaults are applied at form initialization level in `OrchestratorForm`, ensuring controlled components work correctly
+  - Static defaults act as fallback when fetch fails, hasn't completed, or returns empty
+  - Fetched values only override defaults when non-empty
+  - Supported by: ActiveTextInput (string), ActiveDropdown (string), ActiveMultiSelect (string[])
+
+  **Usage Examples:**
+
+  ```json
+  {
+    "action": {
+      "ui:widget": "ActiveTextInput",
+      "ui:props": {
+        "fetch:url": "...",
+        "fetch:retrigger": ["current.appName"],
+        "fetch:error:ignoreUnready": true,
+        "fetch:response:default": "create"
+      }
+    }
+  }
+  ```
+
+- 5c9f044: Add object type support in ui:props for fetch:response:\* properties (RHIDP-11054)
+
+  **Type System Enhancement:**
+  - Updated `UiProps` type to accept `JsonValue` instead of `string` for `fetch:response:*` properties
+  - Enables using objects, arrays, and other JSON types in ui:props, not just strings
+  - Maintains full backward compatibility with existing string-based selectors
+
+  **Runtime Safety:**
+  - Added runtime validation in `useTemplateUnitEvaluator` to ensure selectors are strings when evaluated as JSONata expressions
+  - Provides clear error messages when invalid types are used
+
+  **Documentation:**
+  - Updated `orchestratorFormWidgets.md` to document object type support
+  - Added examples showing flexible ui:props configurations
+
+  This change allows users to reference object attributes more easily in ui:props while maintaining type safety and backward compatibility.
+
+### Patch Changes
+
+- 8524940: Fix TypeScript compilation errors in orchestrator plugins
+- Updated dependencies [8524940]
+- Updated dependencies [d91ef65]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.3.1
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.4.1
+
+## 1.5.0
+
+### Minor Changes
+
+- 29dfed0: Backstage version bump to v1.45.2
+
+### Patch Changes
+
+- 40b80fe: Change "lifecycle" to active in catalog-info.yaml
+- 40b80fe: Remove "support", "lifecycle" keywords and "supported-versions" in package.json. Change "lifecycle" to active in catalog.yaml
+- Updated dependencies [a1671ab]
+- Updated dependencies [40b80fe]
+- Updated dependencies [782c33f]
+- Updated dependencies [f5f4973]
+- Updated dependencies [40b80fe]
+- Updated dependencies [34a36cb]
+- Updated dependencies [29dfed0]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.3.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.4.0
+
+## 1.4.1
+
+### Patch Changes
+
+- 40e4267: Fixing endless onChange() loop and turning "ui:allowNewItems" from string to boolean type.
+
+## 1.4.0
+
+### Minor Changes
+
+- fba1136: Backstage version bump to v1.44.1
+
+### Patch Changes
+
+- Updated dependencies [fba1136]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.2.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.3.0
+
+## 1.3.0
+
+### Minor Changes
+
+- 149804f: Disable Next button when active widgets are fetching and processing data
+  - Add isFetching state tracking to StepperContext using a counter to monitor multiple concurrent async operations
+  - Update OrchestratorFormToolbar to disable Next button when isFetching is true (in addition to existing isValidating check)
+  - Add handleFetchStarted and handleFetchEnded callbacks to OrchestratorFormContextProps to allow widgets to report their loading status
+  - Update useFetchAndEvaluate to track complete loading state (fetch + template evaluation) and notify context
+  - Create useProcessingState custom hook to reduce code duplication across widgets, providing a reusable pattern for tracking both fetch and processing states
+  - Refactor SchemaUpdater, ActiveTextInput, ActiveDropdown, and ActiveMultiSelect to use useProcessingState hook
+  - Track the complete loading lifecycle: fetch → process → ready, ensuring Next button is disabled until all async work completes
+  - Prevents race conditions where Next button becomes enabled before widgets finish processing data
+
+### Patch Changes
+
+- Updated dependencies [149804f]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.2.0
+
+## 1.2.0
+
+### Minor Changes
+
+- e86bce0: Add markdown rendering support to ActiveText widget
+  - Replace Typography component with MarkdownContent from @backstage/core-components
+  - Support both static markdown content and dynamic template variables in markdown
+  - Markdown features include headers, bold/italic text, lists, links, blockquotes, code blocks, and tables
+  - Remove deprecated ui:variant prop as markdown provides its own styling through syntax
+  - Update documentation to reflect markdown support and provide usage examples
+
+### Patch Changes
+
+- 4fa1356: In the active widgets, the default value received from an endpoint now replaces the actual value, unless the user has modified it.
+
+## 1.1.0
+
+### Minor Changes
+
+- de5ced6: Backstage version bump to v1.42.5
+
+### Patch Changes
+
+- Updated dependencies [de5ced6]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.1.0
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.1.0
+
+## 1.0.8
+
+### Patch Changes
+
+- e50b2b6: feat(orchestrator): The ActiveMultiSelect widget supports fetch:response:value selector for defaults
+- fad61b7: ActiveTextInput ignores default value if it is null
+- c2a1160: Add readonly option to the active widgets
+
+## 1.0.7
+
+### Patch Changes
+
+- f370925: Fix ActiveDropdown for long lists.
+
+## 1.0.6
+
+### Patch Changes
+
+- Updated dependencies [f0a427c]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.6
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.0.6
+
+## 1.0.5
+
+### Patch Changes
+
+- Updated dependencies [c79ffa7]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.5
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.0.5
+
+## 1.0.4
+
+### Patch Changes
+
+- 8c95d55: Align with RHDH @backstage/core-components version and add table translation
+- Updated dependencies [2fbdb53]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.4
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.0.4
+
+## 1.0.3
+
+### Patch Changes
+
+- fac94ef: fix(orchestrator): on retrigger workflow, tokens requested by the AuthRequester are forwarded
+- Updated dependencies [fac94ef]
+- Updated dependencies [16439ad]
+- Updated dependencies [4fd43f1]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.3
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.0.3
+
+## 1.0.2
+
+### Patch Changes
+
+- 8d89f18: Remove default React imports.
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.0.2
+
+## 1.0.1
+
+### Patch Changes
+
+- @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.0.1
+
+## 1.0.0
+
+### Major Changes
+
+- 3fce49c: Update dependencies to macth Backstage 1.39.1
+
+### Patch Changes
+
+- f897fea: If a fetch/validate body/headers field resolves to empty or undefined value, it is skipped from the HTTP request.
+- Updated dependencies [3fce49c]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@2.0.0
+
+## 0.2.10
+
+### Patch Changes
+
+- @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@1.6.6
+
+## 0.2.9
+
+### Patch Changes
+
+- 7ce3fe0: Updated dependency `@mui/styles` to `5.18.0`.
+- Updated dependencies [a79f849]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@1.6.5
+
+## 0.2.8
+
+### Patch Changes
+
+- dd72e99: ActiveMultiSelect automatically builds an array from simple strings returned by jsonata selector.
+
+## 0.2.7
+
+### Patch Changes
+
+- @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@1.6.4
+
+## 0.2.6
+
+### Patch Changes
+
+- @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@1.6.3
+
+## 0.2.5
+
+### Patch Changes
+
+- @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@1.6.2
+
+## 0.2.4
+
+### Patch Changes
+
+- a034e5b: Pass bools and numbers as primitive values (not converted to strings).
+- f5e85c5: Add support for selectors in SchemaUpdater. A complex response can be narrowed by the selector to produce the object structure as desired by the SchemaUpdater.
+- 488852f: Fixing alignment of the ActiveMultiSelect widget's chips.
+- b9be64b: Added "fetch:response:mandatory" selector for the ActiveMultiSelect widget.
+- 112d44f: Adding suuport for template arrays for the Orchestrator widgets.
+- 891844f: Template units can be evaluated to primitive values, complex objects and arrays.
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@1.6.1
+
+## 0.2.3
+
+### Patch Changes
+
+- Updated dependencies [53f3ffb]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@1.6.0
+
+## 0.2.2
+
+### Patch Changes
+
+- 72a99a5: Updated dependency `@mui/styles` to `5.17.1`.
+
+## 0.2.1
+
+### Patch Changes
+
+- 3b571b3: Updated dependency `@janus-idp/cli` to `3.6.1`.
+
+## 0.2.0
+
+### Minor Changes
+
+- 78e3ee6: Added backstage-plugin-orchestrator-form-widgets plugin hosting default set of RJSF form widgets provided along the Orchestrator. Includes the SchemaUpdater widget capable of downloading JSON schema chunks and modifying the RJSF form on the fly.
+
+### Patch Changes
+
+- 3370321: Setting up dev environment for the Orchestrator form widgets (dev-only HTTP server)
+- a9e5f32: Updated dependency `@openapitools/openapi-generator-cli` to `2.20.0`.
+  Updated dependency `prettier` to `3.5.3`.
+  Updated dependency `@redhat-developer/red-hat-developer-hub-theme` to `0.5.1`.
+  Updated dependency `@red-hat-developer-hub/backstage-plugin-theme` to `^0.6.0`.
+  Updated dependency `@janus-idp/cli` to `3.5.0`.
+- 103f0f4: Adding ActiveTextInput form widget
+- Updated dependencies [78e3ee6]
+- Updated dependencies [2f33284]
+- Updated dependencies [a9e5f32]
+- Updated dependencies [fc9ce7c]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-form-api@1.5.0

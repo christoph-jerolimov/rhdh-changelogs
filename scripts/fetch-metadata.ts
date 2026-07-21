@@ -36,6 +36,14 @@ if (!fs.existsSync(path.join(communityDir, ".git"))) {
   );
 }
 
+const rhdhPluginsDir = path.resolve(process.env.RHDH_PLUGINS_DIR ?? path.join(repoRoot, ".upstream", "rhdh-plugins"));
+if (!fs.existsSync(path.join(rhdhPluginsDir, ".git"))) {
+  throw new Error(
+    `RHDH plugins clone not found at ${rhdhPluginsDir}. ` +
+      `Clone https://github.com/redhat-developer/rhdh-plugins there or set RHDH_PLUGINS_DIR.`,
+  );
+}
+
 function git(args: string[]): string {
   return execFileSync("git", ["-C", backstageDir, ...args], {
     encoding: "utf8",
@@ -88,25 +96,30 @@ for (const group of ["packages", "plugins"]) {
 }
 console.log(`Copied ${fromMain} changelogs from the main branch`);
 
-// Community plugins live in per-workspace monorepos: workspaces/<ws>/{plugins,packages}/<pkg>.
-let fromCommunity = 0;
-const workspacesDir = path.join(communityDir, "workspaces");
-for (const workspace of fs.existsSync(workspacesDir) ? fs.readdirSync(workspacesDir).sort() : []) {
-  for (const group of ["plugins", "packages"]) {
-    const groupDir = path.join(workspacesDir, workspace, group);
-    if (!fs.existsSync(groupDir)) continue;
-    for (const entry of fs.readdirSync(groupDir).sort()) {
-      const packageJson = path.join(groupDir, entry, "package.json");
-      const changelog = path.join(groupDir, entry, "CHANGELOG.md");
-      if (!fs.existsSync(packageJson) || !fs.existsSync(changelog)) continue;
-      const pkg = JSON.parse(fs.readFileSync(packageJson, "utf8")) as PackageJson;
-      if (pkg.name === undefined || pkg.private === true) continue;
-      writeChangelog(pkg.name, fs.readFileSync(changelog, "utf8"));
-      fromCommunity += 1;
+// Community plugins and RHDH plugins live in per-workspace monorepos:
+// workspaces/<ws>/{plugins,packages}/<pkg>.
+function copyWorkspaceChangelogs(repoDir: string): number {
+  let copied = 0;
+  const workspacesDir = path.join(repoDir, "workspaces");
+  for (const workspace of fs.existsSync(workspacesDir) ? fs.readdirSync(workspacesDir).sort() : []) {
+    for (const group of ["plugins", "packages"]) {
+      const groupDir = path.join(workspacesDir, workspace, group);
+      if (!fs.existsSync(groupDir)) continue;
+      for (const entry of fs.readdirSync(groupDir).sort()) {
+        const packageJson = path.join(groupDir, entry, "package.json");
+        const changelog = path.join(groupDir, entry, "CHANGELOG.md");
+        if (!fs.existsSync(packageJson) || !fs.existsSync(changelog)) continue;
+        const pkg = JSON.parse(fs.readFileSync(packageJson, "utf8")) as PackageJson;
+        if (pkg.name === undefined || pkg.private === true) continue;
+        writeChangelog(pkg.name, fs.readFileSync(changelog, "utf8"));
+        copied += 1;
+      }
     }
   }
+  return copied;
 }
-console.log(`Copied ${fromCommunity} changelogs from community-plugins workspaces`);
+console.log(`Copied ${copyWorkspaceChangelogs(communityDir)} changelogs from community-plugins workspaces`);
+console.log(`Copied ${copyWorkspaceChangelogs(rhdhPluginsDir)} changelogs from rhdh-plugins workspaces`);
 
 // Phase 2: packages from the release manifests that are gone from main are
 // picked up from the release tag of the newest release that still listed them.

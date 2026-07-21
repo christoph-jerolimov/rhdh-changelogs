@@ -1,0 +1,398 @@
+# @red-hat-developer-hub/backstage-plugin-orchestrator-form-api
+
+## 2.8.3
+
+### Patch Changes
+
+- Updated dependencies [eade824]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.7.3
+
+## 2.8.2
+
+### Patch Changes
+
+- Updated dependencies [b2307f3]
+- Updated dependencies [e1a86f0]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.7.2
+
+## 2.8.1
+
+### Patch Changes
+
+- 7c2f5d2: Updated dependency `prettier` to `3.8.4`.
+- Updated dependencies [43e0722]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.7.1
+
+## 2.8.0
+
+### Minor Changes
+
+- bd80b86: Backstage version bump to v1.51.1
+
+### Patch Changes
+
+- 611bd81: detect GitHub SAML SSO session expiry and prompt users to re-authorize
+- Updated dependencies [bbcdc56]
+- Updated dependencies [bd80b86]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.7.0
+
+## 2.7.4
+
+### Patch Changes
+
+- 06ac2d0: detect GitHub SAML SSO session expiry and prompt users to re-authorize
+
+## 2.7.3
+
+### Patch Changes
+
+- 5148408: Migrated to Jest 30 as required by @backstage/cli 0.36.0.
+- Updated dependencies [5148408]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.4
+
+## 2.7.2
+
+### Patch Changes
+
+- Updated dependencies [dfd28b3]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.3
+
+## 2.7.1
+
+### Patch Changes
+
+- Updated dependencies [d85bf56]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.2
+
+## 2.7.0
+
+### Minor Changes
+
+- f45fe5a: Add custom review page API support
+
+  **Custom Review Page API:**
+  - Add `ReviewComponentProps` type to define props for custom review components
+  - Add optional `getReviewComponent()` method to `OrchestratorFormApi` interface
+  - Update `OrchestratorForm` to support custom review page components from plugins
+  - Add `CustomReviewPage` example component in orchestrator-form-widgets plugin (aligned with `ReviewStep`: `generateReviewTableData`, hidden-fields toggle, `NestedReviewTable`)
+  - Export `generateReviewTableData`, `schemaHasUiHiddenFields`, and `NestedReviewTable` from orchestrator-form-react for custom review implementations
+  - Falls back to default review page when `getReviewComponent()` returns `undefined`
+
+  **Documentation:**
+  - Update `extensibleForm.md` with custom review page implementation guide
+  - Add example showing how to implement and use custom review components
+
+### Patch Changes
+
+- 16d41c2: Add Run as Event when `orchestrator.kafka` is configured: send `isEvent` with execute input, redirect to workflow runs with a notice when the response id is `kafkaEvent`.
+- Updated dependencies [16d41c2]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.1
+
+## 2.6.0
+
+### Minor Changes
+
+- 2212e8d: Backstage version bump to v1.49.3
+
+### Patch Changes
+
+- Updated dependencies [665a75c]
+- Updated dependencies [2212e8d]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.6.0
+
+## 2.5.3
+
+### Patch Changes
+
+- 315239c: Scope SchemaUpdater replacements to the originating step and improve scope resolution.
+- Updated dependencies [5a9d9d8]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.5.3
+
+## 2.5.2
+
+### Patch Changes
+
+- Updated dependencies [309547d]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.5.2
+
+## 2.5.1
+
+### Patch Changes
+
+- Updated dependencies [b7f8a3c]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.5.1
+
+## 2.5.0
+
+### Minor Changes
+
+- 3648a62: Backstage version bump to v1.47.3
+
+### Patch Changes
+
+- Updated dependencies [3648a62]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.5.0
+
+## 2.4.4
+
+### Patch Changes
+
+- Updated dependencies [546ccb2]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.4.2
+
+## 2.4.3
+
+### Patch Changes
+
+- 9c17c36: Updated dependency `prettier` to `3.8.0`.
+- aaac497: Updated dependency `prettier` to `3.8.1`.
+- Updated dependencies [858963d]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.4.1
+
+## 2.4.2
+
+### Patch Changes
+
+- Updated dependencies [3e2c3f7]
+- Updated dependencies [f1b43c5]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.4.0
+
+## 2.4.1
+
+### Patch Changes
+
+- Updated dependencies [8524940]
+- Updated dependencies [d91ef65]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.3.1
+
+## 2.4.0
+
+### Minor Changes
+
+- 29dfed0: Backstage version bump to v1.45.2
+
+### Patch Changes
+
+- 40b80fe: Change "lifecycle" to active in catalog-info.yaml
+- 40b80fe: Remove "support", "lifecycle" keywords and "supported-versions" in package.json. Change "lifecycle" to active in catalog.yaml
+- Updated dependencies [a1671ab]
+- Updated dependencies [40b80fe]
+- Updated dependencies [782c33f]
+- Updated dependencies [f5f4973]
+- Updated dependencies [40b80fe]
+- Updated dependencies [34a36cb]
+- Updated dependencies [29dfed0]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.3.0
+
+## 2.3.0
+
+### Minor Changes
+
+- fba1136: Backstage version bump to v1.44.1
+
+### Patch Changes
+
+- Updated dependencies [fba1136]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.2.0
+
+## 2.2.0
+
+### Minor Changes
+
+- 149804f: Disable Next button when active widgets are fetching and processing data
+  - Add isFetching state tracking to StepperContext using a counter to monitor multiple concurrent async operations
+  - Update OrchestratorFormToolbar to disable Next button when isFetching is true (in addition to existing isValidating check)
+  - Add handleFetchStarted and handleFetchEnded callbacks to OrchestratorFormContextProps to allow widgets to report their loading status
+  - Update useFetchAndEvaluate to track complete loading state (fetch + template evaluation) and notify context
+  - Create useProcessingState custom hook to reduce code duplication across widgets, providing a reusable pattern for tracking both fetch and processing states
+  - Refactor SchemaUpdater, ActiveTextInput, ActiveDropdown, and ActiveMultiSelect to use useProcessingState hook
+  - Track the complete loading lifecycle: fetch → process → ready, ensuring Next button is disabled until all async work completes
+  - Prevents race conditions where Next button becomes enabled before widgets finish processing data
+
+## 2.1.0
+
+### Minor Changes
+
+- de5ced6: Backstage version bump to v1.42.5
+
+### Patch Changes
+
+- Updated dependencies [de5ced6]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.1.0
+
+## 2.0.6
+
+### Patch Changes
+
+- Updated dependencies [f0a427c]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.6
+
+## 2.0.5
+
+### Patch Changes
+
+- Updated dependencies [c79ffa7]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.5
+
+## 2.0.4
+
+### Patch Changes
+
+- Updated dependencies [2fbdb53]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.4
+
+## 2.0.3
+
+### Patch Changes
+
+- Updated dependencies [fac94ef]
+- Updated dependencies [16439ad]
+- Updated dependencies [4fd43f1]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.3
+
+## 2.0.2
+
+### Patch Changes
+
+- Updated dependencies [26e602a]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.2
+
+## 2.0.1
+
+### Patch Changes
+
+- Updated dependencies [32e0a44]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.1
+
+## 2.0.0
+
+### Major Changes
+
+- 3fce49c: Update dependencies to macth Backstage 1.39.1
+
+### Patch Changes
+
+- Updated dependencies [784d858]
+- Updated dependencies [3fce49c]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@3.0.0
+
+## 1.6.6
+
+### Patch Changes
+
+- Updated dependencies [223d35c]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@2.0.1
+
+## 1.6.5
+
+### Patch Changes
+
+- a79f849: Updated dependency `prettier` to `3.6.2`.
+- Updated dependencies [e590195]
+- Updated dependencies [66b7b7c]
+- Updated dependencies [d7d2490]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@2.0.0
+
+## 1.6.4
+
+### Patch Changes
+
+- Updated dependencies [ff0f69e]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@1.28.4
+
+## 1.6.3
+
+### Patch Changes
+
+- Updated dependencies [a3df181]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@1.28.3
+
+## 1.6.2
+
+### Patch Changes
+
+- Updated dependencies [da78550]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@1.28.2
+
+## 1.6.1
+
+### Patch Changes
+
+- Updated dependencies [a9a6095]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@1.28.1
+
+## 1.6.0
+
+### Minor Changes
+
+- 53f3ffb: implemented authorization widget for enabling specifying the required auth providers in the schema so the UI can pick it up from there and forward to workflow execution
+
+### Patch Changes
+
+- Updated dependencies [53f3ffb]
+  - @red-hat-developer-hub/backstage-plugin-orchestrator-common@1.28.0
+
+## 1.5.0
+
+### Minor Changes
+
+- 78e3ee6: Added backstage-plugin-orchestrator-form-widgets plugin hosting default set of RJSF form widgets provided along the Orchestrator. Includes the SchemaUpdater widget capable of downloading JSON schema chunks and modifying the RJSF form on the fly.
+- fc9ce7c: Backstage version bump to v1.37.1
+
+### Patch Changes
+
+- 2f33284: Update kie-tools, @janus/cli and Backstage supported version to the most recent ones.
+- a9e5f32: Updated dependency `@openapitools/openapi-generator-cli` to `2.20.0`.
+  Updated dependency `prettier` to `3.5.3`.
+  Updated dependency `@redhat-developer/red-hat-developer-hub-theme` to `0.5.1`.
+  Updated dependency `@red-hat-developer-hub/backstage-plugin-theme` to `^0.6.0`.
+  Updated dependency `@janus-idp/cli` to `3.5.0`.
+
+## 1.4.3
+
+### Patch Changes
+
+- d59e940: Updated dependency `@openapitools/openapi-generator-cli` to `2.15.3`.
+  Updated dependency `prettier` to `3.4.2`.
+  Updated dependency `@janus-idp/cli` to `1.19.1`.
+  Updated dependency `monaco-editor` to `0.52.2`.
+  Updated dependency `monaco-yaml` to `5.2.3`.
+  Updated dependency `sass` to `1.83.0`.
+  Updated dependency `webpack` to `5.97.1`.
+
+## 1.4.2
+
+### Patch Changes
+
+- 54daa8c: Migrated from [janus-idp/backstage-plugins](https://github.com/janus-idp/backstage-plugins).
+
+## 1.4.1
+
+### Patch Changes
+
+- 0e6bfd3: feat: update Backstage to the latest version
+
+  Update to Backstage 1.32.5
+
+- 67f466a: Resolved the following issues:
+  1. enabled validation using customValidate, and replaced extraErrors with getExtraErrors, since extraErrors is supposed to be populated when running onSubmit, and that isn't exposed to the user. Added busy handling while calling getExtraErrors.
+  2. moved FormComponent to a separate component, to avoid buggy behavior and code smells with component generated in a different component.
+  3. update formData on each change instead of when moving to next step, to avoid data being cleared.
+  4. fix bug in validator - it only worked in first step, because of issue in @rjsf form
+  5. removed unnecessary package json-schema that was used just for lint error, and fixed the root cause of lint error when importing types from @types/json-schema
+
+## 1.4.0
+
+### Minor Changes
+
+- 8244f28: chore(deps): update to backstage 1.32
+
+## 1.3.0
+
+### Minor Changes
+
+- d9551ae: feat(deps): update to backstage 1.31
+
+### Patch Changes
+
+- d9551ae: upgrade to yarn v3

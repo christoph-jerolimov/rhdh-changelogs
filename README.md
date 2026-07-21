@@ -1,6 +1,6 @@
-# Backstage Release Spotter
+# RHDH and Backstage Changelogs 🎧
 
-Automatically maintained mirror and analysis of the official Backstage package changelogs and metadata from [backstage/backstage](https://github.com/backstage/backstage) and [backstage/community-plugins](https://github.com/backstage/community-plugins), and of the release manifests from [backstage/versions](https://github.com/backstage/versions).
+Automatically maintained mirror and analysis of the official Backstage package changelogs and metadata from [backstage/backstage](https://github.com/backstage/backstage), [backstage/community-plugins](https://github.com/backstage/community-plugins), and [redhat-developer/rhdh-plugins](https://github.com/redhat-developer/rhdh-plugins), and of the release manifests from [backstage/versions](https://github.com/backstage/versions).
 
 A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and on demand via *Run workflow*), clones both upstream repositories, regenerates everything below, and commits changes to `main` in a single commit.
 
@@ -29,7 +29,6 @@ One row per release (newest to oldest, incl. `next` if it exists), comparing eac
 Each `releases/<version>/` folder contains:
 
 - `manifest.json` — copied verbatim from `backstage/versions` (`v1/releases/<version>/`)
-- `yarn-plugin` — copied verbatim, for releases that ship one
 - `README.md` — generated diff against the previous patch release (if any) and the previous minor release (highest patch of the previous minor line), highlighting ⚠️ major version bumps, 🆕 added and ❌ removed packages
 - `resolutions.json` — the manifest transformed into a package.json-style `{ "resolutions": { "<package>": "<version>" } }` map
 - `CHANGELOG.md` — the changelog sections of all packages changed or added since the direct previous release, sliced from [`changelogs/`](changelogs) to the versions after the previous release (exclusive) up to this release (inclusive). `@backstage/*` dependency-update entries are excluded by default (packages that only had such updates are listed at the end); can be built for any release pair with `npm run changelog -- <from> <to> [--dep-updates include|exclude-backstage|exclude-all]`
@@ -42,6 +41,7 @@ The [`changelogs/`](changelogs) folder holds a `CHANGELOG.md` copy for **every p
 
 - Packages still present on `backstage/backstage` `main` (in `packages/*` and `plugins/*`) are copied from there on every run.
 - `@backstage-community/*` packages are copied from all workspaces of `backstage/community-plugins` (in `workspaces/*/plugins/*` and `workspaces/*/packages/*`) on every run.
+- RHDH plugin packages (e.g. `@red-hat-developer-hub/*`) are copied from all workspaces of `redhat-developer/rhdh-plugins` (same `workspaces/*/plugins/*` and `workspaces/*/packages/*` layout) on every run.
 - Packages that were removed from `main` (e.g. plugins moved to community repos) are fetched once from the release tag of the newest release that still listed them; existing files are never re-fetched.
 - The job fails if any package listed in any release manifest ends up without a changelog.
 
