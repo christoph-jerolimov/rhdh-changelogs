@@ -2,7 +2,17 @@
 
 Automatically maintained mirror and analysis of the official Backstage package changelogs and metadata from [backstage/backstage](https://github.com/backstage/backstage), [backstage/community-plugins](https://github.com/backstage/community-plugins), and [redhat-developer/rhdh-plugins](https://github.com/redhat-developer/rhdh-plugins), and of the release manifests from [backstage/versions](https://github.com/backstage/versions).
 
-A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and on demand via *Run workflow*), clones both upstream repositories, regenerates everything below, and commits changes to `main` in a single commit.
+A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and on demand via *Run workflow*), clones the upstream repositories, regenerates everything below, and commits changes to `main` in a single commit.
+
+## RHDH releases
+
+[`config.yaml`](config.yaml) maps each Red Hat Developer Hub (RHDH) release to the Backstage release it is based on. For every entry there is a root folder named after the RHDH release (e.g. [`1.9/`](1.9), [`1.10/`](1.10)) containing:
+
+- `manifest.json` — the manifest of the mapped Backstage release, copied from `releases/<backstage-version>/`
+- `README.md` — diff summary against the Backstage version of the **previous RHDH release** (e.g. `1.9/` compares Backstage 1.42.5 of RHDH 1.8 with Backstage 1.45.3 of RHDH 1.9), highlighting ⚠️ major version bumps, 🆕 added and ❌ removed packages
+- `CHANGELOG.md` — the aggregated package changelogs over the same span, in the format described under [Per-release folders](#per-release-folders)
+
+New RHDH releases are picked up by adding an entry to `config.yaml`; folders of entries removed from the config are deleted on the next run.
 
 ## Package versions
 

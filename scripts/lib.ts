@@ -2,11 +2,33 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { fileURLToPath } from "node:url";
 import semver from "semver";
+import { parse as parseYaml } from "yaml";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 export const releasesDir = path.join(repoRoot, "releases");
 export const tablesDir = path.join(repoRoot, "tables");
 export const NEXT = "next";
+
+export interface RhdhRelease {
+  rhdh: string;
+  backstage: string;
+}
+
+/** The RHDH releases from config.yaml with their Backstage versions, in file order. */
+export function listRhdhReleases(): RhdhRelease[] {
+  const file = path.join(repoRoot, "config.yaml");
+  const config = parseYaml(fs.readFileSync(file, "utf8")) as { releases?: unknown };
+  if (!Array.isArray(config.releases)) {
+    throw new Error(`Expected a releases array in ${file}`);
+  }
+  return config.releases.map((entry, index) => {
+    const { rhdh, backstage } = entry as Partial<RhdhRelease>;
+    if (typeof rhdh !== "string" || typeof backstage !== "string" || semver.valid(backstage) === null) {
+      throw new Error(`Invalid releases[${index}] in ${file}: ${JSON.stringify(entry)}`);
+    }
+    return { rhdh, backstage };
+  });
+}
 
 export interface Manifest {
   releaseVersion: string;

@@ -11,12 +11,14 @@
     "changes": "tsx scripts/generate-changes.ts",
     "changelog": "tsx scripts/build-changelog.ts",
     "changelogs": "tsx scripts/generate-changelogs.ts",
+    "rhdh": "tsx scripts/generate-rhdh-releases.ts",
     "metadata": "tsx scripts/fetch-metadata.ts",
-    "update": "npm run copy && npm run metadata && npm run readmes && npm run resolutions && npm run tables && npm run changes && npm run changelogs",
+    "update": "npm run copy && npm run metadata && npm run readmes && npm run resolutions && npm run tables && npm run changes && npm run changelogs && npm run rhdh",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "semver": "^7.7.2"
+    "semver": "^7.7.2",
+    "yaml": "^2.9.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.0",
