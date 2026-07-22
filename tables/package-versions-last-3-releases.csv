@@ -1,4 +1,4 @@
-Package,next,latest,milestone1
+Package,next,1.11-m2,1.11-m1
 @backstage/app-defaults,1.7.11-next.0,1.7.10,1.7.9
 @backstage/backend-app-api,1.7.3-next.0,1.7.2,1.7.1
 @backstage/backend-defaults,0.17.6-next.0,0.17.5,0.17.4

@@ -1,6 +1,6 @@
 # RHDH Release next (Backstage 1.54.0-next.0)
 
-## Compared to 1.53.0 (RHDH latest)
+## Compared to 1.53.0 (RHDH 1.11-m2)
 
 0 added, 0 removed, 158 upgraded, 53 unchanged.
 

@@ -1,6 +1,6 @@
-# RHDH Release milestone1 changelog
+# RHDH Release 1.11-m1 changelog
 
-Changes between Backstage 1.49.4 (RHDH 1.10) and Backstage 1.52.1 (RHDH milestone1) — 3 added, 0 removed, 199 upgraded, 8 unchanged packages.
+Changes between Backstage 1.49.4 (RHDH 1.10) and Backstage 1.52.1 (RHDH 1.11-m1) — 3 added, 0 removed, 199 upgraded, 8 unchanged packages.
 
 ## Summary
 

@@ -1,4 +1,4 @@
-# RHDH Release milestone1 (Backstage 1.52.1)
+# RHDH Release 1.11-m1 (Backstage 1.52.1)
 
 ## Compared to 1.49.4 (RHDH 1.10)
 
