@@ -3,6 +3,7 @@ import * as path from "node:path";
 import { buildChangelog } from "./changelog-lib.ts";
 import {
   diffManifests,
+  isResolved,
   listRhdhReleases,
   type Manifest,
   manifestToMap,
@@ -13,7 +14,8 @@ import {
 } from "./lib.ts";
 import { renderComparisonSection } from "./readme-lib.ts";
 
-const rhdhReleases = listRhdhReleases();
+// An unresolved "next" entry gets no folder — the cleanup below removes it.
+const rhdhReleases = listRhdhReleases().filter(isResolved);
 const releasesDir = path.join(repoRoot, "releases");
 
 const manifests = new Map<string, Manifest>();

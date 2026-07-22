@@ -1,6 +1,6 @@
 # Package descriptions — all
 
-**317 packages** overall — **207 active** on the `main` branch, **110 removed**. *Last included in* is only set for removed packages.
+**321 packages** overall — **211 active** on the `main` branch, **110 removed**. *Last included in* is only set for removed packages.
 
 | Package | Backstage role | Description | Last included in |
 | --- | --- | --- | --- |
@@ -36,6 +36,7 @@
 | `@backstage/codemods` | cli | A collection of codemods for Backstage projects |  |
 | `@backstage/config` | common-library | Config API used by Backstage core, backend, and CLI |  |
 | `@backstage/config-loader` | node-library | Config loading functionality used by Backstage backend, and CLI |  |
+| `@backstage/connections` | common-library | Connections framework used by Backstage to better manage external connections used by integrations and plugins |  |
 | `@backstage/core-app-api` | web-library | Core app API used by Backstage apps |  |
 | `@backstage/core-compat-api` | web-library |  |  |
 | `@backstage/core-components` | web-library | Core components used by Backstage plugins and apps |  |
@@ -71,6 +72,7 @@
 | `@backstage/plugin-apollo-explorer` | frontend-plugin |  | 1.26.5 |
 | `@backstage/plugin-app` | frontend-plugin |  |  |
 | `@backstage/plugin-app-backend` | backend-plugin | A Backstage backend plugin that serves the Backstage frontend app |  |
+| `@backstage/plugin-app-module-user-settings` | frontend-plugin-module | Registers user-settings features into the app. |  |
 | `@backstage/plugin-app-node` | node-library | Node.js library for the app plugin |  |
 | `@backstage/plugin-app-react` | web-library | Web library for the app plugin |  |
 | `@backstage/plugin-app-visualizer` | frontend-plugin | Visualizes the Backstage app structure |  |
@@ -113,6 +115,7 @@
 | `@backstage/plugin-bitrise` | frontend-plugin | A Backstage plugin that integrates towards Bitrise | 1.26.5 |
 | `@backstage/plugin-catalog` | frontend-plugin | The Backstage plugin for browsing the Backstage catalog |  |
 | `@backstage/plugin-catalog-backend` | backend-plugin | The Backstage backend plugin that provides the Backstage catalog |  |
+| `@backstage/plugin-catalog-backend-module-ai-model` | backend-plugin-module | Adds support for the AiResource entity kind to the catalog backend plugin. |  |
 | `@backstage/plugin-catalog-backend-module-aws` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards AWS |  |
 | `@backstage/plugin-catalog-backend-module-azure` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards Azure |  |
 | `@backstage/plugin-catalog-backend-module-backstage-openapi` | backend-plugin-module |  |  |
@@ -130,6 +133,7 @@
 | `@backstage/plugin-catalog-backend-module-ldap` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards LDAP |  |
 | `@backstage/plugin-catalog-backend-module-logs` | backend-plugin-module | A module that subscribes to catalog related events and logs them. |  |
 | `@backstage/plugin-catalog-backend-module-msgraph` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards Microsoft Graph |  |
+| `@backstage/plugin-catalog-backend-module-msgraph-incremental` | backend-plugin-module | A Backstage catalog backend module that incrementally ingests users and groups from Microsoft Graph |  |
 | `@backstage/plugin-catalog-backend-module-openapi` | backend-plugin-module | A Backstage catalog backend module that helps with OpenAPI specifications |  |
 | `@backstage/plugin-catalog-backend-module-puppetdb` | backend-plugin-module | A Backstage catalog backend module that helps integrate towards PuppetDB |  |
 | `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` | backend-plugin-module | Adds support for the scaffolder specific entity model (e.g. the Template kind) to the catalog backend plugin. |  |

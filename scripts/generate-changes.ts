@@ -11,11 +11,12 @@ import {
 } from "./lib.ts";
 
 // RHDH releases in config.yaml order (oldest first); rows are emitted newest
-// first, each compared with the direct previous RHDH release.
+// first, each compared with the direct previous RHDH release. An unresolved
+// "next" entry keeps its row, with every cell but the release name empty.
 const releases = listRhdhReleases().map(({ rhdh, backstage }) => ({
   rhdh,
   backstage,
-  packages: manifestToMap(readUpstreamManifest(backstage)),
+  packages: backstage === undefined ? undefined : manifestToMap(readUpstreamManifest(backstage)),
 }));
 
 const HEADER = ["Release", "Backstage", "Compared to", "Added", "Removed", "Upgraded", "Unchanged", "Major ⚠️", "0.x Minor ⚠️", "0.0.x Patch ⚠️"];
@@ -23,15 +24,15 @@ const HEADER = ["Release", "Backstage", "Compared to", "Added", "Removed", "Upgr
 function rowValues(index: number): string[] {
   const { rhdh, backstage, packages } = releases[index]!;
   const previous = index > 0 ? releases[index - 1]! : undefined;
-  if (previous === undefined) {
-    return [rhdh, backstage, "", "", "", "", "", "", "", ""];
+  if (packages === undefined || previous?.packages === undefined) {
+    return [rhdh, backstage ?? "", "", "", "", "", "", "", "", ""];
   }
   const diff: Diff = diffManifests(previous.packages, packages);
   const breaking = countBreaking(diff);
   const upgraded = diff.majorBumps.length + diff.otherBumps.length;
   return [
     rhdh,
-    backstage,
+    backstage!,
     previous.rhdh,
     `${diff.added.length}`,
     `${diff.removed.length}`,
