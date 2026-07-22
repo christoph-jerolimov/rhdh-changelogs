@@ -1,6 +1,6 @@
-# RHDH Release latest (Backstage 1.53.0)
+# RHDH Release 1.11-m2 (Backstage 1.53.0)
 
-## Compared to 1.52.1 (RHDH milestone1)
+## Compared to 1.52.1 (RHDH 1.11-m1)
 
 1 added, 0 removed, 185 upgraded, 25 unchanged.
 

@@ -1,8 +1,8 @@
 # Package versions — last 3 releases
 
-Versions of **211 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.54.0-next.0, RHDH latest = Backstage 1.53.0, RHDH milestone1 = Backstage 1.52.1.
+Versions of **211 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.54.0-next.0, RHDH 1.11-m2 = Backstage 1.53.0, RHDH 1.11-m1 = Backstage 1.52.1.
 
-| Package | next | latest | milestone1 |
+| Package | next | 1.11-m2 | 1.11-m1 |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.11-next.0 | 1.7.10 | 1.7.9 |
 | `@backstage/backend-app-api` | 1.7.3-next.0 | 1.7.2 | 1.7.1 |

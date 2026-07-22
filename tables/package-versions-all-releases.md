@@ -1,8 +1,8 @@
 # Package versions — all releases
 
-Versions of **321 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.54.0-next.0, RHDH latest = Backstage 1.53.0, RHDH milestone1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
+Versions of **321 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.54.0-next.0, RHDH 1.11-m2 = Backstage 1.53.0, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
 
-| Package | next | latest | milestone1 | 1.10 | 1.9 | 1.8 | 1.7 | 1.6 | 1.5 | 1.4 | 1.3 | 1.2 | 1.1 | 1.0 |
+| Package | next | 1.11-m2 | 1.11-m1 | 1.10 | 1.9 | 1.8 | 1.7 | 1.6 | 1.5 | 1.4 | 1.3 | 1.2 | 1.1 | 1.0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.11-next.0 | 1.7.10 | 1.7.9 | 1.7.6 | 1.7.2 | 1.6.5 | 1.6.2 | 1.5.17 | 1.5.16 | 1.5.12 | 1.5.9 | 1.5.4 | 1.5.0 | 1.4.4 |
 | `@backstage/backend-app-api` | 1.7.3-next.0 | 1.7.2 | 1.7.1 | 1.6.0 | 1.3.0 | 1.2.6 | 1.2.3 | 1.2.0 | 1.1.1 | 1.0.1 | 0.8.0 | 0.7.2 | 0.5.14 | 0.5.7 |
