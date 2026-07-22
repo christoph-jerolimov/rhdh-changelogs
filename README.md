@@ -8,6 +8,11 @@ A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and o
 
 [`config.yaml`](config.yaml) maps each Red Hat Developer Hub (RHDH) release to the Backstage release it is based on. For every entry there is a folder named after the RHDH release (e.g. [`releases/1.9/`](releases/1.9), [`releases/1.10/`](releases/1.10)) — see [Per-release folders](#per-release-folders) for their contents.
 
+Besides a concrete version, the `backstage` value can be:
+
+- `latest` — resolves to the highest stable Backstage release (no prerelease)
+- `next` — resolves to the newest `-next` prerelease, to show what is currently in active development in Backstage. While there is none newer than the latest stable release, the entry's folder is removed and its table columns stay empty.
+
 New RHDH releases are picked up by adding an entry to `config.yaml`; folders of entries removed from the config are deleted on the next run.
 
 ## Package versions

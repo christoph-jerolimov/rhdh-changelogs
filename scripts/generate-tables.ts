@@ -2,10 +2,15 @@ import * as path from "node:path";
 import { byCodepoint, listRhdhReleases, manifestToMap, readUpstreamManifest, tablesDir, writeFileIfChanged } from "./lib.ts";
 
 // Newest RHDH release first; each column shows the package versions of the
-// Backstage release mapped in config.yaml.
+// Backstage release mapped in config.yaml. An unresolved "next" entry keeps
+// its column, with every cell empty.
 const shownAll = listRhdhReleases()
   .reverse()
-  .map(({ rhdh, backstage }) => ({ rhdh, backstage, packages: manifestToMap(readUpstreamManifest(backstage)) }));
+  .map(({ rhdh, backstage }) => ({
+    rhdh,
+    backstage,
+    packages: backstage === undefined ? new Map<string, string>() : manifestToMap(readUpstreamManifest(backstage)),
+  }));
 
 interface Variant {
   name: string;
@@ -31,7 +36,13 @@ for (const variant of variants) {
   md.push(
     `Versions of **${packageNames.length} packages** across **${shown.length} RHDH releases** — columns ordered newest to oldest. ` +
       "Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): " +
-      shown.map(({ rhdh, backstage }) => `RHDH ${rhdh} = Backstage ${backstage}`).join(", ") +
+      shown
+        .map(({ rhdh, backstage }) =>
+          backstage === undefined
+            ? `RHDH ${rhdh} = currently no Backstage next release`
+            : `RHDH ${rhdh} = Backstage ${backstage}`,
+        )
+        .join(", ") +
       ".",
     "",
   );

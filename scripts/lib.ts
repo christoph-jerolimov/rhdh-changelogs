@@ -9,10 +9,53 @@ export const tablesDir = path.join(repoRoot, "tables");
 
 export interface RhdhRelease {
   rhdh: string;
+  /** Resolved Backstage version; undefined for a "next" entry while no next prerelease exists. */
+  backstage: string | undefined;
+}
+
+export interface ResolvedRhdhRelease {
+  rhdh: string;
   backstage: string;
 }
 
-/** The RHDH releases from config.yaml with their Backstage versions, in file order. */
+export const isResolved = (release: RhdhRelease): release is ResolvedRhdhRelease =>
+  release.backstage !== undefined;
+
+const isStableVersion = (version: string): boolean =>
+  semver.major(version) >= 1 && semver.prerelease(version) === null;
+
+let upstreamVersionsCache: string[] | undefined;
+
+/** All release versions available in the backstage/versions clone. */
+function upstreamVersions(): string[] {
+  upstreamVersionsCache ??= fs
+    .readdirSync(path.join(upstreamDir(), "v1", "releases"))
+    .filter((version) => semver.valid(version) !== null);
+  return upstreamVersionsCache;
+}
+
+/**
+ * Resolve the special config values: "latest" is the highest stable Backstage
+ * release; "next" is the newest -next prerelease, but only while it is newer
+ * than the latest stable release (undefined otherwise).
+ */
+function resolveBackstageVersion(backstage: string): string | undefined {
+  if (backstage !== "latest" && backstage !== "next") return backstage;
+  const latest = upstreamVersions().filter(isStableVersion).sort(semver.rcompare)[0];
+  if (latest === undefined) {
+    throw new Error("No stable Backstage release found in the backstage/versions clone");
+  }
+  if (backstage === "latest") return latest;
+  const next = upstreamVersions()
+    .filter((version) => semver.prerelease(version)?.[0] === "next")
+    .sort(semver.rcompare)[0];
+  return next !== undefined && semver.gt(next, latest) ? next : undefined;
+}
+
+/**
+ * The RHDH releases from config.yaml with their resolved Backstage versions,
+ * in file order. The backstage value must be a version, "latest", or "next".
+ */
 export function listRhdhReleases(): RhdhRelease[] {
   const file = path.join(repoRoot, "config.yaml");
   const config = parseYaml(fs.readFileSync(file, "utf8")) as { releases?: unknown };
@@ -20,11 +63,15 @@ export function listRhdhReleases(): RhdhRelease[] {
     throw new Error(`Expected a releases array in ${file}`);
   }
   return config.releases.map((entry, index) => {
-    const { rhdh, backstage } = entry as Partial<RhdhRelease>;
-    if (typeof rhdh !== "string" || typeof backstage !== "string" || semver.valid(backstage) === null) {
+    const { rhdh, backstage } = entry as { rhdh?: unknown; backstage?: unknown };
+    if (
+      typeof rhdh !== "string" ||
+      typeof backstage !== "string" ||
+      (backstage !== "latest" && backstage !== "next" && semver.valid(backstage) === null)
+    ) {
       throw new Error(`Invalid releases[${index}] in ${file}: ${JSON.stringify(entry)}`);
     }
-    return { rhdh, backstage };
+    return { rhdh, backstage: resolveBackstageVersion(backstage) };
   });
 }
 

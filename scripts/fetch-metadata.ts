@@ -2,7 +2,7 @@ import { execFileSync } from "node:child_process";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import semver from "semver";
-import { byCodepoint, listRhdhReleases, type Manifest, readUpstreamManifest, repoRoot, tablesDir, writeFileIfChanged } from "./lib.ts";
+import { byCodepoint, isResolved, listRhdhReleases, type Manifest, readUpstreamManifest, repoRoot, tablesDir, writeFileIfChanged } from "./lib.ts";
 
 interface PackageJson {
   name?: string;
@@ -180,6 +180,7 @@ function findDirAtTag(tag: string, name: string): string | undefined {
 
 // Manifests of the Backstage releases mapped in config.yaml, newest first.
 const manifests: Manifest[] = listRhdhReleases()
+  .filter(isResolved)
   .map(({ backstage }) => readUpstreamManifest(backstage))
   .sort((a, b) => semver.rcompare(a.releaseVersion, b.releaseVersion));
 // Newest release that lists each package (manifests are iterated newest first).

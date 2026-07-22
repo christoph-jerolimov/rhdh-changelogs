@@ -21,3 +21,9 @@ releases:
     backstage: "1.45.3"
   - rhdh: "1.10"
     backstage: "1.49.4"
+  - rhdh: milestone1
+    backstage: "1.52.1"
+  - rhdh: latest
+    backstage: latest
+  - rhdh: next
+    backstage: next
