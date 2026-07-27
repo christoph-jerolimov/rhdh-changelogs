@@ -3,8 +3,8 @@ name: Update changelogs
 on:
   workflow_dispatch:
   schedule:
-    # Daily at 06:17 UTC (08:17 CEST) — odd minute avoids the top-of-the-hour stampede.
-    - cron: "17 6 * * *"
+    # Thursdays at 06:17 UTC (08:17 CEST) — odd minute avoids the top-of-the-hour stampede.
+    - cron: "17 6 * * 4"
 
 permissions:
   contents: write
