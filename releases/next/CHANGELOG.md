@@ -1,14 +1,14 @@
 # RHDH Release next changelog
 
-Changes between Backstage 1.53.0 (RHDH 1.11-m2) and Backstage 1.54.0-next.1 (RHDH next) — 0 added, 0 removed, 165 upgraded, 46 unchanged packages.
+Changes between Backstage 1.53.1 (RHDH 1.11-m2) and Backstage 1.54.0-next.1 (RHDH next) — 0 added, 0 removed, 168 upgraded, 43 unchanged packages.
 
 ## Summary
 
 - [Breaking changes](#breaking-changes): 3 packages
-- [0.x patch version bumps](#0x-patch-version-bumps): 13 packages
+- [0.x patch version bumps](#0x-patch-version-bumps): 16 packages
 - [Minor version bumps](#minor-version-bumps): 3 packages
-- [Other patch version bumps](#other-patch-version-bumps): 7 packages
-- [Excluded dependency updates](#excluded-dependency-updates): 139 packages
+- [Other patch version bumps](#other-patch-version-bumps): 8 packages
+- [Excluded dependency updates](#excluded-dependency-updates): 138 packages
 
 ## Table of contents
 
@@ -17,7 +17,10 @@ Changes between Backstage 1.53.0 (RHDH 1.11-m2) and Backstage 1.54.0-next.1 (RHD
   - [`@backstage/plugin-auth-backend` (0.29.2 → 0.30.0-next.0)](#backstageplugin-auth-backend-0292--0300-next0)
   - [`@backstage/plugin-kubernetes-backend` (0.21.6 → 0.22.0-next.1)](#backstageplugin-kubernetes-backend-0216--0220-next1)
 - [0.x patch version bumps](#0x-patch-version-bumps)
-  - [`@backstage/backend-defaults` (0.17.5 → 0.17.6-next.1)](#backstagebackend-defaults-0175--0176-next1)
+  - [`@backstage/backend-defaults` (0.17.6 → 0.17.6-next.1)](#backstagebackend-defaults-0176--0176-next1)
+  - [`@backstage/backend-dynamic-feature-service` (0.8.5 → 0.8.5-next.0)](#backstagebackend-dynamic-feature-service-085--085-next0)
+  - [`@backstage/cli-module-build` (0.1.6 → 0.1.5)](#backstagecli-module-build-016--015)
+  - [`@backstage/cli-module-config` (0.1.5 → 0.1.4)](#backstagecli-module-config-015--014)
   - [`@backstage/core-components` (0.18.12 → 0.18.13-next.1)](#backstagecore-components-01812--01813-next1)
   - [`@backstage/create-app` (0.9.0 → 0.9.1-next.1)](#backstagecreate-app-090--091-next1)
   - [`@backstage/eslint-plugin` (0.3.1 → 0.3.2-next.0)](#backstageeslint-plugin-031--032-next0)
@@ -37,6 +40,7 @@ Changes between Backstage 1.53.0 (RHDH 1.11-m2) and Backstage 1.54.0-next.1 (RHD
 - [Other patch version bumps](#other-patch-version-bumps)
   - [`@backstage/backend-app-api` (1.7.2 → 1.7.3-next.0)](#backstagebackend-app-api-172--173-next0)
   - [`@backstage/backend-test-utils` (1.11.5 → 1.11.6-next.0)](#backstagebackend-test-utils-1115--1116-next0)
+  - [`@backstage/config-loader` (1.11.1 → 1.11.0)](#backstageconfig-loader-1111--1110)
   - [`@backstage/plugin-catalog` (2.0.7 → 2.0.8-next.1)](#backstageplugin-catalog-207--208-next1)
   - [`@backstage/plugin-catalog-backend` (3.8.1 → 3.8.2-next.1)](#backstageplugin-catalog-backend-381--382-next1)
   - [`@backstage/plugin-catalog-react` (3.2.0 → 3.2.1-next.1)](#backstageplugin-catalog-react-320--321-next1)
@@ -95,14 +99,21 @@ Changes between Backstage 1.53.0 (RHDH 1.11-m2) and Backstage 1.54.0-next.1 (RHD
 
 ## 0.x patch version bumps
 
-### `@backstage/backend-defaults` (0.17.5 → [0.17.6-next.1](../../changelogs/@backstage/backend-defaults.md#0176-next1))
+### `@backstage/backend-defaults` (0.17.6 → [0.17.6-next.1](../../changelogs/@backstage/backend-defaults.md#0176-next1))
 
-#### 0.17.6-next.0
+_No changelog entries found._
 
-##### Patch Changes
+### `@backstage/backend-dynamic-feature-service` (0.8.5 → [0.8.5-next.0](../../changelogs/@backstage/backend-dynamic-feature-service.md#085-next0))
 
-- [`79c1d58`](https://github.com/backstage/backstage/commit/79c1d58): Fixed a bug in the Azure DevOps URL reader where the abort signal was not forwarded to the commits API fetch, causing the fetch to hang indefinitely when a build timeout or cancellation was triggered.
-- [`74d8cbf`](https://github.com/backstage/backstage/commit/74d8cbf): Added a new public `@backstage/backend-defaults/rootSystemMetadata` entrypoint, exporting `rootSystemMetadataServiceFactory` and `DefaultRootSystemMetadataService`. The system metadata service is now registered automatically as a default service, so backends no longer need to add it manually.
+_No changelog entries found._
+
+### `@backstage/cli-module-build` (0.1.6 → [0.1.5](../../changelogs/@backstage/cli-module-build.md#015))
+
+_No changelog entries found._
+
+### `@backstage/cli-module-config` (0.1.5 → [0.1.4](../../changelogs/@backstage/cli-module-config.md#014))
+
+_No changelog entries found._
 
 ### `@backstage/core-components` (0.18.12 → [0.18.13-next.1](../../changelogs/@backstage/core-components.md#01813-next1))
 
@@ -265,6 +276,10 @@ Changes between Backstage 1.53.0 (RHDH 1.11-m2) and Backstage 1.54.0-next.1 (RHD
 
 - [`5ae46fc`](https://github.com/backstage/backstage/commit/5ae46fc): Added `mockServices.rootSystemMetadata` mock implementation to support the new stable `coreServices.rootSystemMetadata` service in tests.
 
+### `@backstage/config-loader` (1.11.1 → [1.11.0](../../changelogs/@backstage/config-loader.md#1110))
+
+_No changelog entries found._
+
 ### `@backstage/plugin-catalog` (2.0.7 → [2.0.8-next.1](../../changelogs/@backstage/plugin-catalog.md#208-next1))
 
 #### 2.0.8-next.1
@@ -309,7 +324,6 @@ Changes between Backstage 1.53.0 (RHDH 1.11-m2) and Backstage 1.54.0-next.1 (RHD
 ## Excluded dependency updates
 
 - `@backstage/app-defaults` (1.7.10 → [1.7.11-next.0](../../changelogs/@backstage/app-defaults.md#1711-next0))
-- `@backstage/backend-dynamic-feature-service` (0.8.4 → [0.8.5-next.0](../../changelogs/@backstage/backend-dynamic-feature-service.md#085-next0))
 - `@backstage/backend-openapi-utils` (0.7.0 → [0.7.1-next.0](../../changelogs/@backstage/backend-openapi-utils.md#071-next0))
 - `@backstage/cli` (0.36.4 → [0.36.5-next.0](../../changelogs/@backstage/cli.md#0365-next0))
 - `@backstage/core-app-api` (1.20.3 → [1.20.4-next.0](../../changelogs/@backstage/core-app-api.md#1204-next0))

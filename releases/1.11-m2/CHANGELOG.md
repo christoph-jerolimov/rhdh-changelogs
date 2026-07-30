@@ -1,6 +1,6 @@
 # RHDH Release 1.11-m2 changelog
 
-Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.53.0 (RHDH 1.11-m2) — 1 added, 0 removed, 185 upgraded, 25 unchanged packages.
+Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.53.1 (RHDH 1.11-m2) — 1 added, 0 removed, 185 upgraded, 25 unchanged packages.
 
 ## Summary
 
@@ -29,9 +29,9 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.53.0 (RHDH 1.11-
   - [`@backstage/connections` (0.1.0 → 0.2.0)](#backstageconnections-010--020)
   - [`@backstage/ui` (0.16.0 → 0.17.0)](#backstageui-0160--0170)
 - [0.x patch version bumps](#0x-patch-version-bumps)
-  - [`@backstage/backend-defaults` (0.17.4 → 0.17.5)](#backstagebackend-defaults-0174--0175)
+  - [`@backstage/backend-defaults` (0.17.4 → 0.17.6)](#backstagebackend-defaults-0174--0176)
   - [`@backstage/cli` (0.36.3 → 0.36.4)](#backstagecli-0363--0364)
-  - [`@backstage/cli-module-build` (0.1.4 → 0.1.5)](#backstagecli-module-build-014--015)
+  - [`@backstage/cli-module-build` (0.1.4 → 0.1.6)](#backstagecli-module-build-014--016)
   - [`@backstage/cli-module-new` (0.1.4 → 0.1.5)](#backstagecli-module-new-014--015)
   - [`@backstage/core-components` (0.18.11 → 0.18.12)](#backstagecore-components-01811--01812)
   - [`@backstage/filter-predicates` (0.1.3 → 0.1.4)](#backstagefilter-predicates-013--014)
@@ -51,7 +51,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.53.0 (RHDH 1.11-
   - [`@backstage/plugin-org` (0.7.5 → 0.7.6)](#backstageplugin-org-075--076)
   - [`@backstage/plugin-scaffolder-backend-module-yeoman` (0.4.23 → 0.4.24)](#backstageplugin-scaffolder-backend-module-yeoman-0423--0424)
 - [Other minor version bumps](#other-minor-version-bumps)
-  - [`@backstage/config-loader` (1.10.12 → 1.11.0)](#backstageconfig-loader-11012--1110)
+  - [`@backstage/config-loader` (1.10.12 → 1.11.1)](#backstageconfig-loader-11012--1111)
 - [Other patch version bumps](#other-patch-version-bumps)
   - [`@backstage/backend-test-utils` (1.11.4 → 1.11.5)](#backstagebackend-test-utils-1114--1115)
   - [`@backstage/core-app-api` (1.20.2 → 1.20.3)](#backstagecore-app-api-1202--1203)
@@ -232,7 +232,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.53.0 (RHDH 1.11-
 
 ## 0.x patch version bumps
 
-### `@backstage/backend-defaults` (0.17.4 → [0.17.5](../../changelogs/@backstage/backend-defaults.md#0175))
+### `@backstage/backend-defaults` (0.17.4 → [0.17.6](../../changelogs/@backstage/backend-defaults.md#0176))
 
 #### 0.17.5
 
@@ -251,7 +251,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.53.0 (RHDH 1.11-
 
 - [`61d4881`](https://github.com/backstage/backstage/commit/61d4881): The shared ESLint configuration now reports unused imports in `config.d.ts` configuration schema files. These declaration files are not covered by the TypeScript compiler's unused-variable checks, which previously allowed a stray import to slip through. Such an import can resolve during local development but break configuration schema loading for consumers of the published package, so it is now caught at lint time.
 
-### `@backstage/cli-module-build` (0.1.4 → [0.1.5](../../changelogs/@backstage/cli-module-build.md#015))
+### `@backstage/cli-module-build` (0.1.4 → [0.1.6](../../changelogs/@backstage/cli-module-build.md#016))
 
 #### 0.1.5
 
@@ -433,7 +433,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.53.0 (RHDH 1.11-
 
 ## Other minor version bumps
 
-### `@backstage/config-loader` (1.10.12 → [1.11.0](../../changelogs/@backstage/config-loader.md#1110))
+### `@backstage/config-loader` (1.10.12 → [1.11.1](../../changelogs/@backstage/config-loader.md#1111))
 
 #### 1.11.0
 
@@ -536,13 +536,13 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.53.0 (RHDH 1.11-
 
 - `@backstage/app-defaults` (1.7.9 → [1.7.10](../../changelogs/@backstage/app-defaults.md#1710))
 - `@backstage/backend-app-api` (1.7.1 → [1.7.2](../../changelogs/@backstage/backend-app-api.md#172))
-- `@backstage/backend-dynamic-feature-service` (0.8.3 → [0.8.4](../../changelogs/@backstage/backend-dynamic-feature-service.md#084))
+- `@backstage/backend-dynamic-feature-service` (0.8.3 → [0.8.5](../../changelogs/@backstage/backend-dynamic-feature-service.md#085))
 - `@backstage/backend-plugin-api` (1.9.2 → [1.9.3](../../changelogs/@backstage/backend-plugin-api.md#193))
 - `@backstage/catalog-client` (1.16.0 → [1.16.1](../../changelogs/@backstage/catalog-client.md#1161))
 - `@backstage/cli-defaults` (0.1.3 → [0.1.4](../../changelogs/@backstage/cli-defaults.md#014))
 - `@backstage/cli-module-actions` (0.1.2 → [0.1.3](../../changelogs/@backstage/cli-module-actions.md#013))
 - `@backstage/cli-module-auth` (0.1.3 → [0.1.4](../../changelogs/@backstage/cli-module-auth.md#014))
-- `@backstage/cli-module-config` (0.1.3 → [0.1.4](../../changelogs/@backstage/cli-module-config.md#014))
+- `@backstage/cli-module-config` (0.1.3 → [0.1.5](../../changelogs/@backstage/cli-module-config.md#015))
 - `@backstage/cli-module-github` (0.1.3 → [0.1.4](../../changelogs/@backstage/cli-module-github.md#014))
 - `@backstage/cli-module-info` (0.1.3 → [0.1.4](../../changelogs/@backstage/cli-module-info.md#014))
 - `@backstage/cli-module-lint` (0.1.3 → [0.1.4](../../changelogs/@backstage/cli-module-lint.md#014))

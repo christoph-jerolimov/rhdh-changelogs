@@ -1,4 +1,4 @@
-# RHDH Release 1.11-m2 (Backstage 1.53.0)
+# RHDH Release 1.11-m2 (Backstage 1.53.1)
 
 ## Compared to 1.52.1 (RHDH 1.11-m1)
 
@@ -14,12 +14,12 @@
 
 ### Version bumps
 
-| Package | 1.52.1 | 1.53.0 | Type |
+| Package | 1.52.1 | 1.53.1 | Type |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.9 | 1.7.10 | Patch |
 | `@backstage/backend-app-api` | 1.7.1 | 1.7.2 | Patch |
-| `@backstage/backend-defaults` | 0.17.4 | 0.17.5 | Patch |
-| `@backstage/backend-dynamic-feature-service` | 0.8.3 | 0.8.4 | Patch |
+| `@backstage/backend-defaults` | 0.17.4 | 0.17.6 | Patch |
+| `@backstage/backend-dynamic-feature-service` | 0.8.3 | 0.8.5 | Patch |
 | `@backstage/backend-openapi-utils` | 0.6.10 | 0.7.0 | Minor ⚠️ |
 | `@backstage/backend-plugin-api` | 1.9.2 | 1.9.3 | Patch |
 | `@backstage/backend-test-utils` | 1.11.4 | 1.11.5 | Patch |
@@ -29,8 +29,8 @@
 | `@backstage/cli-defaults` | 0.1.3 | 0.1.4 | Patch |
 | `@backstage/cli-module-actions` | 0.1.2 | 0.1.3 | Patch |
 | `@backstage/cli-module-auth` | 0.1.3 | 0.1.4 | Patch |
-| `@backstage/cli-module-build` | 0.1.4 | 0.1.5 | Patch |
-| `@backstage/cli-module-config` | 0.1.3 | 0.1.4 | Patch |
+| `@backstage/cli-module-build` | 0.1.4 | 0.1.6 | Patch |
+| `@backstage/cli-module-config` | 0.1.3 | 0.1.5 | Patch |
 | `@backstage/cli-module-github` | 0.1.3 | 0.1.4 | Patch |
 | `@backstage/cli-module-info` | 0.1.3 | 0.1.4 | Patch |
 | `@backstage/cli-module-lint` | 0.1.3 | 0.1.4 | Patch |
@@ -41,7 +41,7 @@
 | `@backstage/cli-module-translations` | 0.1.3 | 0.1.4 | Patch |
 | `@backstage/cli-node` | 0.3.3 | 0.3.4 | Patch |
 | `@backstage/codemods` | 0.1.57 | 0.1.58 | Patch |
-| `@backstage/config-loader` | 1.10.12 | 1.11.0 | Minor |
+| `@backstage/config-loader` | 1.10.12 | 1.11.1 | Minor |
 | `@backstage/connections` | 0.1.0 | 0.2.0 | Minor ⚠️ |
 | `@backstage/core-app-api` | 1.20.2 | 1.20.3 | Patch |
 | `@backstage/core-compat-api` | 0.5.12 | 0.5.13 | Patch |

@@ -1,23 +1,26 @@
 # RHDH Release next (Backstage 1.54.0-next.1)
 
-## Compared to 1.53.0 (RHDH 1.11-m2)
+## Compared to 1.53.1 (RHDH 1.11-m2)
 
-0 added, 0 removed, 165 upgraded, 46 unchanged.
+0 added, 0 removed, 168 upgraded, 43 unchanged.
 
 ⚠️ Need extra attention: 3 0.x minor, 2 0.0.x patch.
 
 ### Version bumps
 
-| Package | 1.53.0 | 1.54.0-next.1 | Type |
+| Package | 1.53.1 | 1.54.0-next.1 | Type |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.10 | 1.7.11-next.0 | Patch |
 | `@backstage/backend-app-api` | 1.7.2 | 1.7.3-next.0 | Patch |
-| `@backstage/backend-defaults` | 0.17.5 | 0.17.6-next.1 | Patch |
-| `@backstage/backend-dynamic-feature-service` | 0.8.4 | 0.8.5-next.0 | Patch |
+| `@backstage/backend-defaults` | 0.17.6 | 0.17.6-next.1 | Patch |
+| `@backstage/backend-dynamic-feature-service` | 0.8.5 | 0.8.5-next.0 | Patch |
 | `@backstage/backend-openapi-utils` | 0.7.0 | 0.7.1-next.0 | Patch |
 | `@backstage/backend-plugin-api` | 1.9.3 | 1.10.0-next.0 | Minor |
 | `@backstage/backend-test-utils` | 1.11.5 | 1.11.6-next.0 | Patch |
 | `@backstage/cli` | 0.36.4 | 0.36.5-next.0 | Patch |
+| `@backstage/cli-module-build` | 0.1.6 | 0.1.5 | Patch |
+| `@backstage/cli-module-config` | 0.1.5 | 0.1.4 | Patch |
+| `@backstage/config-loader` | 1.11.1 | 1.11.0 | Patch |
 | `@backstage/connections` | 0.2.0 | 0.3.0-next.1 | Minor ⚠️ |
 | `@backstage/core-app-api` | 1.20.3 | 1.20.4-next.0 | Patch |
 | `@backstage/core-compat-api` | 0.5.13 | 0.5.14-next.0 | Patch |
