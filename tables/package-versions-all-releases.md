@@ -1,11 +1,11 @@
 # Package versions — all releases
 
-Versions of **321 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.54.0-next.2, RHDH 1.11-m2 = Backstage 1.53.1, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
+Versions of **321 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.54.0-next.3, RHDH 1.11-m2 = Backstage 1.53.1, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
 
 | Package | next | 1.11-m2 | 1.11-m1 | 1.10 | 1.9 | 1.8 | 1.7 | 1.6 | 1.5 | 1.4 | 1.3 | 1.2 | 1.1 | 1.0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.11-next.1 | 1.7.10 | 1.7.9 | 1.7.6 | 1.7.2 | 1.6.5 | 1.6.2 | 1.5.17 | 1.5.16 | 1.5.12 | 1.5.9 | 1.5.4 | 1.5.0 | 1.4.4 |
-| `@backstage/backend-app-api` | 1.7.3-next.0 | 1.7.2 | 1.7.1 | 1.6.0 | 1.3.0 | 1.2.6 | 1.2.3 | 1.2.0 | 1.1.1 | 1.0.1 | 0.8.0 | 0.7.2 | 0.5.14 | 0.5.7 |
+| `@backstage/backend-app-api` | 1.7.3-next.1 | 1.7.2 | 1.7.1 | 1.6.0 | 1.3.0 | 1.2.6 | 1.2.3 | 1.2.0 | 1.1.1 | 1.0.1 | 0.8.0 | 0.7.2 | 0.5.14 | 0.5.7 |
 | `@backstage/backend-common` |  |  |  |  |  |  |  |  |  |  | 0.23.3 | 0.21.7 | 0.21.3 | 0.19.8 |
 | `@backstage/backend-defaults` | 0.17.7-next.2 | 0.17.6 | 0.17.4 | 0.16.0 | 0.13.1 | 0.12.0 | 0.10.0 | 0.8.1 | 0.7.0 | 0.5.2 | 0.4.1 | 0.2.17 | 0.2.13 | 0.2.6 |
 | `@backstage/backend-dev-utils` | 0.1.7 | 0.1.7 | 0.1.7 | 0.1.7 | 0.1.5 | 0.1.5 | 0.1.5 | 0.1.5 | 0.1.5 | 0.1.5 | 0.1.4 | 0.1.4 | 0.1.4 | 0.1.2 |
@@ -36,12 +36,12 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/codemods` | 0.1.58 | 0.1.58 | 0.1.57 | 0.1.55 | 0.1.52 | 0.1.52 | 0.1.52 | 0.1.52 | 0.1.52 | 0.1.51 | 0.1.49 | 0.1.48 | 0.1.47 | 0.1.46 |
 | `@backstage/config` | 1.3.8 | 1.3.8 | 1.3.8 | 1.3.6 | 1.3.6 | 1.3.3 | 1.3.2 | 1.3.2 | 1.3.2 | 1.2.0 | 1.2.0 | 1.2.0 | 1.1.1 | 1.1.1 |
 | `@backstage/config-loader` | 1.11.2-next.0 | 1.11.1 | 1.10.12 | 1.10.9 | 1.10.6 | 1.10.2 | 1.10.1 | 1.9.6 | 1.9.5 | 1.9.1 | 1.8.1 | 1.8.0 | 1.6.2 | 1.5.2 |
-| `@backstage/connections` | 0.3.0-next.1 | 0.2.0 | 0.1.0 |  |  |  |  |  |  |  |  |  |  |  |
+| `@backstage/connections` | 0.3.0-next.2 | 0.2.0 | 0.1.0 |  |  |  |  |  |  |  |  |  |  |  |
 | `@backstage/core-app-api` | 1.20.4-next.1 | 1.20.3 | 1.20.2 | 1.19.6 | 1.19.2 | 1.18.0 | 1.17.0 | 1.15.5 | 1.15.4 | 1.15.1 | 1.14.1 | 1.12.4 | 1.12.0 | 1.11.0 |
 | `@backstage/core-compat-api` | 0.5.14-next.1 | 0.5.13 | 0.5.12 | 0.5.9 | 0.5.4 | 0.5.1 | 0.4.2 | 0.3.6 | 0.3.5 | 0.3.1 | 0.2.7 | 0.2.4 | 0.2.0 |  |
 | `@backstage/core-components` | 0.18.13-next.2 | 0.18.12 | 0.18.11 | 0.18.8 | 0.18.3 | 0.17.5 | 0.17.2 | 0.16.4 | 0.16.3 | 0.15.1 | 0.14.9 | 0.14.6 | 0.14.0 | 0.13.7 |
-| `@backstage/core-plugin-api` | 1.12.9-next.0 | 1.12.8 | 1.12.7 | 1.12.4 | 1.12.0 | 1.10.9 | 1.10.7 | 1.10.4 | 1.10.3 | 1.10.0 | 1.9.3 | 1.9.2 | 1.9.0 | 1.7.0 |
-| `@backstage/create-app` | 0.9.1-next.2 | 0.9.0 | 0.8.4 | 0.8.1 | 0.7.6 | 0.7.3 | 0.6.2 | 0.5.25 | 0.5.24 | 0.5.21 | 0.5.17 | 0.5.14 | 0.5.11 | 0.5.6 |
+| `@backstage/core-plugin-api` | 1.12.9-next.1 | 1.12.8 | 1.12.7 | 1.12.4 | 1.12.0 | 1.10.9 | 1.10.7 | 1.10.4 | 1.10.3 | 1.10.0 | 1.9.3 | 1.9.2 | 1.9.0 | 1.7.0 |
+| `@backstage/create-app` | 0.9.1-next.3 | 0.9.0 | 0.8.4 | 0.8.1 | 0.7.6 | 0.7.3 | 0.6.2 | 0.5.25 | 0.5.24 | 0.5.21 | 0.5.17 | 0.5.14 | 0.5.11 | 0.5.6 |
 | `@backstage/dev-utils` | 1.1.26-next.2 | 1.1.25 | 1.1.24 | 1.1.21 | 1.1.17 | 1.1.13 | 1.1.10 | 1.1.7 | 1.1.6 | 1.1.2 | 1.0.36 | 1.0.31 | 1.0.27 | 1.0.22 |
 | `@backstage/e2e-test-utils` | 0.1.2 | 0.1.2 | 0.1.2 | 0.1.2 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.0 |
 | `@backstage/errors` | 1.3.1 | 1.3.1 | 1.3.1 | 1.2.7 | 1.2.7 | 1.2.7 | 1.2.7 | 1.2.7 | 1.2.7 | 1.2.4 | 1.2.4 | 1.2.4 | 1.2.3 | 1.2.3 |
@@ -53,7 +53,7 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/frontend-dynamic-feature-loader` | 0.1.15-next.1 | 0.1.14 | 0.1.13 | 0.1.10 | 0.1.7 | 0.1.4 | 0.1.1 |  |  |  |  |  |  |  |
 | `@backstage/frontend-plugin-api` | 0.18.0-next.0 | 0.17.3 | 0.17.2 | 0.15.1 | 0.13.1 | 0.11.0 | 0.10.2 | 0.9.5 | 0.9.4 | 0.9.0 | 0.6.7 | 0.6.4 | 0.6.0 | 0.2.0 |
 | `@backstage/frontend-test-utils` | 0.6.3-next.1 | 0.6.2 | 0.6.1 | 0.5.1 | 0.4.1 | 0.3.5 | 0.3.2 | 0.2.6 | 0.2.5 | 0.2.1 | 0.1.11 | 0.1.6 | 0.1.2 |  |
-| `@backstage/integration` | 2.1.0-next.0 | 2.0.3 | 2.0.3 | 2.0.0 | 1.18.2 | 1.17.1 | 1.17.0 | 1.16.1 | 1.16.1 | 1.15.1 | 1.13.0 | 1.10.0 | 1.9.0 | 1.7.1 |
+| `@backstage/integration` | 2.1.0-next.1 | 2.0.3 | 2.0.3 | 2.0.0 | 1.18.2 | 1.17.1 | 1.17.0 | 1.16.1 | 1.16.1 | 1.15.1 | 1.13.0 | 1.10.0 | 1.9.0 | 1.7.1 |
 | `@backstage/integration-aws-node` | 0.2.0 | 0.2.0 | 0.2.0 | 0.1.20 | 0.1.19 | 0.1.17 | 0.1.16 | 0.1.15 | 0.1.15 | 0.1.12 | 0.1.12 | 0.1.12 | 0.1.9 | 0.1.7 |
 | `@backstage/integration-react` | 1.2.21-next.1 | 1.2.20 | 1.2.19 | 1.2.16 | 1.2.12 | 1.2.9 | 1.2.7 | 1.2.4 | 1.2.3 | 1.2.0 | 1.1.29 | 1.1.26 | 1.1.24 | 1.1.20 |
 | `@backstage/module-federation-common` | 0.1.4 | 0.1.4 | 0.1.4 | 0.1.2 |  |  |  |  |  |  |  |  |  |  |
@@ -67,7 +67,7 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-analytics-module-ga4` |  |  |  |  |  |  |  |  |  |  |  | 0.2.5 | 0.2.0 | 0.1.5 |
 | `@backstage/plugin-analytics-module-newrelic-browser` |  |  |  |  |  |  |  |  |  |  |  | 0.1.5 | 0.1.0 | 0.0.3 |
 | `@backstage/plugin-apache-airflow` |  |  |  |  |  |  |  |  |  |  |  | 0.2.25 | 0.2.20 | 0.2.16 |
-| `@backstage/plugin-api-docs` | 0.14.4-next.1 | 0.14.3 | 0.14.2 | 0.13.5 | 0.13.1 | 0.12.10 | 0.12.7 | 0.12.4 | 0.12.3 | 0.11.11 | 0.11.7 | 0.11.4 | 0.11.0 | 0.9.12 |
+| `@backstage/plugin-api-docs` | 0.14.4-next.2 | 0.14.3 | 0.14.2 | 0.13.5 | 0.13.1 | 0.12.10 | 0.12.7 | 0.12.4 | 0.12.3 | 0.11.11 | 0.11.7 | 0.11.4 | 0.11.0 | 0.9.12 |
 | `@backstage/plugin-api-docs-module-protoc-gen-doc` | 0.1.11 | 0.1.11 | 0.1.11 | 0.1.11 | 0.1.10 | 0.1.10 | 0.1.10 | 0.1.9 | 0.1.8 | 0.1.8 | 0.1.7 | 0.1.6 | 0.1.6 | 0.1.4 |
 | `@backstage/plugin-apollo-explorer` |  |  |  |  |  |  |  |  |  |  |  | 0.2.1 | 0.1.20 | 0.1.16 |
 | `@backstage/plugin-app` | 0.5.2-next.2 | 0.5.1 | 0.5.0 | 0.4.2 | 0.3.2 | 0.2.0 | 0.1.9 | 0.1.6 | 0.1.5 | 0.1.1 |  |  |  |  |
@@ -90,7 +90,7 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-auth-backend-module-gitlab-provider` | 0.4.6-next.0 | 0.4.5 | 0.4.4 | 0.4.1 | 0.3.9 | 0.3.6 | 0.3.3 | 0.3.0 | 0.2.4 | 0.2.1 | 0.1.19 | 0.1.14 | 0.1.10 | 0.1.3 |
 | `@backstage/plugin-auth-backend-module-google-provider` | 0.3.18-next.0 | 0.3.17 | 0.3.16 | 0.3.13 | 0.3.9 | 0.3.6 | 0.3.3 | 0.3.0 | 0.2.4 | 0.2.1 | 0.1.19 | 0.1.14 | 0.1.10 | 0.1.3 |
 | `@backstage/plugin-auth-backend-module-guest-provider` | 0.2.22-next.0 | 0.2.21 | 0.2.20 | 0.2.17 | 0.2.14 | 0.2.11 | 0.2.8 | 0.2.5 | 0.2.4 | 0.2.1 | 0.1.8 | 0.1.3 |  |  |
-| `@backstage/plugin-auth-backend-module-microsoft-provider` | 0.3.18-next.0 | 0.3.17 | 0.3.16 | 0.3.13 | 0.3.9 | 0.3.6 | 0.3.3 | 0.3.0 | 0.2.4 | 0.2.1 | 0.1.17 | 0.1.12 | 0.1.8 | 0.1.1 |
+| `@backstage/plugin-auth-backend-module-microsoft-provider` | 0.3.18-next.1 | 0.3.17 | 0.3.16 | 0.3.13 | 0.3.9 | 0.3.6 | 0.3.3 | 0.3.0 | 0.2.4 | 0.2.1 | 0.1.17 | 0.1.12 | 0.1.8 | 0.1.1 |
 | `@backstage/plugin-auth-backend-module-oauth2-provider` | 0.4.18-next.0 | 0.4.17 | 0.4.16 | 0.4.13 | 0.4.9 | 0.4.6 | 0.4.3 | 0.4.0 | 0.3.4 | 0.3.1 | 0.2.3 | 0.1.14 | 0.1.10 | 0.1.3 |
 | `@backstage/plugin-auth-backend-module-oauth2-proxy-provider` | 0.3.2-next.0 | 0.3.1 | 0.3.0 | 0.2.18 | 0.2.14 | 0.2.11 | 0.2.8 | 0.2.5 | 0.2.4 | 0.2.1 | 0.1.15 | 0.1.10 | 0.1.6 |  |
 | `@backstage/plugin-auth-backend-module-oidc-provider` | 0.4.19-next.0 | 0.4.18 | 0.4.17 | 0.4.14 | 0.4.9 | 0.4.6 | 0.4.3 | 0.4.0 | 0.3.4 | 0.3.1 | 0.2.3 | 0.1.8 | 0.1.3 |  |
@@ -113,7 +113,7 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-bazaar-backend` |  |  |  |  |  |  |  |  |  |  |  | 0.3.16 | 0.3.11 | 0.3.4 |
 | `@backstage/plugin-bitbucket-cloud-common` | 0.3.12-next.0 | 0.3.11 | 0.3.11 | 0.3.8 | 0.3.4 | 0.3.1 | 0.3.0 | 0.2.27 | 0.2.27 | 0.2.24 | 0.2.21 | 0.2.18 | 0.2.16 | 0.2.13 |
 | `@backstage/plugin-bitrise` |  |  |  |  |  |  |  |  |  |  |  | 0.1.62 | 0.1.57 | 0.1.52 |
-| `@backstage/plugin-catalog` | 2.0.8-next.2 | 2.0.7 | 2.0.6 | 2.0.1 | 1.32.0 | 1.31.2 | 1.30.0 | 1.27.0 | 1.26.1 | 1.24.0 | 1.21.1 | 1.19.0 | 1.17.0 | 1.14.0 |
+| `@backstage/plugin-catalog` | 2.0.8-next.3 | 2.0.7 | 2.0.6 | 2.0.1 | 1.32.0 | 1.31.2 | 1.30.0 | 1.27.0 | 1.26.1 | 1.24.0 | 1.21.1 | 1.19.0 | 1.17.0 | 1.14.0 |
 | `@backstage/plugin-catalog-backend` | 3.9.0-next.2 | 3.8.1 | 3.8.0 | 3.5.0 | 3.2.0 | 3.0.1 | 2.0.0 | 1.31.0 | 1.30.0 | 1.27.1 | 1.24.0 | 1.21.1 | 1.17.3 | 1.14.0 |
 | `@backstage/plugin-catalog-backend-module-ai-model` | 0.1.3-next.0 | 0.1.2 | 0.1.1 |  |  |  |  |  |  |  |  |  |  |  |
 | `@backstage/plugin-catalog-backend-module-aws` | 0.4.26-next.1 | 0.4.25 | 0.4.24 | 0.4.21 | 0.4.17 | 0.4.14 | 0.4.11 | 0.4.8 | 0.4.7 | 0.4.4 | 0.3.17 | 0.3.12 | 0.3.7 | 0.3.0 |
@@ -129,7 +129,7 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-catalog-backend-module-github-org` | 0.3.25-next.0 | 0.3.24 | 0.3.23 | 0.3.20 | 0.3.16 | 0.3.13 | 0.3.10 | 0.3.7 | 0.3.6 | 0.3.3 | 0.1.17 | 0.1.12 | 0.1.7 | 0.1.0 |
 | `@backstage/plugin-catalog-backend-module-gitlab` | 0.8.6-next.1 | 0.8.5 | 0.8.4 | 0.8.1 | 0.7.5 | 0.7.2 | 0.6.6 | 0.6.3 | 0.6.2 | 0.4.4 | 0.3.21 | 0.3.15 | 0.3.10 | 0.3.3 |
 | `@backstage/plugin-catalog-backend-module-gitlab-org` | 0.2.24-next.0 | 0.2.23 | 0.2.22 | 0.2.19 | 0.2.15 | 0.2.12 | 0.2.9 | 0.2.6 | 0.2.5 | 0.2.2 | 0.0.5 |  |  |  |
-| `@backstage/plugin-catalog-backend-module-incremental-ingestion` | 0.7.15-next.1 | 0.7.14 | 0.7.13 | 0.7.10 | 0.7.6 | 0.7.3 | 0.7.0 | 0.6.3 | 0.6.2 | 0.5.6 | 0.4.27 | 0.4.22 | 0.4.17 | 0.4.10 |
+| `@backstage/plugin-catalog-backend-module-incremental-ingestion` | 0.7.15-next.2 | 0.7.14 | 0.7.13 | 0.7.10 | 0.7.6 | 0.7.3 | 0.7.0 | 0.6.3 | 0.6.2 | 0.5.6 | 0.4.27 | 0.4.22 | 0.4.17 | 0.4.10 |
 | `@backstage/plugin-catalog-backend-module-ldap` | 0.12.8-next.0 | 0.12.7 | 0.12.6 | 0.12.3 | 0.12.0 | 0.11.8 | 0.11.5 | 0.11.2 | 0.11.1 | 0.9.1 | 0.7.0 | 0.5.33 | 0.5.28 | 0.5.21 |
 | `@backstage/plugin-catalog-backend-module-logs` | 0.1.25-next.1 | 0.1.24 | 0.1.23 | 0.1.20 | 0.1.16 | 0.1.13 | 0.1.10 | 0.1.7 | 0.1.6 | 0.1.3 | 0.0.1 |  |  |  |
 | `@backstage/plugin-catalog-backend-module-msgraph` | 0.10.5-next.0 | 0.10.4 | 0.10.3 | 0.9.1 | 0.8.2 | 0.7.3 | 0.7.0 | 0.6.7 | 0.6.6 | 0.6.3 | 0.5.30 | 0.5.25 | 0.5.20 | 0.5.13 |
@@ -139,11 +139,11 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` | 0.2.23-next.1 | 0.2.22 | 0.2.21 | 0.2.18 | 0.2.14 | 0.2.11 | 0.2.8 | 0.2.5 | 0.2.4 | 0.2.1 | 0.1.20 | 0.1.15 | 0.1.10 | 0.1.3 |
 | `@backstage/plugin-catalog-backend-module-unprocessed` | 0.6.15-next.0 | 0.6.14 | 0.6.13 | 0.6.9 | 0.6.6 | 0.6.3 | 0.6.0 | 0.5.5 | 0.5.4 | 0.5.1 | 0.4.9 | 0.4.4 | 0.3.10 | 0.3.3 |
 | `@backstage/plugin-catalog-common` | 1.1.10 | 1.1.10 | 1.1.10 | 1.1.8 | 1.1.7 | 1.1.5 | 1.1.4 | 1.1.3 | 1.1.3 | 1.1.0 | 1.0.25 | 1.0.22 | 1.0.21 | 1.0.17 |
-| `@backstage/plugin-catalog-graph` | 0.6.7-next.1 | 0.6.6 | 0.6.5 | 0.6.0 | 0.5.3 | 0.4.22 | 0.4.19 | 0.4.16 | 0.4.15 | 0.4.11 | 0.4.7 | 0.4.4 | 0.4.0 | 0.2.37 |
+| `@backstage/plugin-catalog-graph` | 0.6.7-next.2 | 0.6.6 | 0.6.5 | 0.6.0 | 0.5.3 | 0.4.22 | 0.4.19 | 0.4.16 | 0.4.15 | 0.4.11 | 0.4.7 | 0.4.4 | 0.4.0 | 0.2.37 |
 | `@backstage/plugin-catalog-graphql` |  |  |  |  |  |  |  |  |  |  |  |  |  | 0.4.0 |
 | `@backstage/plugin-catalog-import` | 0.13.16-next.2 | 0.13.15 | 0.13.14 | 0.13.11 | 0.13.7 | 0.13.4 | 0.13.0 | 0.12.10 | 0.12.9 | 0.12.5 | 0.12.1 | 0.10.10 | 0.10.6 | 0.10.1 |
 | `@backstage/plugin-catalog-node` | 2.2.4-next.0 | 2.2.3 | 2.2.2 | 2.1.0 | 1.20.0 | 1.18.0 | 1.17.0 | 1.16.0 | 1.15.1 | 1.13.1 | 1.12.4 | 1.11.1 | 1.7.3 | 1.4.7 |
-| `@backstage/plugin-catalog-react` | 3.2.1-next.2 | 3.2.0 | 3.1.0 | 2.1.1 | 1.21.3 | 1.20.1 | 1.18.0 | 1.15.2 | 1.15.1 | 1.14.0 | 1.12.2 | 1.11.3 | 1.10.0 | 1.8.5 |
+| `@backstage/plugin-catalog-react` | 3.2.1-next.3 | 3.2.0 | 3.1.0 | 2.1.1 | 1.21.3 | 1.20.1 | 1.18.0 | 1.15.2 | 1.15.1 | 1.14.0 | 1.12.2 | 1.11.3 | 1.10.0 | 1.8.5 |
 | `@backstage/plugin-catalog-unprocessed-entities` | 0.2.34-next.1 | 0.2.33 | 0.2.32 | 0.2.28 | 0.2.23 | 0.2.20 | 0.2.17 | 0.2.14 | 0.2.13 | 0.2.9 | 0.2.6 | 0.2.3 | 0.1.8 | 0.1.4 |
 | `@backstage/plugin-catalog-unprocessed-entities-common` | 0.0.16 | 0.0.16 | 0.0.16 | 0.0.13 | 0.0.11 | 0.0.9 | 0.0.8 | 0.0.7 | 0.0.7 | 0.0.4 | 0.0.3 | 0.0.1 |  |  |
 | `@backstage/plugin-cicd-statistics` |  |  |  |  |  |  |  |  |  |  |  | 0.1.37 | 0.1.32 | 0.1.27 |
@@ -197,8 +197,8 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-graphiql` |  |  |  |  |  |  |  |  |  |  |  | 0.3.8 | 0.3.3 | 0.2.55 |
 | `@backstage/plugin-graphql-backend` |  |  |  |  |  |  |  |  |  |  |  |  |  | 0.2.0 |
 | `@backstage/plugin-graphql-voyager` |  |  |  |  |  |  |  |  |  |  |  | 0.1.17 | 0.1.12 | 0.1.8 |
-| `@backstage/plugin-home` | 0.9.9-next.1 | 0.9.8 | 0.9.7 | 0.9.3 | 0.8.14 | 0.8.11 | 0.8.8 | 0.8.5 | 0.8.4 | 0.8.0 | 0.7.8 | 0.7.3 | 0.6.2 | 0.5.9 |
-| `@backstage/plugin-home-react` | 0.1.41-next.1 | 0.1.40 | 0.1.39 | 0.1.36 | 0.1.32 | 0.1.29 | 0.1.26 | 0.1.23 | 0.1.22 | 0.1.18 | 0.1.15 | 0.1.12 | 0.1.8 | 0.1.4 |
+| `@backstage/plugin-home` | 0.9.9-next.2 | 0.9.8 | 0.9.7 | 0.9.3 | 0.8.14 | 0.8.11 | 0.8.8 | 0.8.5 | 0.8.4 | 0.8.0 | 0.7.8 | 0.7.3 | 0.6.2 | 0.5.9 |
+| `@backstage/plugin-home-react` | 0.1.41-next.2 | 0.1.40 | 0.1.39 | 0.1.36 | 0.1.32 | 0.1.29 | 0.1.26 | 0.1.23 | 0.1.22 | 0.1.18 | 0.1.15 | 0.1.12 | 0.1.8 | 0.1.4 |
 | `@backstage/plugin-ilert` |  |  |  |  |  |  |  |  |  |  |  | 0.2.24 | 0.2.19 | 0.2.14 |
 | `@backstage/plugin-jenkins` |  |  |  |  |  |  |  |  |  |  |  | 0.9.10 | 0.9.5 | 0.9.0 |
 | `@backstage/plugin-jenkins-backend` |  |  |  |  |  |  |  |  |  |  |  | 0.4.5 | 0.3.7 | 0.3.0 |
@@ -217,7 +217,7 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-linguist` |  |  |  |  |  |  |  |  |  |  |  | 0.1.20 | 0.1.15 | 0.1.10 |
 | `@backstage/plugin-linguist-backend` |  |  |  |  |  |  |  |  |  |  |  | 0.5.16 | 0.5.10 | 0.5.3 |
 | `@backstage/plugin-linguist-common` |  |  |  |  |  |  |  |  |  |  |  | 0.1.3 | 0.1.2 | 0.1.2 |
-| `@backstage/plugin-mcp-actions-backend` | 0.2.1-next.1 | 0.2.0 | 0.1.14 | 0.1.11 | 0.1.5 | 0.1.2 |  |  |  |  |  |  |  |  |
+| `@backstage/plugin-mcp-actions-backend` | 0.2.1-next.2 | 0.2.0 | 0.1.14 | 0.1.11 | 0.1.5 | 0.1.2 |  |  |  |  |  |  |  |  |
 | `@backstage/plugin-microsoft-calendar` |  |  |  |  |  |  |  |  |  |  |  | 0.1.17 | 0.1.12 | 0.1.8 |
 | `@backstage/plugin-mui-to-bui` | 0.2.10-next.1 | 0.2.9 | 0.2.8 | 0.2.5 | 0.2.1 |  |  |  |  |  |  |  |  |  |
 | `@backstage/plugin-newrelic` |  |  |  |  |  |  |  |  |  |  |  | 0.3.50 | 0.3.45 | 0.3.41 |
@@ -250,7 +250,7 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-puppetdb` |  |  |  |  |  |  |  |  |  |  |  | 0.1.18 | 0.1.13 | 0.1.8 |
 | `@backstage/plugin-rollbar` |  |  |  |  |  |  |  |  |  |  |  | 0.4.35 | 0.4.30 | 0.4.25 |
 | `@backstage/plugin-rollbar-backend` |  |  |  |  |  |  |  |  |  |  |  | 0.1.63 | 0.1.58 | 0.1.51 |
-| `@backstage/plugin-scaffolder` | 1.38.2-next.2 | 1.38.1 | 1.38.0 | 1.36.1 | 1.34.3 | 1.34.0 | 1.31.0 | 1.28.0 | 1.27.5 | 1.26.2 | 1.23.0 | 1.19.3 | 1.18.0 | 1.15.1 |
+| `@backstage/plugin-scaffolder` | 1.38.2-next.3 | 1.38.1 | 1.38.0 | 1.36.1 | 1.34.3 | 1.34.0 | 1.31.0 | 1.28.0 | 1.27.5 | 1.26.2 | 1.23.0 | 1.19.3 | 1.18.0 | 1.15.1 |
 | `@backstage/plugin-scaffolder-backend` | 4.0.3-next.2 | 4.0.2 | 4.0.1 | 3.3.0 | 3.0.1 | 2.2.0 | 1.33.0 | 1.30.0 | 1.29.0 | 1.26.3 | 1.23.0 | 1.22.5 | 1.21.3 | 1.18.1 |
 | `@backstage/plugin-scaffolder-backend-module-azure` | 0.2.24-next.1 | 0.2.23 | 0.2.22 | 0.2.19 | 0.2.15 | 0.2.12 | 0.2.9 | 0.2.6 | 0.2.5 | 0.2.2 | 0.1.14 | 0.1.9 | 0.1.5 |  |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket` |  |  |  |  | 0.3.16 | 0.3.13 | 0.3.10 | 0.3.7 | 0.3.6 | 0.3.2 | 0.2.12 | 0.2.7 | 0.2.3 |  |
@@ -271,7 +271,7 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-scaffolder-node` | 0.13.6-next.2 | 0.13.5 | 0.13.4 | 0.13.1 | 0.12.1 | 0.11.0 | 0.8.2 | 0.7.0 | 0.6.3 | 0.5.1 | 0.4.8 | 0.4.3 | 0.3.3 | 0.2.7 |
 | `@backstage/plugin-scaffolder-node-test-utils` | 0.3.14-next.0 | 0.3.13 | 0.3.12 | 0.3.9 | 0.3.5 | 0.3.2 | 0.2.2 | 0.1.19 | 0.1.18 | 0.1.15 | 0.1.9 | 0.1.3 |  |  |
 | `@backstage/plugin-scaffolder-react` | 2.0.3-next.2 | 2.0.2 | 2.0.1 | 1.20.0 | 1.19.3 | 1.19.0 | 1.16.0 | 1.14.5 | 1.14.4 | 1.13.2 | 1.10.0 | 1.8.4 | 1.8.0 | 1.5.6 |
-| `@backstage/plugin-search` | 1.7.7-next.1 | 1.7.6 | 1.7.5 | 1.7.0 | 1.5.0 | 1.4.29 | 1.4.26 | 1.4.23 | 1.4.22 | 1.4.18 | 1.4.14 | 1.4.10 | 1.4.6 | 1.4.1 |
+| `@backstage/plugin-search` | 1.7.7-next.2 | 1.7.6 | 1.7.5 | 1.7.0 | 1.5.0 | 1.4.29 | 1.4.26 | 1.4.23 | 1.4.22 | 1.4.18 | 1.4.14 | 1.4.10 | 1.4.6 | 1.4.1 |
 | `@backstage/plugin-search-backend` | 2.1.5-next.0 | 2.1.4 | 2.1.3 | 2.1.0 | 2.0.8 | 2.0.5 | 2.0.2 | 1.8.2 | 1.8.1 | 1.6.1 | 1.5.14 | 1.5.7 | 1.5.3 | 1.4.6 |
 | `@backstage/plugin-search-backend-module-catalog` | 0.3.18-next.0 | 0.3.17 | 0.3.16 | 0.3.13 | 0.3.10 | 0.3.7 | 0.3.4 | 0.3.1 | 0.3.0 | 0.2.4 | 0.1.28 | 0.1.23 | 0.1.17 | 0.1.10 |
 | `@backstage/plugin-search-backend-module-elasticsearch` | 1.8.6-next.0 | 1.8.5 | 1.8.4 | 1.8.1 | 1.7.8 | 1.7.5 | 1.7.2 | 1.6.5 | 1.6.4 | 1.6.1 | 1.5.3 | 1.4.0 | 1.3.16 | 1.3.9 |
