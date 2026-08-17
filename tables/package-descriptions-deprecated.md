@@ -1,12 +1,13 @@
 # Package descriptions — deprecated
 
-**110 packages** removed from the `main` branch — *Last included in* names the last release that included them.
+**111 packages** removed from the `main` branch — *Last included in* names the last release that included them.
 
 | Package | Backstage role | Description | Last included in |
 | --- | --- | --- | --- |
 | `@backstage/backend-common` | node-library | Common functionality library for Backstage backends | 1.29.2 |
 | `@backstage/backend-tasks` | node-library | Common distributed task management library for Backstage backends | 1.29.2 |
 | `@backstage/canon` | web-library |  | 1.39.1 |
+| `@backstage/codemods` | cli | A collection of codemods for Backstage projects | 1.54.0-next.3 |
 | `@backstage/plugin-adr` | frontend-plugin |  | 1.26.5 |
 | `@backstage/plugin-adr-backend` | backend-plugin |  | 1.26.5 |
 | `@backstage/plugin-adr-common` | common-library | Common functionalities for the adr plugin | 1.26.5 |

@@ -1,6 +1,6 @@
 # Package descriptions — all
 
-**321 packages** overall — **211 active** on the `main` branch, **110 removed**. *Last included in* is only set for removed packages.
+**321 packages** overall — **210 active** on the `main` branch, **111 removed**. *Last included in* is only set for removed packages.
 
 | Package | Backstage role | Description | Last included in |
 | --- | --- | --- | --- |
@@ -33,7 +33,7 @@
 | `@backstage/cli-module-test-jest` | cli-module | CLI module for Backstage CLI |  |
 | `@backstage/cli-module-translations` | cli-module | CLI module for Backstage CLI |  |
 | `@backstage/cli-node` | node-library | Node.js library for Backstage CLIs |  |
-| `@backstage/codemods` | cli | A collection of codemods for Backstage projects |  |
+| `@backstage/codemods` | cli | A collection of codemods for Backstage projects | 1.54.0-next.3 |
 | `@backstage/config` | common-library | Config API used by Backstage core, backend, and CLI |  |
 | `@backstage/config-loader` | node-library | Config loading functionality used by Backstage backend, and CLI |  |
 | `@backstage/connections` | common-library | Connections framework used by Backstage to better manage external connections used by integrations and plugins |  |

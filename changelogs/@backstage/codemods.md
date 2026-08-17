@@ -1,5 +1,9 @@
 # @backstage/codemods
 
+> [!WARNING]
+> **DEPRECATED**: This package is no longer part of the Backstage `main` branch.
+> The last Backstage release that included it was **1.54.0-next.3**.
+
 ## 0.1.58
 
 ### Patch Changes
