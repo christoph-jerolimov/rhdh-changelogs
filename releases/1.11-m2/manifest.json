@@ -1,5 +1,5 @@
 {
-  "releaseVersion": "1.54.0",
+  "releaseVersion": "1.54.1",
   "packages": [
     {
       "name": "@backstage/app-defaults",
@@ -575,7 +575,7 @@
     },
     {
       "name": "@backstage/plugin-kubernetes-backend",
-      "version": "0.21.7"
+      "version": "0.21.8"
     },
     {
       "name": "@backstage/plugin-kubernetes-cluster",
@@ -747,7 +747,7 @@
     },
     {
       "name": "@backstage/plugin-search-backend",
-      "version": "2.1.5"
+      "version": "2.1.6"
     },
     {
       "name": "@backstage/plugin-search-backend-module-catalog",
@@ -755,7 +755,7 @@
     },
     {
       "name": "@backstage/plugin-search-backend-module-elasticsearch",
-      "version": "1.8.6"
+      "version": "1.8.7"
     },
     {
       "name": "@backstage/plugin-search-backend-module-explore",

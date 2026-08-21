@@ -1,4 +1,4 @@
-# RHDH Release 1.11-m2 (Backstage 1.54.0)
+# RHDH Release 1.11-m2 (Backstage 1.54.1)
 
 ## Compared to 1.52.1 (RHDH 1.11-m1)
 
@@ -20,7 +20,7 @@
 
 ### Version bumps
 
-| Package | 1.52.1 | 1.54.0 | Type |
+| Package | 1.52.1 | 1.54.1 | Type |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.9 | 1.7.11 | Patch |
 | `@backstage/backend-app-api` | 1.7.1 | 1.7.3 | Patch |
@@ -147,7 +147,7 @@
 | `@backstage/plugin-home` | 0.9.7 | 0.9.9 | Patch |
 | `@backstage/plugin-home-react` | 0.1.39 | 0.1.41 | Patch |
 | `@backstage/plugin-kubernetes` | 0.12.20 | 0.12.22 | Patch |
-| `@backstage/plugin-kubernetes-backend` | 0.21.5 | 0.21.7 | Patch |
+| `@backstage/plugin-kubernetes-backend` | 0.21.5 | 0.21.8 | Patch |
 | `@backstage/plugin-kubernetes-cluster` | 0.0.38 | 0.0.40 | Patch ⚠️ |
 | `@backstage/plugin-kubernetes-node` | 0.4.5 | 0.4.7 | Patch |
 | `@backstage/plugin-kubernetes-react` | 0.5.21 | 0.5.23 | Patch |
@@ -188,9 +188,9 @@
 | `@backstage/plugin-scaffolder-node-test-utils` | 0.3.12 | 0.3.14 | Patch |
 | `@backstage/plugin-scaffolder-react` | 2.0.1 | 2.0.3 | Patch |
 | `@backstage/plugin-search` | 1.7.5 | 1.7.7 | Patch |
-| `@backstage/plugin-search-backend` | 2.1.3 | 2.1.5 | Patch |
+| `@backstage/plugin-search-backend` | 2.1.3 | 2.1.6 | Patch |
 | `@backstage/plugin-search-backend-module-catalog` | 0.3.16 | 0.3.18 | Patch |
-| `@backstage/plugin-search-backend-module-elasticsearch` | 1.8.4 | 1.8.6 | Patch |
+| `@backstage/plugin-search-backend-module-elasticsearch` | 1.8.4 | 1.8.7 | Patch |
 | `@backstage/plugin-search-backend-module-explore` | 0.3.15 | 0.3.17 | Patch |
 | `@backstage/plugin-search-backend-module-pg` | 0.5.56 | 0.5.58 | Patch |
 | `@backstage/plugin-search-backend-module-stack-overflow-collator` | 0.3.21 | 0.3.23 | Patch |

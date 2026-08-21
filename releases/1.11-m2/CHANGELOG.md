@@ -1,6 +1,6 @@
 # RHDH Release 1.11-m2 changelog
 
-Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.0 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
+Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.1 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
 
 ## Summary
 
@@ -66,7 +66,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.0 (RHDH 1.11-
   - [`@backstage/plugin-events-backend-module-azure` (0.2.32 → 0.2.34)](#backstageplugin-events-backend-module-azure-0232--0234)
   - [`@backstage/plugin-home` (0.9.7 → 0.9.9)](#backstageplugin-home-097--099)
   - [`@backstage/plugin-home-react` (0.1.39 → 0.1.41)](#backstageplugin-home-react-0139--0141)
-  - [`@backstage/plugin-kubernetes-backend` (0.21.5 → 0.21.7)](#backstageplugin-kubernetes-backend-0215--0217)
+  - [`@backstage/plugin-kubernetes-backend` (0.21.5 → 0.21.8)](#backstageplugin-kubernetes-backend-0215--0218)
   - [`@backstage/plugin-kubernetes-react` (0.5.21 → 0.5.23)](#backstageplugin-kubernetes-react-0521--0523)
   - [`@backstage/plugin-notifications` (0.5.18 → 0.5.20)](#backstageplugin-notifications-0518--0520)
   - [`@backstage/plugin-notifications-backend` (0.6.6 → 0.6.8)](#backstageplugin-notifications-backend-066--068)
@@ -772,7 +772,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.0 (RHDH 1.11-
 
 - [`a178067`](https://github.com/backstage/backstage/commit/a178067): Added `HomePageDefaultConfigItem` type and optional `defaultConfig` prop to `HomePageLayoutProps`.
 
-### `@backstage/plugin-kubernetes-backend` (0.21.5 → [0.21.7](../../changelogs/@backstage/plugin-kubernetes-backend.md#0217))
+### `@backstage/plugin-kubernetes-backend` (0.21.5 → [0.21.8](../../changelogs/@backstage/plugin-kubernetes-backend.md#0218))
 
 #### 0.21.7
 
@@ -1316,9 +1316,9 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.0 (RHDH 1.11-
 - `@backstage/plugin-scaffolder-backend-module-sentry` (0.3.5 → [0.3.7](../../changelogs/@backstage/plugin-scaffolder-backend-module-sentry.md#037))
 - `@backstage/plugin-scaffolder-node-test-utils` (0.3.12 → [0.3.14](../../changelogs/@backstage/plugin-scaffolder-node-test-utils.md#0314))
 - `@backstage/plugin-scaffolder-react` (2.0.1 → [2.0.3](../../changelogs/@backstage/plugin-scaffolder-react.md#203))
-- `@backstage/plugin-search-backend` (2.1.3 → [2.1.5](../../changelogs/@backstage/plugin-search-backend.md#215))
+- `@backstage/plugin-search-backend` (2.1.3 → [2.1.6](../../changelogs/@backstage/plugin-search-backend.md#216))
 - `@backstage/plugin-search-backend-module-catalog` (0.3.16 → [0.3.18](../../changelogs/@backstage/plugin-search-backend-module-catalog.md#0318))
-- `@backstage/plugin-search-backend-module-elasticsearch` (1.8.4 → [1.8.6](../../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#186))
+- `@backstage/plugin-search-backend-module-elasticsearch` (1.8.4 → [1.8.7](../../changelogs/@backstage/plugin-search-backend-module-elasticsearch.md#187))
 - `@backstage/plugin-search-backend-module-pg` (0.5.56 → [0.5.58](../../changelogs/@backstage/plugin-search-backend-module-pg.md#0558))
 - `@backstage/plugin-search-backend-node` (1.4.5 → [1.4.7](../../changelogs/@backstage/plugin-search-backend-node.md#147))
 - `@backstage/plugin-search-react` (1.11.5 → [1.11.7](../../changelogs/@backstage/plugin-search-react.md#1117))
