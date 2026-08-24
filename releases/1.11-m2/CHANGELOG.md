@@ -1,6 +1,6 @@
 # RHDH Release 1.11-m2 changelog
 
-Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.1 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
+Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.3 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
 
 ## Summary
 
@@ -66,7 +66,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.1 (RHDH 1.11-
   - [`@backstage/plugin-events-backend-module-azure` (0.2.32 → 0.2.34)](#backstageplugin-events-backend-module-azure-0232--0234)
   - [`@backstage/plugin-home` (0.9.7 → 0.9.9)](#backstageplugin-home-097--099)
   - [`@backstage/plugin-home-react` (0.1.39 → 0.1.41)](#backstageplugin-home-react-0139--0141)
-  - [`@backstage/plugin-kubernetes-backend` (0.21.5 → 0.21.8)](#backstageplugin-kubernetes-backend-0215--0218)
+  - [`@backstage/plugin-kubernetes-backend` (0.21.5 → 0.21.9)](#backstageplugin-kubernetes-backend-0215--0219)
   - [`@backstage/plugin-kubernetes-react` (0.5.21 → 0.5.23)](#backstageplugin-kubernetes-react-0521--0523)
   - [`@backstage/plugin-notifications` (0.5.18 → 0.5.20)](#backstageplugin-notifications-0518--0520)
   - [`@backstage/plugin-notifications-backend` (0.6.6 → 0.6.8)](#backstageplugin-notifications-backend-066--068)
@@ -102,7 +102,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.1 (RHDH 1.11-
   - [`@backstage/core-plugin-api` (1.12.7 → 1.12.9)](#backstagecore-plugin-api-1127--1129)
   - [`@backstage/plugin-gateway-backend` (1.1.6 → 1.1.8)](#backstageplugin-gateway-backend-116--118)
   - [`@backstage/plugin-scaffolder` (1.38.0 → 1.38.2)](#backstageplugin-scaffolder-1380--1382)
-  - [`@backstage/plugin-scaffolder-backend` (4.0.1 → 4.0.3)](#backstageplugin-scaffolder-backend-401--403)
+  - [`@backstage/plugin-scaffolder-backend` (4.0.1 → 4.0.4)](#backstageplugin-scaffolder-backend-401--404)
   - [`@backstage/plugin-scaffolder-common` (2.2.1 → 2.2.2)](#backstageplugin-scaffolder-common-221--222)
   - [`@backstage/plugin-search` (1.7.5 → 1.7.7)](#backstageplugin-search-175--177)
   - [`@backstage/plugin-techdocs-node` (1.15.1 → 1.15.3)](#backstageplugin-techdocs-node-1151--1153)
@@ -772,7 +772,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.1 (RHDH 1.11-
 
 - [`a178067`](https://github.com/backstage/backstage/commit/a178067): Added `HomePageDefaultConfigItem` type and optional `defaultConfig` prop to `HomePageLayoutProps`.
 
-### `@backstage/plugin-kubernetes-backend` (0.21.5 → [0.21.8](../../changelogs/@backstage/plugin-kubernetes-backend.md#0218))
+### `@backstage/plugin-kubernetes-backend` (0.21.5 → [0.21.9](../../changelogs/@backstage/plugin-kubernetes-backend.md#0219))
 
 #### 0.21.7
 
@@ -1151,7 +1151,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.1 (RHDH 1.11-
 
 - [`c32e636`](https://github.com/backstage/backstage/commit/c32e636): Fixed an issue where Bitbucket Cloud and Bitbucket Server hosts would not render the correct repository and branch picker fields in the Scaffolder.
 
-### `@backstage/plugin-scaffolder-backend` (4.0.1 → [4.0.3](../../changelogs/@backstage/plugin-scaffolder-backend.md#403))
+### `@backstage/plugin-scaffolder-backend` (4.0.1 → [4.0.4](../../changelogs/@backstage/plugin-scaffolder-backend.md#404))
 
 #### 4.0.3
 

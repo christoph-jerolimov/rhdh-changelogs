@@ -1,5 +1,5 @@
 {
-  "releaseVersion": "1.54.1",
+  "releaseVersion": "1.54.3",
   "packages": [
     {
       "name": "@backstage/app-defaults",
@@ -575,7 +575,7 @@
     },
     {
       "name": "@backstage/plugin-kubernetes-backend",
-      "version": "0.21.8"
+      "version": "0.21.9"
     },
     {
       "name": "@backstage/plugin-kubernetes-cluster",
@@ -667,7 +667,7 @@
     },
     {
       "name": "@backstage/plugin-scaffolder-backend",
-      "version": "4.0.3"
+      "version": "4.0.4"
     },
     {
       "name": "@backstage/plugin-scaffolder-backend-module-azure",
