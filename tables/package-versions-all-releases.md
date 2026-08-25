@@ -1,6 +1,6 @@
 # Package versions — all releases
 
-Versions of **321 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = currently no Backstage next release, RHDH 1.11-m2 = Backstage 1.54.3, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
+Versions of **321 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = currently no Backstage next release, RHDH 1.11-m2 = Backstage 1.54.4, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
 
 | Package | next | 1.11-m2 | 1.11-m1 | 1.10 | 1.9 | 1.8 | 1.7 | 1.6 | 1.5 | 1.4 | 1.3 | 1.2 | 1.1 | 1.0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -251,7 +251,7 @@ Versions of **321 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-rollbar` |  |  |  |  |  |  |  |  |  |  |  | 0.4.35 | 0.4.30 | 0.4.25 |
 | `@backstage/plugin-rollbar-backend` |  |  |  |  |  |  |  |  |  |  |  | 0.1.63 | 0.1.58 | 0.1.51 |
 | `@backstage/plugin-scaffolder` |  | 1.38.2 | 1.38.0 | 1.36.1 | 1.34.3 | 1.34.0 | 1.31.0 | 1.28.0 | 1.27.5 | 1.26.2 | 1.23.0 | 1.19.3 | 1.18.0 | 1.15.1 |
-| `@backstage/plugin-scaffolder-backend` |  | 4.0.4 | 4.0.1 | 3.3.0 | 3.0.1 | 2.2.0 | 1.33.0 | 1.30.0 | 1.29.0 | 1.26.3 | 1.23.0 | 1.22.5 | 1.21.3 | 1.18.1 |
+| `@backstage/plugin-scaffolder-backend` |  | 4.0.5 | 4.0.1 | 3.3.0 | 3.0.1 | 2.2.0 | 1.33.0 | 1.30.0 | 1.29.0 | 1.26.3 | 1.23.0 | 1.22.5 | 1.21.3 | 1.18.1 |
 | `@backstage/plugin-scaffolder-backend-module-azure` |  | 0.2.24 | 0.2.22 | 0.2.19 | 0.2.15 | 0.2.12 | 0.2.9 | 0.2.6 | 0.2.5 | 0.2.2 | 0.1.14 | 0.1.9 | 0.1.5 |  |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket` |  |  |  |  | 0.3.16 | 0.3.13 | 0.3.10 | 0.3.7 | 0.3.6 | 0.3.2 | 0.2.12 | 0.2.7 | 0.2.3 |  |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` |  | 0.3.9 | 0.3.7 | 0.3.4 | 0.2.15 | 0.2.12 | 0.2.9 | 0.2.6 | 0.2.5 | 0.2.2 | 0.1.12 | 0.1.7 | 0.1.3 |  |

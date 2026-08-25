@@ -1,6 +1,6 @@
 # RHDH Release 1.11-m2 changelog
 
-Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.3 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
+Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.4 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
 
 ## Summary
 
@@ -102,7 +102,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.3 (RHDH 1.11-
   - [`@backstage/core-plugin-api` (1.12.7 → 1.12.9)](#backstagecore-plugin-api-1127--1129)
   - [`@backstage/plugin-gateway-backend` (1.1.6 → 1.1.8)](#backstageplugin-gateway-backend-116--118)
   - [`@backstage/plugin-scaffolder` (1.38.0 → 1.38.2)](#backstageplugin-scaffolder-1380--1382)
-  - [`@backstage/plugin-scaffolder-backend` (4.0.1 → 4.0.4)](#backstageplugin-scaffolder-backend-401--404)
+  - [`@backstage/plugin-scaffolder-backend` (4.0.1 → 4.0.5)](#backstageplugin-scaffolder-backend-401--405)
   - [`@backstage/plugin-scaffolder-common` (2.2.1 → 2.2.2)](#backstageplugin-scaffolder-common-221--222)
   - [`@backstage/plugin-search` (1.7.5 → 1.7.7)](#backstageplugin-search-175--177)
   - [`@backstage/plugin-techdocs-node` (1.15.1 → 1.15.3)](#backstageplugin-techdocs-node-1151--1153)
@@ -1151,7 +1151,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.3 (RHDH 1.11-
 
 - [`c32e636`](https://github.com/backstage/backstage/commit/c32e636): Fixed an issue where Bitbucket Cloud and Bitbucket Server hosts would not render the correct repository and branch picker fields in the Scaffolder.
 
-### `@backstage/plugin-scaffolder-backend` (4.0.1 → [4.0.4](../../changelogs/@backstage/plugin-scaffolder-backend.md#404))
+### `@backstage/plugin-scaffolder-backend` (4.0.1 → [4.0.5](../../changelogs/@backstage/plugin-scaffolder-backend.md#405))
 
 #### 4.0.3
 

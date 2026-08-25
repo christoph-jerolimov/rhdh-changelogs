@@ -1,6 +1,6 @@
 # Package versions — last 3 releases
 
-Versions of **211 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = currently no Backstage next release, RHDH 1.11-m2 = Backstage 1.54.3, RHDH 1.11-m1 = Backstage 1.52.1.
+Versions of **211 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = currently no Backstage next release, RHDH 1.11-m2 = Backstage 1.54.4, RHDH 1.11-m1 = Backstage 1.52.1.
 
 | Package | next | 1.11-m2 | 1.11-m1 |
 | --- | --- | --- | --- |
@@ -163,7 +163,7 @@ Versions of **211 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-proxy-backend` |  | 0.6.16 | 0.6.14 |
 | `@backstage/plugin-proxy-node` |  | 0.1.18 | 0.1.16 |
 | `@backstage/plugin-scaffolder` |  | 1.38.2 | 1.38.0 |
-| `@backstage/plugin-scaffolder-backend` |  | 4.0.4 | 4.0.1 |
+| `@backstage/plugin-scaffolder-backend` |  | 4.0.5 | 4.0.1 |
 | `@backstage/plugin-scaffolder-backend-module-azure` |  | 0.2.24 | 0.2.22 |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` |  | 0.3.9 | 0.3.7 |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket-server` |  | 0.2.24 | 0.2.22 |

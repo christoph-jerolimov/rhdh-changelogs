@@ -1,4 +1,4 @@
-# RHDH Release 1.11-m2 (Backstage 1.54.3)
+# RHDH Release 1.11-m2 (Backstage 1.54.4)
 
 ## Compared to 1.52.1 (RHDH 1.11-m1)
 
@@ -20,7 +20,7 @@
 
 ### Version bumps
 
-| Package | 1.52.1 | 1.54.3 | Type |
+| Package | 1.52.1 | 1.54.4 | Type |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.9 | 1.7.11 | Patch |
 | `@backstage/backend-app-api` | 1.7.1 | 1.7.3 | Patch |
@@ -168,7 +168,7 @@
 | `@backstage/plugin-proxy-backend` | 0.6.14 | 0.6.16 | Patch |
 | `@backstage/plugin-proxy-node` | 0.1.16 | 0.1.18 | Patch |
 | `@backstage/plugin-scaffolder` | 1.38.0 | 1.38.2 | Patch |
-| `@backstage/plugin-scaffolder-backend` | 4.0.1 | 4.0.4 | Patch |
+| `@backstage/plugin-scaffolder-backend` | 4.0.1 | 4.0.5 | Patch |
 | `@backstage/plugin-scaffolder-backend-module-azure` | 0.2.22 | 0.2.24 | Patch |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket-cloud` | 0.3.7 | 0.3.9 | Patch |
 | `@backstage/plugin-scaffolder-backend-module-bitbucket-server` | 0.2.22 | 0.2.24 | Patch |
