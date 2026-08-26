@@ -1,6 +1,6 @@
 # Package descriptions
 
-**210 packages** active on the `main` branch.
+**211 packages** active on the `main` branch.
 
 | Package | Backstage role | Description |
 | --- | --- | --- |
@@ -176,6 +176,7 @@
 | `@backstage/plugin-scaffolder-backend-module-notifications` | backend-plugin-module | The notifications backend module for the scaffolder plugin. |
 | `@backstage/plugin-scaffolder-backend-module-rails` | backend-plugin-module | A module for the scaffolder backend that lets you template projects using Rails |
 | `@backstage/plugin-scaffolder-backend-module-sentry` | backend-plugin-module |  |
+| `@backstage/plugin-scaffolder-backend-module-workspace-database` | backend-plugin-module | Database workspace provider module for @backstage/plugin-scaffolder-backend (development use only) |
 | `@backstage/plugin-scaffolder-backend-module-yeoman` | backend-plugin-module |  |
 | `@backstage/plugin-scaffolder-common` | common-library | Common functionalities for the scaffolder, to be shared between scaffolder and scaffolder-backend plugin |
 | `@backstage/plugin-scaffolder-node` | node-library | The plugin-scaffolder-node module for @backstage/plugin-scaffolder-backend |

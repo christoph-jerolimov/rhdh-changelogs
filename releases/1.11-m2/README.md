@@ -1,4 +1,4 @@
-# RHDH Release 1.11-m2 (Backstage 1.54.4)
+# RHDH Release 1.11-m2 (Backstage 1.54.5)
 
 ## Compared to 1.52.1 (RHDH 1.11-m1)
 
@@ -20,7 +20,7 @@
 
 ### Version bumps
 
-| Package | 1.52.1 | 1.54.4 | Type |
+| Package | 1.52.1 | 1.54.5 | Type |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.9 | 1.7.11 | Patch |
 | `@backstage/backend-app-api` | 1.7.1 | 1.7.3 | Patch |
@@ -123,9 +123,9 @@
 | `@backstage/plugin-catalog-backend-module-scaffolder-entity-model` | 0.2.21 | 0.2.23 | Patch |
 | `@backstage/plugin-catalog-backend-module-unprocessed` | 0.6.13 | 0.6.15 | Patch |
 | `@backstage/plugin-catalog-graph` | 0.6.5 | 0.6.7 | Patch |
-| `@backstage/plugin-catalog-import` | 0.13.14 | 0.13.16 | Patch |
+| `@backstage/plugin-catalog-import` | 0.13.14 | 0.13.17 | Patch |
 | `@backstage/plugin-catalog-node` | 2.2.2 | 2.2.4 | Patch |
-| `@backstage/plugin-catalog-react` | 3.1.0 | 3.2.1 | Minor |
+| `@backstage/plugin-catalog-react` | 3.1.0 | 3.2.2 | Minor |
 | `@backstage/plugin-catalog-unprocessed-entities` | 0.2.32 | 0.2.34 | Patch |
 | `@backstage/plugin-config-schema` | 0.1.81 | 0.1.83 | Patch |
 | `@backstage/plugin-devtools` | 0.1.40 | 0.1.42 | Patch |
@@ -158,7 +158,7 @@
 | `@backstage/plugin-notifications-backend-module-email` | 0.3.22 | 0.3.24 | Patch |
 | `@backstage/plugin-notifications-backend-module-slack` | 0.4.3 | 0.4.5 | Patch |
 | `@backstage/plugin-notifications-node` | 0.2.27 | 0.2.29 | Patch |
-| `@backstage/plugin-org` | 0.7.5 | 0.7.7 | Patch |
+| `@backstage/plugin-org` | 0.7.5 | 0.7.8 | Patch |
 | `@backstage/plugin-org-react` | 0.1.51 | 0.1.53 | Patch |
 | `@backstage/plugin-permission-backend` | 0.7.13 | 0.7.15 | Patch |
 | `@backstage/plugin-permission-backend-module-allow-all-policy` | 0.2.20 | 0.2.22 | Patch |

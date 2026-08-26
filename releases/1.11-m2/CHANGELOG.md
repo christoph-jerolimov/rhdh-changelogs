@@ -1,6 +1,6 @@
 # RHDH Release 1.11-m2 changelog
 
-Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.4 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
+Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.5 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
 
 ## Summary
 
@@ -28,7 +28,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.4 (RHDH 1.11-
   - [`@backstage/frontend-plugin-api` (0.17.2 → 0.18.0)](#backstagefrontend-plugin-api-0172--0180)
   - [`@backstage/plugin-auth-backend` (0.29.1 → 0.30.0)](#backstageplugin-auth-backend-0291--0300)
   - [`@backstage/plugin-catalog` (2.0.6 → 2.0.8)](#backstageplugin-catalog-206--208)
-  - [`@backstage/plugin-catalog-react` (3.1.0 → 3.2.1)](#backstageplugin-catalog-react-310--321)
+  - [`@backstage/plugin-catalog-react` (3.1.0 → 3.2.2)](#backstageplugin-catalog-react-310--322)
   - [`@backstage/plugin-mcp-actions-backend` (0.1.14 → 0.2.1)](#backstageplugin-mcp-actions-backend-0114--021)
   - [`@backstage/repo-tools` (0.17.3 → 0.19.0)](#backstagerepo-tools-0173--0190)
 - [0.x minor version bumps](#0x-minor-version-bumps)
@@ -61,7 +61,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.4 (RHDH 1.11-
   - [`@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.13 → 0.7.15)](#backstageplugin-catalog-backend-module-incremental-ingestion-0713--0715)
   - [`@backstage/plugin-catalog-backend-module-msgraph` (0.10.3 → 0.10.5)](#backstageplugin-catalog-backend-module-msgraph-0103--0105)
   - [`@backstage/plugin-catalog-graph` (0.6.5 → 0.6.7)](#backstageplugin-catalog-graph-065--067)
-  - [`@backstage/plugin-catalog-import` (0.13.14 → 0.13.16)](#backstageplugin-catalog-import-01314--01316)
+  - [`@backstage/plugin-catalog-import` (0.13.14 → 0.13.17)](#backstageplugin-catalog-import-01314--01317)
   - [`@backstage/plugin-catalog-unprocessed-entities` (0.2.32 → 0.2.34)](#backstageplugin-catalog-unprocessed-entities-0232--0234)
   - [`@backstage/plugin-events-backend-module-azure` (0.2.32 → 0.2.34)](#backstageplugin-events-backend-module-azure-0232--0234)
   - [`@backstage/plugin-home` (0.9.7 → 0.9.9)](#backstageplugin-home-097--099)
@@ -73,7 +73,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.4 (RHDH 1.11-
   - [`@backstage/plugin-notifications-backend-module-email` (0.3.22 → 0.3.24)](#backstageplugin-notifications-backend-module-email-0322--0324)
   - [`@backstage/plugin-notifications-backend-module-slack` (0.4.3 → 0.4.5)](#backstageplugin-notifications-backend-module-slack-043--045)
   - [`@backstage/plugin-notifications-node` (0.2.27 → 0.2.29)](#backstageplugin-notifications-node-0227--0229)
-  - [`@backstage/plugin-org` (0.7.5 → 0.7.7)](#backstageplugin-org-075--077)
+  - [`@backstage/plugin-org` (0.7.5 → 0.7.8)](#backstageplugin-org-075--078)
   - [`@backstage/plugin-permission-backend` (0.7.13 → 0.7.15)](#backstageplugin-permission-backend-0713--0715)
   - [`@backstage/plugin-permission-common` (0.9.9 → 0.9.10)](#backstageplugin-permission-common-099--0910)
   - [`@backstage/plugin-permission-node` (0.11.1 → 0.11.3)](#backstageplugin-permission-node-0111--0113)
@@ -305,7 +305,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.4 (RHDH 1.11-
 - [`a00547f`](https://github.com/backstage/backstage/commit/a00547f): Fix crash when exporting the catalog with unset filters.
 - [`1217673`](https://github.com/backstage/backstage/commit/1217673): Fixed a crash in the catalog export when an entity list filter is `undefined`, which could occur if optional filters were not set.
 
-### `@backstage/plugin-catalog-react` (3.1.0 → [3.2.1](../../changelogs/@backstage/plugin-catalog-react.md#321))
+### `@backstage/plugin-catalog-react` (3.1.0 → [3.2.2](../../changelogs/@backstage/plugin-catalog-react.md#322))
 
 #### 3.2.1
 
@@ -726,7 +726,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.4 (RHDH 1.11-
 
 - [`8babce3`](https://github.com/backstage/backstage/commit/8babce3): Fixed the catalog graph page so configured filter and graph defaults are applied when the page opens.
 
-### `@backstage/plugin-catalog-import` (0.13.14 → [0.13.16](../../changelogs/@backstage/plugin-catalog-import.md#01316))
+### `@backstage/plugin-catalog-import` (0.13.14 → [0.13.17](../../changelogs/@backstage/plugin-catalog-import.md#01317))
 
 #### 0.13.16
 
@@ -841,7 +841,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.4 (RHDH 1.11-
 
 - [`73ea4d7`](https://github.com/backstage/backstage/commit/73ea4d7): Migrated tests to msw version 2.
 
-### `@backstage/plugin-org` (0.7.5 → [0.7.7](../../changelogs/@backstage/plugin-org.md#077))
+### `@backstage/plugin-org` (0.7.5 → [0.7.8](../../changelogs/@backstage/plugin-org.md#078))
 
 #### 0.7.6
 
