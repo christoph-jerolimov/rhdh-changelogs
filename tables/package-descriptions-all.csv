@@ -25,6 +25,7 @@ Package,Backstage role,Description,Last included in
 @backstage/cli-module-maintenance,cli-module,CLI module for Backstage CLI,
 @backstage/cli-module-migrate,cli-module,CLI module for Backstage CLI,
 @backstage/cli-module-new,cli-module,CLI module for Backstage CLI,
+@backstage/cli-module-package-manager-yarn,cli-module,CLI module for Yarn package manager commands,
 @backstage/cli-module-test-jest,cli-module,CLI module for Backstage CLI,
 @backstage/cli-module-translations,cli-module,CLI module for Backstage CLI,
 @backstage/cli-node,node-library,Node.js library for Backstage CLIs,
