@@ -1,6 +1,6 @@
 # Package versions — last 3 releases
 
-Versions of **213 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.55.0-next.2, RHDH 1.11-m2 = Backstage 1.54.6, RHDH 1.11-m1 = Backstage 1.52.1.
+Versions of **213 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.55.0-next.2, RHDH 1.11-m2 = Backstage 1.54.7, RHDH 1.11-m1 = Backstage 1.52.1.
 
 | Package | next | 1.11-m2 | 1.11-m1 |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ Versions of **213 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-auth-backend-module-openshift-provider` | 0.1.11-next.0 | 0.1.10 | 0.1.8 |
 | `@backstage/plugin-auth-backend-module-pinniped-provider` | 0.3.18-next.1 | 0.3.17 | 0.3.15 |
 | `@backstage/plugin-auth-backend-module-vmware-cloud-provider` | 0.5.18-next.0 | 0.5.17 | 0.5.15 |
-| `@backstage/plugin-auth-node` | 0.7.5-next.1 | 0.7.4 | 0.7.2 |
+| `@backstage/plugin-auth-node` | 0.7.5-next.1 | 0.7.5 | 0.7.2 |
 | `@backstage/plugin-auth-react` | 0.1.31-next.1 | 0.1.30 | 0.1.28 |
 | `@backstage/plugin-bitbucket-cloud-common` | 0.3.13-next.1 | 0.3.12 | 0.3.11 |
 | `@backstage/plugin-catalog` | 2.0.9-next.2 | 2.0.8 | 2.0.6 |

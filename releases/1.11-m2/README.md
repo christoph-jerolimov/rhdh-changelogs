@@ -1,4 +1,4 @@
-# RHDH Release 1.11-m2 (Backstage 1.54.6)
+# RHDH Release 1.11-m2 (Backstage 1.54.7)
 
 ## Compared to 1.52.1 (RHDH 1.11-m1)
 
@@ -20,7 +20,7 @@
 
 ### Version bumps
 
-| Package | 1.52.1 | 1.54.6 | Type |
+| Package | 1.52.1 | 1.54.7 | Type |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.9 | 1.7.11 | Patch |
 | `@backstage/backend-app-api` | 1.7.1 | 1.7.3 | Patch |
@@ -95,7 +95,7 @@
 | `@backstage/plugin-auth-backend-module-openshift-provider` | 0.1.8 | 0.1.10 | Patch |
 | `@backstage/plugin-auth-backend-module-pinniped-provider` | 0.3.15 | 0.3.17 | Patch |
 | `@backstage/plugin-auth-backend-module-vmware-cloud-provider` | 0.5.15 | 0.5.17 | Patch |
-| `@backstage/plugin-auth-node` | 0.7.2 | 0.7.4 | Patch |
+| `@backstage/plugin-auth-node` | 0.7.2 | 0.7.5 | Patch |
 | `@backstage/plugin-auth-react` | 0.1.28 | 0.1.30 | Patch |
 | `@backstage/plugin-bitbucket-cloud-common` | 0.3.11 | 0.3.12 | Patch |
 | `@backstage/plugin-catalog` | 2.0.6 | 2.0.8 | Patch |

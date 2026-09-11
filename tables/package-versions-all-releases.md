@@ -1,6 +1,6 @@
 # Package versions — all releases
 
-Versions of **323 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.55.0-next.2, RHDH 1.11-m2 = Backstage 1.54.6, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
+Versions of **323 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.55.0-next.2, RHDH 1.11-m2 = Backstage 1.54.7, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
 
 | Package | next | 1.11-m2 | 1.11-m1 | 1.10 | 1.9 | 1.8 | 1.7 | 1.6 | 1.5 | 1.4 | 1.3 | 1.2 | 1.1 | 1.0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -100,7 +100,7 @@ Versions of **323 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-auth-backend-module-openshift-provider` | 0.1.11-next.0 | 0.1.10 | 0.1.8 | 0.1.5 | 0.1.2 |  |  |  |  |  |  |  |  |  |
 | `@backstage/plugin-auth-backend-module-pinniped-provider` | 0.3.18-next.1 | 0.3.17 | 0.3.15 | 0.3.12 | 0.3.9 | 0.3.6 | 0.3.3 | 0.3.0 | 0.2.4 | 0.2.1 | 0.1.16 | 0.1.11 | 0.1.7 | 0.1.0 |
 | `@backstage/plugin-auth-backend-module-vmware-cloud-provider` | 0.5.18-next.0 | 0.5.17 | 0.5.15 | 0.5.12 | 0.5.9 | 0.5.6 | 0.5.3 | 0.5.0 | 0.4.3 | 0.4.0 | 0.2.3 | 0.1.9 | 0.1.5 |  |
-| `@backstage/plugin-auth-node` | 0.7.5-next.1 | 0.7.4 | 0.7.2 | 0.6.14 | 0.6.9 | 0.6.6 | 0.6.3 | 0.6.0 | 0.5.6 | 0.5.3 | 0.4.17 | 0.4.12 | 0.4.8 | 0.4.0 |
+| `@backstage/plugin-auth-node` | 0.7.5-next.1 | 0.7.5 | 0.7.2 | 0.6.14 | 0.6.9 | 0.6.6 | 0.6.3 | 0.6.0 | 0.5.6 | 0.5.3 | 0.4.17 | 0.4.12 | 0.4.8 | 0.4.0 |
 | `@backstage/plugin-auth-react` | 0.1.31-next.1 | 0.1.30 | 0.1.28 | 0.1.25 | 0.1.21 | 0.1.18 | 0.1.15 | 0.1.12 | 0.1.11 | 0.1.7 | 0.1.4 | 0.1.1 |  |  |
 | `@backstage/plugin-azure-devops` |  |  |  |  |  |  |  |  |  |  |  | 0.4.4 | 0.3.12 | 0.3.7 |
 | `@backstage/plugin-azure-devops-backend` |  |  |  |  |  |  |  |  |  |  |  | 0.6.5 | 0.5.5 | 0.4.3 |

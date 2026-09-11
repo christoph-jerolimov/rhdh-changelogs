@@ -1,6 +1,6 @@
 # RHDH Release 1.11-m2 changelog
 
-Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.6 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
+Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.7 (RHDH 1.11-m2) — 1 added, 1 removed, 192 upgraded, 17 unchanged packages.
 
 ## Summary
 
@@ -56,7 +56,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.6 (RHDH 1.11-
   - [`@backstage/plugin-app-react` (0.2.4 → 0.2.6)](#backstageplugin-app-react-024--026)
   - [`@backstage/plugin-auth-backend-module-auth0-provider` (0.4.2 → 0.4.4)](#backstageplugin-auth-backend-module-auth0-provider-042--044)
   - [`@backstage/plugin-auth-backend-module-microsoft-provider` (0.3.16 → 0.3.18)](#backstageplugin-auth-backend-module-microsoft-provider-0316--0318)
-  - [`@backstage/plugin-auth-node` (0.7.2 → 0.7.4)](#backstageplugin-auth-node-072--074)
+  - [`@backstage/plugin-auth-node` (0.7.2 → 0.7.5)](#backstageplugin-auth-node-072--075)
   - [`@backstage/plugin-catalog-backend-module-backstage-openapi` (0.5.15 → 0.5.17)](#backstageplugin-catalog-backend-module-backstage-openapi-0515--0517)
   - [`@backstage/plugin-catalog-backend-module-incremental-ingestion` (0.7.13 → 0.7.15)](#backstageplugin-catalog-backend-module-incremental-ingestion-0713--0715)
   - [`@backstage/plugin-catalog-backend-module-msgraph` (0.10.3 → 0.10.5)](#backstageplugin-catalog-backend-module-msgraph-0103--0105)
@@ -680,7 +680,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.54.6 (RHDH 1.11-
 
 - [`7ccaf9d`](https://github.com/backstage/backstage/commit/7ccaf9d): Fixed an issue where acquiring tokens with non-Graph scopes (such as Azure Management API) would crash the sign-in resolver because the user profile was unavailable. This affected both the initial sign-in and later token refreshes. The Microsoft authenticator now makes a separate Graph API call to fetch the profile when the primary token targets a different resource. Setting the `skipUserProfile` configuration option to true disables this extra call.
 
-### `@backstage/plugin-auth-node` (0.7.2 → [0.7.4](../../changelogs/@backstage/plugin-auth-node.md#074))
+### `@backstage/plugin-auth-node` (0.7.2 → [0.7.5](../../changelogs/@backstage/plugin-auth-node.md#075))
 
 #### 0.7.4
 
