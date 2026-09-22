@@ -1,4 +1,4 @@
-# RHDH Release 1.11-m2 (Backstage 1.55.0)
+# RHDH Release 1.11-m2 (Backstage 1.55.1)
 
 ## Compared to 1.52.1 (RHDH 1.11-m1)
 
@@ -8,7 +8,7 @@
 
 ### ⚠️ Major version bumps
 
-| Package | 1.52.1 | 1.55.0 |
+| Package | 1.52.1 | 1.55.1 |
 | --- | --- | --- |
 | `@backstage/plugin-catalog-backend` | **3.8.0** | **4.0.0** |
 | `@backstage/plugin-search-backend-module-elasticsearch` | **1.8.4** | **2.0.0** |
@@ -18,7 +18,7 @@
 
 | Package | Version |
 | --- | --- |
-| `@backstage/cli-module-package-manager-yarn` | 0.1.1 |
+| `@backstage/cli-module-package-manager-yarn` | 0.1.2 |
 | `@backstage/plugin-app-module-user-settings` | 0.1.2 |
 | `@backstage/plugin-scaffolder-backend-module-workspace-database` | 0.1.0 |
 
@@ -30,7 +30,7 @@
 
 ### Version bumps
 
-| Package | 1.52.1 | 1.55.0 | Type |
+| Package | 1.52.1 | 1.55.1 | Type |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.9 | 1.7.12 | Patch |
 | `@backstage/backend-app-api` | 1.7.1 | 1.7.4 | Patch |
@@ -219,7 +219,7 @@
 | `@backstage/plugin-signals-backend` | 0.3.16 | 0.3.19 | Patch |
 | `@backstage/plugin-signals-node` | 0.2.2 | 0.2.5 | Patch |
 | `@backstage/plugin-signals-react` | 0.0.23 | 0.0.26 | Patch ⚠️ |
-| `@backstage/plugin-techdocs` | 1.17.7 | 1.18.1 | Minor |
+| `@backstage/plugin-techdocs` | 1.17.7 | 1.18.2 | Minor |
 | `@backstage/plugin-techdocs-addons-test-utils` | 2.0.6 | 2.0.9 | Patch |
 | `@backstage/plugin-techdocs-backend` | 2.2.1 | 2.3.0 | Minor |
 | `@backstage/plugin-techdocs-module-addons-contrib` | 1.1.37 | 1.1.40 | Patch |

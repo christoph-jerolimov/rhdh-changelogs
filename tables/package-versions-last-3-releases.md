@@ -1,6 +1,6 @@
 # Package versions — last 3 releases
 
-Versions of **213 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = currently no Backstage next release, RHDH 1.11-m2 = Backstage 1.55.0, RHDH 1.11-m1 = Backstage 1.52.1.
+Versions of **213 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = currently no Backstage next release, RHDH 1.11-m2 = Backstage 1.55.1, RHDH 1.11-m1 = Backstage 1.52.1.
 
 | Package | next | 1.11-m2 | 1.11-m1 |
 | --- | --- | --- | --- |
@@ -27,7 +27,7 @@ Versions of **213 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/cli-module-maintenance` |  | 0.1.5 | 0.1.3 |
 | `@backstage/cli-module-migrate` |  | 0.2.1 | 0.1.3 |
 | `@backstage/cli-module-new` |  | 0.1.7 | 0.1.4 |
-| `@backstage/cli-module-package-manager-yarn` |  | 0.1.1 |  |
+| `@backstage/cli-module-package-manager-yarn` |  | 0.1.2 |  |
 | `@backstage/cli-module-test-jest` |  | 0.1.6 | 0.1.3 |
 | `@backstage/cli-module-translations` |  | 0.1.4 | 0.1.3 |
 | `@backstage/cli-node` |  | 0.3.4 | 0.3.3 |
@@ -199,7 +199,7 @@ Versions of **213 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-signals-backend` |  | 0.3.19 | 0.3.16 |
 | `@backstage/plugin-signals-node` |  | 0.2.5 | 0.2.2 |
 | `@backstage/plugin-signals-react` |  | 0.0.26 | 0.0.23 |
-| `@backstage/plugin-techdocs` |  | 1.18.1 | 1.17.7 |
+| `@backstage/plugin-techdocs` |  | 1.18.2 | 1.17.7 |
 | `@backstage/plugin-techdocs-addons-test-utils` |  | 2.0.9 | 2.0.6 |
 | `@backstage/plugin-techdocs-backend` |  | 2.3.0 | 2.2.1 |
 | `@backstage/plugin-techdocs-common` |  | 0.1.1 | 0.1.1 |

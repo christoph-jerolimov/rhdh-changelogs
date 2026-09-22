@@ -1,6 +1,6 @@
 # RHDH Release 1.11-m2 changelog
 
-Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.55.0 (RHDH 1.11-m2) — 3 added, 1 removed, 200 upgraded, 9 unchanged packages.
+Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.55.1 (RHDH 1.11-m2) — 3 added, 1 removed, 200 upgraded, 9 unchanged packages.
 
 ## Summary
 
@@ -17,7 +17,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.55.0 (RHDH 1.11-
 ## Table of contents
 
 - [Newly added packages](#newly-added-packages)
-  - [`@backstage/cli-module-package-manager-yarn` (new, 0.1.1)](#backstagecli-module-package-manager-yarn-new-011)
+  - [`@backstage/cli-module-package-manager-yarn` (new, 0.1.2)](#backstagecli-module-package-manager-yarn-new-012)
   - [`@backstage/plugin-app-module-user-settings` (new, 0.1.2)](#backstageplugin-app-module-user-settings-new-012)
   - [`@backstage/plugin-scaffolder-backend-module-workspace-database` (new, 0.1.0)](#backstageplugin-scaffolder-backend-module-workspace-database-new-010)
 - [Removed packages](#removed-packages)
@@ -132,7 +132,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.55.0 (RHDH 1.11-
   - [`@backstage/plugin-scaffolder-backend` (4.0.1 → 4.2.0)](#backstageplugin-scaffolder-backend-401--420)
   - [`@backstage/plugin-scaffolder-common` (2.2.1 → 2.3.0)](#backstageplugin-scaffolder-common-221--230)
   - [`@backstage/plugin-scaffolder-react` (2.0.1 → 2.1.0)](#backstageplugin-scaffolder-react-201--210)
-  - [`@backstage/plugin-techdocs` (1.17.7 → 1.18.1)](#backstageplugin-techdocs-1177--1181)
+  - [`@backstage/plugin-techdocs` (1.17.7 → 1.18.2)](#backstageplugin-techdocs-1177--1182)
   - [`@backstage/plugin-techdocs-backend` (2.2.1 → 2.3.0)](#backstageplugin-techdocs-backend-221--230)
   - [`@techdocs/cli` (1.11.1 → 1.12.0)](#techdocscli-1111--1120)
 - [Other patch version bumps](#other-patch-version-bumps)
@@ -154,7 +154,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.55.0 (RHDH 1.11-
 
 ## Newly added packages
 
-### `@backstage/cli-module-package-manager-yarn` (new, [0.1.1](../../changelogs/@backstage/cli-module-package-manager-yarn.md#011))
+### `@backstage/cli-module-package-manager-yarn` (new, [0.1.2](../../changelogs/@backstage/cli-module-package-manager-yarn.md#012))
 
 #### 0.1.1
 
@@ -2059,7 +2059,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 - [`ffaca06`](https://github.com/backstage/backstage/commit/ffaca06): Fixed several issues with scaffolder task event stream reconnection: retry timers are now properly cancelled on cleanup, concurrent reconnect attempts are guarded against, and tab visibility changes reconnect the stream using the last seen event cursor without re-fetching the task.
 - [`7c1019c`](https://github.com/backstage/backstage/commit/7c1019c): Fixed the scaffolder wizard not scrolling to the top on step change when the app uses the new frontend system (no `<main>` element).
 
-### `@backstage/plugin-techdocs` (1.17.7 → [1.18.1](../../changelogs/@backstage/plugin-techdocs.md#1181))
+### `@backstage/plugin-techdocs` (1.17.7 → [1.18.2](../../changelogs/@backstage/plugin-techdocs.md#1182))
 
 #### 1.18.1
 

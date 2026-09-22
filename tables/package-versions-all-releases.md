@@ -1,6 +1,6 @@
 # Package versions — all releases
 
-Versions of **323 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = currently no Backstage next release, RHDH 1.11-m2 = Backstage 1.55.0, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
+Versions of **323 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = currently no Backstage next release, RHDH 1.11-m2 = Backstage 1.55.1, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
 
 | Package | next | 1.11-m2 | 1.11-m1 | 1.10 | 1.9 | 1.8 | 1.7 | 1.6 | 1.5 | 1.4 | 1.3 | 1.2 | 1.1 | 1.0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ Versions of **323 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/cli-module-maintenance` |  | 0.1.5 | 0.1.3 | 0.1.0 |  |  |  |  |  |  |  |  |  |  |
 | `@backstage/cli-module-migrate` |  | 0.2.1 | 0.1.3 | 0.1.0 |  |  |  |  |  |  |  |  |  |  |
 | `@backstage/cli-module-new` |  | 0.1.7 | 0.1.4 | 0.1.1 |  |  |  |  |  |  |  |  |  |  |
-| `@backstage/cli-module-package-manager-yarn` |  | 0.1.1 |  |  |  |  |  |  |  |  |  |  |  |  |
+| `@backstage/cli-module-package-manager-yarn` |  | 0.1.2 |  |  |  |  |  |  |  |  |  |  |  |  |
 | `@backstage/cli-module-test-jest` |  | 0.1.6 | 0.1.3 | 0.1.0 |  |  |  |  |  |  |  |  |  |  |
 | `@backstage/cli-module-translations` |  | 0.1.4 | 0.1.3 | 0.1.0 |  |  |  |  |  |  |  |  |  |  |
 | `@backstage/cli-node` |  | 0.3.4 | 0.3.3 | 0.3.0 | 0.2.15 | 0.2.14 | 0.2.13 | 0.2.13 | 0.2.12 | 0.2.9 | 0.2.7 | 0.2.5 | 0.2.3 | 0.1.5 |
@@ -303,7 +303,7 @@ Versions of **323 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-tech-insights-common` |  |  |  |  |  |  |  |  |  |  |  | 0.2.13 | 0.2.12 | 0.2.12 |
 | `@backstage/plugin-tech-insights-node` |  |  |  |  |  |  |  |  |  |  |  | 0.6.1 | 0.4.19 | 0.4.12 |
 | `@backstage/plugin-tech-radar` |  |  |  |  |  |  |  |  |  |  |  | 0.7.4 | 0.6.13 | 0.6.9 |
-| `@backstage/plugin-techdocs` |  | 1.18.1 | 1.17.7 | 1.17.2 | 1.16.0 | 1.14.1 | 1.12.6 | 1.12.3 | 1.12.2 | 1.11.0 | 1.10.7 | 1.10.4 | 1.10.0 | 1.8.0 |
+| `@backstage/plugin-techdocs` |  | 1.18.2 | 1.17.7 | 1.17.2 | 1.16.0 | 1.14.1 | 1.12.6 | 1.12.3 | 1.12.2 | 1.11.0 | 1.10.7 | 1.10.4 | 1.10.0 | 1.8.0 |
 | `@backstage/plugin-techdocs-addons-test-utils` |  | 2.0.9 | 2.0.6 | 2.0.3 | 1.1.2 | 1.0.52 | 1.0.48 | 1.0.45 | 1.0.44 | 1.0.40 | 1.0.36 | 1.0.31 | 1.0.27 | 1.0.22 |
 | `@backstage/plugin-techdocs-backend` |  | 2.3.0 | 2.2.1 | 2.1.6 | 2.1.2 | 2.0.5 | 2.0.2 | 1.11.6 | 1.11.5 | 1.11.1 | 1.10.9 | 1.10.4 | 1.9.6 | 1.8.0 |
 | `@backstage/plugin-techdocs-common` |  | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.0 | 0.1.0 | 0.1.0 | 0.1.0 |  |  |  |  |
