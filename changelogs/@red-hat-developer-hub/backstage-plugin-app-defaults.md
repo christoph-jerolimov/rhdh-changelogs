@@ -1,5 +1,26 @@
 # @red-hat-developer-hub/backstage-plugin-app-defaults
 
+## 1.8.1
+
+### Patch Changes
+
+- f5f0d02: Updated translations for RHDH 2.1 (s3297).
+  - @red-hat-developer-hub/backstage-plugin-app-react@1.8.1
+
+## 1.8.0
+
+### Minor Changes
+
+- 379ab12: Localize sidebar item titles via a new `pages` translation namespace (looked up by English label), relabel Create as Self-Service, and drop the dedicated Learning Paths sidebar item so it uses the shared pages i18n.
+- d3313f9: When `appDefaultsFeatureLoader` (or the catalog / catalog-graph / api-docs plugin overrides) is enabled, NFS catalog entity pages match legacy RHDH: info cards on the left on Overview, Dependencies and System Diagram tabs, split relations graphs, and no API Definition card on Overview.
+
+  Override or disable individual extensions in `app.extensions` as needed — see README **Catalog entity pages (NFS)**.
+
+### Patch Changes
+
+- Updated dependencies [379ab12]
+  - @red-hat-developer-hub/backstage-plugin-app-react@1.8.0
+
 ## 1.7.0
 
 ### Minor Changes
