@@ -1,0 +1,26 @@
+---
+import Base from "../../layouts/Base.astro";
+import { pagesUnder, sourcePath, titleOf, url } from "../../lib/data";
+import { githubBlobUrl } from "../../lib/routes.mjs";
+
+const tables = await pagesUnder("tables/");
+---
+
+<Base title="Tables" section="tables">
+  <article class="markdown">
+    <h1>Tables</h1>
+    <p>Generated overviews across all RHDH releases. Every table is also available as CSV.</p>
+  </article>
+  <ul class="package-list">
+    {
+      tables.map((t) => (
+        <li>
+          <a href={url(t.id)}>{titleOf(t)}</a>
+          <span class="muted">
+            <a href={githubBlobUrl(sourcePath(t).replace(/\.md$/, ".csv"))}>CSV ↗</a>
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

@@ -1,0 +1,67 @@
+---
+import Base from "../../layouts/Base.astro";
+import { packageDescriptions, pagesUnder, titleOf, url } from "../../lib/data";
+
+const descriptions = packageDescriptions();
+const changelogs = await pagesUnder("changelogs/");
+const groups = new Map<string, { id: string; name: string; description: string; deprecated: boolean }[]>();
+for (const page of changelogs) {
+  const name = titleOf(page);
+  const scope = name.startsWith("@") ? name.split("/")[0]! : "Unscoped";
+  const list = groups.get(scope) ?? [];
+  list.push({
+    id: page.id,
+    name,
+    description: descriptions.get(name) ?? "",
+    deprecated: page.body?.includes("**DEPRECATED**") ?? false,
+  });
+  groups.set(scope, list);
+}
+const scopes = [...groups.keys()].sort((a, b) => (a === "Unscoped" ? 1 : b === "Unscoped" ? -1 : a.localeCompare(b)));
+---
+
+<Base title="Changelogs" section="changelogs">
+  <article class="markdown">
+    <h1>Changelogs</h1>
+    <p>
+      The <code>CHANGELOG.md</code> of all {changelogs.length} packages that appear in a mapped Backstage release manifest.
+    </p>
+  </article>
+  <input class="filter" type="search" placeholder="Filter packages…" aria-label="Filter packages" id="filter" />
+  {
+    scopes.map((scope) => (
+      <section data-group>
+        <h2>
+          {scope} <span class="muted">({groups.get(scope)!.length})</span>
+        </h2>
+        <ul class="package-list">
+          {groups.get(scope)!.map((p) => (
+            <li data-search={`${p.name} ${p.description}`.toLowerCase()}>
+              <a href={url(p.id)}>
+                <code>{p.name}</code>
+              </a>
+              {p.deprecated && <span class="badge">deprecated</span>}
+              {p.description && <span class="muted">{p.description}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>
+
+<script>
+  const input = document.getElementById("filter") as HTMLInputElement;
+  input.addEventListener("input", () => {
+    const terms = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+    for (const group of document.querySelectorAll<HTMLElement>("[data-group]")) {
+      let visible = 0;
+      for (const item of group.querySelectorAll<HTMLElement>("[data-search]")) {
+        const match = terms.every((t) => item.dataset.search!.includes(t));
+        item.hidden = !match;
+        if (match) visible++;
+      }
+      group.hidden = visible === 0;
+    }
+  });
+</script>

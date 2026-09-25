@@ -1,0 +1,28 @@
+---
+import { getEntry, render } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { releases, sourceUrl, url } from "../lib/data";
+
+const readme = (await getEntry("pages", "index"))!;
+const { Content } = await render(readme);
+const latest = releases().filter((r) => r.resolved).slice(0, 4);
+---
+
+<Base title="RHDH Change Monitor" source={sourceUrl(readme)}>
+  <h2>Latest releases</h2>
+  <ul class="cards">
+    {
+      latest.map((r) => (
+        <li>
+          <a class="card" href={url(`releases/${r.rhdh}`)}>
+            <strong>RHDH {r.rhdh}</strong>
+            <span>Backstage {r.resolved}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <article class="markdown">
+    <Content />
+  </article>
+</Base>

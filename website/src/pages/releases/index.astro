@@ -1,0 +1,50 @@
+---
+import { getEntry, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { releases, url } from "../../lib/data";
+
+const all = releases();
+const summary = await getEntry("pages", "tables/number-of-changed-packages");
+const Summary = summary ? (await render(summary)).Content : undefined;
+---
+
+<Base title="Releases" section="releases">
+  <article class="markdown">
+    <h1>RHDH releases</h1>
+    <p>
+      Every Red Hat Developer Hub release mapped to the Backstage release it is based on, newest first. Each release
+      compares its Backstage packages with those of the previous RHDH release.
+    </p>
+  </article>
+  <ul class="cards">
+    {
+      all.map((r) =>
+        r.resolved ? (
+          <li>
+            <a class="card" href={url(`releases/${r.rhdh}`)}>
+              <strong>RHDH {r.rhdh}</strong>
+              <span>
+                Backstage {r.resolved}
+                {r.resolved !== r.backstage && ` (${r.backstage})`}
+              </span>
+            </a>
+          </li>
+        ) : (
+          <li>
+            <div class="card">
+              <strong>RHDH {r.rhdh}</strong>
+              <span>Backstage {r.backstage} — not available yet</span>
+            </div>
+          </li>
+        ),
+      )
+    }
+  </ul>
+  {
+    Summary && (
+      <article class="markdown">
+        <Summary />
+      </article>
+    )
+  }
+</Base>

@@ -1,0 +1,51 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, render } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { type Page, sourcePath, sourceUrl, titleOf, url } from "../lib/data";
+import { githubBlobUrl } from "../lib/routes.mjs";
+
+export const getStaticPaths = (async () => {
+  const pages = await getCollection("pages", (p) => p.id !== "index");
+  return pages.map((page) => ({ params: { slug: page.id }, props: { page } }));
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props as { page: Page };
+const { Content } = await render(page);
+const [section, ...rest] = page.id.split("/") as ["releases" | "tables" | "changelogs", ...string[]];
+const sectionLabel = { releases: "Releases", tables: "Tables", changelogs: "Changelogs" }[section];
+
+// Release folders get tabs for their generated files.
+const release = section === "releases" ? rest[0] : undefined;
+const tabs = release
+  ? [
+      { label: "Overview", href: url(`releases/${release}`), current: rest.length === 1 },
+      { label: "Changelog", href: url(`releases/${release}/changelog`), current: rest[1] === "changelog" },
+      { label: "manifest.json ↗", href: githubBlobUrl(`releases/${release}/manifest.json`), current: false },
+    ]
+  : [];
+const csv = section === "tables" ? githubBlobUrl(sourcePath(page).replace(/\.md$/, ".csv")) : undefined;
+---
+
+<Base title={titleOf(page)} section={section} source={sourceUrl(page)}>
+  <div class="breadcrumbs">
+    <a href={url(section)}>{sectionLabel}</a>
+    {section === "changelogs" && rest.length > 1 && <> / {rest[0]}</>}
+    {release && <> / {release}</>}
+    {csv && <> · <a href={csv}>Download CSV ↗</a></>}
+  </div>
+  {
+    tabs.length > 0 && (
+      <nav class="tabs">
+        {tabs.map((t) => (
+          <a href={t.href} aria-current={t.current ? "page" : undefined}>
+            {t.label}
+          </a>
+        ))}
+      </nav>
+    )
+  }
+  <article class="markdown">
+    <Content />
+  </article>
+</Base>

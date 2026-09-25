@@ -1,0 +1,50 @@
+---
+import "../styles/global.css";
+import { url } from "../lib/data";
+import { githubUrl } from "../lib/routes.mjs";
+
+interface Props {
+  title: string;
+  /** Top-level section to highlight in the navigation. */
+  section?: "releases" | "tables" | "changelogs";
+  /** Source file on GitHub. */
+  source?: string;
+}
+
+const { title, section, source } = Astro.props;
+const siteName = "RHDH Change Monitor";
+const nav = [
+  { id: "releases", label: "Releases", href: url("releases") },
+  { id: "tables", label: "Tables", href: url("tables") },
+  { id: "changelogs", label: "Changelogs", href: url("changelogs") },
+] as const;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href={`data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🎧</text></svg>')}`} />
+    <title>{title === siteName ? title : `${title} · ${siteName}`}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href={url()}>🎧 {siteName}</a>
+        <nav>
+          {nav.map((item) => <a href={item.href} aria-current={section === item.id ? "page" : undefined}>{item.label}</a>)}
+          <a href={githubUrl}>GitHub</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="container site-footer">
+      Generated from <a href={githubUrl}>{githubUrl.replace("https://", "")}</a>
+      {source && <> · <a href={source}>View source on GitHub</a></>}
+    </footer>
+  </body>
+</html>

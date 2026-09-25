@@ -4,6 +4,18 @@ Automatically maintained mirror and analysis of the official Backstage package c
 
 A [GitHub workflow](.github/workflows/update.yml) runs daily at 06:17 UTC (and on demand via *Run workflow*), clones the upstream repositories, regenerates everything below, and commits changes to `main` in a single commit.
 
+## Website
+
+All generated Markdown is also published as a website on GitHub Pages: https://christoph-jerolimov.github.io/rhdh-change-monitor/
+
+The [Astro](https://astro.build) site in [`website/`](website) renders this README, the per-release folders, the tables, and every package changelog, with links between them rewritten to site pages. The [Deploy website workflow](.github/workflows/pages.yml) rebuilds it after every successful data update and on every push to `main` that touches the content or the site. To preview it locally:
+
+```sh
+cd website
+npm ci
+npm run dev
+```
+
 ## RHDH releases
 
 [`config.yaml`](config.yaml) maps each Red Hat Developer Hub (RHDH) release to the Backstage release it is based on. For every entry there is a folder named after the RHDH release (e.g. [`releases/1.9/`](releases/1.9), [`releases/1.10/`](releases/1.10)) — see [Per-release folders](#per-release-folders) for their contents.
