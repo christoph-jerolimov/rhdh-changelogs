@@ -1,6 +1,6 @@
 # Package versions — all releases
 
-Versions of **326 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.56.0-next.0, RHDH 1.11-m2 = Backstage 1.55.1, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
+Versions of **326 packages** across **14 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.56.0-next.0, RHDH 1.11-m2 = Backstage 1.55.2, RHDH 1.11-m1 = Backstage 1.52.1, RHDH 1.10 = Backstage 1.49.4, RHDH 1.9 = Backstage 1.45.3, RHDH 1.8 = Backstage 1.42.5, RHDH 1.7 = Backstage 1.39.1, RHDH 1.6 = Backstage 1.36.1, RHDH 1.5 = Backstage 1.35.1, RHDH 1.4 = Backstage 1.32.6, RHDH 1.3 = Backstage 1.29.2, RHDH 1.2 = Backstage 1.26.5, RHDH 1.1 = Backstage 1.23.4, RHDH 1.0 = Backstage 1.19.6.
 
 | Package | next | 1.11-m2 | 1.11-m1 | 1.10 | 1.9 | 1.8 | 1.7 | 1.6 | 1.5 | 1.4 | 1.3 | 1.2 | 1.1 | 1.0 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -311,7 +311,7 @@ Versions of **326 packages** across **14 RHDH releases** — columns ordered new
 | `@backstage/plugin-techdocs-backend` | 2.3.1-next.0 | 2.3.0 | 2.2.1 | 2.1.6 | 2.1.2 | 2.0.5 | 2.0.2 | 1.11.6 | 1.11.5 | 1.11.1 | 1.10.9 | 1.10.4 | 1.9.6 | 1.8.0 |
 | `@backstage/plugin-techdocs-common` | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.1 | 0.1.0 | 0.1.0 | 0.1.0 | 0.1.0 |  |  |  |  |
 | `@backstage/plugin-techdocs-module-addons-contrib` | 1.1.41-next.0 | 1.1.40 | 1.1.37 | 1.1.34 | 1.1.30 | 1.1.27 | 1.1.24 | 1.1.21 | 1.1.20 | 1.1.16 | 1.1.12 | 1.1.9 | 1.1.5 | 1.1.1 |
-| `@backstage/plugin-techdocs-node` | 2.0.1-next.0 | 2.0.0 | 1.15.1 | 1.14.4 | 1.13.9 | 1.13.6 | 1.13.3 | 1.13.0 | 1.12.16 | 1.12.12 | 1.12.8 | 1.12.3 | 1.11.5 | 1.9.0 |
+| `@backstage/plugin-techdocs-node` | 2.0.1-next.0 | 2.0.1 | 1.15.1 | 1.14.4 | 1.13.9 | 1.13.6 | 1.13.3 | 1.13.0 | 1.12.16 | 1.12.12 | 1.12.8 | 1.12.3 | 1.11.5 | 1.9.0 |
 | `@backstage/plugin-techdocs-react` | 1.3.16-next.0 | 1.3.15 | 1.3.12 | 1.3.9 | 1.3.5 | 1.3.2 | 1.2.17 | 1.2.14 | 1.2.13 | 1.2.9 | 1.2.6 | 1.2.3 | 1.1.16 | 1.1.12 |
 | `@backstage/plugin-todo` |  |  |  |  |  |  |  |  |  |  |  | 0.2.39 | 0.2.34 | 0.2.29 |
 | `@backstage/plugin-todo-backend` |  |  |  |  |  |  |  |  |  |  |  | 0.3.17 | 0.3.11 | 0.3.4 |

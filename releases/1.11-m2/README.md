@@ -1,4 +1,4 @@
-# RHDH Release 1.11-m2 (Backstage 1.55.1)
+# RHDH Release 1.11-m2 (Backstage 1.55.2)
 
 ## Compared to 1.52.1 (RHDH 1.11-m1)
 
@@ -8,11 +8,11 @@
 
 ### ⚠️ Major version bumps
 
-| Package | 1.52.1 | 1.55.1 |
+| Package | 1.52.1 | 1.55.2 |
 | --- | --- | --- |
 | `@backstage/plugin-catalog-backend` | **3.8.0** | **4.0.0** |
 | `@backstage/plugin-search-backend-module-elasticsearch` | **1.8.4** | **2.0.0** |
-| `@backstage/plugin-techdocs-node` | **1.15.1** | **2.0.0** |
+| `@backstage/plugin-techdocs-node` | **1.15.1** | **2.0.1** |
 
 ### 🆕 Added packages
 
@@ -30,7 +30,7 @@
 
 ### Version bumps
 
-| Package | 1.52.1 | 1.55.1 | Type |
+| Package | 1.52.1 | 1.55.2 | Type |
 | --- | --- | --- | --- |
 | `@backstage/app-defaults` | 1.7.9 | 1.7.12 | Patch |
 | `@backstage/backend-app-api` | 1.7.1 | 1.7.4 | Patch |
@@ -223,7 +223,7 @@
 | `@backstage/plugin-techdocs-addons-test-utils` | 2.0.6 | 2.0.9 | Patch |
 | `@backstage/plugin-techdocs-backend` | 2.2.1 | 2.3.0 | Minor |
 | `@backstage/plugin-techdocs-module-addons-contrib` | 1.1.37 | 1.1.40 | Patch |
-| `@backstage/plugin-techdocs-node` | **1.15.1** | **2.0.0** | Major ⚠️ |
+| `@backstage/plugin-techdocs-node` | **1.15.1** | **2.0.1** | Major ⚠️ |
 | `@backstage/plugin-techdocs-react` | 1.3.12 | 1.3.15 | Patch |
 | `@backstage/plugin-user-settings` | 0.9.4 | 0.9.7 | Patch |
 | `@backstage/plugin-user-settings-backend` | 0.4.4 | 0.4.7 | Patch |

@@ -1,6 +1,6 @@
 # Package versions — last 3 releases
 
-Versions of **216 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.56.0-next.0, RHDH 1.11-m2 = Backstage 1.55.1, RHDH 1.11-m1 = Backstage 1.52.1.
+Versions of **216 packages** across **3 RHDH releases** — columns ordered newest to oldest. Each column shows the package versions of the Backstage release mapped in [config.yaml](../config.yaml): RHDH next = Backstage 1.56.0-next.0, RHDH 1.11-m2 = Backstage 1.55.2, RHDH 1.11-m1 = Backstage 1.52.1.
 
 | Package | next | 1.11-m2 | 1.11-m1 |
 | --- | --- | --- | --- |
@@ -207,7 +207,7 @@ Versions of **216 packages** across **3 RHDH releases** — columns ordered newe
 | `@backstage/plugin-techdocs-backend` | 2.3.1-next.0 | 2.3.0 | 2.2.1 |
 | `@backstage/plugin-techdocs-common` | 0.1.1 | 0.1.1 | 0.1.1 |
 | `@backstage/plugin-techdocs-module-addons-contrib` | 1.1.41-next.0 | 1.1.40 | 1.1.37 |
-| `@backstage/plugin-techdocs-node` | 2.0.1-next.0 | 2.0.0 | 1.15.1 |
+| `@backstage/plugin-techdocs-node` | 2.0.1-next.0 | 2.0.1 | 1.15.1 |
 | `@backstage/plugin-techdocs-react` | 1.3.16-next.0 | 1.3.15 | 1.3.12 |
 | `@backstage/plugin-user-settings` | 0.9.8-next.0 | 0.9.7 | 0.9.4 |
 | `@backstage/plugin-user-settings-backend` | 0.4.8-next.0 | 0.4.7 | 0.4.4 |

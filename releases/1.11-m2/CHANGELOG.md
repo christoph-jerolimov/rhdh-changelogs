@@ -1,6 +1,6 @@
 # RHDH Release 1.11-m2 changelog
 
-Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.55.1 (RHDH 1.11-m2) — 3 added, 1 removed, 200 upgraded, 9 unchanged packages.
+Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.55.2 (RHDH 1.11-m2) — 3 added, 1 removed, 200 upgraded, 9 unchanged packages.
 
 ## Summary
 
@@ -39,7 +39,7 @@ Changes between Backstage 1.52.1 (RHDH 1.11-m1) and Backstage 1.55.1 (RHDH 1.11-
   - [`@backstage/plugin-scaffolder-backend-module-github` (0.9.10 → 0.10.0)](#backstageplugin-scaffolder-backend-module-github-0910--0100)
   - [`@backstage/plugin-scaffolder-backend-module-sentry` (0.3.5 → 0.4.0)](#backstageplugin-scaffolder-backend-module-sentry-035--040)
   - [`@backstage/plugin-search-backend-module-elasticsearch` (1.8.4 → 2.0.0)](#backstageplugin-search-backend-module-elasticsearch-184--200)
-  - [`@backstage/plugin-techdocs-node` (1.15.1 → 2.0.0)](#backstageplugin-techdocs-node-1151--200)
+  - [`@backstage/plugin-techdocs-node` (1.15.1 → 2.0.1)](#backstageplugin-techdocs-node-1151--201)
   - [`@backstage/repo-tools` (0.17.3 → 0.19.1)](#backstagerepo-tools-0173--0191)
   - [`@backstage/ui` (0.16.0 → 0.18.0)](#backstageui-0160--0180)
 - [0.x minor version bumps](#0x-minor-version-bumps)
@@ -672,7 +672,7 @@ verify-patches` to validate Yarn patch references, local patch files,
 - [`fe6ace6`](https://github.com/backstage/backstage/commit/fe6ace6): Added optional `accountId` config to `search.elasticsearch` for resolving account-specific AWS credentials, enabling support for `webIdentityTokenFile` and `accountDefaults` when using AWS OpenSearch.
 - [`b11c9b4`](https://github.com/backstage/backstage/commit/b11c9b4): Fixed a bug where an empty document type list could result in querying all indices instead of returning empty results.
 
-### `@backstage/plugin-techdocs-node` (1.15.1 → [2.0.0](../../changelogs/@backstage/plugin-techdocs-node.md#200))
+### `@backstage/plugin-techdocs-node` (1.15.1 → [2.0.1](../../changelogs/@backstage/plugin-techdocs-node.md#201))
 
 #### 2.0.0
 
