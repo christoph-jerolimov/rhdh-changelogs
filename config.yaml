@@ -21,9 +21,5 @@ releases:
     backstage: "1.45.3"
   - rhdh: "1.10"
     backstage: "1.49.4"
-  - rhdh: "1.11-m1"
-    backstage: "1.52.1"
-  - rhdh: "1.11-m2"
-    backstage: latest
   - rhdh: next
-    backstage: next
+    backstage: "1.54.7"

@@ -1,12 +1,10 @@
 # Number of changed packages
 
-**14 RHDH releases**, newest to oldest — each row compares the Backstage packages of a release with those of the direct previous RHDH release from [config.yaml](../config.yaml).
+**12 RHDH releases**, newest to oldest — each row compares the Backstage packages of a release with those of the direct previous RHDH release from [config.yaml](../config.yaml).
 
 | Release | Backstage | Compared to | Added | Removed | Upgraded | Unchanged | Major ⚠️ | 0.x Minor ⚠️ | 0.0.x Patch ⚠️ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| next | 1.56.0-next.0 | 1.11-m2 | 3 | 0 | 201 | 11 | 0 | 1 | 4 |
-| 1.11-m2 | 1.55.2 | 1.11-m1 | 3 | 1 | 200 | 9 | 3 | 19 | 5 |
-| 1.11-m1 | 1.52.1 | 1.10 | 3 | 0 | 199 | 8 | 3 | 17 | 4 |
+| next | 1.54.7 | 1.10 | 4 | 1 | 199 | 7 | 3 | 23 | 5 |
 | 1.10 | 1.49.4 | 1.9 | 18 | 1 | 184 | 5 | 6 | 37 | 4 |
 | 1.9 | 1.45.3 | 1.8 | 3 | 0 | 177 | 10 | 1 | 21 | 4 |
 | 1.8 | 1.42.5 | 1.7 | 3 | 1 | 174 | 10 | 2 | 19 | 4 |
